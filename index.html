@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elora Engine — Security-first AI orchestration</title>
+  <style>
+    :root {
+      --bg:#0b0f1a;
+      --panel:rgba(12,18,32,0.7);
+      --panel-strong:rgba(12,18,32,0.88);
+      --text:#e6edf7;
+      --muted:#aab6c9;
+      --accent:#93c5fd;
+      --border:#1f2a3f;
+      --pill:#0f1626;
+      --pill-border:#24324a;
+      --glow:rgba(120,170,255,0.15);
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:"Space Grotesk", system-ui, -apple-system, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+    }
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(11,15,26,0.55), rgba(11,15,26,0.85)),
+        url("background.png") center/cover no-repeat;
+      z-index:-1;
+    }
+    .wrap {
+      max-width:980px;
+      margin:48px auto 80px;
+      padding:0 24px;
+    }
+    .hero {
+      display:grid;
+      grid-template-columns: minmax(0,1fr) 220px;
+      gap:24px;
+      align-items:center;
+      padding-bottom:22px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .hero h1 {
+      font-size:40px;
+      margin:0 0 8px;
+    }
+    .hero p {
+      margin:0 0 14px;
+      color:var(--muted);
+    }
+    .pill-row {
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .pill {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:var(--pill);
+      border:1px solid var(--pill-border);
+      font-size:12px;
+      color:#c7d2e5;
+    }
+    .dot {
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#22c55e;
+      box-shadow:0 0 10px rgba(34,197,94,0.6);
+    }
+    .hero-avatar {
+      width:190px;
+      height:190px;
+      border-radius:50%;
+      border:1px solid #2b3b57;
+      background:#0f172a center/cover no-repeat;
+      box-shadow:0 0 35px var(--glow);
+      justify-self:end;
+      opacity:0.95;
+    }
+    .section {
+      margin-top:26px;
+    }
+    .section h2 {
+      margin:0 0 8px;
+      font-size:22px;
+    }
+    .section p {
+      margin:0 0 16px;
+      color:var(--muted);
+    }
+    .feature-card {
+      background:var(--panel-strong);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 0 0 1px rgba(255,255,255,0.01);
+    }
+    .feature-grid {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+    .feature-item {
+      display:grid;
+      grid-template-columns: 36px 1fr;
+      gap:12px;
+      align-items:start;
+    }
+    .icon {
+      width:36px;
+      height:36px;
+      border-radius:12px;
+      border:1px solid #2a3a56;
+      display:grid;
+      place-items:center;
+      color:#9cc2ff;
+      background:rgba(16,24,40,0.6);
+      font-weight:600;
+      font-size:12px;
+    }
+    .feature-item strong { display:block; margin-bottom:6px; }
+    .split-list {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+    ul { margin:0; padding-left:18px; color:var(--muted); }
+    li { margin:8px 0; }
+    .footer {
+      margin-top:28px;
+      text-align:center;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,0.08);
+      padding-top:20px;
+      font-size:13px;
+    }
+    .footer .brand { font-weight:600; color:var(--text); }
+    .socials {
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin:14px 0 10px;
+    }
+    .socials a {
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      border:1px solid #2a3a56;
+      display:grid;
+      place-items:center;
+      color:#9cc2ff;
+      text-decoration:none;
+      background:rgba(14,20,34,0.7);
+    }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns:1fr; }
+      .hero-avatar { justify-self:start; }
+      .feature-grid { grid-template-columns:1fr; }
+      .split-list { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Elora Engine</h1>
+        <p>Security‑first AI orchestration for controlled, auditable execution.</p>
+        <div class="pill-row">
+          <span class="pill"><span class="dot"></span>Private AI</span>
+          <span class="pill">Observable by default</span>
+          <span class="pill">Operator‑governed</span>
+        </div>
+      </div>
+      <div class="hero-avatar" style="background-image:url('avatar.png');"></div>
+    </section>
+
+    <section class="section">
+      <h2>Key Features</h2>
+      <p>A local, observable AI platform built from the ground up to enforce security, privacy, and control by default.</p>
+      <div class="feature-card">
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="icon">AI</div>
+            <div>
+              <strong>Executes in your environment</strong>
+              <div class="muted">Private, local inference without public model exposure.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="icon">SG</div>
+            <div>
+              <strong>Strict security guardrails</strong>
+              <div class="muted">Policy‑driven restrictions and safe fallbacks by default.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="icon">RL</div>
+            <div>
+              <strong>Rate limits & payload caps</strong>
+              <div class="muted">Prevents flooding and resource exhaustion.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="icon">RG</div>
+            <div>
+              <strong>RAG & source restrictions</strong>
+              <div class="muted">Responses constrained to trusted knowledge and memory.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="icon">AU</div>
+            <div>
+              <strong>Audit‑first operations</strong>
+              <div class="muted">Admin actions and system events are logged by default.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="icon">AD</div>
+            <div>
+              <strong>Protected admin access</strong>
+              <div class="muted">Signed sessions, IP allowlists, optional MFA.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="icon">PB</div>
+            <div>
+              <strong>Public vs admin separation</strong>
+              <div class="muted">Safe public status with protected operational data.</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="icon">PR</div>
+            <div>
+              <strong>Policy‑driven behavior</strong>
+              <div class="muted">Profiles define personality, tolerance, and source rules.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Security‑first design</h2>
+      <div class="split-list">
+        <ul>
+          <li>Default‑deny tools and web access unless explicitly allowed.</li>
+          <li>Signed, time‑bound requests with origin allowlists.</li>
+          <li>Strict separation of public status and privileged admin data.</li>
+        </ul>
+        <ul>
+          <li>Audit logging for logins, config changes, and reflections.</li>
+          <li>Safe fallbacks when trusted sources aren’t available.</li>
+          <li>Short‑lived sessions to reduce exposure and leakage.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="brand">Built by Elora Taurus</div>
+      <div>A security‑first perspective on private AI.</div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/elorataurus/" target="_blank" rel="noreferrer">in</a>
+        <a href="https://discordapp.com/users/1000533193675526284" target="_blank" rel="noreferrer">dc</a>
+      </div>
+      © Nathan Freestone — All rights reserved.
+    </section>
+  </div>
+</body>
+</html>
