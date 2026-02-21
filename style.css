@@ -133,6 +133,8 @@ a { color: #8fd6ff; text-decoration: none; }
 .nav-toggle .hamburger {
   font-size: 14px;
   line-height: 1;
+  padding-right: 5px;
+  margin-top: -1px;
 }
 
 .nav-btn {

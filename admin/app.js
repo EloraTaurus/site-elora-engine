@@ -1,4 +1,54 @@
 (function () {
+  function initMobileSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    if (!sidebar) return;
+
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'sidebar-mobile-toggle';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Toggle navigation');
+    toggle.innerHTML = '<span aria-hidden="true">&#9776;</span> Menu';
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'sidebar-backdrop';
+
+    document.body.appendChild(toggle);
+    document.body.appendChild(backdrop);
+
+    function setOpen(open) {
+      document.body.classList.toggle('sidebar-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    toggle.addEventListener('click', function () {
+      const isOpen = document.body.classList.contains('sidebar-open');
+      setOpen(!isOpen);
+    });
+    backdrop.addEventListener('click', function () { setOpen(false); });
+    document.querySelectorAll('.nav a').forEach((link) => {
+      link.addEventListener('click', function () {
+        if (window.innerWidth <= 1100) setOpen(false);
+      });
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1100) setOpen(false);
+    });
+  }
+
+  function injectMobileDisclaimer() {
+    const content = document.querySelector('.content');
+    if (!content) return;
+    if (content.querySelector('.mobile-disclaimer')) return;
+    const note = document.createElement('div');
+    note.className = 'mobile-disclaimer';
+    note.textContent = 'Dashboard demo is currently desktop-first and not fully mobile-optimized.';
+    content.insertBefore(note, content.firstChild);
+  }
+
+  initMobileSidebar();
+  injectMobileDisclaimer();
+
   function attachAvatar(container, paths, altText, fallbackText) {
     if (!container) return;
     const tryNext = function (idx) {
