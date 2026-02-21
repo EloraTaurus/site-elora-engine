@@ -3,124 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elora Engine - Framework Overview</title>
+  <meta name="description" content="The Elora Taurus Project overview: an independently operated platform project and public Elora Engine dashboard demo." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Elora Taurus Project - Overview" />
+  <meta property="og:description" content="Read the public project overview for the Elora Engine dashboard demo, including current capabilities and development direction." />
+  <meta property="og:image" content="elora.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Elora Taurus Project - Overview" />
+  <meta name="twitter:description" content="Public overview of The Elora Taurus Project and the Elora Engine dashboard demo, including current scope and ongoing development." />
+  <meta name="twitter:image" content="elora.png" />
+  <title>The Elora Taurus Project - Overview</title>
   <link rel="icon" href="elora.png" />
-  <style>
-    :root {
-      --bg: #0b0f1a;
-      --panel: rgba(18, 24, 38, 0.85);
-      --text: #e6edf7;
-      --muted: #aab6c9;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      color: var(--text);
-      background: var(--bg) url('background.png') center/cover fixed no-repeat;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(8, 12, 20, 0.62);
-      z-index: -1;
-    }
-    .wrap { max-width: 1000px; margin: 42px auto; padding: 0 20px 30px; }
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #2a4668;
-      background: #0f172a;
-      display: grid;
-      place-items: center;
-    }
-    .brand-icon img { width: 100%; height: 100%; object-fit: cover; }
-    .card {
-      background: var(--panel);
-      border: 1px solid #1f2a3f;
-      border-radius: 18px;
-      padding: 20px;
-      backdrop-filter: blur(10px);
-      margin-top: 16px;
-    }
-    h1, h2, h3 { margin-top: 0; }
-    .muted { color: var(--muted); }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid #2f567f;
-      background: #153050;
-      color: #e6eef7;
-      border-radius: 999px;
-      padding: 9px 13px;
-      text-decoration: none;
-      font-size: 13px;
-    }
-    ul { margin: 8px 0 0 18px; }
-    li { margin: 5px 0; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-    .note {
-      border: 1px solid #3a2f1f;
-      background: rgba(46, 34, 17, 0.5);
-      border-radius: 12px;
-      padding: 10px 12px;
-      color: #f0d9a2;
-      font-size: 13px;
-    }
-    @media (max-width: 860px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "The Elora Taurus Project Overview",
+    "about": "AI orchestration, governance, and security controls",
+    "description": "Public overview of The Elora Taurus Project and the Elora Engine dashboard demo.",
+    "mainEntityOfPage": "./about.html"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">
-        <div class="brand-icon"><img src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';"></div>
-        <div>
-          <strong>Elora Engine</strong>
-          <div class="muted" style="font-size:12px;">Framework Overview</div>
+  <section class="top-stage">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-icon"><img src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';"></div>
+          <div>
+            <strong>The Elora Taurus Project</strong>
+            <small>Project overview and Elora Engine demo context</small>
+          </div>
+        </div>
+        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links" class="top-links">
+          <a class="nav-btn" href="index.html">Home</a>
+          <a class="nav-btn active" href="about.html">About Elora</a>
+          <a class="nav-btn" href="admin/index.html?tour=overview&step=0">Guided Tour</a>
+          <a class="nav-btn" href="admin/index.html">Admin Demo</a>
+        </nav>
+      </div>
+    </header>
+    <div class="shell">
+      <section class="hero about-hero">
+        <div class="about-lead">
+          <h1>A Focused AI Orchestration and Control Framework</h1>
+          <p>The Elora Engine is designed and operated independently on self-managed infrastructure. It is deployable, scalable, and observable, and is designed to operate as a security-first control plane for governed AI systems.</p>
+          <p>Elora is independently developed and operated, prioritising governance, security boundaries, and architectural clarity over speed.</p>
+          <p>The Elora Engine dashboard is powered by a custom Python-based engine running on self-managed infrastructure.</p>
+          <p>It is built for business and operational contexts where governance, policy enforcement, and risk management are critical for responsible AI adoption.</p>
+          <div class="cta-row">
+            <a class="btn" href="admin/index.html?tour=overview&step=0">Start Guided Tour</a>
+            <a class="btn alt" href="admin/index.html">Open Admin Demo</a>
+            <a class="btn alt" href="index.html">Back to Demo Home</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section surface-light">
+    <div class="section-inner">
+      <h2>Strategic Role of The Elora Taurus Project</h2>
+      <p class="section-intro">This public presence is built to communicate architecture intent, operational direction, and governance posture without exposing private implementation detail.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Anchor point</h3>
+          <p>A stable public statement of how Elora Engine approaches secure, governed AI operation.</p>
+        </div>
+        <div class="card">
+          <h3>Execution visibility</h3>
+          <p>Guided walkthroughs that demonstrate currently implemented capabilities using synthetic and reduced data.</p>
         </div>
       </div>
-      <a class="btn" href="index.html">Back to Demo Home</a>
-    </div>
-
-    <section class="card">
-      <h1>A Focused AI Orchestration and Control Framework</h1>
-      <p class="muted">The Elora Engine is a deployable, scalable, and observable AI orchestration framework designed to operate as a security-first control plane for governed AI systems.</p>
-      <p class="muted">It is built for business and operational contexts where governance, policy enforcement, and risk management are critical for responsible AI adoption.</p>
-      <div class="cta-row">
-        <a class="btn" href="admin/index.html?tour=overview&step=0">Start Guided Tour</a>
-        <a class="btn" href="admin/index.html">Open Admin Demo</a>
+      <div class="card" style="margin-top:14px;">
+        <h3>Roadmap communication</h3>
+        <p>Signals where the platform is heading while intentionally protecting internal operational details and implementation methods.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="card">
+  <section class="section surface-deep">
+    <div class="section-inner">
       <h2>Key Features</h2>
-      <div class="grid">
-        <div>
-          <ul>
+      <p class="section-intro">Core platform capabilities currently represented in deployment and governance direction.</p>
+      <div class="about-columns">
+        <div class="card">
+          <ul class="list">
             <li>Executes in your environment (local, on-prem, or cloud)</li>
             <li>Strict security guardrails with safe fallback behavior</li>
             <li>Rate limits and payload caps to prevent abuse</li>
             <li>RAG and source restrictions for trusted knowledge/memory</li>
           </ul>
         </div>
-        <div>
-          <ul>
+        <div class="card">
+          <ul class="list">
             <li>Audit-first operations for actions and lifecycle events</li>
             <li>Protected admin access (signed sessions, allowlists, optional MFA)</li>
             <li>Public vs admin separation for safe visibility boundaries</li>
@@ -128,30 +108,100 @@
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="card">
+  <section class="section surface-light">
+    <div class="section-inner">
       <h2>Security Features (Technical)</h2>
-      <p class="muted">Concrete safeguards enforced by the engine today:</p>
-      <ul>
-        <li>HMAC request signing with timestamp skew checks to reduce replay/tampering risk</li>
-        <li>Origin allowlists so only approved sites can call the engine</li>
-        <li>Payload caps to limit body size and reduce resource exhaustion</li>
-        <li>Admin hardening with signed sessions, IP allowlists, and optional MFA</li>
-        <li>CSRF protection for admin actions and configuration changes</li>
-        <li>Audit logging for logins, config changes, and job lifecycle events</li>
-      </ul>
-    </section>
+      <p class="section-intro">Concrete safeguards enforced by the engine today.</p>
+      <div class="card">
+        <ul class="list">
+          <li>HMAC request signing with timestamp skew checks to reduce replay/tampering risk</li>
+          <li>Origin allowlists so only approved sites can call the engine</li>
+          <li>Payload caps to limit body size and reduce resource exhaustion</li>
+          <li>Admin hardening with signed sessions, IP allowlists, and optional MFA</li>
+          <li>CSRF protection for admin actions and configuration changes</li>
+          <li>Audit logging for logins, config changes, and job lifecycle events</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section class="card">
+  <section class="section surface-deep">
+    <div class="section-inner">
       <h2>Live Engine vs Public Demo</h2>
-      <div class="note">This public demo is intentionally reduced and does not expose full live engine feature depth, operational controls, telemetry detail, or complete layout.</div>
-      <ul>
-        <li>Demo content is synthetic and curated for safe public viewing</li>
-        <li>Live engine includes deeper runtime JSON, governance traces, and richer operator tooling</li>
-        <li>Feature roadmap and full release details will be published separately</li>
-      </ul>
-    </section>
-  </div>
+      <p class="section-intro">The public demo is intentionally reduced and designed as a governed preview.</p>
+      <div class="about-note">This public demo does not expose full live engine feature depth, production telemetry detail, or complete operator control layout.</div>
+      <div class="card" style="margin-top:14px;">
+        <ul class="list">
+          <li>Demo content is synthetic and curated for safe public viewing</li>
+          <li>Live engine includes deeper runtime JSON, governance traces, and richer operator tooling</li>
+          <li>Feature roadmap and full release details will be published separately</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <strong>The Elora Taurus Project</strong>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">Project Overview</a>
+          <a href="admin/index.html?tour=overview&step=0">Guided Tour</a>
+          <a href="admin/index.html">Admin Demo</a>
+        </nav>
+      </div>
+      <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
+      <div class="footer-note">Copyright © Nathan Freestone. Demo content is synthetic and non-operational.</div>
+    </div>
+  </footer>
+  <section id="privacy-toast" class="privacy-toast" aria-live="polite">
+    <p>This demo currently does not use analytics cookies. If analytics is added later, it will be optional and consent-based.</p>
+    <div class="privacy-actions">
+      <button id="privacy-toast-dismiss" type="button">Got It</button>
+    </div>
+  </section>
+  <script>
+    (function () {
+      const navToggle = document.getElementById('nav-toggle');
+      const topLinks = document.getElementById('top-links');
+      const privacyToast = document.getElementById('privacy-toast');
+      const privacyDismiss = document.getElementById('privacy-toast-dismiss');
+      if (!navToggle || !topLinks) return;
+
+      navToggle.addEventListener('click', function () {
+        const open = topLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(open));
+      });
+      topLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          topLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 760) {
+          topLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      const privacyKey = 'elora_privacy_notice_v1';
+      try {
+        if (privacyToast && localStorage.getItem(privacyKey) === 'dismissed') {
+          privacyToast.classList.add('hidden');
+        }
+      } catch (e) {}
+      if (privacyToast && privacyDismiss) {
+        privacyDismiss.addEventListener('click', function () {
+          privacyToast.classList.add('hidden');
+          try { localStorage.setItem(privacyKey, 'dismissed'); } catch (e) {}
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

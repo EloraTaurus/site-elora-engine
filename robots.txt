@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Keep admin demo internals out of index coverage
+Disallow: /admin/
+
+# Primary crawl targets for this public snapshot
+Sitemap: https://elorataurus.com/sitemap.xml

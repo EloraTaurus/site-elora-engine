@@ -3,371 +3,220 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elora Engine - Status Demo</title>
+  <meta name="description" content="The Elora Taurus Project: a deliberately built platform project with a public Elora Engine dashboard demo, guided walkthroughs, and features in development." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Elora Taurus Project - Public Demo" />
+  <meta property="og:description" content="Explore the public Elora Engine dashboard demo, including available guided tours and features currently in development." />
+  <meta property="og:image" content="elora.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Elora Taurus Project - Public Demo" />
+  <meta name="twitter:description" content="Public Elora Engine dashboard demo with guided tours, synthetic operational data, and incremental platform development context." />
+  <meta name="twitter:image" content="elora.png" />
+  <title>The Elora Taurus Project - Public Demo</title>
   <link rel="icon" href="elora.png" />
-  <style>
-    :root {
-      --bg: #0b0f1a;
-      --panel: rgba(18, 24, 38, 0.85);
-      --text: #e6edf7;
-    }
-    body {
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      background: var(--bg) url('background.png') center/cover fixed no-repeat;
-      color: var(--text);
-      margin: 0;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(8, 12, 20, 0.55);
-      z-index: -1;
-    }
-    .wrap { max-width: 980px; margin: 48px auto; padding: 0 20px; }
-    .card {
-      background: var(--panel);
-      border: 1px solid #1f2a3f;
-      border-radius: 20px;
-      padding: 24px;
-      backdrop-filter: blur(12px);
-    }
-    .card.section { margin-top: 26px; }
-    .muted { color: #aab6c9; }
-    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid #263149;
-      background: #111725;
-      font-size: 12px;
-      color: #c7d2e5;
-    }
-    .pill .icon {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
-    }
-    ul { margin: 8px 0 0 18px; }
-    a { color: #93c5fd; text-decoration: none; }
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 30px;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      background: #0f172a;
-      border: 1px solid #20304a;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-    .brand-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 32px; margin-top: 24px; }
-    .hero h1 { font-size: 42px; margin: 0 0 10px; }
-    .hero p { font-size: 16px; line-height: 1.6; }
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid #2b3a55;
-      background: #0f1524;
-      color: #dbe7ff;
-      font-size: 13px;
-    }
-    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; margin-top: 26px; }
-    .social-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-    .social-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      border: 1px solid #25314a;
-      background: #0f1524;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #c7d2e5;
-    }
-    .social-icon svg { width: 16px; height: 16px; fill: currentColor; }
-    .divider { height: 1px; background: #1d263a; margin: 24px 0; }
-    .list-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      margin-right: 8px;
-      background: #7dd3fc;
-    }
-    .status-card { position: relative; overflow: hidden; }
-    .status-row { display: flex; align-items: flex-start; gap: 18px; }
-    .status-main { flex: 1; min-width: 0; }
-    .status-pill {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid #263149;
-      background: #0f1524;
-      font-size: 12px;
-      color: #c7d2e5;
-      margin-bottom: 10px;
-    }
-    .status-pill .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
-    }
-    .avatar {
-      width: 170px;
-      height: 200px;
-      border-radius: 22px;
-      border: 1px solid #2a3a56;
-      background: linear-gradient(180deg, #1b2d49, #0f172a);
-      object-fit: cover;
-      display: block;
-    }
-    .chip-row { display: flex; flex-wrap: wrap; gap: 10px; }
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid #25314a;
-      background: #0f1524;
-      font-size: 12px;
-      color: #c7d2e5;
-    }
-    .note { font-size: 12px; color: #aab6c9; margin-top: 8px; }
-    .demo-chat-wrap { position: fixed; right: 22px; bottom: 22px; z-index: 60; }
-    .demo-chat-btn {
-      height: 48px;
-      min-width: 136px;
-      border-radius: 999px;
-      border: 1px solid #2f567f;
-      background: #153050;
-      color: #e6eef7;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      padding: 0 12px;
-    }
-    .demo-chat-modal {
-      display: none;
-      position: fixed;
-      right: 22px;
-      bottom: 82px;
-      width: min(420px, calc(100vw - 32px));
-      height: min(600px, calc(100vh - 112px));
-      border: 1px solid #2b4f76;
-      border-radius: 14px;
-      background: #102038;
-      overflow: hidden;
-      grid-template-rows: auto 1fr auto;
-      z-index: 61;
-    }
-    .demo-chat-modal.active { display: grid; }
-    .demo-chat-head {
-      padding: 10px 12px;
-      border-bottom: 1px solid #2b4f76;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #132c49;
-    }
-    .demo-chat-log { padding: 10px; overflow: auto; display: grid; gap: 10px; align-content: start; }
-    .chat-msg {
-      max-width: 86%;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid #263b59;
-      font-size: 13px;
-      line-height: 1.35;
-      white-space: pre-wrap;
-    }
-    .chat-msg.user { justify-self: end; background: #1e3d68; }
-    .chat-msg.assistant { justify-self: start; background: #141f31; }
-    .demo-chat-foot { border-top: 1px solid #2b4f76; padding: 10px; background: #0f1d31; display: grid; gap: 8px; }
-    .demo-chat-input { width: 100%; min-height: 70px; }
-    input, textarea, button {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid #2e567f;
-      background: #102039;
-      color: #e6f2ff;
-      font-family: inherit;
-    }
-    button { cursor: pointer; background: #153050; }
-    button:hover { border-color: #55b8ff; background: #1a3f67; }
-    @media (max-width: 860px) {
-      .hero { grid-template-columns: 1fr; }
-      .cards { grid-template-columns: 1fr; }
-      .social-row { justify-content: flex-start; }
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "The Elora Taurus Project",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Linux, macOS, Windows",
+    "description": "Elora Engine is a security-first AI orchestration and control framework focused on governed, auditable, and inspectable execution.",
+    "url": "./index.html"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">
-        <div class="brand-icon"><img src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';"></div>
-        <strong>Elora Engine</strong>
-      </div>
-      <div class="social-row">
-        <a class="social-icon" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.48 2.48 0 1 0 5 8.46 2.48 2.48 0 0 0 4.98 3.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-1 1.8-2.1 3.8-2.1 4.1 0 4.9 2.7 4.9 6.2V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8-1.7 0-2 1.3-2 2.7V21H9z"/></svg>
-        </a>
-        <a class="social-icon" href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4.5a16 16 0 0 0-4.1-1.3l-.2.4a11 11 0 0 1 3.1 1.2 12 12 0 0 0-3.8-1 10 10 0 0 0-.5 1 14 14 0 0 0-4.5 0 10 10 0 0 0-.5-1 12 12 0 0 0-3.8 1 11 11 0 0 1 3.1-1.2l-.2-.4A16 16 0 0 0 4 4.5C1.5 8 1 11.3 1.2 14.6a16 16 0 0 0 4.9 2.5l.7-1.1a10 10 0 0 1-1.5-.7l.3-.3a11 11 0 0 0 9 0l.3.3a10 10 0 0 1-1.5.7l.7 1.1a16 16 0 0 0 4.9-2.5C22.8 11.3 22.5 8 20 4.5zM8.5 13.5a1.6 1.6 0 1 1 0-3.2 1.6 1.6 0 0 1 0 3.2zm7 0a1.6 1.6 0 1 1 0-3.2 1.6 1.6 0 0 1 0 3.2z"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <section class="hero">
-      <div>
-        <h1>Elora Engine</h1>
-        <p class="muted">A security-first AI orchestration layer for controlled, auditable model execution.</p>
-        <p><strong>Status:</strong> Public demo snapshot using safe mock telemetry for GitHub Pages.</p>
-        <div style="margin-top:14px;">
-          <a class="cta" href="admin/index.html">Open Admin Demo</a>
-          <a class="cta" href="admin/index.html?tour=overview&step=0" style="margin-left:8px;">Start Guided Tour</a>
-          <a class="cta" href="about.html" style="margin-left:8px;">Framework Overview</a>
-        </div>
-      </div>
-      <div class="card status-card">
-        <div class="status-row">
-          <div class="status-main">
-            <div class="status-pill"><span id="status-dot" class="dot"></span><span id="status-label">Operational</span></div>
-            <h2 style="margin-top:0;">Engine Status</h2>
-            <p id="status-detail" class="muted" style="margin-top:0;">All core services running.</p>
+  <section class="top-stage">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-icon"><img src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';"></div>
+          <div>
+            <strong>The Elora Taurus Project</strong>
+            <small>Public demo for the Elora Engine dashboard</small>
           </div>
-          <img class="avatar" src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';" />
         </div>
-        <div class="chip-row" style="margin-top:16px;">
-          <span id="chip-uptime" class="chip">Uptime: 21d 9h</span>
-          <span id="chip-request" class="chip">Request: Idle</span>
-          <span id="chip-components" class="chip">Core services online</span>
-        </div>
-        <div class="divider"></div>
-        <div class="pill-row">
-          <span class="pill"><span id="pill-status-dot" class="icon"></span>Status</span>
-          <span class="pill"><span class="icon"></span>Security</span>
-          <span class="pill"><span class="icon"></span>Observability</span>
-          <span class="pill"><span id="pill-plugin-dot" class="icon"></span>Plugin</span>
-        </div>
-        <div class="note">AI orchestration is policy-controlled and operator-governed.</div>
-        <div id="plugin-note" class="note">Plugin status: Online - just now</div>
+        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links" class="top-links">
+          <a class="nav-btn active" href="index.html">Home</a>
+          <a class="nav-btn" href="about.html">About Elora</a>
+          <a class="nav-btn" href="admin/index.html?tour=overview&step=0">Guided Tour</a>
+          <a class="nav-btn" href="admin/index.html">Admin Demo</a>
+        </nav>
       </div>
-    </section>
+    </header>
+    <div class="shell">
+      <section class="hero">
+        <div>
+          <h1>Operate AI with governance, control, and auditability</h1>
+          <p>Elora Engine is designed and operated independently on self-managed infrastructure. This site provides a public snapshot using synthetic telemetry so people can understand what has been built and where it is heading.</p>
+          <p>Elora is independently developed and operated, prioritising governance, security boundaries, and architectural clarity over speed.</p>
+          <div class="cta-row">
+            <a class="btn" href="admin/index.html?tour=overview&step=0">Start Guided Tour</a>
+            <a class="btn alt" href="about.html">Read Project Overview</a>
+            <a class="btn alt" href="admin/index.html">Open Admin Demo</a>
+          </div>
+        </div>
+        <aside class="status-card">
+          <div class="status-top">
+            <div>
+              <div class="status-pill"><span id="status-dot" class="dot"></span><span id="status-label">Operational</span></div>
+              <h3 style="margin:4px 0 2px;">Engine Status</h3>
+              <p id="status-detail" class="note" style="margin:0;">All core services running.</p>
+            </div>
+            <img class="avatar" src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';" />
+          </div>
+          <div class="chips">
+            <span id="chip-uptime" class="chip"><span class="chip-dot"></span>Uptime: 21d 9h</span>
+            <span id="chip-request" class="chip"><span class="chip-dot"></span>Request: Idle</span>
+            <span id="chip-components" class="chip"><span class="chip-dot"></span>Core services online</span>
+          </div>
+          <div class="chips">
+            <span class="chip"><span id="pill-status-dot" class="chip-dot"></span>Status</span>
+            <span class="chip"><span class="chip-dot"></span>Security</span>
+            <span class="chip"><span class="chip-dot"></span>Observability</span>
+            <span class="chip"><span id="pill-plugin-dot" class="chip-dot"></span>Plugin</span>
+          </div>
+          <div id="plugin-note" class="note">Plugin status: Online - just now</div>
+        </aside>
+      </section>
+    </div>
+  </section>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Why Elora Engine exists</h3>
-        <p>Elora Engine is designed for environments where AI execution must be controlled, observable, and accountable.</p>
-        <p>Rather than embedding models directly into applications, Elora provides a dedicated control layer that enforces security policies, manages execution, and exposes clear operational state to operators.</p>
-      </div>
-      <div class="card">
-        <h3>Security Posture</h3>
-        <ul>
-          <li><strong>Authentication:</strong> Enabled</li>
-          <li><strong>Request signing:</strong> Enforced</li>
-          <li><strong>Rate limiting:</strong> Active</li>
-          <li><strong>Audit logging:</strong> Enabled</li>
-          <li><strong>External exposure:</strong> Restricted</li>
-          <li><strong>Model execution:</strong> Policy-controlled</li>
-          <li><strong>Prompt boundaries:</strong> Enforced</li>
-          <li><strong>External tools:</strong> Disabled by default</li>
-        </ul>
+  <section class="section surface-light">
+    <div class="section-inner">
+      <h2>What You Can Explore Right Now</h2>
+      <p class="section-intro">These are the surfaces currently available in this public demo today.</p>
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="feature-head">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
+            <span class="feature-status live">Available</span>
+          </div>
+          <h4>Dashboard overview</h4>
+          <p>Visible operational snapshot cards and governance summary indicators.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-head">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h4l2-5 4 10 2-5h6v2h-5l-3 7-4-10-1 3H3z"/></svg>
+            <span class="feature-status live">Available</span>
+          </div>
+          <h4>Jobs audit examples</h4>
+          <p>Synthetic audit entries with clickable sample job detail views.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-head">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7zM11 7h2v2h-2zM11 15h2v2h-2z"/></svg>
+            <span class="feature-status live">Available</span>
+          </div>
+          <h4>Worker fabric inspection</h4>
+          <p>Fabric inventory with clickable worker counts plus CPU/RAM allocation samples.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-head">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 5 3.5 8.5 7 9 3.5-.5 7-4 7-9V6zM11 8h2v5h-2zM11 15h2v2h-2z"/></svg>
+            <span class="feature-status upcoming">Upcoming</span>
+          </div>
+          <h4>Security posture surfaces</h4>
+          <p>Planned for a future tour with reduced public-safe posture views.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-head">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v4H4zM14 5h6v4h-6zM9 7h5v2H9zM4 15h6v4H4zM14 15h6v4h-6zM9 17h5v2H9zM11 9h2v6h-2z"/></svg>
+            <span class="feature-status upcoming">Upcoming</span>
+          </div>
+          <h4>Pipeline and runtime controls</h4>
+          <p>Planned expansion area for deeper stage and execution-path visibility.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-head">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h2v6h4V3h2v6h2v3a6 6 0 0 1-5 5.9V21h-2v-3.1A6 6 0 0 1 6 12V9h2z"/></svg>
+            <span class="feature-status live">Available</span>
+          </div>
+          <h4>Guided tours and demo chat</h4>
+          <p>Scenario-based tours and a scripted demo chat for public walkthroughs.</p>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Design principles</h3>
-        <ul>
-          <li><span class="list-dot"></span>Security-first by default</li>
-          <li><span class="list-dot" style="background:#86efac;"></span>Human-in-the-loop control</li>
-          <li><span class="list-dot" style="background:#a5b4fc;"></span>Deterministic execution</li>
-          <li><span class="list-dot" style="background:#f9a8d4;"></span>Auditable state and actions</li>
-          <li><span class="list-dot" style="background:#fdba74;"></span>Minimal public attack surface</li>
-        </ul>
+  <section class="section surface-deep">
+    <div class="section-inner">
+      <h2>Guided Walkthroughs</h2>
+      <p class="section-intro">Choose one of the four available guided tours in this public demo.</p>
+      <div class="walk-links">
+        <a href="admin/index.html?tour=overview&step=0">Full Snapshot Tour</a>
+        <a href="admin/index.html?tour=incident&step=0">Incident Response Tour</a>
+        <a href="admin/fabric.html?tour=fabric&step=0">Worker Fabric Tour</a>
+        <a href="admin/models.html?tour=roadmap&step=0">Build Direction Tour</a>
       </div>
-      <div class="card">
-        <h3>What this engine is not</h3>
-        <p>Elora Engine is not a user-facing AI assistant or autonomous system. All execution is policy-controlled and operator-governed.</p>
-        <p class="note">Evolving toward an AI-assisted infrastructure companion and controller.</p>
-      </div>
+      <p class="section-intro" style="margin-top:14px;">Project context is available on the <a href="about.html">About Elora page</a>.</p>
     </div>
+  </section>
 
-    <div class="card section">
-      <h3>Direction and Exploration</h3>
-      <p class="muted">This page outlines areas of active development and research focus. No guaranteed feature timelines are implied.</p>
-      <ul>
-        <li><span class="list-dot"></span>Enhanced retrieval and document reasoning</li>
-        <li><span class="list-dot" style="background:#86efac;"></span>Observability and auditability improvements</li>
-        <li><span class="list-dot" style="background:#a5b4fc;"></span>Carefully scoped action research (experimental)</li>
+  <section class="section surface-light">
+    <div class="section-inner">
+      <h2>Scope and Safety</h2>
+      <p class="section-intro">This public demo is intentionally constrained and uses synthetic operational data.</p>
+      <ul class="list">
+        <li>No live endpoints are exposed via this demo site.</li>
+        <li>No secrets or production identifiers are included.</li>
+        <li>All operational records in this experience are synthetic.</li>
+        <li>Administrative controls shown here are representative and reduced.</li>
       </ul>
     </div>
+  </section>
 
-    <div class="card section">
-      <h3>Framework Overview</h3>
-      <p class="muted">Read the full high-level overview of what Elora Engine is designed to do, the security model, and how the public demo differs from live deployment.</p>
-      <div class="pill-row">
-        <a class="pill" href="about.html"><span class="icon"></span>Open Framework Page</a>
+  <section class="section surface-deep">
+    <div class="section-inner">
+      <h2>Why This Site Exists</h2>
+      <p class="section-intro">This public site serves three deliberate purposes:</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Anchor point</h3>
+          <p>A clear statement of what Elora Engine is, what it is designed for, and how it approaches governed AI operation.</p>
+        </div>
+        <div class="card">
+          <h3>Control plane walkthrough</h3>
+          <p>Guided demonstrations of implemented and demoed surfaces such as job audit flows, security posture, worker fabric views, and pipeline/runtime governance patterns using synthetic data.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:14px;">
+        <h3>Architectural direction</h3>
+        <p>Visible signals of where the platform is evolving, including deeper governance tooling, expanded runtime introspection, and structured model/knowledge/memory controls.</p>
+        <p class="note">This guided experience reflects design intent and operator surface. Production deployments expose additional telemetry, policy trace detail, and operational controls within secured environments.</p>
       </div>
     </div>
+  </section>
 
-    <div class="card section">
-      <h3>Guided Walkthroughs</h3>
-      <p class="muted">Use these walkthroughs to see what Elora Engine can do today and what it is building toward, with synthetic data only.</p>
-      <p class="muted">Scope note: this demo is intentionally limited and does not represent the full feature depth, controls, or layout of the live engine.</p>
-      <div class="pill-row">
-        <a class="pill" href="admin/index.html?tour=overview&step=0"><span class="icon"></span>Full Snapshot Tour</a>
-        <a class="pill" href="admin/index.html?tour=incident&step=0"><span class="icon"></span>Incident Response Tour</a>
-        <a class="pill" href="admin/fabric.html?tour=fabric&step=0"><span class="icon"></span>Worker Fabric Tour</a>
-        <a class="pill" href="admin/models.html?tour=roadmap&step=0"><span class="icon"></span>Build Direction Tour</a>
-        <a class="pill" href="about.html"><span class="icon"></span>Framework Context</a>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <strong>The Elora Taurus Project</strong>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">Project Overview</a>
+          <a href="admin/index.html?tour=overview&step=0">Guided Tour</a>
+          <a href="admin/index.html">Admin Demo</a>
+        </nav>
       </div>
+      <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
+      <div class="footer-note">Copyright © Nathan Freestone. Demo content is synthetic and non-operational.</div>
     </div>
-
-    <div class="card section">
-      <h3>What this engine does</h3>
-      <ul>
-        <li>Orchestrates AI model execution and retrieval pipelines.</li>
-        <li>Enforces policies, guardrails, and execution limits.</li>
-        <li>Provides observability, auditability, and operator control.</li>
-      </ul>
-    </div>
-
-    <div class="section"><p class="muted">Elora Engine exposes system state intentionally. Administrative access is restricted.</p></div>
-    <div class="section"><p class="muted">Demo snapshot for GitHub Pages - no live access.</p></div>
-  </div>
+  </footer>
 
   <div class="demo-chat-wrap">
     <button id="demo-chat-btn" class="demo-chat-btn" type="button">Open Demo Chat</button>
   </div>
+  <section id="privacy-toast" class="privacy-toast" aria-live="polite">
+    <p>This demo currently does not use analytics cookies. If analytics is added later, it will be optional and consent-based.</p>
+    <div class="privacy-actions">
+      <button id="privacy-toast-dismiss" type="button">Got It</button>
+    </div>
+  </section>
   <section id="demo-chat-modal" class="demo-chat-modal" aria-hidden="true">
     <div class="demo-chat-head">
       <strong>Elora Chat (Demo)</strong>
@@ -403,6 +252,10 @@
       const chipRequest = document.getElementById('chip-request');
       const chipComponents = document.getElementById('chip-components');
       const pluginNote = document.getElementById('plugin-note');
+      const navToggle = document.getElementById('nav-toggle');
+      const topLinks = document.getElementById('top-links');
+      const privacyToast = document.getElementById('privacy-toast');
+      const privacyDismiss = document.getElementById('privacy-toast-dismiss');
 
       function formatUptime(hours) {
         const d = Math.floor(hours / 24);
@@ -434,6 +287,38 @@
         state.pluginLastSeenMinutes = state.pluginOnline ? ((state.tick % 4) + 1) : 17;
         renderStatus();
       }, 4000);
+
+      if (navToggle && topLinks) {
+        navToggle.addEventListener('click', function () {
+          const open = topLinks.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', String(open));
+        });
+        topLinks.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            topLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 760) {
+            topLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      const privacyKey = 'elora_privacy_notice_v1';
+      try {
+        if (privacyToast && localStorage.getItem(privacyKey) === 'dismissed') {
+          privacyToast.classList.add('hidden');
+        }
+      } catch (e) {}
+      if (privacyToast && privacyDismiss) {
+        privacyDismiss.addEventListener('click', function () {
+          privacyToast.classList.add('hidden');
+          try { localStorage.setItem(privacyKey, 'dismissed'); } catch (e) {}
+        });
+      }
 
       const modal = document.getElementById('demo-chat-modal');
       const btn = document.getElementById('demo-chat-btn');
