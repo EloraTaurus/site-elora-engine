@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elora Engine - Monitoring Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-avatar">EE</div>
+        <div>
+          <div><strong>Elora Engine</strong></div>
+          <div style="color:var(--muted); font-size:12px;">Admin Demo</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="nav-section-title">Operations</div>
+        <div class="nav-group " data-nav-group="1">
+          <div class="nav-parent-row">
+            <a class="" style="--nav-accent:#4f8cff;" href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span><span class="nav-label">Dashboard</span></a>
+            <button type="button" class="nav-toggle" data-nav-toggle="1" aria-expanded="false">v</button>
+          </div>
+          <div class="nav-children">
+            <a href="index.html#ops">Operational Health</a>
+            <a href="index.html#governance">Governance and Risk</a>
+            <a href="index.html#jobs">Jobs Audit</a>
+          </div>
+        </div>
+        <div class="nav-group expanded" data-nav-group="1">
+          <div class="nav-parent-row">
+            <a class="active" style="--nav-accent:#f4c76a;" href="monitoring.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h4l2-5 4 10 2-5h6v2h-5l-3 7-4-10-1 3H3z"/></svg></span><span class="nav-label">Monitoring</span></a>
+            <button type="button" class="nav-toggle" data-nav-toggle="1" aria-expanded="false">v</button>
+          </div>
+          <div class="nav-children">
+            <a href="monitoring.html#audit">Audit Events</a>
+            <a href="monitoring.html#logs">Job Logs</a>
+          </div>
+        </div>
+        <div class="nav-group " data-nav-group="1">
+          <div class="nav-parent-row">
+            <a class="" style="--nav-accent:#40d3b5;" href="fabric.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7zM11 7h2v2h-2zM11 15h2v2h-2z"/></svg></span><span class="nav-label">Fabric</span></a>
+            <button type="button" class="nav-toggle" data-nav-toggle="1" aria-expanded="false">v</button>
+          </div>
+          <div class="nav-children">
+            <a href="fabric.html#hosts">Worker Hosts</a>
+            <a href="fabric.html#workers">Workers</a>
+            <a href="fabric.html#provisioner">Provisioner</a>
+          </div>
+        </div>
+        <a class="" style="--nav-accent:#70a1ff;" href="nodes.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v6H4zM4 14h16v6H4zM7 7h2v2H7zM7 17h2v2H7z"/></svg></span><span class="nav-label">Nodes</span></a>
+        <a class="" style="--nav-accent:#ff6b6b;" href="security.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 5 3.5 8.5 7 9 3.5-.5 7-4 7-9V6zM11 8h2v5h-2zM11 15h2v2h-2z"/></svg></span><span class="nav-label">Security</span></a>
+
+        <div class="nav-section-title">AI Runtime</div>
+        <a class="" style="--nav-accent:#9d85ff;" href="models.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4a3 3 0 0 0-3 3v.5A2.5 2.5 0 0 0 6 12a3 3 0 0 0 3 3h1v4H8v1h8v-1h-2v-4h1a3 3 0 0 0 3-3 2.5 2.5 0 0 0 0-4.5V7a3 3 0 0 0-3-3 3.4 3.4 0 0 0-3 1.7A3.4 3.4 0 0 0 9 4z"/></svg></span><span class="nav-label">Models</span></a>
+        <a class="" style="--nav-accent:#58b7ff;" href="pipeline.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v4H4zM14 5h6v4h-6zM9 7h5v2H9zM4 15h6v4H4zM14 15h6v4h-6zM9 17h5v2H9zM11 9h2v6h-2z"/></svg></span><span class="nav-label">Pipeline</span></a>
+        <a class="" style="--nav-accent:#5fd4a5;" href="knowledge.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h12a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3zM8 4v13a1 1 0 0 0 1 1h9V7a1 1 0 0 0-1-1z"/></svg></span><span class="nav-label">Knowledge</span></a>
+        <a class="" style="--nav-accent:#7dc4ff;" href="memory.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10H7zM4 10h2v4H4zM18 10h2v4h-2zM10 4h4v2h-4zM10 18h4v2h-4z"/></svg></span><span class="nav-label">Memory</span></a>
+        <a class="" style="--nav-accent:#c991ff;" href="behavior.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h8v2H4zM15 7h5v2h-5zM9 6h2v4H9zM4 15h5v2H4zM12 15h8v2h-8zM10 14h2v4h-2z"/></svg></span><span class="nav-label">Behavior</span></a>
+        <a class="" style="--nav-accent:#7ed0ff;" href="plugin.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h2v6h4V3h2v6h2v3a6 6 0 0 1-5 5.9V21h-2v-3.1A6 6 0 0 1 6 12V9h2z"/></svg></span><span class="nav-label">Plugin</span></a>
+        <a class="" style="--nav-accent:#f7b267;" href="benchmarks.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-4 3 8 2-4h7v2h-6l-3 6-3-8-1 2H3z"/></svg></span><span class="nav-label">Benchmarks</span></a>
+
+        <div class="nav-section-title">Administration</div>
+        <div class="nav-group " data-nav-group="1">
+          <div class="nav-parent-row">
+            <a class="" style="--nav-accent:#87c3ff;" href="operators.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM17 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6zM2 20a7 7 0 0 1 14 0H2zM14 20a5 5 0 0 1 8 0z"/></svg></span><span class="nav-label">Operators</span></a>
+            <button type="button" class="nav-toggle" data-nav-toggle="1" aria-expanded="false">v</button>
+          </div>
+          <div class="nav-children">
+            <a href="operators.html#users">Users</a>
+            <a href="operators.html#roles">Roles</a>
+          </div>
+        </div>
+        <div class="nav-group " data-nav-group="1">
+          <div class="nav-parent-row">
+            <a class="" style="--nav-accent:#8ea8ff;" href="settings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4l.6 2.2a8 8 0 0 1 1.8.8L18.6 4l2.8 2.8-1 2.2c.3.6.6 1.2.8 1.8L24 12v4l-2.2.6a8 8 0 0 1-.8 1.8l1 2.2L18.6 23l-2.2-1a8 8 0 0 1-1.8.8L14 25h-4l-.6-2.2a8 8 0 0 1-1.8-.8L5.4 23 2.6 20.2l1-2.2a8 8 0 0 1-.8-1.8L0 16v-4l2.2-.6a8 8 0 0 1 .8-1.8l-1-2.2L5.4 4l2.2 1a8 8 0 0 1 1.8-.8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></span><span class="nav-label">Settings</span></a>
+            <button type="button" class="nav-toggle" data-nav-toggle="1" aria-expanded="false">v</button>
+          </div>
+          <div class="nav-children">
+            <a href="settings.html#general">General</a>
+            <a href="settings.html#alerts">Alerts</a>
+            <a href="settings.html#visuals">Visuals</a>
+          </div>
+        </div>
+        <a class="" style="--nav-accent:#95b5d9;" href="docs.html"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM13 3v5h5M8 12h8v2H8zM8 16h8v2H8z"/></svg></span><span class="nav-label">Documentation</span></a>
+      </nav>
+      <div style="margin-top:18px; font-size:12px; color:var(--muted);">Demo mode - fake content only</div>
+    </aside>
+    <main class="content">
+      <div class="ops-rail">
+        <div><div class="ops-label">Environment</div><div class="ops-value"><span class="env-badge">LAB</span></div></div>
+        <div><div class="ops-label">Engine State</div><div class="ops-value"><span class="ops-state"><span class="ops-dot"></span>RUNNING</span></div></div>
+        <div><div class="ops-label">Policy Eval</div><div class="ops-value">2026-02-21 18:33 UTC</div></div>
+        <div><div class="ops-label">Active Model</div><div class="ops-value">elora-assistant-main</div></div>
+        <div><div class="ops-label">Operator</div><div class="ops-value">demo.admin</div></div>
+      </div>
+      <div class="banner">Audit Events and Job Logs view as in real engine, using fake records.</div>
+      <h1 class="h1">Monitoring</h1>
+      
+<div class="cards"><div class="kpi"><span class="muted">Audit events (24h)</span><strong>238</strong></div><div class="kpi"><span class="muted">Auth failures</span><strong>4</strong></div><div class="kpi"><span class="muted">Retention</span><strong>30d</strong></div></div>
+<section class="card" id="audit"><table class="table"><thead><tr><th>Time</th><th>Event</th><th>Actor</th><th>Result</th></tr></thead><tbody><tr><td>16:10</td><td>job.status.updated</td><td>engine</td><td>done</td></tr><tr><td>16:07</td><td>admin.login</td><td>operator.nf</td><td>success</td></tr><tr><td>16:05</td><td>guardrail.block</td><td>runtime</td><td>policy_violation</td></tr></tbody></table></section>
+    </main>
+  </div>
+
+  <button id="admin-chat-launcher" class="admin-chat-launcher" type="button">
+    <span class="launcher-avatar">EE</span>
+    <span>Chat</span>
+    <span class="launcher-status" aria-hidden="true"></span>
+  </button>
+  <section id="admin-chat-modal" class="admin-chat-modal" aria-hidden="true">
+    <div class="admin-chat-head">
+      <strong>Elora Chat</strong>
+      <button id="admin-chat-close" type="button">Close</button>
+    </div>
+    <div id="admin-chat-body" class="admin-chat-body"></div>
+    <div class="admin-chat-foot">
+      <select><option>RAG</option><option>GPT</option></select>
+      <textarea id="admin-chat-input" class="admin-chat-input" placeholder="Ask Elora..."></textarea>
+      <button id="admin-chat-send" type="button">Send</button>
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>
