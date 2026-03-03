@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Elora Engine - Governance Replay (Demo)</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-avatar"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='elora-avatar.svg';" /></div>
+        <div>
+          <div><strong>Elora Engine</strong></div>
+          <div style="color:var(--muted); font-size:12px;">Admin</div>
+        </div>
+      </div>
+      <nav class="nav"></nav>
+      <div style="margin-top:18px; font-size:12px; color:var(--muted);">Guided mode: Governance Replay (synthetic content)</div>
+    </aside>
+
+    <main class="content">
+      <div class="ops-rail" id="ops-rail">
+        <div><div class="ops-label">Environment</div><div class="ops-value"><span class="env-badge">PROD</span></div></div>
+        <div><div class="ops-label">Engine State</div><div class="ops-value"><span class="ops-state"><span class="ops-dot"></span>RUNNING</span></div></div>
+        <div><div class="ops-label">Policy Eval</div><div class="ops-value">2026-03-02 22:43:06.110Z</div></div>
+        <div><div class="ops-label">Active Model</div><div class="ops-value">elora:smollm2</div></div>
+        <div><div class="ops-label">Operator</div><div class="ops-value">elora-admin</div></div>
+      </div>
+
+      <section class="card" id="dashboard-explainer">
+        <p style="margin:0; font-size:15px;">The Governance Dashboard presents interpreted control-plane signals. It aggregates risk posture, termination states, and policy-relevant indicators. One evaluated job was terminated and is now the focus for replay investigation. Raw execution sequencing remains in Observability; governance focuses on admissibility and accountability.</p>
+      </section>
+
+      <section id="kpi-summary" class="kpi-grid">
+        <article class="kpi-card"><h3>Total Jobs (24h)</h3><strong>8</strong></article>
+        <article class="kpi-card"><h3>Terminated Jobs</h3><strong>1</strong></article>
+        <article class="kpi-card"><h3>Needs Review</h3><strong>1</strong></article>
+        <article class="kpi-card"><h3>Avg Confidence (24h)</h3><strong>0.86</strong></article>
+
+        <article class="kpi-card"><h3>High Risk Jobs</h3><strong>1</strong></article>
+        <article class="kpi-card"><h3>Active Escalations</h3><strong>1</strong></article>
+      </section>
+
+      <section class="signal-grid" id="signal-grid">
+        <article class="signal-card">
+          <h3>Guardrail Breakdown</h3>
+          <p>Blocked (baseline): 0<br />Blocked (injection): 0<br />Blocked (policy): 1<br />Terminated jobs: 1</p>
+        </article>
+        <article class="signal-card">
+          <h3>Cost &amp; Token Budget</h3>
+          <p>Token churn (24h): 3120<br />Budget ceiling: 50000<br />Cost estimate: $0.0078<br />Over budget risk: low (ratio 0.0624)</p>
+        </article>
+        <article class="signal-card">
+          <h3>Config Drift Watch</h3>
+          <p>Runtime config hash: dcba2f74372b<br />Last config change: not tracked<br />Drift alerts: 0<br />Last drift event: none</p>
+        </article>
+      </section>
+
+      <section class="jobs-card card" id="jobs-table">
+        <h2>Recent Jobs (Evaluated)</h2>
+        <p class="muted" style="margin:0 0 10px;">Focus item for this tour: Job #35 (terminated, high risk).</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Job</th>
+              <th>Source</th>
+              <th>Status</th>
+              <th>Risk</th>
+              <th>Confidence</th>
+              <th>Retrieval Mode</th>
+              <th>Provider</th>
+              <th>Model</th>
+              <th>Latency (ms)</th>
+              <th>Provider Tokens</th>
+              <th>Request ID</th>
+              <th>API Err</th>
+              <th>Needs Review</th>
+              <th>Token Churn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="focus-row" id="focus-job-35">
+              <td><a href="#" onclick="return false;">#35</a></td>
+              <td>web</td>
+              <td><span class="status-pill terminated">terminated</span></td>
+              <td><span class="risk-pill">HIGH</span></td>
+              <td>0.4</td>
+              <td>hybrid</td>
+              <td>ollama</td>
+              <td>elora:smollm2</td>
+              <td>1526.63</td>
+              <td>503</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Yes</td>
+              <td>503</td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">#34</a></td>
+              <td>admin</td>
+              <td><span class="status-pill success">done</span></td>
+              <td><span class="risk-pill low">LOW</span></td>
+              <td>0.93</td>
+              <td>hybrid</td>
+              <td>ollama</td>
+              <td>elora:smollm2</td>
+              <td>828.10</td>
+              <td>410</td>
+              <td>-</td>
+              <td>-</td>
+              <td>No</td>
+              <td>410</td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">#33</a></td>
+              <td>api</td>
+              <td><span class="status-pill success">done</span></td>
+              <td><span class="risk-pill low">LOW</span></td>
+              <td>0.89</td>
+              <td>rag</td>
+              <td>ollama</td>
+              <td>elora:smollm2</td>
+              <td>624.32</td>
+              <td>388</td>
+              <td>-</td>
+              <td>-</td>
+              <td>No</td>
+              <td>388</td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">#32</a></td>
+              <td>scheduler</td>
+              <td><span class="status-pill success">done</span></td>
+              <td><span class="risk-pill low">LOW</span></td>
+              <td>0.92</td>
+              <td>hybrid</td>
+              <td>ollama</td>
+              <td>elora:smollm3</td>
+              <td>711.55</td>
+              <td>466</td>
+              <td>-</td>
+              <td>-</td>
+              <td>No</td>
+              <td>466</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

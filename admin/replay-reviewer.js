@@ -1,6 +1,6 @@
 (function () {
-  const TOUR_ID = 'governance_replay';
-  const ACTIVE_KEY = 'governance_dashboard';
+  const TOUR_ID = 'governance_replay_stage2';
+  const ACTIVE_KEY = 'governance_replay';
 
   let activeTourPanel = null;
   let activeTourTarget = null;
@@ -9,39 +9,39 @@
 
   const TOUR_STEPS = [
     {
-      selector: '#dashboard-explainer',
-      title: 'Welcome To Governance Replay',
-      text: 'Welcome. I will guide you through how governance decisions are interpreted using structured synthetic records. This tour focuses on admissibility at the commit boundary rather than runtime mechanics.'
+      selector: '#rr-command',
+      title: 'Replay Reviewer Introduction',
+      text: 'This is the governance replay command surface. It reconstructs admissibility decisions from stored commit inputs rather than re-running inference. The objective is decision accountability, not runtime simulation.'
     },
     {
-      selector: '#dashboard-explainer',
-      title: 'Governance Dashboard Context',
-      text: 'This surface represents the governance layer of the engine. It summarizes evaluated outcomes, risk posture, and termination states before any deep replay inspection. One job was terminated, so our objective here is triage and then targeted investigation.'
+      selector: '#rr-inputs',
+      title: 'Replay Input Scope',
+      text: 'Enter a Job ID to reconstruct its commit evaluation context. An optional comparison ID enables differential analysis between two runs, which helps detect policy changes, configuration drift, or authority divergence. This defines the scope of governance review.'
     },
     {
-      selector: '#ops-rail',
-      title: 'Operator Context Rail',
-      text: 'Begin with runtime context. Environment, engine state, policy evaluation timestamp, active model, and operator identity establish the authority frame under which decisions were evaluated. Governance always begins with captured context.'
+      selector: '#rr-actions',
+      title: 'Replay Action Controls',
+      text: 'Focus mode narrows the interface to decision-critical evidence while dense view expands structured detail. Print and export controls generate portable governance artifacts suitable for audit and record retention. Replay is designed to produce defensible evidence, not transient inspection.'
     },
     {
-      selector: '#kpi-summary',
-      title: 'KPI Summary',
-      text: 'These indicators summarize governance outcomes across the recent period. Terminated jobs, high-risk classifications, and confidence levels provide an immediate view of system posture before examining individual decisions.'
+      selector: '#rr-summary-grid',
+      title: 'Decision Summary Layer',
+      text: 'The 10-Second Answer provides a concise admissibility explanation derived from captured commit inputs. Risk Snapshot summarizes classification and threshold posture, and Run Diff highlights structural differences between evaluated contexts. This layer answers why before exposing full trace detail.'
     },
     {
-      selector: '#signal-grid',
-      title: 'Governance Signals',
-      text: 'Guardrail breakdown, cost and token posture, and configuration drift monitoring are interpreted governance signals. They surface policy and operational risk without exposing raw execution traces.'
+      selector: '#rr-trace',
+      title: 'Policy Trace Panel',
+      text: 'Policy Trace exposes the deterministic evaluation path: decision class, confidence and uncertainty thresholds, guardrail posture, and final admissibility outcome. This is structured policy evaluation under captured state, not narrative reasoning. It is the core evidence layer for governance audit.'
     },
     {
-      selector: '#jobs-table',
-      title: 'Evaluated Jobs',
-      text: 'Most evaluated jobs complete without governance intervention. One high-risk job was terminated and remains under review. Governance replay exists to explain why that decision was made.'
+      selector: '#rr-recent-jobs',
+      title: 'Recent Jobs Context',
+      text: 'Recent Jobs anchors the replay within operational context. Governance decisions are rarely isolated, and surrounding outcomes provide signal about broader system posture and risk patterns. We will now select Job #35 for reconstruction.'
     },
     {
-      selector: '#focus-job-35',
-      title: 'Focus Job Selected',
-      text: 'Job #35 was terminated during governance evaluation. We will now move to Replay Reviewer to investigate why that decision occurred.'
+      selector: '#rr-focus-job',
+      title: 'Stage 3 Handoff',
+      text: 'Job #35 was terminated during commit evaluation. The next stage examines proposal artifact, authority state, and policy thresholds that led to denial. Let us now deep dive into why Job #35 failed.'
     }
   ];
 
@@ -65,53 +65,62 @@
         },
         {
           label: 'Observability',
-          href: 'governance-replay.html',
+          href: 'replay-reviewer.html',
           key: 'monitoring',
           accent: '#f4c76a',
           children: [
-            ['Job Timeline', 'governance-replay.html#jobs-table', 'logs'],
-            ['Replay Forensics', 'governance-replay.html#dashboard-explainer', 'observability_forensics'],
-            ['Audit Events', 'governance-replay.html#jobs-table', 'monitoring'],
-            ['Runtime Logs', 'governance-replay.html#jobs-table', 'logs_runtime']
+            ['Job Timeline', 'replay-reviewer.html#rr-recent-jobs', 'logs'],
+            ['Replay Forensics', 'replay-reviewer.html#rr-command', 'observability_forensics'],
+            ['Audit Events', 'replay-reviewer.html#rr-trace', 'monitoring'],
+            ['Runtime Logs', 'replay-reviewer.html#rr-recent-jobs', 'logs_runtime']
           ]
         },
         {
           label: 'Fabric',
-          href: 'governance-replay.html',
+          href: 'replay-reviewer.html',
           key: 'workers',
           accent: '#40d3b5',
           children: [
-            ['Worker Hosts', 'governance-replay.html#dashboard-explainer', 'workers_hosts'],
-            ['Workers', 'governance-replay.html#dashboard-explainer', 'workers_workers'],
-            ['Templates', 'governance-replay.html#dashboard-explainer', 'workers_templates'],
-            ['Provisioner', 'governance-replay.html#dashboard-explainer', 'workers_provisioner'],
-            ['Nodes', 'governance-replay.html#dashboard-explainer', 'nodes']
+            ['Worker Hosts', 'replay-reviewer.html#rr-recent-jobs', 'workers_hosts'],
+            ['Workers', 'replay-reviewer.html#rr-recent-jobs', 'workers_workers'],
+            ['Templates', 'replay-reviewer.html#rr-recent-jobs', 'workers_templates'],
+            ['Provisioner', 'replay-reviewer.html#rr-recent-jobs', 'workers_provisioner'],
+            ['Nodes', 'replay-reviewer.html#rr-recent-jobs', 'nodes']
           ]
         },
         {
           label: 'Governance',
-          href: 'governance-replay.html',
+          href: 'replay-reviewer.html',
           key: 'governance_dashboard',
           accent: '#ff8a65',
           children: [
             ['Governance Dashboard', 'governance-replay.html', 'governance_dashboard'],
-            ['Policy & Enforcement', 'governance-replay.html#dashboard-explainer', 'governance_policy'],
-            ['Decision Classes', 'governance-replay.html#dashboard-explainer', 'governance_classes'],
-            ['Justification & Confidence', 'governance-replay.html#dashboard-explainer', 'governance_justification'],
-            ['Replay Review', 'governance-replay.html#dashboard-explainer', 'governance_replay'],
-            ['Drift & Risk', 'governance-replay.html#dashboard-explainer', 'governance_drift'],
-            ['Human Escalations', 'governance-replay.html#dashboard-explainer', 'governance_escalations'],
-            ['Security Posture', 'governance-replay.html#dashboard-explainer', 'governance_posture'],
-            ['Job Buckets', 'governance-replay.html#dashboard-explainer', 'workers_buckets']
+            ['Policy & Enforcement', 'replay-reviewer.html#rr-command', 'governance_policy'],
+            ['Decision Classes', 'replay-reviewer.html#rr-trace', 'governance_classes'],
+            ['Justification & Confidence', 'replay-reviewer.html#rr-answer', 'governance_justification'],
+            ['Replay Review', 'replay-reviewer.html', 'governance_replay'],
+            ['Drift & Risk', 'replay-reviewer.html#rr-risk', 'governance_drift'],
+            ['Human Escalations', 'replay-reviewer.html#rr-recent-jobs', 'governance_escalations'],
+            ['Security Posture', 'replay-reviewer.html#rr-command', 'governance_posture'],
+            ['Job Buckets', 'replay-reviewer.html#rr-recent-jobs', 'workers_buckets']
           ]
         },
         {
           label: 'AI Runtime',
-          href: 'governance-replay.html',
+          href: 'replay-reviewer.html',
           key: 'runtime_dashboard',
           accent: '#9d85ff',
           children: [
-            ['Runtime Dashboard', 'governance-replay.html#dashboard-explainer', 'runtime_dashboard']
+            ['Runtime Dashboard', 'replay-reviewer.html#rr-command', 'runtime_dashboard']
+          ]
+        },
+        {
+          label: 'Lab',
+          href: 'replay-reviewer.html',
+          key: 'lab_dashboard',
+          accent: '#f7b267',
+          children: [
+            ['Dashboard', 'replay-reviewer.html#rr-command', 'lab_dashboard']
           ]
         }
       ]
@@ -137,7 +146,8 @@
       monitoring: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 13h4l2-5 4 10 2-5h6v2h-5l-3 7-4-10-1 3H3z"/></svg></span>',
       workers: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7zM11 7h2v2h-2zM11 15h2v2h-2z"/></svg></span>',
       governance_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 5 3.5 8.5 7 9 3.5-.5 7-4 7-9V6zM11 8h2v5h-2zM11 15h2v2h-2z"/></svg></span>',
-      runtime_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3v.5A2.5 2.5 0 0 0 6 12a3 3 0 0 0 3 3h1v4H8v1h8v-1h-2v-4h1a3 3 0 0 0 3-3 2.5 2.5 0 0 0 0-4.5V7a3 3 0 0 0-3-3 3.4 3.4 0 0 0-3 1.7A3.4 3.4 0 0 0 9 4z"/></svg></span>'
+      runtime_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3v.5A2.5 2.5 0 0 0 6 12a3 3 0 0 0 3 3h1v4H8v1h8v-1h-2v-4h1a3 3 0 0 0 3-3 2.5 2.5 0 0 0 0-4.5V7a3 3 0 0 0-3-3 3.4 3.4 0 0 0-3 1.7A3.4 3.4 0 0 0 9 4z"/></svg></span>',
+      lab_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 2h6v2l-1 1v4.4l4.9 8.4A3 3 0 0 1 16.3 22H7.7a3 3 0 0 1-2.6-4.2L10 9.4V5L9 4z"/></svg></span>'
     };
     return icons[key] || icons.dashboard;
   }
@@ -180,50 +190,19 @@
     });
   }
 
-  function initMobileSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    if (!sidebar) return;
-
-    const toggle = document.createElement('button');
-    toggle.type = 'button';
-    toggle.className = 'sidebar-mobile-toggle';
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Toggle navigation');
-    toggle.innerHTML = '<span aria-hidden="true">&#9776;</span> Menu';
-
-    const backdrop = document.createElement('div');
-    backdrop.className = 'sidebar-backdrop';
-
-    document.body.appendChild(toggle);
-    document.body.appendChild(backdrop);
-
-    function setOpen(open) {
-      document.body.classList.toggle('sidebar-open', open);
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    }
-
-    toggle.addEventListener('click', function () {
-      setOpen(!document.body.classList.contains('sidebar-open'));
-    });
-    backdrop.addEventListener('click', function () { setOpen(false); });
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 1100) setOpen(false);
-    });
-  }
-
   function ensureTourPanel() {
     if (activeTourPanel) return activeTourPanel;
 
     const panel = document.createElement('aside');
     panel.className = 'tour-panel';
     panel.innerHTML = [
-      '<div class="tour-kicker">Governance Replay Tour</div>',
+      '<div class="tour-kicker">Governance Replay Tour - Stage 2</div>',
       '<div class="tour-body">',
       '<div class="tour-presenter"><img src="../elora-guide.png" alt="Elora guide" onerror="if(!this.dataset.fallback1){this.dataset.fallback1=1;this.src=\'elora-guide.png\';return;}this.onerror=null;this.src=\'../elora.png\';" /></div>',
       '<div class="tour-message">',
       '<h3 class="tour-title"></h3>',
       '<p class="tour-copy"></p>',
-      '<div class="tour-meta">Scope: inference is a proposal, commit is the authorization boundary, replay is deterministic, blocked outcomes are policy-class decisions.</div>',
+      '<div class="tour-meta">Stage 2 focus: replay review framing, quick answer surface, policy trace context, then incident handoff.</div>',
       '<div class="tour-actions">',
       '<button type="button" data-tour-prev="1">Previous</button>',
       '<button type="button" data-tour-next="1">Next</button>',
@@ -248,7 +227,7 @@
     if (nextBtn) {
       nextBtn.addEventListener('click', function () {
         if (currentStepIndex >= TOUR_STEPS.length - 1) {
-          window.location.href = 'replay-reviewer.html?tour=governance_replay_stage2&step=0&tour_lock=1';
+          window.location.href = 'stage-3-deep-dive.html?tour=governance_replay_stage3&step=0&tour_lock=1';
           return;
         }
         applyStep(currentStepIndex + 1, true);
@@ -328,7 +307,7 @@
     if (title) title.textContent = step.title;
     if (copy) copy.textContent = step.text;
     if (prevBtn) prevBtn.disabled = stepIndex === 0;
-    if (nextBtn) nextBtn.textContent = stepIndex >= TOUR_STEPS.length - 1 ? 'Open Replay Reviewer' : 'Next';
+    if (nextBtn) nextBtn.textContent = stepIndex >= TOUR_STEPS.length - 1 ? 'Open Stage 3 Deep Dive' : 'Next';
 
     document.querySelectorAll('.tour-highlight').forEach(function (el) {
       el.classList.remove('tour-highlight');
@@ -385,6 +364,37 @@
       if (!anchor) return;
       if (anchor.closest('.tour-panel')) return;
       event.preventDefault();
+    });
+  }
+
+  function initMobileSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    if (!sidebar) return;
+
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'sidebar-mobile-toggle';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Toggle navigation');
+    toggle.innerHTML = '<span aria-hidden="true">&#9776;</span> Menu';
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'sidebar-backdrop';
+
+    document.body.appendChild(toggle);
+    document.body.appendChild(backdrop);
+
+    function setOpen(open) {
+      document.body.classList.toggle('sidebar-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    toggle.addEventListener('click', function () {
+      setOpen(!document.body.classList.contains('sidebar-open'));
+    });
+    backdrop.addEventListener('click', function () { setOpen(false); });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1100) setOpen(false);
     });
   }
 

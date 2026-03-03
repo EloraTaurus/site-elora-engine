@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Elora Engine - Governance Replay Review (Demo)</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-avatar"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='elora-avatar.svg';" /></div>
+        <div>
+          <div><strong>Elora Engine</strong></div>
+          <div style="color:var(--muted); font-size:12px;">Admin</div>
+        </div>
+      </div>
+      <nav class="nav"></nav>
+      <div style="margin-top:18px; font-size:12px; color:var(--muted);">Guided mode: Replay Reviewer (synthetic content)</div>
+    </aside>
+
+    <main class="content">
+      <div class="ops-rail" id="rr-ops">
+        <div><div class="ops-label">Environment</div><div class="ops-value"><span class="env-badge">PROD</span></div></div>
+        <div><div class="ops-label">Engine State</div><div class="ops-value"><span class="ops-state"><span class="ops-dot"></span>RUNNING</span></div></div>
+        <div><div class="ops-label">Policy Eval</div><div class="ops-value">2026-03-02 23:26:10.690Z</div></div>
+        <div><div class="ops-label">Active Model</div><div class="ops-value">No recent model</div></div>
+        <div><div class="ops-label">Operator</div><div class="ops-value">elora-admin (admin)</div></div>
+      </div>
+
+      <section class="card rr-command" id="rr-command">
+        <h2>Governance Replay Review</h2>
+        <p class="muted">Decision Accountability Review. This surface reconstructs admissibility at the commit boundary and produces a risk-first governance explanation before full trace inspection.</p>
+        <div class="rr-input-row" id="rr-inputs">
+          <input type="number" placeholder="Job ID (required)" value="35" />
+          <input type="number" placeholder="Against Job ID (optional)" />
+          <button type="button">Review</button>
+        </div>
+        <div class="rr-actions" id="rr-actions">
+          <button type="button">Focus mode: off</button>
+          <button type="button">Dense view: off</button>
+          <button type="button">Print / Save PDF</button>
+          <button type="button">Export report (.md)</button>
+          <button type="button">Export report (.json)</button>
+        </div>
+        <div class="chips rr-action-pills">
+          <span class="chip">Focus mode: narrows to decision-critical evidence</span>
+          <span class="chip">Dense view: expands structured evidence detail</span>
+          <span class="chip">Print / Save PDF: operator summary artifact</span>
+          <span class="chip">Export (.md/.json): governance record retention</span>
+        </div>
+      </section>
+
+      <section class="rr-summary-grid" id="rr-summary-grid">
+        <article class="card" id="rr-answer">
+          <h3>10-Second Answer</h3>
+          <div class="chips">
+            <span class="chip">replay v-</span>
+            <span class="chip">trace: unknown</span>
+            <span class="chip">policy snapshot: unknown</span>
+            <span class="chip">config snapshot: unknown</span>
+          </div>
+          <p>Load a job to build a governance answer.</p>
+        </article>
+        <article class="card" id="rr-risk">
+          <h3>Risk Snapshot</h3>
+          <div class="chips">
+            <span class="chip">risk band: unknown</span>
+            <span class="chip">escalation state: unknown</span>
+          </div>
+          <p>No replay loaded.</p>
+        </article>
+        <article class="card" id="rr-diff">
+          <h3>Run Diff</h3>
+          <div class="chips">
+            <span class="chip">baseline run: not selected</span>
+            <span class="chip">comparison run: not selected</span>
+          </div>
+          <p>No comparison loaded.</p>
+        </article>
+      </section>
+
+      <section class="rr-bottom-grid" id="rr-bottom-grid">
+        <article class="card" id="rr-trace">
+          <h3>Policy Trace</h3>
+          <div class="chips">
+            <span class="chip">Decision Class: not captured</span>
+            <span class="chip">Confidence threshold: not captured</span>
+            <span class="chip">Uncertainty threshold: not captured</span>
+            <span class="chip">Guardrail mode: not captured</span>
+          </div>
+          <p class="muted">No trace loaded.</p>
+          <p>No trace loaded.</p>
+        </article>
+        <article class="card rr-recent" id="rr-recent-jobs">
+          <h3>Recent Jobs</h3>
+          <table class="table">
+            <thead>
+              <tr><th>Job</th><th>Status</th><th>Conf(min)</th><th>Updated</th></tr>
+            </thead>
+            <tbody>
+              <tr id="rr-focus-job">
+                <td><span class="tag">#35</span></td>
+                <td><span class="status-pill terminated">terminated</span></td>
+                <td>0.4</td>
+                <td>2026-03-02 21:33:02.682Z</td>
+              </tr>
+              <tr><td><span class="tag">#34</span></td><td><span class="status-pill success">done</span></td><td>0.93</td><td>2026-03-02 20:43:54.497Z</td></tr>
+              <tr><td><span class="tag">#33</span></td><td><span class="status-pill success">done</span></td><td>0.89</td><td>2026-03-02 20:11:42.102Z</td></tr>
+              <tr><td><span class="tag">#32</span></td><td><span class="status-pill success">done</span></td><td>0.92</td><td>2026-03-02 19:58:21.556Z</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="replay-reviewer.js"></script>
+</body>
+</html>

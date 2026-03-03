@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Elora Engine - Stage 3 Deep Dive (Demo)</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="stage3-page">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-avatar"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='elora-avatar.svg';" /></div>
+        <div>
+          <div><strong>Elora Engine</strong></div>
+          <div style="color:var(--muted); font-size:12px;">Admin</div>
+        </div>
+      </div>
+      <nav class="nav"></nav>
+      <div style="margin-top:18px; font-size:12px; color:var(--muted);">Guided mode: Stage 3 deep dive (synthetic content)</div>
+    </aside>
+
+    <main class="content">
+      <div class="ops-rail" id="rr-ops">
+        <div><div class="ops-label">Environment</div><div class="ops-value"><span class="env-badge">PROD</span></div></div>
+        <div><div class="ops-label">Engine State</div><div class="ops-value"><span class="ops-state"><span class="ops-dot"></span>RUNNING</span></div></div>
+        <div><div class="ops-label">Policy Eval</div><div class="ops-value">2026-03-02 23:34:39.931Z</div></div>
+        <div><div class="ops-label">Active Model</div><div class="ops-value">No recent model</div></div>
+        <div><div class="ops-label">Operator</div><div class="ops-value">elora-admin (admin)</div></div>
+      </div>
+
+      <section class="card rr-command" id="rr-command">
+        <h2>Governance Replay Review</h2>
+        <p class="muted">Decision Accountability Review. Risk-first replay view for auditors with under-10-second decision explanation.</p>
+        <div class="rr-input-row" id="rr-inputs">
+          <input type="number" aria-label="Job ID" value="35" />
+          <input type="number" aria-label="Against Job ID" value="34" />
+          <button type="button">Review</button>
+        </div>
+        <div class="rr-actions" id="rr-actions">
+          <button type="button" id="rr-focus-mode-btn" data-focus-state="off">Focus mode: off</button>
+          <button type="button">Dense view: off</button>
+          <button type="button">Print / Save PDF</button>
+          <button type="button">Export report (.md)</button>
+          <button type="button">Export report (.json)</button>
+        </div>
+      </section>
+
+      <section class="card focus-guide" id="focus-guide" aria-live="polite">
+        <div class="focus-guide-kicker">Guided Replay - Stage 4</div>
+        <div class="focus-guide-body">
+          <div class="focus-guide-avatar">
+            <img src="../elora-guide.png" alt="Elora guide" onerror="if(!this.dataset.fallback1){this.dataset.fallback1=1;this.src='elora-guide.png';return;}this.onerror=null;this.src='../elora.png';" />
+          </div>
+          <div class="focus-guide-message">
+            <h3 id="focus-guide-title">Focus Mode Activated</h3>
+            <p id="focus-guide-copy">We will now step through the decision summary, trace path, and commit boundary evidence.</p>
+            <div class="focus-guide-actions">
+              <button type="button" id="focus-prev-btn">Previous</button>
+              <button type="button" id="focus-next-btn">Next</button>
+              <button type="button" id="focus-restart-btn">Restart</button>
+              <a href="stage-3-deep-dive.html?tour=governance_replay_stage3&amp;step=0&amp;tour_lock=1" id="focus-back-stage3">Back To Stage 3</a>
+              <a href="../index.html#home">Exit tour</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rr-summary-grid" id="rr-summary-grid">
+        <article class="card" id="rr-answer">
+          <h3>Decision Summary</h3>
+          <div class="chips">
+            <span class="chip">replay v1</span>
+            <span class="chip">trace: complete</span>
+            <span class="chip">admissibility: complete</span>
+            <span class="chip">policy snapshot: present</span>
+            <span class="chip">config snapshot: present</span>
+            <span class="chip">authority snapshot: missing</span>
+            <span class="chip">authority drift: aligned</span>
+            <span class="chip">chain: valid</span>
+          </div>
+          <p><strong>Outcome:</strong> terminated</p>
+          <p><strong>Decision:</strong> blocked_commit_validation</p>
+          <p><strong>Reason:</strong> -</p>
+          <p><strong>Blocked:</strong> yes</p>
+          <p><strong>Blocking stage:</strong> Commit</p>
+          <p><strong>Blocking time:</strong> 2026-03-02 21:33:02.047Z</p>
+          <p><strong>Evaluated against Decision Class:</strong> 1</p>
+          <p><strong>Runtime config hash:</strong> 64717979f7cce4b8</p>
+          <div class="focus-nav-row">
+            <input type="number" aria-label="Decision summary Job ID" value="35" />
+            <button type="button">Load</button>
+            <button type="button">Prev</button>
+            <button type="button">Next</button>
+          </div>
+        </article>
+        <article class="card" id="rr-risk">
+          <h3>Risk Snapshot</h3>
+          <p>Risk band: <span class="risk-pill">HIGH</span></p>
+          <p>Confidence avg: 0.4</p>
+          <p>Confidence min: 0.4</p>
+          <p>High-risk events: 2</p>
+          <p>Anomalies: 5</p>
+          <p>Token churn: 503</p>
+        </article>
+        <article class="card" id="rr-diff">
+          <h3>Run Diff</h3>
+          <p>Against job: <strong>#34</strong></p>
+          <p>Current trace len: 12</p>
+          <p>Against trace len: 13</p>
+          <p>First mismatch: <strong>mismatch@2</strong></p>
+        </article>
+      </section>
+
+      <section class="rr-bottom-grid rr-bottom-stage3" id="rr-bottom-grid">
+        <article class="card" id="rr-trace">
+          <div class="trace-head">
+            <h3>Trace</h3>
+          </div>
+          <div class="trace-body" id="trace-body">
+            <div class="chips">
+              <span class="chip">Class: 1</span>
+              <span class="chip">Confidence threshold: not captured</span>
+              <span class="chip">Uncertainty threshold: not captured</span>
+              <span class="chip">Guardrail mode: not captured</span>
+            </div>
+            <p class="trace-note">Risk escalation detected at 2026-03-02 21:33:02.047Z (HIGH).</p>
+            <div class="trace-events">
+            <div class="trace-accordion" id="trace-run-start" data-trace-key="run_started">
+              <button type="button" class="trace-event" data-trace-toggle="run_started"><span>2026-03-02 21:33:00.372Z</span><strong>run.started</strong><span class="chip">execution</span><span class="risk-pill low">LOW</span></button>
+              <pre class="trace-accordion-body" data-trace-body="run_started" hidden></pre>
+            </div>
+            <div class="trace-accordion" data-trace-key="intake">
+              <button type="button" class="trace-event" data-trace-toggle="intake"><span>2026-03-02 21:33:00.390Z</span><strong>Intake</strong><span class="chip">execution</span><span class="risk-pill low">LOW</span></button>
+              <pre class="trace-accordion-body" data-trace-body="intake" hidden></pre>
+            </div>
+            <div class="trace-accordion" data-trace-key="response_1">
+              <button type="button" class="trace-event" data-trace-toggle="response_1"><span>2026-03-02 21:33:00.408Z</span><strong>Response</strong><span class="chip">execution</span><span class="risk-pill low">LOW</span></button>
+              <pre class="trace-accordion-body" data-trace-body="response_1" hidden></pre>
+            </div>
+            <div class="trace-accordion focus-row" id="trace-proposal-created" data-trace-key="proposal_created">
+              <button type="button" class="trace-event" data-trace-toggle="proposal_created"><span>2026-03-02 21:33:01.961Z</span><strong>Proposal</strong><span class="chip">proposal</span><span class="risk-pill low">LOW</span><span class="risk-pill">proposal_created</span></button>
+              <pre class="trace-accordion-body" data-trace-body="proposal_created" hidden></pre>
+            </div>
+            <div class="trace-accordion" data-trace-key="response_2">
+              <button type="button" class="trace-event" data-trace-toggle="response_2"><span>2026-03-02 21:33:01.972Z</span><strong>Response</strong><span class="chip">execution</span><span class="risk-pill low">LOW</span></button>
+              <pre class="trace-accordion-body" data-trace-body="response_2" hidden></pre>
+            </div>
+            <div class="trace-accordion" data-trace-key="justification">
+              <button type="button" class="trace-event" data-trace-toggle="justification"><span>2026-03-02 21:33:01.984Z</span><strong>Justification</strong><span class="chip">governance</span><span class="risk-pill low">LOW</span></button>
+              <pre class="trace-accordion-body" data-trace-body="justification" hidden></pre>
+            </div>
+            <div class="trace-accordion" data-trace-key="proposal_validated">
+              <button type="button" class="trace-event" data-trace-toggle="proposal_validated"><span>2026-03-02 21:33:01.992Z</span><strong>Proposal</strong><span class="chip">proposal</span><span class="risk-pill low">LOW</span><span class="risk-pill">proposal_validated</span></button>
+              <pre class="trace-accordion-body" data-trace-body="proposal_validated" hidden></pre>
+            </div>
+            <div class="trace-accordion trace-commit" id="trace-commit-1" data-trace-key="commit_1">
+              <button type="button" class="trace-event trace-commit" data-trace-toggle="commit_1"><span>2026-03-02 21:33:02.019Z</span><strong>Commit</strong><span class="chip">commit</span><span class="risk-pill low">LOW</span></button>
+              <pre class="trace-accordion-body" data-trace-body="commit_1" hidden></pre>
+            </div>
+            <div class="trace-accordion trace-commit" data-trace-key="commit_2">
+              <button type="button" class="trace-event trace-commit" data-trace-toggle="commit_2"><span>2026-03-02 21:33:02.028Z</span><strong>Commit</strong><span class="chip">commit</span><span class="risk-pill low">LOW</span></button>
+              <pre class="trace-accordion-body" data-trace-body="commit_2" hidden></pre>
+            </div>
+            <div class="trace-accordion trace-commit trace-fail" id="trace-commit-fail" data-trace-key="commit_fail">
+              <button type="button" class="trace-event trace-commit trace-fail" data-trace-toggle="commit_fail"><span>2026-03-02 21:33:02.047Z</span><strong>Commit</strong><span class="chip">commit</span><span class="risk-pill">HIGH</span><span class="risk-pill">guardrail_block</span></button>
+              <pre class="trace-accordion-body" data-trace-body="commit_fail" hidden></pre>
+            </div>
+            </div>
+            </div>
+        </article>
+        <div class="rr-right-stack">
+          <article class="card rr-recent" id="rr-recent-jobs">
+            <h3>Recent Jobs</h3>
+            <table class="table">
+              <thead>
+                <tr><th>Job</th><th>Status</th><th>Conf(min)</th><th>Updated</th></tr>
+              </thead>
+              <tbody>
+                <tr id="rr-focus-job">
+                  <td><span class="tag">#35</span></td>
+                  <td><span class="status-pill terminated">terminated</span></td>
+                  <td>0.4</td>
+                  <td>2026-03-02 21:33:02.682Z</td>
+                </tr>
+                <tr><td><span class="tag">#34</span></td><td><span class="status-pill terminated">terminated</span></td><td>0.4</td><td>2026-03-02 20:43:54.497Z</td></tr>
+                <tr><td><span class="tag">#33</span></td><td><span class="status-pill terminated">terminated</span></td><td>0.4</td><td>2026-03-02 20:39:02.993Z</td></tr>
+                <tr><td><span class="tag">#32</span></td><td><span class="status-pill terminated">terminated</span></td><td>-</td><td>2026-03-02 20:38:14.490Z</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="card" id="rr-json">
+            <h3>Job Artifact (Synthetic JSON)</h3>
+            <pre class="json-view">{
+  "job_id": 35,
+  "status": "terminated",
+  "stage": "commit",
+  "error": null,
+  "created_at": 1772487180.3559875,
+  "updated_at": 1772487182.6828167,
+  "decision": "blocked_commit_validation",
+  "metrics": {
+    "mode": "gpt",
+    "response_count": 1,
+    "duration_ms_last": 1541,
+    "duration_ms_total": 1541,
+    "prompt_tokens_last": 487,
+    "output_tokens_last": 16
+  }
+}</pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="card end-demo-notice" id="end-demo-notice" aria-live="polite" hidden>
+        <h3>Guided Demo Complete</h3>
+        <p>You can now explore the dashboard navigation freely, or exit back to the public site.</p>
+        <div class="end-demo-actions">
+          <a href="../index.html#home">Exit To Home</a>
+          <button type="button" id="end-demo-dismiss">Continue Exploring</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="stage-3-deep-dive.js"></script>
+</body>
+</html>
