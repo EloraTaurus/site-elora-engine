@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Elora Engine public changelog for demo-visible updates." />
+  <meta name="description" content="Current and planned Elora Engine capabilities across live platform posture and public demo scope." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://elorataurus.com/changelog.html" />
+  <link rel="canonical" href="https://elorataurus.com/features.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Elora Taurus Project - Engine Changelog" />
-  <meta property="og:description" content="Public changelog for Elora Engine demo and walkthrough updates." />
-  <meta property="og:url" content="https://elorataurus.com/changelog.html" />
+  <meta property="og:title" content="The Elora Taurus Project - Engine Features" />
+  <meta property="og:description" content="What Elora Engine can do today, what is available in public demo, and what is planned next." />
+  <meta property="og:url" content="https://elorataurus.com/features.html" />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Elora Taurus Project - Engine Changelog" />
-  <meta name="twitter:description" content="Track public demo and guided walkthrough changes for Elora Engine." />
+  <meta name="twitter:title" content="The Elora Taurus Project - Engine Features" />
+  <meta name="twitter:description" content="Current capabilities and planned feature direction for Elora Engine." />
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
-  <title>The Elora Taurus Project - Engine Changelog</title>
+  <title>The Elora Taurus Project - Engine Features</title>
   <link rel="icon" href="elora.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="top-stage" id="changelog">
+  <section class="top-stage" id="features">
     <header class="topbar">
       <div class="topbar-inner">
         <div class="brand">
@@ -30,12 +30,12 @@
             <small>Public demo for the Elora Engine dashboard</small>
           </div>
         </div>
-        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-changelog"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
-        <nav id="top-links-changelog" data-top-links="1" class="top-links">
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-features"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-features" data-top-links="1" class="top-links">
           <a class="nav-btn" href="index.html">Home</a>
           <a class="nav-btn" href="about.html">About Elora</a>
-          <a class="nav-btn" href="features.html">Features</a>
-          <a class="nav-btn active" href="changelog.html">Changelog</a>
+          <a class="nav-btn active" href="features.html">Features</a>
+          <a class="nav-btn" href="changelog.html">Changelog</a>
           <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
           <a class="nav-btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Tour</a>
         </nav>
@@ -44,11 +44,11 @@
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1>Elora Engine Changelog</h1>
-          <p>Public changelog for demo-visible engine and walkthrough updates. This page loads directly from the engine changelog source.</p>
+          <h1>Elora Engine Features</h1>
+          <p>A factual snapshot of current capability posture and planned feature direction. This page separates what is available now from what is in active build.</p>
           <div class="cta-row">
-            <a class="btn" href="index.html">Back to Home</a>
-            <a class="btn alt" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Guided Tour</a>
+            <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Guided Tour</a>
+            <a class="btn alt" href="governance-pack.html">Read Governance Pack</a>
           </div>
         </div>
       </section>
@@ -57,9 +57,10 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <h2>Engine Changelog</h2>
+      <h2>Current and Planned Capability</h2>
+      <p class="section-intro">Loaded from editable markdown so this page can be kept aligned with platform reality as features move from planned to available.</p>
       <div class="card">
-        <div id="changelog-page-content" class="changelog-content">Loading changelog...</div>
+        <div id="features-content" class="changelog-content">Loading features...</div>
       </div>
     </div>
   </section>
@@ -86,7 +87,7 @@
     (function () {
       const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
       const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
-      const changelogPageContent = document.getElementById('changelog-page-content');
+      const featuresContent = document.getElementById('features-content');
 
       navToggles.forEach(function (toggle) {
         const controls = toggle.getAttribute('aria-controls');
@@ -106,63 +107,39 @@
 
       window.addEventListener('resize', function () {
         if (window.innerWidth > 760) {
-          topLinksGroups.forEach(function (links) {
-            links.classList.remove('open');
-          });
-          navToggles.forEach(function (toggle) {
-            toggle.setAttribute('aria-expanded', 'false');
-          });
+          topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
+          navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
         }
       });
 
+      function esc(s) {
+        return s
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
       function renderSimpleMarkdown(md) {
-        function esc(s) {
-          return s
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;');
-        }
         const lines = md.split(/\r?\n/);
         const html = [];
         let inList = false;
         lines.forEach(function (line) {
           const t = line.trim();
           if (!t) {
-            if (inList) {
-              html.push('</ul>');
-              inList = false;
-            }
-            return;
-          }
-          if (t.startsWith('### ')) {
             if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h4>' + esc(t.slice(4)) + '</h4>');
             return;
           }
-          if (t.startsWith('## ')) {
-            if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h3>' + esc(t.slice(3)) + '</h3>');
-            return;
-          }
-          if (t.startsWith('# ')) {
-            if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h2>' + esc(t.slice(2)) + '</h2>');
-            return;
-          }
+          if (t.startsWith('### ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h4>' + esc(t.slice(4)) + '</h4>'); return; }
+          if (t.startsWith('## ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h3>' + esc(t.slice(3)) + '</h3>'); return; }
+          if (t.startsWith('# ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h2>' + esc(t.slice(2)) + '</h2>'); return; }
           if (t.startsWith('- ')) {
-            if (!inList) {
-              html.push('<ul class="list">');
-              inList = true;
-            }
+            if (!inList) { html.push('<ul class="list">'); inList = true; }
             html.push('<li>' + esc(t.slice(2)) + '</li>');
             return;
           }
-          if (inList) {
-            html.push('</ul>');
-            inList = false;
-          }
+          if (inList) { html.push('</ul>'); inList = false; }
           html.push('<p>' + esc(t) + '</p>');
         });
         if (inList) html.push('</ul>');
@@ -187,18 +164,14 @@
         return null;
       }
 
-      async function loadEngineChangelog() {
-        if (!changelogPageContent) return;
-        const engineCandidates = []
-          .concat(makeCandidatePaths('CHANGELOG_ENGINE.md'))
-          .concat(makeCandidatePaths('CHANGELOG_ENGINE'))
-          .concat(makeCandidatePaths('changelog.md'));
-        const md = await fetchFirst(engineCandidates);
-        changelogPageContent.innerHTML = md
+      async function loadFeatures() {
+        if (!featuresContent) return;
+        const md = await fetchFirst(makeCandidatePaths('features.md'));
+        featuresContent.innerHTML = md
           ? renderSimpleMarkdown(md)
-          : 'Changelog is currently unavailable.';
+          : 'Features are currently unavailable.';
       }
-      loadEngineChangelog();
+      loadFeatures();
     })();
   </script>
 </body>

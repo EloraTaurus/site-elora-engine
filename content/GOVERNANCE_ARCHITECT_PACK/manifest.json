@@ -1,0 +1,14 @@
+{
+  "title": "Governance Architecture Pack",
+  "description": "Public architecture notes for governance control-plane direction, commit-boundary admissibility, and replay accountability.",
+  "section_intro": "Select an article from the left navigation to load it on the right.",
+  "folder": "GOVERNANCE_ARCHITECT_PACK",
+  "articles": [
+    { "file": "01_EXECUTIVE_ARCHITECT_BRIEF.md", "title": "Executive Architect Brief" },
+    { "file": "02_GOVERNANCE_CONTROL_PLANE.md", "title": "Governance Control Plane" },
+    { "file": "03_COMMIT_BOUNDARY_AND_ADMISSIBILITY.md", "title": "Commit Boundary and Admissibility" },
+    { "file": "04_REPLAY_FORENSICS_AND_ACCOUNTABILITY.md", "title": "Replay Forensics and Accountability" },
+    { "file": "05_RISK_MODEL_AND_OPERATOR_WORKFLOW.md", "title": "Risk Model and Operator Workflow" },
+    { "file": "06_ROADMAP_AND_RESEARCH_QUESTIONS.md", "title": "Roadmap and Research Questions" }
+  ]
+}

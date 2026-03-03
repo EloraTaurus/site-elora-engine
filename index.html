@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="top-stage">
+  <section class="top-stage" id="home">
     <header class="topbar">
       <div class="topbar-inner">
         <div class="brand">
@@ -49,14 +49,16 @@
         <nav id="top-links-home" data-top-links="1" class="top-links">
           <a class="nav-btn active" href="index.html">Home</a>
           <a class="nav-btn" href="about.html">About Elora</a>
+          <a class="nav-btn" href="features.html">Features</a>
           <a class="nav-btn" href="changelog.html">Changelog</a>
+          <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
           <a class="nav-btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Tour</a>
         </nav>
       </div>
     </header>
     <div class="shell">
       <section class="hero">
-        <div>
+        <div class="hero-copy">
           <h1>Operate AI with governance, control, and auditability</h1>
           <p>The Elora Engine is a custom Python-based governance control plane, independently developed and operated on self-managed infrastructure. This site provides a public snapshot using synthetic telemetry so visitors can inspect the current operator surface safely.</p>
           <p>Current public focus is Governance Replay: a guided walkthrough showing how outcomes are evaluated, how commit becomes the authorization boundary, and how blocked decisions are explained with deterministic trace evidence.</p>
@@ -65,27 +67,8 @@
             <a class="btn alt" href="about.html">Read Project Overview</a>
           </div>
         </div>
-        <aside class="status-card">
-          <div class="status-top">
-            <div>
-              <div class="status-pill"><span id="status-dot" class="dot"></span><span id="status-label">Operational</span></div>
-              <h3 style="margin:4px 0 2px;">Engine Status</h3>
-              <p id="status-detail" class="note" style="margin:0;">All core services running.</p>
-            </div>
-            <img class="avatar" src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';" />
-          </div>
-          <div class="chips">
-            <span id="chip-uptime" class="chip"><span class="chip-dot"></span>Uptime: 21d 9h</span>
-            <span id="chip-request" class="chip"><span class="chip-dot"></span>Request: Idle</span>
-            <span id="chip-components" class="chip"><span class="chip-dot"></span>Core services online</span>
-          </div>
-          <div class="chips">
-            <span class="chip"><span id="pill-status-dot" class="chip-dot"></span>Status</span>
-            <span class="chip"><span class="chip-dot"></span>Security</span>
-            <span class="chip"><span class="chip-dot"></span>Observability</span>
-            <span class="chip"><span id="pill-plugin-dot" class="chip-dot"></span>Plugin</span>
-          </div>
-          <div id="plugin-note" class="note">Plugin status: Online - just now</div>
+        <aside class="hero-guide-standalone" aria-label="Elora guide">
+          <img class="hero-guide-image" src="elora-guide.png" alt="Elora guide" onerror="this.onerror=null;this.src='elora.png';" />
         </aside>
       </section>
     </div>
@@ -211,7 +194,9 @@
         <nav class="footer-links">
           <a href="index.html">Home</a>
           <a href="about.html">Project Overview</a>
+          <a href="features.html">Features</a>
           <a href="changelog.html">Changelog</a>
+          <a href="governance-pack.html">Governance Pack</a>
           <a href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Guided Tour</a>
         </nav>
       </div>
@@ -229,61 +214,11 @@
 
   <script>
     (function () {
-      const state = {
-        statusLabel: 'Operational',
-        statusDetail: 'All core services running.',
-        statusColor: '#22c55e',
-        uptimeHours: 21 * 24 + 9,
-        requestStates: ['Idle', 'Low', 'Active'],
-        components: 'Core services online',
-        pluginOnline: true,
-        pluginLastSeenMinutes: 1,
-        tick: 0
-      };
-
-      const statusLabel = document.getElementById('status-label');
-      const statusDetail = document.getElementById('status-detail');
-      const statusDot = document.getElementById('status-dot');
-      const pillStatusDot = document.getElementById('pill-status-dot');
-      const pillPluginDot = document.getElementById('pill-plugin-dot');
-      const chipUptime = document.getElementById('chip-uptime');
-      const chipRequest = document.getElementById('chip-request');
-      const chipComponents = document.getElementById('chip-components');
-      const pluginNote = document.getElementById('plugin-note');
       const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
       const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
       const changelogContent = document.getElementById('changelog-content');
       const privacyToast = document.getElementById('privacy-toast');
       const privacyDismiss = document.getElementById('privacy-toast-dismiss');
-
-      function formatUptime(hours) {
-        const d = Math.floor(hours / 24);
-        const h = hours % 24;
-        return d + 'd ' + h + 'h';
-      }
-
-      function renderStatus() {
-        const request = state.requestStates[state.tick % state.requestStates.length];
-        statusLabel.textContent = state.statusLabel;
-        statusDetail.textContent = state.statusDetail;
-        statusDot.style.background = state.statusColor;
-        pillStatusDot.style.background = state.statusColor;
-        pillPluginDot.style.background = state.pluginOnline ? '#22c55e' : '#ef4444';
-        chipUptime.textContent = 'Uptime: ' + formatUptime(state.uptimeHours + Math.floor(state.tick / 6));
-        chipRequest.textContent = 'Request: ' + request;
-        chipComponents.textContent = state.components;
-        pluginNote.textContent = state.pluginOnline
-          ? 'Plugin status: Online - ' + state.pluginLastSeenMinutes + ' min ago'
-          : 'Plugin status: Offline - last seen 17 min ago';
-      }
-
-      renderStatus();
-      setInterval(function () {
-        state.tick += 1;
-        state.pluginOnline = state.tick % 10 !== 0;
-        state.pluginLastSeenMinutes = state.pluginOnline ? ((state.tick % 4) + 1) : 17;
-        renderStatus();
-      }, 4000);
 
       navToggles.forEach(function (toggle) {
         const controls = toggle.getAttribute('aria-controls');
