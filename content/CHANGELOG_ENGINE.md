@@ -1,14 +1,21 @@
 # Engine Changelog
 
-## 0.16 - 2026-03-03
+## ------------- 0.17 --------------
+
+### 2026-03-03
 - Admin
   - Add Governance Replay `Governance Incident Map` as a full-width admissibility topology surface above trace, with boundary-relevant nodes, authority-edge state (`aligned`/`drift`/`missing`), and node-level metadata drilldown.
   - Refine Incident Map layout to deterministic layered topology (`artifacts -> proposal -> commit -> delivery`) with reduced edge crossing, vertical authority drift edge (`authority_proposal -> authority_commit`), and stronger Commit boundary emphasis.
   - Remove non-admissibility `Entry` node from Incident Map so the surface stays boundary-focused instead of runtime-chronology-focused.
+  - Add `Open incident map` full-screen overlay mode with backdrop/ESC close to reduce visual crowding and improve operator focus on topology analysis.
+  - Park `Governance Incident Map` as `v1 beta` for redesign.
+  - `GIM-01`: fixed SVG template redesign (no runtime routing logic).
+  - `GIM-02`: strict bus lanes + zero overlap routing.
+  - `GIM-03`: fullscreen-first map workflow with compact inline preview.
 - Docs
   - Add deterministic `Governance Incident Map v1` specification (`engine/docs/OPERATORS/GOVERNANCE_INCIDENT_MAP_V1.md`) covering fixed topology, node/edge enums, data precedence, and non-goals.
 
-## 0.16 - 2026-03-02
+### 2026-03-02
 - Engine
   - Centralize runtime commit enforcement in `engine/services/commit_enforcement.py` so async and direct chat routes call the same commit path.
   - Emit explicit proposal/commit lifecycle events for replay clarity: `proposal.created`, `proposal.validated`, `commit.requested`, `commit.authorized`, `commit.denied`, `commit.executed`.
@@ -30,17 +37,15 @@
   - Add `admissibility_complete` and `decision_class_admissible` replay metadata surfaces to distinguish trace completeness from admissibility completeness.
   - Add show/hide toggle for topology surface in Governance Replay to support different operator review modes.
   - Fix Governance Policy page worker-type normalization bug that caused `/admin/governance/policy` to crash (502) when registry entries were dicts instead of plain strings.
-  - Upgrade Governance Policy page from placeholder to V1 editor with:
-    - global commit policy thresholds + snapshot versions
-    - worker-scoped policy mapping
-    - authority-admissibility toggle support.
+  - Upgrade Governance Policy page from placeholder to V1 editor with global commit policy thresholds + snapshot versions.
+  - Add worker-scoped policy mapping in Governance Policy V1 editor.
+  - Add authority-admissibility toggle support in Governance Policy V1 editor.
   - Ensure pipeline editor auto-backfills Commit stage/library entry and commit->delivery wiring for older pipelines.
   - Add Commit user-stage message field to pipeline stage messaging editor.
 - Docs
-  - Add operator reference for inference/commit governance model and resilience roadmap:
-    - `engine/docs/OPERATORS/INFERENCE_COMMIT_GOVERNANCE.md`
+  - Add operator reference for inference/commit governance model and resilience roadmap: `engine/docs/OPERATORS/INFERENCE_COMMIT_GOVERNANCE.md`.
 
-## 0.16 - 2026-02-28
+### 2026-02-28
 - Engine
   - Introduce commit-stage enforcement so inference is treated as proposal-only until a final commit re-validation pass succeeds.
   - Add commit validation path to both `/chat-start` and `/gpt-start`, with explicit `blocked_commit_validation` termination on policy failure.
@@ -61,7 +66,9 @@
   - Add `GET /admin/api/jobs/{id}/commit-input` and `POST /admin/api/lab/commit-recompute` for deterministic commit replay tooling.
   - Expand Governance Dashboard evaluated jobs table with provider telemetry columns (provider/model/latency/request ID/tokens/API error).
 
-## 0.16 - 2026-02-24
+## ------------- 0.16 --------------
+
+## 2026-02-24
 - Engine
   - Harden admin session signing fallback by persisting `session_secret_v1` in `admin_meta` when `RAG_ADMIN_SESSION_SECRET` is unset, using race-safe initialization and first-writer-wins persistence semantics.
   - Strengthen admin session validation by rejecting suspicious token time windows and invalidating sessions for deleted admin users.
@@ -70,7 +77,7 @@
   - Align legacy OTP secret decrypt fallback with the shared admin session-secret source.
   - Refine route-target normalization for API routing to ignore query/fragment without broadening matches for `//path` or semicolon path params.
 
-## 0.16 - 2026-02-19
+## 2026-02-19
 - Engine
   - Add admin-chat bridge endpoints (`/admin/chat-start`, `/admin/chat-status`) with authenticated session gating so internal dashboard chat no longer depends on public chat routes.
   - Add governance summary aggregation for 24h risk/cost telemetry (`blocked_baseline`, `blocked_injection`, `blocked_policy`, `terminated_window`, `token_churn_window`, queue depth).
@@ -86,7 +93,7 @@
   - Refresh admin palette toward phase-2 cyan/space theme for cards, tables, controls, and chat surfaces.
   - Update floating chat launcher to avatar-pill style, rename label to `Chat`, and add live availability indicator dot.
 
-## 0.16 - 2026-02-14
+## 2026-02-14
 - Engine
   - Add bootstrap-key first-run admin flow (`/admin/bootstrap`) to create initial `super_admin` and remove dependency on auto-generated bootstrap credentials.
   - Add Fabric module availability checks (WorkerHost/Provisioner reachability) and return clear module-unavailable responses when Fabric endpoints are not available.
@@ -104,7 +111,9 @@
   - Remove static `wordpress_chat_worker` service from compose stack so WordPress chat worker is Fabric-managed.
   - Keep single-solution compose deployment path (`docker compose up`) without feature-profile splits for core/Fabric startup.
 
-## 0.15 - 2026-02-12
+## ------------- 0.15 --------------
+
+## 2026-02-12
 - Engine
   - Split Fabric worker request routing by `provision_mode` (`vm` vs `container`) so container requests no longer call the VM Provisioner path.
   - Persist and surface request mode metadata on worker records for clearer runtime ownership.
@@ -115,7 +124,7 @@
 - Fabric
   - Add provisioning split schematics document (`fabric/ELORA_FABRIC_PROVISIONING_SPLIT_SCHEMATICS.md`) and index link for next-phase wiring.
 
-## 0.15 - 2026-02-10
+## 2026-02-10
 - Engine
   - Add Fabric setup gating so admin routes require initial Fabric configuration before worker operations.
   - Add Fabric setup persistence fallback (`meta` + env) for provisioner URL/token/timeout and engine public URL.
@@ -136,7 +145,7 @@
   - Add root `.gitignore` rules for `.env` and local SSH key material.
   - Expand setup runbooks with Proxmox ACL scope, snippets storage requirements, privilege-separation notes, SSH key bootstrap, and parked-networking resume checklist.
 
-## 0.15 - 2026-02-09
+## 2026-02-09
 - Engine
   - Reuse existing jobs for the same chat session (instead of creating a new job per reply).
   - Move job cleanup to retention-based history (`RAG_JOB_RETENTION_SECONDS`) while keeping session TTL behaviour.
@@ -161,7 +170,7 @@
 - Platform
   - Add governance dashboard blueprint (`OPERATOR_DASHBOARD_GOVERNANCE_PLAN.md`) for SOC-style operations and audit views.
 
-## 0.15 - 2026-02-05
+## 2026-02-05
 - Engine
   - Add pipeline runtime scaffolding (nodes, registry, artifacts, events).
   - Add runtime test endpoint with artifact + event output.
@@ -182,7 +191,7 @@
   - Fix inspector runtime mapping via node id map.
   - Tighten pipeline sidebar spacing and make it sticky.
 
-## 0.15 - 2026-02-03
+## 2026-02-03
 - Engine
   - Enforce active pipeline minimum source requirements at runtime.
   - Add mandatory Justification stage to baseline pipeline and template seeds.
@@ -213,12 +222,14 @@
   - Refine Pipeline sidebar guidance and empty-state hints.
   - Split Pipeline builder into layout/modals/scripts modules for maintainability.
 
-## 0.15 - 2026-01-02
+## 2026-01-02
 - Engine
   - Add prompt-injection detection with safe refusal responses in chat.
   - Enrich `job_failed` logs with input excerpt, hash, and injection suspicion flag.
 
-## 0.14 - 2026-01-31
+## ------------- 0.14 --------------
+
+## 2026-01-31
 - Engine
   - Memory entries now augment prompt context (when permitted) and are tracked in session info.
   - Behavior settings now drive system prompt and source gating for GPT/RAG.
@@ -262,7 +273,9 @@
   - Add signed `/health` for trusted clients (API key + signature).
   - Plugin status moved to status pills with indicator light.
 
-## 0.13 - 2026-01-29
+## ------------- 0.13 --------------
+
+## 2026-01-29
 - Engine
   - Split API routing into admin/public/chat route modules for maintainability.
   - Expand posture list to reflect AI execution controls (policy, prompt boundaries, tools off by default).
@@ -304,7 +317,9 @@
   - Redesign status page to a hero + cards layout with direction panel and richer hierarchy.
   - Align status hero to show avatar status card and add infra-companion note.
 
-## 0.12 - 2026-01-24
+## ------------- 0.12 --------------
+
+## 2026-01-24
 - Engine
   - Add short-lived `job_id` + `job_token` with TTL and minimal in-memory history.
   - Emit stage events for UI status and include session data in SSE done payload.
@@ -314,7 +329,9 @@
   - Add intent tags, confidence buckets, and no-sources flags to job metadata.
   - Fallback to general guidance when no context is found.
 
-## 0.11 - 2026-01-20
+## ------------- 0.11 --------------
+
+## 2026-01-20
 - Engine
   - Reorganize engine modules into `api/`, `core/`, and `services/`.
   - Require `RAG_API_KEY` from environment (no default fallback).
