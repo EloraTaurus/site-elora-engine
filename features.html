@@ -44,8 +44,8 @@
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1>Elora Engine Features</h1>
-          <p>A factual snapshot of current capability posture and planned feature direction. This page separates what is available now from what is in active build.</p>
+          <h1 id="pack-page-title">Elora Engine Features Context</h1>
+          <p id="pack-page-description">Structured feature and architecture context for what Elora can do today and what is in active build.</p>
           <div class="cta-row">
             <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Guided Tour</a>
             <a class="btn alt" href="governance-pack.html">Read Governance Pack</a>
@@ -57,10 +57,16 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <h2>Current and Planned Capability</h2>
-      <p class="section-intro">Loaded from editable markdown so this page can be kept aligned with platform reality as features move from planned to available.</p>
-      <div class="card">
-        <div id="features-content" class="changelog-content">Loading features...</div>
+      <h2 id="pack-section-title">Elora Engine Features Context</h2>
+      <p id="pack-section-intro" class="section-intro">Start with Snapshot, then use the left navigation for deeper context pages.</p>
+      <div class="pack-layout">
+        <aside class="card pack-nav">
+          <h3>Pages</h3>
+          <div id="pack-nav-list" class="pack-nav-list">Loading...</div>
+        </aside>
+        <article class="card pack-reader">
+          <div id="pack-reader-content" class="changelog-content">Loading page...</div>
+        </article>
       </div>
     </div>
   </section>
@@ -87,7 +93,24 @@
     (function () {
       const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
       const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
-      const featuresContent = document.getElementById('features-content');
+      const navList = document.getElementById('pack-nav-list');
+      const reader = document.getElementById('pack-reader-content');
+      const pageTitle = document.getElementById('pack-page-title');
+      const pageDescription = document.getElementById('pack-page-description');
+      const sectionTitle = document.getElementById('pack-section-title');
+      const sectionIntro = document.getElementById('pack-section-intro');
+      const defaultPackKey = 'WEBSITE_CONTEXT_PACK';
+      const query = new URLSearchParams(window.location.search);
+      const requestedPack = (query.get('pack') || defaultPackKey).toUpperCase().replace(/[^A-Z0-9_-]/g, '');
+      let activePack = {
+        title: 'Elora Engine Features Context',
+        description: 'Structured feature and architecture context for what Elora can do today and what is in active build.',
+        section_intro: 'Start with Snapshot, then use the left navigation for deeper context pages.',
+        folder: defaultPackKey,
+        articles: [
+          { file: '00_SNAPSHOT.md', title: 'Snapshot' }
+        ]
+      };
 
       navToggles.forEach(function (toggle) {
         const controls = toggle.getAttribute('aria-controls');
@@ -146,13 +169,13 @@
         return html.join('');
       }
 
-      function makeCandidatePaths(filename) {
+      function makeCandidatePaths(relativePath) {
         const base = window.location.pathname.replace(/[^/]*$/, '');
         return [
-          'content/' + filename,
-          './content/' + filename,
-          base + 'content/' + filename,
-          window.location.origin + base + 'content/' + filename
+          relativePath,
+          './' + relativePath,
+          base + relativePath,
+          window.location.origin + base + relativePath
         ];
       }
 
@@ -164,14 +187,86 @@
         return null;
       }
 
-      async function loadFeatures() {
-        if (!featuresContent) return;
-        const md = await fetchFirst(makeCandidatePaths('features.md'));
-        featuresContent.innerHTML = md
-          ? renderSimpleMarkdown(md)
-          : 'Features are currently unavailable.';
+      function setActiveNav(file) {
+        document.querySelectorAll('[data-pack-file]').forEach(function (btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-pack-file') === file);
+        });
       }
-      loadFeatures();
+
+      function applyPackMeta(pack) {
+        const title = pack && pack.title ? String(pack.title) : activePack.title;
+        const description = pack && pack.description ? String(pack.description) : activePack.description;
+        const intro = pack && pack.section_intro ? String(pack.section_intro) : activePack.section_intro;
+        if (pageTitle) pageTitle.textContent = title;
+        if (sectionTitle) sectionTitle.textContent = title;
+        if (pageDescription) pageDescription.textContent = description;
+        if (sectionIntro) sectionIntro.textContent = intro;
+      }
+
+      async function loadPackManifest() {
+        const rel = 'content/' + requestedPack + '/manifest.json';
+        const raw = await fetchFirst(makeCandidatePaths(rel));
+        if (!raw) return null;
+        try {
+          return JSON.parse(raw);
+        } catch (err) {
+          return null;
+        }
+      }
+
+      async function loadArticle(file) {
+        const rel = 'content/' + activePack.folder + '/' + file;
+        const md = await fetchFirst(makeCandidatePaths(rel));
+        if (!md) {
+          reader.textContent = 'Page is currently unavailable.';
+          return;
+        }
+        reader.innerHTML = renderSimpleMarkdown(md);
+        setActiveNav(file);
+      }
+
+      function renderNav() {
+        const articles = Array.isArray(activePack.articles) ? activePack.articles : [];
+        if (!articles.length) {
+          navList.textContent = 'No pages configured for this pack.';
+          reader.textContent = 'No page content is currently configured.';
+          return;
+        }
+        navList.innerHTML = articles.map(function (item) {
+          return '<button type="button" class="pack-nav-btn" data-pack-file="' + esc(item.file) + '">' + esc(item.title || item.file) + '</button>';
+        }).join('');
+        navList.querySelectorAll('[data-pack-file]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const file = btn.getAttribute('data-pack-file');
+            if (!file) return;
+            loadArticle(file);
+          });
+        });
+      }
+
+      async function init() {
+        const manifest = await loadPackManifest();
+        if (manifest && Array.isArray(manifest.articles) && manifest.articles.length) {
+          activePack = {
+            title: manifest.title || activePack.title,
+            description: manifest.description || activePack.description,
+            section_intro: manifest.section_intro || activePack.section_intro,
+            folder: String(manifest.folder || requestedPack || activePack.folder).toUpperCase().replace(/[^A-Z0-9_-]/g, ''),
+            articles: manifest.articles
+              .filter(function (item) { return item && item.file; })
+              .map(function (item) {
+                return { file: String(item.file), title: String(item.title || item.file) };
+              })
+          };
+        }
+        applyPackMeta(activePack);
+        renderNav();
+        if (activePack.articles && activePack.articles.length) {
+          loadArticle(activePack.articles[0].file);
+        }
+      }
+
+      init();
     })();
   </script>
 </body>

@@ -1,0 +1,20 @@
+{
+  "title": "Elora Engine Features Context",
+  "description": "Structured feature and architecture context for what Elora can do today and what is in active build.",
+  "section_intro": "Start with Snapshot, then use the left navigation for deeper context pages.",
+  "folder": "WEBSITE_CONTEXT_PACK",
+  "articles": [
+    { "file": "00_SNAPSHOT.md", "title": "Snapshot" },
+    { "file": "00_PROJECT_POSITIONING.md", "title": "Project Positioning" },
+    { "file": "10_PROJECT_ORIGIN_AND_BUILD.md", "title": "Project Origin and Build" },
+    { "file": "01_ENGINE_CAPABILITIES.md", "title": "Engine Capabilities" },
+    { "file": "02_ARCHITECTURE_AND_CONTROL_PLANE.md", "title": "Architecture and Control Plane" },
+    { "file": "03_GOVERNANCE_AND_OBSERVABILITY.md", "title": "Governance and Observability" },
+    { "file": "06_SECURITY_FIRST_POSTURE.md", "title": "Security-First Posture" },
+    { "file": "09_SECURITY_CLAIMS_MATRIX.md", "title": "Security Claims Matrix" },
+    { "file": "04_FABRIC_AND_DISTRIBUTED_DIRECTION.md", "title": "Fabric and Distributed Direction" },
+    { "file": "05_ROADMAP_AND_MATURITY.md", "title": "Roadmap and Maturity" },
+    { "file": "08_PARTNER_POSITIONING.md", "title": "Partner Positioning" },
+    { "file": "07_PUBLIC_COPY_BLOCKS.md", "title": "Public Copy Blocks" }
+  ]
+}
