@@ -2,8 +2,8 @@
 
 ## ------------- 0.17 --------------
 
-### 2026-03-03
-- Admin
+## 2026-03-03
+### Admin
   - Add Governance Replay `Governance Incident Map` as a full-width admissibility topology surface above trace, with boundary-relevant nodes, authority-edge state (`aligned`/`drift`/`missing`), and node-level metadata drilldown.
   - Refine Incident Map layout to deterministic layered topology (`artifacts -> proposal -> commit -> delivery`) with reduced edge crossing, vertical authority drift edge (`authority_proposal -> authority_commit`), and stronger Commit boundary emphasis.
   - Remove non-admissibility `Entry` node from Incident Map so the surface stays boundary-focused instead of runtime-chronology-focused.
@@ -12,11 +12,11 @@
   - `GIM-01`: fixed SVG template redesign (no runtime routing logic).
   - `GIM-02`: strict bus lanes + zero overlap routing.
   - `GIM-03`: fullscreen-first map workflow with compact inline preview.
-- Docs
+### Docs
   - Add deterministic `Governance Incident Map v1` specification (`engine/docs/OPERATORS/GOVERNANCE_INCIDENT_MAP_V1.md`) covering fixed topology, node/edge enums, data precedence, and non-goals.
 
-### 2026-03-02
-- Engine
+## 2026-03-02
+### Engine
   - Centralize runtime commit enforcement in `engine/services/commit_enforcement.py` so async and direct chat routes call the same commit path.
   - Emit explicit proposal/commit lifecycle events for replay clarity: `proposal.created`, `proposal.validated`, `commit.requested`, `commit.authorized`, `commit.denied`, `commit.executed`.
   - Add commit enforcement to direct `/chat` and `/gpt` routes so commit policy cannot be bypassed outside async job flows.
@@ -30,7 +30,7 @@
   - Add commit decision HMAC signatures (when `RAG_SECRETS_KEY` is configured) for tamper-evident commit outcomes.
   - Add replay hash-chain fields (`prev_hash`, `event_hash`) and chain verification support for replay integrity checks.
   - Add computed `control_flow_v1` topology payload to replay API responses for stage-boundary visualization and deterministic flow-state reconstruction.
-- Admin
+### Admin
   - Add Governance Replay purge control and API (`POST /admin/api/replay/purge`) for test-environment cleanup.
   - Add replay chain validity metadata to replay API response and integrity strip.
   - Add authority snapshot presence/drift metadata to replay API and Governance Replay summary/export output.
@@ -42,11 +42,11 @@
   - Add authority-admissibility toggle support in Governance Policy V1 editor.
   - Ensure pipeline editor auto-backfills Commit stage/library entry and commit->delivery wiring for older pipelines.
   - Add Commit user-stage message field to pipeline stage messaging editor.
-- Docs
+### Docs
   - Add operator reference for inference/commit governance model and resilience roadmap: `engine/docs/OPERATORS/INFERENCE_COMMIT_GOVERNANCE.md`.
 
-### 2026-02-28
-- Engine
+## 2026-02-28
+### Engine
   - Introduce commit-stage enforcement so inference is treated as proposal-only until a final commit re-validation pass succeeds.
   - Add commit validation path to both `/chat-start` and `/gpt-start`, with explicit `blocked_commit_validation` termination on policy failure.
   - Persist per-job replay timeline events (`job_replay_events`) with risk/anomaly metadata for audit reconstruction.
@@ -55,7 +55,7 @@
   - Capture and persist per-job `commit_input_v1` + `commit_decision_v1` snapshots in job metrics for procedural replay.
   - Emit structured `commit.evaluated` events with decision, reason, violations, and evaluator version.
   - Capture provider telemetry in runtime metrics: provider name/model/version, latency, request ID, token usage, and provider API error codes.
-- Admin
+### Admin
   - Extend pipeline runtime test with `test_type` selector (`GPT/RAG chat` and `Agent write action`) and commit-sequence coverage.
   - Add pipeline validation pack runner with pass/fail checklist and proof-bundle JSON export for demo/release evidence.
   - Add Fabric `Job Buckets` tab scaffold with super-admin create/update/delete controls.
@@ -69,7 +69,7 @@
 ## ------------- 0.16 --------------
 
 ## 2026-02-24
-- Engine
+### Engine
   - Harden admin session signing fallback by persisting `session_secret_v1` in `admin_meta` when `RAG_ADMIN_SESSION_SECRET` is unset, using race-safe initialization and first-writer-wins persistence semantics.
   - Strengthen admin session validation by rejecting suspicious token time windows and invalidating sessions for deleted admin users.
   - Protect admin login throttle state with a lock to avoid concurrent request races in the threaded HTTP handler.
@@ -78,7 +78,7 @@
   - Refine route-target normalization for API routing to ignore query/fragment without broadening matches for `//path` or semicolon path params.
 
 ## 2026-02-19
-- Engine
+### Engine
   - Add admin-chat bridge endpoints (`/admin/chat-start`, `/admin/chat-status`) with authenticated session gating so internal dashboard chat no longer depends on public chat routes.
   - Add governance summary aggregation for 24h risk/cost telemetry (`blocked_baseline`, `blocked_injection`, `blocked_policy`, `terminated_window`, `token_churn_window`, queue depth).
   - Add `/admin/api/governance-summary` and `/admin/api/fabric-status` API surfaces for dashboard dependency/risk cards.
@@ -86,7 +86,7 @@
   - Harden admin/browser surface with stricter security headers and expanded HTTPS enforcement across admin routes.
   - Fix path-boundary validation for admin assets and knowledge file editing by switching to safe resolved-path checks.
   - Upgrade OTP secret storage path to authenticated encrypted-at-rest format with legacy fallback support.
-- Admin
+### Admin
   - Restructure Dashboard into three operator views: `Operational Health`, `Governance & Risk`, and `Jobs Audit`.
   - Add scaffold+live cards for Service Dependency Map, Queue & Concurrency, Guardrail Breakdown, Token Budget, Host Saturation, Config Drift, and Recovery Actions.
   - Add iconized grouped left navigation (`Operations`, `AI Runtime`, `Administration`) with per-area active accent styling.
@@ -94,38 +94,38 @@
   - Update floating chat launcher to avatar-pill style, rename label to `Chat`, and add live availability indicator dot.
 
 ## 2026-02-14
-- Engine
+### Engine
   - Add bootstrap-key first-run admin flow (`/admin/bootstrap`) to create initial `super_admin` and remove dependency on auto-generated bootstrap credentials.
   - Add Fabric module availability checks (WorkerHost/Provisioner reachability) and return clear module-unavailable responses when Fabric endpoints are not available.
   - Add container name support for Fabric worker requests with collision/format checks in WorkerHost before container launch.
   - Update WordPress chat worker Fabric defaults to Python runtime (`python:3.11-slim`) and migrate legacy template image values from `elora/wordpress-chat-worker:alpha`.
   - Add WordPress worker spawn metadata passthrough (`wp_site`, `wp_mode`, `wp_source`, `wp_timeout`) into WorkerHost environment for plugin-connected deployments.
   - Improve WorkerHost terminate behavior to remove Docker containers even after WorkerHost process restart (not just in-memory worker map).
-- Admin
+### Admin
   - Add Operators scaffold page (`Users`/`Roles`) in left navigation for upcoming identity and governance controls.
   - Add Fabric workers table refinements: terminate-first workflow, cleaner action grouping, and CPU/memory display from host inventory with template fallback.
   - Keep Template Builder visible for all admins in read-only mode; restrict edit/update actions to `super_admin`.
   - Add optional container naming field in Fabric request forms and template test-launch forms.
   - Add sidebar usability improvements with scrollable navigation for long menu stacks.
-- Platform
+### Platform
   - Remove static `wordpress_chat_worker` service from compose stack so WordPress chat worker is Fabric-managed.
   - Keep single-solution compose deployment path (`docker compose up`) without feature-profile splits for core/Fabric startup.
 
 ## ------------- 0.15 --------------
 
 ## 2026-02-12
-- Engine
+### Engine
   - Split Fabric worker request routing by `provision_mode` (`vm` vs `container`) so container requests no longer call the VM Provisioner path.
   - Persist and surface request mode metadata on worker records for clearer runtime ownership.
   - Add container-provision request event path (`worker.container_provision_requested`) for WorkerHost-backed scheduling flow.
-- Admin
+### Admin
   - Split Fabric Provisioner UI into explicit `Virtual Machine Provisioner` and `Container Provisioner` request forms.
   - Add worker `Mode` visibility in Fabric Workers table to distinguish VM and container lifecycle paths.
-- Fabric
+### Fabric
   - Add provisioning split schematics document (`fabric/ELORA_FABRIC_PROVISIONING_SPLIT_SCHEMATICS.md`) and index link for next-phase wiring.
 
 ## 2026-02-10
-- Engine
+### Engine
   - Add Fabric setup gating so admin routes require initial Fabric configuration before worker operations.
   - Add Fabric setup persistence fallback (`meta` + env) for provisioner URL/token/timeout and engine public URL.
   - Add encrypted-at-rest handling for sensitive admin secrets (`fabric_provisioner_token`, `smtp_password`) via `RAG_SECRETS_KEY`.
@@ -135,10 +135,10 @@
     - `ssh_publish` (SCP publish to Proxmox snippets path)
   - Add Proxmox worker network metadata pass-through (`worker_ipv4`, `worker_gateway`, `worker_dns`) for cloud-init VM config.
   - Improve Proxmox error diagnostics for snippet upload limitations and missing SSH tooling.
-- Admin
+### Admin
   - Add Fabric setup UI flow and first-run token generation/reveal for provisioner integration.
   - Add worker bootstrap/reveal guidance improvements for initial provisioning and rotate/reissue flows.
-- Platform
+### Platform
   - Integrate `fabric_provisioner` service into compose stack and engine dependency chain.
   - Add provisioner SSH publish prerequisites to deployment path (`openssh-client` install in service startup).
   - Move sensitive compose values to env-variable placeholders and add root `.env.example`.
@@ -146,7 +146,7 @@
   - Expand setup runbooks with Proxmox ACL scope, snippets storage requirements, privilege-separation notes, SSH key bootstrap, and parked-networking resume checklist.
 
 ## 2026-02-09
-- Engine
+### Engine
   - Reuse existing jobs for the same chat session (instead of creating a new job per reply).
   - Move job cleanup to retention-based history (`RAG_JOB_RETENTION_SECONDS`) while keeping session TTL behaviour.
   - Add live `pipeline.runtime` event stream for chat runs (`run.started`, stage events, `run.completed`, `run.failed`).
@@ -156,7 +156,7 @@
   - Add polling compatibility for older clients by returning terminal blocked jobs as `status=done` with `audit_status=terminated`.
   - Emit structured runtime justification payloads (`decision`, `reason`, `confidence`, `sources_used`, `summary`).
   - Ensure successful GPT/RAG responses always produce non-empty decision/reason metadata.
-- Admin
+### Admin
   - Add global operator status rail (environment, engine state, policy eval time, active model, operator).
   - Add Pipeline live runtime panel with source/mode filters and real-time stage highlighting.
   - Add runtime justification visibility in pipeline live output for audit drill-down.
@@ -167,11 +167,11 @@
   - Improve Pipeline builder responsiveness: compact vertical stage list on smaller screens, stable ordering, no overlap.
   - Clamp stage rendering to visible canvas bounds and enable scrollable canvas for reduced-resolution displays.
   - Add full raw metadata view + copy JSON support in Logs for deeper operator/audit analysis.
-- Platform
+### Platform
   - Add governance dashboard blueprint (`OPERATOR_DASHBOARD_GOVERNANCE_PLAN.md`) for SOC-style operations and audit views.
 
 ## 2026-02-05
-- Engine
+### Engine
   - Add pipeline runtime scaffolding (nodes, registry, artifacts, events).
   - Add runtime test endpoint with artifact + event output.
   - Wire runtime test to Ollama-backed inference (placeholder replaced).
@@ -179,7 +179,7 @@
   - Emit guardrail events and restricted responses on violation.
   - Capture request source headers (source/site/mode) for audit and response metadata.
   - Reduce pipeline seed template to 5-stage v1 baseline.
-- Admin
+### Admin
   - Add runtime test output panel in Pipeline builder.
   - Add model override input for runtime testing.
   - Add global Do Not list and guardrail policy to Behaviour.
@@ -192,10 +192,10 @@
   - Tighten pipeline sidebar spacing and make it sticky.
 
 ## 2026-02-03
-- Engine
+### Engine
   - Enforce active pipeline minimum source requirements at runtime.
   - Add mandatory Justification stage to baseline pipeline and template seeds.
-- Admin
+### Admin
   - Rename Workbooks nav to Workbook & Skills.
   - Add visual governance pipeline canvas (locked baseline).
   - Add pipeline builder workspace with stage palette and config preview (UI scaffolding).
@@ -223,14 +223,14 @@
   - Split Pipeline builder into layout/modals/scripts modules for maintainability.
 
 ## 2026-01-02
-- Engine
+### Engine
   - Add prompt-injection detection with safe refusal responses in chat.
   - Enrich `job_failed` logs with input excerpt, hash, and injection suspicion flag.
 
 ## ------------- 0.14 --------------
 
 ## 2026-01-31
-- Engine
+### Engine
   - Memory entries now augment prompt context (when permitted) and are tracked in session info.
   - Behavior settings now drive system prompt and source gating for GPT/RAG.
   - Add soul reflection scheduler + manual trigger (writes soul.draft.md or soul.md).
@@ -240,7 +240,7 @@
   - Standard tolerance now asks a clarifying question when sources are missing.
   - Soul reflection prompt now enforces reflective bullets (no user-facing replies).
   - Soul reflection manual trigger now runs async to avoid 502s.
-- Admin
+### Admin
   - Add Memory section with audited entry creation and impact estimate.
   - Add Workbooks section (read-only listing placeholder).
   - Add Knowledge Base section with index stats visibility.
@@ -268,7 +268,7 @@
   - Add soul.draft.md preview and live/draft toggle for scheduler target.
   - Add memory formatting guide with example in documentation.
   - Add audit log filters (category + time window) and job lifecycle events.
-- Platform
+### Platform
   - Remove unauthenticated `/health` and `/gpt-health` endpoints.
   - Add signed `/health` for trusted clients (API key + signature).
   - Plugin status moved to status pills with indicator light.
@@ -276,10 +276,10 @@
 ## ------------- 0.13 --------------
 
 ## 2026-01-29
-- Engine
+### Engine
   - Split API routing into admin/public/chat route modules for maintainability.
   - Expand posture list to reflect AI execution controls (policy, prompt boundaries, tools off by default).
-- Admin
+### Admin
   - Add engine-hosted admin UI scaffolding with login and forced password change.
   - Bootstrap credentials file generation with one-time state flag in SQLite.
   - Signed session cookie and basic password policy (12+ chars).
@@ -308,7 +308,7 @@
   - Added separate public avatar upload for the status page.
   - Added public social link fields (LinkedIn/Discord) in settings.
   - Login now uses the admin background with softened overlay.
-- Platform
+### Platform
   - Add lightweight HTML status page at `/` while keeping JSON health at `/health`.
   - Expand root status page into a capability + posture overview with safe health summary.
   - Refine status page copy, remove action links, and add intent/limits sections.
@@ -320,7 +320,7 @@
 ## ------------- 0.12 --------------
 
 ## 2026-01-24
-- Engine
+### Engine
   - Add short-lived `job_id` + `job_token` with TTL and minimal in-memory history.
   - Emit stage events for UI status and include session data in SSE done payload.
   - Add job-based start/status endpoints for polling.
@@ -332,7 +332,7 @@
 ## ------------- 0.11 --------------
 
 ## 2026-01-20
-- Engine
+### Engine
   - Reorganize engine modules into `api/`, `core/`, and `services/`.
   - Require `RAG_API_KEY` from environment (no default fallback).
   - Verify `X-Elora-Signature` + `X-Elora-Timestamp` (HMAC of `timestamp\\nbody`).
@@ -341,5 +341,5 @@
   - Add `RAG_SIGNATURE_MAX_SKEW` for signature time window.
   - Allow `X-Elora-Signature`, `X-Elora-Timestamp`, `X-Elora-Dev` in CORS.
   - Include `dev_mode_header` and `dev_mode_allowed` in `/health` and `/gpt-health`.
-- Platform
+### Platform
   - Add engine `README.md`, `ARCHITECTURE.md`, and `OPERATIONS.md`.
