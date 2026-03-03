@@ -15,14 +15,13 @@ Recommended website order:
 8. `04_FABRIC_AND_DISTRIBUTED_DIRECTION.md`
 9. `05_ROADMAP_AND_MATURITY.md`
 10. `08_PARTNER_POSITIONING.md`
-11. `07_PUBLIC_COPY_BLOCKS.md`
 
 Reasoning for this order:
 - open with positioning and origin for context,
 - move into current capabilities and control-plane model,
 - then governance/security evidence strength,
 - then distributed direction and roadmap,
-- finish with partner/public copy blocks for page assembly.
+- finish with partner positioning context.
 
 Notes:
 - Keep this pack aligned with `engine/docs/FEATURES.md` and `engine/CHANGELOG_ENGINE.md`.

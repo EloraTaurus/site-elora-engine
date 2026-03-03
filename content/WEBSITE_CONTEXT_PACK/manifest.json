@@ -14,7 +14,6 @@
     { "file": "09_SECURITY_CLAIMS_MATRIX.md", "title": "Security Claims Matrix" },
     { "file": "04_FABRIC_AND_DISTRIBUTED_DIRECTION.md", "title": "Fabric and Distributed Direction" },
     { "file": "05_ROADMAP_AND_MATURITY.md", "title": "Roadmap and Maturity" },
-    { "file": "08_PARTNER_POSITIONING.md", "title": "Partner Positioning" },
-    { "file": "07_PUBLIC_COPY_BLOCKS.md", "title": "Public Copy Blocks" }
+    { "file": "08_PARTNER_POSITIONING.md", "title": "Partner Positioning" }
   ]
 }
