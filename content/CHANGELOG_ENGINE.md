@@ -2,6 +2,38 @@
 
 ## ------------- 0.17 --------------
 
+## 2026-03-06
+### Engine
+  - Extend policy snapshot payload toward `policy_snapshot_v1` shape with explicit confidence, guardrail, authority, source-trust, and risk policy blocks.
+  - Add policy snapshot label map support (`policy_labels_json`) for human-readable governance explanations.
+  - Add `chat_admission_mode` policy gate (`allow|block`) to make policy enforcement directly testable from operator workflows.
+  - Add `policy_evaluations` output from commit evaluator for rule-by-rule pass/fail evidence.
+### Admin
+  - Expand Governance Policy & Enforcement page with V1 policy controls (policy version, confidence floor, uncertainty ceiling, authority capture/drift actions, source trust, risk thresholds, labels JSON).
+  - Add explicit operator test guidance on policy page for blocking/allowing chat via policy.
+  - Add Policy page section descriptors (Policy Definition, Worker Overrides, Resolved Policy, Policy Testing) to make inheritance flow clearer.
+  - Add "Replay policy snapshot" loader on Policy page to pull captured `commit_input_v1` policy from a past job for incident debugging.
+  - Add Resolved Policy Preview panel to Governance Policy page for per-worker merged policy snapshot inspection.
+  - Add Policy Dry-Run Tester on Governance Policy page to evaluate commit-policy outcomes without running a full chat job.
+  - Add `POST /admin/api/governance/policy/dry-run` for policy evaluation previews with structured + human-readable outputs.
+  - Add `GET /admin/api/governance/policy/resolved?worker_type=<type>` to preview final resolved policy snapshot and hash context.
+  - Add Policy controls for worker capability enforcement: `Require capability scope`, `Capability policy version`, and `Unknown capability action (block_commit|warn)`.
+  - Upgrade authority/registered worker scope inputs to search-and-add chip pickers with inline registry/active badges and unknown-value highlighting.
+  - Extend Policy Dry-Run Tester with capability inputs (`capability_scope`, `worker_capabilities`) to validate capability-scope commit behavior.
+  - Add Lab `Policy Test Matrix` harness (`/admin/lab/policy-matrix`) to run repeatable governance dry-run scenarios and compare decision/violation outcomes before live route testing.
+  - Extend Lab `Policy Test Matrix` with worker type/ID selectors, policy combination overrides (`decision_overrides`, `policy_overrides`), and profile-based tuning recommendation (`permissive|balanced|strict`) scored against worker risk target.
+  - Add human-readable policy failure statements in Governance Replay trace using `policy_evaluations`.
+  - Add Governance `AI Report (Alpha)` page (`/admin/governance/ai-report`) with explicit token/caution declaration and report-style selection.
+  - Add `POST /admin/api/governance/reports/generate` to produce markdown governance filings from RAW replay/job evidence via runtime model.
+  - Reduce AI report token churn by introducing deterministic `report_input` preparation (compact evidence object, capped event/policy depth, precomputed explanations, template-anchored prompt).
+  - Add report generation modes (`summary`, `operator`, `governance`, `forensic`) with bounded evidence depth and output budgets.
+  - Add `Download .md` action for generated AI reports in Governance `AI Report (Alpha)`.
+### Platform
+  - Start route modularization by extracting governance policy snapshot resolution helpers into `/engine/admin/governance/policy_runtime.py` and reusing them from admin API handlers.
+  - Add `/admin/api/modules` module manifest endpoint to separate `core` vs `addon` runtime surfaces (initial scaffold for optional module architecture).
+  - Start `routes_admin.py` decomposition by moving Governance and Lab GET routing blocks into `/engine/api/admin_routes/governance.py` and `/engine/api/admin_routes/lab.py`.
+  - Continue decomposition by moving Governance POST/API handlers (policy dry-run, AI report generation, replay purge, global policy save, worker policy map save) into `/engine/api/admin_routes/governance_post.py`.
+
 ## 2026-03-03
 ### Admin
   - Add Governance Replay `Governance Incident Map` as a full-width admissibility topology surface above trace, with boundary-relevant nodes, authority-edge state (`aligned`/`drift`/`missing`), and node-level metadata drilldown.
