@@ -1,5 +1,9 @@
 # Architecture and Control Plane
 
+Last updated: 2026-03-07
+
+First implemented (from changelog): 2026-02-28
+
 ## Control-Plane Model
 
 Elora separates generation from authorization:

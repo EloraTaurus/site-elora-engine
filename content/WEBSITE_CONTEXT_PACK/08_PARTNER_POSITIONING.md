@@ -1,5 +1,9 @@
 # Partner / Expert Positioning
 
+Last updated: 2026-03-07
+
+First implemented (from changelog): 2026-03-03
+
 ## Why This Is Not a Toy System
 
 Elora is engineered around admissibility, not just generation quality.

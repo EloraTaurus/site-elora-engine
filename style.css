@@ -250,6 +250,15 @@ a { color: #8fd6ff; text-decoration: none; }
 .btn.alt { background: transparent; border-color: #4f76a5; }
 .btn:hover { border-color: #6bc8ff; background: #1a3f67; }
 .btn.alt:hover { background: rgba(23, 43, 71, 0.7); }
+.btn.mission {
+  background: #1f4f3f;
+  border-color: #53b388;
+  color: #e9fff4;
+}
+.btn.mission:hover {
+  background: #26624f;
+  border-color: #7ed3ad;
+}
 
 .status-card {
   background: rgba(10, 20, 36, 0.78);
@@ -340,6 +349,16 @@ a { color: #8fd6ff; text-decoration: none; }
   margin-bottom: -10px;
   filter: drop-shadow(0 14px 30px rgba(3, 10, 20, 0.45));
   max-height: 410px;
+}
+
+.architecture-banner {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 16px;
+  border-radius: 14px;
+  border: 1px solid #32567d;
+  display: block;
+  box-shadow: 0 12px 32px rgba(5, 12, 23, 0.35);
 }
 
 .note {
@@ -912,6 +931,10 @@ button:hover {
   .hero-guide-image {
     max-height: 360px;
     margin-bottom: -6px;
+  }
+  .architecture-banner {
+    max-width: 100%;
+    margin-top: 12px;
   }
   .section-inner { width: calc(100% - 44px); }
   .section-inner > h2,

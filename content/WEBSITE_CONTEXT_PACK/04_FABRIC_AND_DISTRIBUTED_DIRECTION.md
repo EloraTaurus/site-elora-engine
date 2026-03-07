@@ -1,5 +1,9 @@
 # Fabric and Distributed Direction
 
+Last updated: 2026-03-07
+
+First implemented (from changelog): 2026-02-10
+
 ## Fabric Trajectory
 
 Fabric is being shaped as the execution surface for worker lifecycle and host orchestration.

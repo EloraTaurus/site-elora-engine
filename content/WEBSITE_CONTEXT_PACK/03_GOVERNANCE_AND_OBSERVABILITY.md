@@ -1,5 +1,9 @@
 # Governance and Observability
 
+Last updated: 2026-03-07
+
+First implemented (from changelog): 2026-02-19
+
 ## Governance Focus
 
 Governance is treated as a first-class control surface, not a logging sidebar.

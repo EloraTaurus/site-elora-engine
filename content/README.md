@@ -7,7 +7,7 @@ These markdown files are the editable copy source for the static demo pages.
 - `home.md`: copy used on the Home view in `demo/index.html` (`data-view="home"`)
 - `about-elora.md`: copy used on the About view in `demo/index.html` (`data-view="about"`)
 - `changelog.md`: rendered into the Home "Project Changelog" section via runtime markdown fetch
-- `WEBSITE_CONTEXT_PACK/`: rendered into `demo/features.html` via manifest-driven page navigation (`00_SNAPSHOT.md` opens first)
+- `WEBSITE_CONTEXT_PACK/`: rendered into `demo/architecture.html` via manifest-driven page navigation (`00_SNAPSHOT.md` opens first)
 - `guide-tour-part-1.md`: copy used in `demo/admin/governance-replay.html` and `demo/admin/app.js`
 - `guide-tour-part-2.md`: copy used in `demo/admin/replay-reviewer.html` and `demo/admin/replay-reviewer.js`
 - `guide-tour-part-3.md`: copy used in `demo/admin/stage-3-deep-dive.html` and `demo/admin/stage-3-deep-dive.js`
@@ -23,7 +23,7 @@ These markdown files are the editable copy source for the static demo pages.
 Most pages do not auto-load markdown at runtime and these files act as source-of-truth docs for copy iteration.
 Exception: `changelog.md` is fetched and rendered at runtime on Home and Changelog views.
 
-`features.html` now loads from `WEBSITE_CONTEXT_PACK/manifest.json`.
+`architecture.html` now loads from `WEBSITE_CONTEXT_PACK/manifest.json`.
 For website feature context, update files under `demo/content/WEBSITE_CONTEXT_PACK/`.
 
 ## Feature packs (runtime-loaded)

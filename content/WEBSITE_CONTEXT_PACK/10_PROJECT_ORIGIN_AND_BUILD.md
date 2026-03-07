@@ -1,5 +1,9 @@
 # Project Origin and Build Context
 
+Last updated: 2026-03-07
+
+First implemented (from changelog): 2026-01-29
+
 ## Origin
 
 The Elora Taurus Project began in late January 2026 as a solo build effort.

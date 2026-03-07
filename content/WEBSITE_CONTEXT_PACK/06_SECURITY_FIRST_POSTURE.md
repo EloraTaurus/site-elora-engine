@@ -1,5 +1,9 @@
 # Security-First Posture (Public)
 
+Last updated: 2026-03-07
+
+First implemented (from changelog): 2026-01-29
+
 ## Design Principle
 
 Elora is built with a governance-and-security-first stance:

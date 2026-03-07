@@ -1,5 +1,9 @@
 # Roadmap and Maturity
 
+Last updated: 2026-03-07
+
+First implemented (from changelog): 2026-02-28
+
 ## Current Maturity (Practical)
 
 Elora is in an advanced build phase:

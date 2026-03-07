@@ -1,5 +1,9 @@
 # Project Positioning
 
+Last updated: 2026-03-07
+
+First implemented (from changelog): 2026-01-29
+
 ## What Elora Is
 
 Elora Engine is a governance-first AI runtime and control-plane project.

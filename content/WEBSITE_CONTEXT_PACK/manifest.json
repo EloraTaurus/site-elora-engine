@@ -9,6 +9,7 @@
     { "file": "10_PROJECT_ORIGIN_AND_BUILD.md", "title": "Project Origin and Build" },
     { "file": "01_ENGINE_CAPABILITIES.md", "title": "Engine Capabilities" },
     { "file": "02_ARCHITECTURE_AND_CONTROL_PLANE.md", "title": "Architecture and Control Plane" },
+    { "file": "11_GOVERNANCE_PIPELINE.md", "title": "Governance Pipeline" },
     { "file": "03_GOVERNANCE_AND_OBSERVABILITY.md", "title": "Governance and Observability" },
     { "file": "06_SECURITY_FIRST_POSTURE.md", "title": "Security-First Posture" },
     { "file": "09_SECURITY_CLAIMS_MATRIX.md", "title": "Security Claims Matrix" },
