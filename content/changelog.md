@@ -3,6 +3,10 @@
 ## 2026-03-08
 - Added dedicated Architecture context page: `Architectural Influences and Community Dialogue`.
 - Wired new dialogue page into Architecture left-navigation manifest and pack README ordering.
+- Added standalone `lab.html` public governance testing page powered by live public Lab status feed.
+- Added Public Lab navigation link on Home and sitemap entry for `lab.html`.
+- Switched Public Lab from menu layout to single-surface live dashboard presentation.
+- Updated Public Lab visual treatment to image-first background with softened overlay and improved mobile readability.
 
 ## 2026-03-07
 - Renamed `Features` navigation label to `Architecture` across public site pages.

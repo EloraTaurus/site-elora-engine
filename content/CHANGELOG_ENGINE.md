@@ -2,6 +2,29 @@
 
 ## ------------- 0.17 --------------
 
+## 2026-03-08
+### Public API
+  - Add public Lab status feed endpoints: `GET /public/lab-status` and `GET /public/lab-status.json` for website-facing validation dashboards.
+  - Add optional public feed token gate via `RAG_PUBLIC_STATUS_TOKEN` (supports `X-Elora-Public-Token` header or `?token=` query for server-to-server pulls).
+  - Add signed payload support on public Lab status feed when `RAG_SECRETS_KEY` is configured (`signature.alg = hmac-sha256`).
+### Governance/Lab
+  - Add curated, sanitized public test summary payload (`tests_available`, `tests_results`, 24h summary, recent job surface) without exposing prompts, raw operator content, or admin-only internals.
+### Admin
+  - Refactor Governance Replay V2 into a timeline-first investigation surface with replay dashboard + investigation split:
+    - `/admin/governance/replay-v2` -> Replay Dashboard (Beta)
+    - `/admin/governance/replay-v2/investigation` -> Replay Investigation (Beta)
+  - Add clickable replay dashboard job timeline + recent jobs table routing into Replay Investigation via query (`job_id`).
+  - Update Replay Investigation layout to emphasize event flow: full-width timeline, risk legend, pipeline stage chips, 2/3 replay events + 1/3 evidence.
+  - Replace timeline modal with anchored event popovers (non-blocking, no dim overlay, click-outside/ESC close).
+  - Add compact sidebar mode recovery UX with persistent edge expand button and logout hint modal overlay.
+
+## 2026-03-07
+### Admin
+  - Add Governance Replay V2 scaffold page (`/admin/governance/replay-v2`) with timeline-first session review layout: 10-second answer, risk snapshot, replay controls, pipeline strip, timeline lanes, event stream, and evidence panel.
+  - Add `Replay V2 (Beta)` navigation entry under Governance while keeping legacy Replay Review available for fallback.
+### Governance
+  - Wire Replay V2 scaffold to existing replay/job APIs for initial read-only loading (`/admin/api/jobs`, `/admin/api/jobs/{id}/replay`) as migration bridge ahead of dedicated replay module rollout.
+
 ## 2026-03-06
 ### Engine
   - Extend policy snapshot payload toward `policy_snapshot_v1` shape with explicit confidence, guardrail, authority, source-trust, and risk policy blocks.
