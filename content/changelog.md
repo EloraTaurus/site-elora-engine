@@ -1,5 +1,9 @@
 # Site / Demo Changelog
 
+## 2026-03-08
+- Added dedicated Architecture context page: `Architectural Influences and Community Dialogue`.
+- Wired new dialogue page into Architecture left-navigation manifest and pack README ordering.
+
 ## 2026-03-07
 - Renamed `Features` navigation label to `Architecture` across public site pages.
 - Added new primary route `architecture.html` and retained `features.html` as a compatibility redirect.

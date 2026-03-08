@@ -13,6 +13,7 @@
     { "file": "03_GOVERNANCE_AND_OBSERVABILITY.md", "title": "Governance and Observability" },
     { "file": "06_SECURITY_FIRST_POSTURE.md", "title": "Security-First Posture" },
     { "file": "09_SECURITY_CLAIMS_MATRIX.md", "title": "Security Claims Matrix" },
+    { "file": "12_ARCHITECTURAL_INFLUENCES_AND_COMMUNITY_DIALOGUE.md", "title": "Architectural Influences and Community Dialogue" },
     { "file": "04_FABRIC_AND_DISTRIBUTED_DIRECTION.md", "title": "Fabric and Distributed Direction" },
     { "file": "05_ROADMAP_AND_MATURITY.md", "title": "Roadmap and Maturity" },
     { "file": "08_PARTNER_POSITIONING.md", "title": "Partner Positioning" }

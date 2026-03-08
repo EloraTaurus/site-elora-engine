@@ -18,14 +18,15 @@ Recommended website order:
 6. `06_SECURITY_FIRST_POSTURE.md`
 7. `09_SECURITY_CLAIMS_MATRIX.md`
 8. `11_GOVERNANCE_PIPELINE.md`
-9. `04_FABRIC_AND_DISTRIBUTED_DIRECTION.md`
-10. `05_ROADMAP_AND_MATURITY.md`
-11. `08_PARTNER_POSITIONING.md`
+9. `12_ARCHITECTURAL_INFLUENCES_AND_COMMUNITY_DIALOGUE.md`
+10. `04_FABRIC_AND_DISTRIBUTED_DIRECTION.md`
+11. `05_ROADMAP_AND_MATURITY.md`
+12. `08_PARTNER_POSITIONING.md`
 
 Reasoning for this order:
 - open with positioning and origin for context,
 - move into current capabilities and control-plane model,
-- then governance/security evidence strength and pipeline flow,
+- then governance/security evidence strength, pipeline flow, and community dialogue framing,
 - then distributed direction and roadmap,
 - finish with partner positioning context.
 
