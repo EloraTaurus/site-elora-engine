@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Elora Lab public governance test surface with live status feed from the Elora Engine." />
+  <title>Elora Lab - Public Governance Testing</title>
+  <link rel="icon" href="elora.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: #e9f3ff;
+      background:
+        linear-gradient(180deg, rgba(2, 7, 16, 0.65), rgba(2, 7, 16, 0.78)),
+        url("Lab-Background.png") center/cover no-repeat fixed;
+    }
+    .lab-wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .lab-card {
+      width: min(860px, 100%);
+      border: 1px solid rgba(109, 173, 255, 0.45);
+      background: rgba(10, 23, 44, 0.82);
+      border-radius: 18px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+      padding: 22px;
+      backdrop-filter: blur(6px);
+    }
+    .lab-title {
+      margin: 0 0 6px 0;
+      font-size: clamp(30px, 4.5vw, 44px);
+      line-height: 1.05;
+    }
+    .lab-sub {
+      margin: 0;
+      color: #a8c8eb;
+    }
+    .lab-meta {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    .stat {
+      border: 1px solid rgba(109, 173, 255, 0.35);
+      background: rgba(15, 33, 60, 0.68);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+    .stat .k {
+      font-size: 12px;
+      color: #a8c8eb;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .stat .v {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    .lab-section-title {
+      margin: 18px 0 10px;
+      font-size: 20px;
+    }
+    .tests {
+      display: grid;
+      gap: 8px;
+    }
+    .test {
+      border: 1px solid rgba(109, 173, 255, 0.28);
+      background: rgba(16, 35, 63, 0.62);
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .pill.pass { border-color: rgba(52, 211, 153, 0.65); color: #bbf7d0; }
+    .pill.warn { border-color: rgba(245, 158, 11, 0.65); color: #fde68a; }
+    .pill.fail { border-color: rgba(248, 113, 113, 0.7); color: #fecaca; }
+    .lab-actions {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .lab-actions .btn {
+      text-decoration: none;
+    }
+    .feed-note {
+      margin-top: 14px;
+      color: #9eb7d7;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <main class="lab-wrap">
+    <article class="lab-card">
+      <h1 class="lab-title">Elora Lab</h1>
+      <p class="lab-sub">Public Governance Testing Environment</p>
+      <p class="lab-sub">The Lab publishes real governance tests performed against the Elora Engine.</p>
+
+      <section class="lab-meta">
+        <div class="stat"><div class="k">Jobs (24h)</div><div class="v" id="jobsTotal">-</div></div>
+        <div class="stat"><div class="k">Blocked Commits</div><div class="v" id="blockedTotal">-</div></div>
+        <div class="stat"><div class="k">Terminated</div><div class="v" id="terminatedTotal">-</div></div>
+        <div class="stat"><div class="k">Avg Confidence</div><div class="v" id="avgConfidence">-</div></div>
+      </section>
+
+      <h2 class="lab-section-title">Latest Experiments</h2>
+      <section class="tests" id="tests">
+        <div class="test"><div>Loading public feed...</div><span class="pill warn">PENDING</span></div>
+      </section>
+
+      <div class="lab-actions">
+        <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">View Governance Replay</a>
+        <a class="btn alt" href="https://elorataurus.com">Elora Website</a>
+        <a class="btn alt" href="https://www.linkedin.com">LinkedIn</a>
+      </div>
+
+      <div class="feed-note" id="feedNote">Feed: waiting for update.</div>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const jobsTotal = document.getElementById("jobsTotal");
+      const blockedTotal = document.getElementById("blockedTotal");
+      const terminatedTotal = document.getElementById("terminatedTotal");
+      const avgConfidence = document.getElementById("avgConfidence");
+      const tests = document.getElementById("tests");
+      const feedNote = document.getElementById("feedNote");
+
+      function esc(v) {
+        return String(v == null ? "" : v)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      function fmtDate(sec) {
+        const n = Number(sec || 0);
+        if (!Number.isFinite(n) || n <= 0) return "unknown";
+        return new Date(n * 1000).toISOString().replace("T", " ").replace("Z", " UTC");
+      }
+
+      function render(payload) {
+        const summary = payload && payload.summary ? payload.summary : {};
+        const rows = Array.isArray(payload && payload.tests_results) ? payload.tests_results : [];
+        jobsTotal.textContent = String(summary.jobs_total ?? "-");
+        blockedTotal.textContent = String(summary.jobs_blocked_commit ?? "-");
+        terminatedTotal.textContent = String(summary.jobs_terminated ?? "-");
+        avgConfidence.textContent = summary.avg_confidence == null ? "-" : Number(summary.avg_confidence).toFixed(2);
+
+        if (!rows.length) {
+          tests.innerHTML = '<div class="test"><div>No test rows in feed.</div><span class="pill warn">EMPTY</span></div>';
+        } else {
+          tests.innerHTML = rows.map((item) => {
+            const status = String(item.status || "warn").toLowerCase();
+            const safeStatus = status === "pass" || status === "fail" ? status : "warn";
+            return '' +
+              '<div class="test">' +
+                '<div>' +
+                  '<strong>' + esc(item.name || "Unnamed test") + '</strong><br />' +
+                  '<span>' + esc(item.detail || "No detail provided.") + '</span>' +
+                '</div>' +
+                '<span class="pill ' + safeStatus + '">' + esc(safeStatus.toUpperCase()) + '</span>' +
+              '</div>';
+          }).join("");
+        }
+        feedNote.textContent = "Feed updated: " + fmtDate(payload.generated_at);
+      }
+
+      fetch("https://ai.elorataurus.com/public/lab-status.json", { method: "GET" })
+        .then((res) => {
+          if (!res.ok) throw new Error("Feed unavailable (" + res.status + ")");
+          return res.json();
+        })
+        .then(render)
+        .catch((err) => {
+          tests.innerHTML = '<div class="test"><div>Public feed unavailable. Verify CORS and endpoint availability.</div><span class="pill fail">OFFLINE</span></div>';
+          feedNote.textContent = String(err);
+        });
+
+    })();
+  </script>
+</body>
+</html>
