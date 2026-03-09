@@ -23,22 +23,20 @@
   <section class="top-stage" id="prior-art">
     <header class="topbar">
       <div class="topbar-inner">
-        <div class="brand">
+        <a class="brand brand-link" href="index.html" aria-label="The Elora Taurus Project home">
           <div class="brand-icon"><img src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';"></div>
           <div>
             <strong>The Elora Taurus Project</strong>
             <small>AI Governance and Security for everyone - not just the largest organisations.</small>
           </div>
-        </div>
+        </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-prior-art"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
         <nav id="top-links-prior-art" data-top-links="1" class="top-links">
-          <a class="nav-btn" href="index.html">Home</a>
           <a class="nav-btn" href="about.html">About Elora</a>
           <a class="nav-btn" href="architecture.html">Architecture</a>
           <a class="nav-btn" href="changelog.html">Changelog</a>
           <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
           <a class="nav-btn active" href="prior-art.html">Prior Art</a>
-          <a class="nav-btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Tour</a>
         </nav>
       </div>
     </header>
@@ -47,6 +45,7 @@
         <div class="about-lead">
           <h1 id="pack-page-title">Public Technical Disclosure and Prior Art Notice</h1>
           <p id="pack-page-description">Timestamped architecture milestones intended to establish public prior art signals for governance and execution-boundary patterns.</p>
+          <p class="section-intro" id="pack-last-updated">Last updated: 2026-03-09</p>
           <div class="cta-row">
             <a class="btn" href="index.html">Back to Home</a>
             <a class="btn alt" href="architecture.html">Read Architecture Context</a>
@@ -60,6 +59,21 @@
     <div class="section-inner">
       <h2 id="pack-section-title">Public Technical Disclosure and Prior Art Notice</h2>
       <p id="pack-section-intro" class="section-intro">Use this page for dated milestones, evidence references, and commit-level disclosure statements.</p>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Our Mission: Open Governance over Proprietary Gates</h3>
+        <p>Elora Taurus is built without restrictive frameworks to preserve transparency of governance posture. By using standardized execution boundaries, the project contributes toward a universal architecture for accountable AI operation.</p>
+        <p>We invite peer review and collaboration so these safety patterns remain inspectable, portable, and in the public domain.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Public Technical Disclosure Position</h3>
+        <p>The Elora Taurus Project is a research and experimentation initiative dedicated to open, non-proprietary AI governance and execution-boundary standards. To keep these foundational safety primitives openly auditable, we publish reduction-to-practice milestones and implementation chronology.</p>
+        <ul class="list">
+          <li><strong>2026-02-05:</strong> Execution boundary abort/prevent logic implementation.</li>
+          <li><strong>2026-02-09:</strong> Structured justification payload integration using SHA-256 and Merkle-tree style integrity chaining.</li>
+          <li><strong>2026-02-19 onward:</strong> Distributed proposal-to-commit governance direction across Fabric and WorkerHost surfaces.</li>
+        </ul>
+        <p>Elora relies on established cryptographic methods and system-safety patterns. Milestones are timestamped through public changelog surfaces, public updates, and private-repository commit fingerprints with full offline evidence retention.</p>
+      </div>
       <div class="pack-layout">
         <aside class="card pack-nav">
           <h3>Pages</h3>
@@ -99,6 +113,7 @@
       const reader = document.getElementById('pack-reader-content');
       const pageTitle = document.getElementById('pack-page-title');
       const pageDescription = document.getElementById('pack-page-description');
+      const pageLastUpdated = document.getElementById('pack-last-updated');
       const sectionTitle = document.getElementById('pack-section-title');
       const sectionIntro = document.getElementById('pack-section-intro');
       const defaultPackKey = 'PRIOR_ART_NOTICE';
@@ -108,9 +123,12 @@
         title: 'Public Technical Disclosure and Prior Art Notice',
         description: 'Timestamped architecture milestones intended to establish public prior art signals for governance and execution-boundary patterns.',
         section_intro: 'Use this page for dated milestones, evidence references, and commit-level disclosure statements.',
+        last_updated: '2026-03-09',
         folder: defaultPackKey,
         articles: [
-          { file: '01_PRIOR_ART_NOTICE.md', title: 'Prior Art Notice' }
+          { file: '01_PRIOR_ART_NOTICE.md', title: 'Notice and Scope' },
+          { file: '02_TECHNICAL_REGISTER.md', title: 'Technical Register' },
+          { file: '03_EVIDENCE_METHOD.md', title: 'Evidence Method' }
         ]
       };
 
@@ -199,10 +217,12 @@
         const title = pack && pack.title ? String(pack.title) : activePack.title;
         const description = pack && pack.description ? String(pack.description) : activePack.description;
         const intro = pack && pack.section_intro ? String(pack.section_intro) : activePack.section_intro;
+        const lastUpdated = pack && pack.last_updated ? String(pack.last_updated) : activePack.last_updated;
         if (pageTitle) pageTitle.textContent = title;
         if (sectionTitle) sectionTitle.textContent = title;
         if (pageDescription) pageDescription.textContent = description;
         if (sectionIntro) sectionIntro.textContent = intro;
+        if (pageLastUpdated && lastUpdated) pageLastUpdated.textContent = 'Last updated: ' + lastUpdated;
       }
 
       async function loadPackManifest() {
@@ -253,6 +273,7 @@
             title: manifest.title || activePack.title,
             description: manifest.description || activePack.description,
             section_intro: manifest.section_intro || activePack.section_intro,
+            last_updated: manifest.last_updated || activePack.last_updated,
             folder: String(manifest.folder || requestedPack || activePack.folder).toUpperCase().replace(/[^A-Z0-9_-]/g, ''),
             articles: manifest.articles
               .filter(function (item) { return item && item.file; })
