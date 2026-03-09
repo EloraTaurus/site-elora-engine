@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Public technical disclosure and prior art notice for Elora Taurus governance architecture milestones." />
+  <meta name="description" content="Technical disclosure and prior-art record for Elora Taurus governance architecture milestones." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://elorataurus.com/prior-art.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Elora Taurus Project - Prior Art Notice" />
-  <meta property="og:description" content="Public disclosure of governance architecture milestones and execution-boundary prior art signals." />
+  <meta property="og:title" content="The Elora Taurus Project - Technical Disclosure / Prior Art" />
+  <meta property="og:description" content="Technical disclosure of governance architecture milestones and execution-boundary prior-art signals." />
   <meta property="og:url" content="https://elorataurus.com/prior-art.html" />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Elora Taurus Project - Prior Art Notice" />
-  <meta name="twitter:description" content="Public technical disclosure for Elora Taurus execution-boundary and governance architecture milestones." />
+  <meta name="twitter:title" content="The Elora Taurus Project - Technical Disclosure / Prior Art" />
+  <meta name="twitter:description" content="Technical disclosure for Elora Taurus execution-boundary and governance architecture milestones." />
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
-  <title>The Elora Taurus Project - Prior Art Notice</title>
+  <title>The Elora Taurus Project - Technical Disclosure / Prior Art</title>
   <link rel="icon" href="elora.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -36,15 +36,15 @@
           <a class="nav-btn" href="architecture.html">Architecture</a>
           <a class="nav-btn" href="changelog.html">Changelog</a>
           <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
-          <a class="nav-btn active" href="prior-art.html">Prior Art</a>
+          <a class="nav-btn active" href="prior-art.html">Technical Disclosure</a>
         </nav>
       </div>
     </header>
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1 id="pack-page-title">Public Technical Disclosure and Prior Art Notice</h1>
-          <p id="pack-page-description">Timestamped architecture milestones intended to establish public prior art signals for governance and execution-boundary patterns.</p>
+          <h1 id="pack-page-title">Technical Disclosure and Prior Art</h1>
+          <p id="pack-page-description">Timestamped architecture milestones intended to establish public prior-art signals for governance and core engine capabilities.</p>
           <p class="section-intro" id="pack-last-updated">Last updated: 2026-03-09</p>
           <div class="cta-row">
             <a class="btn" href="index.html">Back to Home</a>
@@ -57,12 +57,13 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <h2 id="pack-section-title">Public Technical Disclosure and Prior Art Notice</h2>
-      <p id="pack-section-intro" class="section-intro">Use this page for dated milestones, evidence references, and commit-level disclosure statements.</p>
+      <h2 id="pack-section-title">Technical Disclosure and Prior Art</h2>
+      <p id="pack-section-intro" class="section-intro">Use this page for dated milestones, evidence references, and capability-based implementation chronology.</p>
       <div class="card" style="margin-bottom:14px;">
         <h3>Our Mission: Open Governance over Proprietary Gates</h3>
         <p>Elora Taurus is built without restrictive frameworks to preserve transparency of governance posture. By using standardized execution boundaries, the project contributes toward a universal architecture for accountable AI operation.</p>
         <p>We invite peer review and collaboration so these safety patterns remain inspectable, portable, and in the public domain.</p>
+        <p>Elora Taurus is designed and operated from the United Kingdom, with this disclosure maintained as part of its UK-led governance research posture.</p>
       </div>
       <div class="card" style="margin-bottom:14px;">
         <h3>Public Technical Disclosure Position</h3>
@@ -96,7 +97,7 @@
           <a href="architecture.html">Architecture</a>
           <a href="changelog.html">Changelog</a>
           <a href="governance-pack.html">Governance Pack</a>
-          <a href="prior-art.html">Prior Art</a>
+          <a href="prior-art.html">Technical Disclosure</a>
           <a href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Guided Tour</a>
         </nav>
       </div>
@@ -120,15 +121,18 @@
       const query = new URLSearchParams(window.location.search);
       const requestedPack = (query.get('pack') || defaultPackKey).toUpperCase().replace(/[^A-Z0-9_-]/g, '');
       let activePack = {
-        title: 'Public Technical Disclosure and Prior Art Notice',
-        description: 'Timestamped architecture milestones intended to establish public prior art signals for governance and execution-boundary patterns.',
-        section_intro: 'Use this page for dated milestones, evidence references, and commit-level disclosure statements.',
+        title: 'Technical Disclosure and Prior Art',
+        description: 'Timestamped architecture milestones intended to establish public prior-art signals for governance and core engine capabilities.',
+        section_intro: 'Use this page for dated milestones, evidence references, and capability-based implementation chronology.',
         last_updated: '2026-03-09',
         folder: defaultPackKey,
         articles: [
           { file: '01_PRIOR_ART_NOTICE.md', title: 'Notice and Scope' },
-          { file: '02_TECHNICAL_REGISTER.md', title: 'Technical Register' },
-          { file: '03_EVIDENCE_METHOD.md', title: 'Evidence Method' }
+          { file: '02_TECHNICAL_REGISTER.md', title: 'Governance Technical Register' },
+          { file: '03_EVIDENCE_METHOD.md', title: 'Evidence Method' },
+          { file: '04_STANDARDS_BASELINE.md', title: 'Standards Baseline' },
+          { file: '05_TERMINOLOGY_GLOSSARY.md', title: 'Terminology Glossary' },
+          { file: '06_ENGINE_CAPABILITY_REGISTER.md', title: 'Engine Capability Register' }
         ]
       };
 

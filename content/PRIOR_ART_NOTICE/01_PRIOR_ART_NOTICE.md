@@ -1,8 +1,10 @@
-# Public Technical Disclosure and Prior Art Notice
+# Technical Disclosure and Prior Art
 
 The Elora Taurus Project is a research and experimentation initiative focused on practical AI governance, execution boundaries, and accountable operator control.
 
-This notice is published to document technical milestones and maintain a clear public timeline for reduction-to-practice signals. The intention is to keep foundational governance and safety patterns openly discussable and resistant to retroactive exclusivity claims.
+The project is independently designed and operated from the United Kingdom.
+
+This notice is published to document technical milestones and maintain a clear public timeline for reduction-to-practice evidence. The intention is to keep foundational governance and safety patterns openly discussable and technically verifiable.
 
 ## Position
 
@@ -16,7 +18,7 @@ The Elora Taurus Project advocates for open AI governance patterns that can be i
 
 ### Notice to Practitioners
 
-Researchers, developers, and examiners are encouraged to cite this disclosure and its timestamped references as prior-art evidence for AI governance and cryptographic execution-enforcement patterns.
+Researchers, developers, and examiners are encouraged to cite this disclosure and its timestamped references as implementation chronology evidence for AI governance and cryptographic execution-enforcement patterns.
 
 ## Disclosure Scope
 
@@ -49,7 +51,7 @@ Public references here intentionally use short commit fingerprints because the s
 
 The Elora Taurus Project operates as an open research and experimentation initiative. The milestones listed here, from early logic gates to distributed execution boundaries, are timestamped through third-party infrastructure and public disclosures where possible.
 
-This archive is provided as a reference implementation record to support open global AI safety standards. The project reserves the right to challenge attempts to privatize long-established engineering patterns where prior art is clearly documented.
+This archive is provided as a reference implementation record to support open global AI safety standards. It is intended to help reviewers map published concepts to dated implementation evidence.
 
 ## Update Protocol
 

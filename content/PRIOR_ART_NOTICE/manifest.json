@@ -1,7 +1,7 @@
 {
-  "title": "Public Technical Disclosure and Prior Art Notice",
-  "description": "Timestamped architecture milestones intended to establish public prior art signals for governance and execution-boundary patterns.",
-  "section_intro": "Use this page for dated milestones, evidence references, and commit-level disclosure statements.",
+  "title": "Technical Disclosure and Prior Art",
+  "description": "Timestamped architecture milestones intended to establish public prior-art signals for governance and core engine capabilities.",
+  "section_intro": "Use this page for dated milestones, evidence references, and capability-based implementation chronology.",
   "last_updated": "2026-03-09",
   "folder": "PRIOR_ART_NOTICE",
   "articles": [
@@ -11,11 +11,23 @@
     },
     {
       "file": "02_TECHNICAL_REGISTER.md",
-      "title": "Technical Register"
+      "title": "Governance Technical Register"
     },
     {
       "file": "03_EVIDENCE_METHOD.md",
       "title": "Evidence Method"
+    },
+    {
+      "file": "04_STANDARDS_BASELINE.md",
+      "title": "Standards Baseline"
+    },
+    {
+      "file": "05_TERMINOLOGY_GLOSSARY.md",
+      "title": "Terminology Glossary"
+    },
+    {
+      "file": "06_ENGINE_CAPABILITY_REGISTER.md",
+      "title": "Engine Capability Register"
     }
   ]
 }

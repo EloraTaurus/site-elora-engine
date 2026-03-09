@@ -2,6 +2,20 @@
 
 This register is organized by functional capability so reviewers can map implementation evidence to governance concepts directly.
 
+## Technical Disclosure Summary
+
+This disclosure describes a governance architecture in which AI outputs are treated as proposals until they pass a commit authorization boundary that evaluates admissibility against policy state, authority context, and justification evidence.
+
+## Architecture Flow (Reference Diagram)
+
+Ingress
+-> Policy Gate
+-> Inference (Proposal)
+-> Justification Layer
+-> Commit Boundary
+-> Execution
+-> Replay Evidence Chain
+
 ## 1) The Reasoning Boundary
 
 ### Execution Boundary Abort/Prevent Logic
