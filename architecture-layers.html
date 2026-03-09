@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Elora Engine public changelog for demo-visible updates." />
+  <meta name="description" content="Layered reference model for the Elora governance architecture: trust, proposal, context, commit, execution, and replay evidence." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://elorataurus.com/changelog.html" />
+  <link rel="canonical" href="https://elorataurus.com/architecture-layers.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Elora Taurus Project - Engine Changelog" />
-  <meta property="og:description" content="Public changelog for Elora Engine demo and walkthrough updates." />
-  <meta property="og:url" content="https://elorataurus.com/changelog.html" />
+  <meta property="og:title" content="The Elora Taurus Project - Elora Governance Architecture" />
+  <meta property="og:description" content="Layered governance architecture model describing proposal-to-commit authorization boundaries and replay accountability." />
+  <meta property="og:url" content="https://elorataurus.com/architecture-layers.html" />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Elora Taurus Project - Engine Changelog" />
-  <meta name="twitter:description" content="Track public demo and guided walkthrough changes for Elora Engine." />
+  <meta name="twitter:title" content="The Elora Taurus Project - Elora Governance Architecture" />
+  <meta name="twitter:description" content="Reference architecture layers for trust, proposal generation, legitimacy context, commit admissibility, execution, and replay evidence." />
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
-  <title>The Elora Taurus Project - Engine Changelog</title>
+  <title>The Elora Taurus Project - Elora Governance Architecture</title>
   <link rel="icon" href="elora.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="top-stage" id="changelog">
+  <section class="top-stage" id="architecture-layers">
     <header class="topbar">
       <div class="topbar-inner">
         <a class="brand brand-link" href="index.html" aria-label="The Elora Taurus Project home">
@@ -30,11 +30,11 @@
             <small>AI Governance and Security for everyone - not just the largest organisations.</small>
           </div>
         </a>
-        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-changelog"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
-        <nav id="top-links-changelog" data-top-links="1" class="top-links">
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-arch-layers"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-arch-layers" data-top-links="1" class="top-links">
           <a class="nav-btn" href="about.html">About Elora</a>
-          <a class="nav-btn" href="architecture.html">Architecture</a>
-          <a class="nav-btn active" href="changelog.html">Changelog</a>
+          <a class="nav-btn active" href="architecture.html">Architecture</a>
+          <a class="nav-btn" href="changelog.html">Changelog</a>
           <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
           <a class="nav-btn" href="prior-art.html">Technical Disclosure</a>
         </nav>
@@ -43,10 +43,10 @@
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1>Elora Engine Changelog</h1>
-          <p>Public changelog for demo-visible engine and walkthrough updates. This page loads directly from the engine changelog source.</p>
+          <h1>Elora Governance Architecture</h1>
+          <p>Layered architecture reference for how Elora separates proposal generation from execution authority using a commit-boundary governance model.</p>
           <div class="cta-row">
-            <a class="btn" href="index.html">Back to Home</a>
+            <a class="btn" href="architecture.html">Back to Architecture</a>
             <a class="btn alt" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Guided Tour</a>
           </div>
         </div>
@@ -56,9 +56,10 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <h2>Engine Changelog</h2>
+      <h2>Elora Governance Architecture Layers</h2>
+      <p class="section-intro">Layered responsibilities from trusted ingress to replay evidence, centered on proposal-to-commit authorization.</p>
       <div class="card">
-        <div id="changelog-page-content" class="changelog-content">Loading changelog...</div>
+        <div id="layers-content" class="changelog-content">Loading architecture layers...</div>
       </div>
     </div>
   </section>
@@ -87,7 +88,7 @@
     (function () {
       const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
       const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
-      const changelogPageContent = document.getElementById('changelog-page-content');
+      const layersContent = document.getElementById('layers-content');
 
       navToggles.forEach(function (toggle) {
         const controls = toggle.getAttribute('aria-controls');
@@ -107,12 +108,8 @@
 
       window.addEventListener('resize', function () {
         if (window.innerWidth > 760) {
-          topLinksGroups.forEach(function (links) {
-            links.classList.remove('open');
-          });
-          navToggles.forEach(function (toggle) {
-            toggle.setAttribute('aria-expanded', 'false');
-          });
+          topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
+          navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
         }
       });
 
@@ -131,52 +128,31 @@
         lines.forEach(function (line) {
           const t = line.trim();
           if (!t) {
-            if (inList) {
-              html.push('</ul>');
-              inList = false;
-            }
-            return;
-          }
-          if (t.startsWith('### ')) {
             if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h4>' + esc(t.slice(4)) + '</h4>');
             return;
           }
-          if (t.startsWith('## ')) {
-            if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h3>' + esc(t.slice(3)) + '</h3>');
-            return;
-          }
-          if (t.startsWith('# ')) {
-            if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h2>' + esc(t.slice(2)) + '</h2>');
-            return;
-          }
+          if (t.startsWith('### ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h4>' + esc(t.slice(4)) + '</h4>'); return; }
+          if (t.startsWith('## ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h3>' + esc(t.slice(3)) + '</h3>'); return; }
+          if (t.startsWith('# ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h2>' + esc(t.slice(2)) + '</h2>'); return; }
           if (t.startsWith('- ')) {
-            if (!inList) {
-              html.push('<ul class="list">');
-              inList = true;
-            }
+            if (!inList) { html.push('<ul class="list">'); inList = true; }
             html.push('<li>' + esc(t.slice(2)) + '</li>');
             return;
           }
-          if (inList) {
-            html.push('</ul>');
-            inList = false;
-          }
+          if (inList) { html.push('</ul>'); inList = false; }
           html.push('<p>' + esc(t) + '</p>');
         });
         if (inList) html.push('</ul>');
         return html.join('');
       }
 
-      function makeCandidatePaths(filename) {
+      function makeCandidatePaths(relativePath) {
         const base = window.location.pathname.replace(/[^/]*$/, '');
         return [
-          'content/' + filename,
-          './content/' + filename,
-          base + 'content/' + filename,
-          window.location.origin + base + 'content/' + filename
+          relativePath,
+          './' + relativePath,
+          base + relativePath,
+          window.location.origin + base + relativePath
         ];
       }
 
@@ -188,18 +164,15 @@
         return null;
       }
 
-      async function loadEngineChangelog() {
-        if (!changelogPageContent) return;
-        const engineCandidates = []
-          .concat(makeCandidatePaths('CHANGELOG_ENGINE.md'))
-          .concat(makeCandidatePaths('CHANGELOG_ENGINE'))
-          .concat(makeCandidatePaths('changelog.md'));
-        const md = await fetchFirst(engineCandidates);
-        changelogPageContent.innerHTML = md
+      async function loadLayers() {
+        const rel = 'content/elora-governance-architecture-layers.md';
+        const md = await fetchFirst(makeCandidatePaths(rel));
+        layersContent.innerHTML = md
           ? renderSimpleMarkdown(md)
-          : 'Changelog is currently unavailable.';
+          : 'Architecture layers content is currently unavailable.';
       }
-      loadEngineChangelog();
+
+      loadLayers();
     })();
   </script>
 </body>

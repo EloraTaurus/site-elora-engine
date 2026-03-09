@@ -11,7 +11,7 @@ Non-goal:
 - This is not a replication cookbook.
 - It intentionally omits deploy-level secrets, full infra manifests, and direct copy/paste implementation details.
 
-Last updated: 2026-03-02
+Last updated: 2026-03-09
 
 ## Contents
 - `01_EXECUTIVE_ARCHITECT_BRIEF.md`
