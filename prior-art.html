@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Architecture context for Elora Engine: governance model, security posture, pipeline design, and active build direction." />
+  <meta name="description" content="Public technical disclosure and prior art notice for Elora Taurus governance architecture milestones." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://elorataurus.com/architecture.html" />
+  <link rel="canonical" href="https://elorataurus.com/prior-art.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Elora Taurus Project - Architecture Context" />
-  <meta property="og:description" content="Architecture context for what Elora can do today, how governance pipeline decisions are made, and what is in active build." />
-  <meta property="og:url" content="https://elorataurus.com/architecture.html" />
+  <meta property="og:title" content="The Elora Taurus Project - Prior Art Notice" />
+  <meta property="og:description" content="Public disclosure of governance architecture milestones and execution-boundary prior art signals." />
+  <meta property="og:url" content="https://elorataurus.com/prior-art.html" />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Elora Taurus Project - Architecture Context" />
-  <meta name="twitter:description" content="Architecture context for governance, pipeline decisions, security posture, and roadmap direction." />
+  <meta name="twitter:title" content="The Elora Taurus Project - Prior Art Notice" />
+  <meta name="twitter:description" content="Public technical disclosure for Elora Taurus execution-boundary and governance architecture milestones." />
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
-  <title>The Elora Taurus Project - Architecture Context</title>
+  <title>The Elora Taurus Project - Prior Art Notice</title>
   <link rel="icon" href="elora.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="top-stage" id="features">
+  <section class="top-stage" id="prior-art">
     <header class="topbar">
       <div class="topbar-inner">
         <div class="brand">
@@ -30,14 +30,14 @@
             <small>AI Governance and Security for everyone - not just the largest organisations.</small>
           </div>
         </div>
-        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-features"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
-        <nav id="top-links-features" data-top-links="1" class="top-links">
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-prior-art"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-prior-art" data-top-links="1" class="top-links">
           <a class="nav-btn" href="index.html">Home</a>
           <a class="nav-btn" href="about.html">About Elora</a>
-          <a class="nav-btn active" href="architecture.html">Architecture</a>
+          <a class="nav-btn" href="architecture.html">Architecture</a>
           <a class="nav-btn" href="changelog.html">Changelog</a>
           <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
-          <a class="nav-btn" href="prior-art.html">Prior Art</a>
+          <a class="nav-btn active" href="prior-art.html">Prior Art</a>
           <a class="nav-btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Tour</a>
         </nav>
       </div>
@@ -45,13 +45,12 @@
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1 id="pack-page-title">Elora Engine Architecture Context</h1>
-          <p id="pack-page-description">Structured feature and architecture context for what Elora can do today and what is in active build.</p>
+          <h1 id="pack-page-title">Public Technical Disclosure and Prior Art Notice</h1>
+          <p id="pack-page-description">Timestamped architecture milestones intended to establish public prior art signals for governance and execution-boundary patterns.</p>
           <div class="cta-row">
-            <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Guided Tour</a>
-            <a class="btn alt" href="governance-pack.html">Read Governance Pack</a>
+            <a class="btn" href="index.html">Back to Home</a>
+            <a class="btn alt" href="architecture.html">Read Architecture Context</a>
           </div>
-          <img class="architecture-banner" src="Elora Taurus Workflow Banner.png" alt="Elora Taurus governance workflow banner" />
         </div>
       </section>
     </div>
@@ -59,8 +58,8 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <h2 id="pack-section-title">Elora Engine Architecture Context</h2>
-      <p id="pack-section-intro" class="section-intro">Start with Snapshot, then use the left navigation for deeper context pages.</p>
+      <h2 id="pack-section-title">Public Technical Disclosure and Prior Art Notice</h2>
+      <p id="pack-section-intro" class="section-intro">Use this page for dated milestones, evidence references, and commit-level disclosure statements.</p>
       <div class="pack-layout">
         <aside class="card pack-nav">
           <h3>Pages</h3>
@@ -102,16 +101,16 @@
       const pageDescription = document.getElementById('pack-page-description');
       const sectionTitle = document.getElementById('pack-section-title');
       const sectionIntro = document.getElementById('pack-section-intro');
-      const defaultPackKey = 'WEBSITE_CONTEXT_PACK';
+      const defaultPackKey = 'PRIOR_ART_NOTICE';
       const query = new URLSearchParams(window.location.search);
       const requestedPack = (query.get('pack') || defaultPackKey).toUpperCase().replace(/[^A-Z0-9_-]/g, '');
       let activePack = {
-        title: 'Elora Engine Architecture Context',
-        description: 'Structured feature and architecture context for what Elora can do today and what is in active build.',
-        section_intro: 'Start with Snapshot, then use the left navigation for deeper context pages.',
+        title: 'Public Technical Disclosure and Prior Art Notice',
+        description: 'Timestamped architecture milestones intended to establish public prior art signals for governance and execution-boundary patterns.',
+        section_intro: 'Use this page for dated milestones, evidence references, and commit-level disclosure statements.',
         folder: defaultPackKey,
         articles: [
-          { file: '00_SNAPSHOT.md', title: 'Snapshot' }
+          { file: '01_PRIOR_ART_NOTICE.md', title: 'Prior Art Notice' }
         ]
       };
 

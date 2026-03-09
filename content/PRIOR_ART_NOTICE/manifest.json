@@ -1,0 +1,12 @@
+{
+  "title": "Public Technical Disclosure and Prior Art Notice",
+  "description": "Timestamped architecture milestones intended to establish public prior art signals for governance and execution-boundary patterns.",
+  "section_intro": "Use this page for dated milestones, evidence references, and commit-level disclosure statements.",
+  "folder": "PRIOR_ART_NOTICE",
+  "articles": [
+    {
+      "file": "01_PRIOR_ART_NOTICE.md",
+      "title": "Prior Art Notice"
+    }
+  ]
+}
