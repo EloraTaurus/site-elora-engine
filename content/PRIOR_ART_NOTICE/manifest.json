@@ -14,16 +14,16 @@
       "title": "Governance Technical Register"
     },
     {
+      "file": "05_TERMINOLOGY_GLOSSARY.md",
+      "title": "Terminology Glossary"
+    },
+    {
       "file": "03_EVIDENCE_METHOD.md",
       "title": "Evidence Method"
     },
     {
       "file": "04_STANDARDS_BASELINE.md",
       "title": "Standards Baseline"
-    },
-    {
-      "file": "05_TERMINOLOGY_GLOSSARY.md",
-      "title": "Terminology Glossary"
     },
     {
       "file": "06_ENGINE_CAPABILITY_REGISTER.md",

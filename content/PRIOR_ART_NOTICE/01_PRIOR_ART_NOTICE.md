@@ -1,6 +1,6 @@
 # Technical Disclosure and Prior Art
 
-The Elora Taurus Project is a research and experimentation initiative focused on practical AI governance, execution boundaries, and accountable operator control.
+The Elora Taurus Project is an independent personal research and experimentation initiative focused on practical AI governance, execution boundaries, and accountable operator control.
 
 The project is independently designed and operated from the United Kingdom.
 
@@ -49,7 +49,7 @@ Public references here intentionally use short commit fingerprints because the s
 
 ## Universal Disclaimer
 
-The Elora Taurus Project operates as an open research and experimentation initiative. The milestones listed here, from early logic gates to distributed execution boundaries, are timestamped through third-party infrastructure and public disclosures where possible.
+The Elora Taurus Project operates as an open, independent personal research and experimentation initiative. The milestones listed here, from early logic gates to distributed execution boundaries, are timestamped through third-party infrastructure and public disclosures where possible.
 
 This archive is provided as a reference implementation record to support open global AI safety standards. It is intended to help reviewers map published concepts to dated implementation evidence.
 

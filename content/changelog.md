@@ -1,5 +1,8 @@
 # Site / Demo Changelog
 
+## 2026-03-09
+- Formally released `Technical Disclosure and Prior Art (v1)` as a public defensive publication surface.
+
 ## 2026-03-08
 - Added dedicated Architecture context page: `Architectural Influences and Community Dialogue`.
 - Wired new dialogue page into Architecture left-navigation manifest and pack README ordering.
