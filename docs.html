@@ -217,11 +217,10 @@
       }
 
       function initNavCollapsibles() {
-        const mobile = window.innerWidth <= 1020;
         navList.querySelectorAll('.pack-nav-group').forEach(function (group, index) {
           const toggle = group.querySelector('.pack-nav-group-toggle');
           if (!toggle) return;
-          const shouldCollapse = mobile ? index !== 0 : false;
+          const shouldCollapse = index !== 0;
           group.classList.toggle('collapsed', shouldCollapse);
           toggle.setAttribute('aria-expanded', String(!shouldCollapse));
           toggle.addEventListener('click', function () {
@@ -262,6 +261,7 @@
           return;
         }
         reader.innerHTML = renderSimpleMarkdown(md);
+        reader.scrollTop = 0;
         setActiveNav(file);
       }
 

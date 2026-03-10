@@ -918,6 +918,10 @@ a { color: #8fd6ff; text-decoration: none; }
 
 .pack-reader {
   min-height: 540px;
+  position: sticky;
+  top: 94px;
+  max-height: calc(100vh - 112px);
+  overflow: auto;
 }
 
 .walk-links {
@@ -1132,6 +1136,12 @@ button:hover {
     top: auto;
   }
   .pack-reader { min-height: 0; }
+  .pack-reader {
+    position: static;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+  }
 }
 
 @media (max-width: 1360px) {
