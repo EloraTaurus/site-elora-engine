@@ -23,7 +23,7 @@
   <section class="top-stage" id="changelog">
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand brand-link" href="index.html" aria-label="The Elora Taurus Project home">
+        <a class="brand brand-link" href="index.html" aria-label="The Elora Taurus Project overview">
           <div class="brand-icon"><img src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';"></div>
           <div>
             <strong>The Elora Taurus Project</strong>
@@ -32,22 +32,23 @@
         </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-changelog"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
         <nav id="top-links-changelog" data-top-links="1" class="top-links">
-          <a class="nav-btn" href="about.html">About Elora</a>
+          <a class="nav-btn" href="overview.html">Overview</a>
           <a class="nav-btn" href="architecture.html">Architecture</a>
+          <a class="nav-btn" href="demo.html">Replay Demo</a>
+          <a class="nav-btn" href="docs.html">Documentation</a>
+          <a class="nav-btn" href="research.html">Research</a>
           <a class="nav-btn active" href="changelog.html">Changelog</a>
-          <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
-          <a class="nav-btn" href="prior-art.html">Technical Disclosure</a>
         </nav>
       </div>
     </header>
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1>Elora Engine Changelog</h1>
-          <p>Public changelog for demo-visible engine and walkthrough updates. This page loads directly from the engine changelog source.</p>
+          <h1>Project Changelog</h1>
+          <p>Public update stream for engine, site, and architecture-level changes.</p>
           <div class="cta-row">
-            <a class="btn" href="index.html">Back to Home</a>
-            <a class="btn alt" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Guided Tour</a>
+            <a class="btn" href="overview.html">Back to Overview</a>
+            <a class="btn alt" href="demo.html">Open Replay Demo</a>
           </div>
         </div>
       </section>
@@ -56,7 +57,16 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <h2>Engine Changelog</h2>
+      <h2>Engine Updates</h2>
+      <p class="section-intro">Core runtime, governance boundary, and operator-surface changes.</p>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Site Updates</h3>
+        <p>Navigation, documentation IA, and public demo experience changes are tracked alongside engine updates.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Architecture Updates</h3>
+        <p>Governance-model and control-plane architecture changes are reflected in Research and Docs sections.</p>
+      </div>
       <div class="card">
         <div id="changelog-page-content" class="changelog-content">Loading changelog...</div>
       </div>
@@ -68,18 +78,16 @@
       <div class="footer-row">
         <strong>The Elora Taurus Project</strong>
         <nav class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">Project Overview</a>
+          <a href="overview.html">Overview</a>
           <a href="architecture.html">Architecture</a>
-          <a href="architecture-layers.html">Architecture Layers</a>
+          <a href="demo.html">Replay Demo</a>
+          <a href="docs.html">Documentation</a>
+          <a href="research.html">Research</a>
           <a href="changelog.html">Changelog</a>
-          <a href="governance-pack.html">Governance Pack</a>
-          <a href="prior-art.html">Technical Disclosure</a>
-          <a href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Guided Tour</a>
         </nav>
       </div>
       <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
-      <div class="footer-note">Copyright © Nathan Freestone. Demo content is synthetic and non-operational.</div>
+      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
     </div>
   </footer>
 

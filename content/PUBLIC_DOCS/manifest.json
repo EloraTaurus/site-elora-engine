@@ -1,0 +1,98 @@
+{
+  "title": "Elora Engine Docs",
+  "description": "Concept to operations documentation for Elora Engine, governance architecture, fabric execution, security posture, and validation.",
+  "section_intro": "Read in sequence: Overview -> Architecture -> Governance -> Runtime -> Fabric -> Operators -> API -> Security -> Testing -> Roadmap.",
+  "last_updated": "2026-03-10",
+  "folder": "PUBLIC_DOCS",
+  "sections": [
+    {
+      "title": "Overview",
+      "articles": [
+        { "file": "01_overview_what_is_elora.md", "title": "What Is Elora" },
+        { "file": "01_overview_quick_facts.md", "title": "Quick Facts" },
+        { "file": "01_overview_executive_architect_brief.md", "title": "Executive Architect Brief" },
+        { "file": "01_engine_readme_md.md", "title": "Engine README" },
+        { "file": "06_engine_docs_overview_md.md", "title": "Docs Overview" }
+      ]
+    },
+    {
+      "title": "Architecture",
+      "articles": [
+        { "file": "02_engine_architecture_md.md", "title": "Architecture and Runtime" },
+        { "file": "02_architecture_governance_control_plane.md", "title": "Governance Control Plane" },
+        { "file": "02_architecture_commit_boundary_and_admissibility.md", "title": "Commit Boundary and Admissibility" },
+        { "file": "02_architecture_risk_model_and_operator_workflow.md", "title": "Risk Model and Operator Workflow" },
+        { "file": "02_architecture_replay_forensics_and_accountability.md", "title": "Replay Forensics and Accountability" }
+      ]
+    },
+    {
+      "title": "Governance Model",
+      "articles": [
+        { "file": "15_engine_docs_operators_inference_commit_governance_md.md", "title": "Inference + Commit Governance" },
+        { "file": "14_engine_docs_operators_governance_incident_map_v1_md.md", "title": "Governance Incident Map" },
+        { "file": "16_engine_docs_operators_jobs_audit_and_replay_md.md", "title": "Jobs Audit and Replay" }
+      ]
+    },
+    {
+      "title": "Runtime Components",
+      "articles": [
+        { "file": "03_engine_operations_md.md", "title": "Engine Operations" },
+        { "file": "08_engine_docs_features_md.md", "title": "Features and Capabilities" },
+        { "file": "07_engine_docs_feature_index_md.md", "title": "Feature Index" },
+        { "file": "05_engine_docs_readme_md.md", "title": "Engine Docs Index" }
+      ]
+    },
+    {
+      "title": "Fabric Execution",
+      "articles": [
+        { "file": "23_fabric_readme_md.md", "title": "Fabric README" },
+        { "file": "24_fabric_index_md.md", "title": "Fabric Index" },
+        { "file": "25_fabric_provisioner_readme_md.md", "title": "Provisioner README" },
+        { "file": "26_workerhost_readme_md.md", "title": "WorkerHost README" },
+        { "file": "28_workerhost_wordpress_chat_worker_readme_md.md", "title": "WordPress Worker README" }
+      ]
+    },
+    {
+      "title": "Operator Guides",
+      "articles": [
+        { "file": "09_engine_docs_operators_readme_md.md", "title": "Operator Guide Index" },
+        { "file": "10_engine_docs_operators_admin_dashboard_and_governance_md.md", "title": "Admin Dashboard and Governance" },
+        { "file": "19_engine_docs_operators_pipelines_and_runtime_md.md", "title": "Pipelines and Runtime" },
+        { "file": "18_engine_docs_operators_models_and_profiles_md.md", "title": "Models and Profiles" },
+        { "file": "17_engine_docs_operators_knowledge_memory_workbooks_md.md", "title": "Knowledge, Memory, Workbooks" },
+        { "file": "11_engine_docs_operators_alerts_and_notification_posture_md.md", "title": "Alerts and Notification" },
+        { "file": "12_engine_docs_operators_configuration_and_public_status_md.md", "title": "Configuration and Public Status" },
+        { "file": "13_engine_docs_operators_fabric_and_worker_operations_md.md", "title": "Fabric and Worker Operations" }
+      ]
+    },
+    {
+      "title": "API and Contracts",
+      "articles": [
+        { "file": "21_engine_docs_operators_public_api_and_chat_runtime_md.md", "title": "Public API and Chat Runtime" },
+        { "file": "07_api_workerhost_openapi_reference.md", "title": "WorkerHost OpenAPI" },
+        { "file": "27_workerhost_events_md.md", "title": "Worker Event Schema" }
+      ]
+    },
+    {
+      "title": "Security Posture",
+      "articles": [
+        { "file": "04_engine_security_posture_faq_md.md", "title": "Security Posture FAQ" },
+        { "file": "22_engine_docs_operators_security_and_access_control_md.md", "title": "Security and Access Control" },
+        { "file": "00_architecture_disclosure_policy_md.md", "title": "Architecture Disclosure Policy" }
+      ]
+    },
+    {
+      "title": "Validation and Testing",
+      "articles": [
+        { "file": "20_engine_docs_operators_pipeline_commit_validation_test_plan_md.md", "title": "Pipeline Commit Validation Test Plan" },
+        { "file": "09_validation_lab_testing_notes.md", "title": "Lab Testing Notes" }
+      ]
+    },
+    {
+      "title": "Roadmap and Research",
+      "articles": [
+        { "file": "10_roadmap_and_research_questions.md", "title": "Roadmap and Research Questions" }
+      ]
+    }
+  ]
+}

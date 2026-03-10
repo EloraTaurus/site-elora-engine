@@ -70,7 +70,17 @@ a { color: #8fd6ff; text-decoration: none; }
   padding-bottom: 0;
 }
 
+#overview.top-stage,
+#demo-page.top-stage {
+  padding-bottom: 0;
+}
+
 #home .shell {
+  padding-bottom: 0;
+}
+
+#overview .shell,
+#demo-page .shell {
   padding-bottom: 0;
 }
 
@@ -204,6 +214,28 @@ a { color: #8fd6ff; text-decoration: none; }
   grid-template-columns: 1fr;
   gap: 14px;
   padding-bottom: 30px;
+}
+
+.hero.hero-guide-curve {
+  padding-bottom: 0;
+  align-items: start;
+}
+
+.hero.hero-guide-curve .about-lead,
+.hero.hero-guide-curve .hero-copy {
+  align-self: start;
+}
+
+.hero.hero-guide-curve .hero-guide-standalone {
+  align-self: end;
+}
+
+.hero.hero-guide-curve .hero-guide-image {
+  width: auto;
+  max-width: 100%;
+  height: clamp(420px, 34vw, 620px);
+  max-height: none;
+  margin-bottom: -46px;
 }
 
 .about-lead {
@@ -358,6 +390,51 @@ a { color: #8fd6ff; text-decoration: none; }
   margin-bottom: -10px;
   filter: drop-shadow(0 14px 30px rgba(3, 10, 20, 0.45));
   max-height: 410px;
+}
+
+.hero-demo-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+  border: 1px solid #335a84;
+  background: #0e2038;
+  box-shadow: 0 16px 34px rgba(3, 9, 18, 0.52);
+  max-height: 380px;
+  margin-bottom: -20px;
+}
+
+.hero.hero-guide-curve .hero-demo-image {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  margin-bottom: -20px;
+}
+
+.hero-demo-panel {
+  position: relative;
+}
+
+.hero-demo-chip {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #76b8ef;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #d9efff;
+  background: rgba(17, 46, 77, 0.84);
+  box-shadow: 0 8px 18px rgba(5, 14, 28, 0.38);
 }
 
 .architecture-banner {
@@ -642,6 +719,79 @@ a { color: #8fd6ff; text-decoration: none; }
   margin: 0 0 10px;
 }
 
+.architecture-flow {
+  margin: 0;
+  padding: 2px 0;
+  white-space: pre;
+  overflow-x: auto;
+  color: #dce8f7;
+  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.architecture-visual {
+  padding: 12px;
+}
+
+.architecture-image {
+  width: 100%;
+  max-height: 720px;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.architecture-flow-fallback {
+  display: none;
+}
+
+.architecture-visual.img-missing .architecture-image {
+  display: none;
+}
+
+.architecture-visual.img-missing .architecture-flow-fallback {
+  display: block;
+}
+
+.fyi-notice {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  border: 1px solid #b4d3f6;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #eaf4ff, #dfeefe);
+  color: #17345c;
+  padding: 12px 14px;
+}
+
+.fyi-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid #8fc0ef;
+  background: #cfe7ff;
+  color: #235c8f;
+  margin-top: 2px;
+}
+
+.fyi-title {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #15385f;
+  letter-spacing: 0.01em;
+}
+
+.fyi-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #20486f;
+}
+
 .pack-layout {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
@@ -660,6 +810,24 @@ a { color: #8fd6ff; text-decoration: none; }
 }
 
 .pack-nav-list {
+  display: grid;
+  gap: 12px;
+}
+
+.pack-nav-group {
+  display: grid;
+  gap: 8px;
+}
+
+.pack-nav-group-title {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5f7ca0;
+}
+
+.pack-nav-group-items {
   display: grid;
   gap: 8px;
 }
@@ -965,6 +1133,26 @@ button:hover {
   .hero-guide-image {
     max-height: 360px;
     margin-bottom: -6px;
+  }
+  .hero-demo-image {
+    max-height: 280px;
+    margin-bottom: -10px;
+  }
+  .hero.hero-guide-curve .hero-demo-image {
+    max-height: 280px;
+    margin-bottom: -10px;
+  }
+  .hero-demo-chip {
+    top: 6px;
+    left: 8px;
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  .hero.hero-guide-curve .hero-guide-image {
+    width: 100%;
+    height: auto;
+    max-height: 430px;
+    margin-bottom: -22px;
   }
   .architecture-banner {
     max-width: 100%;

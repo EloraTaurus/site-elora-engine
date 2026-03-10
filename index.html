@@ -3,42 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The Elora Taurus Project: a deliberately built platform project with a public Elora Engine dashboard demo, guided walkthroughs, and features in development." />
+  <meta name="description" content="Elora Engine is an operator-governed AI runtime with a deterministic commit boundary and governance replay." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://elorataurus.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Elora Taurus Project - Public Demo" />
-  <meta property="og:description" content="Explore the public Elora Engine dashboard demo, including available guided tours and features currently in development." />
+  <meta property="og:title" content="Elora Engine - Operator-governed AI runtime" />
+  <meta property="og:description" content="Authenticated ingress, proposal-first inference, deterministic commit authorization, and governance replay." />
   <meta property="og:url" content="https://elorataurus.com/" />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
-  <meta property="og:image:secure_url" content="https://elorataurus.com/social.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Elora Taurus Project - Public Demo" />
-  <meta name="twitter:description" content="Public Elora Engine dashboard demo with guided tours, synthetic operational data, and incremental platform development context." />
+  <meta name="twitter:title" content="Elora Engine - Operator-governed AI runtime" />
+  <meta name="twitter:description" content="Architectural preface to the Elora governance control-plane model." />
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
-  <title>The Elora Taurus Project - Public Demo</title>
+  <title>Elora Engine - Operator-governed AI runtime</title>
   <link rel="icon" href="elora.png" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "The Elora Taurus Project",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Linux, macOS, Windows",
-    "description": "Elora Engine is a security-first AI orchestration and control framework focused on governed, auditable, and inspectable execution.",
-    "url": "./index.html"
-  }
-  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <section class="top-stage" id="home">
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand brand-link" href="index.html" aria-label="The Elora Taurus Project home">
+        <a class="brand brand-link" href="index.html" aria-label="Elora Engine home">
           <div class="brand-icon"><img src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';"></div>
           <div>
             <strong>The Elora Taurus Project</strong>
@@ -47,24 +32,26 @@
         </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-home"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
         <nav id="top-links-home" data-top-links="1" class="top-links">
-          <a class="nav-btn" href="about.html">About Elora</a>
+          <a class="nav-btn" href="overview.html">Overview</a>
           <a class="nav-btn" href="architecture.html">Architecture</a>
+          <a class="nav-btn" href="demo.html">Replay Demo</a>
+          <a class="nav-btn" href="docs.html">Documentation</a>
+          <a class="nav-btn" href="research.html">Research</a>
           <a class="nav-btn" href="changelog.html">Changelog</a>
-          <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
-          <a class="nav-btn" href="prior-art.html">Technical Disclosure</a>
         </nav>
       </div>
     </header>
     <div class="shell">
-      <section class="hero">
+      <section class="hero hero-guide-curve">
         <div class="hero-copy">
-          <h1>Operate AI with governance, control, and auditability</h1>
-          <p>Elora Taurus is a custom-built Python engine that uses open technology standards to explore how AI systems can be governed when inference is treated as proposal and execution authority is enforced at a deterministic commit boundary.</p>
-          <p>Current public focus is Governance Replay: a guided walkthrough showing how outcomes are evaluated, how commit becomes the authorization boundary, and how blocked decisions are explained with deterministic trace evidence.</p>
+          <h1>Elora Engine</h1>
+          <p>Operator-governed AI runtime.</p>
+          <p>Elora is an AI runtime structured around a governance control plane. Inference generates proposals; authorization occurs at a deterministic commit boundary before delivery or execution.</p>
           <div class="cta-row">
-            <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Guided Tour</a>
-            <a class="btn alt" href="about.html">Read Project Overview</a>
-            <a class="btn mission" href="prior-art.html">Read Technical Disclosure</a>
+            <a class="btn" href="overview.html">Overview</a>
+            <a class="btn alt" href="architecture.html">Architecture</a>
+            <a class="btn mission" href="docs.html">Documentation</a>
+            <a class="btn alt" href="demo.html">Replay Demo</a>
           </div>
         </div>
         <aside class="hero-guide-standalone" aria-label="Elora guide">
@@ -76,113 +63,98 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <h2>What You Can Explore Right Now</h2>
-      <p class="section-intro">Current public scope is intentionally focused on governance replay and operator decision accountability.</p>
-      <div class="feature-grid">
-        <article class="feature">
-          <div class="feature-head">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 5 3.5 8.5 7 9 3.5-.5 7-4 7-9V6zM11 8h2v5h-2zM11 15h2v2h-2z"/></svg>
-            <span class="feature-status live">Available</span>
-          </div>
-          <h4>Governance Replay tour</h4>
-          <p>Guided replay flow from dashboard triage to trace-level commit analysis with per-stage evidence views.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-head">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v4H4zM14 5h6v4h-6zM9 7h5v2H9zM4 15h6v4H4zM14 15h6v4h-6zM9 17h5v2H9zM11 9h2v6h-2z"/></svg>
-            <span class="feature-status live">Available</span>
-          </div>
-          <h4>Interactive trace accordion</h4>
-          <p>Stage-level replay events can be selected to reveal structured JSON evidence inline for each decision phase.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-head">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7zM11 7h2v2h-2zM11 15h2v2h-2z"/></svg>
-            <span class="feature-status upcoming">Upcoming</span>
-          </div>
-          <h4>Fabric inspection tour</h4>
-          <p>Worker inventory, quotas, and allocation surfaces are planned for a future guided path.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-head">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 5 3.5 8.5 7 9 3.5-.5 7-4 7-9V6zM11 8h2v5h-2zM11 15h2v2h-2z"/></svg>
-            <span class="feature-status upcoming">Upcoming</span>
-          </div>
-          <h4>Security posture surfaces</h4>
-          <p>Public-safe posture reporting is planned as a dedicated tour once representative views are finalized.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-head">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v4H4zM14 5h6v4h-6zM9 7h5v2H9zM4 15h6v4H4zM14 15h6v4h-6zM9 17h5v2H9zM11 9h2v6h-2z"/></svg>
-            <span class="feature-status live">Available</span>
-          </div>
-          <h4>Governance pipeline context</h4>
-          <p>Architecture section now includes a Governance Pipeline page describing proposal-to-commit decision flow.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-head">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h2v6h4V3h2v6h2v3a6 6 0 0 1-5 5.9V21h-2v-3.1A6 6 0 0 1 6 12V9h2z"/></svg>
-            <span class="feature-status upcoming">Upcoming</span>
-          </div>
-          <h4>Additional guided scenarios</h4>
-          <p>Further guided tours will be published incrementally as production-aligned views are stabilized.</p>
-        </article>
+      <h2>System Architecture</h2>
+      <p class="section-intro">Core flow from client request to governed execution outcome. Worker Fabric covers external action execution paths; direct response paths can complete without worker dispatch.</p>
+      <div class="card architecture-visual">
+        <img
+          src="elora-architecture.png"
+          alt="Elora system architecture flow from clients and plugins to engine control plane, commit validation, worker fabric, and external systems."
+          class="architecture-image"
+          onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='architecture-flow.png';}else{this.closest('.architecture-visual').classList.add('img-missing');}"
+        />
+        <pre class="architecture-flow architecture-flow-fallback">Clients / Plugins
+        |
+        v
+Ingress / Edge Gateway
+(Authenticated Access Points)
+        |
+        v
+
+========================================
+CONTROL PLANE
+========================================
+
+Elora Engine
+(Control Plane Authority)
+        |
+        v
+Policy Gate
+(Guardrails & Rules)
+        |
+        v
+Inference
+(Proposal Generation)
+        |
+        v
+Justification
+(Confidence / Rationale Check)
+
+------------ COMMIT BOUNDARY ------------
+
+Commit Validation
+(Policy + Authority Admissibility)
+        |
+     +--+---+
+     |      |
+     v      v
+    DENY   ALLOW
+Terminate Execute
+
+---------- EXECUTION BOUNDARY ----------
+
+Worker Fabric
+(WorkerHosts / Agents)
+
+----------------------------------------
+
+GOVERNANCE REPLAY
+(Evidence / Replay / Recompute)
+
+Evidence Capture
+        |
+Deterministic Replay
+        |
+Decision Recompute
+
+Governance evidence is captured on touch, not after, so every job is evidenced regardless of which point it fails.</pre>
       </div>
     </div>
   </section>
 
   <section class="section surface-deep">
     <div class="section-inner">
-      <h2>Guided Walkthrough</h2>
-      <p class="section-intro">This public demo currently uses one canonical path: Governance Replay.</p>
-      <div class="walk-links">
-        <a href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Governance Replay Tour</a>
-      </div>
-      <p class="section-intro" style="margin-top:14px;">Architecture context and current posture are in the <a href="about.html">About Elora section</a>.</p>
-    </div>
-  </section>
-
-  <section class="section surface-light">
-    <div class="section-inner">
-      <h2>Scope and Safety</h2>
-      <p class="section-intro">This public demo is intentionally constrained and uses synthetic operational data.</p>
-      <ul class="list">
-        <li>No live endpoints are exposed via this demo site.</li>
-        <li>No secrets or production identifiers are included.</li>
-        <li>All operational records in this experience are synthetic.</li>
-        <li>Administrative controls shown here are representative and reduced.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section surface-deep">
-    <div class="section-inner">
-      <h2>Why This Site Exists</h2>
-      <p class="section-intro">This public site serves three deliberate purposes:</p>
+      <h2>What Makes The System Different</h2>
       <div class="grid-2">
         <div class="card">
-          <h3>Anchor point</h3>
-          <p>A clear statement of what Elora Engine is, what it is designed for, and how it approaches governed AI operation.</p>
+          <h3>Authenticated ingress first</h3>
+          <p>Caddy provides TLS edge routing and controlled ingress paths. Request authorization is enforced by the engine using bearer API key plus signed request validation.</p>
         </div>
         <div class="card">
-          <h3>Control plane walkthrough</h3>
-          <p>Guided demonstrations of implemented and demoed surfaces such as job audit flows, security posture, worker fabric views, and pipeline/runtime governance patterns using synthetic data.</p>
+          <h3>Inference produces proposals</h3>
+          <p>Model outputs are treated as candidate decisions, not authority.</p>
         </div>
-      </div>
-      <div class="card" style="margin-top:14px;">
-        <h3>Architectural direction</h3>
-        <p>Visible signals of where the platform is evolving, including deeper governance tooling, expanded runtime introspection, and structured model/knowledge/memory controls.</p>
-        <p class="note">This guided experience reflects design intent and operator surface. Production deployments expose additional telemetry, policy trace detail, and operational controls within secured environments.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section surface-light">
-    <div class="section-inner">
-      <h2>Site / Demo Changelog</h2>
-      <p class="section-intro">Recent website and demo updates loaded from the site changelog.</p>
-      <div class="card">
-        <div id="changelog-content" class="changelog-content">Loading changelog...</div>
+        <div class="card">
+          <h3>Commit enforces authorization</h3>
+          <p>Admissibility is evaluated against captured state at the commit boundary.</p>
+        </div>
+        <div class="card">
+          <h3>Scoped job tokens after authorization</h3>
+          <p>After an authorized start request, the engine issues short-lived job identifiers and tokens for status polling. These are scoped runtime handles, not edge-auth substitutes.</p>
+        </div>
+        <div class="card">
+          <h3>Governance replay explains decisions</h3>
+          <p>Operator surfaces explain why an outcome was allowed or blocked.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -192,35 +164,23 @@
       <div class="footer-row">
         <strong>The Elora Taurus Project</strong>
         <nav class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">Project Overview</a>
+          <a href="overview.html">Overview</a>
           <a href="architecture.html">Architecture</a>
-          <a href="architecture-layers.html">Architecture Layers</a>
+          <a href="demo.html">Replay Demo</a>
+          <a href="docs.html">Documentation</a>
+          <a href="research.html">Research</a>
           <a href="changelog.html">Changelog</a>
-          <a href="governance-pack.html">Governance Pack</a>
-          <a href="prior-art.html">Technical Disclosure</a>
-          <a href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Guided Tour</a>
         </nav>
       </div>
-      <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
-      <div class="footer-note">Copyright © Nathan Freestone. Demo content is synthetic and non-operational.</div>
+      <div class="footer-note">This page is a front-door architectural preface. Detailed system explanation is in Overview, Architecture, and Documentation.</div>
+      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
     </div>
   </footer>
-
-  <section id="privacy-toast" class="privacy-toast" aria-live="polite">
-    <p>This demo currently does not use analytics cookies. If analytics is added later, it will be optional and consent-based.</p>
-    <div class="privacy-actions">
-      <button id="privacy-toast-dismiss" type="button">Got It</button>
-    </div>
-  </section>
 
   <script>
     (function () {
       const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
       const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
-      const changelogContent = document.getElementById('changelog-content');
-      const privacyToast = document.getElementById('privacy-toast');
-      const privacyDismiss = document.getElementById('privacy-toast-dismiss');
 
       navToggles.forEach(function (toggle) {
         const controls = toggle.getAttribute('aria-controls');
@@ -240,109 +200,10 @@
 
       window.addEventListener('resize', function () {
         if (window.innerWidth > 760) {
-          topLinksGroups.forEach(function (links) {
-            links.classList.remove('open');
-          });
-          navToggles.forEach(function (toggle) {
-            toggle.setAttribute('aria-expanded', 'false');
-          });
+          topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
+          navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
         }
       });
-
-      function renderSimpleMarkdown(md) {
-        function esc(s) {
-          return s
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;');
-        }
-        const lines = md.split(/\r?\n/);
-        const html = [];
-        let inList = false;
-        lines.forEach(function (line) {
-          const t = line.trim();
-          if (!t) {
-            if (inList) {
-              html.push('</ul>');
-              inList = false;
-            }
-            return;
-          }
-          if (t.startsWith('### ')) {
-            if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h4>' + esc(t.slice(4)) + '</h4>');
-            return;
-          }
-          if (t.startsWith('## ')) {
-            if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h3>' + esc(t.slice(3)) + '</h3>');
-            return;
-          }
-          if (t.startsWith('# ')) {
-            if (inList) { html.push('</ul>'); inList = false; }
-            html.push('<h2>' + esc(t.slice(2)) + '</h2>');
-            return;
-          }
-          if (t.startsWith('- ')) {
-            if (!inList) {
-              html.push('<ul class="list">');
-              inList = true;
-            }
-            html.push('<li>' + esc(t.slice(2)) + '</li>');
-            return;
-          }
-          if (inList) {
-            html.push('</ul>');
-            inList = false;
-          }
-          html.push('<p>' + esc(t) + '</p>');
-        });
-        if (inList) html.push('</ul>');
-        return html.join('');
-      }
-
-      function makeCandidatePaths(filename) {
-        const base = window.location.pathname.replace(/[^/]*$/, '');
-        return [
-          'content/' + filename,
-          './content/' + filename,
-          base + 'content/' + filename,
-          window.location.origin + base + 'content/' + filename
-        ];
-      }
-
-      async function fetchFirst(paths) {
-        for (let i = 0; i < paths.length; i += 1) {
-          const resp = await fetch(paths[i], { cache: 'no-store' });
-          if (resp.ok) return resp.text();
-        }
-        return null;
-      }
-
-      async function loadChangelog() {
-        if (!changelogContent) return;
-        const md = await fetchFirst(makeCandidatePaths('changelog.md'));
-        changelogContent.innerHTML = md
-          ? renderSimpleMarkdown(md)
-          : 'Changelog is currently unavailable.';
-      }
-      loadChangelog();
-
-      const privacyKey = 'elora_privacy_notice_v1';
-      try {
-        if (privacyToast && localStorage.getItem(privacyKey) === 'dismissed') {
-          privacyToast.classList.add('hidden');
-        }
-      } catch (e) {}
-
-      if (privacyToast && privacyDismiss) {
-        privacyDismiss.addEventListener('click', function () {
-          privacyToast.classList.add('hidden');
-          try { localStorage.setItem(privacyKey, 'dismissed'); } catch (e) {}
-        });
-      }
     })();
   </script>
 </body>

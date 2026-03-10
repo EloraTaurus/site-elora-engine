@@ -23,7 +23,7 @@
   <section class="top-stage" id="features">
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand brand-link" href="index.html" aria-label="The Elora Taurus Project home">
+        <a class="brand brand-link" href="index.html" aria-label="The Elora Taurus Project overview">
           <div class="brand-icon"><img src="elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='admin/elora-avatar.svg';"></div>
           <div>
             <strong>The Elora Taurus Project</strong>
@@ -32,11 +32,12 @@
         </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-features"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
         <nav id="top-links-features" data-top-links="1" class="top-links">
-          <a class="nav-btn" href="about.html">About Elora</a>
+          <a class="nav-btn" href="overview.html">Overview</a>
           <a class="nav-btn active" href="architecture.html">Architecture</a>
+          <a class="nav-btn" href="demo.html">Replay Demo</a>
+          <a class="nav-btn" href="docs.html">Documentation</a>
+          <a class="nav-btn" href="research.html">Research</a>
           <a class="nav-btn" href="changelog.html">Changelog</a>
-          <a class="nav-btn" href="governance-pack.html">Governance Pack</a>
-          <a class="nav-btn" href="prior-art.html">Technical Disclosure</a>
         </nav>
       </div>
     </header>
@@ -46,8 +47,8 @@
           <h1 id="pack-page-title">Elora Engine Architecture Context</h1>
           <p id="pack-page-description">Structured feature and architecture context for what Elora can do today and what is in active build.</p>
           <div class="cta-row">
-            <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Start Guided Tour</a>
-            <a class="btn alt" href="governance-pack.html">Read Governance Pack</a>
+            <a class="btn" href="demo.html">Open Replay Demo</a>
+            <a class="btn alt" href="research.html">Read Research</a>
           </div>
           <img class="architecture-banner" src="Elora Taurus Workflow Banner.png" alt="Elora Taurus governance workflow banner" />
         </div>
@@ -67,6 +68,32 @@
           <a class="btn" href="architecture-layers.html">Read the Governance Architecture Layers page</a>
         </div>
       </div>
+      <div class="card" style="margin-bottom:14px;" id="cryptographic-foundations">
+        <h3>Foundations: Cryptographic Evidence and AI Governance</h3>
+        <p>The Elora project does not claim invention of cryptographic governance primitives. It applies established distributed-systems security mechanisms to AI runtime governance in a structured control-plane architecture.</p>
+        <p>AI governance is often discussed as if it requires entirely new cryptographic frameworks. In practice, the required primitives already exist and have secured distributed systems for decades. Elora applies these mechanisms so governance decisions can be reproduced and verified rather than asserted procedurally.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Ingress and Authentication Boundary</h3>
+        <p>Caddy is used as the HTTPS edge gateway and routing boundary for engine surfaces. Runtime request authorization is enforced in the engine using bearer API key checks plus signed request validation with timestamp-skew controls.</p>
+        <p>Some public-safe status surfaces are intentionally exposed by design; protected runtime and admin surfaces require authenticated access. For async runtime flows, the engine issues short-lived job IDs and job tokens after authorized start requests so status polling remains scoped.</p>
+      </div>
+      <div class="grid-2" style="margin-bottom:14px;">
+        <div class="card">
+          <h3>Leveraging Established Cryptographic Primitives</h3>
+          <p>Elora uses proven infrastructure primitives such as SHA-256 hashing, HMAC signatures, hash-linked replay integrity fields, and TLS-backed transport trust for verifiable evidence paths.</p>
+        </div>
+        <div class="card">
+          <h3>Execution Boundary</h3>
+          <p>The architecture separates reasoning from execution so the control plane can evaluate admissibility at commit before actions occur.</p>
+          <p>Inference produces proposals; commit authorizes or blocks outcomes using captured policy and authority context.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Open Architecture Stance</h3>
+        <p>Elora discloses architecture, governance models, and operator design patterns while protecting sensitive runtime contracts and deployment internals.</p>
+        <p>This keeps safety primitives inspectable and portable without exposing operational attack surface details.</p>
+      </div>
       <div class="pack-layout">
         <aside class="card pack-nav">
           <h3>Pages</h3>
@@ -84,18 +111,16 @@
       <div class="footer-row">
         <strong>The Elora Taurus Project</strong>
         <nav class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">Project Overview</a>
+          <a href="overview.html">Overview</a>
           <a href="architecture.html">Architecture</a>
-          <a href="architecture-layers.html">Architecture Layers</a>
+          <a href="demo.html">Replay Demo</a>
+          <a href="docs.html">Documentation</a>
+          <a href="research.html">Research</a>
           <a href="changelog.html">Changelog</a>
-          <a href="governance-pack.html">Governance Pack</a>
-          <a href="prior-art.html">Technical Disclosure</a>
-          <a href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Guided Tour</a>
         </nav>
       </div>
       <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
-      <div class="footer-note">Copyright © Nathan Freestone. Demo content is synthetic and non-operational.</div>
+      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
     </div>
   </footer>
 

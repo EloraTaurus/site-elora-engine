@@ -5,7 +5,7 @@ This page describes how Elora Taurus maintains a verifiable implementation chron
 ## Public-Surface Evidence
 
 - Public site changelog and dated release notes
-- Public architecture and prior-art disclosure pages
+- Public architecture and technical-disclosure pages
 - Public organisation presence and project activity timeline
 
 ## Private-Repository Evidence
@@ -13,6 +13,12 @@ This page describes how Elora Taurus maintains a verifiable implementation chron
 - Short commit fingerprints published on the public disclosure page
 - Full commit hashes retained offline in an internal evidence register
 - Full diffs and tagged snapshots retained in private repository history
+
+## External Timeline Evidence Channels
+
+- Discord project messages (dated progress context)
+- Facebook project posts (dated public status context)
+- Public GitHub organisation/repository activity surfaces
 
 ## Chain-of-Custody Practice
 
@@ -28,6 +34,7 @@ When needed, Elora can verify chronology by correlating:
 - Public milestone date on this site
 - Public changelog references
 - Private commit fingerprint references
+- External timeline evidence channels (Discord/Facebook/public posts)
 - Internal full-hash evidence archive
 
 ## Disclosure Boundary
