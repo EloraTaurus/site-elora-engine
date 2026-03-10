@@ -116,6 +116,7 @@
           { file: '06_ROADMAP_AND_RESEARCH_QUESTIONS.md', title: 'Roadmap and Research Questions' }
         ]
       };
+      let navIsMobile = window.innerWidth <= 1020;
 
       navToggles.forEach(function (toggle) {
         const controls = toggle.getAttribute('aria-controls');
@@ -137,6 +138,11 @@
         if (window.innerWidth > 760) {
           topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
           navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
+        }
+        const nextMobile = window.innerWidth <= 1020;
+        if (nextMobile !== navIsMobile && navList && navList.children.length) {
+          navIsMobile = nextMobile;
+          initNavCollapsibles();
         }
       });
 
@@ -194,7 +200,27 @@
 
       function setActiveNav(file) {
         document.querySelectorAll('[data-pack-file]').forEach(function (btn) {
-          btn.classList.toggle('active', btn.getAttribute('data-pack-file') === file);
+          const isActive = btn.getAttribute('data-pack-file') === file;
+          btn.classList.toggle('active', isActive);
+          if (isActive) {
+            const group = btn.closest('.pack-nav-group');
+            if (group) group.classList.remove('collapsed');
+          }
+        });
+      }
+
+      function initNavCollapsibles() {
+        const mobile = window.innerWidth <= 1020;
+        navList.querySelectorAll('.pack-nav-group').forEach(function (group) {
+          const toggle = group.querySelector('.pack-nav-group-toggle');
+          if (!toggle) return;
+          const shouldCollapse = mobile ? false : false;
+          group.classList.toggle('collapsed', shouldCollapse);
+          toggle.setAttribute('aria-expanded', String(!shouldCollapse));
+          toggle.onclick = function () {
+            const collapsed = group.classList.toggle('collapsed');
+            toggle.setAttribute('aria-expanded', String(!collapsed));
+          };
         });
       }
 
@@ -237,9 +263,10 @@
           reader.textContent = 'No article content is currently configured.';
           return;
         }
-        navList.innerHTML = articles.map(function (item) {
+        const buttons = articles.map(function (item) {
           return '<button type=\"button\" class=\"pack-nav-btn\" data-pack-file=\"' + esc(item.file) + '\">' + esc(item.title || item.file) + '</button>';
         }).join('');
+        navList.innerHTML = '<section class="pack-nav-group"><button type="button" class="pack-nav-group-toggle" aria-expanded="true"><span class="pack-nav-group-title">Articles</span></button><div class="pack-nav-group-items">' + buttons + '</div></section>';
         navList.querySelectorAll('[data-pack-file]').forEach(function (btn) {
           btn.addEventListener('click', function () {
             const file = btn.getAttribute('data-pack-file');
@@ -247,6 +274,7 @@
             loadArticle(file);
           });
         });
+        initNavCollapsibles();
       }
 
       async function init() {

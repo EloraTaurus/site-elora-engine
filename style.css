@@ -501,6 +501,28 @@ a { color: #8fd6ff; text-decoration: none; }
   color: #1c3558;
 }
 
+.surface-light .btn {
+  background: #1e4d7f;
+  border-color: #2b5e94;
+  color: #f3f8ff;
+}
+
+.surface-light .btn:hover {
+  background: #255b95;
+  border-color: #3c78ba;
+}
+
+.surface-light .btn.alt {
+  background: #ffffff;
+  border-color: #aac6e6;
+  color: #153a62;
+}
+
+.surface-light .btn.alt:hover {
+  background: #edf5ff;
+  border-color: #7eaddd;
+}
+
 .surface-light .list { color: #213b62; }
 
 .trust-head {
@@ -819,12 +841,50 @@ a { color: #8fd6ff; text-decoration: none; }
   gap: 8px;
 }
 
+.pack-nav-group.collapsed .pack-nav-group-items {
+  display: none;
+}
+
 .pack-nav-group-title {
   margin: 0;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #5f7ca0;
+}
+
+.pack-nav-group-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  border: 1px solid #cfdced;
+  border-radius: 10px;
+  background: #f7fbff;
+  color: #183961;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.pack-nav-group-toggle:hover {
+  border-color: #98bde5;
+  background: #edf5ff;
+}
+
+.pack-nav-group-toggle::after {
+  content: "▾";
+  font-size: 12px;
+  color: #3f648a;
+}
+
+.pack-nav-group.collapsed .pack-nav-group-toggle::after {
+  content: "▸";
 }
 
 .pack-nav-group-items {
