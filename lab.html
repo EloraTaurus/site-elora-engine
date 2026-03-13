@@ -66,6 +66,26 @@
       margin: 18px 0 10px;
       font-size: 20px;
     }
+    .audit-steps {
+      margin-top: 8px;
+      display: grid;
+      gap: 8px;
+      max-height: 220px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+    .audit-item {
+      border: 1px solid rgba(109, 173, 255, 0.28);
+      background: rgba(16, 35, 63, 0.62);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+    .steps {
+      margin: 6px 0 0;
+      color: #b7cbe3;
+      font-size: 13px;
+      line-height: 1.4;
+    }
     .tests {
       display: grid;
       gap: 8px;
@@ -137,6 +157,19 @@
         <div class="test"><div>Loading public feed...</div><span class="pill warn">PENDING</span></div>
       </section>
 
+      <h2 class="lab-section-title">Autoscale Test Surface</h2>
+      <section class="lab-meta">
+        <div class="stat"><div class="k">Live Workers</div><div class="v" id="asLive">-</div></div>
+        <div class="stat"><div class="k">Desired Workers</div><div class="v" id="asDesired">-</div></div>
+        <div class="stat"><div class="k">Queue / Running</div><div class="v" id="asLoad">-</div></div>
+        <div class="stat"><div class="k">Autoscale Test</div><div class="v" id="asStatus">-</div></div>
+      </section>
+
+      <h2 class="lab-section-title">Latest Jobs Audit Steps</h2>
+      <section class="audit-steps" id="auditSteps">
+        <div class="audit-item">Loading latest audit steps...</div>
+      </section>
+
       <div class="lab-actions">
         <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">View Governance Replay</a>
         <a class="btn alt" href="https://elorataurus.com">Elora Website</a>
@@ -154,6 +187,11 @@
       const terminatedTotal = document.getElementById("terminatedTotal");
       const avgConfidence = document.getElementById("avgConfidence");
       const tests = document.getElementById("tests");
+      const asLive = document.getElementById("asLive");
+      const asDesired = document.getElementById("asDesired");
+      const asLoad = document.getElementById("asLoad");
+      const asStatus = document.getElementById("asStatus");
+      const auditSteps = document.getElementById("auditSteps");
       const feedNote = document.getElementById("feedNote");
 
       function esc(v) {
@@ -172,6 +210,8 @@
       function render(payload) {
         const summary = payload && payload.summary ? payload.summary : {};
         const rows = Array.isArray(payload && payload.tests_results) ? payload.tests_results : [];
+        const autoscale = payload && payload.autoscale ? payload.autoscale : {};
+        const recentJobs = Array.isArray(payload && payload.recent_jobs) ? payload.recent_jobs : [];
         jobsTotal.textContent = String(summary.jobs_total ?? "-");
         blockedTotal.textContent = String(summary.jobs_blocked_commit ?? "-");
         terminatedTotal.textContent = String(summary.jobs_terminated ?? "-");
@@ -190,6 +230,41 @@
                   '<span>' + esc(item.detail || "No detail provided.") + '</span>' +
                 '</div>' +
                 '<span class="pill ' + safeStatus + '">' + esc(safeStatus.toUpperCase()) + '</span>' +
+              '</div>';
+          }).join("");
+        }
+
+        const live = Number(autoscale.live_workers || 0);
+        const desired = Number(autoscale.desired_workers || 0);
+        const queue = Number(autoscale.queue_depth || 0);
+        const running = Number(autoscale.running_now || 0);
+        asLive.textContent = Number.isFinite(live) ? String(live) : "-";
+        asDesired.textContent = Number.isFinite(desired) ? String(desired) : "-";
+        asLoad.textContent = Number.isFinite(queue) && Number.isFinite(running) ? (queue + " / " + running) : "-";
+        let status = "WARN";
+        if (autoscale.enabled === false) {
+          status = "OFF";
+        } else if (live >= desired && queue <= 1) {
+          status = "PASS";
+        }
+        asStatus.textContent = status;
+
+        if (!recentJobs.length) {
+          auditSteps.innerHTML = '<div class="audit-item">No recent jobs available.</div>';
+        } else {
+          auditSteps.innerHTML = recentJobs.slice(0, 8).map((job) => {
+            const statusText = String(job.status || "").toLowerCase();
+            const decision = String(job.decision || "");
+            const source = String(job.source_type || "unknown");
+            const stepOutcome = decision.startsWith("blocked_")
+              ? "Commit boundary denied"
+              : (statusText === "done" ? "Commit boundary approved" : "Evaluation pending");
+            return '' +
+              '<div class="audit-item">' +
+                '<strong>Job #' + esc(job.job_id || "?") + '</strong> · ' + esc(source) + '<br />' +
+                '<div class="steps">' +
+                  'Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> ' + esc(stepOutcome) +
+                '</div>' +
               '</div>';
           }).join("");
         }
