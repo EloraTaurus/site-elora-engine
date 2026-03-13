@@ -80,6 +80,9 @@
       border-radius: 12px;
       padding: 10px 12px;
     }
+    .audit-item.pass { border-color: rgba(34, 197, 94, 0.6); background: rgba(22, 101, 52, 0.18); }
+    .audit-item.warn { border-color: rgba(245, 158, 11, 0.65); background: rgba(133, 77, 14, 0.18); }
+    .audit-item.fail { border-color: rgba(239, 68, 68, 0.68); background: rgba(127, 29, 29, 0.2); }
     .steps {
       margin: 6px 0 0;
       color: #b7cbe3;
@@ -146,7 +149,7 @@
       <p class="lab-sub">The Lab publishes real governance tests performed against the Elora Engine.</p>
 
       <section class="lab-meta">
-        <div class="stat"><div class="k">Jobs (24h)</div><div class="v" id="jobsTotal">-</div></div>
+        <div class="stat"><div class="k">Jobs (30d)</div><div class="v" id="jobsTotal">-</div></div>
         <div class="stat"><div class="k">Blocked Commits</div><div class="v" id="blockedTotal">-</div></div>
         <div class="stat"><div class="k">Terminated</div><div class="v" id="terminatedTotal">-</div></div>
         <div class="stat"><div class="k">Avg Confidence</div><div class="v" id="avgConfidence">-</div></div>
@@ -249,22 +252,37 @@
         }
         asStatus.textContent = status;
 
+        function humanReason(job) {
+          const decision = String(job.decision || "").toLowerCase();
+          if (decision === "blocked_commit_validation") return "Commit blocked by policy validation.";
+          if (decision === "blocked_guardrail") return "Blocked by guardrail policy.";
+          if (decision === "blocked_baseline_guardrail") return "Blocked by baseline guardrails.";
+          if (decision === "blocked_injection") return "Blocked due to suspected prompt injection.";
+          if (decision.startsWith("blocked_")) return "Blocked by governance controls.";
+          const status = String(job.status || "").toLowerCase();
+          if (status === "terminated") return "Terminated during governance evaluation.";
+          if (status === "done") return "Completed with commit authorization.";
+          if (status === "running" || status === "queued") return "Still in runtime evaluation.";
+          return "Outcome captured in governance timeline.";
+        }
+
         if (!recentJobs.length) {
           auditSteps.innerHTML = '<div class="audit-item">No recent jobs available.</div>';
         } else {
           auditSteps.innerHTML = recentJobs.slice(0, 8).map((job) => {
             const statusText = String(job.status || "").toLowerCase();
             const decision = String(job.decision || "");
+            const cls = decision.startsWith("blocked_") || statusText === "terminated" ? "fail" : (statusText === "done" ? "pass" : "warn");
             const source = String(job.source_type || "unknown");
             const stepOutcome = decision.startsWith("blocked_")
               ? "Commit boundary denied"
               : (statusText === "done" ? "Commit boundary approved" : "Evaluation pending");
             return '' +
-              '<div class="audit-item">' +
+              '<div class="audit-item ' + esc(cls) + '">' +
                 '<strong>Job #' + esc(job.job_id || "?") + '</strong> · ' + esc(source) + '<br />' +
                 '<div class="steps">' +
                   'Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> ' + esc(stepOutcome) +
-                '</div>' +
+                '</div><div class="steps"><strong>Reason:</strong> ' + esc(humanReason(job)) + '</div>' +
               '</div>';
           }).join("");
         }

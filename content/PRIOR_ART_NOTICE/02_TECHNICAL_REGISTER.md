@@ -62,6 +62,22 @@ Ingress
 - Proof type: Governance architecture and API/runtime flow
 - Evidence summary: Governance direction transitioned toward distributed responsibilities across Fabric and WorkerHost-aligned surfaces.
 
+### Capacity-Aware Worker Assignment and Autoscale Governance Safety
+
+- Date: `2026-03-13`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Commit fingerprint: `6c31560`
+- Proof type: Runtime scheduling controls and determinism boundary preservation
+- Evidence summary: Worker capacity check path formalized (`assign -> spawn -> queue`) with resource-aware guardrails and queue timeout behavior, while keeping commit admissibility deterministic and snapshot-driven.
+
+### Tape-Oriented Runtime Identity and Governance Mapping
+
+- Date: `2026-03-13`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Commit fingerprint: `6c31560`
+- Proof type: Runtime modularity and policy binding model
+- Evidence summary: Tape-centered runtime identity expanded as first-class execution context, with governance mapping direction moving from worker-type coupling toward Tape-bound policy semantics.
+
 ### Governance Incident Topology Mapping
 
 - Milestone date: `2026-03-03`

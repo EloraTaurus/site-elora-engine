@@ -15,9 +15,11 @@ This index points to source documentation used to map public-safe technical disc
 - `engine/docs/OPERATORS/README.md`
 - `engine/docs/OPERATORS/INFERENCE_COMMIT_GOVERNANCE.md`
 - `engine/docs/OPERATORS/JOBS_AUDIT_AND_REPLAY.md`
+- `engine/docs/OPERATORS/FABRIC_AUTOSCALE_AND_TAPES.md`
 - `engine/docs/OPERATORS/KNOWLEDGE_MEMORY_WORKBOOKS.md`
 - `engine/docs/OPERATORS/PIPELINES_AND_RUNTIME.md`
 - `engine/docs/OPERATORS/SECURITY_AND_ACCESS_CONTROL.md`
+- `engine/docs/WHITEPAPER_NOTES.md`
 
 ## Fabric Documentation Sources
 

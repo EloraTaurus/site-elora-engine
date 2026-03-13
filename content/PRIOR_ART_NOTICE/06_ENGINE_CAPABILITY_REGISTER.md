@@ -91,6 +91,13 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Infrastructure orchestration
 - Evidence summary: Fabric setup gating, provisioner integration, VM vs container routing separation, and provisioning diagnostics.
 
+### Fabric Autoscale Deployment Surface
+
+- Date: `2026-03-13`
+- Evidence class: Distributed worker capacity control and operator deployment controls
+- Code anchors: `engine/core/fabric/autoscale.py`, `engine/admin/fabric/autoscale.py`, `engine/admin/lab/autoscale.py`
+- Evidence summary: Autoscale reconcile/simulation controls, current worker-pool visibility, and heuristic capacity recommendation surface introduced across Lab and Fabric pages.
+
 ### WorkerHost as Execution Surface
 
 - Date window: `2026-02-14` onward (with hardening on `2026-02-19`)
@@ -104,6 +111,13 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: External VM lifecycle integration
 - Code anchors: `engine/core/fabric/provisioner_client.py`, `fabric/provisioner/README.md`
 - Evidence summary: Provisioner URL/token/timeout resolution, token-gated worker provision/destroy calls, and controlled lifecycle orchestration.
+
+### Tape Runtime Modularization Milestone
+
+- Date: `2026-03-13`
+- Evidence class: Agent-runtime modularity and capability packaging
+- Code anchors: `engine/tapes/runtime.py`, `engine/tapes/resolver.py`, `engine/admin/runtime/tapes.py`, `tapes/*.json`
+- Evidence summary: Tape Library and file-backed tape registration expanded to support packaged runtime capabilities, with governance/replay capture aligned to tape identity and runtime bindings.
 
 ## Operator Experience and Operational Surfaces
 

@@ -2,6 +2,58 @@
 
 ## ------------- 0.17 --------------
 
+## 2026-03-13
+### Runtime Architecture
+  - Start Tape-runtime refactor groundwork by adding Fabric Tape registry primitives (`fabric_tapes` table with seeded `gpt_rag_tape` plus list/get/upsert helpers).
+  - Add worker tape assignment primitives (`assign_worker_tape`) and expose loaded tape fields on worker payloads (`loaded_tape_id`, `loaded_tape_version`, behavior/memory/knowledge bindings).
+  - Add `Tape Library` admin surface (`/admin/tapes`) with tape create/update, worker tape assignment, and installed tape inventory table.
+  - Add `GET /admin/api/tapes` for admin-side tape listing.
+  - Add `AI Runtime -> Tapes` navigation and dashboard shortcut.
+  - Switch Tape Library to file-backed registration flow: tape definitions are dropped as JSON manifests and then registered (UI creation disabled).
+  - Add tape catalog discovery from `RAG_TAPE_CATALOG_DIR` (default `/opt/elora/tapes`) with deterministic tape-hash registration.
+  - Introduce root-path migration toward `/opt/elora` defaults via `RAG_ROOT_DIR` (with legacy `/opt/rag` auto-fallback when present) to decouple runtime paths from RAG-specific naming.
+  - Update compose mounts/env defaults to `/opt/elora/*` while keeping legacy installs functional through explicit env overrides or fallback detection.
+### Worker Identity / Registration
+  - Extend `/workers/register` flow to accept tape context (`tape_id`, `tape_version`, `behavior_profile_id`, `memory_source`, `knowledge_source`) and persist it on successful registration.
+  - Enforce worker registration guard: workers now require a loaded tape before registration is accepted.
+  - Add default tape bootstrap metadata to newly requested workers (`gpt_rag_tape`, behavior/default pools) to keep current provisioning flow operable while tape assignment is formalized.
+### Governance Replay Evidence
+  - Extend source/commit capture to include tape identity and runtime bindings from ingress headers:
+    - `X-Elora-Tape-Id`, `X-Elora-Tape-Version`, `X-Elora-Behavior-Profile-Id`, `X-Elora-Memory-Source`, `X-Elora-Knowledge-Source`.
+  - Include tape metadata in `commit_input_v1` (`tape` block, `signals`, and `context`) for governance replay/admissibility lineage.
+  - Add deterministic `tape_loaded` commit check and `require_tape_loaded` decision-class flag wiring.
+  - Add registered-worker tape fallback during commit capture so replay evidence resolves tape bindings from worker registry when headers are absent.
+### Governance Policy
+  - Switch policy override mapping from worker-type-centric to tape-centric (`governance_tape_policy_map_v1`) so governance constraints follow Tape identity rather than ephemeral worker shells.
+  - Update Governance Policy UI to auto-list registered Tape IDs and save Tape policy mappings.
+  - Extend resolved-policy preview API to accept `tape_id` and evaluate merged policy in worker+tape context.
+### Autoscale / Worker Scheduling
+  - Add inference-capacity scheduling gate before worker assignment in async chat flows:
+    - `idle_worker_available` -> assign worker
+    - no idle worker + headroom available -> spawn `standard_worker`
+    - no capacity -> queue with wait loop and timeout
+  - Add queue-stage runtime events for inference capacity waiting (`inference.capacity.queued`) and worker-capacity checks (`worker.capacity.checked`).
+  - Add resource-aware spawn guardrails (CPU load/core, memory available, disk free, CPU token cap) to avoid uncontrolled worker spin-up on constrained hosts.
+  - Add optional on-demand spawn controls via new config keys:
+    - `RAG_INFER_CAPACITY_MAX_QUEUE_WAIT_SECONDS`
+    - `RAG_INFER_CAPACITY_CHECK_INTERVAL_MS`
+    - `RAG_INFER_CPU_MAX_LOAD_PER_CORE`
+    - `RAG_INFER_MIN_MEM_AVAILABLE_MB`
+    - `RAG_INFER_MIN_DISK_FREE_MB`
+    - `RAG_INFER_CPU_MAX_OUTPUT_TOKENS`
+    - `RAG_INFER_SPAWN_ON_DEMAND`
+### Fabric / Lab
+  - Expand Autoscale Lab with:
+    - current worker pool table
+    - capability tag visibility
+    - simulated influx runner (`job_count`) to test scale-up behavior
+    - heuristic min/max recommendation snapshot (CPU/memory/GPU-aware baseline)
+  - Add Fabric Autoscale deployment page (`/admin/fabric/autoscale`) with autoscale controls and worker-pool visibility.
+  - Add reusable autoscale simulation API path through existing admin POST handlers (`/admin/lab/autoscale/simulate`) and target-aware redirects for Fabric/Lab entrypoints.
+### Docs
+  - Add `engine/docs/OPERATORS/FABRIC_AUTOSCALE_AND_TAPES.md` (autoscale + worker/tape operating model).
+  - Add `engine/docs/WHITEPAPER_NOTES.md` (control-plane layers and canonical proposal->commit pipeline notes).
+
 ## 2026-03-08
 ### Public API
   - Add public Lab status feed endpoints: `GET /public/lab-status` and `GET /public/lab-status.json` for website-facing validation dashboards.
