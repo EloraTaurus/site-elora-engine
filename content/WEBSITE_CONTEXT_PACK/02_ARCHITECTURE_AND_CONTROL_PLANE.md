@@ -31,3 +31,11 @@ This architecture is built for defensibility:
 
 Current production path is still single-VM oriented in many environments.
 The architecture and roadmap are intentionally being shaped for multi-host separation next.
+
+## Tape Runtime Layer
+
+Elora is adding a tape-runtime layer so capability identity is explicit:
+- workers act as generic runtime shells,
+- tapes define capability contract and runtime behavior bindings,
+- engine control plane authorizes tape load upstream,
+- commit/replay capture tape identity for admissibility traceability.

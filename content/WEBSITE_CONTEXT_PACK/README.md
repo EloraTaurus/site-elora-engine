@@ -20,14 +20,16 @@ Recommended website order:
 8. `11_GOVERNANCE_PIPELINE.md`
 9. `12_ARCHITECTURAL_INFLUENCES_AND_COMMUNITY_DIALOGUE.md`
 10. `04_FABRIC_AND_DISTRIBUTED_DIRECTION.md`
-11. `05_ROADMAP_AND_MATURITY.md`
-12. `08_PARTNER_POSITIONING.md`
+11. `07_TAPE_RUNTIME_ARCHITECTURE.md`
+12. `05_ROADMAP_AND_MATURITY.md`
+13. `08_PARTNER_POSITIONING.md`
 
 Reasoning for this order:
 - open with positioning and origin for context,
 - move into current capabilities and control-plane model,
 - then governance/security evidence strength, pipeline flow, and community dialogue framing,
 - then distributed direction and roadmap,
+- include tape-runtime modular capability architecture,
 - finish with partner positioning context.
 
 Notes:
