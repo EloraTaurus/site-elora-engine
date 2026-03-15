@@ -2,6 +2,74 @@
 
 ## ------------- 0.17 --------------
 
+## 2026-03-15
+### Governance / Tape Provenance Hardening
+  - Extend commit capture to include `tape_hash` across source context, normalized job source metadata, and `commit_input_v1` (`tape`, `signals`, `context`).
+  - Add deterministic `tape_hash_admissibility` check in commit evaluator with explicit violations:
+    - `tape_hash_not_captured`
+    - `tape_hash_mismatch`
+  - Add replay metadata flag `tape_snapshot_present` so replay surfaces can distinguish tape identity completeness from generic trace completeness.
+  - Enhance replay-event immutability enforcement at storage layer with SQLite trigger `trg_job_replay_events_no_update`; replay events were already append-only by flow design, and this adds DB-level protection against accidental/unauthorized updates.
+  - Add commit-phase worker registration re-check after assignment (`worker.registration.checked` with `phase=commit`) to handle late worker registration state transitions safely.
+  - Extend commit signals with `worker_registered_at_assignment`, `worker_registered_at_commit`, and `worker_registration_drift`.
+  - Add deterministic `worker_registration_drift` commit check; drift is tolerated only when commit-time registration is valid, and denied when registration regresses before commit.
+### Admin Security Hardening
+  - Protect `session_secret_v1` at rest by routing admin session secret storage through encrypted meta handling.
+  - Replace transient DB-error fallback behavior for session key material with filesystem-backed stable fallback (`admin_session_secret.v1`) to reduce cross-process/session-validation drift.
+  - Add per-user session invalidation (`session_version`) and enforce it in session tokens; password/OTP security changes now revoke existing sessions for that user.
+  - Sanitize bootstrap endpoint host derivation (`Host` / `X-Forwarded-Host`) and continue enforcing trusted-proxy semantics via `ADMIN_TRUST_PROXY_HEADERS`.
+### Fabric / Autoscale Stability
+  - Make autoscale action feed retrieval non-blocking to remove 20s page stalls when no recent autoscale events are present.
+  - Promote workers to `active` on successful registration (while retaining `worker.registered` event) so capacity assignment can reuse newly registered workers immediately.
+### Admin / Replay
+  - Surface tape-admissibility integrity on Replay Review: `tape snapshot` and `tape hash admissible` in integrity strip, focus summary, and export/print reports.
+  - Extend Replay API metadata with tape fields (`tape_id`, `tape_hash`, `tape_snapshot_present`, `tape_hash_admissible`) derived from commit artifacts/checks.
+  - Add Replay V2 timeline stats for tape completeness (`Tape snapshot`, `Tape hash admissible`) and support both `{ replay: ... }` and direct replay payload shapes.
+### Admin / Policy UX
+  - Add `Admissibility Quickstart` panel to Policy & Enforcement with two operator presets:
+    - `Internal Admin (balanced)`
+    - `External Worker (strict)`
+  - Add live admissibility checklist to reduce misconfiguration risk before saving/running live tests.
+### Tape Capability Contracts (Advisory vs Mutating)
+  - Extend Tape manifests/registry schema with execution-contract fields:
+    - `operation_mode` (`advisory` or `mutating`)
+    - `requires_gpu`
+    - `requires_human_signoff`
+    - `requires_backup`
+    - `requires_rollback_plan`
+    - `requires_execution_grant`
+  - Add policy-controlled mutation enforcement (`mutation_policy`) into commit snapshots and resolved-policy preview:
+    - toggle enforcement
+    - required safeguards (signoff, backup, rollback, execution grant, GPU lease)
+    - missing-control action (`block_commit`/`audit`/`terminate`)
+  - Add deterministic `tape_operation_controls` commit check with explicit violations (e.g. `human_signoff_missing`, `backup_artifact_missing`, `execution_grant_missing`, `gpu_lease_missing`).
+  - Extend source/commit evidence capture with resource-control hints (`resource_profile`, `execution_grant_id`, `gpu_lease_id`, `human_signoff_id`, `backup_artifact_id`, `rollback_plan_id`) for admissibility replay.
+### Human Signoff Workflow
+  - Add `job_approval_requests` queue with expiring approve/reject action tokens for mutating tapes that fail on `human_signoff_missing`.
+  - Add `Human Approval Queue` governance page (`/admin/governance/approvals`) with pending and recent request actions.
+  - Add approval action link endpoint (`/admin/approval/action`) for no-login email approvals/rejections with expiry enforcement and explicit expired-link messaging.
+  - Add approval notification email flow with decision context and one-click approve/reject links.
+  - Add sidebar notification badge backed by `/admin/api/governance/approvals/pending-count`.
+  - Extend settings alerts panel with approval controls:
+    - `approval_recipients`
+    - `approval_public_base_url`
+    - `approval_link_ttl_seconds`
+  - Add approval delivery diagnostics and fail-closed signaling when signoff cannot be delivered (`human_loop_delivery_unavailable`).
+  - Add replay event `approval.delivery_failed` with missing email config fields and delivery error context.
+### Lab / Dry-Run Harnesses
+  - Add `Tape Runtime Harness` (`/admin/lab/tape-runtime-harness`) with repeatable scenarios for:
+    - tape hash admissibility
+    - worker registration drift
+    - mutating-tape control prerequisites (signoff/backup/rollback/grant/GPU lease)
+  - Add `Approval Lifecycle Harness` (`/admin/lab/approval-harness`) to seed synthetic signoff requests and validate approve/reject/expired token paths.
+  - Extend Approval Harness with delivery checks and a live email path test; when delivery is not possible it surfaces missing fields and policy violation context.
+  - Extend Governance Policy dry-run payload handling to model tape-runtime controls and hints:
+    - `tape_operation_mode`, `tape_requires_*`, `*_present`
+    - `worker_registered_at_assignment`, `worker_registered_at_commit`, `worker_registration_drift`
+    - `recommended_cpu`, `recommended_memory_mb`, `max_tokens_hint`, `resource_profile`
+### Tape Templates
+  - Add starter tape manifest template at `engine/tapes/templates/dummy_tape_manifest.json` with resource hints and governance control fields.
+
 ## 2026-03-13
 ### Runtime Architecture
   - Start Tape-runtime refactor groundwork by adding Fabric Tape registry primitives (`fabric_tapes` table with seeded `gpt_rag_tape` plus list/get/upsert helpers).
