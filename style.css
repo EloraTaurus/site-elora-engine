@@ -373,6 +373,47 @@ a { color: #8fd6ff; text-decoration: none; }
   box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
 }
 
+.hero-capabilities {
+  margin-top: 16px;
+  border: 1px solid #2f567f;
+  border-radius: 12px;
+  background: rgba(13, 32, 54, 0.72);
+  padding: 12px;
+}
+
+.hero-capabilities-head {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9bc6eb;
+  font-weight: 700;
+}
+
+.hero-capabilities .chip {
+  background: #122b48;
+  border-color: #36608c;
+  color: #dce9f8;
+}
+
+.capability-groups {
+  display: grid;
+  gap: 10px;
+}
+
+.capability-group {
+  display: grid;
+  gap: 6px;
+}
+
+.capability-group-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9cc8ee;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .hero-guide-standalone {
   display: flex;
   align-items: flex-end;
