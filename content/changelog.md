@@ -1,5 +1,10 @@
 # Site / Demo Changelog
 
+## 2026-03-19
+- Added latest Engine changelog sync for Fabric/WorkerHost operations under `0.17`.
+- Updated website context pack docs to reflect WorkerHost bootstrap builder, GPU host policy controls, and runtime distribution (`Sync now` / `Update runtime`) direction.
+- Updated public WorkerHost documentation copy with runtime update path and inference-node detection notes.
+
 ## 2026-03-09
 - Formally released `Technical Disclosure and Prior Art (v1)` as a public defensive publication surface.
 

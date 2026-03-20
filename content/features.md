@@ -45,6 +45,8 @@ Started as a solo build in late January 2026, Elora has evolved into a governanc
 - Deeper policy traceability (`rule_id`, version, reason, severity outputs).
 - Faster operator-speed governance review/report workflows.
 - Expanded worker fabric and distributed execution walkthroughs.
+- WorkerHost bootstrap builder and host lifecycle operations (`sync`, runtime update, token recycle/remove) for distributed node management.
+- GPU-aware host telemetry and inference-node/model reporting for compute-aware routing.
 
 ## Scope and Claims Guidance
 

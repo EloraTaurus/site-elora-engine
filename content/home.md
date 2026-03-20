@@ -55,7 +55,7 @@ Stage-level replay events can be selected to reveal structured JSON evidence inl
 Fabric inspection tour
 
 ### feature_3_body
-Worker inventory, quotas, and allocation surfaces are planned for a future guided path.
+WorkerHost inventory, host policy, and allocation surfaces are now active; guided walkthrough expansion is in progress.
 
 ### feature_4_title
 Security posture surfaces
@@ -67,7 +67,7 @@ Public-safe posture reporting is planned as a dedicated tour once representative
 Pipeline and runtime controls
 
 ### feature_5_body
-Pipeline and runtime governance surfaces are in development for later replay-linked walkthroughs.
+Pipeline and runtime governance surfaces are expanding, including host runtime distribution and GPU-aware host operations.
 
 ### feature_6_title
 Additional guided scenarios

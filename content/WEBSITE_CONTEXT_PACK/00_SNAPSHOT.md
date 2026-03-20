@@ -1,6 +1,6 @@
 # Snapshot
 
-Last updated: 2026-03-07
+Last updated: 2026-03-19
 
 First implemented (from changelog): 2026-02-28
 
@@ -24,12 +24,15 @@ This snapshot is the quickest way to understand Elora's current posture.
 - Admissibility completeness hardening and stricter authority coverage.
 - Canonical evidence bundles and deeper rule-level policy trace detail.
 - Expanded fabric/distributed control-plane workflows and tours.
+- WorkerHost runtime distribution and runtime-hash consistency checks across hosts.
+- GPU-aware host operations with inference-node/model visibility in Fabric.
 
 ## Implementation Timeline (Selected)
 
 - Late January 2026: Elora Taurus project build begins.
 - Q1 2026: proposal-to-commit governance boundary, replay surfaces, and audit-first operator workflows implemented (active hardening continues).
 - March 2026: public Architecture context, Governance Pipeline documentation, and guided replay demo published on website.
+- March 2026 (mid): WorkerHost bootstrap builder + runtime update flow added for distributed host operations.
 
 ## Scope Note
 

@@ -24,6 +24,7 @@ WorkerHost handles:
 2. terminate container workers
 3. inspect worker runtime state
 4. host health reporting
+5. authenticated runtime update pull/apply
 
 WorkerHost does not:
 
@@ -49,8 +50,11 @@ Configure WorkerHost with:
 3. unique host identity
 4. host type/capabilities metadata
 5. heartbeat and inventory intervals
+6. optional inference-node detection endpoints (Ollama/vLLM)
 
 When configured, WorkerHost posts registration, heartbeat, and inventory updates to engine callback surfaces, enabling breakout-zone style host + container inventory.
+
+WorkerHost also supports a control-plane runtime update path where Engine can provide a hashed runtime bundle and the host can apply/restart through authenticated host actions.
 
 ## WordPress chat worker (migration bridge)
 
