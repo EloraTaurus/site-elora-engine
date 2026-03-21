@@ -364,6 +364,9 @@
         <div class="stat"><div class="k">Avg Confidence</div><div class="v" id="avgConfidence">-</div></div>
         <div class="stat"><div class="k">Decision Integrity Score</div><div class="v" id="decisionIntegrity">-</div></div>
         <div class="stat"><div class="k">Token Churn (24h)</div><div class="v" id="tokenChurn">-</div></div>
+        <div class="stat"><div class="k">State Drift Blocks</div><div class="v" id="driftBlocked">-</div></div>
+        <div class="stat"><div class="k">Unauthorized Requests Blocked</div><div class="v" id="unauthorizedBlocked">-</div></div>
+        <div class="stat"><div class="k">File Mutations Stopped</div><div class="v" id="mutationStopped">-</div></div>
       </section>
       <section class="integrity-grid">
         <div class="integrity-item"><div class="k">Admissibility completeness</div><div class="v" id="integrityAdmissibility">-</div></div>
@@ -428,6 +431,9 @@
       const avgConfidence = document.getElementById("avgConfidence");
       const decisionIntegrity = document.getElementById("decisionIntegrity");
       const tokenChurn = document.getElementById("tokenChurn");
+      const driftBlocked = document.getElementById("driftBlocked");
+      const unauthorizedBlocked = document.getElementById("unauthorizedBlocked");
+      const mutationStopped = document.getElementById("mutationStopped");
       const integrityAdmissibility = document.getElementById("integrityAdmissibility");
       const integritySnapshot = document.getElementById("integritySnapshot");
       const integrityReplay = document.getElementById("integrityReplay");
@@ -475,6 +481,36 @@
         if (status === "done") return "Completed with commit authorization.";
         if (status === "running" || status === "queued") return "Still in runtime evaluation.";
         return "Outcome captured in governance timeline.";
+      }
+
+      function num(v) {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : 0;
+      }
+
+      function deriveSignalCounts(job) {
+        const metrics = job && job.metrics && typeof job.metrics === "object" ? job.metrics : {};
+        const blockedReason = String(metrics.blocked_reason || job.reason || "").toLowerCase();
+        const driftHits = num(metrics.drift_hits);
+        const unauthorizedHits = num(metrics.unauthorized_hits);
+        const commitAttackHits = num(metrics.commit_attack_hits);
+        const driftCount = driftHits > 0 ? driftHits : (blockedReason.includes("drift") ? 1 : 0);
+        const unauthorizedCount = unauthorizedHits > 0 ? unauthorizedHits : (blockedReason.includes("unauthor") ? 1 : 0);
+        const mutationCount = commitAttackHits > 0 ? commitAttackHits : ((blockedReason.includes("file_mutation") || blockedReason.includes("mutation")) ? 1 : 0);
+        return {
+          drift: driftCount,
+          unauthorized: unauthorizedCount,
+          mutation: mutationCount
+        };
+      }
+
+      function deriveSignalLabels(job) {
+        const c = deriveSignalCounts(job);
+        const labels = [];
+        if (c.drift > 0) labels.push("state drift blocked");
+        if (c.unauthorized > 0) labels.push("unauthorized request blocked");
+        if (c.mutation > 0) labels.push("unauthorized file mutation stopped");
+        return labels;
       }
 
       function renderReplayReport(job) {
@@ -562,6 +598,18 @@
         avgConfidence.textContent = summary.avg_confidence == null ? "-" : Number(summary.avg_confidence).toFixed(2);
         decisionIntegrity.textContent = summary.decision_integrity_score == null ? "-" : (Number(summary.decision_integrity_score).toFixed(1) + "%");
         tokenChurn.textContent = summary.token_churn_24h == null ? "-" : String(summary.token_churn_24h);
+        let driftTotalN = 0;
+        let unauthorizedTotalN = 0;
+        let mutationTotalN = 0;
+        recentJobs.forEach(function (job) {
+          const c = deriveSignalCounts(job || {});
+          driftTotalN += c.drift;
+          unauthorizedTotalN += c.unauthorized;
+          mutationTotalN += c.mutation;
+        });
+        driftBlocked.textContent = String(driftTotalN);
+        unauthorizedBlocked.textContent = String(unauthorizedTotalN);
+        mutationStopped.textContent = String(mutationTotalN);
         const comps = summary.integrity_components || {};
         integrityAdmissibility.textContent = comps.admissibility_completeness == null ? "-" : (Number(comps.admissibility_completeness).toFixed(1) + "%");
         integritySnapshot.textContent = comps.snapshot_capture == null ? "-" : (Number(comps.snapshot_capture).toFixed(1) + "%");
@@ -609,6 +657,8 @@
             const source = String(job.source_type || "unknown");
             const admissibilityMissing = Array.isArray(job.admissibility_missing) ? job.admissibility_missing : [];
             const missingText = admissibilityMissing.length ? admissibilityMissing.join(", ") : "none";
+            const signalLabels = deriveSignalLabels(job);
+            const signalText = signalLabels.length ? signalLabels.join(" · ") : "none";
             const stepOutcome = decision.startsWith("blocked_")
               ? "Commit boundary denied"
               : (statusText === "done" ? "Commit boundary approved" : "Evaluation pending");
@@ -619,6 +669,7 @@
                 '<div class="steps">' +
                   'Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> ' + esc(stepOutcome) +
                 '</div><div class="steps"><strong>Reason:</strong> ' + esc(humanReason(job)) + '</div>' +
+                '<div class="steps"><strong>Block signals:</strong> ' + esc(signalText) + '</div>' +
                 '<div class="steps"><strong>Admissibility missing:</strong> ' + esc(missingText) + '</div>' +
                 '<div class="audit-actions"><button class="mini-btn" type="button" data-report-index="' + esc(String(index)) + '">View replay report</button></div>' +
               '</div>';
