@@ -379,6 +379,14 @@
         <div class="test"><div>Loading public feed...</div><span class="pill warn">PENDING</span></div>
       </section>
 
+      <h2 class="lab-section-title">Blocked Signal Totals</h2>
+      <section class="lab-meta">
+        <div class="stat"><div class="k">State Drift Blocks (feed)</div><div class="v" id="driftBlockedTotal">-</div></div>
+        <div class="stat"><div class="k">Unauthorized Requests Blocked (feed)</div><div class="v" id="unauthorizedBlockedTotal">-</div></div>
+        <div class="stat"><div class="k">File Mutations Stopped (feed)</div><div class="v" id="mutationStoppedTotal">-</div></div>
+        <div class="stat"><div class="k">Commit Attack Hits (feed)</div><div class="v" id="commitAttackTotal">-</div></div>
+      </section>
+
       <h2 class="lab-section-title">Autoscale Test Surface</h2>
       <section class="lab-meta">
         <div class="stat"><div class="k">Live Workers</div><div class="v" id="asLive">-</div></div>
@@ -434,6 +442,10 @@
       const driftBlocked = document.getElementById("driftBlocked");
       const unauthorizedBlocked = document.getElementById("unauthorizedBlocked");
       const mutationStopped = document.getElementById("mutationStopped");
+      const driftBlockedTotal = document.getElementById("driftBlockedTotal");
+      const unauthorizedBlockedTotal = document.getElementById("unauthorizedBlockedTotal");
+      const mutationStoppedTotal = document.getElementById("mutationStoppedTotal");
+      const commitAttackTotal = document.getElementById("commitAttackTotal");
       const integrityAdmissibility = document.getElementById("integrityAdmissibility");
       const integritySnapshot = document.getElementById("integritySnapshot");
       const integrityReplay = document.getElementById("integrityReplay");
@@ -500,7 +512,8 @@
         return {
           drift: driftCount,
           unauthorized: unauthorizedCount,
-          mutation: mutationCount
+          mutation: mutationCount,
+          commitAttack: commitAttackHits
         };
       }
 
@@ -601,15 +614,21 @@
         let driftTotalN = 0;
         let unauthorizedTotalN = 0;
         let mutationTotalN = 0;
+        let commitAttackTotalN = 0;
         recentJobs.forEach(function (job) {
           const c = deriveSignalCounts(job || {});
           driftTotalN += c.drift;
           unauthorizedTotalN += c.unauthorized;
           mutationTotalN += c.mutation;
+          commitAttackTotalN += c.commitAttack;
         });
         driftBlocked.textContent = String(driftTotalN);
         unauthorizedBlocked.textContent = String(unauthorizedTotalN);
         mutationStopped.textContent = String(mutationTotalN);
+        driftBlockedTotal.textContent = String(driftTotalN);
+        unauthorizedBlockedTotal.textContent = String(unauthorizedTotalN);
+        mutationStoppedTotal.textContent = String(mutationTotalN);
+        commitAttackTotal.textContent = String(commitAttackTotalN);
         const comps = summary.integrity_components || {};
         integrityAdmissibility.textContent = comps.admissibility_completeness == null ? "-" : (Number(comps.admissibility_completeness).toFixed(1) + "%");
         integritySnapshot.textContent = comps.snapshot_capture == null ? "-" : (Number(comps.snapshot_capture).toFixed(1) + "%");
