@@ -392,6 +392,7 @@
         <div class="stat"><div class="k">Terminated</div><div class="v" id="terminatedTotal">-</div></div>
         <div class="stat"><div class="k">Avg Confidence</div><div class="v" id="avgConfidence">-</div></div>
         <div class="stat"><div class="k">Decision Integrity Score</div><div class="v" id="decisionIntegrity">-</div></div>
+        <div class="stat"><div class="k">Defense Efficacy Score</div><div class="v" id="defenseScore">-</div></div>
         <div class="stat"><div class="k">Token Churn (24h)</div><div class="v" id="tokenChurn">-</div></div>
       </section>
       <section class="integrity-grid">
@@ -466,6 +467,7 @@
       const terminatedTotal = document.getElementById("terminatedTotal");
       const avgConfidence = document.getElementById("avgConfidence");
       const decisionIntegrity = document.getElementById("decisionIntegrity");
+      const defenseScore = document.getElementById("defenseScore");
       const tokenChurn = document.getElementById("tokenChurn");
       const integrityAdmissibility = document.getElementById("integrityAdmissibility");
       const integritySnapshot = document.getElementById("integritySnapshot");
@@ -642,6 +644,7 @@
         integritySnapshot.textContent = comps.snapshot_capture == null ? "-" : (Number(comps.snapshot_capture).toFixed(1) + "%");
         integrityReplay.textContent = comps.replay_coverage == null ? "-" : (Number(comps.replay_coverage).toFixed(1) + "%");
         const defense = summary.lab_defense || {};
+        defenseScore.textContent = defense.defense_score == null ? "-" : (Number(defense.defense_score).toFixed(1) + "%");
         stateDriftBlocks.textContent = String(defense.state_drift_blocks ?? 0);
         unauthorizedBlocked.textContent = String(defense.unauthorized_requests_blocked ?? 0);
         fileMutationsStopped.textContent = String(defense.file_mutations_stopped ?? 0);
