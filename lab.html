@@ -105,24 +105,6 @@
       font-size: 13px;
       line-height: 1.4;
     }
-    .report-box {
-      margin-top: 10px;
-      border: 1px solid #2d4f78;
-      border-radius: 12px;
-      background: rgba(9, 22, 44, 0.86);
-      padding: 12px;
-      display: none;
-    }
-    .report-box h3 {
-      margin: 0 0 8px 0;
-      color: #e8f1ff;
-      font-size: 16px;
-    }
-    .report-box .line {
-      font-size: 13px;
-      color: #c8d8ef;
-      margin: 4px 0;
-    }
     .report-modal-backdrop {
       position: fixed;
       inset: 0;
@@ -208,7 +190,8 @@
     .chip.execution { border-color: rgba(100, 116, 139, 0.75); color: #cbd5e1; }
     .tests {
       display: grid;
-      gap: 8px;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
     .test {
       border: 1px solid rgba(109, 173, 255, 0.28);
@@ -216,9 +199,9 @@
       border-radius: 12px;
       padding: 10px 12px;
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr;
       gap: 8px;
-      align-items: center;
+      align-items: start;
     }
     .pill {
       display: inline-flex;
@@ -264,6 +247,7 @@
       <h1 class="lab-title">Elora Lab</h1>
       <p class="lab-sub">Public Governance Testing Environment</p>
       <p class="lab-sub">The Lab publishes real governance tests performed against the Elora Engine.</p>
+      <p class="lab-sub" style="margin-top:6px;">A corrupted version of Elora tries to break the commit boundary. These live simulations show where the engine blocks, allows, and still needs hardening.</p>
 
       <section class="lab-meta">
         <div class="stat"><div class="k">Jobs (30d)</div><div class="v" id="jobsTotal">-</div></div>
@@ -272,7 +256,7 @@
         <div class="stat"><div class="k">Avg Confidence</div><div class="v" id="avgConfidence">-</div></div>
       </section>
 
-      <h2 class="lab-section-title">Latest Experiments</h2>
+      <h2 class="lab-section-title">Elora's Performance</h2>
       <section class="tests" id="tests">
         <div class="test"><div>Loading public feed...</div><span class="pill warn">PENDING</span></div>
       </section>
@@ -288,13 +272,6 @@
       <h2 class="lab-section-title">Latest Jobs Audit Steps</h2>
       <section class="audit-steps" id="auditSteps">
         <div class="audit-item">Loading latest audit steps...</div>
-      </section>
-      <section class="report-box" id="reportBox">
-        <h3 id="reportTitle">Replay Report</h3>
-        <div class="line" id="reportSummary"></div>
-        <div class="line" id="reportReason"></div>
-        <div class="line" id="reportMissing"></div>
-        <div class="steps" id="reportSteps"></div>
       </section>
       <div class="report-modal-backdrop" id="reportModalBackdrop"></div>
       <section class="report-modal" id="reportModal" aria-hidden="true">
@@ -331,12 +308,6 @@
       const asStatus = document.getElementById("asStatus");
       const auditSteps = document.getElementById("auditSteps");
       const feedNote = document.getElementById("feedNote");
-      const reportBox = document.getElementById("reportBox");
-      const reportTitle = document.getElementById("reportTitle");
-      const reportSummary = document.getElementById("reportSummary");
-      const reportReason = document.getElementById("reportReason");
-      const reportMissing = document.getElementById("reportMissing");
-      const reportSteps = document.getElementById("reportSteps");
       const reportModal = document.getElementById("reportModal");
       const reportModalBackdrop = document.getElementById("reportModalBackdrop");
       const reportModalClose = document.getElementById("reportModalClose");
@@ -375,7 +346,7 @@
       }
 
       function renderReplayReport(job) {
-        if (!reportBox || !job) return;
+        if (!job) return;
         const status = String(job.status || "unknown").toUpperCase();
         const decision = String(job.decision || "n/a");
         const source = String(job.source_type || "unknown");
@@ -385,23 +356,11 @@
         const latencyMs = Number(job.latency_ms || 0);
         const missing = Array.isArray(job.admissibility_missing) ? job.admissibility_missing : [];
         const missingText = missing.length ? missing.join(", ") : "none";
-        const blocked = String(job.decision || "").toLowerCase().startsWith("blocked_") || String(job.status || "").toLowerCase() === "terminated";
-        const finalStep = blocked ? "Commit boundary denied outcome" : "Commit boundary approved outcome";
-        reportTitle.textContent = "Replay Report · Job #" + String(job.job_id || "?");
-        reportSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision + " · Latency: " + (Number.isFinite(latencyMs) && latencyMs > 0 ? String(latencyMs) + "ms" : "not_captured");
-        reportReason.textContent = "Engine action: " + humanReason(job);
-        reportMissing.textContent = "Worker: " + workerId + " (" + workerType + ") · Tape: " + tapeId + " · Admissibility missing: " + missingText;
-        reportSteps.innerHTML =
-          "Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> " +
-          esc(finalStep) +
-          "<br />Updated: " + esc(fmtDate(job.updated_at));
-        reportBox.style.display = "block";
-
         const steps = Array.isArray(job.replay_steps) ? job.replay_steps : [];
         reportModalTitle.textContent = "Replay Steps · Job #" + String(job.job_id || "?");
-        reportModalSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision;
+        reportModalSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision + " · Latency: " + (Number.isFinite(latencyMs) && latencyMs > 0 ? String(latencyMs) + "ms" : "not_captured");
         reportModalReason.textContent = "Engine action: " + humanReason(job);
-        reportModalMissing.textContent = "Admissibility missing: " + missingText;
+        reportModalMissing.textContent = "Worker: " + workerId + " (" + workerType + ") · Tape: " + tapeId + " · Admissibility missing: " + missingText;
         reportModalSteps.innerHTML = (steps.length ? steps : []).map(function (step) {
           const ts = fmtDate(step.ts);
           const lane = String(step.stage_type || "execution").toLowerCase();

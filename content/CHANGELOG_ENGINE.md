@@ -2,6 +2,34 @@
 
 ## ------------- 0.17 --------------
 
+## 2026-03-20
+### Lab / Agent Simulation
+  - Add `Agent Simulator` lab harness (`/admin/lab/agent-simulator`) to run deterministic multi-step agent loops without model inference.
+  - Add lab APIs:
+    - `POST /admin/api/lab/agent-simulator/run`
+    - `POST /admin/api/lab/agent-simulator/recent`
+  - Persist simulator runs as normal jobs (`source_type=lab_agent_sim`) so outcomes flow into existing Jobs + Replay surfaces.
+  - Emit per-step governance artifacts for the simulated loop: proposal, justification, commit requested/authorized/denied, execution state transition, tape unload, worker release, and run completion.
+  - Support harness scenarios:
+    - `letter_loop` (no side effects)
+    - `file_mutation` (state-change path)
+    - `forced_failure` (deterministic commit denial).
+  - Add configurable simulation stress controls:
+    - `drift_rate` (randomized task/prompt drift)
+    - `unauthorized_request_rate` (simulated restricted-data asks)
+    - `commit_attack_rate` (simulated commit bypass attempts)
+    - per-signal block toggles and reproducible `random_seed`.
+### Fabric / WireGuard Readiness
+  - Add WorkerHost network identity capture in register/heartbeat (`transport_class`, `wg_ip`, `wg_peer_pubkey`, `wg_endpoint`).
+  - Add host identity drift event `host.identity_drift` when `wg_ip` changes between heartbeats.
+  - Add derived host transport fields in Fabric host payloads (`preferred_endpoint`, `transport_class`, `transport_risk`, `auth_token_bound`).
+  - Prefer `preferred_endpoint` in inference route binding (WireGuard endpoint when provided), with transport metadata attached to replay source and inference route events.
+  - Add Fabric Worker Hosts transport visibility:
+    - transport/risk tag per host row
+    - transport fields in host inspect dialog
+    - host-surface warning when public/non-WireGuard host transport is present.
+  - Extend bootstrap/env docs with optional WireGuard transport settings.
+
 ## 2026-03-19
 ### WorkerHost / Fabric GPU Readiness
   - Begin admin route modularization for Fabric lifecycle by extracting WorkerHost + host-token POST handlers from monolithic `routes_admin.py` into `engine/api/admin_routes/fabric_post.py` and dispatching through shared admin route callbacks.
