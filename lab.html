@@ -274,6 +274,8 @@
             const decision = String(job.decision || "");
             const cls = decision.startsWith("blocked_") || statusText === "terminated" ? "fail" : (statusText === "done" ? "pass" : "warn");
             const source = String(job.source_type || "unknown");
+            const admissibilityMissing = Array.isArray(job.admissibility_missing) ? job.admissibility_missing : [];
+            const missingText = admissibilityMissing.length ? admissibilityMissing.join(", ") : "none";
             const stepOutcome = decision.startsWith("blocked_")
               ? "Commit boundary denied"
               : (statusText === "done" ? "Commit boundary approved" : "Evaluation pending");
@@ -283,6 +285,7 @@
                 '<div class="steps">' +
                   'Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> ' + esc(stepOutcome) +
                 '</div><div class="steps"><strong>Reason:</strong> ' + esc(humanReason(job)) + '</div>' +
+                '<div class="steps"><strong>Admissibility missing:</strong> ' + esc(missingText) + '</div>' +
               '</div>';
           }).join("");
         }
