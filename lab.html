@@ -123,6 +123,89 @@
       color: #c8d8ef;
       margin: 4px 0;
     }
+    .report-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 8, 18, 0.55);
+      backdrop-filter: blur(2px);
+      display: none;
+      z-index: 120;
+    }
+    .report-modal {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: min(980px, calc(100vw - 24px));
+      max-height: min(82vh, 920px);
+      overflow: auto;
+      border: 1px solid #345983;
+      border-radius: 16px;
+      background: rgba(6, 18, 36, 0.96);
+      box-shadow: 0 22px 56px rgba(0, 0, 0, 0.55);
+      display: none;
+      z-index: 121;
+      padding: 14px;
+    }
+    .report-modal.open,
+    .report-modal-backdrop.open {
+      display: block;
+    }
+    .report-modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .report-modal-head h3 {
+      margin: 0;
+      font-size: 22px;
+      color: #e7f1ff;
+    }
+    .report-close {
+      border: 1px solid #3d658f;
+      border-radius: 10px;
+      background: rgba(14, 36, 66, 0.9);
+      color: #d8eaff;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    .report-steps {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .report-step {
+      border: 1px solid rgba(109, 173, 255, 0.28);
+      border-radius: 14px;
+      background: rgba(16, 35, 63, 0.56);
+      padding: 10px 12px;
+      font-size: 14px;
+      color: #d4e8ff;
+    }
+    .report-step .meta {
+      color: #a8c8eb;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      border-radius: 999px;
+      font-size: 11px;
+      color: #c5d5ea;
+      padding: 2px 7px;
+      margin-left: 6px;
+    }
+    .chip.low { border-color: rgba(34, 197, 94, 0.75); color: #8cf0b6; }
+    .chip.medium { border-color: rgba(245, 158, 11, 0.75); color: #fcd34d; }
+    .chip.high { border-color: rgba(248, 113, 113, 0.75); color: #fecaca; }
+    .chip.proposal { border-color: rgba(56, 189, 248, 0.75); color: #7dd3fc; }
+    .chip.governance { border-color: rgba(56, 189, 248, 0.75); color: #7dd3fc; }
+    .chip.commit { border-color: rgba(245, 158, 11, 0.75); color: #fcd34d; }
+    .chip.execution { border-color: rgba(100, 116, 139, 0.75); color: #cbd5e1; }
     .tests {
       display: grid;
       gap: 8px;
@@ -213,6 +296,17 @@
         <div class="line" id="reportMissing"></div>
         <div class="steps" id="reportSteps"></div>
       </section>
+      <div class="report-modal-backdrop" id="reportModalBackdrop"></div>
+      <section class="report-modal" id="reportModal" aria-hidden="true">
+        <div class="report-modal-head">
+          <h3 id="reportModalTitle">Replay Steps</h3>
+          <button type="button" class="report-close" id="reportModalClose">Close</button>
+        </div>
+        <div class="line" id="reportModalSummary"></div>
+        <div class="line" id="reportModalReason"></div>
+        <div class="line" id="reportModalMissing"></div>
+        <div class="report-steps" id="reportModalSteps"></div>
+      </section>
 
       <div class="lab-actions">
         <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">View Governance Replay</a>
@@ -243,6 +337,14 @@
       const reportReason = document.getElementById("reportReason");
       const reportMissing = document.getElementById("reportMissing");
       const reportSteps = document.getElementById("reportSteps");
+      const reportModal = document.getElementById("reportModal");
+      const reportModalBackdrop = document.getElementById("reportModalBackdrop");
+      const reportModalClose = document.getElementById("reportModalClose");
+      const reportModalTitle = document.getElementById("reportModalTitle");
+      const reportModalSummary = document.getElementById("reportModalSummary");
+      const reportModalReason = document.getElementById("reportModalReason");
+      const reportModalMissing = document.getElementById("reportModalMissing");
+      const reportModalSteps = document.getElementById("reportModalSteps");
       let recentJobsCache = [];
 
       function esc(v) {
@@ -277,19 +379,53 @@
         const status = String(job.status || "unknown").toUpperCase();
         const decision = String(job.decision || "n/a");
         const source = String(job.source_type || "unknown");
+        const workerId = String(job.worker_id || "not_captured");
+        const workerType = String(job.worker_type || "not_captured");
+        const tapeId = String(job.tape_id || "not_captured");
+        const latencyMs = Number(job.latency_ms || 0);
         const missing = Array.isArray(job.admissibility_missing) ? job.admissibility_missing : [];
         const missingText = missing.length ? missing.join(", ") : "none";
         const blocked = String(job.decision || "").toLowerCase().startsWith("blocked_") || String(job.status || "").toLowerCase() === "terminated";
         const finalStep = blocked ? "Commit boundary denied outcome" : "Commit boundary approved outcome";
         reportTitle.textContent = "Replay Report · Job #" + String(job.job_id || "?");
-        reportSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision;
+        reportSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision + " · Latency: " + (Number.isFinite(latencyMs) && latencyMs > 0 ? String(latencyMs) + "ms" : "not_captured");
         reportReason.textContent = "Engine action: " + humanReason(job);
-        reportMissing.textContent = "Admissibility missing: " + missingText;
+        reportMissing.textContent = "Worker: " + workerId + " (" + workerType + ") · Tape: " + tapeId + " · Admissibility missing: " + missingText;
         reportSteps.innerHTML =
           "Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> " +
           esc(finalStep) +
           "<br />Updated: " + esc(fmtDate(job.updated_at));
         reportBox.style.display = "block";
+
+        const steps = Array.isArray(job.replay_steps) ? job.replay_steps : [];
+        reportModalTitle.textContent = "Replay Steps · Job #" + String(job.job_id || "?");
+        reportModalSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision;
+        reportModalReason.textContent = "Engine action: " + humanReason(job);
+        reportModalMissing.textContent = "Admissibility missing: " + missingText;
+        reportModalSteps.innerHTML = (steps.length ? steps : []).map(function (step) {
+          const ts = fmtDate(step.ts);
+          const lane = String(step.stage_type || "execution").toLowerCase();
+          const risk = String(step.risk || "low").toLowerCase();
+          const anomalies = Array.isArray(step.anomalies) ? step.anomalies : [];
+          const outcome = String(step.decision || step.reason || "").trim();
+          const outcomeChip = outcome ? '<span class="chip">' + esc(outcome.replace(/_/g, " ")) + '</span>' : "";
+          const anomaliesChip = anomalies.length ? '<span class="chip">' + esc(anomalies.join(", ")) + '</span>' : "";
+          return (
+            '<div class="report-step">' +
+              '<strong>' + esc(ts) + " " + esc(step.stage || step.event || "Stage") + "</strong>" +
+              '<span class="chip ' + esc(lane) + '">' + esc(lane || "execution") + "</span>" +
+              '<span class="chip ' + esc(risk) + '">' + esc(risk.toUpperCase()) + "</span>" +
+              outcomeChip +
+              anomaliesChip +
+              '<div class="meta">event=' + esc(step.event || "unknown") + ' · worker=' + esc(step.worker_id || "not_captured") + ' · tape=' + esc(step.tape_id || "not_captured") + ' · hash=' + esc(step.event_hash || "not_captured") + '</div>' +
+            "</div>"
+          );
+        }).join("") || '<div class="report-step">No replay steps in public payload yet.</div>';
+        if (reportModal && reportModalBackdrop) {
+          reportModal.classList.add("open");
+          reportModalBackdrop.classList.add("open");
+          reportModal.setAttribute("aria-hidden", "false");
+        }
       }
 
       function render(payload) {
@@ -369,6 +505,24 @@
         if (!Number.isFinite(idx) || idx < 0 || idx >= recentJobsCache.length) return;
         renderReplayReport(recentJobsCache[idx]);
       });
+      if (reportModalClose) {
+        reportModalClose.addEventListener("click", function () {
+          if (reportModal) {
+            reportModal.classList.remove("open");
+            reportModal.setAttribute("aria-hidden", "true");
+          }
+          if (reportModalBackdrop) reportModalBackdrop.classList.remove("open");
+        });
+      }
+      if (reportModalBackdrop) {
+        reportModalBackdrop.addEventListener("click", function () {
+          if (reportModal) {
+            reportModal.classList.remove("open");
+            reportModal.setAttribute("aria-hidden", "true");
+          }
+          reportModalBackdrop.classList.remove("open");
+        });
+      }
 
       fetch("https://ai.elorataurus.com/public/lab-status.json", { method: "GET" })
         .then((res) => {
