@@ -112,12 +112,13 @@
   function buildUI(pref) {
     var style = document.createElement('style');
     style.textContent = [
-      '.cookie-fab{position:fixed;left:16px;bottom:16px;z-index:1000;width:44px;height:44px;border-radius:999px;border:1px solid rgba(109,173,255,.55);background:rgba(10,28,52,.92);color:#d8e9ff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35);font-size:20px;line-height:1;padding:0;}',
+      '.cookie-fab{position:fixed;left:16px;bottom:16px;z-index:1000;width:44px;height:44px;border-radius:999px;border:1px solid rgba(109,173,255,.55);background:rgba(10,28,52,.92);color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35);font-size:20px;line-height:1;padding:0;}',
       '.cookie-panel{position:fixed;left:16px;bottom:66px;z-index:1001;width:min(340px,calc(100vw - 24px));border:1px solid rgba(109,173,255,.45);border-radius:12px;background:rgba(7,21,40,.97);box-shadow:0 20px 45px rgba(0,0,0,.45);padding:12px;display:none;color:#d7e8ff;font-family:inherit;}',
       '.cookie-panel.open{display:block;}',
       '.cookie-title{font-size:15px;font-weight:700;margin:0 0 6px 0;}',
       '.cookie-copy{font-size:13px;line-height:1.45;color:#b9d1f0;margin:0 0 10px 0;}',
       '.cookie-status{font-size:12px;color:#9fbde3;margin-bottom:8px;}',
+      '.cookie-link{font-size:12px;color:#9fd3ff;text-decoration:underline;display:inline-block;margin-bottom:8px;}',
       '.cookie-actions{display:flex;gap:8px;flex-wrap:wrap;}',
       '.cookie-btn{border:1px solid rgba(109,173,255,.45);background:rgba(14,36,66,.9);color:#d7e8ff;border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer;}',
       '.cookie-btn.primary{border-color:rgba(52,211,153,.7);color:#bbf7d0;}',
@@ -130,15 +131,25 @@
     fab.type = 'button';
     fab.className = 'cookie-fab';
     fab.setAttribute('aria-label', 'Cookie settings');
-    fab.textContent = '\u{1F36A}';
+    fab.innerHTML = '' +
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+      '<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle>' +
+      '<circle cx="9" cy="8.5" r="1.2" fill="currentColor"></circle>' +
+      '<circle cx="14.8" cy="10.2" r="1.1" fill="currentColor"></circle>' +
+      '<circle cx="10.2" cy="14.5" r="1.1" fill="currentColor"></circle>' +
+      '<circle cx="15.2" cy="15.8" r="0.9" fill="currentColor"></circle>' +
+      '</svg>';
 
     var panel = document.createElement('section');
     panel.className = 'cookie-panel';
     panel.setAttribute('aria-hidden', 'true');
+    var policyHref = location.pathname.indexOf('/admin/') >= 0 ? '../cookie-policy.html' : 'cookie-policy.html';
     panel.innerHTML = '' +
       '<h3 class="cookie-title">Cookie Settings</h3>' +
       '<p class="cookie-copy">Analytics cookies are optional. You can accept or deny tracking at any time.</p>' +
+      '<p class="cookie-copy"><strong>By default, analytics cookies are refused. You are opted out until you explicitly accept.</strong></p>' +
       '<div class="cookie-status" id="cookieStatus"></div>' +
+      '<a class="cookie-link" href="' + policyHref + '">Read cookie policy</a>' +
       '<div class="cookie-actions">' +
         '<button type="button" class="cookie-btn primary" id="cookieAccept">Accept analytics</button>' +
         '<button type="button" class="cookie-btn deny" id="cookieDeny">Deny analytics</button>' +
@@ -209,7 +220,7 @@
       persistedOpen = null;
     }
 
-    if (persistedOpen === '1') {
+    if (!pref || persistedOpen === '1') {
       setOpen(true);
     }
   }
