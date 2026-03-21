@@ -12,6 +12,7 @@
   var gaLoaded = false;
   var gaConfigured = false;
   var pageViewSent = false;
+  var currentConsentGranted = false;
 
   function readPref() {
     try {
@@ -50,6 +51,7 @@
   function applyConsent(pref) {
     ensureDataLayer();
     var granted = !!(pref && pref.analytics);
+    currentConsentGranted = granted;
     window.gtag('consent', 'update', {
       ad_storage: 'denied',
       ad_user_data: 'denied',
@@ -60,10 +62,7 @@
     });
     if (granted) {
       loadGA();
-      if (gaConfigured && !pageViewSent) {
-        window.gtag('event', 'page_view');
-        pageViewSent = true;
-      }
+      if (gaConfigured) sendConsentPageView();
     } else {
       pageViewSent = false;
     }
@@ -81,6 +80,17 @@
     gaConfigured = true;
   }
 
+  function sendConsentPageView() {
+    if (!window.gtag || !GA_ID || !currentConsentGranted || pageViewSent) return;
+    window.gtag('config', GA_ID, {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      page_path: location.pathname + location.search + location.hash
+    });
+    pageViewSent = true;
+  }
+
   function loadGA() {
     if (!GA_ID) return;
     ensureDataLayer();
@@ -94,11 +104,7 @@
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
     script.onload = function () {
       configureGA();
-      var pref = readPref();
-      if (pref && pref.analytics && !pageViewSent) {
-        window.gtag('event', 'page_view');
-        pageViewSent = true;
-      }
+      sendConsentPageView();
     };
     document.head.appendChild(script);
   }
