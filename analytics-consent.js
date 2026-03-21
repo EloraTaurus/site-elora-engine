@@ -11,6 +11,7 @@
 
   var gaLoaded = false;
   var gaConfigured = false;
+  var pageViewSent = false;
 
   function readPref() {
     try {
@@ -59,6 +60,12 @@
     });
     if (granted) {
       loadGA();
+      if (gaConfigured && !pageViewSent) {
+        window.gtag('event', 'page_view');
+        pageViewSent = true;
+      }
+    } else {
+      pageViewSent = false;
     }
   }
 
@@ -68,7 +75,8 @@
     window.gtag('config', GA_ID, {
       anonymize_ip: true,
       allow_google_signals: false,
-      allow_ad_personalization_signals: false
+      allow_ad_personalization_signals: false,
+      send_page_view: false
     });
     gaConfigured = true;
   }
@@ -86,6 +94,11 @@
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
     script.onload = function () {
       configureGA();
+      var pref = readPref();
+      if (pref && pref.analytics && !pageViewSent) {
+        window.gtag('event', 'page_view');
+        pageViewSent = true;
+      }
     };
     document.head.appendChild(script);
   }
@@ -206,6 +219,9 @@
   });
 
   var pref = readPref();
+  if (GA_ID) {
+    loadGA();
+  }
   if (pref) {
     applyConsent(pref);
   }
