@@ -99,6 +99,35 @@
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 10px;
     }
+    .defense-grid {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+    }
+    .hex-wrap {
+      margin-top: 14px;
+      border: 1px solid rgba(109, 173, 255, 0.35);
+      border-radius: 12px;
+      background: rgba(10, 28, 52, 0.7);
+      padding: 10px 12px;
+    }
+    .hex-head {
+      font-size: 14px;
+      color: #b8d4f7;
+      margin-bottom: 6px;
+    }
+    .hex-chart {
+      width: 100%;
+      max-width: 420px;
+      height: 240px;
+      display: block;
+    }
+    .hex-legend {
+      font-size: 12px;
+      color: #9fc0e6;
+      margin-top: 4px;
+    }
     .integrity-item {
       border: 1px solid rgba(109, 173, 255, 0.35);
       border-radius: 10px;
@@ -364,27 +393,26 @@
         <div class="stat"><div class="k">Avg Confidence</div><div class="v" id="avgConfidence">-</div></div>
         <div class="stat"><div class="k">Decision Integrity Score</div><div class="v" id="decisionIntegrity">-</div></div>
         <div class="stat"><div class="k">Token Churn (24h)</div><div class="v" id="tokenChurn">-</div></div>
-        <div class="stat"><div class="k">State Drift Blocks</div><div class="v" id="driftBlocked">-</div></div>
-        <div class="stat"><div class="k">Unauthorized Requests Blocked</div><div class="v" id="unauthorizedBlocked">-</div></div>
-        <div class="stat"><div class="k">File Mutations Stopped</div><div class="v" id="mutationStopped">-</div></div>
       </section>
       <section class="integrity-grid">
         <div class="integrity-item"><div class="k">Admissibility completeness</div><div class="v" id="integrityAdmissibility">-</div></div>
         <div class="integrity-item"><div class="k">Snapshot capture</div><div class="v" id="integritySnapshot">-</div></div>
         <div class="integrity-item"><div class="k">Replay coverage</div><div class="v" id="integrityReplay">-</div></div>
       </section>
+      <section class="defense-grid">
+        <div class="integrity-item"><div class="k">State Drift Blocks</div><div class="v" id="stateDriftBlocks">0</div></div>
+        <div class="integrity-item"><div class="k">Unauthorized Requests Blocked</div><div class="v" id="unauthorizedBlocked">0</div></div>
+        <div class="integrity-item"><div class="k">File Mutations Stopped</div><div class="v" id="fileMutationsStopped">0</div></div>
+      </section>
+      <section class="hex-wrap">
+        <div class="hex-head">Elora Performance Hex</div>
+        <svg class="hex-chart" id="hexChart" viewBox="0 0 420 240" aria-label="Elora performance hex chart"></svg>
+        <div class="hex-legend" id="hexLegend">Shows coverage and defense effectiveness percentages.</div>
+      </section>
 
       <h2 class="lab-section-title">Elora's Performance</h2>
       <section class="tests" id="tests">
         <div class="test"><div>Loading public feed...</div><span class="pill warn">PENDING</span></div>
-      </section>
-
-      <h2 class="lab-section-title">Blocked Signal Totals</h2>
-      <section class="lab-meta">
-        <div class="stat"><div class="k">State Drift Blocks (feed)</div><div class="v" id="driftBlockedTotal">-</div></div>
-        <div class="stat"><div class="k">Unauthorized Requests Blocked (feed)</div><div class="v" id="unauthorizedBlockedTotal">-</div></div>
-        <div class="stat"><div class="k">File Mutations Stopped (feed)</div><div class="v" id="mutationStoppedTotal">-</div></div>
-        <div class="stat"><div class="k">Commit Attack Hits (feed)</div><div class="v" id="commitAttackTotal">-</div></div>
       </section>
 
       <h2 class="lab-section-title">Autoscale Test Surface</h2>
@@ -439,17 +467,15 @@
       const avgConfidence = document.getElementById("avgConfidence");
       const decisionIntegrity = document.getElementById("decisionIntegrity");
       const tokenChurn = document.getElementById("tokenChurn");
-      const driftBlocked = document.getElementById("driftBlocked");
-      const unauthorizedBlocked = document.getElementById("unauthorizedBlocked");
-      const mutationStopped = document.getElementById("mutationStopped");
-      const driftBlockedTotal = document.getElementById("driftBlockedTotal");
-      const unauthorizedBlockedTotal = document.getElementById("unauthorizedBlockedTotal");
-      const mutationStoppedTotal = document.getElementById("mutationStoppedTotal");
-      const commitAttackTotal = document.getElementById("commitAttackTotal");
       const integrityAdmissibility = document.getElementById("integrityAdmissibility");
       const integritySnapshot = document.getElementById("integritySnapshot");
       const integrityReplay = document.getElementById("integrityReplay");
       const tests = document.getElementById("tests");
+      const stateDriftBlocks = document.getElementById("stateDriftBlocks");
+      const unauthorizedBlocked = document.getElementById("unauthorizedBlocked");
+      const fileMutationsStopped = document.getElementById("fileMutationsStopped");
+      const hexChart = document.getElementById("hexChart");
+      const hexLegend = document.getElementById("hexLegend");
       const asLive = document.getElementById("asLive");
       const asDesired = document.getElementById("asDesired");
       const asLoad = document.getElementById("asLoad");
@@ -611,28 +637,22 @@
         avgConfidence.textContent = summary.avg_confidence == null ? "-" : Number(summary.avg_confidence).toFixed(2);
         decisionIntegrity.textContent = summary.decision_integrity_score == null ? "-" : (Number(summary.decision_integrity_score).toFixed(1) + "%");
         tokenChurn.textContent = summary.token_churn_24h == null ? "-" : String(summary.token_churn_24h);
-        let driftTotalN = 0;
-        let unauthorizedTotalN = 0;
-        let mutationTotalN = 0;
-        let commitAttackTotalN = 0;
-        recentJobs.forEach(function (job) {
-          const c = deriveSignalCounts(job || {});
-          driftTotalN += c.drift;
-          unauthorizedTotalN += c.unauthorized;
-          mutationTotalN += c.mutation;
-          commitAttackTotalN += c.commitAttack;
-        });
-        driftBlocked.textContent = String(driftTotalN);
-        unauthorizedBlocked.textContent = String(unauthorizedTotalN);
-        mutationStopped.textContent = String(mutationTotalN);
-        driftBlockedTotal.textContent = String(driftTotalN);
-        unauthorizedBlockedTotal.textContent = String(unauthorizedTotalN);
-        mutationStoppedTotal.textContent = String(mutationTotalN);
-        commitAttackTotal.textContent = String(commitAttackTotalN);
         const comps = summary.integrity_components || {};
         integrityAdmissibility.textContent = comps.admissibility_completeness == null ? "-" : (Number(comps.admissibility_completeness).toFixed(1) + "%");
         integritySnapshot.textContent = comps.snapshot_capture == null ? "-" : (Number(comps.snapshot_capture).toFixed(1) + "%");
         integrityReplay.textContent = comps.replay_coverage == null ? "-" : (Number(comps.replay_coverage).toFixed(1) + "%");
+        const defense = summary.lab_defense || {};
+        stateDriftBlocks.textContent = String(defense.state_drift_blocks ?? 0);
+        unauthorizedBlocked.textContent = String(defense.unauthorized_requests_blocked ?? 0);
+        fileMutationsStopped.textContent = String(defense.file_mutations_stopped ?? 0);
+        renderHexChart({
+          admissibility: Number(comps.admissibility_completeness || 0),
+          snapshot: Number(comps.snapshot_capture || 0),
+          replay: Number(comps.replay_coverage || 0),
+          drift: Number(defense.blocked_jobs_total || 0) > 0 ? (Number(defense.state_drift_blocks || 0) / Number(defense.blocked_jobs_total || 1)) * 100 : 0,
+          unauthorized: Number(defense.blocked_jobs_total || 0) > 0 ? (Number(defense.unauthorized_requests_blocked || 0) / Number(defense.blocked_jobs_total || 1)) * 100 : 0,
+          mutations: Number(defense.mutation_attempt_jobs || 0) > 0 ? (Number(defense.file_mutations_stopped || 0) / Number(defense.mutation_attempt_jobs || 1)) * 100 : 0
+        });
 
         if (!rows.length) {
           tests.innerHTML = '<div class="test"><div>No test rows in feed.</div><span class="pill warn">EMPTY</span></div>';
@@ -695,6 +715,54 @@
           }).join("");
         }
         feedNote.textContent = "Feed updated: " + fmtDate(payload.generated_at);
+      }
+
+      function renderHexChart(values) {
+        if (!hexChart) return;
+        const cx = 210;
+        const cy = 120;
+        const r = 86;
+        const labels = [
+          ["Admissibility", values.admissibility],
+          ["Snapshot", values.snapshot],
+          ["Replay", values.replay],
+          ["Drift Blocks", values.drift],
+          ["Unauthorized Blocks", values.unauthorized],
+          ["Mutation Stops", values.mutations]
+        ];
+        const angleStep = (Math.PI * 2) / labels.length;
+        function point(i, scale) {
+          const a = -Math.PI / 2 + i * angleStep;
+          return [cx + Math.cos(a) * r * scale, cy + Math.sin(a) * r * scale];
+        }
+        const grid = [1, 0.75, 0.5, 0.25].map(function (g) {
+          const pts = labels.map(function (_, i) {
+            const p = point(i, g);
+            return p[0].toFixed(1) + "," + p[1].toFixed(1);
+          }).join(" ");
+          return '<polygon points="' + pts + '" fill="none" stroke="rgba(109,173,255,0.25)" stroke-width="1" />';
+        }).join("");
+        const axes = labels.map(function (_, i) {
+          const p = point(i, 1);
+          return '<line x1="' + cx + '" y1="' + cy + '" x2="' + p[0].toFixed(1) + '" y2="' + p[1].toFixed(1) + '" stroke="rgba(109,173,255,0.35)" stroke-width="1" />';
+        }).join("");
+        const dataPts = labels.map(function (entry, i) {
+          const val = Math.max(0, Math.min(100, Number(entry[1] || 0))) / 100;
+          const p = point(i, val);
+          return p[0].toFixed(1) + "," + p[1].toFixed(1);
+        }).join(" ");
+        const dots = labels.map(function (entry, i) {
+          const p = point(i, 1.06);
+          return '<text x="' + p[0].toFixed(1) + '" y="' + p[1].toFixed(1) + '" font-size="11" text-anchor="middle" fill="#9fc0e6">' + esc(entry[0]) + '</text>';
+        }).join("");
+        hexChart.innerHTML = '' +
+          '<rect x="0" y="0" width="420" height="240" fill="none"></rect>' +
+          grid + axes +
+          '<polygon points="' + dataPts + '" fill="rgba(34,197,94,0.22)" stroke="rgba(74,222,128,0.95)" stroke-width="2"></polygon>' +
+          dots;
+        if (hexLegend) {
+          hexLegend.textContent = labels.map(function (entry) { return entry[0] + ": " + Math.round(Number(entry[1] || 0)) + "%"; }).join(" · ");
+        }
       }
 
       auditSteps.addEventListener("click", function (ev) {
