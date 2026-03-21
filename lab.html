@@ -83,11 +83,45 @@
     .audit-item.pass { border-color: rgba(34, 197, 94, 0.6); background: rgba(22, 101, 52, 0.18); }
     .audit-item.warn { border-color: rgba(245, 158, 11, 0.65); background: rgba(133, 77, 14, 0.18); }
     .audit-item.fail { border-color: rgba(239, 68, 68, 0.68); background: rgba(127, 29, 29, 0.2); }
+    .audit-actions {
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .mini-btn {
+      border: 1px solid #345983;
+      background: rgba(18, 37, 67, 0.88);
+      color: #d7e7ff;
+      border-radius: 999px;
+      font-size: 12px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .mini-btn:hover { border-color: #5ea0da; }
     .steps {
       margin: 6px 0 0;
       color: #b7cbe3;
       font-size: 13px;
       line-height: 1.4;
+    }
+    .report-box {
+      margin-top: 10px;
+      border: 1px solid #2d4f78;
+      border-radius: 12px;
+      background: rgba(9, 22, 44, 0.86);
+      padding: 12px;
+      display: none;
+    }
+    .report-box h3 {
+      margin: 0 0 8px 0;
+      color: #e8f1ff;
+      font-size: 16px;
+    }
+    .report-box .line {
+      font-size: 13px;
+      color: #c8d8ef;
+      margin: 4px 0;
     }
     .tests {
       display: grid;
@@ -172,6 +206,13 @@
       <section class="audit-steps" id="auditSteps">
         <div class="audit-item">Loading latest audit steps...</div>
       </section>
+      <section class="report-box" id="reportBox">
+        <h3 id="reportTitle">Replay Report</h3>
+        <div class="line" id="reportSummary"></div>
+        <div class="line" id="reportReason"></div>
+        <div class="line" id="reportMissing"></div>
+        <div class="steps" id="reportSteps"></div>
+      </section>
 
       <div class="lab-actions">
         <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">View Governance Replay</a>
@@ -196,6 +237,13 @@
       const asStatus = document.getElementById("asStatus");
       const auditSteps = document.getElementById("auditSteps");
       const feedNote = document.getElementById("feedNote");
+      const reportBox = document.getElementById("reportBox");
+      const reportTitle = document.getElementById("reportTitle");
+      const reportSummary = document.getElementById("reportSummary");
+      const reportReason = document.getElementById("reportReason");
+      const reportMissing = document.getElementById("reportMissing");
+      const reportSteps = document.getElementById("reportSteps");
+      let recentJobsCache = [];
 
       function esc(v) {
         return String(v == null ? "" : v)
@@ -210,11 +258,46 @@
         return new Date(n * 1000).toISOString().replace("T", " ").replace("Z", " UTC");
       }
 
+      function humanReason(job) {
+        const decision = String(job.decision || "").toLowerCase();
+        if (decision === "blocked_commit_validation") return "Commit blocked by policy validation.";
+        if (decision === "blocked_guardrail") return "Blocked by guardrail policy.";
+        if (decision === "blocked_baseline_guardrail") return "Blocked by baseline guardrails.";
+        if (decision === "blocked_injection") return "Blocked due to suspected prompt injection.";
+        if (decision.startsWith("blocked_")) return "Blocked by governance controls.";
+        const status = String(job.status || "").toLowerCase();
+        if (status === "terminated") return "Terminated during governance evaluation.";
+        if (status === "done") return "Completed with commit authorization.";
+        if (status === "running" || status === "queued") return "Still in runtime evaluation.";
+        return "Outcome captured in governance timeline.";
+      }
+
+      function renderReplayReport(job) {
+        if (!reportBox || !job) return;
+        const status = String(job.status || "unknown").toUpperCase();
+        const decision = String(job.decision || "n/a");
+        const source = String(job.source_type || "unknown");
+        const missing = Array.isArray(job.admissibility_missing) ? job.admissibility_missing : [];
+        const missingText = missing.length ? missing.join(", ") : "none";
+        const blocked = String(job.decision || "").toLowerCase().startsWith("blocked_") || String(job.status || "").toLowerCase() === "terminated";
+        const finalStep = blocked ? "Commit boundary denied outcome" : "Commit boundary approved outcome";
+        reportTitle.textContent = "Replay Report · Job #" + String(job.job_id || "?");
+        reportSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision;
+        reportReason.textContent = "Engine action: " + humanReason(job);
+        reportMissing.textContent = "Admissibility missing: " + missingText;
+        reportSteps.innerHTML =
+          "Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> " +
+          esc(finalStep) +
+          "<br />Updated: " + esc(fmtDate(job.updated_at));
+        reportBox.style.display = "block";
+      }
+
       function render(payload) {
         const summary = payload && payload.summary ? payload.summary : {};
         const rows = Array.isArray(payload && payload.tests_results) ? payload.tests_results : [];
         const autoscale = payload && payload.autoscale ? payload.autoscale : {};
         const recentJobs = Array.isArray(payload && payload.recent_jobs) ? payload.recent_jobs : [];
+        recentJobsCache = recentJobs.slice();
         jobsTotal.textContent = String(summary.jobs_total ?? "-");
         blockedTotal.textContent = String(summary.jobs_blocked_commit ?? "-");
         terminatedTotal.textContent = String(summary.jobs_terminated ?? "-");
@@ -252,24 +335,10 @@
         }
         asStatus.textContent = status;
 
-        function humanReason(job) {
-          const decision = String(job.decision || "").toLowerCase();
-          if (decision === "blocked_commit_validation") return "Commit blocked by policy validation.";
-          if (decision === "blocked_guardrail") return "Blocked by guardrail policy.";
-          if (decision === "blocked_baseline_guardrail") return "Blocked by baseline guardrails.";
-          if (decision === "blocked_injection") return "Blocked due to suspected prompt injection.";
-          if (decision.startsWith("blocked_")) return "Blocked by governance controls.";
-          const status = String(job.status || "").toLowerCase();
-          if (status === "terminated") return "Terminated during governance evaluation.";
-          if (status === "done") return "Completed with commit authorization.";
-          if (status === "running" || status === "queued") return "Still in runtime evaluation.";
-          return "Outcome captured in governance timeline.";
-        }
-
         if (!recentJobs.length) {
           auditSteps.innerHTML = '<div class="audit-item">No recent jobs available.</div>';
         } else {
-          auditSteps.innerHTML = recentJobs.slice(0, 8).map((job) => {
+          auditSteps.innerHTML = recentJobs.slice(0, 8).map((job, index) => {
             const statusText = String(job.status || "").toLowerCase();
             const decision = String(job.decision || "");
             const cls = decision.startsWith("blocked_") || statusText === "terminated" ? "fail" : (statusText === "done" ? "pass" : "warn");
@@ -286,11 +355,20 @@
                   'Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> ' + esc(stepOutcome) +
                 '</div><div class="steps"><strong>Reason:</strong> ' + esc(humanReason(job)) + '</div>' +
                 '<div class="steps"><strong>Admissibility missing:</strong> ' + esc(missingText) + '</div>' +
+                '<div class="audit-actions"><button class="mini-btn" type="button" data-report-index="' + esc(String(index)) + '">View replay report</button></div>' +
               '</div>';
           }).join("");
         }
         feedNote.textContent = "Feed updated: " + fmtDate(payload.generated_at);
       }
+
+      auditSteps.addEventListener("click", function (ev) {
+        const btn = ev.target.closest("[data-report-index]");
+        if (!btn) return;
+        const idx = Number(btn.getAttribute("data-report-index") || -1);
+        if (!Number.isFinite(idx) || idx < 0 || idx >= recentJobsCache.length) return;
+        renderReplayReport(recentJobsCache[idx]);
+      });
 
       fetch("https://ai.elorataurus.com/public/lab-status.json", { method: "GET" })
         .then((res) => {
