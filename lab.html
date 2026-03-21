@@ -66,11 +66,60 @@
       margin: 18px 0 10px;
       font-size: 20px;
     }
+    .info-panel {
+      margin-top: 14px;
+      border: 1px solid rgba(109, 173, 255, 0.35);
+      background: rgba(10, 28, 52, 0.7);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .info-panel h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    .info-lines {
+      display: grid;
+      gap: 6px;
+      color: #c6dcf7;
+      font-size: 14px;
+    }
+    .authority-banner {
+      margin-top: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.55);
+      background: rgba(8, 28, 48, 0.75);
+      border-radius: 10px;
+      padding: 9px 11px;
+      color: #bde8ff;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .integrity-grid {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+    .integrity-item {
+      border: 1px solid rgba(109, 173, 255, 0.35);
+      border-radius: 10px;
+      padding: 8px 10px;
+      background: rgba(12, 29, 53, 0.7);
+    }
+    .integrity-item .k {
+      font-size: 12px;
+      color: #a8c8eb;
+      text-transform: uppercase;
+    }
+    .integrity-item .v {
+      margin-top: 3px;
+      font-weight: 700;
+    }
     .audit-steps {
       margin-top: 8px;
       display: grid;
-      gap: 8px;
-      max-height: 220px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      max-height: 360px;
       overflow: auto;
       padding-right: 4px;
     }
@@ -157,6 +206,9 @@
       display: grid;
       gap: 10px;
       margin-top: 12px;
+      max-height: 40vh;
+      overflow: auto;
+      padding-right: 4px;
     }
     .report-step {
       border: 1px solid rgba(109, 173, 255, 0.28);
@@ -170,6 +222,51 @@
       color: #a8c8eb;
       font-size: 12px;
       margin-top: 3px;
+    }
+    .report-path {
+      margin-top: 8px;
+      color: #c8def7;
+      font-size: 13px;
+    }
+    .report-path .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin: 0 6px 1px 6px;
+      vertical-align: middle;
+      background: #4b6a90;
+    }
+    .report-path .dot.fail {
+      background: #fb7185;
+    }
+    .missing-grid {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+    }
+    .missing-item {
+      border: 1px solid rgba(109, 173, 255, 0.28);
+      background: rgba(16, 35, 63, 0.56);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 13px;
+      color: #d4e8ff;
+    }
+    .missing-item.fail {
+      border-color: rgba(248, 113, 113, 0.72);
+      color: #fecaca;
+      background: rgba(127, 29, 29, 0.22);
+    }
+    .report-outcome {
+      margin-top: 8px;
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      background: rgba(86, 48, 12, 0.22);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 13px;
+      color: #fde68a;
     }
     .chip {
       display: inline-flex;
@@ -248,12 +345,29 @@
       <p class="lab-sub">Public Governance Testing Environment</p>
       <p class="lab-sub">The Lab publishes real governance tests performed against the Elora Engine.</p>
       <p class="lab-sub" style="margin-top:6px;">A corrupted version of Elora tries to break the commit boundary. These live simulations show where the engine blocks, allows, and still needs hardening.</p>
+      <div class="authority-banner">Inference is a proposal. Commit is the authorization boundary.</div>
+      <section class="info-panel">
+        <h2>What You Are Seeing</h2>
+        <div class="info-lines">
+          <div>Each job simulates an AI agent attempting an action.</div>
+          <div>The engine evaluates whether that action is admissible.</div>
+          <div>If required evidence or policy checks are missing, the action is blocked.</div>
+          <div>All stages are captured for replay and audit.</div>
+        </div>
+      </section>
 
       <section class="lab-meta">
         <div class="stat"><div class="k">Jobs (30d)</div><div class="v" id="jobsTotal">-</div></div>
         <div class="stat"><div class="k">Blocked Commits</div><div class="v" id="blockedTotal">-</div></div>
         <div class="stat"><div class="k">Terminated</div><div class="v" id="terminatedTotal">-</div></div>
         <div class="stat"><div class="k">Avg Confidence</div><div class="v" id="avgConfidence">-</div></div>
+        <div class="stat"><div class="k">Decision Integrity Score</div><div class="v" id="decisionIntegrity">-</div></div>
+        <div class="stat"><div class="k">Token Churn (24h)</div><div class="v" id="tokenChurn">-</div></div>
+      </section>
+      <section class="integrity-grid">
+        <div class="integrity-item"><div class="k">Admissibility completeness</div><div class="v" id="integrityAdmissibility">-</div></div>
+        <div class="integrity-item"><div class="k">Snapshot capture</div><div class="v" id="integritySnapshot">-</div></div>
+        <div class="integrity-item"><div class="k">Replay coverage</div><div class="v" id="integrityReplay">-</div></div>
       </section>
 
       <h2 class="lab-section-title">Elora's Performance</h2>
@@ -281,7 +395,9 @@
         </div>
         <div class="line" id="reportModalSummary"></div>
         <div class="line" id="reportModalReason"></div>
-        <div class="line" id="reportModalMissing"></div>
+        <div class="report-path" id="reportModalPath"></div>
+        <div class="missing-grid" id="reportModalMissing"></div>
+        <div class="report-outcome" id="reportModalOutcome"></div>
         <div class="report-steps" id="reportModalSteps"></div>
       </section>
 
@@ -292,6 +408,14 @@
       </div>
 
       <div class="feed-note" id="feedNote">Feed: waiting for update.</div>
+      <section class="info-panel" style="margin-top:12px;">
+        <h2>Why This Matters</h2>
+        <div class="info-lines">
+          <div>Without governance, AI agents can act on unverified instructions.</div>
+          <div>They can attempt access outside approved scope.</div>
+          <div>Elora enforces verified, auditable, controlled actions at commit boundary.</div>
+        </div>
+      </section>
     </article>
   </main>
 
@@ -301,6 +425,11 @@
       const blockedTotal = document.getElementById("blockedTotal");
       const terminatedTotal = document.getElementById("terminatedTotal");
       const avgConfidence = document.getElementById("avgConfidence");
+      const decisionIntegrity = document.getElementById("decisionIntegrity");
+      const tokenChurn = document.getElementById("tokenChurn");
+      const integrityAdmissibility = document.getElementById("integrityAdmissibility");
+      const integritySnapshot = document.getElementById("integritySnapshot");
+      const integrityReplay = document.getElementById("integrityReplay");
       const tests = document.getElementById("tests");
       const asLive = document.getElementById("asLive");
       const asDesired = document.getElementById("asDesired");
@@ -314,7 +443,9 @@
       const reportModalTitle = document.getElementById("reportModalTitle");
       const reportModalSummary = document.getElementById("reportModalSummary");
       const reportModalReason = document.getElementById("reportModalReason");
+      const reportModalPath = document.getElementById("reportModalPath");
       const reportModalMissing = document.getElementById("reportModalMissing");
+      const reportModalOutcome = document.getElementById("reportModalOutcome");
       const reportModalSteps = document.getElementById("reportModalSteps");
       let recentJobsCache = [];
 
@@ -357,10 +488,41 @@
         const missing = Array.isArray(job.admissibility_missing) ? job.admissibility_missing : [];
         const missingText = missing.length ? missing.join(", ") : "none";
         const steps = Array.isArray(job.replay_steps) ? job.replay_steps : [];
+        const hasBlocked = decision.indexOf("blocked_") === 0 || status === "TERMINATED";
+        const topImpact = steps.find(function (s) { return s && s.action_type; }) || {};
+        const impactLevel = String(topImpact.impact_level || "low").toUpperCase();
+        const target = String(topImpact.target || "not_captured");
+        const actionType = String(topImpact.action_type || "not_captured");
+        const missingMap = {
+          policy_snapshot_missing: "Policy Snapshot",
+          config_snapshot_missing: "Config Snapshot",
+          authority_snapshot_missing: "Authority Snapshot",
+          decision_class_admissibility_failed: "Decision Class",
+          tape_snapshot_missing: "Tape Snapshot",
+          tape_hash_not_admissible: "Tape Hash",
+          authority_not_captured: "Authority Capture",
+          worker_not_registered: "Worker Registration",
+          tape_hash_not_captured: "Tape Hash Capture"
+        };
+        const criticalKeys = ["policy_snapshot_missing", "config_snapshot_missing", "authority_snapshot_missing"];
+        const pathText = [
+          "Intake", "Worker Assigned", "Tape Loaded", "Inference", "Proposal", "Justification",
+          hasBlocked ? "Commit ❌ BLOCKED" : "Commit ✅ AUTHORIZED", hasBlocked ? "Execution ⏹" : "Execution ✅"
+        ];
         reportModalTitle.textContent = "Replay Steps · Job #" + String(job.job_id || "?");
-        reportModalSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision + " · Latency: " + (Number.isFinite(latencyMs) && latencyMs > 0 ? String(latencyMs) + "ms" : "not_captured");
+        reportModalSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision + " · Latency: " + (Number.isFinite(latencyMs) && latencyMs > 0 ? String(latencyMs) + "ms" : "unknown");
         reportModalReason.textContent = "Engine action: " + humanReason(job);
-        reportModalMissing.textContent = "Worker: " + workerId + " (" + workerType + ") · Tape: " + tapeId + " · Admissibility missing: " + missingText;
+        reportModalPath.innerHTML = pathText.map(function (p, i) {
+          const failDot = p.indexOf("❌") >= 0 ? " fail" : "";
+          return (i === 0 ? "" : '<span class="dot' + failDot + '"></span>') + esc(p);
+        }).join("");
+        reportModalMissing.innerHTML = criticalKeys.map(function (key) {
+          const label = missingMap[key] || key;
+          const isFail = missing.includes(key);
+          const mark = isFail ? "❌" : "✅";
+          return '<div class="missing-item' + (isFail ? ' fail' : '') + '">' + mark + " " + esc(label) + "</div>";
+        }).join("");
+        reportModalOutcome.textContent = "Blocked outcome: " + (hasBlocked ? ("This action would have modified: " + target + " · Impact level: " + impactLevel + " · Action: " + actionType) : "No blocked consequence for this run.") + (missingText !== "none" ? (" · Additional missing: " + missingText) : "");
         reportModalSteps.innerHTML = (steps.length ? steps : []).map(function (step) {
           const ts = fmtDate(step.ts);
           const lane = String(step.stage_type || "execution").toLowerCase();
@@ -397,6 +559,12 @@
         blockedTotal.textContent = String(summary.jobs_blocked_commit ?? "-");
         terminatedTotal.textContent = String(summary.jobs_terminated ?? "-");
         avgConfidence.textContent = summary.avg_confidence == null ? "-" : Number(summary.avg_confidence).toFixed(2);
+        decisionIntegrity.textContent = summary.decision_integrity_score == null ? "-" : (Number(summary.decision_integrity_score).toFixed(1) + "%");
+        tokenChurn.textContent = summary.token_churn_24h == null ? "-" : String(summary.token_churn_24h);
+        const comps = summary.integrity_components || {};
+        integrityAdmissibility.textContent = comps.admissibility_completeness == null ? "-" : (Number(comps.admissibility_completeness).toFixed(1) + "%");
+        integritySnapshot.textContent = comps.snapshot_capture == null ? "-" : (Number(comps.snapshot_capture).toFixed(1) + "%");
+        integrityReplay.textContent = comps.replay_coverage == null ? "-" : (Number(comps.replay_coverage).toFixed(1) + "%");
 
         if (!rows.length) {
           tests.innerHTML = '<div class="test"><div>No test rows in feed.</div><span class="pill warn">EMPTY</span></div>';
@@ -446,6 +614,7 @@
             return '' +
               '<div class="audit-item ' + esc(cls) + '">' +
                 '<strong>Job #' + esc(job.job_id || "?") + '</strong> · ' + esc(source) + '<br />' +
+                '<div class="steps"><span class="pill ' + esc(cls) + '">LAB</span></div>' +
                 '<div class="steps">' +
                   'Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> ' + esc(stepOutcome) +
                 '</div><div class="steps"><strong>Reason:</strong> ' + esc(humanReason(job)) + '</div>' +
