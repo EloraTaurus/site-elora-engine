@@ -239,6 +239,16 @@
       overflow: auto;
       padding-right: 4px;
     }
+    .report-toggle {
+      margin-top: 10px;
+      border: 1px solid rgba(109, 173, 255, 0.45);
+      background: rgba(14, 36, 66, 0.9);
+      color: #d8eaff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      cursor: pointer;
+    }
     .report-step {
       border: 1px solid rgba(109, 173, 255, 0.28);
       border-radius: 14px;
@@ -251,6 +261,16 @@
       color: #a8c8eb;
       font-size: 12px;
       margin-top: 3px;
+    }
+    .report-scorecard {
+      margin-top: 8px;
+      border: 1px solid rgba(109, 173, 255, 0.32);
+      border-radius: 10px;
+      background: rgba(12, 30, 54, 0.66);
+      padding: 8px 10px;
+      font-size: 13px;
+      color: #cbe0fa;
+      line-height: 1.45;
     }
     .report-path {
       margin-top: 8px;
@@ -445,6 +465,8 @@
 
       <div class="lab-actions">
         <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">View Governance Replay</a>
+        <button class="btn" type="button" id="runPublicTestBtn">Test Elora (6 jobs)</button>
+        <span class="pill warn" id="runPublicCooldown" style="display:none;">Cooldown: 0s</span>
         <a class="btn alt" href="https://elorataurus.com">Elora Website</a>
         <a class="btn alt" href="https://www.linkedin.com">LinkedIn</a>
       </div>
@@ -457,6 +479,14 @@
           <div>They can attempt access outside approved scope.</div>
           <div>Elora enforces verified, auditable, controlled actions at commit boundary.</div>
         </div>
+      </section>
+      <section class="report-modal" id="publicSuiteModal" aria-hidden="true">
+        <div class="report-modal-head">
+          <h3 id="publicSuiteTitle">Public Test Scorecard</h3>
+          <button type="button" class="report-close" id="publicSuiteClose">Close</button>
+        </div>
+        <div class="line" id="publicSuiteSummary"></div>
+        <div class="report-steps" id="publicSuiteSteps"></div>
       </section>
     </article>
   </main>
@@ -496,7 +526,16 @@
       const reportModalMissing = document.getElementById("reportModalMissing");
       const reportModalOutcome = document.getElementById("reportModalOutcome");
       const reportModalSteps = document.getElementById("reportModalSteps");
+      const runPublicTestBtn = document.getElementById("runPublicTestBtn");
+      const runPublicCooldown = document.getElementById("runPublicCooldown");
+      const publicSuiteModal = document.getElementById("publicSuiteModal");
+      const publicSuiteClose = document.getElementById("publicSuiteClose");
+      const publicSuiteSummary = document.getElementById("publicSuiteSummary");
+      const publicSuiteSteps = document.getElementById("publicSuiteSteps");
       let recentJobsCache = [];
+      let currentReportJob = null;
+      let reportExpanded = false;
+      let publicCooldownTimer = null;
 
       function esc(v) {
         return String(v == null ? "" : v)
@@ -558,6 +597,7 @@
 
       function renderReplayReport(job) {
         if (!job) return;
+        currentReportJob = job;
         const status = String(job.status || "unknown").toUpperCase();
         const decision = String(job.decision || "n/a");
         const source = String(job.source_type || "unknown");
@@ -592,7 +632,18 @@
         reportModalTitle.textContent = "Replay Steps · Job #" + String(job.job_id || "?");
         reportModalSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision + " · Latency: " + (Number.isFinite(latencyMs) && latencyMs > 0 ? String(latencyMs) + "ms" : "unknown");
         reportModalReason.textContent = "Engine action: " + humanReason(job);
-        reportModalTest.textContent = "Test scorecard: scenario=" + String(job.scenario || "n/a") + " · expected=" + String(job.expected_outcome || "n/a") + " · actual=" + String(job.actual_outcome || "n/a") + " · verdict=" + String(job.defense_verdict || "n/a") + " · drift=" + String(job.drift_hits || 0) + " · unauthorized=" + String(job.unauthorized_hits || 0) + " · commit_attack=" + String(job.commit_attack_hits || 0) + " · mutation_attempts=" + String(job.mutation_attempts || 0) + " · mutation_stops=" + String(job.mutation_stops || 0);
+        reportModalTest.className = "report-scorecard";
+        reportModalTest.innerHTML =
+          "<strong>Test scorecard</strong><br>" +
+          "Scenario: " + esc(String(job.scenario || "n/a")) +
+          " · Expected: " + esc(String(job.expected_outcome || "n/a")) +
+          " · Actual: " + esc(String(job.actual_outcome || "n/a")) +
+          " · Verdict: " + esc(String(job.defense_verdict || "n/a")) + "<br>" +
+          "Signals: drift=" + esc(String(job.drift_hits || 0)) +
+          " · unauthorized=" + esc(String(job.unauthorized_hits || 0)) +
+          " · commit_attack=" + esc(String(job.commit_attack_hits || 0)) +
+          " · mutation_attempts=" + esc(String(job.mutation_attempts || 0)) +
+          " · mutation_stops=" + esc(String(job.mutation_stops || 0));
         reportModalPath.innerHTML = pathText.map(function (p, i) {
           const failDot = p.indexOf("❌") >= 0 ? " fail" : "";
           return (i === 0 ? "" : '<span class="dot' + failDot + '"></span>') + esc(p);
@@ -603,8 +654,9 @@
           const mark = isFail ? "❌" : "✅";
           return '<div class="missing-item' + (isFail ? ' fail' : '') + '">' + mark + " " + esc(label) + "</div>";
         }).join("");
-        reportModalOutcome.textContent = "Blocked outcome: " + (hasBlocked ? ("This action would have modified: " + target + " · Impact level: " + impactLevel + " · Action: " + actionType) : "No blocked consequence for this run.") + (missingText !== "none" ? (" · Additional missing: " + missingText) : "");
-        reportModalSteps.innerHTML = (steps.length ? steps : []).map(function (step) {
+        reportModalOutcome.textContent = "Blocked outcome: " + (hasBlocked ? ("This action would have modified: " + target + " · Impact level: " + impactLevel + " · Action: " + actionType) : "No blocked consequence for this run.");
+        const visibleSteps = reportExpanded ? steps : steps.slice(0, 4);
+        reportModalSteps.innerHTML = (visibleSteps.length ? visibleSteps : []).map(function (step) {
           const ts = fmtDate(step.ts);
           const lane = String(step.stage_type || "execution").toLowerCase();
           const risk = String(step.risk || "low").toLowerCase();
@@ -623,11 +675,77 @@
             "</div>"
           );
         }).join("") || '<div class="report-step">No replay steps in public payload yet.</div>';
+        if (steps.length > 4) {
+          reportModalSteps.innerHTML += '<button type="button" class="report-toggle" id="reportStepToggle">' + (reportExpanded ? 'Show first 4 steps' : 'Show all ' + String(steps.length) + ' steps') + '</button>';
+          const toggle = document.getElementById("reportStepToggle");
+          if (toggle) {
+            toggle.addEventListener("click", function () {
+              reportExpanded = !reportExpanded;
+              if (currentReportJob) renderReplayReport(currentReportJob);
+            });
+          }
+        }
         if (reportModal && reportModalBackdrop) {
           reportModal.classList.add("open");
           reportModalBackdrop.classList.add("open");
           reportModal.setAttribute("aria-hidden", "false");
         }
+      }
+
+      function renderPublicSuite(result) {
+        if (!publicSuiteModal || !publicSuiteSummary || !publicSuiteSteps || !reportModalBackdrop) return;
+        const suite = result && result.suite ? result.suite : {};
+        const items = Array.isArray(suite.items) ? suite.items : [];
+        publicSuiteSummary.textContent =
+          "Runs: " + String(suite.suite_runs || 0) +
+          " · Pass: " + String(suite.pass_runs || 0) +
+          " · Fail: " + String(suite.fail_runs || 0) +
+          " · Defense score: " + String(suite.defense_score || 0) + "%" +
+          " · Cooldown: " + String(result.cooldown_seconds || 0) + "s";
+        publicSuiteSteps.innerHTML = items.map(function (item) {
+          const verdict = String(item.defense_verdict || "").toLowerCase();
+          const cls = verdict === "pass" ? "pass" : (verdict === "fail" ? "fail" : "warn");
+          return '' +
+            '<div class="report-step ' + cls + '">' +
+              '<strong>Run #' + esc(item.index || "?") + " · Job #" + esc(item.job_id || "?") + '</strong>' +
+              '<div class="meta">scenario=' + esc(item.scenario || "n/a") + ' · expected=' + esc(item.expected_outcome || "n/a") + ' · actual=' + esc(item.actual_outcome || "n/a") + ' · verdict=' + esc(item.defense_verdict || "n/a") + '</div>' +
+            '</div>';
+        }).join("") || '<div class="report-step">No suite items returned.</div>';
+        reportModalBackdrop.classList.add("open");
+        publicSuiteModal.classList.add("open");
+        publicSuiteModal.setAttribute("aria-hidden", "false");
+      }
+
+      function startPublicCooldown(seconds) {
+        const total = Math.max(0, Math.floor(Number(seconds || 0)));
+        if (!runPublicTestBtn || !runPublicCooldown) return;
+        if (publicCooldownTimer) {
+          clearInterval(publicCooldownTimer);
+          publicCooldownTimer = null;
+        }
+        if (total <= 0) {
+          runPublicTestBtn.disabled = false;
+          runPublicTestBtn.textContent = "Test Elora (6 jobs)";
+          runPublicCooldown.style.display = "none";
+          return;
+        }
+        let remaining = total;
+        runPublicTestBtn.disabled = true;
+        runPublicTestBtn.textContent = "Test Elora (cooldown)";
+        runPublicCooldown.style.display = "inline-flex";
+        runPublicCooldown.textContent = "Cooldown: " + String(remaining) + "s";
+        publicCooldownTimer = setInterval(function () {
+          remaining -= 1;
+          if (remaining <= 0) {
+            clearInterval(publicCooldownTimer);
+            publicCooldownTimer = null;
+            runPublicTestBtn.disabled = false;
+            runPublicTestBtn.textContent = "Test Elora (6 jobs)";
+            runPublicCooldown.style.display = "none";
+            return;
+          }
+          runPublicCooldown.textContent = "Cooldown: " + String(remaining) + "s";
+        }, 1000);
       }
 
       function render(payload) {
@@ -651,10 +769,16 @@
         stateDriftBlocks.textContent = String(defense.state_drift_blocks ?? 0);
         unauthorizedBlocked.textContent = String(defense.unauthorized_requests_blocked ?? 0);
         fileMutationsStopped.textContent = String(defense.file_mutations_stopped ?? 0);
+        const tp = Number(defense.tp || 0);
+        const tn = Number(defense.tn || 0);
+        const fp = Number(defense.fp || 0);
+        const fn = Number(defense.fn || 0);
+        const tpr = (tp + fn) > 0 ? (tp / (tp + fn)) * 100 : 0;
+        const tnr = (tn + fp) > 0 ? (tn / (tn + fp)) * 100 : 0;
         renderHexChart({
-          admissibility: Number(comps.admissibility_completeness || 0),
-          snapshot: Number(comps.snapshot_capture || 0),
-          replay: Number(comps.replay_coverage || 0),
+          defenseScore: Number(defense.defense_score || 0),
+          blockRecall: tpr,
+          allowPrecision: tnr,
           drift: Number(defense.blocked_jobs_total || 0) > 0 ? (Number(defense.state_drift_blocks || 0) / Number(defense.blocked_jobs_total || 1)) * 100 : 0,
           unauthorized: Number(defense.blocked_jobs_total || 0) > 0 ? (Number(defense.unauthorized_requests_blocked || 0) / Number(defense.blocked_jobs_total || 1)) * 100 : 0,
           mutations: Number(defense.mutation_attempt_jobs || 0) > 0 ? (Number(defense.file_mutations_stopped || 0) / Number(defense.mutation_attempt_jobs || 1)) * 100 : 0
@@ -729,9 +853,9 @@
         const cy = 120;
         const r = 86;
         const labels = [
-          ["Admissibility", values.admissibility],
-          ["Snapshot", values.snapshot],
-          ["Replay", values.replay],
+          ["Defense Score", values.defenseScore],
+          ["Block Recall", values.blockRecall],
+          ["Allow Precision", values.allowPrecision],
           ["Drift Blocks", values.drift],
           ["Unauthorized Blocks", values.unauthorized],
           ["Mutation Stops", values.mutations]
@@ -794,6 +918,53 @@
             reportModal.setAttribute("aria-hidden", "true");
           }
           reportModalBackdrop.classList.remove("open");
+          if (publicSuiteModal) {
+            publicSuiteModal.classList.remove("open");
+            publicSuiteModal.setAttribute("aria-hidden", "true");
+          }
+        });
+      }
+      if (publicSuiteClose) {
+        publicSuiteClose.addEventListener("click", function () {
+          if (publicSuiteModal) {
+            publicSuiteModal.classList.remove("open");
+            publicSuiteModal.setAttribute("aria-hidden", "true");
+          }
+          if (reportModalBackdrop) reportModalBackdrop.classList.remove("open");
+        });
+      }
+      if (runPublicTestBtn) {
+        runPublicTestBtn.addEventListener("click", function () {
+          runPublicTestBtn.disabled = true;
+          runPublicTestBtn.textContent = "Running…";
+          fetch("https://ai.elorataurus.com/public/lab-run", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ runs: 6 })
+          })
+            .then(function (r) { return r.json().then(function (data) { return { ok: r.ok, status: r.status, data: data }; }); })
+            .then(function (resp) {
+              if (!resp.ok) {
+                if (resp.status === 429 && resp.data && Number.isFinite(Number(resp.data.retry_after_seconds))) {
+                  startPublicCooldown(Number(resp.data.retry_after_seconds));
+                }
+                throw new Error((resp.data && (resp.data.error || ("HTTP " + String(resp.status)))) || "Lab run failed");
+              }
+              renderPublicSuite(resp.data);
+              startPublicCooldown(Number(resp.data && resp.data.cooldown_seconds));
+              return fetch("https://ai.elorataurus.com/public/lab-status.json", { method: "GET" });
+            })
+            .then(function (r) { if (r && r.ok) return r.json(); return null; })
+            .then(function (payload) { if (payload) render(payload); })
+            .catch(function (err) {
+              alert(String(err));
+            })
+            .finally(function () {
+              if (!publicCooldownTimer) {
+                runPublicTestBtn.disabled = false;
+                runPublicTestBtn.textContent = "Test Elora (6 jobs)";
+              }
+            });
         });
       }
 
