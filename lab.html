@@ -436,6 +436,7 @@
         </div>
         <div class="line" id="reportModalSummary"></div>
         <div class="line" id="reportModalReason"></div>
+        <div class="line" id="reportModalTest"></div>
         <div class="report-path" id="reportModalPath"></div>
         <div class="missing-grid" id="reportModalMissing"></div>
         <div class="report-outcome" id="reportModalOutcome"></div>
@@ -490,6 +491,7 @@
       const reportModalTitle = document.getElementById("reportModalTitle");
       const reportModalSummary = document.getElementById("reportModalSummary");
       const reportModalReason = document.getElementById("reportModalReason");
+      const reportModalTest = document.getElementById("reportModalTest");
       const reportModalPath = document.getElementById("reportModalPath");
       const reportModalMissing = document.getElementById("reportModalMissing");
       const reportModalOutcome = document.getElementById("reportModalOutcome");
@@ -531,12 +533,12 @@
       function deriveSignalCounts(job) {
         const metrics = job && job.metrics && typeof job.metrics === "object" ? job.metrics : {};
         const blockedReason = String(metrics.blocked_reason || job.reason || "").toLowerCase();
-        const driftHits = num(metrics.drift_hits);
-        const unauthorizedHits = num(metrics.unauthorized_hits);
-        const commitAttackHits = num(metrics.commit_attack_hits);
+        const driftHits = num(metrics.drift_hits || job.drift_hits);
+        const unauthorizedHits = num(metrics.unauthorized_hits || job.unauthorized_hits);
+        const commitAttackHits = num(metrics.commit_attack_hits || job.commit_attack_hits);
         const driftCount = driftHits > 0 ? driftHits : (blockedReason.includes("drift") ? 1 : 0);
         const unauthorizedCount = unauthorizedHits > 0 ? unauthorizedHits : (blockedReason.includes("unauthor") ? 1 : 0);
-        const mutationCount = commitAttackHits > 0 ? commitAttackHits : ((blockedReason.includes("file_mutation") || blockedReason.includes("mutation")) ? 1 : 0);
+        const mutationCount = num(job.mutation_stops) > 0 ? num(job.mutation_stops) : (commitAttackHits > 0 ? commitAttackHits : ((blockedReason.includes("file_mutation") || blockedReason.includes("mutation")) ? 1 : 0));
         return {
           drift: driftCount,
           unauthorized: unauthorizedCount,
@@ -590,6 +592,7 @@
         reportModalTitle.textContent = "Replay Steps · Job #" + String(job.job_id || "?");
         reportModalSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision + " · Latency: " + (Number.isFinite(latencyMs) && latencyMs > 0 ? String(latencyMs) + "ms" : "unknown");
         reportModalReason.textContent = "Engine action: " + humanReason(job);
+        reportModalTest.textContent = "Test scorecard: scenario=" + String(job.scenario || "n/a") + " · expected=" + String(job.expected_outcome || "n/a") + " · actual=" + String(job.actual_outcome || "n/a") + " · verdict=" + String(job.defense_verdict || "n/a") + " · drift=" + String(job.drift_hits || 0) + " · unauthorized=" + String(job.unauthorized_hits || 0) + " · commit_attack=" + String(job.commit_attack_hits || 0) + " · mutation_attempts=" + String(job.mutation_attempts || 0) + " · mutation_stops=" + String(job.mutation_stops || 0);
         reportModalPath.innerHTML = pathText.map(function (p, i) {
           const failDot = p.indexOf("❌") >= 0 ? " fail" : "";
           return (i === 0 ? "" : '<span class="dot' + failDot + '"></span>') + esc(p);
@@ -713,7 +716,7 @@
                 '</div><div class="steps"><strong>Reason:</strong> ' + esc(humanReason(job)) + '</div>' +
                 '<div class="steps"><strong>Block signals:</strong> ' + esc(signalText) + '</div>' +
                 '<div class="steps"><strong>Admissibility missing:</strong> ' + esc(missingText) + '</div>' +
-                '<div class="audit-actions"><button class="mini-btn" type="button" data-report-index="' + esc(String(index)) + '">View replay report</button></div>' +
+                '<div class="audit-actions"><button class="mini-btn" type="button" data-report-index="' + esc(String(index)) + '">View test scorecard</button></div>' +
               '</div>';
           }).join("");
         }
