@@ -2,6 +2,29 @@
 
 ## ------------- 0.17 --------------
 
+## 2026-03-23
+### Lab / Public Replay Fairness
+  - Increase public replay-step capture depth for Lab jobs from 14 to 80 events so longer multi-step runs render with fuller evidence context.
+  - Fix Lab defense aggregation for drift/unauthorized detections by including simulator metrics fallbacks (`blocked_reason`, `drift_hits`, `unauthorized_hits`) when violation tokens are sparse.
+  - Fix public 30-day Lab rollup scan to page beyond the 500-row job query cap; large runs now contribute to totals/percentages correctly.
+  - Add evaluable-run denominator for integrity metrics (`Decision Integrity`, `Replay Coverage`, `Admissibility`, `Snapshot`) to prevent unfair 0% scoring from legacy/non-evaluable runs.
+  - Add integrity transparency counters in public payload: `evaluable_runs` and `total_lab_runs`.
+  - Fix mutation-stop percentage math in public UI to use expected-or-attempt denominator fallback, preventing `0%` with non-zero stop counts.
+  - Fix simulator expected-outcome logic so live policy snapshot denials are scored as expected blocks in live-policy runs (prevents false fail verdicts).
+
+## 2026-03-22
+### Lab / Engine Crusher + Batch Model
+  - Add `Engine Crusher` harness for high-volume deterministic load simulation:
+    - API: `POST /admin/api/lab/agent-simulator/crusher`
+    - UI controls for total jobs and per-job delay pacing.
+  - Add fixed 7-run batch structure in suite runs:
+    - 1 guaranteed allow
+    - 5 mixed
+    - 1 guaranteed fail
+  - Add guaranteed multi-step mixed scenario that can inject mutation request at step 7/8 for long-path governance validation.
+  - Tune mixed-case anomaly rates and enforcement toggles to reduce over-blocking bias and produce realistic allow/block distribution.
+  - Extend simulator metrics capture with control flags (`allow_mutation`, `block_on_*`) to support expected-vs-actual scoring and accurate public defense ratios.
+
 ## 2026-03-20
 ### Lab / Agent Simulation
   - Add `Agent Simulator` lab harness (`/admin/lab/agent-simulator`) to run deterministic multi-step agent loops without model inference.

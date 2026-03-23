@@ -425,6 +425,9 @@
         <div class="integrity-item"><div class="k">Unauthorized Requests Blocked</div><div class="v" id="unauthorizedBlocked">0</div></div>
         <div class="integrity-item"><div class="k">File Mutations Stopped</div><div class="v" id="fileMutationsStopped">0</div></div>
       </section>
+      <p class="lab-sub" style="margin:8px 0 0 0;">
+        Score note: Results are based on whether the engine made the decision expected by policy. A lower score can include safe false-blocks (for example, blocking a file change the test expected to allow), not just unsafe allows.
+      </p>
       <section class="hex-wrap">
         <div class="hex-head">Elora Performance Hex</div>
         <svg class="hex-chart" id="hexChart" viewBox="0 0 420 240" aria-label="Elora performance hex chart"></svg>
@@ -778,6 +781,7 @@
         const unauthorizedExpected = Number(defense.unauthorized_expected || 0);
         const mutationExpected = Number(defense.file_mutations_expected || 0);
         const mutationAttempts = Number(defense.mutation_attempt_jobs || 0);
+        const mutationStopJobs = Number(defense.file_mutation_stop_jobs || 0);
         const mutationDenom = mutationExpected > 0 ? mutationExpected : mutationAttempts;
         const tpr = (tp + fn) > 0 ? (tp / (tp + fn)) * 100 : 0;
         const tnr = (tn + fp) > 0 ? (tn / (tn + fp)) * 100 : 0;
@@ -787,7 +791,7 @@
           allowPrecision: tnr,
           drift: driftExpected > 0 ? (Number(defense.state_drift_blocks || 0) / driftExpected) * 100 : 0,
           unauthorized: unauthorizedExpected > 0 ? (Number(defense.unauthorized_requests_blocked || 0) / unauthorizedExpected) * 100 : 0,
-          mutations: mutationDenom > 0 ? (Number(defense.file_mutations_stopped || 0) / mutationDenom) * 100 : 0
+          mutations: mutationDenom > 0 ? (mutationStopJobs / mutationDenom) * 100 : 0
         });
 
         if (!rows.length) {
