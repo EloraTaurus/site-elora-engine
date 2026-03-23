@@ -470,6 +470,7 @@
         <a class="btn" href="admin/governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">View Governance Replay</a>
         <button class="btn" type="button" id="runPublicTestBtn">Test Elora (6 jobs)</button>
         <span class="pill warn" id="runPublicCooldown" style="display:none;">Cooldown: 0s</span>
+        <span class="pill warn" id="runPublicFeedCooldown">Feed cooldown: --</span>
         <a class="btn alt" href="https://elorataurus.com">Elora Website</a>
         <a class="btn alt" href="https://www.linkedin.com">LinkedIn</a>
       </div>
@@ -531,6 +532,7 @@
       const reportModalSteps = document.getElementById("reportModalSteps");
       const runPublicTestBtn = document.getElementById("runPublicTestBtn");
       const runPublicCooldown = document.getElementById("runPublicCooldown");
+      const runPublicFeedCooldown = document.getElementById("runPublicFeedCooldown");
       const publicSuiteModal = document.getElementById("publicSuiteModal");
       const publicSuiteClose = document.getElementById("publicSuiteClose");
       const publicSuiteSummary = document.getElementById("publicSuiteSummary");
@@ -782,7 +784,8 @@
         const mutationExpected = Number(defense.file_mutations_expected || 0);
         const mutationAttempts = Number(defense.mutation_attempt_jobs || 0);
         const mutationStopJobs = Number(defense.file_mutation_stop_jobs || 0);
-        const mutationDenom = mutationExpected > 0 ? mutationExpected : mutationAttempts;
+        const mutationDenom = mutationAttempts > 0 ? mutationAttempts : mutationExpected;
+        const mutationNumerator = mutationDenom > 0 ? Math.min(mutationStopJobs, mutationDenom) : 0;
         const tpr = (tp + fn) > 0 ? (tp / (tp + fn)) * 100 : 0;
         const tnr = (tn + fp) > 0 ? (tn / (tn + fp)) * 100 : 0;
         renderHexChart({
@@ -791,8 +794,14 @@
           allowPrecision: tnr,
           drift: driftExpected > 0 ? (Number(defense.state_drift_blocks || 0) / driftExpected) * 100 : 0,
           unauthorized: unauthorizedExpected > 0 ? (Number(defense.unauthorized_requests_blocked || 0) / unauthorizedExpected) * 100 : 0,
-          mutations: mutationDenom > 0 ? (mutationStopJobs / mutationDenom) * 100 : 0
+          mutations: mutationDenom > 0 ? (mutationNumerator / mutationDenom) * 100 : 0
         });
+        const publicTest = payload && payload.public_test ? payload.public_test : {};
+        const nextRunIn = Number(publicTest.next_run_in_seconds || 0);
+        const cooldownSecs = Number(publicTest.cooldown_seconds || 0);
+        if (runPublicFeedCooldown) {
+          runPublicFeedCooldown.textContent = "Feed cooldown: " + String(Math.max(0, Math.floor(nextRunIn))) + "s / " + String(Math.max(0, Math.floor(cooldownSecs))) + "s";
+        }
 
         if (!rows.length) {
           tests.innerHTML = '<div class="test"><div>No test rows in feed.</div><span class="pill warn">EMPTY</span></div>';
