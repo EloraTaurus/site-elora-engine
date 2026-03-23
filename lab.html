@@ -636,6 +636,7 @@
         reportModalTest.innerHTML =
           "<strong>Test scorecard</strong><br>" +
           "Scenario: " + esc(String(job.scenario || "n/a")) +
+          " · Scope: " + esc(String(job.policy_scope || "core")) +
           " · Expected: " + esc(String(job.expected_outcome || "n/a")) +
           " · Actual: " + esc(String(job.actual_outcome || "n/a")) +
           " · Verdict: " + esc(String(job.defense_verdict || "n/a")) + "<br>" +
@@ -773,15 +774,18 @@
         const tn = Number(defense.tn || 0);
         const fp = Number(defense.fp || 0);
         const fn = Number(defense.fn || 0);
+        const driftExpected = Number(defense.state_drift_expected || 0);
+        const unauthorizedExpected = Number(defense.unauthorized_expected || 0);
+        const mutationExpected = Number(defense.file_mutations_expected || 0);
         const tpr = (tp + fn) > 0 ? (tp / (tp + fn)) * 100 : 0;
         const tnr = (tn + fp) > 0 ? (tn / (tn + fp)) * 100 : 0;
         renderHexChart({
           defenseScore: Number(defense.defense_score || 0),
           blockRecall: tpr,
           allowPrecision: tnr,
-          drift: Number(defense.blocked_jobs_total || 0) > 0 ? (Number(defense.state_drift_blocks || 0) / Number(defense.blocked_jobs_total || 1)) * 100 : 0,
-          unauthorized: Number(defense.blocked_jobs_total || 0) > 0 ? (Number(defense.unauthorized_requests_blocked || 0) / Number(defense.blocked_jobs_total || 1)) * 100 : 0,
-          mutations: Number(defense.mutation_attempt_jobs || 0) > 0 ? (Number(defense.file_mutations_stopped || 0) / Number(defense.mutation_attempt_jobs || 1)) * 100 : 0
+          drift: driftExpected > 0 ? (Number(defense.state_drift_blocks || 0) / driftExpected) * 100 : 0,
+          unauthorized: unauthorizedExpected > 0 ? (Number(defense.unauthorized_requests_blocked || 0) / unauthorizedExpected) * 100 : 0,
+          mutations: mutationExpected > 0 ? (Number(defense.file_mutations_stopped || 0) / mutationExpected) * 100 : 0
         });
 
         if (!rows.length) {
