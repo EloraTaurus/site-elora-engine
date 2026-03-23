@@ -777,6 +777,8 @@
         const driftExpected = Number(defense.state_drift_expected || 0);
         const unauthorizedExpected = Number(defense.unauthorized_expected || 0);
         const mutationExpected = Number(defense.file_mutations_expected || 0);
+        const mutationAttempts = Number(defense.mutation_attempt_jobs || 0);
+        const mutationDenom = mutationExpected > 0 ? mutationExpected : mutationAttempts;
         const tpr = (tp + fn) > 0 ? (tp / (tp + fn)) * 100 : 0;
         const tnr = (tn + fp) > 0 ? (tn / (tn + fp)) * 100 : 0;
         renderHexChart({
@@ -785,7 +787,7 @@
           allowPrecision: tnr,
           drift: driftExpected > 0 ? (Number(defense.state_drift_blocks || 0) / driftExpected) * 100 : 0,
           unauthorized: unauthorizedExpected > 0 ? (Number(defense.unauthorized_requests_blocked || 0) / unauthorizedExpected) * 100 : 0,
-          mutations: mutationExpected > 0 ? (Number(defense.file_mutations_stopped || 0) / mutationExpected) * 100 : 0
+          mutations: mutationDenom > 0 ? (Number(defense.file_mutations_stopped || 0) / mutationDenom) * 100 : 0
         });
 
         if (!rows.length) {
