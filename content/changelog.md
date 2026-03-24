@@ -1,5 +1,10 @@
 # Site / Demo Changelog
 
+## 2026-03-24
+- Updated website roadmap/maturity milestones with latest Fabric operations work (local WorkerHost deploy, runtime inventory/update checks, live ops footprint rail).
+- Added high-level hardware attestation roadmap note to website architecture docs (`software` -> `hardware_backed` -> `hardware_deployed`), explicitly marked as research direction.
+- Added public-safe mention of LUNA/OpenTitan exploration as future feasibility work (no implementation detail claims).
+
 ## 2026-03-19
 - Added latest Engine changelog sync for Fabric/WorkerHost operations under `0.17`.
 - Updated website context pack docs to reflect WorkerHost bootstrap builder, GPU host policy controls, and runtime distribution (`Sync now` / `Update runtime`) direction.

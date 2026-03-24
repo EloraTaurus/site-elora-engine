@@ -1,6 +1,6 @@
 # Roadmap and Maturity
 
-Last updated: 2026-03-20
+Last updated: 2026-03-24
 
 First implemented (from changelog): 2026-02-28
 
@@ -33,6 +33,11 @@ Elora is in an advanced build phase:
 6. GPU-aware execution path validation
 - verify governed job flow against GPU-capable host inventory and host policy constraints.
 
+7. Hardware attestation research track (application for funding)
+- define phased trust posture: `software` -> `hardware_backed` -> `hardware_deployed`,
+- evaluate TPM/silicon-backed evidence claims for runtime identity proofs,
+- run exploratory feasibility work for LUNA board and OpenTitan-backed deployment modes.
+
 ## Release Direction
 
 Current line is `0.17` for governance maturation work.
@@ -43,3 +48,6 @@ Next major release boundary is expected when the next governance section and int
 - 2026-03-19: WorkerHost bootstrap builder expanded with node profile + workload policy controls.
 - 2026-03-19: WorkerHost runtime distribution path added (`Sync now` / `Update runtime`) with hash-based bundle checks.
 - 2026-03-19: Host telemetry and inference-node/model visibility expanded for GPU-aware routing operations.
+- 2026-03-24: Added Engine-local WorkerHost deployment path to reduce first-node setup friction.
+- 2026-03-24: Added runtime dependency inventory and update-check surface in admin settings.
+- 2026-03-24: Added live ops footprint rail (Engine + host/worker summary) for faster performance triage.

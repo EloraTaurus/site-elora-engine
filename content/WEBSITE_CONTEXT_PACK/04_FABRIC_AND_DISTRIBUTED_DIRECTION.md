@@ -1,6 +1,6 @@
 # Fabric and Distributed Direction
 
-Last updated: 2026-03-19
+Last updated: 2026-03-24
 
 First implemented (from changelog): 2026-02-10
 
@@ -28,3 +28,16 @@ Planned architecture direction includes stronger control/data plane separation:
 
 The goal is not just scale.
 The goal is scaled governance with deterministic admissibility behavior across distributed execution paths.
+
+## Hardware Attestation Direction (Research)
+
+Planned trust-mode progression (high-level):
+- `software`: policy + replay evidence only,
+- `hardware_backed`: add TPM/silicon-backed identity and signing evidence where available,
+- `hardware_deployed`: evaluate specialized hardware runtime paths.
+
+Research targets currently under consideration:
+- LUNA board experimentation,
+- OpenTitan-aligned attestation patterns.
+
+This track is under application for funding and is not yet a production claim.

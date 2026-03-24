@@ -25,6 +25,13 @@
 - pluggable inference backends (vLLM-ready path),
 - retrieval architecture split (metadata vs vector index responsibilities),
 - governance portability across local and remote execution tiers.
+- trust-mode progression from software-only controls to hardware-backed attestation evidence.
+
+## Hardware attestation research direction (high-level)
+
+- define evidence contract for hardware-backed node identity claims (when TPM/silicon features are present),
+- keep commit/replay semantics unchanged while extending provenance with attestation artifacts,
+- evaluate feasibility paths including LUNA board and OpenTitan-aligned flows.
 
 ## Open research/design questions
 
