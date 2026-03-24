@@ -2,6 +2,46 @@
 
 ## ------------- 0.17 --------------
 
+## 2026-03-24
+### Runtime Modularity / Security Scaffold
+  - Add `Settings -> Runtime` section for runtime mode selection scaffold:
+    - `software`
+    - `hardware_backed`
+    - `hardware_deployed`
+  - Add attestation-policy scaffold settings:
+    - `runtime_require_signed_actions` (`off`/`warn`/`block`)
+    - `runtime_require_hardware_attestation` (`off`/`warn`/`block`)
+  - Add add-on module toggles in Runtime settings:
+    - `module_fabric_enabled`
+    - `module_lab_enabled`
+  - Extend module manifest response to include enabled/disabled state and honor runtime toggle values.
+  - Enforce Lab module toggle on admin Lab routes/APIs (disabled module returns explicit denial).
+  - Add admin security self-check tab with runtime status for:
+    - secrets key presence
+    - session secret storage mode/protection
+    - session-version enforcement
+    - trusted proxy header gate.
+  - Add security DB schema visibility in Settings (Admin/Jobs/RAG DB path + table inventory + error state) for faster deployment diagnostics.
+  - Include DB file size visibility in security schema overview.
+  - Add runtime dependency inventory in Settings -> Runtime:
+    - Python/pip/platform visibility
+    - component requirement manifest vs installed-package comparison
+    - runtime method inventory (for example `ollama_http`, custom engine API)
+    - explicit `latest version check` state (not performed offline).
+  - Add `Check updates` action in Runtime settings (`/admin/api/runtime/inventory?check_updates=1`) for on-demand latest-version comparison against PyPI metadata.
+  - Add runtime update risk summary counters (matches, mismatches, missing, outdated, unversioned) with live refresh after update checks.
+  - Add live admin runtime footprint feed in ops rail (`/admin/api/runtime/footprint`) showing Engine RSS/CPU seconds plus active/total Fabric hosts/workers.
+  - Harden session secret initialization path to avoid DB persistence when meta encryption key is unavailable.
+  - Make `ADMIN_SESSION_SECRET` fallback deterministic from `RAG_SECRETS_KEY` when env override is not supplied.
+### Fabric Local Bootstrap
+  - Add Engine-side local WorkerHost deploy helper (`deploy_local_workerhost`) that can:
+    - issue bootstrap token + pending host record
+    - write local compose + env bundle under `/opt/elora/admin/local-workerhost/<host_id>`
+    - attempt `docker compose up` (fallback `docker-compose`) from Engine host runtime.
+  - Add Fabric Provisioner UI action `Deploy local WorkerHost` for one-click local bootstrap.
+  - Add auto-skip behavior: local deploy is skipped when active/registered WorkerHosts are already detected.
+  - Reduce secret-at-rest exposure for local deploy by generating compose/env bootstrap files in ephemeral temp storage and deleting them after successful start.
+
 ## 2026-03-23
 ### Lab / Public Replay Fairness
   - Increase public replay-step capture depth for Lab jobs from 14 to 80 events so longer multi-step runs render with fuller evidence context.
