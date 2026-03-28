@@ -1,6 +1,7 @@
 import { renderWorkerHosts } from "./components/worker-host.js";
 import { renderWorkerCard } from "./components/worker-card.js";
 import { renderExecutionView } from "./components/execution-view.js";
+import { buildTerminalLines } from "./components/terminal.js";
 import { DEMO_WORKERHOSTS } from "./data/demo-data.js";
 import { scenarioForWorker, simulateEvents, simulateStats } from "./data/simulator.js";
 
@@ -143,12 +144,15 @@ let selectedWorker = null;
 const expandedHosts = new Set();
 let demoTicker = null;
 let demoRunning = false;
+let narrativeEnabled = true;
+let terminalStreamTimer = null;
 
 const els = {
   hostGroups: document.querySelector("[data-host-groups]"),
   terminalPanel: document.querySelector("[data-execution-panel]"),
   modeLabel: document.querySelector("[data-mode-label]"),
   modeButtons: document.querySelectorAll("[data-mode-switch]"),
+  narrativeToggle: document.querySelector("[data-narrative-toggle]"),
   status: document.querySelector("[data-runtime-status]"),
   introBackdrop: document.querySelector("[data-intro-backdrop]"),
   introStart: document.querySelector("[data-intro-start]"),
@@ -165,6 +169,7 @@ async function boot() {
   bindWorkerOpen();
   bindApprovalActions();
   bindDemoControls();
+  bindNarrativeToggle();
   await refreshWorkers();
   setStatus("Demo paused. Click Start Demo.");
 }
@@ -232,7 +237,8 @@ async function openWorker(workerId) {
   setStatus(`Loading events for ${worker.worker_id}...`);
   try {
     const payload = await dataSources[currentMode].subscribeEvents(worker.worker_id);
-    renderExecutionView(els.terminalPanel, worker, payload.events || [], payload.stats || {});
+    renderExecutionView(els.terminalPanel, worker, payload.events || [], payload.stats || {}, { narrative: narrativeEnabled });
+    streamTerminal(payload.events || []);
     setStatus(`Worker ${worker.worker_id} loaded (${(payload.events || []).length} events).`);
   } catch (error) {
     setStatus(String(error.message || error));
@@ -257,9 +263,26 @@ function bindModeSwitch() {
         els.terminalPanel,
         { worker_id: "No worker selected", status: "idle" },
         [],
-        { runtime_seconds: 0, event_count: 0, violation_count: 0, monitoring_mode: mode }
+        { runtime_seconds: 0, event_count: 0, violation_count: 0, monitoring_mode: mode },
+        { narrative: narrativeEnabled }
       );
+      streamTerminal([]);
     });
+  });
+}
+
+function bindNarrativeToggle() {
+  els.narrativeToggle?.addEventListener("click", async () => {
+    narrativeEnabled = !narrativeEnabled;
+    els.narrativeToggle.textContent = narrativeEnabled ? "Narrative: On" : "Narrative: Off";
+    els.narrativeToggle.setAttribute("aria-pressed", narrativeEnabled ? "true" : "false");
+    if (!selectedWorker) {
+      streamTerminal([]);
+      return;
+    }
+    const payload = await dataSources[currentMode].subscribeEvents(selectedWorker.worker_id);
+    renderExecutionView(els.terminalPanel, selectedWorker, payload.events || [], payload.stats || {}, { narrative: narrativeEnabled });
+    streamTerminal(payload.events || []);
   });
 }
 
@@ -327,7 +350,9 @@ function bindWorkerOpen() {
 function keepExpandedWithActiveWorkers() {
   if (expandedHosts.size === 0) {
     hostGroups.forEach((host) => {
-      const hasActive = host.workers.some((worker) => worker.status === "running" || worker.status === "warning" || worker.status === "violation");
+      const hasActive = host.workers.some((worker) =>
+        worker.status === "running" || worker.status === "approval" || worker.status === "warning" || worker.status === "violation"
+      );
       if (hasActive) expandedHosts.add(host.host_id);
     });
   }
@@ -374,12 +399,15 @@ function startDemoTicker() {
         els.terminalPanel,
         { worker_id: "No worker selected", status: "idle" },
         [],
-        { runtime_seconds: 0, event_count: 0, violation_count: 0, monitoring_mode: "demo" }
+        { runtime_seconds: 0, event_count: 0, violation_count: 0, monitoring_mode: "demo" },
+        { narrative: narrativeEnabled }
       );
+      streamTerminal([]);
       return;
     }
     const payload = await dataSources.demo.subscribeEvents(selectedWorker.worker_id);
-    renderExecutionView(els.terminalPanel, exists, payload.events || [], payload.stats || {});
+    renderExecutionView(els.terminalPanel, exists, payload.events || [], payload.stats || {}, { narrative: narrativeEnabled });
+    streamTerminal(payload.events || []);
   }, 2600);
 }
 
@@ -409,4 +437,30 @@ function pushToast(message) {
   window.setTimeout(() => {
     toast.remove();
   }, 5200);
+}
+
+function streamTerminal(events) {
+  const el = document.querySelector("[data-terminal-feed]");
+  if (!el) return;
+  if (terminalStreamTimer) {
+    window.clearInterval(terminalStreamTimer);
+    terminalStreamTimer = null;
+  }
+  const lines = buildTerminalLines(events, { narrative: narrativeEnabled });
+  if (!lines.length) {
+    el.textContent = "> No runtime output.";
+    return;
+  }
+  el.textContent = "";
+  let index = 0;
+  terminalStreamTimer = window.setInterval(() => {
+    if (index >= lines.length) {
+      window.clearInterval(terminalStreamTimer);
+      terminalStreamTimer = null;
+      return;
+    }
+    el.textContent += (index === 0 ? "" : "\n") + lines[index];
+    el.scrollTop = el.scrollHeight;
+    index += 1;
+  }, 170);
 }

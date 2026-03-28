@@ -1,13 +1,14 @@
 import { renderTerminalLines } from "./terminal.js";
 import { renderEvents } from "./events.js";
 
-export function renderExecutionView(root, worker, events, stats) {
+export function renderExecutionView(root, worker, events, stats, options = {}) {
+  const narrative = options.narrative !== false;
   const violations = events.filter((event) => event.event_type === "violation");
   const warnings = events.filter((event) => event.policy_evaluation?.result === "warn");
   const awaitingApproval = worker.status === "approval";
 
   root.querySelector("[data-worker-title]").textContent = `${worker.worker_id} · ${worker.status}`;
-  root.querySelector("[data-terminal-feed]").textContent = renderTerminalLines(events);
+  root.querySelector("[data-terminal-feed]").textContent = renderTerminalLines(events, { narrative });
   root.querySelector("[data-events-list]").innerHTML = renderEvents(events) || "<div class=\"empty\">No events yet.</div>";
   root.querySelector("[data-governance-strip]").innerHTML = renderGovernanceStrip(worker, events);
 

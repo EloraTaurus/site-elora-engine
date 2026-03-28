@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,follow" />
+  <title>Redirecting...</title>
+  <script>
+    (function () {
+      var path = window.location.pathname || "/";
+      var search = window.location.search || "";
+      var hash = window.location.hash || "";
+
+      if (path.indexOf('/admin/') === 0 || path === '/admin') {
+        return;
+      }
+
+      var aliases = {
+        about: 'overview',
+        features: 'architecture'
+      };
+
+      var target = null;
+
+      if (/\.html$/i.test(path)) {
+        var slug = path.replace(/^\/+/, '').replace(/\.html$/i, '');
+        slug = aliases[slug] || slug;
+        target = '/' + slug + '/';
+      } else {
+        var bare = path.replace(/^\/+|\/+$/g, '');
+        if (bare) {
+          bare = aliases[bare] || bare;
+          target = '/' + bare + '/';
+        }
+      }
+
+      if (target && target !== path) {
+        window.location.replace(target + search + hash);
+      }
+    })();
+  </script>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: #0b1f3a;
+      color: #eaf3ff;
+    }
+    .wrap { text-align: center; padding: 24px; }
+    a { color: #7fc8ff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p>Page not found.</p>
+    <p><a href="/">Return to home</a></p>
+  </div>
+</body>
+</html>
