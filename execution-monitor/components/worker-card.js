@@ -2,6 +2,7 @@ export function renderWorkerCard(worker) {
   const statusClass = {
     running: "worker-running",
     idle: "worker-idle",
+    approval: "worker-approval",
     warning: "worker-warning",
     violation: "worker-violation",
   }[worker.status] || "worker-idle";

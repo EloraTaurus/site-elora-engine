@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Elora Engine public changelog for demo-visible updates." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://elorataurus.com/changelog/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Elora Taurus Project - Engine Changelog" />
+  <meta property="og:description" content="Public changelog for Elora Engine demo and walkthrough updates." />
+  <meta property="og:url" content="https://elorataurus.com/changelog/" />
+  <meta property="og:image" content="https://elorataurus.com/social.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Elora Taurus Project - Engine Changelog" />
+  <meta name="twitter:description" content="Track public demo and guided walkthrough changes for Elora Engine." />
+  <meta name="twitter:image" content="https://elorataurus.com/social.png" />
+  <title>The Elora Taurus Project - Engine Changelog</title>
+  <link rel="icon" href="/elora.png" />
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="elora-ga-id" content="G-33RBH775TR" />
+</head>
+<body>
+  <section class="top-stage" id="changelog">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand brand-link" href="/" aria-label="The Elora Taurus Project overview">
+          <div class="brand-icon"><img src="/elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='/admin/elora-avatar.svg';"></div>
+          <div>
+            <strong>The Elora Taurus Project</strong>
+            <small>An Independent Open Architecture for AI Governance</small>
+          </div>
+        </a>
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-changelog"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-changelog" data-top-links="1" class="top-links">
+          <a class="nav-btn" href="/overview/">Overview</a>
+          <a class="nav-btn" href="/architecture/">Architecture</a>
+          <a class="nav-btn" href="/demo/">Replay Demo</a>
+          <a class="nav-btn" href="/docs/">Documentation</a>
+          <a class="nav-btn" href="/research/">Research</a>
+          <a class="nav-btn active" href="/changelog/">Changelog</a>
+        </nav>
+      </div>
+    </header>
+    <div class="shell">
+      <section class="hero about-hero">
+        <div class="about-lead">
+          <h1>Project Changelog</h1>
+          <p>Public update stream for engine, site, and architecture-level changes.</p>
+          <div class="cta-row">
+            <a class="btn" href="/overview/">Back to Overview</a>
+            <a class="btn alt" href="/demo/">Open Replay Demo</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section surface-light">
+    <div class="section-inner">
+      <h2>Engine Updates</h2>
+      <p class="section-intro">Core runtime, governance boundary, and operator-surface changes.</p>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Site Updates</h3>
+        <p>Navigation, documentation IA, and public demo experience changes are tracked alongside engine updates.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Architecture Updates</h3>
+        <p>Governance-model and control-plane architecture changes are reflected in Research and Docs sections.</p>
+      </div>
+      <div class="card">
+        <div id="changelog-page-content" class="changelog-content">Loading changelog...</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <strong>The Elora Taurus Project</strong>
+        <nav class="footer-links">
+          <a href="/overview/">Overview</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/demo/">Replay Demo</a>
+          <a href="/docs/">Documentation</a>
+          <a href="/research/">Research</a>
+          <a href="/changelog/">Changelog</a>
+        
+          <a href="/cookie-policy/">Cookie Policy</a></nav>
+      </div>
+      <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
+      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
+      const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
+      const changelogPageContent = document.getElementById('changelog-page-content');
+
+      navToggles.forEach(function (toggle) {
+        const controls = toggle.getAttribute('aria-controls');
+        const links = controls ? document.getElementById(controls) : null;
+        if (!links) return;
+        toggle.addEventListener('click', function () {
+          const open = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        links.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 760) {
+          topLinksGroups.forEach(function (links) {
+            links.classList.remove('open');
+          });
+          navToggles.forEach(function (toggle) {
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+      function renderSimpleMarkdown(md) {
+        function esc(s) {
+          return s
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        }
+        const lines = md.split(/\r?\n/);
+        const html = [];
+        let inList = false;
+        lines.forEach(function (line) {
+          const t = line.trim();
+          if (!t) {
+            if (inList) {
+              html.push('</ul>');
+              inList = false;
+            }
+            return;
+          }
+          if (t.startsWith('### ')) {
+            if (inList) { html.push('</ul>'); inList = false; }
+            html.push('<h4>' + esc(t.slice(4)) + '</h4>');
+            return;
+          }
+          if (t.startsWith('## ')) {
+            if (inList) { html.push('</ul>'); inList = false; }
+            html.push('<h3>' + esc(t.slice(3)) + '</h3>');
+            return;
+          }
+          if (t.startsWith('# ')) {
+            if (inList) { html.push('</ul>'); inList = false; }
+            html.push('<h2>' + esc(t.slice(2)) + '</h2>');
+            return;
+          }
+          if (t.startsWith('- ')) {
+            if (!inList) {
+              html.push('<ul class="list">');
+              inList = true;
+            }
+            html.push('<li>' + esc(t.slice(2)) + '</li>');
+            return;
+          }
+          if (inList) {
+            html.push('</ul>');
+            inList = false;
+          }
+          html.push('<p>' + esc(t) + '</p>');
+        });
+        if (inList) html.push('</ul>');
+        return html.join('');
+      }
+
+      function makeCandidatePaths(filename) {
+        const base = window.location.pathname.replace(/[^/]*$/, '');
+        return [
+          '/content/' + filename,
+          './content/' + filename,
+          base + '/content/' + filename,
+          window.location.origin + base + '/content/' + filename
+        ];
+      }
+
+      async function fetchFirst(paths) {
+        for (let i = 0; i < paths.length; i += 1) {
+          const resp = await fetch(paths[i], { cache: 'no-store' });
+          if (resp.ok) return resp.text();
+        }
+        return null;
+      }
+
+      async function loadEngineChangelog() {
+        if (!changelogPageContent) return;
+        const engineCandidates = []
+          .concat(makeCandidatePaths('CHANGELOG_ENGINE.md'))
+          .concat(makeCandidatePaths('CHANGELOG_ENGINE'))
+          .concat(makeCandidatePaths('changelog.md'));
+        const md = await fetchFirst(engineCandidates);
+        changelogPageContent.innerHTML = md
+          ? renderSimpleMarkdown(md)
+          : 'Changelog is currently unavailable.';
+      }
+      loadEngineChangelog();
+    })();
+  </script>
+  <script defer src="/analytics-consent.js"></script>
+</body>
+</html>

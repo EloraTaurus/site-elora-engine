@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Public documentation pack for Elora Engine, Fabric, and WorkerHost architecture and operator references." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://elorataurus.com/docs/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Elora Taurus Project - Public Documentation" />
+  <meta property="og:description" content="Browse public-safe documentation copies for Engine, Fabric, and WorkerHost." />
+  <meta property="og:url" content="https://elorataurus.com/docs/" />
+  <meta property="og:image" content="https://elorataurus.com/social.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Elora Taurus Project - Public Documentation" />
+  <meta name="twitter:description" content="Public documentation pack with architecture and operator references across Elora Engine surfaces." />
+  <meta name="twitter:image" content="https://elorataurus.com/social.png" />
+  <title>The Elora Taurus Project - Public Documentation</title>
+  <link rel="icon" href="/elora.png" />
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="elora-ga-id" content="G-33RBH775TR" />
+</head>
+<body>
+  <section class="top-stage" id="docs">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand brand-link" href="/" aria-label="The Elora Taurus Project overview">
+          <div class="brand-icon"><img src="/elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='/admin/elora-avatar.svg';"></div>
+          <div>
+            <strong>The Elora Taurus Project</strong>
+            <small>An Independent Open Architecture for AI Governance</small>
+          </div>
+        </a>
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-docs"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-docs" data-top-links="1" class="top-links">
+          <a class="nav-btn" href="/overview/">Overview</a>
+          <a class="nav-btn" href="/architecture/">Architecture</a>
+          <a class="nav-btn" href="/demo/">Replay Demo</a>
+          <a class="nav-btn active" href="/docs/">Documentation</a>
+          <a class="nav-btn" href="/research/">Research</a>
+          <a class="nav-btn" href="/changelog/">Changelog</a>
+        </nav>
+      </div>
+    </header>
+    <div class="shell">
+      <section class="hero about-hero">
+        <div class="about-lead">
+          <h1 id="pack-page-title">Public Documentation Pack</h1>
+          <p id="pack-page-description">Public copies of Engine, Fabric, and WorkerHost documentation for architecture, operator workflows, and capability context.</p>
+          <p class="section-intro" id="pack-last-updated">Last updated: 2026-03-10</p>
+          <div class="cta-row">
+            <a class="btn" href="/architecture/">Back to Architecture</a>
+          <a class="btn alt" href="/demo/">Open Replay Demo</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section surface-light">
+    <div class="section-inner">
+      <h2 id="pack-section-title">Public Documentation Pack</h2>
+      <p id="pack-section-intro" class="section-intro">Select a document from the left to view a public-safe copy.</p>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Documentation Scope</h3>
+        <p>This pack publishes curated public copies of selected docs from Engine, Fabric, and WorkerHost. It is intended for architecture and operator understanding, not full private deployment replication.</p>
+      </div>
+      <div class="pack-layout">
+        <aside class="card pack-nav">
+          <h3>Documents</h3>
+          <div id="pack-nav-list" class="pack-nav-list">Loading...</div>
+        </aside>
+        <article class="card pack-reader">
+          <div id="pack-reader-content" class="changelog-content">Loading document...</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <strong>The Elora Taurus Project</strong>
+        <nav class="footer-links">
+          <a href="/overview/">Overview</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/demo/">Replay Demo</a>
+          <a href="/docs/">Documentation</a>
+          <a href="/research/">Research</a>
+          <a href="/changelog/">Changelog</a>
+        
+          <a href="/cookie-policy/">Cookie Policy</a></nav>
+      </div>
+      <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
+      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
+      const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
+      const navList = document.getElementById('pack-nav-list');
+      const reader = document.getElementById('pack-reader-content');
+      const pageTitle = document.getElementById('pack-page-title');
+      const pageDescription = document.getElementById('pack-page-description');
+      const pageLastUpdated = document.getElementById('pack-last-updated');
+      const sectionTitle = document.getElementById('pack-section-title');
+      const sectionIntro = document.getElementById('pack-section-intro');
+      const defaultPackKey = 'PUBLIC_DOCS';
+      const query = new URLSearchParams(window.location.search);
+      const requestedPack = (query.get('pack') || defaultPackKey).toUpperCase().replace(/[^A-Z0-9_-]/g, '');
+      let activePack = {
+        title: 'Public Documentation Pack',
+        description: 'Public copies of Engine, Fabric, and WorkerHost documentation for architecture, operator workflows, and capability context.',
+        section_intro: 'Select a document from the left to view a public-safe copy.',
+        last_updated: '2026-03-10',
+        folder: defaultPackKey,
+        sections: [
+          {
+            title: 'Documents',
+            articles: [
+              { file: '01_engine_readme_md.md', title: 'Engine: README' }
+            ]
+          }
+        ]
+      };
+      let navIsMobile = window.innerWidth <= 1020;
+
+      navToggles.forEach(function (toggle) {
+        const controls = toggle.getAttribute('aria-controls');
+        const links = controls ? document.getElementById(controls) : null;
+        if (!links) return;
+        toggle.addEventListener('click', function () {
+          const open = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        links.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 760) {
+          topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
+          navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
+        }
+        const nextMobile = window.innerWidth <= 1020;
+        if (nextMobile !== navIsMobile && navList && navList.children.length) {
+          navIsMobile = nextMobile;
+          initNavCollapsibles();
+        }
+      });
+
+      function esc(s) {
+        return s
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function renderSimpleMarkdown(md) {
+        const lines = md.split(/\r?\n/);
+        const html = [];
+        let inList = false;
+        lines.forEach(function (line) {
+          const t = line.trim();
+          if (!t) {
+            if (inList) { html.push('</ul>'); inList = false; }
+            return;
+          }
+          if (t.startsWith('### ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h4>' + esc(t.slice(4)) + '</h4>'); return; }
+          if (t.startsWith('## ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h3>' + esc(t.slice(3)) + '</h3>'); return; }
+          if (t.startsWith('# ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h2>' + esc(t.slice(2)) + '</h2>'); return; }
+          if (t.startsWith('- ')) {
+            if (!inList) { html.push('<ul class="list">'); inList = true; }
+            html.push('<li>' + esc(t.slice(2)) + '</li>');
+            return;
+          }
+          if (inList) { html.push('</ul>'); inList = false; }
+          html.push('<p>' + esc(t) + '</p>');
+        });
+        if (inList) html.push('</ul>');
+        return html.join('');
+      }
+
+      function makeCandidatePaths(relativePath) {
+        const base = window.location.pathname.replace(/[^/]*$/, '');
+        return [
+          relativePath,
+          './' + relativePath,
+          base + relativePath,
+          window.location.origin + base + relativePath
+        ];
+      }
+
+      async function fetchFirst(paths) {
+        for (let i = 0; i < paths.length; i += 1) {
+          const resp = await fetch(paths[i], { cache: 'no-store' });
+          if (resp.ok) return resp.text();
+        }
+        return null;
+      }
+
+      function setActiveNav(file) {
+        document.querySelectorAll('[data-pack-file]').forEach(function (btn) {
+          const isActive = btn.getAttribute('data-pack-file') === file;
+          btn.classList.toggle('active', isActive);
+          if (isActive) {
+            const group = btn.closest('.pack-nav-group');
+            if (group) group.classList.remove('collapsed');
+          }
+        });
+      }
+
+      function initNavCollapsibles() {
+        navList.querySelectorAll('.pack-nav-group').forEach(function (group, index) {
+          const toggle = group.querySelector('.pack-nav-group-toggle');
+          if (!toggle) return;
+          const shouldCollapse = index !== 0;
+          group.classList.toggle('collapsed', shouldCollapse);
+          toggle.setAttribute('aria-expanded', String(!shouldCollapse));
+          toggle.addEventListener('click', function () {
+            const collapsed = group.classList.toggle('collapsed');
+            toggle.setAttribute('aria-expanded', String(!collapsed));
+          });
+        });
+      }
+
+      function applyPackMeta(pack) {
+        const title = pack && pack.title ? String(pack.title) : activePack.title;
+        const description = pack && pack.description ? String(pack.description) : activePack.description;
+        const intro = pack && pack.section_intro ? String(pack.section_intro) : activePack.section_intro;
+        const lastUpdated = pack && pack.last_updated ? String(pack.last_updated) : activePack.last_updated;
+        if (pageTitle) pageTitle.textContent = title;
+        if (sectionTitle) sectionTitle.textContent = title;
+        if (pageDescription) pageDescription.textContent = description;
+        if (sectionIntro) sectionIntro.textContent = intro;
+        if (pageLastUpdated && lastUpdated) pageLastUpdated.textContent = 'Last updated: ' + lastUpdated;
+      }
+
+      async function loadPackManifest() {
+        const rel = '/content/' + requestedPack + '/manifest.json';
+        const raw = await fetchFirst(makeCandidatePaths(rel));
+        if (!raw) return null;
+        try {
+          return JSON.parse(raw);
+        } catch (err) {
+          return null;
+        }
+      }
+
+      async function loadArticle(file) {
+        const rel = '/content/' + activePack.folder + '/' + file;
+        const md = await fetchFirst(makeCandidatePaths(rel));
+        if (!md) {
+          reader.textContent = 'Document is currently unavailable.';
+          return;
+        }
+        reader.innerHTML = renderSimpleMarkdown(md);
+        reader.scrollTop = 0;
+        setActiveNav(file);
+      }
+
+      function renderNav() {
+        const sections = Array.isArray(activePack.sections) ? activePack.sections : [];
+        const hasArticles = sections.some(function (section) {
+          return Array.isArray(section.articles) && section.articles.length > 0;
+        });
+        if (!hasArticles) {
+          navList.textContent = 'No documents configured for this pack.';
+          reader.textContent = 'No document content is currently configured.';
+          return;
+        }
+        navList.innerHTML = sections.map(function (section) {
+          const sectionArticles = Array.isArray(section.articles) ? section.articles : [];
+          const sectionTitle = String(section.title || 'Section');
+          const buttons = sectionArticles.map(function (item) {
+            return '<button type="button" class="pack-nav-btn" data-pack-file="' + esc(item.file) + '">' + esc(item.title || item.file) + '</button>';
+          }).join('');
+          return '<section class="pack-nav-group"><button type="button" class="pack-nav-group-toggle" aria-expanded="true"><span class="pack-nav-group-title">' + esc(sectionTitle) + '</span></button><div class="pack-nav-group-items">' + buttons + '</div></section>';
+        }).join('');
+        navList.querySelectorAll('[data-pack-file]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const file = btn.getAttribute('data-pack-file');
+            if (!file) return;
+            loadArticle(file);
+          });
+        });
+        initNavCollapsibles();
+      }
+
+      async function init() {
+        const manifest = await loadPackManifest();
+        if (manifest && ((Array.isArray(manifest.sections) && manifest.sections.length) || (Array.isArray(manifest.articles) && manifest.articles.length))) {
+          const normalizedSections = Array.isArray(manifest.sections) && manifest.sections.length
+            ? manifest.sections
+                .map(function (section) {
+                  const sectionArticles = Array.isArray(section.articles) ? section.articles : [];
+                  return {
+                    title: String(section.title || 'Section'),
+                    articles: sectionArticles
+                      .filter(function (item) { return item && item.file; })
+                      .map(function (item) {
+                        return { file: String(item.file), title: String(item.title || item.file) };
+                      })
+                  };
+                })
+                .filter(function (section) { return section.articles.length > 0; })
+            : [{
+                title: 'Documents',
+                articles: manifest.articles
+                  .filter(function (item) { return item && item.file; })
+                  .map(function (item) {
+                    return { file: String(item.file), title: String(item.title || item.file) };
+                  })
+              }];
+          activePack = {
+            title: manifest.title || activePack.title,
+            description: manifest.description || activePack.description,
+            section_intro: manifest.section_intro || activePack.section_intro,
+            last_updated: manifest.last_updated || activePack.last_updated,
+            folder: String(manifest.folder || requestedPack || activePack.folder).toUpperCase().replace(/[^A-Z0-9_-]/g, ''),
+            sections: normalizedSections
+          };
+        }
+        applyPackMeta(activePack);
+        renderNav();
+        const firstSection = (activePack.sections || []).find(function (section) {
+          return Array.isArray(section.articles) && section.articles.length > 0;
+        });
+        if (firstSection && firstSection.articles && firstSection.articles[0]) {
+          loadArticle(firstSection.articles[0].file);
+        }
+      }
+
+      init();
+    })();
+  </script>
+  <script defer src="/analytics-consent.js"></script>
+</body>
+</html>

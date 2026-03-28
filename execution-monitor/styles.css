@@ -15,9 +15,12 @@
 body {
   margin: 0;
   font-family: "Space Grotesk", system-ui, sans-serif;
-  background: radial-gradient(1200px 800px at 80% -20%, rgba(56, 189, 248, 0.2), transparent 45%),
-              radial-gradient(1000px 700px at 0% 120%, rgba(79, 70, 229, 0.16), transparent 55%),
-              var(--bg);
+  background:
+    linear-gradient(rgba(4, 10, 20, 0.72), rgba(4, 10, 20, 0.8)),
+    radial-gradient(1200px 800px at 80% -20%, rgba(56, 189, 248, 0.2), transparent 45%),
+    radial-gradient(1000px 700px at 0% 120%, rgba(79, 70, 229, 0.16), transparent 55%),
+    url("./background.png") center center / cover no-repeat fixed,
+    var(--bg);
   color: var(--text);
 }
 
@@ -72,6 +75,7 @@ body {
 }
 
 .mode-btn.active { border-color: var(--blue); background: #0f3258; }
+.start-demo-btn { border-color: #3ebd8f; }
 
 .layout {
   display: grid;
@@ -141,6 +145,7 @@ body {
 .worker-stats { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: #c5daff; }
 .worker-running { box-shadow: inset 2px 0 0 var(--green); }
 .worker-warning { box-shadow: inset 2px 0 0 var(--amber); }
+.worker-approval { box-shadow: inset 2px 0 0 #fbbf24; }
 .worker-violation { box-shadow: inset 2px 0 0 var(--red); }
 
 .exec-view {
@@ -151,6 +156,40 @@ body {
 .exec-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
 .exec-head h2 { margin: 0; font-size: 18px; }
 .exec-sub { color: var(--muted); font-size: 13px; }
+.governance-strip {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+.stage {
+  border: 1px solid #2d4f79;
+  border-radius: 999px;
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #b9d4f4;
+  background: rgba(14, 29, 53, 0.86);
+}
+.stage.done {
+  border-color: rgba(56, 189, 248, 0.55);
+  color: #8fd4ff;
+}
+.stage.active {
+  border-color: rgba(56, 189, 248, 0.8);
+  color: #d8f2ff;
+}
+.stage.commit-approved {
+  border-color: rgba(34, 197, 94, 0.75);
+  color: #8ef1b2;
+}
+.stage.commit-denied {
+  border-color: rgba(239, 68, 68, 0.8);
+  color: #ffb3b3;
+}
+.stage.commit-pending {
+  border-color: rgba(245, 158, 11, 0.8);
+  color: #ffd69f;
+}
 .exec-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -185,6 +224,38 @@ body {
   font-size: 12px;
   background: #102844;
 }
+.approval-box {
+  border: 1px solid rgba(245, 158, 11, 0.55);
+  border-radius: 8px;
+  padding: 8px;
+  background: rgba(245, 158, 11, 0.08);
+}
+.approval-title {
+  font-size: 12px;
+  color: #ffd28d;
+  margin-bottom: 6px;
+}
+.approval-actions {
+  display: flex;
+  gap: 6px;
+}
+.approval-btn {
+  border: 1px solid #3a587e;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #112746;
+  color: #d7e9ff;
+}
+.approval-allow {
+  border-color: rgba(34, 197, 94, 0.6);
+  color: #8ef1b2;
+}
+.approval-deny {
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #ffadad;
+}
 
 .events {
   border: 1px solid #2c4e77;
@@ -215,7 +286,69 @@ body {
   font-size: 13px;
 }
 
+.intro-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 8, 20, 0.68);
+  display: grid;
+  place-items: center;
+  z-index: 30;
+  padding: 16px;
+}
+.intro-backdrop.hidden { display: none; }
+.intro-modal {
+  max-width: 720px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #0d1f39;
+  padding: 18px;
+}
+.intro-modal h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+.intro-modal p {
+  margin: 0;
+  color: #c6dbfb;
+  line-height: 1.45;
+}
+.intro-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toast-stack {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: grid;
+  gap: 8px;
+  z-index: 35;
+  max-width: 360px;
+}
+.toast {
+  border: 1px solid #2f5984;
+  border-radius: 10px;
+  background: rgba(8, 20, 38, 0.95);
+  color: #d7e9ff;
+  padding: 10px 12px;
+  font-size: 13px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.toast.warn {
+  border-color: rgba(245, 158, 11, 0.75);
+  color: #ffd69f;
+}
+.toast.fail {
+  border-color: rgba(239, 68, 68, 0.75);
+  color: #ffb3b3;
+}
+
 @media (max-width: 1080px) {
   .layout,
   .exec-grid { grid-template-columns: 1fr; }
+  .governance-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

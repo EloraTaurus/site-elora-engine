@@ -16,6 +16,8 @@
         <p>Phase 2.1 UI scaffold. Supports demo stream now and live adapter path for engine data.</p>
       </div>
       <div class="mode-row">
+        <button class="mode-btn start-demo-btn" data-start-demo>Start Demo</button>
+        <button class="mode-btn" data-narrative-toggle aria-pressed="true">Narrative: On</button>
         <strong>Mode:</strong>
         <span data-mode-label>DEMO</span>
         <button class="mode-btn active" data-mode-switch="demo">Demo</button>
@@ -36,6 +38,15 @@
           <h2 data-worker-title>No worker selected · idle</h2>
           <span class="exec-sub">Execution view</span>
         </div>
+        <section class="governance-strip" data-governance-strip>
+          <div class="stage">Worker Assigned</div>
+          <div class="stage">Tape Loaded</div>
+          <div class="stage">Inference</div>
+          <div class="stage">Proposal</div>
+          <div class="stage">Justification</div>
+          <div class="stage">Commit</div>
+          <div class="stage">Execution</div>
+        </section>
 
         <div class="exec-grid">
           <pre class="terminal" data-terminal-feed>> Select a worker card to stream terminal output.</pre>
@@ -60,6 +71,23 @@
       </section>
     </div>
   </main>
+
+  <div class="intro-backdrop" data-intro-backdrop>
+    <section class="intro-modal">
+      <h2>Execution Monitor Demo</h2>
+      <p>
+        This demo is a sample of the execution model coming in the next major phase of Elora Engine.
+        It is designed to show oversight of worker container activity: assignment, approval checks,
+        violations, termination, and recycling.
+      </p>
+      <div class="intro-actions">
+        <button class="mode-btn active" data-intro-start>Start Demo</button>
+        <button class="mode-btn" data-intro-close>View Idle UI</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast-stack" data-toast-stack></div>
 
   <script type="module" src="./app.js"></script>
 </body>

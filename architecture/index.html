@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Architecture context for Elora Engine: governance model, security posture, pipeline design, and active build direction." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://elorataurus.com/architecture/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Elora Taurus Project - Architecture Context" />
+  <meta property="og:description" content="Architecture context for what Elora can do today, how governance pipeline decisions are made, and what is in active build." />
+  <meta property="og:url" content="https://elorataurus.com/architecture/" />
+  <meta property="og:image" content="https://elorataurus.com/social.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Elora Taurus Project - Architecture Context" />
+  <meta name="twitter:description" content="Architecture context for governance, pipeline decisions, security posture, and roadmap direction." />
+  <meta name="twitter:image" content="https://elorataurus.com/social.png" />
+  <title>The Elora Taurus Project - Architecture Context</title>
+  <link rel="icon" href="/elora.png" />
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="elora-ga-id" content="G-33RBH775TR" />
+</head>
+<body>
+  <section class="top-stage" id="features">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand brand-link" href="/" aria-label="The Elora Taurus Project overview">
+          <div class="brand-icon"><img src="/elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='/admin/elora-avatar.svg';"></div>
+          <div>
+            <strong>The Elora Taurus Project</strong>
+            <small>An Independent Open Architecture for AI Governance</small>
+          </div>
+        </a>
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-features"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-features" data-top-links="1" class="top-links">
+          <a class="nav-btn" href="/overview/">Overview</a>
+          <a class="nav-btn active" href="/architecture/">Architecture</a>
+          <a class="nav-btn" href="/demo/">Replay Demo</a>
+          <a class="nav-btn" href="/docs/">Documentation</a>
+          <a class="nav-btn" href="/research/">Research</a>
+          <a class="nav-btn" href="/changelog/">Changelog</a>
+        </nav>
+      </div>
+    </header>
+    <div class="shell">
+      <section class="hero about-hero">
+        <div class="about-lead">
+          <h1 id="pack-page-title">Elora Engine Architecture Context</h1>
+          <p id="pack-page-description">Structured feature and architecture context for what Elora can do today and what is in active build.</p>
+          <div class="cta-row">
+            <a class="btn" href="/demo/">Open Replay Demo</a>
+            <a class="btn alt" href="/research/">Read Research</a>
+          </div>
+          <img class="architecture-banner" src="/Elora Taurus Workflow Banner.png" alt="Elora Taurus governance workflow banner" />
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section surface-light">
+    <div class="section-inner">
+      <h2 id="pack-section-title">Elora Engine Architecture Context</h2>
+      <p id="pack-section-intro" class="section-intro">Start with Snapshot, then use the left navigation for deeper context pages.</p>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Architecture Layers</h3>
+        <p>Elora can also be understood as a layered governance architecture that separates proposal generation from execution authority.</p>
+        <p>The layered model explains how requests move from trusted ingress through proposal generation and admissibility evaluation before any execution occurs.</p>
+        <div class="cta-row" style="margin-top:10px;">
+          <a class="btn" href="/architecture-layers/">Read the Governance Architecture Layers page</a>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:14px;" id="cryptographic-foundations">
+        <h3>Foundations: Cryptographic Evidence and AI Governance</h3>
+        <p>The Elora project does not claim invention of cryptographic governance primitives. It applies established distributed-systems security mechanisms to AI runtime governance in a structured control-plane architecture.</p>
+        <p>AI governance is often discussed as if it requires entirely new cryptographic frameworks. In practice, the required primitives already exist and have secured distributed systems for decades. Elora applies these mechanisms so governance decisions can be reproduced and verified rather than asserted procedurally.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Ingress and Authentication Boundary</h3>
+        <p>Caddy is used as the HTTPS edge gateway and routing boundary for engine surfaces. Runtime request authorization is enforced in the engine using bearer API key checks plus signed request validation with timestamp-skew controls.</p>
+        <p>Some public-safe status surfaces are intentionally exposed by design; protected runtime and admin surfaces require authenticated access. For async runtime flows, the engine issues short-lived job IDs and job tokens after authorized start requests so status polling remains scoped.</p>
+      </div>
+      <div class="grid-2" style="margin-bottom:14px;">
+        <div class="card">
+          <h3>Leveraging Established Cryptographic Primitives</h3>
+          <p>Elora uses proven infrastructure primitives such as SHA-256 hashing, HMAC signatures, hash-linked replay integrity fields, and TLS-backed transport trust for verifiable evidence paths.</p>
+        </div>
+        <div class="card">
+          <h3>Execution Boundary</h3>
+          <p>The architecture separates reasoning from execution so the control plane can evaluate admissibility at commit before actions occur.</p>
+          <p>Inference produces proposals; commit authorizes or blocks outcomes using captured policy and authority context.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Open Architecture Stance</h3>
+        <p>Elora discloses architecture, governance models, and operator design patterns while protecting sensitive runtime contracts and deployment internals.</p>
+        <p>This keeps safety primitives inspectable and portable without exposing operational attack surface details.</p>
+      </div>
+      <div class="pack-layout">
+        <aside class="card pack-nav">
+          <h3>Pages</h3>
+          <div id="pack-nav-list" class="pack-nav-list">Loading...</div>
+        </aside>
+        <article class="card pack-reader">
+          <div id="pack-reader-content" class="changelog-content">Loading page...</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <strong>The Elora Taurus Project</strong>
+        <nav class="footer-links">
+          <a href="/overview/">Overview</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/demo/">Replay Demo</a>
+          <a href="/docs/">Documentation</a>
+          <a href="/research/">Research</a>
+          <a href="/changelog/">Changelog</a>
+        
+          <a href="/cookie-policy/">Cookie Policy</a></nav>
+      </div>
+      <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
+      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
+      const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
+      const navList = document.getElementById('pack-nav-list');
+      const reader = document.getElementById('pack-reader-content');
+      const pageTitle = document.getElementById('pack-page-title');
+      const pageDescription = document.getElementById('pack-page-description');
+      const sectionTitle = document.getElementById('pack-section-title');
+      const sectionIntro = document.getElementById('pack-section-intro');
+      const defaultPackKey = 'WEBSITE_CONTEXT_PACK';
+      const query = new URLSearchParams(window.location.search);
+      const requestedPack = (query.get('pack') || defaultPackKey).toUpperCase().replace(/[^A-Z0-9_-]/g, '');
+      let activePack = {
+        title: 'Elora Engine Architecture Context',
+        description: 'Structured feature and architecture context for what Elora can do today and what is in active build.',
+        section_intro: 'Start with Snapshot, then use the left navigation for deeper context pages.',
+        folder: defaultPackKey,
+        articles: [
+          { file: '00_SNAPSHOT.md', title: 'Snapshot' }
+        ]
+      };
+      let navIsMobile = window.innerWidth <= 1020;
+
+      navToggles.forEach(function (toggle) {
+        const controls = toggle.getAttribute('aria-controls');
+        const links = controls ? document.getElementById(controls) : null;
+        if (!links) return;
+        toggle.addEventListener('click', function () {
+          const open = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        links.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 760) {
+          topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
+          navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
+        }
+        const nextMobile = window.innerWidth <= 1020;
+        if (nextMobile !== navIsMobile && navList && navList.children.length) {
+          navIsMobile = nextMobile;
+          initNavCollapsibles();
+        }
+      });
+
+      function esc(s) {
+        return s
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function renderSimpleMarkdown(md) {
+        const lines = md.split(/\r?\n/);
+        const html = [];
+        let inList = false;
+        lines.forEach(function (line) {
+          const t = line.trim();
+          if (!t) {
+            if (inList) { html.push('</ul>'); inList = false; }
+            return;
+          }
+          if (t.startsWith('### ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h4>' + esc(t.slice(4)) + '</h4>'); return; }
+          if (t.startsWith('## ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h3>' + esc(t.slice(3)) + '</h3>'); return; }
+          if (t.startsWith('# ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h2>' + esc(t.slice(2)) + '</h2>'); return; }
+          if (t.startsWith('- ')) {
+            if (!inList) { html.push('<ul class="list">'); inList = true; }
+            html.push('<li>' + esc(t.slice(2)) + '</li>');
+            return;
+          }
+          if (inList) { html.push('</ul>'); inList = false; }
+          html.push('<p>' + esc(t) + '</p>');
+        });
+        if (inList) html.push('</ul>');
+        return html.join('');
+      }
+
+      function makeCandidatePaths(relativePath) {
+        const base = window.location.pathname.replace(/[^/]*$/, '');
+        return [
+          relativePath,
+          './' + relativePath,
+          base + relativePath,
+          window.location.origin + base + relativePath
+        ];
+      }
+
+      async function fetchFirst(paths) {
+        for (let i = 0; i < paths.length; i += 1) {
+          const resp = await fetch(paths[i], { cache: 'no-store' });
+          if (resp.ok) return resp.text();
+        }
+        return null;
+      }
+
+      function setActiveNav(file) {
+        document.querySelectorAll('[data-pack-file]').forEach(function (btn) {
+          const isActive = btn.getAttribute('data-pack-file') === file;
+          btn.classList.toggle('active', isActive);
+          if (isActive) {
+            const group = btn.closest('.pack-nav-group');
+            if (group) group.classList.remove('collapsed');
+          }
+        });
+      }
+
+      function initNavCollapsibles() {
+        const mobile = window.innerWidth <= 1020;
+        navList.querySelectorAll('.pack-nav-group').forEach(function (group) {
+          const toggle = group.querySelector('.pack-nav-group-toggle');
+          if (!toggle) return;
+          const shouldCollapse = mobile ? false : false;
+          group.classList.toggle('collapsed', shouldCollapse);
+          toggle.setAttribute('aria-expanded', String(!shouldCollapse));
+          toggle.onclick = function () {
+            const collapsed = group.classList.toggle('collapsed');
+            toggle.setAttribute('aria-expanded', String(!collapsed));
+          };
+        });
+      }
+
+      function applyPackMeta(pack) {
+        const title = pack && pack.title ? String(pack.title) : activePack.title;
+        const description = pack && pack.description ? String(pack.description) : activePack.description;
+        const intro = pack && pack.section_intro ? String(pack.section_intro) : activePack.section_intro;
+        if (pageTitle) pageTitle.textContent = title;
+        if (sectionTitle) sectionTitle.textContent = title;
+        if (pageDescription) pageDescription.textContent = description;
+        if (sectionIntro) sectionIntro.textContent = intro;
+      }
+
+      async function loadPackManifest() {
+        const rel = '/content/' + requestedPack + '/manifest.json';
+        const raw = await fetchFirst(makeCandidatePaths(rel));
+        if (!raw) return null;
+        try {
+          return JSON.parse(raw);
+        } catch (err) {
+          return null;
+        }
+      }
+
+      async function loadArticle(file) {
+        const rel = '/content/' + activePack.folder + '/' + file;
+        const md = await fetchFirst(makeCandidatePaths(rel));
+        if (!md) {
+          reader.textContent = 'Page is currently unavailable.';
+          return;
+        }
+        reader.innerHTML = renderSimpleMarkdown(md);
+        setActiveNav(file);
+      }
+
+      function renderNav() {
+        const articles = Array.isArray(activePack.articles) ? activePack.articles : [];
+        if (!articles.length) {
+          navList.textContent = 'No pages configured for this pack.';
+          reader.textContent = 'No page content is currently configured.';
+          return;
+        }
+        const buttons = articles.map(function (item) {
+          return '<button type="button" class="pack-nav-btn" data-pack-file="' + esc(item.file) + '">' + esc(item.title || item.file) + '</button>';
+        }).join('');
+        navList.innerHTML = '<section class="pack-nav-group"><button type="button" class="pack-nav-group-toggle" aria-expanded="true"><span class="pack-nav-group-title">Pages</span></button><div class="pack-nav-group-items">' + buttons + '</div></section>';
+        navList.querySelectorAll('[data-pack-file]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const file = btn.getAttribute('data-pack-file');
+            if (!file) return;
+            loadArticle(file);
+          });
+        });
+        initNavCollapsibles();
+      }
+
+      async function init() {
+        const manifest = await loadPackManifest();
+        if (manifest && Array.isArray(manifest.articles) && manifest.articles.length) {
+          activePack = {
+            title: manifest.title || activePack.title,
+            description: manifest.description || activePack.description,
+            section_intro: manifest.section_intro || activePack.section_intro,
+            folder: String(manifest.folder || requestedPack || activePack.folder).toUpperCase().replace(/[^A-Z0-9_-]/g, ''),
+            articles: manifest.articles
+              .filter(function (item) { return item && item.file; })
+              .map(function (item) {
+                return { file: String(item.file), title: String(item.title || item.file) };
+              })
+          };
+        }
+        applyPackMeta(activePack);
+        renderNav();
+        if (activePack.articles && activePack.articles.length) {
+          loadArticle(activePack.articles[0].file);
+        }
+      }
+
+      init();
+    })();
+  </script>
+  <script defer src="/analytics-consent.js"></script>
+</body>
+</html>

@@ -1,9 +1,14 @@
-export function renderTerminalLines(events) {
-  const lines = events.map((event) => {
+export function buildTerminalLines(events, options = {}) {
+  const narrative = options.narrative !== false;
+  return events.map((event) => {
     const marker = event.event_type === "violation" ? "🚫" : event.event_type === "enforcement" ? "⚠️" : ">";
-    return `${marker} ${event.message || summarizeEvent(event)}`;
+    if (narrative) return `${marker} ${event.message || summarizeEvent(event)}`;
+    return `${marker} ${summarizeEvent(event)}`;
   });
-  return lines.join("\n");
+}
+
+export function renderTerminalLines(events, options = {}) {
+  return buildTerminalLines(events, options).join("\n");
 }
 
 function summarizeEvent(event) {

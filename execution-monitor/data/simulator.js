@@ -2,6 +2,7 @@ import { DEMO_SCENARIOS } from "./demo-data.js";
 
 export function scenarioForWorker(worker) {
   if (worker.status === "violation") return "violation";
+  if (worker.status === "approval") return "approval";
   if (worker.status === "warning") return "warning";
   return "normal";
 }

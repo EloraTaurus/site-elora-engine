@@ -27,6 +27,17 @@ class DemoDataSource {
     return { events, stats };
   }
 
+  getWorker(workerId) {
+    return this.hosts.flatMap((host) => host.workers || []).find((item) => item.worker_id === workerId) || null;
+  }
+
+  updateWorker(workerId, patch = {}) {
+    const worker = this.getWorker(workerId);
+    if (!worker) return null;
+    Object.assign(worker, patch);
+    return worker;
+  }
+
   tick() {
     const hosts = this.hosts;
     const allWorkers = hosts.flatMap((host) => host.workers || []);
@@ -57,15 +68,19 @@ class DemoDataSource {
       if (targetHost) {
         const workerId = `wrk-dyn-${this.nextWorkerId++}`;
         const tape = this.tapePool[Math.floor(Math.random() * this.tapePool.length)];
+        const status = Math.random() < 0.28 ? "approval" : "running";
         targetHost.workers.push({
           worker_id: workerId,
           job_id: `job-${Math.floor(1000 + Math.random() * 9000)}`,
           tape_id: tape,
-          status: "running",
+          status,
           event_count: 1,
           violation_count: 0,
+          __approvalRequestedAt: status === "approval" ? Date.now() : 0,
         });
-        this.lastRuntimeMessage = `${workerId} assigned authorised workflow (${tape}).`;
+        this.lastRuntimeMessage = status === "approval"
+          ? `${workerId} awaiting operator approval (${tape}).`
+          : `${workerId} assigned authorised workflow (${tape}).`;
       }
     } else if (activeWorkers.length > 0 && random < 0.72) {
       const worker = activeWorkers[Math.floor(Math.random() * activeWorkers.length)];
@@ -85,6 +100,19 @@ class DemoDataSource {
         this.lastRuntimeMessage = `${worker.worker_id} policy violation detected. Worker terminated, container recycled.`;
       }
     }
+
+    // Auto-expire approvals to show governance enforcement.
+    const now = Date.now();
+    const approvals = this.hosts.flatMap((host) => host.workers || []).filter((w) => w.status === "approval");
+    approvals.forEach((worker) => {
+      const requestedAt = Number(worker.__approvalRequestedAt || now);
+      if (now - requestedAt > 7000) {
+        worker.status = "violation";
+        worker.violation_count = Number(worker.violation_count || 0) + 1;
+        worker.__terminatedAt = now;
+        this.lastRuntimeMessage = `${worker.worker_id} approval timeout. Worker terminated, container recycled.`;
+      }
+    });
 
     // Keep host status live for the demo.
     this.hosts.forEach((host) => {
@@ -114,6 +142,7 @@ let hostGroups = [];
 let selectedWorker = null;
 const expandedHosts = new Set();
 let demoTicker = null;
+let demoRunning = false;
 
 const els = {
   hostGroups: document.querySelector("[data-host-groups]"),
@@ -121,6 +150,11 @@ const els = {
   modeLabel: document.querySelector("[data-mode-label]"),
   modeButtons: document.querySelectorAll("[data-mode-switch]"),
   status: document.querySelector("[data-runtime-status]"),
+  introBackdrop: document.querySelector("[data-intro-backdrop]"),
+  introStart: document.querySelector("[data-intro-start]"),
+  introClose: document.querySelector("[data-intro-close]"),
+  startDemo: document.querySelector("[data-start-demo]"),
+  toastStack: document.querySelector("[data-toast-stack]"),
 };
 
 boot();
@@ -129,8 +163,41 @@ async function boot() {
   bindModeSwitch();
   bindHostToggle();
   bindWorkerOpen();
+  bindApprovalActions();
+  bindDemoControls();
   await refreshWorkers();
-  startDemoTicker();
+  setStatus("Demo paused. Click Start Demo.");
+}
+
+function bindApprovalActions() {
+  document.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-approval-action]");
+    if (!button || currentMode !== "demo") return;
+    const action = button.getAttribute("data-approval-action");
+    const workerId = button.getAttribute("data-approval-worker");
+    if (!workerId) return;
+    const source = dataSources.demo;
+    const worker = source.getWorker(workerId);
+    if (!worker || worker.status !== "approval") return;
+    if (action === "approve") {
+      source.updateWorker(workerId, { status: "running", event_count: Number(worker.event_count || 0) + 1 });
+      source.lastRuntimeMessage = `${workerId} approved by operator. Execution resumed.`;
+      pushToast(source.lastRuntimeMessage);
+    } else {
+      source.updateWorker(workerId, {
+        status: "violation",
+        violation_count: Number(worker.violation_count || 0) + 1,
+        __terminatedAt: Date.now(),
+      });
+      source.lastRuntimeMessage = `${workerId} denied by operator. Worker terminated.`;
+      pushToast(source.lastRuntimeMessage);
+    }
+    await refreshWorkers(source.lastRuntimeMessage);
+    const exists = flattenWorkers(hostGroups).find((item) => item.worker_id === workerId);
+    if (exists) {
+      await openWorker(workerId);
+    }
+  });
 }
 
 async function refreshWorkers(nextStatus = "Loading workers...") {
@@ -180,8 +247,10 @@ function bindModeSwitch() {
       currentMode = mode;
       els.modeLabel.textContent = mode.toUpperCase();
       els.modeButtons.forEach((item) => item.classList.toggle("active", item === button));
-      if (currentMode === "demo") startDemoTicker();
-      else stopDemoTicker();
+      if (currentMode !== "demo") {
+        demoRunning = false;
+        stopDemoTicker();
+      }
       await refreshWorkers();
       selectedWorker = null;
       renderExecutionView(
@@ -192,6 +261,42 @@ function bindModeSwitch() {
       );
     });
   });
+}
+
+function bindDemoControls() {
+  els.introStart?.addEventListener("click", () => {
+    closeIntro();
+    startDemo();
+  });
+  els.introClose?.addEventListener("click", () => {
+    closeIntro();
+    setStatus("Demo paused. Click Start Demo.");
+  });
+  els.startDemo?.addEventListener("click", () => {
+    if (currentMode !== "demo") {
+      setStatus("Switch to Demo mode to run simulation.");
+      return;
+    }
+    if (demoRunning) {
+      demoRunning = false;
+      stopDemoTicker();
+      setStatus("Demo paused.");
+      els.startDemo.textContent = "Start Demo";
+      return;
+    }
+    startDemo();
+  });
+}
+
+function startDemo() {
+  demoRunning = true;
+  startDemoTicker();
+  setStatus("Demo running. Worker events streaming.");
+  if (els.startDemo) els.startDemo.textContent = "Pause Demo";
+}
+
+function closeIntro() {
+  els.introBackdrop?.classList.add("hidden");
 }
 
 function bindHostToggle() {
@@ -243,13 +348,24 @@ function setStatus(value) {
 
 function startDemoTicker() {
   stopDemoTicker();
-  if (currentMode !== "demo") return;
+  if (currentMode !== "demo" || !demoRunning) return;
   const source = dataSources.demo;
   if (!source || typeof source.tick !== "function") return;
   demoTicker = window.setInterval(async () => {
-    if (currentMode !== "demo") return;
+    if (currentMode !== "demo" || !demoRunning) return;
     source.tick();
+    if (source.lastRuntimeMessage) {
+      pushToast(source.lastRuntimeMessage);
+    }
     await refreshWorkers(source.lastRuntimeMessage || "Demo runtime update.");
+
+    if (!selectedWorker) {
+      const firstRunning = flattenWorkers(hostGroups).find((item) => item.status === "running");
+      if (firstRunning) {
+        await openWorker(firstRunning.worker_id);
+      }
+    }
+
     if (!selectedWorker) return;
     const exists = flattenWorkers(hostGroups).find((item) => item.worker_id === selectedWorker.worker_id);
     if (!exists) {
@@ -276,4 +392,21 @@ function stopDemoTicker() {
 
 function cssEscape(value) {
   return String(value).replace(/"/g, '\\"');
+}
+
+function pushToast(message) {
+  if (!els.toastStack || !message) return;
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  const text = String(message).toLowerCase();
+  if (text.includes("violation") || text.includes("terminated")) toast.classList.add("fail");
+  else if (text.includes("warning") || text.includes("approval")) toast.classList.add("warn");
+  toast.textContent = message;
+  els.toastStack.prepend(toast);
+  while (els.toastStack.children.length > 5) {
+    els.toastStack.lastElementChild?.remove();
+  }
+  window.setTimeout(() => {
+    toast.remove();
+  }, 5200);
 }
