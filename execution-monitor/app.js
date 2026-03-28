@@ -13,6 +13,21 @@ class DemoDataSource {
     this.nextWorkerId = 100;
     this.lastRuntimeMessage = "Demo runtime initialized.";
     this.tapePool = ["filesystem_read", "network_probe", "sandbox_exec", "policy_eval", "retrieval_read"];
+    this.violationPool = [
+      { code: "network_destination_not_allowed", category: "network", target: "unknown.remote" },
+      { code: "filesystem_write_not_allowed", category: "filesystem", target: "/etc/shadow" },
+      { code: "privilege_escalation_attempt", category: "process", target: "sudo su" },
+      { code: "secret_access_not_allowed", category: "governance", target: "vault://prod/secrets" },
+      { code: "external_exfiltration_attempt", category: "network", target: "https://drop.invalid/upload" },
+    ];
+    this.hosts.forEach((host) => {
+      (host.workers || []).forEach((worker) => {
+        if (worker.status === "approval" && !worker.__approvalRequestedAt) {
+          worker.__approvalRequestedAt = Date.now();
+          worker.__approvalTimeoutMs = 10000;
+        }
+      });
+    });
   }
 
   async subscribeWorkers() {
@@ -78,12 +93,13 @@ class DemoDataSource {
           event_count: 1,
           violation_count: 0,
           __approvalRequestedAt: status === "approval" ? Date.now() : 0,
+          __approvalTimeoutMs: status === "approval" ? 10000 : 0,
         });
         this.lastRuntimeMessage = status === "approval"
           ? `${workerId} awaiting operator approval (${tape}).`
           : `${workerId} assigned authorised workflow (${tape}).`;
       }
-    } else if (activeWorkers.length > 0 && random < 0.72) {
+    } else if (activeWorkers.length > 0 && random < 0.62) {
       const worker = activeWorkers[Math.floor(Math.random() * activeWorkers.length)];
       if (worker && worker.status !== "violation") {
         const host = hosts.find((item) => (item.workers || []).some((w) => w.worker_id === worker.worker_id));
@@ -92,13 +108,25 @@ class DemoDataSource {
           this.lastRuntimeMessage = `${worker.worker_id} completed authorised workflow. Container recycled.`;
         }
       }
+    } else if (activeWorkers.length > 0 && random < 0.82) {
+      const worker = activeWorkers.find((item) => item.status === "running") || activeWorkers[0];
+      if (worker) {
+        worker.status = "warning";
+        worker.__driftWarning = true;
+        worker.event_count = Number(worker.event_count || 0) + 1;
+        this.lastRuntimeMessage = `${worker.worker_id} drift warning detected. Governance audit attached.`;
+      }
     } else if (activeWorkers.length > 0) {
       const worker = activeWorkers.find((item) => item.status === "running") || activeWorkers[0];
       if (worker) {
+        const v = this.violationPool[Math.floor(Math.random() * this.violationPool.length)];
         worker.status = "violation";
         worker.violation_count = Number(worker.violation_count || 0) + 1;
         worker.__terminatedAt = Date.now();
-        this.lastRuntimeMessage = `${worker.worker_id} policy violation detected. Worker terminated, container recycled.`;
+        worker.__violationCode = v.code;
+        worker.__violationCategory = v.category;
+        worker.__violationTarget = v.target;
+        this.lastRuntimeMessage = `${worker.worker_id} violation: ${v.code}. Worker terminated, container recycled.`;
       }
     }
 
@@ -107,11 +135,15 @@ class DemoDataSource {
     const approvals = this.hosts.flatMap((host) => host.workers || []).filter((w) => w.status === "approval");
     approvals.forEach((worker) => {
       const requestedAt = Number(worker.__approvalRequestedAt || now);
-      if (now - requestedAt > 7000) {
+      const timeoutMs = Math.max(1000, Number(worker.__approvalTimeoutMs || 10000));
+      if (now - requestedAt > timeoutMs) {
         worker.status = "violation";
         worker.violation_count = Number(worker.violation_count || 0) + 1;
         worker.__terminatedAt = now;
-        this.lastRuntimeMessage = `${worker.worker_id} approval timeout. Worker terminated, container recycled.`;
+        worker.__violationCode = "approval_timeout_denied";
+        worker.__violationCategory = "governance";
+        worker.__violationTarget = "human_approval_gate";
+        this.lastRuntimeMessage = `${worker.worker_id} approval timeout (10s). Auto-denied and recycled.`;
       }
     });
 
@@ -184,15 +216,24 @@ function bindApprovalActions() {
     const source = dataSources.demo;
     const worker = source.getWorker(workerId);
     if (!worker || worker.status !== "approval") return;
-    if (action === "approve") {
-      source.updateWorker(workerId, { status: "running", event_count: Number(worker.event_count || 0) + 1 });
-      source.lastRuntimeMessage = `${workerId} approved by operator. Execution resumed.`;
+    if (action === "approve_new_proposal") {
+      source.updateWorker(workerId, {
+        status: "running",
+        event_count: Number(worker.event_count || 0) + 1,
+        __approvalRequestedAt: 0,
+        __approvalTimeoutMs: 0,
+        __driftWarning: false,
+      });
+      source.lastRuntimeMessage = `${workerId} operator approved new proposal request. Execution resumed.`;
       pushToast(source.lastRuntimeMessage);
     } else {
       source.updateWorker(workerId, {
         status: "violation",
         violation_count: Number(worker.violation_count || 0) + 1,
         __terminatedAt: Date.now(),
+        __violationCode: "operator_denied_approval",
+        __violationCategory: "governance",
+        __violationTarget: "human_approval_gate",
       });
       source.lastRuntimeMessage = `${workerId} denied by operator. Worker terminated.`;
       pushToast(source.lastRuntimeMessage);
@@ -408,7 +449,7 @@ function startDemoTicker() {
     const payload = await dataSources.demo.subscribeEvents(selectedWorker.worker_id);
     renderExecutionView(els.terminalPanel, exists, payload.events || [], payload.stats || {}, { narrative: narrativeEnabled });
     streamTerminal(payload.events || []);
-  }, 2600);
+  }, 1000);
 }
 
 function stopDemoTicker() {
@@ -428,7 +469,7 @@ function pushToast(message) {
   toast.className = "toast";
   const text = String(message).toLowerCase();
   if (text.includes("violation") || text.includes("terminated")) toast.classList.add("fail");
-  else if (text.includes("warning") || text.includes("approval")) toast.classList.add("warn");
+  else if (text.includes("warning") || text.includes("drift") || text.includes("approval")) toast.classList.add("warn");
   toast.textContent = message;
   els.toastStack.prepend(toast);
   while (els.toastStack.children.length > 5) {

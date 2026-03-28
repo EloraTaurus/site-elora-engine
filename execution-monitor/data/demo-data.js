@@ -32,9 +32,14 @@ export const DEMO_SCENARIOS = {
     { event_type: "network", details: { destination: "mirror.external", action: "get" }, message: "Unexpected network destination", policy_evaluation: { result: "warn", violation_code: "network_destination_unexpected" } },
     { event_type: "enforcement", details: { action: "audit" }, message: "Policy warning recorded", policy_evaluation: { result: "warn", violation_code: "network_destination_unexpected" } },
   ],
+  drift_warning: [
+    { event_type: "process", details: { binary: "python", args: ["planner.py"] }, message: "Agent planning branch update", policy_evaluation: { result: "pass" } },
+    { event_type: "governance", details: { drift: "task_scope", confidence_delta: 0.24 }, message: "Drift warning: proposal deviates from original task intent", policy_evaluation: { result: "warn", violation_code: "task_drift_detected" } },
+    { event_type: "enforcement", details: { action: "audit" }, message: "Execution allowed with drift warning audit", policy_evaluation: { result: "warn", violation_code: "task_drift_detected" } },
+  ],
   approval: [
     { event_type: "process", details: { binary: "python", args: ["workflow.py"] }, message: "Worker booted for governed workflow", policy_evaluation: { result: "pass" } },
-    { event_type: "governance", details: { gate: "human_approval", required: true }, message: "Human approval required before execution", policy_evaluation: { result: "warn", violation_code: "approval_required" } },
+    { event_type: "governance", details: { gate: "human_approval", required: true }, message: "Agent requesting new proposal approval", policy_evaluation: { result: "warn", violation_code: "approval_required" } },
     { event_type: "enforcement", details: { action: "pause" }, message: "Execution paused pending operator decision", policy_evaluation: { result: "warn", violation_code: "approval_required" } },
   ],
   violation: [

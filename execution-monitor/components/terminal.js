@@ -1,7 +1,13 @@
 export function buildTerminalLines(events, options = {}) {
   const narrative = options.narrative !== false;
   return events.map((event) => {
-    const marker = event.event_type === "violation" ? "🚫" : event.event_type === "enforcement" ? "⚠️" : ">";
+    const result = String(event.policy_evaluation?.result || "pass").toLowerCase();
+    const marker =
+      event.event_type === "violation"
+        ? "🚫"
+        : event.event_type === "enforcement"
+          ? (result === "fail" ? "🚫" : result === "warn" ? "⚠️" : "✅")
+          : ">";
     if (narrative) return `${marker} ${event.message || summarizeEvent(event)}`;
     return `${marker} ${summarizeEvent(event)}`;
   });

@@ -6,6 +6,15 @@ export function renderExecutionView(root, worker, events, stats, options = {}) {
   const violations = events.filter((event) => event.event_type === "violation");
   const warnings = events.filter((event) => event.policy_evaluation?.result === "warn");
   const awaitingApproval = worker.status === "approval";
+  const approvalSecondsRemaining = awaitingApproval
+    ? Math.max(
+        0,
+        Math.ceil(
+          (Math.max(1000, Number(worker.__approvalTimeoutMs || 10000)) - (Date.now() - Number(worker.__approvalRequestedAt || Date.now()))) /
+            1000
+        )
+      )
+    : 0;
 
   root.querySelector("[data-worker-title]").textContent = `${worker.worker_id} · ${worker.status}`;
   root.querySelector("[data-terminal-feed]").textContent = renderTerminalLines(events, { narrative });
@@ -18,9 +27,9 @@ export function renderExecutionView(root, worker, events, stats, options = {}) {
     <div class="kv"><span>Last action</span><strong>${events.at(-1)?.event_type || "none"}</strong></div>
     ${awaitingApproval ? `
       <div class="approval-box">
-        <div class="approval-title">Approval Required</div>
+        <div class="approval-title">Approval Required · ${approvalSecondsRemaining}s remaining</div>
         <div class="approval-actions">
-          <button class="approval-btn approval-allow" data-approval-action="approve" data-approval-worker="${worker.worker_id}">Approve</button>
+          <button class="approval-btn approval-allow" data-approval-action="approve_new_proposal" data-approval-worker="${worker.worker_id}">Approve New Proposal</button>
           <button class="approval-btn approval-deny" data-approval-action="deny" data-approval-worker="${worker.worker_id}">Deny</button>
         </div>
       </div>
