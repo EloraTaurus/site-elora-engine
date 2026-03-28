@@ -1,5 +1,31 @@
 # Engine Changelog
 
+## ------------- 0.18 --------------
+
+## 2026-03-28
+### Execution Monitor / Runtime Visibility
+  - Add dedicated top-level `Execution Monitor` sidebar surface in Admin navigation (moved out of Observability group).
+  - Set Engine-side Execution Monitor scaffold to `live` default mode to align with upcoming WorkerHost runtime stream wiring.
+  - Add Execution Monitor governance strip in demo scaffold (`Worker Assigned -> Tape Loaded -> Inference -> Proposal -> Justification -> Commit -> Execution`) with commit-state highlighting (`approved`, `pending`, `denied`).
+  - Add guided Execution Monitor intro/start flow and demo lifecycle simulation:
+    - worker assignment
+    - approval-required holds
+    - policy violation termination
+    - container recycle notifications.
+  - Add operator approval controls in demo execution panel (`Approve` / `Deny`) with timeout-driven enforcement simulation.
+  - Add terminal line streaming in demo execution panel so runtime output appears progressively (terminal-like) instead of full instant dump.
+  - Add narrative toggle (`Narrative: On/Off`) for presentation-friendly vs concise terminal output.
+  - Add Execution Monitor demo background image support via `demo/execution-monitor/background.png`.
+### Admin UX / Deployment Traceability
+  - Add deploy/build stamp to all admin pages through shared layout:
+    - `ELORA_BUILD_VERSION`
+    - `ELORA_BUILD_TIMESTAMP`
+    - rendered UTC timestamp.
+  - Add Execution Monitor demo build/version stamp line for quick deploy verification in static site updates.
+### Reliability / Diagnostics
+  - Fix admin layout runtime-footprint render crash (`cpuPct` NameError) in shared layout script path.
+  - Add explicit warning-log output for WorkerHost route `400` rejections to surface register failure reasons in server logs.
+
 ## ------------- 0.17 --------------
 
 ## 2026-03-24
