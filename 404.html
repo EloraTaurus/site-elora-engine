@@ -11,26 +11,36 @@
       var search = window.location.search || "";
       var hash = window.location.hash || "";
 
-      if (path.indexOf('/admin/') === 0 || path === '/admin') {
-        return;
+      var aliases = { about: "overview", features: "architecture" };
+      var sections = new Set([
+        "overview", "architecture", "demo", "docs", "research", "changelog",
+        "architecture-layers", "governance-pack", "prior-art",
+        "ecosystem-collaboration", "ecosystem-aegis", "cookie-policy",
+        "lab", "execution-monitor", "admin"
+      ]);
+
+      var parts = path.replace(/^\/+|\/+$/g, "").split("/").filter(Boolean);
+      var projectBase = "";
+      if (parts.length > 0 && !sections.has(parts[0])) {
+        projectBase = "/" + parts[0];
       }
 
-      var aliases = {
-        about: 'overview',
-        features: 'architecture'
-      };
+      var relativePath = projectBase ? path.slice(projectBase.length) : path;
+      if (!relativePath.startsWith("/")) relativePath = "/" + relativePath;
+
+      if (relativePath.indexOf("/admin/") === 0 || relativePath === "/admin") return;
 
       var target = null;
 
-      if (/\.html$/i.test(path)) {
-        var slug = path.replace(/^\/+/, '').replace(/\.html$/i, '');
+      if (/\.html$/i.test(relativePath)) {
+        var slug = relativePath.split("/").pop().replace(/\.html$/i, "");
         slug = aliases[slug] || slug;
-        target = '/' + slug + '/';
+        target = projectBase + "/" + slug + "/";
       } else {
-        var bare = path.replace(/^\/+|\/+$/g, '');
+        var bare = relativePath.replace(/^\/+|\/+$/g, "");
         if (bare) {
           bare = aliases[bare] || bare;
-          target = '/' + bare + '/';
+          target = projectBase + "/" + bare + "/";
         }
       }
 
@@ -56,7 +66,7 @@
 <body>
   <div class="wrap">
     <p>Page not found.</p>
-    <p><a href="/">Return to home</a></p>
+    <p><a href="./">Return to home</a></p>
   </div>
 </body>
 </html>
