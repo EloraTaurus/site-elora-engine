@@ -1,0 +1,27 @@
+export function renderTerminalLines(events) {
+  const lines = events.map((event) => {
+    const marker = event.event_type === "violation" ? "🚫" : event.event_type === "enforcement" ? "⚠️" : ">";
+    return `${marker} ${event.message || summarizeEvent(event)}`;
+  });
+  return lines.join("\n");
+}
+
+function summarizeEvent(event) {
+  const details = event.details || {};
+  if (event.event_type === "network") {
+    return `Network destination: ${details.destination || "unknown"}`;
+  }
+  if (event.event_type === "filesystem") {
+    return `Filesystem path: ${details.path || "unknown"}`;
+  }
+  if (event.event_type === "process") {
+    return `Process: ${details.binary || "runtime"}`;
+  }
+  if (event.event_type === "violation") {
+    return `Violation: ${event.policy_evaluation?.violation_code || "policy_violation"}`;
+  }
+  if (event.event_type === "enforcement") {
+    return `Enforcement: ${details.action || "blocked"}`;
+  }
+  return `${event.event_type || "event"} captured`;
+}

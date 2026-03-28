@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elora Execution Monitor - Demo Scaffold</title>
+  <meta name="description" content="Execution Monitor UI scaffold for WorkerHost/Worker runtime visibility." />
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="header">
+      <div>
+        <h1>Execution Monitor (Scaffold)</h1>
+        <p>Phase 2.1 UI scaffold. Supports demo stream now and live adapter path for engine data.</p>
+      </div>
+      <div class="mode-row">
+        <strong>Mode:</strong>
+        <span data-mode-label>DEMO</span>
+        <button class="mode-btn active" data-mode-switch="demo">Demo</button>
+        <button class="mode-btn" data-mode-switch="live">Live</button>
+      </div>
+    </section>
+
+    <section class="status-bar" data-runtime-status>Ready.</section>
+
+    <div class="layout">
+      <section class="section">
+        <h2>WorkerHost Groups</h2>
+        <div data-host-groups></div>
+      </section>
+
+      <section class="exec-view" data-execution-panel>
+        <div class="exec-head">
+          <h2 data-worker-title>No worker selected · idle</h2>
+          <span class="exec-sub">Execution view</span>
+        </div>
+
+        <div class="exec-grid">
+          <pre class="terminal" data-terminal-feed>> Select a worker card to stream terminal output.</pre>
+          <aside class="panel" data-policy-panel>
+            <div class="kv"><span>Violations</span><strong>0</strong></div>
+            <div class="kv"><span>Warnings</span><strong>0</strong></div>
+            <div class="kv"><span>Last action</span><strong>none</strong></div>
+            <div class="policy-list"><div class="policy-item">No violations</div></div>
+          </aside>
+        </div>
+
+        <section class="events" data-events-list>
+          <div class="empty">Runtime events appear here.</div>
+        </section>
+
+        <section class="panel" data-stats-panel>
+          <div class="kv"><span>Runtime seconds</span><strong>0.0</strong></div>
+          <div class="kv"><span>Event count</span><strong>0</strong></div>
+          <div class="kv"><span>Violation count</span><strong>0</strong></div>
+          <div class="kv"><span>Monitoring mode</span><strong>demo</strong></div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
