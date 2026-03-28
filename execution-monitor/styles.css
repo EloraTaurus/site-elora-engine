@@ -16,11 +16,7 @@ body {
   margin: 0;
   font-family: "Space Grotesk", system-ui, sans-serif;
   background:
-    linear-gradient(rgba(4, 10, 20, 0.72), rgba(4, 10, 20, 0.8)),
-    radial-gradient(1200px 800px at 80% -20%, rgba(56, 189, 248, 0.2), transparent 45%),
-    radial-gradient(1000px 700px at 0% 120%, rgba(79, 70, 229, 0.16), transparent 55%),
-    url("./background.png") center center / cover no-repeat fixed,
-    var(--bg);
+    linear-gradient(rgba(4, 10, 20, 0.2), rgba(4, 10, 20, 0.2)), radial-gradient(1200px 800px at 80% -20%, rgba(56, 189, 248, 0.2), transparent 45%), radial-gradient(1000px 700px at 0% 120%, rgba(79, 70, 229, 0.16), transparent 55%), url("./background.png") center center / cover no-repeat fixed, var(--bg);
   color: var(--text);
 }
 
@@ -304,6 +300,27 @@ body {
   background: #0d1f39;
   padding: 18px;
 }
+.intro-body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+.intro-guide-avatar {
+  border: 1px solid #2c4e77;
+  border-radius: 14px;
+  background: rgba(14, 29, 53, 0.9);
+  padding: 8px;
+}
+.intro-guide-avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.intro-copy {
+  min-width: 0;
+}
 .intro-modal h2 {
   margin: 0 0 8px;
   font-size: 24px;
@@ -351,4 +368,9 @@ body {
   .layout,
   .exec-grid { grid-template-columns: 1fr; }
   .governance-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .intro-body { grid-template-columns: 1fr; }
+  .intro-guide-avatar {
+    max-width: 220px;
+    margin: 0 auto;
+  }
 }
