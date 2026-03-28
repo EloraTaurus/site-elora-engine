@@ -6,7 +6,6 @@ import { DEMO_WORKERHOSTS } from "./data/demo-data.js";
 import { scenarioForWorker, simulateEvents, simulateStats } from "./data/simulator.js";
 
 /** @typedef {"demo"|"live"} DataMode */
-const DEMO_BUILD_VERSION = "execution-monitor-v2-beta";
 
 class DemoDataSource {
   constructor() {
@@ -160,13 +159,11 @@ const els = {
   introClose: document.querySelector("[data-intro-close]"),
   startDemo: document.querySelector("[data-start-demo]"),
   toastStack: document.querySelector("[data-toast-stack]"),
-  buildLine: document.querySelector("[data-build-line]"),
 };
 
 boot();
 
 async function boot() {
-  setBuildStamp();
   bindModeSwitch();
   bindHostToggle();
   bindWorkerOpen();
@@ -175,12 +172,6 @@ async function boot() {
   bindNarrativeToggle();
   await refreshWorkers();
   setStatus("Demo paused. Click Start Demo.");
-}
-
-function setBuildStamp() {
-  if (!els.buildLine) return;
-  const modified = document.lastModified ? new Date(document.lastModified).toISOString().replace("T", " ").replace(".000Z", " UTC") : "unknown";
-  els.buildLine.textContent = `Build: ${DEMO_BUILD_VERSION} · Last modified: ${modified}`;
 }
 
 function bindApprovalActions() {
