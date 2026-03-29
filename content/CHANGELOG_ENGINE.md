@@ -2,6 +2,56 @@
 
 ## ------------- 0.18 --------------
 
+## 2026-03-29
+### Master Pipeline Surface (Read-only + Extended Canonical Stages)
+  - Lock Pipeline UI into master read-only mode (structure editing disabled).
+  - Enforce backend guard so structural pipeline POST actions are blocked in master mode; keep stage-message editing + runtime-test endpoints available.
+  - Expand Pipeline page visualization to an extended canonical stage chain that includes:
+    - prompt capture
+    - memory/knowledge resolve
+    - policy snapshot
+    - worker capacity/registration/queue
+    - worker/tape assignment and unload lifecycle
+    - proposal + approval + archival stages
+  - Add canonical-stage rendering with `present` vs `virtual` support so runtime surface stays consistent even when not all stage records are persisted.
+  - Add visual legend for:
+    - present/virtual nodes
+    - visual/non-visual stages
+    - active/failed/neutral node states
+  - Expand Pipeline stage-message settings to cover extended stages.
+  - Update pipeline seed template and stage type registry to include the extended canonical stage model.
+### Sensitive Runtime Evidence / Controlled Disclosure
+  - Add first-class pre-inference runtime evidence stages:
+    - `prompt.captured`
+    - `memory.resolved`
+    - `knowledge.resolved`
+  - Add encrypted sensitive-input artifact store (`job_sensitive_inputs`) in Jobs DB with:
+    - prompt hash
+    - encrypted raw prompt
+    - prompt metadata
+    - memory access summary
+    - knowledge access summary
+  - Add deterministic runtime input capture wiring in chat job flows (`/chat-start`, `/gpt-start`) so prompt/memory/knowledge evidence is captured before inference and replayed as pipeline events.
+  - Add post-retrieval knowledge evidence update so commit evaluation can include resolved knowledge artifact summaries.
+  - Extend commit input/signals with runtime input evidence fields:
+    - `runtime_inputs.prompt_hash`
+    - `runtime_inputs.prompt_metadata`
+    - `runtime_inputs.memory_access`
+    - `runtime_inputs.knowledge_access`
+    - memory/knowledge snapshot hashes
+  - Add controlled prompt decrypt API:
+    - `POST /admin/api/jobs/{job_id}/prompt-decrypt`
+    - explicit `reason` required
+    - super-admin only (default deny for other roles)
+    - all attempts logged (`requested`, `authorized`, `denied`, `executed`).
+  - Extend admin job/replay payloads with default-safe sensitive summary (hash + metadata counts only; no plaintext prompt exposure by default).
+### Security Key Health Alerts
+  - Extend admin security self-check to evaluate key strength and review posture for:
+    - `RAG_SECRETS_KEY`
+    - `RAG_ADMIN_SESSION_SECRET`
+  - Add key-health findings list and review status into Settings -> Security.
+  - Include security self-check object in `/admin/health.json` payload for operational surfaces/alerts.
+
 ## 2026-03-28
 ### Execution Monitor / Runtime Visibility
   - Add dedicated top-level `Execution Monitor` sidebar surface in Admin navigation (moved out of Observability group).
