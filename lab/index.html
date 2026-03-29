@@ -416,6 +416,10 @@
         <div class="stat"><div class="k">Token Churn (24h)</div><div class="v" id="tokenChurn">-</div></div>
       </section>
       <section class="integrity-grid">
+        <div class="integrity-item" style="grid-column:1 / -1;">
+          <div class="k">Latest Job Results Window</div>
+          <div class="v" id="scoreWindowLabel">Latest 200 job results</div>
+        </div>
         <div class="integrity-item"><div class="k">Admissibility completeness</div><div class="v" id="integrityAdmissibility">-</div></div>
         <div class="integrity-item"><div class="k">Snapshot capture</div><div class="v" id="integritySnapshot">-</div></div>
         <div class="integrity-item"><div class="k">Replay coverage</div><div class="v" id="integrityReplay">-</div></div>
@@ -507,6 +511,7 @@
       const integrityAdmissibility = document.getElementById("integrityAdmissibility");
       const integritySnapshot = document.getElementById("integritySnapshot");
       const integrityReplay = document.getElementById("integrityReplay");
+      const scoreWindowLabel = document.getElementById("scoreWindowLabel");
       const tests = document.getElementById("tests");
       const stateDriftBlocks = document.getElementById("stateDriftBlocks");
       const unauthorizedBlocked = document.getElementById("unauthorizedBlocked");
@@ -793,6 +798,8 @@
         integritySnapshot.textContent = comps.snapshot_capture == null ? "-" : (Number(comps.snapshot_capture).toFixed(1) + "%");
         integrityReplay.textContent = comps.replay_coverage == null ? "-" : (Number(comps.replay_coverage).toFixed(1) + "%");
         const defense = summary.lab_defense || {};
+        const scoreWindowJobs = Number(defense.score_window_jobs || 200);
+        if (scoreWindowLabel) scoreWindowLabel.textContent = "Latest " + String(scoreWindowJobs) + " job results";
         defenseScore.textContent = defense.defense_score == null ? "-" : (Number(defense.defense_score).toFixed(1) + "%");
         stateDriftBlocks.textContent = String(defense.state_drift_blocks ?? 0);
         unauthorizedBlocked.textContent = String(defense.unauthorized_requests_blocked ?? 0);
