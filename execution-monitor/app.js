@@ -152,7 +152,6 @@ class DemoDataSource {
     }
 
     // Auto-expire approvals to show governance enforcement.
-    const now = Date.now();
     const approvals = this.hosts.flatMap((host) => host.workers || []).filter((w) => w.status === "approval");
     approvals.forEach((worker) => {
       const requestedAt = Number(worker.__approvalRequestedAt || now);
