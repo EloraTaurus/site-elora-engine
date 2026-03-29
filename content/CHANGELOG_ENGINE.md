@@ -3,6 +3,18 @@
 ## ------------- 0.18 --------------
 
 ## 2026-03-29
+### Public Lab API Performance Optimization
+  - Optimize `/public/lab-status(.json)` for lower CPU impact under public dashboard polling.
+  - Add lightweight mode via `?lite=1` to omit replay-step payloads from default Lab page polling.
+  - Add on-demand single-job replay endpoint:
+    - `GET /public/lab-job/{job_id}`
+    - used only when opening a specific report/scorecard.
+  - Reduce aggregation pressure by tightening scan/sample limits for Lab status computation:
+    - smaller scan ceiling
+    - capped integrity sample window
+    - reduced replay-event reads in summary paths.
+  - Increase public lab status cache TTL to reduce recomputation frequency during repeated page visits.
+
 ### Master Pipeline Surface (Read-only + Extended Canonical Stages)
   - Lock Pipeline UI into master read-only mode (structure editing disabled).
   - Enforce backend guard so structural pipeline POST actions are blocked in master mode; keep stage-message editing + runtime-test endpoints available.

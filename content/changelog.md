@@ -1,5 +1,10 @@
 # Site / Demo Changelog
 
+## 2026-03-29
+- Reduced public Lab dashboard polling load by switching website feed calls to `lab-status.json?lite=1`.
+- Added on-demand report hydration (`/public/lab-job/{job_id}`) so replay steps are fetched only when a visitor opens a scorecard.
+- Tightened Lab feed payload profile (fewer heavy replay fields in default poll path) to lower Engine CPU pressure during public traffic.
+
 ## 2026-03-24
 - Updated website roadmap/maturity milestones with latest Fabric operations work (local WorkerHost deploy, runtime inventory/update checks, live ops footprint rail).
 - Added high-level hardware attestation roadmap note to website architecture docs (`software` -> `hardware_backed` -> `hardware_deployed`), explicitly marked as research direction.
