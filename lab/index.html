@@ -698,6 +698,28 @@
         }
       }
 
+      function hydrateReplaySteps(job) {
+        if (!job || !job.job_id) return;
+        const steps = Array.isArray(job.replay_steps) ? job.replay_steps : [];
+        if (steps.length) return;
+        fetch("https://ai.elorataurus.com/public/lab-job/" + encodeURIComponent(String(job.job_id)), { method: "GET" })
+          .then(function (res) {
+            if (!res.ok) return null;
+            return res.json();
+          })
+          .then(function (payload) {
+            const fullJob = payload && payload.job ? payload.job : null;
+            if (!fullJob || !Array.isArray(fullJob.replay_steps) || !fullJob.replay_steps.length) return;
+            const idx = recentJobsCache.findIndex(function (item) { return Number(item && item.job_id) === Number(fullJob.job_id); });
+            if (idx >= 0) recentJobsCache[idx] = fullJob;
+            if (currentReportJob && Number(currentReportJob.job_id) === Number(fullJob.job_id)) {
+              currentReportJob = fullJob;
+              renderReplayReport(fullJob);
+            }
+          })
+          .catch(function () {});
+      }
+
       function renderPublicSuite(result) {
         if (!publicSuiteModal || !publicSuiteSummary || !publicSuiteSteps || !reportModalBackdrop) return;
         const suite = result && result.suite ? result.suite : {};
@@ -920,6 +942,7 @@
         const idx = Number(btn.getAttribute("data-report-index") || -1);
         if (!Number.isFinite(idx) || idx < 0 || idx >= recentJobsCache.length) return;
         renderReplayReport(recentJobsCache[idx]);
+        hydrateReplaySteps(recentJobsCache[idx]);
       });
       if (reportModalClose) {
         reportModalClose.addEventListener("click", function () {
@@ -971,7 +994,7 @@
               }
               renderPublicSuite(resp.data);
               startPublicCooldown(Number(resp.data && resp.data.cooldown_seconds));
-              return fetch("https://ai.elorataurus.com/public/lab-status.json", { method: "GET" });
+              return fetch("https://ai.elorataurus.com/public/lab-status.json?lite=1", { method: "GET" });
             })
             .then(function (r) { if (r && r.ok) return r.json(); return null; })
             .then(function (payload) { if (payload) render(payload); })
@@ -987,7 +1010,7 @@
         });
       }
 
-      fetch("https://ai.elorataurus.com/public/lab-status.json", { method: "GET" })
+      fetch("https://ai.elorataurus.com/public/lab-status.json?lite=1", { method: "GET" })
         .then((res) => {
           if (!res.ok) throw new Error("Feed unavailable (" + res.status + ")");
           return res.json();
