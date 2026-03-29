@@ -397,9 +397,55 @@ body {
   .layout,
   .exec-grid { grid-template-columns: 1fr; }
   .governance-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .layout > .exec-view { order: 1; }
+  .layout > .section { order: 2; }
   .intro-body { grid-template-columns: 1fr; }
   .intro-guide-avatar {
     max-width: 220px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .page { padding: 12px; }
+  .header { padding: 12px; }
+  .mode-row { gap: 6px; }
+  .mode-btn { padding: 7px 10px; font-size: 13px; }
+
+  .host-header {
+    grid-template-columns: auto 1fr;
+    row-gap: 6px;
+  }
+  .host-status,
+  .host-count {
+    grid-column: 2 / span 1;
+    justify-self: start;
+  }
+
+  .worker-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .worker-card {
+    padding: 12px;
+  }
+  .worker-card-head strong {
+    font-size: 15px;
+  }
+  .worker-status-pill {
+    font-size: 11px;
+    padding: 4px 9px;
+  }
+  .worker-meta,
+  .worker-stats {
+    font-size: 13px;
+  }
+
+  .terminal {
+    min-height: 280px;
+    font-size: 12px;
+  }
+  .events {
+    max-height: 260px;
   }
 }
