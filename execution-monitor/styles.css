@@ -141,7 +141,16 @@ body {
 .worker-stats { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: #c5daff; }
 .worker-running { box-shadow: inset 2px 0 0 var(--green); }
 .worker-warning { box-shadow: inset 2px 0 0 var(--amber); }
-.worker-approval { box-shadow: inset 2px 0 0 #fbbf24; }
+.worker-approval {
+  box-shadow: inset 2px 0 0 #fbbf24;
+  border-color: rgba(245, 158, 11, 0.8);
+  animation: approvalPulse 1.2s ease-in-out infinite;
+}
+.worker-approval .worker-status-pill {
+  border-color: rgba(245, 158, 11, 0.95);
+  color: #ffd69f;
+  animation: approvalPillBlink 1s steps(2, start) infinite;
+}
 .worker-violation { box-shadow: inset 2px 0 0 var(--red); }
 
 .exec-view {
@@ -185,6 +194,7 @@ body {
 .stage.commit-pending {
   border-color: rgba(245, 158, 11, 0.8);
   color: #ffd69f;
+  animation: approvalPillBlink 1s steps(2, start) infinite;
 }
 .exec-grid {
   display: grid;
@@ -225,6 +235,7 @@ body {
   border-radius: 8px;
   padding: 8px;
   background: rgba(245, 158, 11, 0.08);
+  animation: approvalPulse 1.2s ease-in-out infinite;
 }
 .approval-title {
   font-size: 12px;
@@ -251,6 +262,20 @@ body {
 .approval-deny {
   border-color: rgba(239, 68, 68, 0.6);
   color: #ffadad;
+}
+
+@keyframes approvalPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.0), inset 0 0 0 0 rgba(245, 158, 11, 0.0);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25), inset 0 0 0 999px rgba(245, 158, 11, 0.03);
+  }
+}
+
+@keyframes approvalPillBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.65; }
 }
 
 .events {

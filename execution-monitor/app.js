@@ -9,6 +9,9 @@ import { scenarioForWorker, simulateEvents, simulateStats } from "./data/simulat
 
 class DemoDataSource {
   constructor() {
+    this.maxWorkers = 20;
+    this.maxWorkerEvents = 20;
+    this.maxWorkerAgeMs = 18000;
     this.hosts = structuredClone(DEMO_WORKERHOSTS);
     this.nextWorkerId = 100;
     this.lastRuntimeMessage = "Demo runtime initialized.";
@@ -22,6 +25,7 @@ class DemoDataSource {
     ];
     this.hosts.forEach((host) => {
       (host.workers || []).forEach((worker) => {
+        if (!worker.__createdAt) worker.__createdAt = Date.now();
         if (worker.status === "approval" && !worker.__approvalRequestedAt) {
           worker.__approvalRequestedAt = Date.now();
           worker.__approvalTimeoutMs = 10000;
@@ -58,8 +62,24 @@ class DemoDataSource {
     const hosts = this.hosts;
     const allWorkers = hosts.flatMap((host) => host.workers || []);
     allWorkers.forEach((worker) => {
+      if (!worker.__createdAt) worker.__createdAt = Date.now();
       worker.event_count = Number(worker.event_count || 0) + Math.floor(Math.random() * 2);
     });
+
+    // Shunt workers that run too long or collect too many events (stuck guard).
+    const now = Date.now();
+    for (const host of hosts) {
+      host.workers = (host.workers || []).filter((worker) => {
+        if (worker.status === "violation") return true;
+        const age = now - Number(worker.__createdAt || now);
+        const events = Number(worker.event_count || 0);
+        const stuck = age > this.maxWorkerAgeMs || events >= this.maxWorkerEvents;
+        if (stuck) {
+          this.lastRuntimeMessage = `${worker.worker_id} shunted after ${events} events. Container recycled.`;
+        }
+        return !stuck;
+      });
+    }
 
     // Recycle terminated workers after a short visible period.
     for (const host of hosts) {
@@ -76,7 +96,7 @@ class DemoDataSource {
     }
 
     const activeWorkers = hosts.flatMap((host) => host.workers || []);
-    const canSpawn = activeWorkers.length < 10;
+    const canSpawn = activeWorkers.length < this.maxWorkers;
     const random = Math.random();
 
     if (canSpawn && random < 0.45) {
@@ -94,6 +114,7 @@ class DemoDataSource {
           violation_count: 0,
           __approvalRequestedAt: status === "approval" ? Date.now() : 0,
           __approvalTimeoutMs: status === "approval" ? 10000 : 0,
+          __createdAt: Date.now(),
         });
         this.lastRuntimeMessage = status === "approval"
           ? `${workerId} awaiting operator approval (${tape}).`
