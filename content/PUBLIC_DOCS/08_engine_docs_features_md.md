@@ -6,7 +6,7 @@ Note: This is a public documentation copy for the demo site. Sensitive runtime i
 
 ## Elora Engine Features (Current + In Development)
 
-Last updated: 2026-03-03
+Last updated: 2026-03-29
 
 Purpose: operator-facing summary of what Elora has today and what is actively being built.
 
@@ -44,7 +44,7 @@ Status labels:
 | Jobs + Auditing | `Live/Partial` job records, risk/confidence summaries, source normalization, export support | Cleaner evidence model and faster operator diagnosis flow |
 | Provider Telemetry | `Partial` provider/model/latency/token/error capture in job metrics | Consistent multi-provider schema and routing-aware analysis |
 | Knowledge + Memory | `Partial` knowledge/memory admin surfaces and profile controls | Bucket/profile ergonomics and retrieval/memory strategy hardening |
-| Pipeline Runtime | `Partial` stage runtime events and commit-aware flow | Pipeline builder stabilization and deeper governance-native stage controls |
+| Pipeline Runtime | `Partial` extended canonical runtime stages with pre-inference evidence capture (`prompt`, `memory`, `knowledge`) and commit-aware flow | Runtime-type overlays, skipped-stage clarity, deeper governance-native stage controls |
 
 ## Integrations
 

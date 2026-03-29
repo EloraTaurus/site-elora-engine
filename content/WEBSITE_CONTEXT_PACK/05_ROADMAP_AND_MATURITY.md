@@ -1,6 +1,6 @@
 # Roadmap and Maturity
 
-Last updated: 2026-03-24
+Last updated: 2026-03-29
 
 First implemented (from changelog): 2026-02-28
 
@@ -40,7 +40,7 @@ Elora is in an advanced build phase:
 
 ## Release Direction
 
-Current line is `0.17` for governance maturation work.
+Current line is `0.18` for runtime evidence + execution visibility work.
 Next major release boundary is expected when the next governance section and integrity objectives are completed.
 
 ## Recent Milestones (Fabric)
@@ -51,3 +51,5 @@ Next major release boundary is expected when the next governance section and int
 - 2026-03-24: Added Engine-local WorkerHost deployment path to reduce first-node setup friction.
 - 2026-03-24: Added runtime dependency inventory and update-check surface in admin settings.
 - 2026-03-24: Added live ops footprint rail (Engine + host/worker summary) for faster performance triage.
+- 2026-03-29: Added pre-inference runtime evidence stages (`prompt.captured`, `memory.resolved`, `knowledge.resolved`) and carried their hashes/snapshots into commit/replay artifacts.
+- 2026-03-29: Switched pipeline surface to a single master read-only chain with extended canonical stages and runtime-consistent node rendering (`present`/`virtual`, `visual`/`non-visual`).

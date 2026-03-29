@@ -69,6 +69,13 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Code anchors: `engine/core/jobs.py`
 - Evidence summary: SQLite-backed job store, replay event timelines, hash-linked event fields, and lifecycle metadata used by replay/audit surfaces.
 
+### Prompt / Memory / Knowledge Runtime Evidence Capture
+
+- Date: `2026-03-29`
+- Evidence class: Pre-inference runtime evidence hardening
+- Code anchors: `engine/api/routes_chat.py`, `engine/core/jobs.py`, `engine/services/commit_enforcement.py`
+- Evidence summary: Runtime captures prompt hash + encrypted prompt artifact, plus memory/knowledge resolution summaries and snapshot references as first-class evidence before inference, then carries these into commit/replay for deterministic review.
+
 ## Security and Access Control Foundation
 
 ### Signed Request and Payload Controls

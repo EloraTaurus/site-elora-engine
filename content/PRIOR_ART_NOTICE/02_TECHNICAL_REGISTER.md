@@ -78,6 +78,14 @@ Ingress
 - Proof type: Runtime modularity and policy binding model
 - Evidence summary: Tape-centered runtime identity expanded as first-class execution context, with governance mapping direction moving from worker-type coupling toward Tape-bound policy semantics.
 
+### Pre-Inference Runtime Input Evidence (Prompt / Memory / Knowledge)
+
+- Date: `2026-03-29`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Reference commits: local implementation line (`0.18`) with changelog evidence
+- Proof type: Runtime evidence model and commit-bound determinism support
+- Evidence summary: Pipeline expanded to treat prompt capture, memory resolution, and knowledge resolution as first-class pre-inference evidence stages, with deterministic hashes/snapshot references included in commit/replay paths.
+
 ### Governance Incident Topology Mapping
 
 - Milestone date: `2026-03-03`
