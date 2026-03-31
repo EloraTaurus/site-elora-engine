@@ -575,7 +575,7 @@
                 activeApiBase = base;
                 return res;
               }
-              if (res.status >= 500 && i + 1 < bases.length) {
+              if ((res.status >= 500 || res.status === 404) && i + 1 < bases.length) {
                 lastErr = new Error("Lab backend HTTP " + String(res.status));
                 return attempt(i + 1);
               }
