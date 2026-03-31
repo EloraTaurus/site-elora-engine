@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Elora Engine public changelog for demo-visible updates." />
+  <meta name="description" content="Elora LLM Inference page covering the custom pipeline, Fabric GPU path, stage-level controls, and changelog updates." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://elorataurus.com/changelog/" />
+  <link rel="canonical" href="https://elorataurus.com/llm-inference/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Elora Taurus Project - Engine Changelog" />
-  <meta property="og:description" content="Public changelog for Elora Engine demo and walkthrough updates." />
-  <meta property="og:url" content="https://elorataurus.com/changelog/" />
+  <meta property="og:title" content="The Elora Taurus Project - LLM Inference" />
+  <meta property="og:description" content="Custom LLM inference pipeline details: Fabric GPU connectivity, stage-by-stage controls, and live tuning workflow updates." />
+  <meta property="og:url" content="https://elorataurus.com/llm-inference/" />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Elora Taurus Project - Engine Changelog" />
-  <meta name="twitter:description" content="Track public demo and guided walkthrough changes for Elora Engine." />
+  <meta name="twitter:title" content="The Elora Taurus Project - LLM Inference" />
+  <meta name="twitter:description" content="How Elora handles custom inference stages, Fabric GPU routing, live model tuning, and plugin integration updates." />
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
-  <title>The Elora Taurus Project - Engine Changelog</title>
+  <title>The Elora Taurus Project - LLM Inference</title>
   <link rel="icon" href="../elora.png" />
   <link rel="stylesheet" href="../style.css" />
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
 <body>
-  <section class="top-stage" id="changelog">
+  <section class="top-stage" id="llm-inference">
     <header class="topbar">
       <div class="topbar-inner">
         <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project overview">
@@ -45,12 +45,11 @@
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1>Project Changelog</h1>
-          <p>Public update stream for engine, site, and architecture-level changes.</p>
+          <h1>LLM Inference</h1>
+          <p>How Elora handles custom LLM inference: stage-level pipeline control, Fabric GPU connectivity, and WordPress plugin/runtime integration.</p>
           <div class="cta-row">
-            <a class="btn" href="../overview/">Back to Overview</a>
-            <a class="btn alt" href="../demo/">Open Replay Demo</a>
-            <a class="btn mission" href="../llm-inference/">Open LLM Inference</a>
+            <a class="btn" href="../changelog/">Back to Changelog</a>
+            <a class="btn alt" href="../docs/">Open Documentation</a>
           </div>
         </div>
       </section>
@@ -59,36 +58,36 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <h2>Engine Updates</h2>
-      <p class="section-intro">Core runtime, governance boundary, and operator-surface changes.</p>
-      <div class="card" style="margin-bottom:14px; border-color:#2e6a9f; background:rgba(18,44,72,.85); color:#eaf4ff;">
-        <h3 style="margin-bottom:6px; color:#eaf4ff;">Version 0.18 <span style="display:inline-flex; align-items:center; padding:2px 8px; border-radius:999px; border:1px solid #55b8ff; color:#bfe8ff; font-size:12px; font-weight:600;">In Progress</span></h3>
-        <p style="margin:0; color:#d8ebff;">Runtime execution visibility and post-execution control surfaces are now active milestones and are being iterated with live operator feedback.</p>
-      </div>
-      <div class="card" style="margin-bottom:14px; border-color:#2e6a9f; background:rgba(18,44,72,.85); color:#eaf4ff;">
-        <h3 style="margin-bottom:6px; color:#eaf4ff;">LLM Pipeline Changelog <span style="display:inline-flex; align-items:center; padding:2px 8px; border-radius:999px; border:1px solid #55b8ff; color:#bfe8ff; font-size:12px; font-weight:600;">Custom Pipeline</span></h3>
-        <p style="margin:0 0 10px; color:#d8ebff;">Elora uses a custom LLM pipeline with custom Fabric connectivity, including a WordPress plugin integration path for governed runtime requests.</p>
-        <div class="cta-row"><a class="btn" href="../llm-inference/">Open LLM Inference</a></div>
+      <h2>What Elora Does Differently</h2>
+      <p class="section-intro">Elora uses a custom inference pipeline where each stage can be tuned, reordered, enabled, or disabled based on runtime and governance requirements.</p>
+      <div class="card" style="margin-bottom:14px;">
+        <h3>Custom LLM Pipeline</h3>
+        <p>Elora runs a custom Python-based inference pipeline instead of a fixed one-shot model call path. Pipeline stages can be composed to match governed runtime behavior.</p>
       </div>
       <div class="card" style="margin-bottom:14px;">
-        <h3>Site Updates</h3>
-        <p>Navigation, documentation IA, and public demo experience changes are tracked alongside engine updates.</p>
+        <h3>Fabric GPU Connectivity</h3>
+        <p>Inference can route through custom Fabric connectivity for remote WorkerHost/GPU paths with controlled fallback behavior when capacity or host state changes.</p>
       </div>
       <div class="card" style="margin-bottom:14px;">
-        <h3>Architecture Updates</h3>
-        <p>Governance-model and control-plane architecture changes are reflected in Research and Docs sections.</p>
+        <h3>Runtime-Aware Inference Signals</h3>
+        <p>Elora surfaces runtime-aware inference signals during proposal flow so operators can assess shifting risk posture before commit authorization.</p>
       </div>
       <div class="card" style="margin-bottom:14px;">
-        <h3>0.18 Highlights (Runtime + Post-Execution)</h3>
+        <h3>Precise Stage Control</h3>
         <ul class="list">
-          <li>Execution Monitor is now a dedicated top-level operator surface.</li>
-          <li>Runtime flow visibility expanded with staged execution signals and live-first monitor direction.</li>
-          <li>Post-execution lifecycle visibility improved (approval holds, commit outcomes, termination and recycle paths).</li>
-          <li>Admin deploy/build stamping added for fast release verification across environments.</li>
+          <li>Add or remove stages as runtime intent evolves.</li>
+          <li>Tune behavior at each stage instead of global-only settings.</li>
+          <li>Run controlled experiments with live temperatures and model alterations in real time.</li>
+          <li>Trigger early drift detection during proposal to support pre-commit triage.</li>
+          <li>Keep plugin and engine integration aligned with governed runtime decisions.</li>
         </ul>
       </div>
+      <div class="card" style="margin-bottom:14px; border-color:#2e6a9f; background:rgba(18,44,72,.85); color:#eaf4ff;">
+        <h3 style="margin-bottom:6px; color:#eaf4ff;">Inference Changelog <span style="display:inline-flex; align-items:center; padding:2px 8px; border-radius:999px; border:1px solid #55b8ff; color:#bfe8ff; font-size:12px; font-weight:600;">Live Record</span></h3>
+        <p style="margin:0; color:#d8ebff;">Versioned update log for LLM inference behavior, Fabric route changes, and WordPress plugin/runtime compatibility.</p>
+      </div>
       <div class="card">
-        <div id="changelog-page-content" class="changelog-content">Loading changelog...</div>
+        <div id="llm-inference-page-content" class="changelog-content">Loading inference changelog...</div>
       </div>
     </div>
   </section>
@@ -104,7 +103,6 @@
           <a href="../docs/">Documentation</a>
           <a href="../research/">Research</a>
           <a href="../changelog/">Changelog</a>
-        
           <a href="../cookie-policy/">Cookie Policy</a></nav>
       </div>
       <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
@@ -116,7 +114,7 @@
     (function () {
       const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
       const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
-      const changelogPageContent = document.getElementById('changelog-page-content');
+      const changelogPageContent = document.getElementById('llm-inference-page-content');
 
       navToggles.forEach(function (toggle) {
         const controls = toggle.getAttribute('aria-controls');
@@ -217,18 +215,18 @@
         return null;
       }
 
-      async function loadEngineChangelog() {
+      async function loadLlmChangelog() {
         if (!changelogPageContent) return;
         const engineCandidates = []
-          .concat(makeCandidatePaths('CHANGELOG_ENGINE.md'))
-          .concat(makeCandidatePaths('CHANGELOG_ENGINE'))
+          .concat(makeCandidatePaths('CHANGELOG_LLM.md'))
+          .concat(makeCandidatePaths('CHANGELOG_LLM'))
           .concat(makeCandidatePaths('changelog.md'));
         const md = await fetchFirst(engineCandidates);
         changelogPageContent.innerHTML = md
           ? renderSimpleMarkdown(md)
-          : 'Changelog is currently unavailable.';
+          : 'Inference changelog is currently unavailable.';
       }
-      loadEngineChangelog();
+      loadLlmChangelog();
     })();
   </script>
   <script defer src="../analytics-consent.js"></script>

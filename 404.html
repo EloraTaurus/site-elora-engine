@@ -11,9 +11,14 @@
       var search = window.location.search || "";
       var hash = window.location.hash || "";
 
-      var aliases = { about: "overview", features: "architecture" };
+      var aliases = {
+        about: "overview",
+        features: "architecture",
+        "llm-changelog": "llm-inference"
+      };
       var sections = new Set([
         "overview", "architecture", "demo", "docs", "research", "changelog",
+        "llm-inference",
         "architecture-layers", "governance-pack", "prior-art",
         "ecosystem-collaboration", "ecosystem-aegis", "cookie-policy",
         "lab", "execution-monitor", "admin"

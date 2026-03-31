@@ -605,6 +605,39 @@
         return labels;
       }
 
+      function replayPathLabels(job, hasBlocked) {
+        const steps = Array.isArray(job && job.replay_steps) ? job.replay_steps : [];
+        if (!steps.length) {
+          return [
+            "Queue", "Intake", "Policy Snapshot", "Worker Assignment", "Tape Loaded", "Inference", "Proposal", "Justification",
+            hasBlocked ? "Commit ❌ BLOCKED" : "Commit ✅ AUTHORIZED",
+            hasBlocked ? "Execution ⏹" : "Execution ✅"
+          ];
+        }
+        const out = [];
+        const seen = new Set();
+        steps.forEach(function (step) {
+          const raw = String((step && (step.stage || step.stage_type)) || "").trim();
+          if (!raw) return;
+          let label = raw;
+          const eventName = String((step && step.event) || "").toLowerCase();
+          const decision = String((step && step.decision) || "").toLowerCase();
+          const reason = String((step && step.reason) || "").toLowerCase();
+          if (raw.toLowerCase().indexOf("commit") >= 0) {
+            if (eventName === "commit.denied" || decision.indexOf("blocked_") === 0 || reason.indexOf("blocked_") === 0) {
+              label = "Commit ❌ BLOCKED";
+            } else if (eventName === "commit.authorized" || eventName === "commit.executed") {
+              label = "Commit ✅ AUTHORIZED";
+            }
+          }
+          const key = label.toLowerCase();
+          if (seen.has(key)) return;
+          seen.add(key);
+          out.push(label);
+        });
+        return out;
+      }
+
       function renderReplayReport(job) {
         if (!job) return;
         currentReportJob = job;
@@ -635,10 +668,7 @@
           tape_hash_not_captured: "Tape Hash Capture"
         };
         const criticalKeys = ["policy_snapshot_missing", "config_snapshot_missing", "authority_snapshot_missing"];
-        const pathText = [
-          "Intake", "Worker Assigned", "Tape Loaded", "Inference", "Proposal", "Justification",
-          hasBlocked ? "Commit ❌ BLOCKED" : "Commit ✅ AUTHORIZED", hasBlocked ? "Execution ⏹" : "Execution ✅"
-        ];
+        const pathText = replayPathLabels(job, hasBlocked);
         reportModalTitle.textContent = "Replay Steps · Job #" + String(job.job_id || "?");
         reportModalSummary.textContent = "Source: " + source + " · Status: " + status + " · Decision: " + decision + " · Latency: " + (Number.isFinite(latencyMs) && latencyMs > 0 ? String(latencyMs) + "ms" : "unknown");
         reportModalReason.textContent = "Engine action: " + humanReason(job);
@@ -879,12 +909,13 @@
             const stepOutcome = decision.startsWith("blocked_")
               ? "Commit boundary denied"
               : (statusText === "done" ? "Commit boundary approved" : "Evaluation pending");
+            const auditPath = replayPathLabels(job, decision.startsWith("blocked_") || statusText === "terminated").join(" -> ");
             return '' +
               '<div class="audit-item ' + esc(cls) + '">' +
                 '<strong>Job #' + esc(job.job_id || "?") + '</strong> · ' + esc(source) + '<br />' +
                 '<div class="steps"><span class="pill ' + esc(cls) + '">LAB</span></div>' +
                 '<div class="steps">' +
-                  'Intake -> Policy Snapshot -> Worker Capacity -> Tape Load -> Proposal -> Justification -> Commit Boundary -> ' + esc(stepOutcome) +
+                  esc(auditPath) + ' -> ' + esc(stepOutcome) +
                 '</div><div class="steps"><strong>Reason:</strong> ' + esc(humanReason(job)) + '</div>' +
                 '<div class="steps"><strong>Block signals:</strong> ' + esc(signalText) + '</div>' +
                 '<div class="steps"><strong>Admissibility missing:</strong> ' + esc(missingText) + '</div>' +

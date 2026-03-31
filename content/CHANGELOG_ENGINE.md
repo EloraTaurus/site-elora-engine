@@ -13,6 +13,12 @@
   - Set Governance Replay initial load window to 250 events and add explicit `Load more steps` action for full-trace inspection on demand.
   - Reduce replay CPU/DB pressure by limiting expensive replay-chain verification and diff-comparison work to first-page replay loads (`offset=0`).
   - Add replay event counting helper in job store to support efficient pagination without full-trace payloads on each request.
+### Pipeline Audit Unification (Master 22-Stage)
+  - Unify runtime replay stage typing for normal chat/gpt jobs to canonical master pipeline stage types (`worker_capacity`, `worker_registration`, `worker_assignment`, `tape_assignment`, `tape_loaded`, `worker_authorized`, `tape_unloaded`, `worker_unassigned`).
+  - Add terminal-stage canonical reconciliation so completed/failed runs emit explicit coverage for all 22 canonical stages (executed or `node.skipped`) and always include `Archival` stage evidence.
+  - Extend Lab simulator replay generation to emit canonical 22-stage pipeline coverage and archival completion semantics.
+  - Add canonical pipeline coverage object to governance replay API metadata (`metadata.canonical_pipeline`) with expected/present/missing counts and missing stage list.
+  - Add canonical pipeline coverage object to public Lab payloads (`pipeline_coverage`) so website/report surfaces can verify 22-stage capture completeness.
 ### Lab / Temperature Harness + Engine Scaling Test
   - Add `Temperature Harness` page (`/admin/lab/temperature-harness`) to run prompt sweeps across static temperatures and dynamic strategy in one run.
   - Add temperature harness API:
