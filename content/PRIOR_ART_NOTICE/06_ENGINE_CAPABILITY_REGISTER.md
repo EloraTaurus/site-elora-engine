@@ -76,6 +76,13 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Code anchors: `engine/api/routes_chat.py`, `engine/core/jobs.py`, `engine/services/commit_enforcement.py`
 - Evidence summary: Runtime captures prompt hash + encrypted prompt artifact, plus memory/knowledge resolution summaries and snapshot references as first-class evidence before inference, then carries these into commit/replay for deterministic review.
 
+### Proposal-Stage Runtime Signals Experimentation (Bounded)
+
+- Date: `2026-03-31`
+- Evidence class: Controlled runtime stabilization experimentation (proposal-stage only)
+- Code anchors: `engine/core/inflight_inference.py`, `engine/core/inflight_calibration.py`, `engine/core/lab_inflight_tuning.py`
+- Evidence summary: Introduced bounded per-request runtime-signal adjustments around approved baseline profiles, with repeat-evaluation harness workflows and captured evidence outputs for adjustment reason/timing/range while preserving unchanged commit-boundary authority behavior.
+
 ## Security and Access Control Foundation
 
 ### Signed Request and Payload Controls

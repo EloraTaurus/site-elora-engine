@@ -11,6 +11,8 @@ This notice is published to document technical milestones and maintain a clear p
 - Elora is moving toward open architecture publication with closed-source implementation.
 - Elora supports open AI governance standards and opposes unnecessary gatekeeping of common safety and control patterns.
 - Elora uses established cryptographic primitives and distributed-systems design patterns that pre-date this project by decades.
+- Public technical disclosure is intentionally detailed enough for reduction-to-practice chronology, while withholding direct reproducibility handles (exact implementation playbooks, full route/config inventories, and copy-ready internal run paths).
+- The disclosure objective is verifiable chronology and architectural accountability, not turnkey replication.
 
 ## Global Open Standards Advocacy
 

@@ -26,6 +26,7 @@ This page describes how Elora Taurus maintains a verifiable implementation chron
 - Each milestone maps to one or more commit fingerprints
 - Milestones are cross-referenced to changelog entries and operator-facing capability surfaces
 - Internal evidence bundles preserve full hashes, patch context, and release alignment notes
+- Experimental runtime-signal milestones are recorded with explicit control-boundary notes (proposal-stage scope, bounded adjustment behavior, commit boundary unchanged).
 
 ## Verification Approach
 

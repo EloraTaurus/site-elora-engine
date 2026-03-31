@@ -1,6 +1,6 @@
 # Roadmap and Maturity
 
-Last updated: 2026-03-29
+Last updated: 2026-03-31
 
 First implemented (from changelog): 2026-02-28
 
@@ -33,7 +33,12 @@ Elora is in an advanced build phase:
 6. GPU-aware execution path validation
 - verify governed job flow against GPU-capable host inventory and host policy constraints.
 
-7. Hardware attestation research track (application for funding)
+7. Runtime signals experimentation (proposal-stage)
+- begin bounded runtime-signal validation in Lab to reduce drift risk and wasted compute under controlled adjustment limits,
+- baseline-led and evidence-captured behavior only (no autonomous commit changes),
+- commit boundary behavior remains unchanged.
+
+8. Hardware attestation research track (application for funding)
 - define phased trust posture: `software` -> `hardware_backed` -> `hardware_deployed`,
 - evaluate TPM/silicon-backed evidence claims for runtime identity proofs,
 - run exploratory feasibility work for LUNA board and OpenTitan-backed deployment modes.
@@ -53,3 +58,4 @@ Next major release boundary is expected when the next governance section and int
 - 2026-03-24: Added live ops footprint rail (Engine + host/worker summary) for faster performance triage.
 - 2026-03-29: Added pre-inference runtime evidence stages (`prompt.captured`, `memory.resolved`, `knowledge.resolved`) and carried their hashes/snapshots into commit/replay artifacts.
 - 2026-03-29: Switched pipeline surface to a single master read-only chain with extended canonical stages and runtime-consistent node rendering (`present`/`virtual`, `visual`/`non-visual`).
+- 2026-03-31: Began proposal-stage runtime signals experimentation with bounded per-request adjustment behavior and preserved commit boundary semantics.

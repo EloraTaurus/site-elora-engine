@@ -1,5 +1,9 @@
 # Site / Demo Changelog
 
+## 2026-03-31
+- Updated website roadmap/maturity milestones to include beginning proposal-stage runtime signals experimentation.
+- Kept milestone wording bounded and public-safe: controlled runtime stabilization research with unchanged commit boundary semantics.
+
 ## 2026-03-29
 - Reduced public Lab dashboard polling load by switching website feed calls to `lab-status.json?lite=1`.
 - Added on-demand report hydration (`/public/lab-job/{job_id}`) so replay steps are fetched only when a visitor opens a scorecard.
