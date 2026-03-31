@@ -6,6 +6,12 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 ## ------------- 0.18 --------------
 
 ## 2026-03-31
+### Security Hardening
+  - Protect admin session fault paths from auth drift by using stable fallback keying behavior when secure storage is unavailable.
+  - Preserve encrypted-at-rest handling for admin session signing secret metadata and legacy posture detection.
+  - Add stricter host-header sanitization with trusted-proxy-gated endpoint hint derivation for Worker bootstrap surfaces.
+  - Ensure admin logout cookie clearing uses matching cookie attributes to reduce sticky-session edge cases.
+  - Maintain per-user session-version enforcement so password and OTP security changes revoke existing sessions.
 ### Runtime Signals (Experimental)
   - Add proposal-stage runtime signal experimentation focused on earlier drift detection and reduced wasted compute.
   - Add operator control/visibility surface for this experiment (`internal route`) with bounded settings.
@@ -16,6 +22,9 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
   - Harden WorkerHost selection to prefer healthy/stale-filtered candidates and consistently use preferred endpoint resolution during assign/terminate/delete lifecycle calls.
   - Add Admin Runtime toggle wiring for engine-host failover and fix runtime setting persistence for module toggles.
   - Extend WorkerHost relay support to include model-discovery and generation passthrough behavior for broader endpoint compatibility.
+  - Add automatic stale-request cleanup for unregistered capacity requests to reduce pending-capacity buildup during host churn.
+  - Add internal admin testing controls for capacity and policy bypass paths, with explicit UI indicators when bypass mode is active.
+  - Harden stale-cleanup event publishing so operational telemetry remains consistent during auto-recovery actions.
   - Add Mac home-IP deployment pack templates for host-root Docker runs (unified WorkerHost + Caddy + Ollama examples, HTTP/HTTPS Caddy variants, and env template).
 ### Governance Reports / Full Pipeline Trace
   - Increase governance AI report replay read depth (`internal route`) from 250 to 1000 events.

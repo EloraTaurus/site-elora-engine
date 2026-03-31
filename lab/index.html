@@ -112,6 +112,18 @@
       background: rgba(10, 28, 52, 0.7);
       padding: 10px 12px;
     }
+    .graph-grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 10px;
+    }
+    .graph-panel {
+      border: 1px solid rgba(109, 173, 255, 0.35);
+      border-radius: 12px;
+      background: rgba(10, 28, 52, 0.7);
+      padding: 10px 12px;
+    }
     .hex-head {
       font-size: 14px;
       color: #b8d4f7;
@@ -432,10 +444,17 @@
       <p class="lab-sub" style="margin:8px 0 0 0;">
         Score note: Results are based on whether the engine made the decision expected by policy. A lower score can include safe false-blocks (for example, blocking a file change the test expected to allow), not just unsafe allows.
       </p>
-      <section class="hex-wrap">
-        <div class="hex-head">Elora Performance Graph (Latest 200 Jobs)</div>
-        <svg class="hex-chart" id="hexChart" viewBox="0 0 420 240" aria-label="Elora performance trend graph"></svg>
-        <div class="hex-legend" id="hexLegend">Shows rolling defense pass-rate trend and latest score.</div>
+      <section class="graph-grid">
+        <div class="graph-panel">
+          <div class="hex-head">Performance Trend (Latest 200 Jobs)</div>
+          <svg class="hex-chart" id="hexChart" viewBox="0 0 420 240" aria-label="Elora performance trend graph"></svg>
+          <div class="hex-legend" id="hexLegend">Shows rolling defense pass-rate trend and latest score.</div>
+        </div>
+        <div class="graph-panel">
+          <div class="hex-head">Signal Capture vs Occurrence</div>
+          <svg class="hex-chart" id="signalChart" viewBox="0 0 420 240" aria-label="Signal capture versus occurrence graph"></svg>
+          <div class="hex-legend" id="signalLegend">Shows occurred vs captured counts and capture-rate percentages.</div>
+        </div>
       </section>
 
       <h2 class="lab-section-title">Elora's Performance</h2>
@@ -518,6 +537,8 @@
       const fileMutationsStopped = document.getElementById("fileMutationsStopped");
       const hexChart = document.getElementById("hexChart");
       const hexLegend = document.getElementById("hexLegend");
+      const signalChart = document.getElementById("signalChart");
+      const signalLegend = document.getElementById("signalLegend");
       const asLive = document.getElementById("asLive");
       const asDesired = document.getElementById("asDesired");
       const asLoad = document.getElementById("asLoad");
@@ -898,6 +919,14 @@
           unauthorized: unauthorizedExpected > 0 ? (Number(defense.unauthorized_requests_blocked || 0) / unauthorizedExpected) * 100 : 0,
           mutations: mutationDenom > 0 ? (mutationNumerator / mutationDenom) * 100 : 0
         }, defense);
+        renderSignalDualGraph({
+          driftOccurred: driftExpected,
+          driftCaptured: Number(defense.state_drift_blocks || 0),
+          unauthorizedOccurred: unauthorizedExpected,
+          unauthorizedCaptured: Number(defense.unauthorized_requests_blocked || 0),
+          mutationOccurred: mutationDenom,
+          mutationCaptured: mutationNumerator
+        });
         const publicTest = payload && payload.public_test ? payload.public_test : {};
         const nextRunIn = Number(publicTest.next_run_in_seconds || 0);
         const cooldownSecs = Number(publicTest.cooldown_seconds || 0);
@@ -1045,6 +1074,66 @@
             " · Allow precision: " + Math.round(Number(values.allowPrecision || 0)) + "%" +
             " · Evaluated jobs: " + String(seriesJobs) +
             " · Latest run score: " + String(latest) + "%";
+        }
+      }
+
+      function renderSignalDualGraph(data) {
+        if (!signalChart) return;
+        const buckets = [
+          { key: "drift", label: "Drift", occurred: Number(data.driftOccurred || 0), captured: Number(data.driftCaptured || 0) },
+          { key: "unauthorized", label: "Unauthorized", occurred: Number(data.unauthorizedOccurred || 0), captured: Number(data.unauthorizedCaptured || 0) },
+          { key: "mutation", label: "Mutation", occurred: Number(data.mutationOccurred || 0), captured: Number(data.mutationCaptured || 0) }
+        ].map(function (b) {
+          const occurred = Math.max(0, b.occurred);
+          const captured = Math.max(0, Math.min(occurred, b.captured));
+          const rate = occurred > 0 ? (captured / occurred) * 100 : 0;
+          return { label: b.label, occurred: occurred, captured: captured, rate: rate };
+        });
+        const maxVal = Math.max(1, buckets.reduce(function (acc, b) { return Math.max(acc, b.occurred, b.captured); }, 0));
+        const w = 420;
+        const h = 240;
+        const padL = 40;
+        const padR = 12;
+        const padT = 14;
+        const padB = 36;
+        const innerW = w - padL - padR;
+        const innerH = h - padT - padB;
+        const groupW = innerW / buckets.length;
+        const barW = Math.min(22, Math.max(14, (groupW - 24) / 2));
+        function y(value) {
+          return padT + (1 - (value / maxVal)) * innerH;
+        }
+        const grid = [0, 0.25, 0.5, 0.75, 1].map(function (g) {
+          const yy = (padT + innerH - (g * innerH)).toFixed(1);
+          const v = Math.round(g * maxVal);
+          return '' +
+            '<line x1="' + padL + '" y1="' + yy + '" x2="' + (w - padR) + '" y2="' + yy + '" stroke="rgba(109,173,255,0.20)" stroke-width="1"></line>' +
+            '<text x="' + (padL - 6) + '" y="' + (Number(yy) + 4).toFixed(1) + '" font-size="10" text-anchor="end" fill="#9fc0e6">' + String(v) + '</text>';
+        }).join("");
+        const groups = buckets.map(function (b, i) {
+          const cx = padL + (i * groupW) + (groupW / 2);
+          const x1 = cx - barW - 3;
+          const x2 = cx + 3;
+          const yOccurred = y(b.occurred);
+          const yCaptured = y(b.captured);
+          return '' +
+            '<rect x="' + x1.toFixed(1) + '" y="' + yOccurred.toFixed(1) + '" width="' + barW.toFixed(1) + '" height="' + Math.max(1, (padT + innerH - yOccurred)).toFixed(1) + '" fill="rgba(56,189,248,0.60)" stroke="rgba(56,189,248,0.95)" stroke-width="1"></rect>' +
+            '<rect x="' + x2.toFixed(1) + '" y="' + yCaptured.toFixed(1) + '" width="' + barW.toFixed(1) + '" height="' + Math.max(1, (padT + innerH - yCaptured)).toFixed(1) + '" fill="rgba(74,222,128,0.62)" stroke="rgba(74,222,128,0.98)" stroke-width="1"></rect>' +
+            '<text x="' + cx.toFixed(1) + '" y="' + (padT + innerH + 14).toFixed(1) + '" font-size="11" text-anchor="middle" fill="#9fc0e6">' + esc(b.label) + '</text>' +
+            '<text x="' + cx.toFixed(1) + '" y="' + (padT + 12).toFixed(1) + '" font-size="10" text-anchor="middle" fill="#d4e8ff">' + String(Math.round(b.rate)) + '%</text>';
+        }).join("");
+        signalChart.innerHTML =
+          '<rect x="0" y="0" width="420" height="240" fill="none"></rect>' +
+          grid +
+          '<line x1="' + padL + '" y1="' + padT + '" x2="' + padL + '" y2="' + (padT + innerH) + '" stroke="rgba(109,173,255,0.45)" stroke-width="1"></line>' +
+          '<line x1="' + padL + '" y1="' + (padT + innerH) + '" x2="' + (w - padR) + '" y2="' + (padT + innerH) + '" stroke="rgba(109,173,255,0.45)" stroke-width="1"></line>' +
+          groups;
+        if (signalLegend) {
+          signalLegend.textContent =
+            "Blue=Occurred, Green=Captured · " +
+            buckets.map(function (b) {
+              return b.label + ": " + String(b.captured) + "/" + String(b.occurred) + " (" + String(Math.round(b.rate)) + "%)";
+            }).join(" · ");
         }
       }
 
