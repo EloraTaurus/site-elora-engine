@@ -18,6 +18,56 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Initial engine launch milestone (pre-formal changelog period)
 - Additional evidence channels: Git commit record, Discord project messages, Facebook project post
 
+### Additional Milestone Fingerprints (Operator-Supplied Anchors)
+
+#### Tape and Fabric Autoscaling Milestone
+
+- Date: `2026-03-13` (operator-supplied)
+- Commit fingerprint: `6c31560`
+- Evidence class: Distributed runtime autoscaling and tape/Fabric operational milestone
+- Additional evidence channels: Git commit record, changelog references, operator release notes
+- Summary of updates (changelog-ready): Expanded tape-aware Fabric autoscaling controls and operational runtime-distribution behavior for governed worker capacity handling.
+
+#### New Lab Harness Simulations and API Milestone
+
+- Date: `2026-03-23`
+- Commit fingerprint: `f41ec05`
+- Evidence class: Lab simulation harness and API expansion milestone
+- Additional evidence channels: Git commit record, changelog references, operator release notes
+- Summary of updates (changelog-ready): Added new Lab simulation harness pathways and API surfaces for repeatable controlled scenario validation.
+
+#### Security Hardening and Hardware Attestation Framework Milestone
+
+- Date: `2026-03-24`
+- Commit fingerprint: `c128013`
+- Evidence class: Security hardening and attestation-framework milestone
+- Additional evidence channels: Git commit record, changelog references, operator release notes
+- Summary of updates (changelog-ready): Strengthened runtime security posture and advanced phased hardware-attestation framework controls/research alignment.
+
+#### Execution Monitoring Update Milestone
+
+- Date: `2026-03-28`
+- Commit fingerprint: `2fb6c20`
+- Evidence class: Execution-monitoring and operator observability milestone
+- Additional evidence channels: Git commit record, changelog references, operator release notes
+- Summary of updates (changelog-ready): Expanded execution-monitor visibility and operator-facing runtime progression controls for clearer governed execution traceability.
+
+#### Memory and Knowledge Pipeline Extension Milestone
+
+- Date: `2026-03-29`
+- Commit fingerprint: `8986a2d`
+- Evidence class: Memory/knowledge pipeline extension milestone
+- Additional evidence channels: Git commit record, changelog references, operator release notes
+- Summary of updates (changelog-ready): Extended memory and knowledge pipeline behavior to improve scoped retrieval context quality and governance-aligned evidence depth.
+
+#### Inflight Inference, Pipeline, and Lab/Fabric Update Milestone
+
+- Date: `2026-03-31`
+- Commit fingerprint: `953612e`
+- Evidence class: Runtime signals, pipeline, and Lab/Fabric integration milestone
+- Additional evidence channels: Git commit record, changelog references, operator release notes
+- Summary of updates (changelog-ready): Added bounded proposal-stage runtime-signal tuning and related pipeline/Lab/Fabric integration updates while preserving unchanged commit-boundary authority behavior.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components
