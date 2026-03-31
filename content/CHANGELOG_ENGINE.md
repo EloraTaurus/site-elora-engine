@@ -2,6 +2,35 @@
 
 ## ------------- 0.18 --------------
 
+## 2026-03-31
+### Governance Reports / Full Pipeline Trace
+  - Increase governance AI report replay read depth (`/admin/api/governance/reports/generate`) from 250 to 1000 events.
+  - Append deterministic `Pipeline Steps (Full Trace)` section to generated markdown reports so captured stage flow is preserved end-to-end.
+  - Add `trace_steps` metadata to report response for quick verification of included replay depth.
+### Governance Replay / Lean Progressive Loading
+  - Add replay-event pagination support (`limit` + `offset`) to `/admin/api/jobs/{job_id}/replay`.
+  - Add replay pagination payload (`total`, `returned`, `has_more`, `next_offset`) for UI incremental loading.
+  - Set Governance Replay initial load window to 250 events and add explicit `Load more steps` action for full-trace inspection on demand.
+  - Reduce replay CPU/DB pressure by limiting expensive replay-chain verification and diff-comparison work to first-page replay loads (`offset=0`).
+  - Add replay event counting helper in job store to support efficient pagination without full-trace payloads on each request.
+### Lab / Temperature Harness + Engine Scaling Test
+  - Add `Temperature Harness` page (`/admin/lab/temperature-harness`) to run prompt sweeps across static temperatures and dynamic strategy in one run.
+  - Add temperature harness API:
+    - `POST /admin/api/lab/temperature-harness/run`
+  - Add dynamic temperature strategy controls (`temperature_strategy=dynamic`, `temperature_min`, `temperature_max`) with runtime metadata capture under response `meta.temperature`.
+  - Add harness scoring/ranking layer for per-run comparison:
+    - score breakdown (length, sentence structure, repetition, refusal penalty, temperature bias, latency normalization)
+    - scoring profiles (`balanced`, `precision`, `creativity`)
+    - ranked output + recommended run
+    - `dynamic_vs_best_static_delta` summary metric.
+### Lab / Modularity and Route Decomposition
+  - Extract temperature harness execution/scoring from monolithic admin routes into reusable core module:
+    - `engine/core/lab_temperature.py`
+  - Add dedicated Lab POST route dispatcher:
+    - `engine/api/admin_routes/lab_post.py`
+  - Wire `routes_admin.py` to dispatch temperature harness POST through `handle_lab_post(...)` instead of inline route logic.
+  - Add public wrapper `resolve_temperature_strategy(...)` in chat service to avoid cross-module dependence on private temperature helper internals.
+
 ## 2026-03-29
 ### Public Lab API Performance Optimization
   - Optimize `/public/lab-status(.json)` for lower CPU impact under public dashboard polling.
