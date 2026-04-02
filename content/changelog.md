@@ -1,13 +1,18 @@
 # Site / Demo Changelog
 
+## 2026-04-02
+- Updated website disclosure copy to align terminology with `Elora Inflight (Pre-Generation Control Layer)`.
+- Clarified public website wording that current inflight behavior is bounded pre-generation control, with future per-token orchestration tracked separately.
+- Refined changelog and architecture copy so evidence-focused messaging stays informative without introducing implementation reproduction detail.
+
 ## 2026-03-31
 - Updated website roadmap/maturity milestones to include beginning proposal-stage runtime signals experimentation.
 - Kept milestone wording bounded and public-safe: controlled runtime stabilization research with unchanged commit boundary semantics.
 
 ## 2026-03-29
-- Reduced public Lab dashboard polling load by switching website feed calls to `lab-status.json?lite=1`.
-- Added on-demand report hydration (`/public/lab-job/{job_id}`) so replay steps are fetched only when a visitor opens a scorecard.
-- Tightened Lab feed payload profile (fewer heavy replay fields in default poll path) to lower Engine CPU pressure during public traffic.
+- Updated public Lab page behavior to use lighter default payloads for faster website responsiveness.
+- Added on-demand scorecard hydration so detailed replay content loads only when a visitor requests it.
+- Tuned public dashboard polling behavior for lower overhead during repeated visits.
 
 ## 2026-03-24
 - Updated website roadmap/maturity milestones with latest Fabric operations work (local WorkerHost deploy, runtime inventory/update checks, live ops footprint rail).
@@ -15,7 +20,6 @@
 - Added public-safe mention of LUNA/OpenTitan exploration as future feasibility work (no implementation detail claims).
 
 ## 2026-03-19
-- Added latest Engine changelog sync for Fabric/WorkerHost operations under `0.17`.
 - Updated website context pack docs to reflect WorkerHost bootstrap builder, GPU host policy controls, and runtime distribution (`Sync now` / `Update runtime`) direction.
 - Updated public WorkerHost documentation copy with runtime update path and inference-node detection notes.
 
@@ -42,8 +46,7 @@
 - Added architecture file metadata convention: `Last updated` and `First implemented (from changelog)` across context files.
 
 ## 2026-03-06
-- Added governance policy V1 controls and dry-run/testing support in live engine context references.
-- Expanded replay policy snapshot and resolved policy preview context for operator workflows.
+- Updated public documentation references for governance policy and replay-context descriptions.
 
 ## 2026-03-03
 - Stage 4 updated with guided replay progression and deterministic commit-failure walkthrough.

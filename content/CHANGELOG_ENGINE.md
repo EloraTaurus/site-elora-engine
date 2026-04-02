@@ -5,6 +5,30 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-02
+### Runtime Signals / Inflight (Experimental)
+  - Rename the operator surface to `Elora Inflight (Pre-Generation Control Layer)` to clearly separate current pre-generation bounded control from planned per-token inflight research.
+  - Add bounded apply-timing control visibility (requested mode vs executed mode) in replay evidence to clarify how runtime adjustments were actually applied.
+  - Enrich replay evidence with compact structured context (primary reason, signal set, adjustment envelope, and estimated efficiency impact).
+  - Reposition inflight replay evidence to align with drafting-stage semantics while preserving proposal/commit governance boundaries.
+  - Expand replay/audit visibility for inflight outcomes with compact quick-glance indicators (state, reason, stage/apply mode, and estimated savings).
+  - Add structured explanation in operator UI that inflight is signal-driven and bounded, not random guessing or permanent self-modification.
+  - Add provider-path clarification: current pre-generation control path plus planned future per-token orchestration path.
+  - Add admin-internal rollout scope control so inflight experimentation can be constrained to internal operator contexts.
+  - Commit boundary behavior remains unchanged.
+### Admin Operator Workflow
+  - Add admin chat continuity controls (`Keep session` with bounded idle timeout) so internal testing conversations can persist during active operator work.
+  - Add browser-tab-scoped continuity behavior that reuses active chat session context during operator testing flows.
+  - Improve operator UX by reducing inflight-page scroll depth using collapsible explanation/glossary sections.
+### Reliability
+  - Fix an admin layout interpolation regression affecting dashboard rendering in the chat-session hint path.
+### Policy-State Testing and Runtime Reactions
+  - Add a new policy-state action harness for deterministic threshold-trigger simulations and bounded reaction testing.
+  - Add configurable drift/profile simulation modes to evaluate threshold behavior under stable and unstable trajectories.
+  - Add reaction telemetry capture (trigger timing, response latency, timeline evidence) for post-run verification.
+  - Add internal live-mode controls that apply threshold actions to admin testing sessions with explicit operator notification when triggered.
+  - Preserve governance posture by keeping these behaviors constrained to internal testing and audit-oriented visibility.
+
 ## 2026-03-31
 ### Security Hardening
   - Protect admin session fault paths from auth drift by using stable fallback keying behavior when secure storage is unavailable.
@@ -69,6 +93,11 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
     - scenario-level score uplift + compute-savings summaries
     - per-scenario top run evidence.
   - Add persistent immutable default snapshot capture for inflight settings (`inflight_default_snapshot_json`) so original defaults can be preserved before later tuning changes.
+### Lab / P-State Action Harness
+  - Add a dedicated P-state action harness to simulate threshold crossing and deterministic runtime responses under controlled lab conditions.
+  - Add configurable trigger parameters and injection modes for repeatable scenario testing across different threshold paths.
+  - Add deterministic runtime reaction targets and reaction-timing telemetry for verification of threshold-action behavior.
+  - Add internal live integration controls and chat-surface indicators for threshold-trigger events during admin-only testing.
 
 ## 2026-03-29
 ### Public Lab API Performance Optimization
