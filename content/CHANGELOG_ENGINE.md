@@ -5,6 +5,34 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-03
+### Inflight Runtime Evidence (Experimental)
+  - Expand inflight evidence to include Mirostat-linked adjustment visibility and clearer explanation output for replay/report interpretation.
+  - Add a stability fix to inflight adjustment handling so runtime change detection is applied safely during tuning decisions.
+### Governance Replay + Reports
+  - Add asynchronous report generation tracking with background progress visibility for slower CPU environments.
+  - Add optional WebGPU telemetry evidence capture for report context when client-side acceleration is active.
+  - Improve replay readability by moving long detail blocks into drilldown modal views while preserving full detail access.
+  - Expand inflight explanation drilldown to show step-level adjustment trail, delta swing summary, and response-chain visibility for easier quick interpretation.
+### WebGPU Proposal Integrity (Experimental Runtime Path)
+  - Strengthen browser-assisted proposal handling with signed proposal envelopes and bounded validity windows.
+  - Add stricter proposal verification checks before governance progression, including replay-resistance state handling.
+  - Expand replay evidence coverage so rejected proposal-integrity cases are visible for operator review.
+### Admin Operator Experience (WebGPU Research)
+  - Add experimental local WebGPU operator-chat path with stricter research-mode safeguards and bounded scope.
+  - Add a persistent on-screen WebGPU telemetry panel for quick health/performance checks during internal testing.
+  - Improve model selection UX by separating local WebGPU-ready options from server-only options and improving default model selection behavior.
+  - Improve persistent chat continuity behavior for long-running admin research sessions.
+### Runtime and Pipeline
+  - Route local WebGPU proposal runs through the audited governance path (proposal -> justification -> commit) rather than bypassing replayable control flow.
+  - Extend replay stage visibility for local WebGPU runs and improve justification-stage trace quality.
+  - Unify GPT and chat start orchestration onto a shared pipeline executor path to reduce route divergence and improve cross-surface consistency.
+  - Move start-stage orchestration into a dedicated shared pipeline module so future surfaces can use one audited core with thin route adapters.
+  - Continue modular decomposition of chat runtime paths so WebGPU/server/agent routing concerns are cleaner and easier to audit.
+### Documentation
+  - Add a technical concept note describing tamper-resistant browser proposal flow and control-boundary expectations for supervised client compute.
+  - Add internal handover notes for both WebGPU and inflight workstreams to improve continuity of engineering research.
+
 ## 2026-04-02
 ### Runtime Signals / Inflight (Experimental)
   - Rename the operator surface to `Elora Inflight (Pre-Generation Control Layer)` to clearly separate current pre-generation bounded control from planned per-token inflight research.
