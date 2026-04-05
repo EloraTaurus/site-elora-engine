@@ -5,6 +5,25 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-05
+### Research Runtime (Observer)
+  - Add dedicated Research observer runtime surface with role-aware access boundaries for internal research operations.
+  - Add active-run locking and persistence controls to prevent overlapping observer cycles during long research runs.
+  - Integrate observer runs into the standard jobs/replay surfaces with per-cycle progress visibility.
+  - Expand observer cycle coverage to include policy-aware stage sequencing with preserved proposal/justification/commit governance boundaries.
+  - Enforce block semantics in research runtime for failed policy gates or observer block decisions, while preserving continuity for subsequent cycles.
+  - Add per-step observer evidence persistence (decision context + runtime metrics) for human review and auditability.
+### Research Reporting (Observer)
+  - Add downloadable HTML research report export for observer runs, styled to match the internal report visual surface.
+  - Expand export parity so report artifacts can be downloaded as HTML, Markdown, or JSON from the report page.
+  - Include full report sections in HTML export: overview, findings, hypothesis checks, comparison, charts, and step-level details.
+  - Add comparative reporting views that summarize baseline-vs-regulated behavior deltas across latency, token, and stability-related dimensions.
+### Research Data Lifecycle
+  - Add run-deletion controls with cascading cleanup for associated research artifacts so internal test data can be retired cleanly.
+### Research Dashboard KPIs
+  - Add aggregate KPI summaries for runs, steps, generated token volume, runtime totals, and net efficiency deltas.
+  - Add dashboard range windows (`24h`, `7d`, `30d`, `all time`) for quick trend slicing of research activity.
+
 ## 2026-04-03
 ### Inflight Runtime Evidence (Experimental)
   - Expand inflight evidence to include Mirostat-linked adjustment visibility and clearer explanation output for replay/report interpretation.
@@ -109,7 +128,7 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
     - `internal module`
   - Add dedicated Lab POST route dispatcher:
     - `internal module`
-  - Wire `routes_admin.py` to dispatch temperature harness POST through `handle_lab_post(...)` instead of inline route logic.
+  - Wire admin route callbacks to dispatch temperature harness POST through shared handlers instead of inline route logic.
   - Add public wrapper `resolve_temperature_strategy(...)` in chat service to avoid cross-module dependence on private temperature helper internals.
 ### Lab / Inflight Tuning Harness + Baseline Snapshot
   - Add `Inflight Tuning Harness` page (`internal route`) for repeated prompt-set runs that score bounded runtime tuning outcomes.
@@ -308,7 +327,7 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## 2026-03-19
 ### WorkerHost / Fabric GPU Readiness
-  - Begin admin route modularization for Fabric lifecycle by extracting WorkerHost + host-token POST handlers from monolithic `routes_admin.py` into `internal module` and dispatching through shared admin route callbacks.
+  - Begin admin route modularization for Fabric lifecycle by extracting WorkerHost + host-token POST handlers from a monolithic admin route surface into an internal module and dispatching through shared admin route callbacks.
   - Continue Fabric modularization by extracting worker lifecycle/config POST handlers (`request/revoke/recreate/terminate/delete/bootstrap-rotate`, template update, job buckets, Fabric setup save) into `internal module`.
   - Extend WorkerHost registration/heartbeat payloads with:
     - host policy (`allow_gpu_jobs`, `allow_worker_deployments`)
@@ -510,7 +529,7 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
     - simulated influx runner (`job_count`) to test scale-up behavior
     - heuristic min/max recommendation snapshot (CPU/memory/GPU-aware baseline)
   - Add Fabric Autoscale deployment page (`internal route`) with autoscale controls and worker-pool visibility.
-  - Add reusable autoscale simulation API path through existing admin POST handlers (`internal route`) and target-aware redirects for Fabric/Lab entrypoints.
+  - Add reusable autoscale simulation API path through existing admin control handlers (`internal route`) and target-aware redirects for Fabric/Lab entrypoints.
 ### Docs
   - Add `internal module` (autoscale + worker/tape operating model).
   - Add `internal module` (control-plane layers and canonical proposal->commit pipeline notes).
@@ -565,9 +584,9 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
   - Add report generation modes (`summary`, `operator`, `governance`, `forensic`) with bounded evidence depth and output budgets.
   - Add `Download .md` action for generated AI reports in Governance `AI Report (Alpha)`.
 ### Platform
-  - Start route modularization by extracting governance policy snapshot resolution helpers into `/engineinternal admin route` and reusing them from admin API handlers.
+  - Start route modularization by extracting governance policy snapshot resolution helpers into an internal admin module and reusing them from admin API handlers.
   - Add `internal route` module manifest endpoint to separate `core` vs `addon` runtime surfaces (initial scaffold for optional module architecture).
-  - Start `routes_admin.py` decomposition by moving Governance and Lab GET routing blocks into `/internal module` and `/internal module`.
+  - Start admin route decomposition by moving Governance and Lab GET routing blocks into internal modules.
   - Continue decomposition by moving Governance POST/API handlers (policy dry-run, AI report generation, replay purge, global policy save, worker policy map save) into `/internal module`.
 
 ## 2026-03-03
@@ -736,7 +755,7 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
   - Clamp stage rendering to visible canvas bounds and enable scrollable canvas for reduced-resolution displays.
   - Add full raw metadata view + copy JSON support in Logs for deeper operator/audit analysis.
 ### Platform
-  - Add governance dashboard blueprint (`OPERATOR_DASHBOARD_GOVERNANCE_PLAN.md`) for SOC-style operations and audit views.
+  - Add governance dashboard blueprint (internal planning note) for SOC-style operations and audit views.
 
 ## 2026-02-05
 ### Engine
@@ -865,10 +884,8 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
   - Dashboard now surfaces CPU model, RAM stats, GPU nodes, virtual nodes, and process memory.
   - Background image support for admin UI + Elora avatar banner message.
   - Uploadable background + avatar via admin UI (writes to admin assets directory).
-  - Dashboard now read-only; configuration moved to /admin/settings with a system state banner.
-  - Added /admin/security for security posture summary.
-  - Added /admin/nodes for infrastructure overview.
-  - Added /admin/logs placeholder with docker log guidance.
+  - Dashboard now read-only; configuration moved to a dedicated admin settings surface with a system state banner.
+  - Add dedicated security, nodes, and logs admin surfaces for posture review and infrastructure diagnostics.
   - Unified layout so the left navigation stays consistent across pages.
   - Added Models section with read-only inference target summary + dashboard card.
   - Added model state indicator and per-model detail view (read-only).
