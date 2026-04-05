@@ -6,6 +6,8 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 ## ------------- 0.18 --------------
 
 ## 2026-04-05
+- Research reports now include cross-strategy comparison views and a reference-delta explorer in HTML export.
+- Added an Observer signal dictionary to align research interpretation with runtime signal semantics.
 ### Research Runtime (Observer)
   - Add dedicated Research observer runtime surface with role-aware access boundaries for internal research operations.
   - Add active-run locking and persistence controls to prevent overlapping observer cycles during long research runs.
@@ -18,6 +20,11 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
   - Expand export parity so report artifacts can be downloaded as HTML, Markdown, or JSON from the report page.
   - Include full report sections in HTML export: overview, findings, hypothesis checks, comparison, charts, and step-level details.
   - Add comparative reporting views that summarize baseline-vs-regulated behavior deltas across latency, token, and stability-related dimensions.
+### Research Scenarios (Observer)
+  - Add structured scenario-pack execution mode for observer research runs with repeatable multi-turn stress scenarios.
+  - Add four progressive difficulty tiers (`Easy`, `Medium`, `Hard`, `Chaos`) and scenario-locked run settings for controlled comparisons.
+### Research Methods
+  - Add internal observer discovery method pack (protocol, run-record template, and checklist) to improve repeatability and falsifiability of research findings.
 ### Research Data Lifecycle
   - Add run-deletion controls with cascading cleanup for associated research artifacts so internal test data can be retired cleanly.
 ### Research Dashboard KPIs
