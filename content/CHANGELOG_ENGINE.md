@@ -8,6 +8,7 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 ## 2026-04-05
 - Research reports now include cross-strategy comparison views and a reference-delta explorer in HTML export.
 - Added an Observer signal dictionary to align research interpretation with runtime signal semantics.
+- Pre-inference planning is now shared between production chat and research paths to improve behavioral parity.
 ### Research Runtime (Observer)
   - Add dedicated Research observer runtime surface with role-aware access boundaries for internal research operations.
   - Add active-run locking and persistence controls to prevent overlapping observer cycles during long research runs.
