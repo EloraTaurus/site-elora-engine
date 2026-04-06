@@ -5,6 +5,12 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-06
+- Expanded research-report comparability surfaces with clearer version tracking for experimental runtime analysis outputs.
+- Added new comparative visualizations for stability/resource behavior, intervention timing, and workload-phase relationships to improve run-to-run interpretability.
+- Improved research dashboard run-list visibility with version badges for faster filtering of mixed experimental runs.
+- Updated internal/public changelog alignment so public disclosures remain informative while preserving non-reproducibility boundaries for active research tracks.
+
 ## 2026-04-05
 - Research reports now include cross-strategy comparison views and a reference-delta explorer in HTML export.
 - Added an Observer signal dictionary to align research interpretation with runtime signal semantics.
