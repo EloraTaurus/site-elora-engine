@@ -5,6 +5,12 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-07
+- Added a new research-run speed control to reduce long-duration cycle execution when full explanatory output is not required.
+- Improved experimental-run throughput consistency by tightening optional analysis-output budget under speed mode while preserving core decision telemetry.
+- Refined the Research landing page into a more dashboard-oriented view with quick-glance KPI cards, active-run progress, and last-completed summary for faster report navigation.
+- Updated research interpretation surfaces to use a constraint-first framing for runtime behavior analysis, including revised threshold-oriented hypothesis reporting and chart naming.
+
 ## 2026-04-06
 - Expanded research-report comparability surfaces with clearer version tracking for experimental runtime analysis outputs.
 - Added new comparative visualizations for stability/resource behavior, intervention timing, and workload-phase relationships to improve run-to-run interpretability.
