@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Take part in public Elora research testing whether adaptive runtime control can reduce compute while preserving response usefulness." />
+  <meta name="description" content="Public contribution runs are currently paused." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://elorataurus.com/take-part/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="The Elora Taurus Project - Take Part" />
-  <meta property="og:description" content="Run a public scenario to help test whether Elora can reduce compute usage while keeping model outputs useful." />
+  <meta property="og:description" content="Public contribution runs are currently paused." />
   <meta property="og:url" content="https://elorataurus.com/take-part/" />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Elora Taurus Project - Take Part" />
-  <meta name="twitter:description" content="Join public research on adaptive inference efficiency and help measure compute savings versus output quality." />
+  <meta name="twitter:description" content="Public contribution runs are currently paused." />
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
   <title>The Elora Taurus Project - Take Part</title>
   <link rel="icon" href="../elora.png" />
@@ -45,98 +45,18 @@
     <div class="shell">
       <section class="hero hero-guide-curve">
         <div class="hero-copy">
-          <h1>Take Part In Live Research</h1>
-          <p>Help test whether Elora can reduce compute load per turn while still keeping model responses useful, stable, and readable.</p>
+          <h1>Take Part</h1>
+          <p>Public contribution runs are currently paused.</p>
+          <p>Research operations continue internally through authenticated admin surfaces, including token churn and compute-efficiency tracking.</p>
+          <div class="cta-row">
+            <a class="btn" href="../research/">Back To Research</a>
+            <a class="btn alt" href="../docs/">Documentation</a>
+          </div>
         </div>
         <aside class="hero-guide-standalone" aria-label="Elora guide">
           <img class="hero-guide-image" src="../elora-guide.png" alt="Elora guide" onerror="this.onerror=null;this.src='../elora.png';" />
         </aside>
       </section>
-    </div>
-  </section>
-
-  <section class="section surface-light">
-    <div class="section-inner">
-      <div class="grid-2">
-        <div class="card">
-          <h3>Scenario Pool</h3>
-          <p class="note">Pick one scenario. Runs are model-locked for fair comparison.</p>
-          <div class="scroll-panel">
-            <div id="scenario-list" class="note">Loading scenarios…</div>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Leaderboard</h3>
-          <p class="note">Recent public runs sorted by completed steps and recency.</p>
-          <div class="scroll-panel">
-            <div id="leaderboard" class="note">Loading leaderboard…</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section surface-deep">
-    <div class="section-inner">
-      <h2>Contribution Runner</h2>
-      <p class="section-intro">Submit a run, then start it. Keep this tab open while the run executes. Public results show benchmark metrics; deep observer telemetry is analysed internally.</p>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Runner Setup</h3>
-          <label>Alias (optional)</label>
-          <input id="alias" type="text" maxlength="120" placeholder="researcher-01" />
-          <label style="margin-top:8px;">Hardware summary</label>
-          <input id="hardware" type="text" maxlength="240" placeholder="M2 Pro, 16GB RAM, macOS" />
-          <label style="margin-top:8px;">Notes (optional)</label>
-          <textarea id="notes" rows="2" maxlength="400" placeholder="Optional context for your run"></textarea>
-          <label style="margin-top:8px;">Scenario</label>
-          <select id="scenario-select"></select>
-          <label style="margin-top:8px;">Inference max tokens</label>
-          <select id="inference-max-tokens">
-            <option value="1024">1024</option>
-            <option value="1536" selected>1536</option>
-            <option value="2048">2048</option>
-            <option value="3072">3072</option>
-          </select>
-          <label style="margin-top:8px;">Observer max tokens</label>
-          <select id="observer-max-tokens">
-            <option value="768">768</option>
-            <option value="1024" selected>1024</option>
-            <option value="1536">1536</option>
-            <option value="2048">2048</option>
-          </select>
-          <label style="margin-top:8px;"><input id="observer-opinion" type="checkbox" style="width:auto;margin-right:6px;" />Include observer opinion output (slower)</label>
-          <label style="margin-top:8px;">WebGPU relay URL (if required)</label>
-          <input id="relay-url" type="url" placeholder="https://your-relay.example.com" />
-          <p id="relay-note" class="note">Checking relay mode…</p>
-          <label style="margin-top:8px;">CAPTCHA challenge</label>
-          <input id="captcha-question" type="text" disabled value="Loading challenge..." />
-          <label style="margin-top:8px;">CAPTCHA answer</label>
-          <input id="captcha-answer" type="text" placeholder="Enter answer" />
-          <div class="cta-row" style="margin-top:10px;">
-            <button id="captcha-refresh" class="btn alt" type="button">Refresh CAPTCHA</button>
-            <button id="probe-btn" class="btn alt" type="button">Probe WebGPU</button>
-          </div>
-          <label style="margin-top:8px;"><input id="consent" type="checkbox" style="width:auto;margin-right:6px;" />I agree to submit anonymized runtime telemetry for research.</label>
-          <div class="cta-row" style="margin-top:10px;">
-            <button id="submit-btn" class="btn mission" type="button">Run Scenario</button>
-            <button id="refresh-btn" class="btn alt" type="button">Refresh Status</button>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Run Status</h3>
-          <p id="status" class="note">No contribution submitted.</p>
-          <p id="timer" class="note">Run timer: n/a</p>
-          <a id="report-link" href="#" target="_blank" rel="noopener" style="display:none;"><button type="button" class="btn mission">Open Public Report</button></a>
-          <h4 style="margin-top:12px;">WebGPU Probe</h4>
-          <pre id="probe-out" style="white-space:pre-wrap;">No probe yet.</pre>
-          <h4 style="margin-top:12px;">Live Run Terminal</h4>
-          <pre id="run-terminal" style="white-space:pre-wrap; max-height:320px; overflow:auto; background:#07162d; border:1px solid #244a7a; border-radius:10px; padding:10px;">Waiting for run...</pre>
-          <div class="cta-row" style="margin-top:10px;">
-            <button id="copy-error-btn" class="btn alt" type="button">Copy Last Error</button>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -150,7 +70,6 @@
           <a href="../demo/">Replay Demo</a>
           <a href="../docs/">Documentation</a>
           <a href="../research/">Research</a>
-          <a href="../take-part/">Take Part</a>
           <a href="../changelog/">Changelog</a>
           <a href="../cookie-policy/">Cookie Policy</a>
         </nav>
@@ -184,371 +103,6 @@
           navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
         }
       });
-
-      function esc(value) {
-        return String(value == null ? '' : value)
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#39;');
-      }
-      function fmtSecs(value) {
-        const s = Math.max(0, Math.round(Number(value || 0)));
-        const h = Math.floor(s / 3600);
-        const m = Math.floor((s % 3600) / 60);
-        const ss = s % 60;
-        if (h > 0) return h + 'h ' + m + 'm ' + ss + 's';
-        if (m > 0) return m + 'm ' + ss + 's';
-        return ss + 's';
-      }
-
-      const scenarioListEl = document.getElementById('scenario-list');
-      const leaderboardEl = document.getElementById('leaderboard');
-      const scenarioSelect = document.getElementById('scenario-select');
-      const relayUrlEl = document.getElementById('relay-url');
-      const relayNoteEl = document.getElementById('relay-note');
-      const captchaQuestionEl = document.getElementById('captcha-question');
-      const captchaAnswerEl = document.getElementById('captcha-answer');
-      const statusEl = document.getElementById('status');
-      const timerEl = document.getElementById('timer');
-      const runTerminalEl = document.getElementById('run-terminal');
-      const reportLinkEl = document.getElementById('report-link');
-      const probeOutEl = document.getElementById('probe-out');
-      const submitBtn = document.getElementById('submit-btn');
-      const refreshBtn = document.getElementById('refresh-btn');
-      const probeBtn = document.getElementById('probe-btn');
-      const captchaRefreshBtn = document.getElementById('captcha-refresh');
-      const copyErrorBtn = document.getElementById('copy-error-btn');
-
-      let scenarios = [];
-      let contributionId = '';
-      let probeState = {};
-      let captchaState = { challenge_id: '', nonce: '', question: '' };
-      let defaultRelayConfigured = false;
-      const seenStepIds = new Set();
-      let lastStatusSeen = '';
-      let lastErrorText = '';
-      const API_BASE = (function () {
-        const host = String(window.location.hostname || '').toLowerCase();
-        if (host === 'localhost' || host === '127.0.0.1') return '';
-        return 'https://ai.elorataurus.com';
-      })();
-      function apiUrl(path) {
-        return API_BASE + String(path || '');
-      }
-
-      function renderScenarioTable(payload) {
-        const rows = Array.isArray(payload && payload.scenarios) ? payload.scenarios : [];
-        scenarios = rows.slice();
-        if (!rows.length) {
-          scenarioListEl.textContent = 'No scenarios available.';
-          scenarioSelect.innerHTML = '';
-          return;
-        }
-        scenarioListEl.innerHTML =
-          "<table><thead><tr><th>Level</th><th>Scenario</th><th>Turns</th></tr></thead><tbody>" +
-          rows.map(function (row) {
-            return '<tr><td>' + esc(row.level_name || row.level_id || 'n/a') + '</td><td>' + esc(row.name || row.scenario_id || 'n/a') + '</td><td>' + esc(String(row.turns || 0)) + '</td></tr>';
-          }).join('') + "</tbody></table>";
-        scenarioSelect.innerHTML = rows.map(function (row) {
-          return '<option value="' + esc(row.scenario_id || '') + '">' + esc((row.level_name || 'n/a') + ' · ' + (row.name || row.scenario_id || 'scenario')) + '</option>';
-        }).join('');
-      }
-
-      function renderLeaderboard(payload) {
-        const rows = Array.isArray(payload && payload.rows) ? payload.rows : [];
-        if (!rows.length) {
-          leaderboardEl.textContent = 'No public runs yet.';
-          return;
-        }
-        leaderboardEl.innerHTML =
-          "<table><thead><tr><th>Alias</th><th>Scenario</th><th>Steps</th><th>Runtime</th></tr></thead><tbody>" +
-          rows.slice(0, 20).map(function (row) {
-            return '<tr><td>' + esc(row.alias || 'anonymous') + '</td><td>' + esc(row.scenario_id || 'n/a') + '</td><td>' + esc(String(row.steps || 0)) + '</td><td>' + esc(fmtSecs(row.elapsed_seconds || 0)) + '</td></tr>';
-          }).join('') + "</tbody></table>";
-      }
-
-      function setReportLink(url) {
-        if (!url) {
-          reportLinkEl.style.display = 'none';
-          return;
-        }
-        reportLinkEl.href = String(url);
-        reportLinkEl.style.display = 'inline-block';
-      }
-
-      function appendTerminal(line) {
-        if (!runTerminalEl) return;
-        const next = String(line || '').trim();
-        if (!next) return;
-        const stamp = new Date().toLocaleTimeString();
-        runTerminalEl.textContent += '\\n[' + stamp + '] ' + next;
-        runTerminalEl.scrollTop = runTerminalEl.scrollHeight;
-      }
-
-      function setLastError(message) {
-        lastErrorText = String(message || '').trim();
-      }
-
-      function copyLastError() {
-        const text = String(lastErrorText || '').trim();
-        if (!text) {
-          appendTerminal('No error captured yet.');
-          return;
-        }
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text)
-            .then(function () { appendTerminal('Last error copied to clipboard.'); })
-            .catch(function () { appendTerminal('Copy failed.'); });
-          return;
-        }
-        appendTerminal('Clipboard API unavailable in this browser.');
-      }
-
-      function compact(value, limit) {
-        const text = String(value || '').replace(/\s+/g, ' ').trim();
-        if (!text) return '';
-        const max = Math.max(80, Number(limit || 240));
-        return text.length > max ? (text.slice(0, max - 3) + '...') : text;
-      }
-
-      function loadConfig() {
-        return fetch(apiUrl('/public/research/config'))
-          .then(function (r) { return r.json(); })
-          .then(function (cfg) {
-            defaultRelayConfigured = !!cfg.default_relay_configured;
-            relayNoteEl.textContent = defaultRelayConfigured
-              ? 'Relay mode: platform-managed (endpoint hidden)'
-              : 'Relay mode: contributor-supplied URL required';
-            if (defaultRelayConfigured) relayUrlEl.placeholder = 'Platform relay configured';
-          })
-          .catch(function () {
-            relayNoteEl.textContent = 'Relay config unavailable.';
-          });
-      }
-
-      function loadCaptcha() {
-        return fetch(apiUrl('/public/research/captcha'))
-          .then(function (r) { return r.json(); })
-          .then(function (data) {
-            captchaState = {
-              challenge_id: String(data.challenge_id || ''),
-              nonce: String(data.nonce || ''),
-              question: String(data.question || '')
-            };
-            captchaQuestionEl.value = captchaState.question || 'Unavailable';
-          })
-          .catch(function () { captchaQuestionEl.value = 'Unavailable'; });
-      }
-
-      function loadScenarios() {
-        return fetch(apiUrl('/public/research/scenarios'))
-          .then(function (r) { return r.json(); })
-          .then(renderScenarioTable)
-          .catch(function () {
-            scenarioListEl.textContent = 'Failed to load scenarios.';
-            scenarioSelect.innerHTML = '';
-          });
-      }
-
-      function loadLeaderboard() {
-        return fetch(apiUrl('/public/research/leaderboard'))
-          .then(function (r) { return r.json(); })
-          .then(renderLeaderboard)
-          .catch(function () { leaderboardEl.textContent = 'Failed to load leaderboard.'; });
-      }
-
-      function probeWebgpu() {
-        const out = { supported: false, connected: false, adapter: '', vendor: '', architecture: '', benchmark_ms: 0 };
-        return (async function () {
-          try {
-            if (!('gpu' in navigator)) return out;
-            const adapter = await navigator.gpu.requestAdapter();
-            out.supported = !!adapter;
-            out.connected = !!adapter;
-            if (adapter && adapter.info) {
-              out.adapter = String(adapter.info.description || '');
-              out.vendor = String(adapter.info.vendor || '');
-              out.architecture = String(adapter.info.architecture || '');
-            }
-            const t0 = performance.now();
-            for (let i = 0; i < 20000; i++) Math.sqrt(i * 1.001);
-            out.benchmark_ms = +(performance.now() - t0).toFixed(3);
-          } catch (_err) {}
-          return out;
-        })().then(function (outData) {
-          probeState = outData;
-          probeOutEl.textContent =
-            'supported: ' + (outData.supported ? 'yes' : 'no') + '\n' +
-            'connected: ' + (outData.connected ? 'yes' : 'no') + '\n' +
-            'adapter: ' + (outData.adapter || 'n/a') + '\n' +
-            'vendor: ' + (outData.vendor || 'n/a') + '\n' +
-            'architecture: ' + (outData.architecture || 'n/a') + '\n' +
-            'benchmark_ms: ' + String(outData.benchmark_ms || 0);
-        });
-      }
-
-      function submitContribution() {
-        if (!document.getElementById('consent').checked) {
-          alert('Consent is required.');
-          return Promise.resolve();
-        }
-        const payload = {
-          scenario_id: String(scenarioSelect.value || ''),
-          consent: true,
-          contributor: {
-            alias: String(document.getElementById('alias').value || '').trim(),
-            hardware: String(document.getElementById('hardware').value || '').trim(),
-            notes: String(document.getElementById('notes').value || '').trim()
-          },
-          relay_url: String(relayUrlEl.value || '').trim(),
-          model: 'qwen2.5:3b',
-          inference_max_tokens: Number(document.getElementById('inference-max-tokens').value || 1536),
-          observer_max_tokens: Number(document.getElementById('observer-max-tokens').value || 1024),
-          observer_include_opinion: !!document.getElementById('observer-opinion').checked,
-          captcha: {
-            challenge_id: String(captchaState.challenge_id || ''),
-            nonce: String(captchaState.nonce || ''),
-            answer: String(captchaAnswerEl.value || '').trim()
-          },
-          webgpu_probe: probeState || {}
-        };
-        if (!payload.scenario_id) {
-          alert('Scenario is required.');
-          return Promise.resolve();
-        }
-        if (!defaultRelayConfigured && !payload.relay_url) {
-          alert('Relay URL is required.');
-          return Promise.resolve();
-        }
-        if (!payload.captcha.answer) {
-          alert('CAPTCHA answer is required.');
-          return Promise.resolve();
-        }
-        submitBtn.disabled = true;
-        statusEl.textContent = 'Submitting contribution...';
-        appendTerminal('Submitting contribution job.');
-        return fetch(apiUrl('/public/research/contribute/submit'), {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        }).then(function (r) { return r.json().then(function (data) { return { ok: r.ok, data: data }; }); })
-          .then(function (res) {
-            submitBtn.disabled = false;
-            if (!res.ok) {
-              const errorText = String(res.data.error || 'unknown error');
-              statusEl.textContent = 'Submit failed: ' + errorText;
-              setLastError(errorText);
-              appendTerminal('Submit failed: ' + errorText);
-              loadCaptcha();
-              return;
-            }
-            contributionId = String(res.data.contribution_id || '');
-            statusEl.textContent = 'Contribution created. Starting scenario...';
-            appendTerminal('Contribution created (' + contributionId + ').');
-            setReportLink(res.data.report_url || '');
-            return startContribution();
-          }).catch(function () {
-            submitBtn.disabled = false;
-            statusEl.textContent = 'Submit failed.';
-            setLastError('Submit failed.');
-            appendTerminal('Submit failed.');
-          });
-      }
-
-      function startContribution() {
-        if (!contributionId) return Promise.resolve();
-        statusEl.textContent = 'Starting scenario...';
-        appendTerminal('Starting scenario.');
-        return fetch(apiUrl('/public/research/contribute/start'), {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contribution_id: contributionId,
-            webgpu_probe: probeState || {},
-            webgpu_runner_ready: true
-          })
-        }).then(function (r) { return r.json().then(function (data) { return { ok: r.ok, data: data }; }); })
-          .then(function (res) {
-            if (!res.ok) {
-              const errorText = String(res.data.error || 'unknown error');
-              statusEl.textContent = 'Start failed: ' + errorText;
-              setLastError(errorText);
-              appendTerminal('Start failed: ' + errorText);
-              return;
-            }
-            statusEl.textContent = 'Run started. Keep this tab open.';
-            appendTerminal('Run started.');
-            setReportLink(res.data.report_url || '');
-          }).catch(function () {
-            statusEl.textContent = 'Start failed.';
-            setLastError('Start failed.');
-            appendTerminal('Start failed.');
-          });
-      }
-
-      function refreshStatus() {
-        if (!contributionId) return Promise.resolve();
-        return fetch(apiUrl('/public/research/contribute/status?contribution_id=' + encodeURIComponent(contributionId)))
-          .then(function (r) { return r.json().then(function (data) { return { ok: r.ok, data: data }; }); })
-          .then(function (res) {
-            if (!res.ok) {
-              const errorText = String(res.data.error || 'unknown error');
-              statusEl.textContent = 'Status fetch failed: ' + errorText;
-              setLastError(errorText);
-              appendTerminal('Status fetch failed: ' + errorText);
-              return;
-            }
-            const status = String(res.data.status || 'unknown');
-            statusEl.textContent = 'Status: ' + status;
-            if (Number(res.data.runtime_total_seconds || 0) > 0) {
-              timerEl.textContent = 'Run timer: ' + fmtSecs(res.data.runtime_total_seconds) + ' total';
-            } else {
-              timerEl.textContent = 'Run timer: ' + fmtSecs(res.data.runtime_elapsed_seconds || 0) + ' elapsed';
-            }
-            setReportLink(res.data.report_url || '');
-            if (status !== lastStatusSeen) {
-              appendTerminal('Status changed: ' + status + '.');
-              lastStatusSeen = status;
-            }
-            const latestStep = (res.data && typeof res.data.latest_step === 'object' && res.data.latest_step) ? res.data.latest_step : null;
-            const latestId = latestStep && latestStep.id ? String(latestStep.id) : '';
-            if (latestStep && latestId && !seenStepIds.has(latestId)) {
-              seenStepIds.add(latestId);
-              const stepLabel = 'Step ' + String(latestStep.cycle_index || '?') + ' (' + String(latestStep.strategy || 'regulated') + ')';
-              appendTerminal(stepLabel + ' decision=' + String(latestStep.observer_decision || 'n/a') + ' warning=' + String(latestStep.warning_state || 'n/a'));
-              const promptText = compact(latestStep.prompt_text, 220);
-              const proposalText = compact(latestStep.proposal_text, 300);
-              if (promptText) appendTerminal('USER: ' + promptText);
-              if (proposalText) appendTerminal('MODEL: ' + proposalText);
-            }
-            if (status === 'error') {
-              const err = compact(res.data.error || 'Unknown error', 260);
-              setLastError(err);
-              appendTerminal('Run failed: ' + err);
-            }
-            if (status === 'completed') appendTerminal('Run complete. Open report for full analysis.');
-          }).catch(function () {
-            statusEl.textContent = 'Status fetch failed.';
-            setLastError('Status fetch failed.');
-            appendTerminal('Status fetch failed.');
-          });
-      }
-
-      probeBtn.addEventListener('click', function () { probeWebgpu(); });
-      captchaRefreshBtn.addEventListener('click', function () { loadCaptcha(); });
-      submitBtn.addEventListener('click', function () { submitContribution(); });
-      refreshBtn.addEventListener('click', function () { refreshStatus(); });
-      if (copyErrorBtn) copyErrorBtn.addEventListener('click', function () { copyLastError(); });
-
-      loadConfig();
-      loadCaptcha();
-      loadScenarios();
-      loadLeaderboard();
-      appendTerminal('Ready. Complete form and click Run Scenario.');
-      setInterval(function () { refreshStatus(); }, 5000);
-      setInterval(function () { loadLeaderboard(); }, 10000);
     })();
   </script>
   <script defer src="../analytics-consent.js"></script>
