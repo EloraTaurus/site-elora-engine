@@ -38,14 +38,13 @@
           <a class="nav-btn" href="../demo/">Replay Demo</a>
           <a class="nav-btn" href="../docs/">Documentation</a>
           <a class="nav-btn" href="../research/">Research</a>
-          <a class="nav-btn active" href="../take-part/">Take Part</a>
           <a class="nav-btn" href="../changelog/">Changelog</a>
         </nav>
       </div>
     </header>
     <div class="shell">
       <section class="hero hero-guide-curve">
-        <div class="about-lead">
+        <div class="hero-copy">
           <h1>Take Part In Live Research</h1>
           <p>Help test whether Elora can reduce compute load per turn while still keeping model responses useful, stable, and readable.</p>
         </div>
@@ -62,12 +61,16 @@
         <div class="card">
           <h3>Scenario Pool</h3>
           <p class="note">Pick one scenario. Runs are model-locked for fair comparison.</p>
-          <div id="scenario-list" class="note">Loading scenarios…</div>
+          <div class="scroll-panel">
+            <div id="scenario-list" class="note">Loading scenarios…</div>
+          </div>
         </div>
         <div class="card">
           <h3>Leaderboard</h3>
           <p class="note">Recent public runs sorted by completed steps and recency.</p>
-          <div id="leaderboard" class="note">Loading leaderboard…</div>
+          <div class="scroll-panel">
+            <div id="leaderboard" class="note">Loading leaderboard…</div>
+          </div>
         </div>
       </div>
     </div>
