@@ -239,8 +239,10 @@ a { color: #8fd6ff; text-decoration: none; }
 }
 
 #take-part .hero.hero-guide-curve {
-  min-height: clamp(430px, 44vw, 620px);
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: clamp(360px, 34vw, 500px);
   align-items: end;
+  column-gap: 3.5%;
 }
 
 #take-part .hero.hero-guide-curve .hero-copy {
@@ -253,8 +255,8 @@ a { color: #8fd6ff; text-decoration: none; }
 }
 
 #take-part .hero.hero-guide-curve .hero-guide-image {
-  height: clamp(450px, 35vw, 640px);
-  margin-bottom: -56px;
+  height: clamp(360px, 30vw, 520px);
+  margin-bottom: -20px;
 }
 
 .about-lead {
@@ -702,8 +704,31 @@ a { color: #8fd6ff; text-decoration: none; }
 
 .scroll-panel {
   max-height: 340px;
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding-right: 6px;
+  scrollbar-gutter: stable both-edges;
+  scrollbar-width: auto;
+  scrollbar-color: #4f76a5 #102644;
+}
+
+.scroll-panel::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll-panel::-webkit-scrollbar-track {
+  background: #102644;
+  border-radius: 999px;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb {
+  background: #4f76a5;
+  border-radius: 999px;
+  border: 2px solid #102644;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb:hover {
+  background: #6bc8ff;
 }
 
 .list {
@@ -1478,6 +1503,7 @@ button:hover {
   }
   #take-part .hero.hero-guide-curve {
     min-height: 0;
+    grid-template-columns: 1fr;
     align-items: start;
   }
   #take-part .hero.hero-guide-curve .hero-guide-image {

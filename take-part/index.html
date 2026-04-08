@@ -231,8 +231,8 @@
       let lastErrorText = '';
       const API_BASE = (function () {
         const host = String(window.location.hostname || '').toLowerCase();
-        if (host === 'elorataurus.com' || host === 'www.elorataurus.com') return 'https://ai.elorataurus.com';
-        return '';
+        if (host === 'localhost' || host === '127.0.0.1') return '';
+        return 'https://ai.elorataurus.com';
       })();
       function apiUrl(path) {
         return API_BASE + String(path || '');
