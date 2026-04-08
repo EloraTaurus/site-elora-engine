@@ -238,6 +238,25 @@ a { color: #8fd6ff; text-decoration: none; }
   margin-bottom: -46px;
 }
 
+#take-part .hero.hero-guide-curve {
+  min-height: clamp(430px, 44vw, 620px);
+  align-items: end;
+}
+
+#take-part .hero.hero-guide-curve .hero-copy {
+  align-self: start;
+}
+
+#take-part .hero.hero-guide-curve .hero-guide-standalone {
+  justify-self: end;
+  align-self: end;
+}
+
+#take-part .hero.hero-guide-curve .hero-guide-image {
+  height: clamp(450px, 35vw, 640px);
+  margin-bottom: -56px;
+}
+
 .about-lead {
   max-width: 920px;
 }
@@ -1452,6 +1471,16 @@ button:hover {
     padding: 4px 8px;
   }
   .hero.hero-guide-curve .hero-guide-image {
+    width: 100%;
+    height: auto;
+    max-height: 430px;
+    margin-bottom: -22px;
+  }
+  #take-part .hero.hero-guide-curve {
+    min-height: 0;
+    align-items: start;
+  }
+  #take-part .hero.hero-guide-curve .hero-guide-image {
     width: 100%;
     height: auto;
     max-height: 430px;
