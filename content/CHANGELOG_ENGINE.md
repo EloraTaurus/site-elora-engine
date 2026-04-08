@@ -5,6 +5,15 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-08
+- Added a dedicated public participation page (`/take-part/`) and moved participation entry into the Research flow CTA.
+- Updated public participation messaging to focus on adaptive compute-efficiency evaluation while preserving internal deep-telemetry analysis.
+- Improved Take Part UX with a dashboard-style hero layout, fixed-height scroll panels for scenario and leaderboard views, and readability improvements for research notice panels.
+- Hardened public contribution submission behavior by removing direct contribution-page usage on the API host and improving run-start reliability for scenario execution.
+- Simplified the public contribution runner to a single `Run Scenario` action and replaced raw JSON output with a readable live terminal-style run stream.
+- Added a public `Copy Last Error` utility for faster issue reporting when contribution runs fail.
+- Public scenario runner now surfaces selectable scenario sets from current research packs, including progressive stress and viability-bound tracks.
+
 ## 2026-04-07
 - Added a new research-run speed control to reduce long-duration cycle execution when full explanatory output is not required.
 - Improved experimental-run throughput consistency by tightening optional analysis-output budget under speed mode while preserving core decision telemetry.

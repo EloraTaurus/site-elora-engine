@@ -119,8 +119,7 @@
           </div>
           <label style="margin-top:8px;"><input id="consent" type="checkbox" style="width:auto;margin-right:6px;" />I agree to submit anonymized runtime telemetry for research.</label>
           <div class="cta-row" style="margin-top:10px;">
-            <button id="submit-btn" class="btn mission" type="button">Submit Contribution Job</button>
-            <button id="start-btn" class="btn" type="button" disabled>Start Scenario</button>
+            <button id="submit-btn" class="btn mission" type="button">Run Scenario</button>
             <button id="refresh-btn" class="btn alt" type="button">Refresh Status</button>
           </div>
         </div>
@@ -130,9 +129,12 @@
           <p id="timer" class="note">Run timer: n/a</p>
           <a id="report-link" href="#" target="_blank" rel="noopener" style="display:none;"><button type="button" class="btn mission">Open Public Report</button></a>
           <h4 style="margin-top:12px;">WebGPU Probe</h4>
-          <pre id="probe-out" style="white-space:pre-wrap;">{}</pre>
-          <h4 style="margin-top:12px;">Status JSON</h4>
-          <pre id="status-json" style="white-space:pre-wrap;">{}</pre>
+          <pre id="probe-out" style="white-space:pre-wrap;">No probe yet.</pre>
+          <h4 style="margin-top:12px;">Live Run Terminal</h4>
+          <pre id="run-terminal" style="white-space:pre-wrap; max-height:320px; overflow:auto; background:#07162d; border:1px solid #244a7a; border-radius:10px; padding:10px;">Waiting for run...</pre>
+          <div class="cta-row" style="margin-top:10px;">
+            <button id="copy-error-btn" class="btn alt" type="button">Copy Last Error</button>
+          </div>
         </div>
       </div>
     </div>
@@ -210,20 +212,23 @@
       const captchaAnswerEl = document.getElementById('captcha-answer');
       const statusEl = document.getElementById('status');
       const timerEl = document.getElementById('timer');
-      const statusJsonEl = document.getElementById('status-json');
+      const runTerminalEl = document.getElementById('run-terminal');
       const reportLinkEl = document.getElementById('report-link');
       const probeOutEl = document.getElementById('probe-out');
       const submitBtn = document.getElementById('submit-btn');
-      const startBtn = document.getElementById('start-btn');
       const refreshBtn = document.getElementById('refresh-btn');
       const probeBtn = document.getElementById('probe-btn');
       const captchaRefreshBtn = document.getElementById('captcha-refresh');
+      const copyErrorBtn = document.getElementById('copy-error-btn');
 
       let scenarios = [];
       let contributionId = '';
       let probeState = {};
       let captchaState = { challenge_id: '', nonce: '', question: '' };
       let defaultRelayConfigured = false;
+      const seenStepIds = new Set();
+      let lastStatusSeen = '';
+      let lastErrorText = '';
       const API_BASE = (function () {
         const host = String(window.location.hostname || '').toLowerCase();
         if (host === 'elorataurus.com' || host === 'www.elorataurus.com') return 'https://ai.elorataurus.com';
@@ -271,6 +276,41 @@
         }
         reportLinkEl.href = String(url);
         reportLinkEl.style.display = 'inline-block';
+      }
+
+      function appendTerminal(line) {
+        if (!runTerminalEl) return;
+        const next = String(line || '').trim();
+        if (!next) return;
+        const stamp = new Date().toLocaleTimeString();
+        runTerminalEl.textContent += '\\n[' + stamp + '] ' + next;
+        runTerminalEl.scrollTop = runTerminalEl.scrollHeight;
+      }
+
+      function setLastError(message) {
+        lastErrorText = String(message || '').trim();
+      }
+
+      function copyLastError() {
+        const text = String(lastErrorText || '').trim();
+        if (!text) {
+          appendTerminal('No error captured yet.');
+          return;
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text)
+            .then(function () { appendTerminal('Last error copied to clipboard.'); })
+            .catch(function () { appendTerminal('Copy failed.'); });
+          return;
+        }
+        appendTerminal('Clipboard API unavailable in this browser.');
+      }
+
+      function compact(value, limit) {
+        const text = String(value || '').replace(/\s+/g, ' ').trim();
+        if (!text) return '';
+        const max = Math.max(80, Number(limit || 240));
+        return text.length > max ? (text.slice(0, max - 3) + '...') : text;
       }
 
       function loadConfig() {
@@ -339,7 +379,13 @@
           return out;
         })().then(function (outData) {
           probeState = outData;
-          probeOutEl.textContent = JSON.stringify(outData, null, 2);
+          probeOutEl.textContent =
+            'supported: ' + (outData.supported ? 'yes' : 'no') + '\n' +
+            'connected: ' + (outData.connected ? 'yes' : 'no') + '\n' +
+            'adapter: ' + (outData.adapter || 'n/a') + '\n' +
+            'vendor: ' + (outData.vendor || 'n/a') + '\n' +
+            'architecture: ' + (outData.architecture || 'n/a') + '\n' +
+            'benchmark_ms: ' + String(outData.benchmark_ms || 0);
         });
       }
 
@@ -381,6 +427,8 @@
           return Promise.resolve();
         }
         submitBtn.disabled = true;
+        statusEl.textContent = 'Submitting contribution...';
+        appendTerminal('Submitting contribution job.');
         return fetch(apiUrl('/public/research/contribute/submit'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -389,25 +437,30 @@
           .then(function (res) {
             submitBtn.disabled = false;
             if (!res.ok) {
-              statusEl.textContent = 'Submit failed: ' + String(res.data.error || 'unknown error');
+              const errorText = String(res.data.error || 'unknown error');
+              statusEl.textContent = 'Submit failed: ' + errorText;
+              setLastError(errorText);
+              appendTerminal('Submit failed: ' + errorText);
               loadCaptcha();
               return;
             }
             contributionId = String(res.data.contribution_id || '');
-            statusEl.textContent = 'Contribution submitted. Click Start Scenario.';
-            statusJsonEl.textContent = JSON.stringify(res.data, null, 2);
-            startBtn.disabled = !contributionId;
+            statusEl.textContent = 'Contribution created. Starting scenario...';
+            appendTerminal('Contribution created (' + contributionId + ').');
             setReportLink(res.data.report_url || '');
+            return startContribution();
           }).catch(function () {
             submitBtn.disabled = false;
             statusEl.textContent = 'Submit failed.';
+            setLastError('Submit failed.');
+            appendTerminal('Submit failed.');
           });
       }
 
       function startContribution() {
         if (!contributionId) return Promise.resolve();
-        startBtn.disabled = true;
         statusEl.textContent = 'Starting scenario...';
+        appendTerminal('Starting scenario.');
         return fetch(apiUrl('/public/research/contribute/start'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -419,16 +472,19 @@
         }).then(function (r) { return r.json().then(function (data) { return { ok: r.ok, data: data }; }); })
           .then(function (res) {
             if (!res.ok) {
-              statusEl.textContent = 'Start failed: ' + String(res.data.error || 'unknown error');
-              startBtn.disabled = false;
+              const errorText = String(res.data.error || 'unknown error');
+              statusEl.textContent = 'Start failed: ' + errorText;
+              setLastError(errorText);
+              appendTerminal('Start failed: ' + errorText);
               return;
             }
             statusEl.textContent = 'Run started. Keep this tab open.';
-            statusJsonEl.textContent = JSON.stringify(res.data, null, 2);
+            appendTerminal('Run started.');
             setReportLink(res.data.report_url || '');
           }).catch(function () {
             statusEl.textContent = 'Start failed.';
-            startBtn.disabled = false;
+            setLastError('Start failed.');
+            appendTerminal('Start failed.');
           });
       }
 
@@ -438,34 +494,59 @@
           .then(function (r) { return r.json().then(function (data) { return { ok: r.ok, data: data }; }); })
           .then(function (res) {
             if (!res.ok) {
-              statusEl.textContent = 'Status fetch failed: ' + String(res.data.error || 'unknown error');
+              const errorText = String(res.data.error || 'unknown error');
+              statusEl.textContent = 'Status fetch failed: ' + errorText;
+              setLastError(errorText);
+              appendTerminal('Status fetch failed: ' + errorText);
               return;
             }
-            statusEl.textContent = 'Status: ' + String(res.data.status || 'unknown');
+            const status = String(res.data.status || 'unknown');
+            statusEl.textContent = 'Status: ' + status;
             if (Number(res.data.runtime_total_seconds || 0) > 0) {
               timerEl.textContent = 'Run timer: ' + fmtSecs(res.data.runtime_total_seconds) + ' total';
             } else {
               timerEl.textContent = 'Run timer: ' + fmtSecs(res.data.runtime_elapsed_seconds || 0) + ' elapsed';
             }
-            statusJsonEl.textContent = JSON.stringify(res.data, null, 2);
             setReportLink(res.data.report_url || '');
-            if (String(res.data.status || '') === 'waiting_start') startBtn.disabled = false;
-            if (['running', 'completed', 'cancelled'].indexOf(String(res.data.status || '')) >= 0) startBtn.disabled = true;
+            if (status !== lastStatusSeen) {
+              appendTerminal('Status changed: ' + status + '.');
+              lastStatusSeen = status;
+            }
+            const latestStep = (res.data && typeof res.data.latest_step === 'object' && res.data.latest_step) ? res.data.latest_step : null;
+            const latestId = latestStep && latestStep.id ? String(latestStep.id) : '';
+            if (latestStep && latestId && !seenStepIds.has(latestId)) {
+              seenStepIds.add(latestId);
+              const stepLabel = 'Step ' + String(latestStep.cycle_index || '?') + ' (' + String(latestStep.strategy || 'regulated') + ')';
+              appendTerminal(stepLabel + ' decision=' + String(latestStep.observer_decision || 'n/a') + ' warning=' + String(latestStep.warning_state || 'n/a'));
+              const promptText = compact(latestStep.prompt_text, 220);
+              const proposalText = compact(latestStep.proposal_text, 300);
+              if (promptText) appendTerminal('USER: ' + promptText);
+              if (proposalText) appendTerminal('MODEL: ' + proposalText);
+            }
+            if (status === 'error') {
+              const err = compact(res.data.error || 'Unknown error', 260);
+              setLastError(err);
+              appendTerminal('Run failed: ' + err);
+            }
+            if (status === 'completed') appendTerminal('Run complete. Open report for full analysis.');
           }).catch(function () {
             statusEl.textContent = 'Status fetch failed.';
+            setLastError('Status fetch failed.');
+            appendTerminal('Status fetch failed.');
           });
       }
 
       probeBtn.addEventListener('click', function () { probeWebgpu(); });
       captchaRefreshBtn.addEventListener('click', function () { loadCaptcha(); });
       submitBtn.addEventListener('click', function () { submitContribution(); });
-      startBtn.addEventListener('click', function () { startContribution(); });
       refreshBtn.addEventListener('click', function () { refreshStatus(); });
+      if (copyErrorBtn) copyErrorBtn.addEventListener('click', function () { copyLastError(); });
 
       loadConfig();
       loadCaptcha();
       loadScenarios();
       loadLeaderboard();
+      appendTerminal('Ready. Complete form and click Run Scenario.');
       setInterval(function () { refreshStatus(); }, 5000);
       setInterval(function () { loadLeaderboard(); }, 10000);
     })();
