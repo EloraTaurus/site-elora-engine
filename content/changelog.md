@@ -1,6 +1,10 @@
 # Site / Demo Changelog
 
 ## 2026-04-09
+- Synced Technical Disclosure / Prior Art content with latest Engine milestones through `2026-04-09`.
+- Expanded public-safe capability chronology to include observer research runtime, report comparability, and long-context continuity controls.
+- Updated roadmap/maturity pack references to reflect April research/runtime progression and unchanged commit-boundary governance posture.
+- Corrected disclosure anchor link to current changelog route (`/changelog/`).
 - Updated Research-related website messaging to reflect current compute-efficiency evaluation framing (public-safe wording).
 - Improved public-facing consistency language around browser-assisted runs and deterministic governance boundaries.
 - Added changelog alignment for latest internal research telemetry/reporting uplift without disclosing sensitive implementation internals.

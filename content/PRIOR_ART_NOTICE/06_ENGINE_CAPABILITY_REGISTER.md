@@ -68,6 +68,38 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Additional evidence channels: Git commit record, changelog references, operator release notes
 - Summary of updates (changelog-ready): Added bounded proposal-stage runtime-signal tuning and related pipeline/Lab/Fabric integration updates while preserving unchanged commit-boundary authority behavior.
 
+#### Observer Research Runtime Integration Milestone
+
+- Date: `2026-04-05`
+- Source anchor: Engine changelog (`2026-04-05`)
+- Evidence class: Observer runtime, export/report parity, and governance-surface integration
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added dedicated observer research runtime with per-cycle evidence persistence, governance/jobs visibility integration, and report export parity across HTML/Markdown/JSON.
+
+#### Research Comparability and Queue-Orchestration Milestone
+
+- Date: `2026-04-06`
+- Source anchor: Engine changelog (`2026-04-06`)
+- Evidence class: Comparative reporting and long-run orchestration controls
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Expanded run comparability surfaces, version-tag visibility, queue-based overnight observer scheduling, and deeper pressure/intervention traceability.
+
+#### Constraint-First Runtime Interpretation Milestone
+
+- Date: `2026-04-07`
+- Source anchor: Engine changelog (`2026-04-07`)
+- Evidence class: Research operator dashboard and interpretation model maturity
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added speed-control mode, revised threshold-oriented hypothesis framing, and graduated runtime-state banding for clearer runtime-behavior interpretation.
+
+#### Browser-Assisted Research Hardening and Context Continuity Milestone
+
+- Date: `2026-04-09`
+- Source anchor: Engine changelog (`2026-04-09`)
+- Evidence class: Browser-assisted runtime hardening and long-context continuity controls
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Hardened client-assisted research runtime path, strengthened effective-model consistency checks, added observe-only intervention probes, and introduced deterministic context compaction/stacking with overflow-aware retries.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components
@@ -132,6 +164,20 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Controlled runtime stabilization experimentation (proposal-stage only)
 - Code anchors: `engine/core/inflight_inference.py`, `engine/core/inflight_calibration.py`, `engine/core/lab_inflight_tuning.py`
 - Evidence summary: Introduced bounded per-request runtime-signal adjustments around approved baseline profiles, with repeat-evaluation harness workflows and captured evidence outputs for adjustment reason/timing/range while preserving unchanged commit-boundary authority behavior.
+
+### Observer Runtime and Comparative Research Reporting
+
+- Date window: `2026-04-05` onward
+- Evidence class: Internal research runtime and comparative reporting framework
+- Code anchors: `engine/admin/research/*`, `engine/services/chat.py`, `engine/core/jobs.py`
+- Evidence summary: Observer-mode runtime flow supports governed long-run experimental cycles with per-step evidence capture, comparability exports, queued execution windows, and dashboard KPI visibility for repeatable hypothesis testing.
+
+### Long-Context Runtime Continuity Controls (Research)
+
+- Date: `2026-04-09`
+- Evidence class: Context-window continuity and bounded fallback handling
+- Code anchors: `engine/services/chat.py`, `engine/core/inflight_inference.py`
+- Evidence summary: Deterministic context compaction/stacking and overflow-aware retry behavior were added to keep long research sessions progressing under context pressure without changing commit authority semantics.
 
 ## Security and Access Control Foundation
 

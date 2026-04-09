@@ -113,6 +113,40 @@ Ingress
 - Proof type: Governance replay UX and investigation workflow
 - Evidence summary: Replay surfaces evolved into timeline-first operator investigation while preserving decision framing.
 
+## 5) Research Runtime and Evidence Expansion (Observer Track)
+
+### Observer Runtime Integration and Evidence Parity
+
+- Date: `2026-04-05`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-05`)
+- Proof type: Research runtime integration and replay/report evidence coverage
+- Evidence summary: Dedicated observer runtime added with role-bounded access, per-step evidence persistence, and export parity across HTML/Markdown/JSON report outputs.
+
+### Comparative Reporting and Queue-Orchestrated Research Runs
+
+- Date: `2026-04-06`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-06`)
+- Proof type: Research comparability and long-run orchestration controls
+- Evidence summary: Comparative analysis surfaces, version-tagged run visibility, and queued observer orchestration were expanded for repeatable run-to-run interpretation.
+
+### Constraint-First Runtime Interpretation and KPI Surface Maturation
+
+- Date: `2026-04-07`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-07`)
+- Proof type: Operator interpretation model and runtime-state framing
+- Evidence summary: Research dashboard and interpretation surfaces were refined with threshold-oriented framing, speed-control mode, and graduated runtime constraint-state bands.
+
+### Browser-Assisted Research Hardening and Context Compaction Controls
+
+- Date: `2026-04-09`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-09`)
+- Proof type: Browser-assisted runtime hardening and context-window continuity
+- Evidence summary: Research execution identity checks, observe-only intervention probes, deterministic context compaction/stacking, and overflow-aware retry behavior were added while preserving commit-bound authority semantics.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

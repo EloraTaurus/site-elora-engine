@@ -41,7 +41,17 @@ Current public anchor surfaces:
 
 - GitHub organisation profile: `https://github.com/EloraTaurus`
 - Public website repository: `https://github.com/EloraTaurus/elorataurus.com`
-- Public demo changelog surface: `https://elorataurus.com/changelog.html`
+- Public demo changelog surface: `https://elorataurus.com/changelog/`
+
+## Disclosure Continuity (2026-04 Extension)
+
+This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, and report comparability improvements.
+
+These additions preserve the same publication posture:
+
+- chronological implementation evidence is published,
+- sensitive reproducibility handles remain withheld,
+- commit-bound governance semantics are documented as unchanged where applicable.
 
 ## Scope Clarification
 

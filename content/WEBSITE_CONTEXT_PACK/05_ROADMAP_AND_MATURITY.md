@@ -1,6 +1,6 @@
 # Roadmap and Maturity
 
-Last updated: 2026-03-31
+Last updated: 2026-04-09
 
 First implemented (from changelog): 2026-02-28
 
@@ -43,6 +43,16 @@ Elora is in an advanced build phase:
 - evaluate TPM/silicon-backed evidence claims for runtime identity proofs,
 - run exploratory feasibility work for LUNA board and OpenTitan-backed deployment modes.
 
+9. Observer runtime and research comparability maturity
+- maintain observer-runtime evidence parity (HTML/Markdown/JSON report surfaces),
+- preserve run-to-run comparability with explicit versioning and scenario attribution,
+- continue public-safe chronology updates as internal research surfaces expand.
+
+10. Long-context runtime continuity controls
+- improve bounded context-compaction behavior for research-scale runs,
+- keep overflow handling deterministic and reviewable in run evidence,
+- preserve unchanged commit-boundary governance semantics.
+
 ## Release Direction
 
 Current line is `0.18` for runtime evidence + execution visibility work.
@@ -59,3 +69,7 @@ Next major release boundary is expected when the next governance section and int
 - 2026-03-29: Added pre-inference runtime evidence stages (`prompt.captured`, `memory.resolved`, `knowledge.resolved`) and carried their hashes/snapshots into commit/replay artifacts.
 - 2026-03-29: Switched pipeline surface to a single master read-only chain with extended canonical stages and runtime-consistent node rendering (`present`/`virtual`, `visual`/`non-visual`).
 - 2026-03-31: Began proposal-stage runtime signals experimentation with bounded per-request adjustment behavior and preserved commit boundary semantics.
+- 2026-04-05: Added dedicated observer research runtime integration with per-step evidence persistence and report export parity (HTML/Markdown/JSON).
+- 2026-04-06: Expanded research comparability surfaces, version-badged run tracking, and queued observer orchestration for overnight batches.
+- 2026-04-07: Added research speed-control mode and revised threshold-oriented interpretation framing for dashboard/report analysis.
+- 2026-04-09: Hardened browser-assisted research runtime path and added deterministic context compaction/stacking with overflow-aware retry controls.
