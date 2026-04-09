@@ -4,6 +4,9 @@
 - Updated Research-related website messaging to reflect current compute-efficiency evaluation framing (public-safe wording).
 - Improved public-facing consistency language around browser-assisted runs and deterministic governance boundaries.
 - Added changelog alignment for latest internal research telemetry/reporting uplift without disclosing sensitive implementation internals.
+- Improved admin-facing research reporting clarity (internal operator experience):
+  - clear inline failure-cause display for failed runs
+  - readable deterministic intervention summaries (“Elora’s take”) in report surfaces.
 
 ## 2026-04-02
 - Updated website disclosure copy to align terminology with `Elora Inflight (Pre-Generation Control Layer)`.
