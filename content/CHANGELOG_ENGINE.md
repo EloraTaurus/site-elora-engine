@@ -5,6 +5,13 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-09
+- Hardened experimental browser-assisted research execution so client-side acceleration uses a dedicated runtime path with clearer lifecycle handling.
+- Improved research job visibility in governance/jobs surfaces by normalizing research-source metadata and expanding lifecycle timeline coverage.
+- Expanded research-run context controls with higher configurable token/context limits for large-window model evaluation.
+- Added deterministic long-run context compaction/stacking for multi-turn research sessions so runs can continue when context pressure grows.
+- Preserved and clarified reasoning-capable model handling in research mode with compatibility fallbacks for models that do not expose reasoning.
+
 ## 2026-04-07
 - Added a new research-run speed control to reduce long-duration cycle execution when full explanatory output is not required.
 - Improved experimental-run throughput consistency by tightening optional analysis-output budget under speed mode while preserving core decision telemetry.
