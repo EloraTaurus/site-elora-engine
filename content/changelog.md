@@ -1,5 +1,10 @@
 # Site / Demo Changelog
 
+## 2026-04-09
+- Updated Research-related website messaging to reflect current compute-efficiency evaluation framing (public-safe wording).
+- Improved public-facing consistency language around browser-assisted runs and deterministic governance boundaries.
+- Added changelog alignment for latest internal research telemetry/reporting uplift without disclosing sensitive implementation internals.
+
 ## 2026-04-02
 - Updated website disclosure copy to align terminology with `Elora Inflight (Pre-Generation Control Layer)`.
 - Clarified public website wording that current inflight behavior is bounded pre-generation control, with future per-token orchestration tracked separately.

@@ -8,8 +8,12 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 ## 2026-04-09
 - Hardened experimental browser-assisted research execution so client-side acceleration uses a dedicated runtime path with clearer lifecycle handling.
 - Improved research job visibility in governance/jobs surfaces by normalizing research-source metadata and expanding lifecycle timeline coverage.
+- Strengthened effective-model consistency checks in browser-assisted research runs so expected vs actual execution identity is validated and surfaced in run evidence.
+- Improved mirror-job cohesion for resume/restart flows to reduce duplicate or ghost research rows during long iterative test sessions.
+- Added an observe-only intervention probe layer for research runs, exposing per-step potential-intervention signals without changing decision-path behavior.
 - Expanded research-run context controls with higher configurable token/context limits for large-window model evaluation.
 - Added deterministic long-run context compaction/stacking for multi-turn research sessions so runs can continue when context pressure grows.
+- Added context-budget-aware compaction behavior and bounded overflow-retry handling for browser-accelerated research runs to reduce hard context-window failures.
 - Preserved and clarified reasoning-capable model handling in research mode with compatibility fallbacks for models that do not expose reasoning.
 
 ## 2026-04-07
@@ -17,11 +21,16 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 - Improved experimental-run throughput consistency by tightening optional analysis-output budget under speed mode while preserving core decision telemetry.
 - Refined the Research landing page into a more dashboard-oriented view with quick-glance KPI cards, active-run progress, and last-completed summary for faster report navigation.
 - Updated research interpretation surfaces to use a constraint-first framing for runtime behavior analysis, including revised threshold-oriented hypothesis reporting and chart naming.
+- Updated warning-state behavior in research runtime to use graduated constraint-state bands (including goldilocks/redline/critical ranges) instead of abrupt halt-style handling.
 
 ## 2026-04-06
 - Expanded research-report comparability surfaces with clearer version tracking for experimental runtime analysis outputs.
 - Added new comparative visualizations for stability/resource behavior, intervention timing, and workload-phase relationships to improve run-to-run interpretability.
 - Improved research dashboard run-list visibility with version badges for faster filtering of mixed experimental runs.
+- Added queued-run orchestration for observer research so runs can batch overnight with bounded cooldown and sequential promotion behavior.
+- Expanded scenario traceability across reports with level/scenario attribution at both overview and per-step analysis views.
+- Extended pressure/intervention telemetry visibility for deeper interpretation of backoff, stall, and stability dynamics across long cycles.
+- Expanded scenario-pack coverage with higher-intensity overload tracks for controlled drift/pressure experiments.
 - Updated internal/public changelog alignment so public disclosures remain informative while preserving non-reproducibility boundaries for active research tracks.
 
 ## 2026-04-05
