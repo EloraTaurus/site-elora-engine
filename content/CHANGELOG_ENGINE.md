@@ -5,6 +5,13 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-11
+- Improved Governance Replay navigation reliability so replay links opened from governance views load the selected run directly.
+- Upgraded Execution Monitor from placeholder scaffold behavior to live runtime visibility using active job/replay telemetry.
+- Refined monitor focus to active runtime workloads and short post-completion visibility windows for cleaner operations viewing.
+- Added terminal-style live execution UX with progressive line updates, typing indicator behavior, and bounded scrollable output.
+- Expanded runtime cards with compact quick-glance process telemetry (uptime plus available CPU/GPU/RAM/I/O indicators).
+
 ## 2026-04-09
 - Hardened experimental browser-assisted research execution so client-side acceleration uses a dedicated runtime path with clearer lifecycle handling.
 - Improved research job visibility in governance/jobs surfaces by normalizing research-source metadata and expanding lifecycle timeline coverage.
