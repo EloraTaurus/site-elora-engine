@@ -5,6 +5,12 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-12
+- Moved reindex execution off the request thread into background runtime processing to prevent long blocking API calls.
+- Added reindex progress/state polling support with immediate start/running responses and status metadata for operator visibility.
+- Reduced admin configuration-page metadata lookup overhead by switching to batched settings retrieval for render-time reads.
+- Added short-lived system-info caching to reduce repeated host-metric filesystem sampling under active dashboard/API polling.
+
 ## 2026-04-11
 - Improved Governance Replay navigation reliability so replay links opened from governance views load the selected run directly.
 - Upgraded Execution Monitor from placeholder scaffold behavior to live runtime visibility using active job/replay telemetry.

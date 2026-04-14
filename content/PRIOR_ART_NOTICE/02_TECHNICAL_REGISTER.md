@@ -147,6 +147,22 @@ Ingress
 - Proof type: Browser-assisted runtime hardening and context-window continuity
 - Evidence summary: Research execution identity checks, observe-only intervention probes, deterministic context compaction/stacking, and overflow-aware retry behavior were added while preserving commit-bound authority semantics.
 
+### Live Runtime Execution Visibility Surface
+
+- Date: `2026-04-11`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-11`)
+- Proof type: Runtime observability and operator execution-visibility controls
+- Evidence summary: Execution Monitor matured from scaffold behavior to live active-workload visibility with bounded post-completion windows and terminal-style progressive runtime output.
+
+### Background Reindex Orchestration and Operator Throughput Controls
+
+- Date: `2026-04-12`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-12`)
+- Proof type: Runtime orchestration and admin-surface performance hardening
+- Evidence summary: Reindex execution moved to background processing with progress polling semantics, while admin config/system info reads were optimized to reduce render/poll overhead under active operations.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

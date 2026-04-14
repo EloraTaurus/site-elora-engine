@@ -1,6 +1,6 @@
 # Roadmap and Maturity
 
-Last updated: 2026-04-09
+Last updated: 2026-04-12
 
 First implemented (from changelog): 2026-02-28
 
@@ -53,6 +53,11 @@ Elora is in an advanced build phase:
 - keep overflow handling deterministic and reviewable in run evidence,
 - preserve unchanged commit-boundary governance semantics.
 
+11. Runtime throughput and admin responsiveness hardening
+- keep long-running operations off request threads where possible,
+- improve progress visibility for background operations,
+- reduce repeated metadata/system sampling overhead under active dashboard polling.
+
 ## Release Direction
 
 Current line is `0.18` for runtime evidence + execution visibility work.
@@ -73,3 +78,5 @@ Next major release boundary is expected when the next governance section and int
 - 2026-04-06: Expanded research comparability surfaces, version-badged run tracking, and queued observer orchestration for overnight batches.
 - 2026-04-07: Added research speed-control mode and revised threshold-oriented interpretation framing for dashboard/report analysis.
 - 2026-04-09: Hardened browser-assisted research runtime path and added deterministic context compaction/stacking with overflow-aware retry controls.
+- 2026-04-11: Upgraded Execution Monitor to live runtime workload visibility with terminal-style progressive output and bounded completion windows.
+- 2026-04-12: Moved reindex flow to background runtime processing with progress polling support and reduced config/system-info read overhead under active polling.

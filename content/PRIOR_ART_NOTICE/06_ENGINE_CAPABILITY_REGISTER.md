@@ -100,6 +100,22 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Hardened client-assisted research runtime path, strengthened effective-model consistency checks, added observe-only intervention probes, and introduced deterministic context compaction/stacking with overflow-aware retries.
 
+#### Live Execution Monitor Runtime Visibility Milestone
+
+- Date: `2026-04-11`
+- Source anchor: Engine changelog (`2026-04-11`)
+- Evidence class: Runtime observability and execution visibility milestone
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Upgraded Execution Monitor from scaffold state to live runtime telemetry, including active-workload focus windows, terminal-style progressive line output, and compact process telemetry cards.
+
+#### Background Reindex and Admin Throughput Hardening Milestone
+
+- Date: `2026-04-12`
+- Source anchor: Engine changelog (`2026-04-12`)
+- Evidence class: Runtime orchestration and operator-throughput hardening milestone
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Moved reindex work off request threads with progress polling support and reduced admin/API poll overhead through batched settings reads and short-lived system-info caching.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components
@@ -164,6 +180,13 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Controlled runtime stabilization experimentation (proposal-stage only)
 - Code anchors: `engine/core/inflight_inference.py`, `engine/core/inflight_calibration.py`, `engine/core/lab_inflight_tuning.py`
 - Evidence summary: Introduced bounded per-request runtime-signal adjustments around approved baseline profiles, with repeat-evaluation harness workflows and captured evidence outputs for adjustment reason/timing/range while preserving unchanged commit-boundary authority behavior.
+
+### Pre-Inference Planning and Bounded Model-Tuning Parity
+
+- Date window: `2026-03-31` onward (expanded `2026-04-05`)
+- Evidence class: Proposal-stage compute/stability optimization under governed boundaries
+- Code anchors: `engine/core/inflight_inference.py`, `engine/core/lab_inflight_tuning.py`, `engine/services/chat.py`
+- Evidence summary: Pre-inference planning/tuning pathways were aligned across production-chat and research flows to support bounded compute-saving and stability-oriented adjustments before generation, with evidence capture and unchanged commit-boundary authority semantics.
 
 ### Observer Runtime and Comparative Research Reporting
 
@@ -236,6 +259,13 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Date window: `2026-02-19` onward
 - Evidence class: Operator UX and control-plane navigation
 - Evidence summary: Operational health/governance/jobs-audit views, grouped left-navigation model, and governance-centric operator dashboards.
+
+### Execution Monitor Live Runtime Surface
+
+- Date: `2026-04-11`
+- Evidence class: Operator-facing execution observability maturity
+- Code anchors: `engine/admin/pages_sections/execution_monitor.py` (and related admin runtime surfaces)
+- Evidence summary: Execution Monitor now renders live active-workload telemetry with bounded completion visibility windows and progressive terminal-style output behavior for runtime operations review.
 
 ### Public Demo and Documentation Surfaces
 

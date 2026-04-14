@@ -1,5 +1,12 @@
 # Site / Demo Changelog
 
+## 2026-04-14
+- Synced public milestones/disclosure docs with newest Engine updates through `2026-04-12`.
+- Added missing milestone coverage for:
+  - live Execution Monitor runtime visibility and active-workload focus refinements (`2026-04-11`)
+  - background reindex processing + progress polling and admin/render performance reductions (`2026-04-12`)
+- Clarified pre-inference model tuning coverage in disclosure language as bounded proposal-stage control aimed at compute efficiency and stability (commit boundary unchanged).
+
 ## 2026-04-09
 - Synced Technical Disclosure / Prior Art content with latest Engine milestones through `2026-04-09`.
 - Expanded public-safe capability chronology to include observer research runtime, report comparability, and long-context continuity controls.
