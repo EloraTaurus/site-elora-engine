@@ -1,6 +1,6 @@
 # Roadmap and Maturity
 
-Last updated: 2026-04-12
+Last updated: 2026-04-17
 
 First implemented (from changelog): 2026-02-28
 
@@ -58,6 +58,16 @@ Elora is in an advanced build phase:
 - improve progress visibility for background operations,
 - reduce repeated metadata/system sampling overhead under active dashboard polling.
 
+12. Engine State and repair-path transparency
+- strengthen dedicated stability control-plane visibility for operators,
+- improve repair/rerun/injection/termination reporting consistency across research surfaces,
+- preserve deterministic halt signaling when same-session repair fails under configured termination policy.
+
+13. Intervention comparability and recovery diagnostics
+- improve pre-vs-post intervention comparability for research interpretation,
+- expand deterministic failure checkpoint diagnostics for long-run scenario analysis,
+- keep queue recovery controls explicit and operator-driven.
+
 ## Release Direction
 
 Current line is `0.18` for runtime evidence + execution visibility work.
@@ -80,3 +90,7 @@ Next major release boundary is expected when the next governance section and int
 - 2026-04-09: Hardened browser-assisted research runtime path and added deterministic context compaction/stacking with overflow-aware retry controls.
 - 2026-04-11: Upgraded Execution Monitor to live runtime workload visibility with terminal-style progressive output and bounded completion windows.
 - 2026-04-12: Moved reindex flow to background runtime processing with progress polling support and reduced config/system-info read overhead under active polling.
+- 2026-04-14: Expanded same-cycle repair/rerun controls and added deterministic failed-repair escalation visibility for constrained self-healing paths.
+- 2026-04-15: Reduced admin/runtime contention under active inference and added explicit queue-worker recovery controls for research continuity.
+- 2026-04-17: Added Engine State control-plane area with live stability indicators and compact health bars for key runtime posture signals.
+- 2026-04-17: Added explicit constitutional-halt visibility and improved repair/self-healing telemetry consistency across research operator surfaces.

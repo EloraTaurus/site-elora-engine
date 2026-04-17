@@ -113,7 +113,7 @@ Ingress
 - Proof type: Governance replay UX and investigation workflow
 - Evidence summary: Replay surfaces evolved into timeline-first operator investigation while preserving decision framing.
 
-## 5) Research Runtime and Evidence Expansion (Observer Track)
+## 5) Research Runtime, Stability Control, and Evidence Expansion
 
 ### Observer Runtime Integration and Evidence Parity
 
@@ -162,6 +162,30 @@ Ingress
 - Public anchor: Engine changelog entry (`2026-04-12`)
 - Proof type: Runtime orchestration and admin-surface performance hardening
 - Evidence summary: Reindex execution moved to background processing with progress polling semantics, while admin config/system info reads were optimized to reduce render/poll overhead under active operations.
+
+### Observer Repair Hardening and Deterministic Failed-Repair Escalation
+
+- Date: `2026-04-14`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-14`)
+- Proof type: Stability-control intervention hardening
+- Evidence summary: Same-cycle repair/rerun behavior was expanded under deterministic controls, with explicit failed-repair escalation and clearer pre-vs-post intervention reporting for stability verification.
+
+### Runtime Contention Reduction and Research Recovery Controls
+
+- Date: `2026-04-15`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-15`)
+- Proof type: Operator throughput and controlled recovery operations
+- Evidence summary: Admin/runtime contention was reduced through bounded polling/cache refinements, failure diagnostics were expanded, and operator queue-worker recovery controls were added for long-run research continuity.
+
+### Engine State Control Plane and Repair/Self-Healing Visibility Expansion
+
+- Date: `2026-04-17`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-17`)
+- Proof type: Stability control-plane maturity and intervention/termination evidence transparency
+- Evidence summary: Engine State surfaces were expanded with stability indicators and high-signal constitutional-halt visibility for failed-repair termination paths, while intervention rerun/injection/termination telemetry became more consistent across research operator views.
 
 ## Public-Safe Mapping Notes
 

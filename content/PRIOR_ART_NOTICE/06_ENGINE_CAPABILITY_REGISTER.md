@@ -116,6 +116,30 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Moved reindex work off request threads with progress polling support and reduced admin/API poll overhead through batched settings reads and short-lived system-info caching.
 
+#### Observer Repair Hardening and Failed-Repair Escalation Milestone
+
+- Date: `2026-04-14`
+- Source anchor: Engine changelog (`2026-04-14`)
+- Evidence class: Intervention hardening and deterministic repair-boundary enforcement
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Expanded same-cycle rerun/repair controls and added deterministic failed-repair escalation behavior with clearer intervention evidence visibility.
+
+#### Admin Contention Reduction and Queue Recovery Milestone
+
+- Date: `2026-04-15`
+- Source anchor: Engine changelog (`2026-04-15`)
+- Evidence class: Runtime contention reduction and research recovery operations
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Reduced admin/runtime contention via safer polling/cache behavior and added queue-worker recovery controls with clearer failure checkpoint diagnostics.
+
+#### Engine State and Repair/Self-Healing Visibility Milestone
+
+- Date: `2026-04-17`
+- Source anchor: Engine changelog (`2026-04-17`)
+- Evidence class: Stability control-plane and intervention transparency milestone
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added Engine State operational surfaces with compact stability indicators and explicit constitutional-halt visibility for termination-on-failed-repair outcomes, with improved rerun/injection/termination telemetry consistency across research reporting surfaces.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components
@@ -202,6 +226,20 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Code anchors: `engine/services/chat.py`, `engine/core/inflight_inference.py`
 - Evidence summary: Deterministic context compaction/stacking and overflow-aware retry behavior were added to keep long research sessions progressing under context pressure without changing commit authority semantics.
 
+### Repair-Aware Intervention Telemetry (Research Stability Control)
+
+- Date: `2026-04-17`
+- Evidence class: Intervention reporting and bounded repair-path transparency
+- Code anchors: `engine/admin/research/dashboard.py`, `engine/admin/research/intervention.py`, `engine/core/research_store.py`
+- Evidence summary: Research operator surfaces now expose clearer repair/rerun/injection/termination telemetry and constitutional-halt signaling for failed-repair outcomes, improving deterministic runtime-state review without changing commit-bound governance authority.
+
+### Observer Prompt Comparison and Intervention Outcome Analysis
+
+- Date: `2026-04-17`
+- Evidence class: Research comparability and intervention scoring visibility
+- Code anchors: `engine/core/research_report.py`, `engine/admin/research/*`
+- Evidence summary: Research reporting now includes baseline-versus-regulated prompt/output comparison scoring with export support, improving operator visibility into intervention impact under constrained-runtime conditions.
+
 ## Security and Access Control Foundation
 
 ### Signed Request and Payload Controls
@@ -266,6 +304,13 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Operator-facing execution observability maturity
 - Code anchors: `engine/admin/pages_sections/execution_monitor.py` (and related admin runtime surfaces)
 - Evidence summary: Execution Monitor now renders live active-workload telemetry with bounded completion visibility windows and progressive terminal-style output behavior for runtime operations review.
+
+### Engine State Stability Surface (Control Plane)
+
+- Date: `2026-04-17`
+- Evidence class: Operator-facing stability posture and notification controls
+- Code anchors: `engine/admin/pages_sections/engine_state.py` (and related admin state/notification routes)
+- Evidence summary: Engine State control-plane area introduced with focus-mode stability handling, live pressure beaconing, and compact health-bar indicators for key stability signals to support fast operator triage.
 
 ### Public Demo and Documentation Surfaces
 

@@ -45,7 +45,7 @@ Current public anchor surfaces:
 
 ## Disclosure Continuity (2026-04 Extension)
 
-This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, and report comparability improvements.
+This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, report comparability improvements, and repair/self-healing-path visibility controls.
 
 These additions preserve the same publication posture:
 

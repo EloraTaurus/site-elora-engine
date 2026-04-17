@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Publications and preprints connected to Elora Taurus research." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://elorataurus.com/publications/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Elora Taurus Project - Publications" />
+  <meta property="og:description" content="Publications and preprints connected to Elora research and ecosystem collaboration." />
+  <meta property="og:url" content="https://elorataurus.com/publications/" />
+  <meta property="og:image" content="https://elorataurus.com/social.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Elora Taurus Project - Publications" />
+  <meta name="twitter:description" content="Publications and preprints connected to Elora research." />
+  <meta name="twitter:image" content="https://elorataurus.com/social.png" />
+  <title>The Elora Taurus Project - Publications</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="../style.css" />
+  <meta name="elora-ga-id" content="G-33RBH775TR" />
+</head>
+<body>
+  <section class="top-stage" id="publications">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project overview">
+          <div class="brand-icon"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='../admin/elora-avatar.svg';"></div>
+          <div>
+            <strong>The Elora Taurus Project</strong>
+            <small>An Independent Open Architecture for AI Governance</small>
+          </div>
+        </a>
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-publications"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-publications" data-top-links="1" class="top-links">
+          <a class="nav-btn" href="../overview/">Overview</a>
+          <a class="nav-btn" href="../architecture/">Architecture</a>
+          <a class="nav-btn" href="../demo/">Replay Demo</a>
+          <a class="nav-btn" href="../docs/">Documentation</a>
+          <a class="nav-btn active" href="../research/">Research</a>
+          <a class="nav-btn" href="../changelog/">Changelog</a>
+        </nav>
+      </div>
+    </header>
+    <div class="shell">
+      <section class="hero about-hero">
+        <div class="about-lead">
+          <h1>Publications</h1>
+          <p>Preprints and research outputs connected to Elora Taurus and ecosystem collaboration work.</p>
+          <div class="cta-row">
+            <a class="btn" href="../research/">Back to Research</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section surface-light">
+    <div class="section-inner">
+      <h2>Current Publications</h2>
+      <p class="section-intro">This page tracks publication outputs and collaboration-linked research references relevant to Elora.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>AI Inference Behaviour Under Constrained Compute: Observability and Control in Resource-Limited Systems</h3>
+          <p>Elora preprint describing constrained-compute inference analysis and bounded pre-generation regulation behavior in governed runtime conditions.</p>
+          <p><strong>DOI:</strong> 10.5281/zenodo.19598224</p>
+          <div class="cta-row">
+            <a class="btn" href="https://doi.org/10.5281/zenodo.19598224" target="_blank" rel="noopener noreferrer">Read Preprint</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Constitutional Physics: Empirical Validation of Aitiopoietic Cognition in Artificial Systems</h3>
+          <p><strong>Author:</strong> Carlos Arleo</p>
+          <p><strong>Type:</strong> Preprint</p>
+          <p>Elora contributed to testing and provided research data used in validation workflows.</p>
+          <p><strong>DOI:</strong> 10.5281/zenodo.19616290</p>
+          <div class="cta-row">
+            <a class="btn" href="https://doi.org/10.5281/zenodo.19616290" target="_blank" rel="noopener noreferrer">Read Preprint</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <strong>The Elora Taurus Project</strong>
+        <nav class="footer-links">
+          <a href="../overview/">Overview</a>
+          <a href="../architecture/">Architecture</a>
+          <a href="../demo/">Replay Demo</a>
+          <a href="../docs/">Documentation</a>
+          <a href="../research/">Research</a>
+          <a href="../changelog/">Changelog</a>
+          <a href="../cookie-policy/">Cookie Policy</a>
+        </nav>
+      </div>
+      <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
+      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
+      const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
+      navToggles.forEach(function (toggle) {
+        const controls = toggle.getAttribute('aria-controls');
+        const links = controls ? document.getElementById(controls) : null;
+        if (!links) return;
+        toggle.addEventListener('click', function () {
+          const open = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        links.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 760) {
+          topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
+          navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
+        }
+      });
+    })();
+  </script>
+  <script defer src="../analytics-consent.js"></script>
+</body>
+</html>

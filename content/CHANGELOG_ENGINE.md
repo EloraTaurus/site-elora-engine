@@ -5,6 +5,26 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.18 --------------
 
+## 2026-04-17
+- Added observer prompt/output comparison analysis for baseline-versus-regulated cycles, including score summaries and export support for external review.
+- Modularized observer math primitives into a dedicated internal package boundary to reduce node coupling and preserve behavior clarity.
+- Upgraded Engine Health overview metrics to use deterministic last-run aggregate sources for stronger operator consistency.
+- Added dedicated Engine State control-plane surfaces and structured notification visibility for focus/gating transitions.
+- Updated admin navigation to center Engine State operational surfaces and reduce duplicate monitoring paths.
+- Improved intervention reporting fidelity by exposing rerun/injection/termination telemetry more consistently across operator research surfaces.
+- Expanded constitutional-halt projection visibility and pressure/health indicator surfaces for faster operator stability triage.
+
+## 2026-04-15
+- Reduced admin/runtime contention under active inference by tightening poll cadence and adding safer hot-path metadata collection behavior.
+- Improved governance/dashboard read-path efficiency with bounded caching and reduced write pressure during hydration.
+- Expanded research report failure diagnostics with explicit checkpoint snapshots and runtime-state context at failure points.
+- Added operator-facing queue-worker recovery control for safer long-run research operations.
+
+## 2026-04-14
+- Strengthened observer intervention handling with broader same-cycle rerun action support under deterministic policy controls.
+- Added explicit failed-repair termination escalation behavior and clearer termination metadata for controlled self-healing boundaries.
+- Expanded report/chart visibility to show pre-versus-post intervention candidate behavior for direct stabilization inspection.
+
 ## 2026-04-12
 - Moved reindex execution off the request thread into background runtime processing to prevent long blocking API calls.
 - Added reindex progress/state polling support with immediate start/running responses and status metadata for operator visibility.

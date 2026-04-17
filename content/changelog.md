@@ -1,5 +1,14 @@
 # Site / Demo Changelog
 
+## 2026-04-17
+- Added dedicated `/publications/` page and wired Research page publication routing with current DOI-backed outputs.
+- Added publication entry for Carlos Arleo’s constitutional-physics preprint with explicit Elora contribution note (testing and research data support).
+- Synced public disclosure/milestone language to include newest Engine State and repair/self-healing-related visibility work (`2026-04-14` to `2026-04-17`).
+- Updated roadmap/disclosure chronology to include:
+  - same-cycle repair hardening and deterministic failed-repair escalation (`2026-04-14`)
+  - admin contention reduction and queue-worker recovery controls (`2026-04-15`)
+  - constitutional-halt visibility and stronger intervention telemetry consistency signals (`2026-04-17`)
+
 ## 2026-04-14
 - Synced public milestones/disclosure docs with newest Engine updates through `2026-04-12`.
 - Added missing milestone coverage for:
