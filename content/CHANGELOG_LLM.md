@@ -1,5 +1,11 @@
 # LLM Plugin Changelog
 
+## 0.14 - 2026-04-21
+- Runtime Stability: added bounded echo/noise diagnostics for earlier detection of unstable response trajectories.
+- Runtime Tuning: enabled optional learned operating-band handoff to generation controls (`mirostat` and output envelope limits) under guarded behavior.
+- Runtime Safety: strengthened pre/post generation checks for contradiction/noise escalation with bounded retry behavior.
+- Echo Learning: added profile-aware first-run ramp protocol to support repeatable baseline promotion in later tuning runs.
+
 ## 0.13 - 2026-03-31
 - Fabric/Inference: bounded remote inference routing fallback added (`RAG_INFER_REMOTE_ROUTE_MAX_ATTEMPTS`, default `2`) so GPU host routing does not stall queue processing; requests fall back to engine CPU path when remote WorkerHosts are unreachable.
 - Fabric/WorkerHost: host selection hardened to ignore stale/offline hosts, prefer `preferred_endpoint`, and attempt multiple eligible hosts before failing a spawn.

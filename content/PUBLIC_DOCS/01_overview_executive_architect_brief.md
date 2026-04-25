@@ -19,7 +19,7 @@ This is materially different from systems that:
 - rely on post-hoc moderation only,
 - or cannot replay decisions without re-running models.
 
-## Current maturity
+## Current position
 
 Strong:
 - commit boundary semantics,

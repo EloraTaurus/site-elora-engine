@@ -88,7 +88,7 @@ This register documents non-governance capabilities implemented in Elora so the 
 
 - Date: `2026-04-07`
 - Source anchor: Engine changelog (`2026-04-07`)
-- Evidence class: Research operator dashboard and interpretation model maturity
+- Evidence class: Research operator dashboard and interpretation model expansion
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Added speed-control mode, revised threshold-oriented hypothesis framing, and graduated runtime-state banding for clearer runtime-behavior interpretation.
 
@@ -139,6 +139,46 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Stability control-plane and intervention transparency milestone
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Added Engine State operational surfaces with compact stability indicators and explicit constitutional-halt visibility for termination-on-failed-repair outcomes, with improved rerun/injection/termination telemetry consistency across research reporting surfaces.
+
+#### Engine Health Snapshot Modes and Report Security Milestone
+
+- Date: `2026-04-19`
+- Source anchor: Engine changelog (`2026-04-19`)
+- Evidence class: Health telemetry windowing and report-generation hardening
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added mode-aware Engine Health snapshot windows and secure staged report-writer context handling for safer operator report generation under active runtime workloads.
+
+#### Dedicated PhyOS Dashboard and Cycle-Scoped Health Controls Milestone
+
+- Date: `2026-04-20`
+- Source anchor: Engine changelog (`2026-04-20`)
+- Evidence class: Runtime observability surface expansion
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added a dedicated PhyOS Engine Health surface with cycle/window-scoped telemetry selection and stabilized KPI visualization semantics for deterministic operator health review.
+
+#### Echo Runtime + Frequency Learning Milestone
+
+- Date: `2026-04-21`
+- Source anchor: Engine changelog (`2026-04-21`)
+- Evidence class: Runtime instability prediction and bounded learning controls
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added Elora Echo predictor and Echo Frequency learning surfaces to map instability precursors and bounded envelope guidance using model/profile-aware learning paths.
+
+#### Adaptive Cache and Dead-Stage Recovery Milestone
+
+- Date: `2026-04-22`
+- Source anchor: Engine changelog (`2026-04-22`)
+- Evidence class: Context-control expansion and autonomous dead-stage handling
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added Adaptive Cache model-profile controls, KV/cache activity evidence, dead-stage watchdog auto-skip telemetry, and expanded scorecard/timeline visibility for long-run runtime continuity diagnostics.
+
+#### Model Exams and CORE Coordination Milestone
+
+- Date: `2026-04-24`
+- Source anchor: Engine changelog (`2026-04-24`)
+- Evidence class: Signal-generation foundation and cross-module orchestration
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added Model Exams run/event/feature export surfaces and Elora CORE coordination boundaries for module-state aggregation, learning visibility, and read-only persona translation with preserved policy independence.
 
 ## Platform and Runtime Baseline
 
@@ -301,7 +341,7 @@ This register documents non-governance capabilities implemented in Elora so the 
 ### Execution Monitor Live Runtime Surface
 
 - Date: `2026-04-11`
-- Evidence class: Operator-facing execution observability maturity
+- Evidence class: Operator-facing execution observability expansion
 - Code anchors: `engine/admin/pages_sections/execution_monitor.py` (and related admin runtime surfaces)
 - Evidence summary: Execution Monitor now renders live active-workload telemetry with bounded completion visibility windows and progressive terminal-style output behavior for runtime operations review.
 

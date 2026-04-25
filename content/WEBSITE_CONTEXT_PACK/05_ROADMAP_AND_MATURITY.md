@@ -1,15 +1,15 @@
-# Roadmap and Maturity
+# Roadmap and Research Direction
 
-Last updated: 2026-04-17
+Last updated: 2026-04-25
 
 First implemented (from changelog): 2026-02-28
 
-## Current Maturity (Practical)
+## Current Position (Research Runtime)
 
-Elora is in an advanced build phase:
+Elora is positioned as a research-based runtime engine:
 - core governance boundary patterns are implemented,
-- operator surfaces are active,
-- replay/audit fidelity is materially beyond toy-system behavior.
+- operator and research surfaces are active,
+- replay/audit evidence is being expanded through iterative research tracks.
 
 ## Active Engineering Priorities
 
@@ -43,7 +43,7 @@ Elora is in an advanced build phase:
 - evaluate TPM/silicon-backed evidence claims for runtime identity proofs,
 - run exploratory feasibility work for LUNA board and OpenTitan-backed deployment modes.
 
-9. Observer runtime and research comparability maturity
+9. Observer runtime and research comparability
 - maintain observer-runtime evidence parity (HTML/Markdown/JSON report surfaces),
 - preserve run-to-run comparability with explicit versioning and scenario attribution,
 - continue public-safe chronology updates as internal research surfaces expand.
@@ -70,8 +70,8 @@ Elora is in an advanced build phase:
 
 ## Release Direction
 
-Current line is `0.18` for runtime evidence + execution visibility work.
-Next major release boundary is expected when the next governance section and integrity objectives are completed.
+Current line is `0.2.0` for Elora CORE ML/bucket architecture expansion plus runtime evidence and execution visibility work.
+All earlier `0.18` progression is retained as previous-version history.
 
 ## Recent Milestones (Fabric)
 
@@ -94,3 +94,8 @@ Next major release boundary is expected when the next governance section and int
 - 2026-04-15: Reduced admin/runtime contention under active inference and added explicit queue-worker recovery controls for research continuity.
 - 2026-04-17: Added Engine State control-plane area with live stability indicators and compact health bars for key runtime posture signals.
 - 2026-04-17: Added explicit constitutional-halt visibility and improved repair/self-healing telemetry consistency across research operator surfaces.
+- 2026-04-24: Added Model Exams as a dedicated signal-generation and governance-learning foundation with exam-pack/run/event/feature-export surfaces.
+- 2026-04-24: Added Elora CORE coordination milestone with explicit module-boundary separation, read-only persona translation, and scheduled Echo learning refresh continuity.
+- 2026-04-25: Split Elora CORE into dedicated pages (`Overview`, `Machine Learning`, `Buckets`) with left-nav nesting.
+- 2026-04-25: Added public-safe milestone coverage for bucketed learning direction (per-model/per-profile bucket paths and portable bucket repo flow).
+- 2026-04-25: Added CORE reliability hardening milestones (degraded snapshot behavior, CSP-safe local chart loading, section stability improvements).

@@ -31,7 +31,7 @@ Replay value depends on captured context quality:
 
 Current trajectory includes tamper-evidence signals (hash-chained replay events, signed commit decisions).
 
-Next maturity step is immutable/off-box evidence retention and periodic integrity attestations.
+Next step is immutable/off-box evidence retention and periodic integrity attestations.
 
 ## Audit-grade expectation
 

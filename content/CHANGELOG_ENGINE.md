@@ -3,7 +3,70 @@
 Disclosure level: Public (technical summary for reduction-to-practice; direct reproducibility details intentionally redacted).
 Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
-## ------------- 0.18 --------------
+## ------------- 0.2.0 --------------
+
+## 2026-04-25
+- Added public-safe milestone coverage for Elora CORE separation into dedicated pages:
+  - `Overview`, `Machine Learning`, and `Buckets`.
+- Added public-safe disclosure for bucketed learning research direction:
+  - per-model/per-profile bucket structure,
+  - portable bucket repo import/export/activation flow,
+  - hardware-aware compatibility checks for safer profile reuse across systems.
+- Added public-safe reliability hardening disclosure:
+  - degraded-safe CORE snapshot behavior during upstream data-source faults,
+  - CSP-safe local Plotly usage in CORE surfaces (no external CDN requirement),
+  - improved section rendering resilience and exam-learning toggle stability.
+- Added public-safe Model Exams UX milestone:
+  - Model Workbench moved to popup workflow for lower-scroll operator operation.
+
+## 2026-04-24
+- Added public-safe milestone coverage for dedicated Model Exams signal-generation surfaces:
+  - exam packs, run/event views, feature export paths, and governance-baseline scoring direction.
+- Added public-safe milestone coverage for Elora CORE control-plane coordination:
+  - explicit non-monolithic boundary posture,
+  - module-state aggregation and runtime-learning visibility,
+  - end-to-end explainability support without exposing private module internals.
+- Added public-safe milestone coverage for Elora CORE persona/readability layer:
+  - presentation-only observations tied to real telemetry,
+  - read-only behavior (no policy/scoring/signal influence).
+- Added public-safe milestone coverage for Echo learning persistence and refresh controls:
+  - profile-scoped mode continuity across restarts,
+  - scheduled and on-demand learning refresh behavior,
+  - bounded runtime-learning descriptor path for future backend evolution.
+
+## Previous Versions (0.18 and earlier)
+
+## 2026-04-22
+- Added a public-safe Engine Health milestone for `Elora Adaptive Cache`:
+  - bounded context compaction and reconstruction controls
+  - model-scoped runtime profile tuning
+  - improved operator visibility for cache decisions and profile updates.
+- Added public-safe cache observability summary:
+  - context reduction and cache-activity trend views
+  - explainable decision trace presentation
+  - practical impact indicators for constrained hardware operation.
+- Added cross-surface visibility note for Echo-to-Cache response linkage in Engine Health dashboards.
+
+- Updated Engine Health `Overview` to align with the newer PhyOS-style dashboard look used across Engine Health surfaces.
+- Added clearer grouped sections in Overview (`PhyOS Floor`, `Runtime Dynamics`, `Operations Signals`) for faster operator scanning.
+- Added Plotly-backed charts in Overview for key health signals (coherence, coupling alignment, NESS health, cloud-chamber motion, and constitutional-halt health), with safe fallback behavior when Plotly is unavailable.
+- Kept existing API contracts and deterministic KPI calculations intact while improving chart readability and visual consistency.
+
+## 2026-04-21
+- Added a dedicated Engine Health `Elora Echo` surface for early instability signal visibility (drift/hallucination/collapse precursors) using bounded telemetry interpretation.
+- Added a separate `Echo Frequency Learning` research area for learning model operating bands (`documenting` and `engaged` modes) without coupling directly to active Observer/PhyOS control loops.
+- Added model-noise and hardware-pressure-informed stability indicators to improve early warning quality during long/complex inference sessions.
+- Added bounded runtime stabilization hooks that can apply learned operating envelopes to inference settings for safer response generation.
+- Added internal documentation surfaces and technical notes for Echo runtime behavior, learning workflow, and grading/math framing.
+- Added first-run Echo learning protocol for controlled ramp testing:
+  - gradual token ramp until predicted instability/crackle threshold.
+  - follow-on gradient tuning phase that attempts to extend stable turn capacity.
+  - profile-aware storage (`model + model profile`) to support iterative baseline promotion.
+
+## 2026-04-20
+- Verified active security posture for admin sessions and bootstrap URL handling (encrypted session-secret path, password-change revocation behavior, trusted proxy endpoint derivation, and consistent logout cookie clearing behavior).
+- Reduced knowledge-listing filesystem overhead by moving to lighter directory scanning and adding a short-lived cache with write-triggered invalidation.
+- Reduced job-store overhead under frequent polling by avoiding repeated schema-initialization work and throttling cleanup sweeps.
 
 ## 2026-04-17
 - Added observer prompt/output comparison analysis for baseline-versus-regulated cycles, including score summaries and export support for external review.

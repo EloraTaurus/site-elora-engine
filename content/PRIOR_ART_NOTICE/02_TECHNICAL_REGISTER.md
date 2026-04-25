@@ -184,8 +184,48 @@ Ingress
 - Date: `2026-04-17`
 - Repository: `EloraTaurus/llm-elora-engine` (private)
 - Public anchor: Engine changelog entry (`2026-04-17`)
-- Proof type: Stability control-plane maturity and intervention/termination evidence transparency
+- Proof type: Stability control-plane expansion and intervention/termination evidence transparency
 - Evidence summary: Engine State surfaces were expanded with stability indicators and high-signal constitutional-halt visibility for failed-repair termination paths, while intervention rerun/injection/termination telemetry became more consistent across research operator views.
+
+### Engine Health Snapshot Modes and Staged Research Report Controls
+
+- Date: `2026-04-19`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-19`)
+- Proof type: Health-surface expansion and report-generation security controls
+- Evidence summary: Mode-aware Engine Health snapshot windows, staged AI report generation flow, and signed one-time report-context access controls were expanded for safer operator reporting under constrained runtime conditions.
+
+### PhyOS Dashboard and Control-Plane Health Surface Expansion
+
+- Date: `2026-04-20`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-20`)
+- Proof type: Runtime-state observability maturation
+- Evidence summary: Dedicated PhyOS dashboard surfaces and cycle/window scoped telemetry views were added with stable KPI interpretation semantics and operational filtering controls for deterministic health review.
+
+### Echo Runtime Signals and Learning Envelope Foundation
+
+- Date: `2026-04-21`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-21`)
+- Proof type: Stability-learning control boundary expansion
+- Evidence summary: Echo predictor and Echo Frequency learning surfaces were added to map early instability signals into bounded runtime envelope guidance while preserving commit-bound governance authority.
+
+### Adaptive Cache and Dead-Stage Evidence Expansion
+
+- Date: `2026-04-22`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-22`)
+- Proof type: Context-control telemetry and recovery determinism
+- Evidence summary: Adaptive Cache model-profile controls, cache/KV evidence traces, dead-stage watchdog telemetry, and scorecard/timeline reporting were extended for stronger runtime continuity and replayable operator diagnostics.
+
+### Model Exams and Elora CORE Coordination Milestone
+
+- Date: `2026-04-24`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-24`)
+- Proof type: Governance learning-signal generation and cross-module coordination boundary
+- Evidence summary: Dedicated Model Exams signal/event contracts and Elora CORE coordination surfaces were introduced to aggregate learning/state evidence while preserving module separation and read-only persona translation boundaries.
 
 ## Public-Safe Mapping Notes
 

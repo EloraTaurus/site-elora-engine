@@ -31,7 +31,7 @@ For operators and governance stakeholders, this means:
 
 ## Current Stage
 
-Elora is in active maturity work (`0.17` line):
+Elora is in active research and build work (`0.17` line):
 - hardening admissibility completeness,
 - tightening evidence coherence,
 - increasing operator-speed governance workflows,

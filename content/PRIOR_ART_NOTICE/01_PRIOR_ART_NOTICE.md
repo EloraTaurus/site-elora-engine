@@ -45,7 +45,7 @@ Current public anchor surfaces:
 
 ## Disclosure Continuity (2026-04 Extension)
 
-This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, report comparability improvements, and repair/self-healing-path visibility controls.
+This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, report comparability improvements, repair/self-healing-path visibility controls, and later-month CORE/Model-Exams research milestones.
 
 These additions preserve the same publication posture:
 
@@ -56,6 +56,8 @@ These additions preserve the same publication posture:
 ## Scope Clarification
 
 This page is a technical disclosure record, not a patent filing, legal notice template, or claim of novelty over foundational methods. It exists to preserve chronology, architectural intent, and public accountability.
+
+Current public release line reflected on this disclosure page is `0.2.0`.
 
 Public references here intentionally use short commit fingerprints because the source repository is private. Full hashes and immutable evidence bundles are retained offline.
 

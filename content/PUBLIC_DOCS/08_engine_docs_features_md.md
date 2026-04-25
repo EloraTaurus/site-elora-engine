@@ -23,7 +23,7 @@ Status labels:
 | Dashboards | `Live/Partial` multi-dashboard admin navigation (`Overview`, `Dashboards`, `Governance`, `AI Runtime`, `Fabric`, `Observability`, `Lab`, `Operators`, `Settings`) | Consolidation and UX simplification across dashboard groups |
 | Observability | `Partial` job timeline and replay-oriented views, runtime event visibility, raw evidence panels | Replay forensics polish, compact operator-first incident triage |
 | Governance | `Partial` governance dashboard, policy editor v1, replay review, decision/admissibility metadata, commit boundary visibility | Governance Incident Map redesign, policy traceability depth (`rule_id/version`), stricter admissibility completeness |
-| AI Runtime | `Partial` models, pipeline controls, behavior, memory, knowledge, plugin controls | Runtime dashboard maturity, profile mapping improvements, context and retrieval controls |
+| AI Runtime | `Partial` models, pipeline controls, behavior, memory, knowledge, plugin controls | Runtime dashboard expansion, profile mapping improvements, context and retrieval controls |
 | Fabric | `Partial` WorkerHost + Provisioner surfaces, worker lifecycle controls, template/provisioning scaffolds | Clear VM vs container split hardening, worker-host telemetry depth, safer lifecycle actions |
 | Lab | `Partial` commit harness and runtime validation surfaces | Expanded deterministic test packs and release proof workflows |
 

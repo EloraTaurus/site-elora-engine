@@ -25,7 +25,7 @@ This page describes how Elora Taurus maintains a verifiable implementation chron
 
 - Dated changelog entries for observer-runtime milestones and report-surface changes
 - Public disclosure updates describing capability chronology without release of direct reproducibility handles
-- Report/export capability references (HTML/Markdown/JSON parity) as chronology anchors for evidence-surface maturity
+- Report/export capability references (HTML/Markdown/JSON parity) as chronology anchors for evidence-surface development
 
 ## Chain-of-Custody Practice
 

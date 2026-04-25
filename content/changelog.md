@@ -1,5 +1,40 @@
 # Site / Demo Changelog
 
+## 2026-04-25
+- Introduced `v0.2.0` release-line framing across changelog and roadmap surfaces.
+- Added missing `2026-04-24` engine milestone coverage to the public-safe engine changelog stream:
+  - Model Exams signal-generation foundations,
+  - Elora CORE coordination and persona-readability boundary,
+  - Echo learning persistence and scheduled/on-demand refresh controls.
+- Synced demo/public-safe changelog with Elora CORE research milestone updates:
+  - dedicated CORE subpages (`Overview`, `Machine Learning`, `Buckets`),
+  - bucketed-learning and portable bucket-repo workflow direction,
+  - hardware-aware relearning posture for cross-system consistency.
+- Added public-safe reliability notes for latest CORE hardening:
+  - CSP-safe local chart dependency path (no external Plotly CDN requirement),
+  - resilient CORE snapshot handling under partial backend faults,
+  - improved section rendering/toggle stability.
+- Added demo milestone note for Model Exams UX update:
+  - Model Workbench now opened as popup/modal to reduce page-scroll burden.
+- Updated Technical Disclosure/Prior-Art site surfaces to reflect latest chronology through `2026-04-25` and align version framing to `0.2.0`.
+
+## 2026-04-22
+- Synced public-safe disclosures for new Engine Health `Elora Adaptive Cache` controls and telemetry views.
+- Added public-safe milestone coverage for:
+  - adaptive context compaction modes (`managed`, `manual`, `disabled`)
+  - model-scoped memory/cache profile tuning
+  - explainable cache decision traces and operator-facing update feed.
+- Added public-safe note on cache performance instrumentation:
+  - context reduction trends
+  - cache activity trends
+  - bounded impact indicators for constrained hardware scenarios.
+- Added public-safe Echo ↔ Cache linkage wording to reflect cross-surface early-warning-to-response visibility.
+
+## 2026-04-21
+- Synced public-safe changelog disclosures for new Engine Health and Research features related to `Elora Echo` and `Echo Frequency Learning`.
+- Added public-safe milestone coverage for early-warning stability telemetry, model-noise band learning, and guarded runtime envelope tuning.
+- Updated internal/public disclosure parity to include new Echo documentation surfaces and research framing.
+
 ## 2026-04-17
 - Added dedicated `/publications/` page and wired Research page publication routing with current DOI-backed outputs.
 - Added publication entry for Carlos Arleo’s constitutional-physics preprint with explicit Elora contribution note (testing and research data support).
@@ -19,7 +54,7 @@
 ## 2026-04-09
 - Synced Technical Disclosure / Prior Art content with latest Engine milestones through `2026-04-09`.
 - Expanded public-safe capability chronology to include observer research runtime, report comparability, and long-context continuity controls.
-- Updated roadmap/maturity pack references to reflect April research/runtime progression and unchanged commit-boundary governance posture.
+- Updated roadmap/research-direction pack references to reflect April research/runtime progression and unchanged commit-boundary governance posture.
 - Corrected disclosure anchor link to current changelog route (`/changelog/`).
 - Updated Research-related website messaging to reflect current compute-efficiency evaluation framing (public-safe wording).
 - Improved public-facing consistency language around browser-assisted runs and deterministic governance boundaries.
@@ -34,7 +69,7 @@
 - Refined changelog and architecture copy so evidence-focused messaging stays informative without introducing implementation reproduction detail.
 
 ## 2026-03-31
-- Updated website roadmap/maturity milestones to include beginning proposal-stage runtime signals experimentation.
+- Updated website roadmap/research-direction milestones to include beginning proposal-stage runtime signals experimentation.
 - Kept milestone wording bounded and public-safe: controlled runtime stabilization research with unchanged commit boundary semantics.
 
 ## 2026-03-29
@@ -43,7 +78,7 @@
 - Tuned public dashboard polling behavior for lower overhead during repeated visits.
 
 ## 2026-03-24
-- Updated website roadmap/maturity milestones with latest Fabric operations work (local WorkerHost deploy, runtime inventory/update checks, live ops footprint rail).
+- Updated website roadmap/research-direction milestones with latest Fabric operations work (local WorkerHost deploy, runtime inventory/update checks, live ops footprint rail).
 - Added high-level hardware attestation roadmap note to website architecture docs (`software` -> `hardware_backed` -> `hardware_deployed`), explicitly marked as research direction.
 - Added public-safe mention of LUNA/OpenTitan exploration as future feasibility work (no implementation detail claims).
 
