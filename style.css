@@ -45,6 +45,13 @@
   --cookie-panel-border: rgba(164, 193, 228, 0.82);
   --cookie-panel-text: #153a62;
   --cookie-panel-muted: #3a5f87;
+  --elev-soft: 0 4px 12px rgba(63, 111, 187, 0.14);
+  --elev-btn: 0 8px 18px rgba(47, 102, 169, 0.22);
+  --elev-panel: 0 10px 20px rgba(63, 111, 187, 0.08);
+  --text-strong: #294f78;
+  --text-body-hero: #365981;
+  --chip-border-strong: #b9cde8;
+  --panel-border-soft: #bfd2eb;
 }
 
 * { box-sizing: border-box; }
@@ -168,10 +175,69 @@ a:hover { color: var(--brand-link-hover); }
   z-index: 120;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  border-bottom: 1px solid var(--topbar-border);
+  border-bottom: 1px solid transparent;
   backdrop-filter: none;
   background: transparent;
   padding: 14px 0;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, backdrop-filter 180ms ease;
+}
+
+.topbar.is-scrolled {
+  border-bottom-color: var(--topbar-border);
+  backdrop-filter: blur(8px);
+  background: rgba(245, 250, 255, 0.86);
+  box-shadow: 0 8px 20px rgba(36, 62, 102, 0.08);
+}
+
+/* Final polish pass: tighter visual consistency */
+.nav-btn,
+.btn,
+.hero-slider-btn,
+.chip {
+  transition: border-color 140ms ease, background 140ms ease, color 140ms ease, box-shadow 140ms ease;
+}
+
+.nav-btn {
+  box-shadow: 0 1px 0 rgba(63, 111, 187, 0.05);
+}
+
+.nav-btn:hover {
+  box-shadow: var(--elev-soft);
+}
+
+.hero-title-silver {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18), 0 3px 8px rgba(20, 44, 76, 0.34);
+}
+
+.hero p {
+  color: var(--text-body-hero);
+}
+
+.hero-capabilities {
+  border-color: var(--panel-border-soft);
+  box-shadow: var(--elev-panel);
+}
+
+.chip {
+  border-color: var(--chip-border-strong);
+  color: var(--text-strong);
+  background: #f7fbff;
+}
+
+.chip-dot {
+  box-shadow: 0 0 0 3px rgba(34, 185, 111, 0.14);
+}
+
+.btn {
+  box-shadow: var(--elev-btn);
+}
+
+.btn.alt {
+  box-shadow: 0 1px 0 rgba(63, 111, 187, 0.05);
+}
+
+.btn.alt:hover {
+  box-shadow: var(--elev-soft);
 }
 
 .home-page .topbar {

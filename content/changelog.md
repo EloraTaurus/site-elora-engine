@@ -1,6 +1,14 @@
 # Site / Demo Changelog
 
 ## 2026-04-28
+- Introduced unified light-theme skin across website and replay/admin engine demo surfaces:
+  - white-base UI treatment with shared cobalt/violet palette tokens,
+  - improved header readability on scroll via dynamic topbar backdrop,
+  - replay trace/table/modal visual alignment with website design language.
+- Completed tokenization cleanup for maintainability:
+  - centralized repeated colors, borders, and elevation values into semantic CSS tokens,
+  - reduced one-off style drift risk across website and engine-facing demo surfaces.
+- Added theme reference notes: `demo/content/THEME_NOTES.md`.
 - Synced website research/disclosure language to the current project positioning: `AI Runtime Systems & Governance Architecture`.
 - Added public-safe milestone coverage for latest `v0.2.0` engine advances (`2026-04-26`, `2026-04-27`, `2026-04-28`):
   - Pattern Analysis learning surfaces, transition visibility, and model-profile trend capture,

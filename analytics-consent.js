@@ -14,6 +14,20 @@
   var pageViewSent = false;
   var currentConsentGranted = false;
 
+  function initTopbarBackdrop() {
+    var topbars = Array.prototype.slice.call(document.querySelectorAll('.topbar'));
+    if (!topbars.length) return;
+    var sync = function () {
+      var scrolled = (window.scrollY || window.pageYOffset || 0) > 14;
+      topbars.forEach(function (bar) {
+        bar.classList.toggle('is-scrolled', scrolled);
+      });
+    };
+    window.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  }
+
   function readPref() {
     try {
       var raw = localStorage.getItem(PREF_KEY);
@@ -246,8 +260,10 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       buildUI(pref);
+      initTopbarBackdrop();
     });
   } else {
     buildUI(pref);
+    initTopbarBackdrop();
   }
 })();
