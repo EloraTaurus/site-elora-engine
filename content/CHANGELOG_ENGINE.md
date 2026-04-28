@@ -5,6 +5,76 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
 
 ## ------------- 0.2.0 --------------
 
+## 2026-04-28
+- Added public-safe milestone coverage for observer-model routing refinement:
+  - observer model can be selected dynamically per stage/question during research runs,
+  - selected observer identity is now visible in run evidence/report surfaces.
+- Added public-safe observer-evaluation context hardening:
+  - observer receives bounded prompt/proposal/guardrail context for more grounded assessment behavior.
+- Added public-safe observer quality scoring visibility:
+  - deterministic observer quality score + grade added to report surfaces,
+  - explicit “observation missing/non-substantive” detection path for cleaner learning signals.
+  - added observer alignment scoring against guarded engine expectation for stronger instruction-following evaluation.
+  - ensured policy-breach preview remains visible to observer in observe-only runs (no-block mode) for clearer policy-learning signals.
+  - added policy-template provenance (`template_id`, `template_version`) and structured policy-control hit evidence for observer learning.
+  - added cumulative policy-control learning persistence keyed by model/profile/template/control for longitudinal breach-pattern learning.
+  - added a Governance Learning panel and API for visibility into accumulated policy-control hits/breaches across observer governance runs.
+  - added Elora CORE Models widget for governance breach familiarity, filtered by selected model/profile.
+  - added compact engine-only readiness scoring (score/band/reasons) to governance learning surfaces for no-observer test planning.
+  - added deterministic governance-training record builder for comparing basic-vs-markdown guardrails, observer checks, and Elora self-answer correction loops.
+  - added marker-driven (`[BREACH]/[NEAR]`) governance expectation inference and simulated file-risk fixture support for pre-upload governance testing.
+  - added dedicated governance-training scenario pack with a 25-step breach-vs-near-breach trial set for isolated governance learning runs.
+- Added public-safe observer dynamic-question milestone:
+  - bounded context/risk-aware question prompts for observer instruction-following validation,
+  - captured observer question-check outputs in run evidence for review.
+  - added governance-first question shaping and direct UI visibility of asked observer questions/checks.
+  - increased observer default review token budget to support fuller governance assessments in reports/exports.
+  - added baseline industry policy templates and selector support for observer research runs.
+  - added initial file upload/sharing and access-control best-practice policy-control detection coverage for observer evidence.
+- Added public-safe milestone coverage for learned Echo threshold profiles by model/profile:
+  - dynamic prediction/event threshold bands (`predict`, `drift`, `hallucination`, `collapse`) with bounded adaptation behavior.
+- Added public-safe milestone coverage for improved Echo learning correlation:
+  - blended evidence inputs from Echo Frequency, Model Exams, and run scorecards,
+  - resilience fix for zero-sample cache pinning that could keep learning display at `0%`.
+- Added public-safe operator visibility upgrades:
+  - Echo threshold profile + confidence-band display (`cold/warming/qualified`),
+  - drilldown failure chip with cycle-reference and HTTP-status context for faster diagnostics.
+- Added public-safe model wiki/lore profile enrichment:
+  - per-model Echo threshold profile visibility,
+  - stability envelope summary (`safe input`, `safe output`, crackle-turn/pressure guidance) sourced from accumulated run evidence.
+
+
+
+## 2026-04-27
+- Added public-safe milestone coverage for learning-efficacy visibility in Engine Health:
+  - model/profile learning readiness, source-lineage mix, and adaptation velocity signals.
+- Added public-safe Pattern Analysis visibility updates:
+  - recurring instability-pattern views,
+  - transition-state trend summaries,
+  - deterministic Elora feedback guidance for run interpretation.
+- Added public-safe learning-integrity hardening:
+  - idempotent pattern-learning writes,
+  - duplicate cleanup maintenance for historical backfills,
+  - cleaner long-range trend reliability.
+- Added public-safe observer stage-memory learning coverage:
+  - model-universal stage priors,
+  - historical instability-likelihood hints,
+  - automatic post-run pattern sync for faster iterative learning.
+
+## 2026-04-26
+- Added public-safe milestone coverage for CORE model-intelligence views:
+  - exam-derived strengths/weaknesses,
+  - learned runtime parameter bands,
+  - regulated-apply reasoning diagnostics.
+- Added public-safe Pattern Analysis module milestone coverage:
+  - runtime pattern extraction,
+  - state-transition learning,
+  - model/profile trend and longitudinal outcome linkage.
+- Added public-safe Model Exams paired-evaluation coverage:
+  - baseline-vs-ML comparison runs,
+  - fairness cooldown controls,
+  - side-by-side delta visibility and campaign-level comparison summaries.
+
 ## 2026-04-25
 - Added public-safe milestone coverage for Elora CORE separation into dedicated pages:
   - `Overview`, `Machine Learning`, and `Buckets`.
@@ -35,6 +105,8 @@ Policy: `engine/docs/OPERATORS/CHANGELOG_DISCLOSURE_POLICY.md`.
   - bounded runtime-learning descriptor path for future backend evolution.
 
 ## Previous Versions (0.18 and earlier)
+
+## ------------- 0.18 --------------
 
 ## 2026-04-22
 - Added a public-safe Engine Health milestone for `Elora Adaptive Cache`:

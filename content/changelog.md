@@ -1,5 +1,16 @@
 # Site / Demo Changelog
 
+## 2026-04-28
+- Synced website research/disclosure language to the current project positioning: `AI Runtime Systems & Governance Architecture`.
+- Added public-safe milestone coverage for latest `v0.2.0` engine advances (`2026-04-26`, `2026-04-27`, `2026-04-28`):
+  - Pattern Analysis learning surfaces, transition visibility, and model-profile trend capture,
+  - Observer stage-memory learning and governance-learning accumulation,
+  - Adaptive Cache CPU-readiness/resource-pressure controls,
+  - Observer routing/scoring/alignment visibility,
+  - Echo learned threshold profile integration and CORE stability-envelope outputs.
+- Updated public LLM changelog (`demo/content/CHANGELOG_LLM.md`) to latest release line through `0.17`.
+- Refreshed ChatGPT engine status snapshot (`ELORA_ENGINE_STATUS_SNAPSHOT.json`) to align with current changelog state and active research priorities.
+
 ## 2026-04-25
 - Introduced `v0.2.0` release-line framing across changelog and roadmap surfaces.
 - Added missing `2026-04-24` engine milestone coverage to the public-safe engine changelog stream:
