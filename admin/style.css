@@ -1222,6 +1222,36 @@ button, .nav-toggle, .sidebar-mobile-toggle {
   z-index: 200;
 }
 
+.tour-panel {
+  border: 1px solid var(--line-soft);
+  background: #ffffff;
+  box-shadow: var(--shadow-strong);
+}
+
+.tour-kicker {
+  color: #5f7ca0;
+}
+
+.tour-title {
+  color: #21456f;
+}
+
+.tour-copy,
+.tour-meta {
+  color: #4e6b93;
+}
+
+.tour-presenter img {
+  border: 1px solid var(--line-soft);
+  background: #f6fbff;
+}
+
+.tour-actions a {
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: #17345c;
+}
+
 .end-demo-notice p,
 .focus-guide p {
   color: #4e6b93;

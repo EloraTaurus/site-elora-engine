@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Elora Engine - Research Dashboard (Demo)</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="elora-ga-id" content="G-33RBH775TR" />
+</head>
+<body data-admin-active="research_dashboard">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-avatar"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='elora-avatar.svg';" /></div>
+        <div>
+          <div><strong>Elora Engine</strong></div>
+          <div style="color:var(--muted); font-size:12px;">Admin</div>
+        </div>
+      </div>
+      <nav class="nav"></nav>
+      <div style="margin-top:18px; font-size:12px; color:var(--muted);">Research demo mode: synthetic / public-safe artifacts</div>
+    </aside>
+
+    <main class="content">
+      <div class="ops-rail" id="rd-runtime">
+        <div><div class="ops-label">Environment</div><div class="ops-value"><span class="env-badge">RESEARCH</span></div></div>
+        <div><div class="ops-label">Engine State</div><div class="ops-value"><span class="ops-state"><span class="ops-dot"></span>RUNNING</span></div></div>
+        <div><div class="ops-label">Cycle Window</div><div class="ops-value">Last 24h</div></div>
+        <div><div class="ops-label">Active Track</div><div class="ops-value">Non-Neural Behaviour Detection</div></div>
+        <div><div class="ops-label">Operator</div><div class="ops-value">research-admin</div></div>
+      </div>
+
+      <section class="card" id="rd-intro">
+        <p style="margin:0; font-size:15px;">
+          Research Dashboard summarizes public-safe synthetic telemetry for non-neural behaviour detection, proposal-to-commit governance learning,
+          and constrained-compute runtime studies. All figures below are demonstration-only and contain no customer or production-sensitive data.
+        </p>
+      </section>
+
+      <section id="rd-signals" class="kpi-grid">
+        <article class="kpi-card"><h3>Research Runs (24h)</h3><strong>42</strong></article>
+        <article class="kpi-card"><h3>Behaviour Profiles Updated</h3><strong>19</strong></article>
+        <article class="kpi-card"><h3>Policy-Bound Blocks Detected</h3><strong>7</strong></article>
+        <article class="kpi-card"><h3>Replay-Ready Evidence Packs</h3><strong>42</strong></article>
+      </section>
+
+      <section class="signal-grid" id="rd-core">
+        <article class="signal-card">
+          <h3>Behaviour Detection Signals</h3>
+          <p>Instability drift events: 5<br />Token-efficiency anomalies: 8<br />Prompt-boundary confusion markers: 3<br />Escalated to governance review: 7</p>
+        </article>
+        <article class="signal-card">
+          <h3>Governance Learning Impact</h3>
+          <p>Proposal quality uplift (synthetic): +12.4%<br />False-pass reduction: -18.1%<br />Commit-boundary confidence gain: +0.09<br />Deterministic replay parity: 100%</p>
+        </article>
+        <article class="signal-card" id="rd-fabric">
+          <h3>Constrained Compute Research</h3>
+          <p>Median latency under cap: 812 ms<br />Thermal intervention triggers: 2<br />P-state adaptive reroutes: 4<br />Stability preservation score: 0.91</p>
+        </article>
+      </section>
+
+      <section class="jobs-card card" id="rd-reports">
+        <h2>Safe Report Examples</h2>
+        <p class="muted" style="margin:0 0 10px;">Synthetic examples suitable for walkthroughs, documentation, and stakeholder demos.</p>
+        <table class="table" id="rd-index">
+          <thead>
+            <tr>
+              <th>Report ID</th>
+              <th>Category</th>
+              <th>Focus</th>
+              <th>Risk Band</th>
+              <th>Decision Outcome</th>
+              <th>Evidence Grade</th>
+              <th>Artifact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag">RPT-OBS-214</span></td>
+              <td>Observer Research</td>
+              <td>Behaviour drift under budget cap</td>
+              <td><span class="risk-pill low">LOW</span></td>
+              <td><span class="status-pill success">admitted</span></td>
+              <td>A</td>
+              <td><a href="#" data-safe-report="RPT-OBS-214" data-safe-kind="synthetic JSON report">Open synthetic JSON</a></td>
+            </tr>
+            <tr>
+              <td><span class="tag">RPT-GOV-092</span></td>
+              <td>Governance Control</td>
+              <td>Proposal-to-commit mismatch classing</td>
+              <td><span class="risk-pill">HIGH</span></td>
+              <td><span class="status-pill terminated">blocked</span></td>
+              <td>A</td>
+              <td><a href="#" data-safe-report="RPT-GOV-092" data-safe-kind="synthetic Markdown report">Open synthetic Markdown</a></td>
+            </tr>
+            <tr>
+              <td><span class="tag">RPT-EXM-041</span></td>
+              <td>Model Exams</td>
+              <td>Instruction safety and policy grounding</td>
+              <td><span class="risk-pill low">LOW</span></td>
+              <td><span class="status-pill success">admitted</span></td>
+              <td>A-</td>
+              <td><a href="model-exams.html">Open exam dashboard</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card" id="rd-lab">
+        <h3 style="margin-top:0;">Research Method Note</h3>
+        <p class="muted" style="margin:0;">
+          This demo surface reflects a research-first program where non-neural methods are used to teach Elora how to detect AI behaviours,
+          map them to policy controls, and improve commit-boundary governance decisions while exploring additional runtime skills beyond
+          typical inference control-plane expectations.
+        </p>
+      </section>
+
+      <section class="card" id="rd-operator">
+        <h3 style="margin-top:0;">Disclosure</h3>
+        <p class="muted" style="margin:0;">
+          All report IDs, metrics, and artifacts on this page are synthetic examples created for safe demonstration and UI validation.
+        </p>
+      </section>
+
+      <section class="card" id="rd-settings">
+        <h3 style="margin-top:0;">Next Step</h3>
+        <p class="muted" style="margin:0;">Open <a href="model-exams.html">Model Exams</a> to review exam set results and safe report extracts.</p>
+      </section>
+    </main>
+  </div>
+
+  <div class="demo-modal-backdrop" id="safe-report-modal" aria-hidden="true">
+    <div class="demo-modal" role="dialog" aria-modal="true" aria-label="Safe report preview">
+      <div class="demo-modal-head">
+        <h3 data-modal-title>Safe Report Preview</h3>
+        <button type="button" data-modal-close>Close</button>
+      </div>
+      <div class="demo-modal-body" data-modal-body></div>
+      <div class="demo-modal-body">
+        <button type="button" data-modal-dismiss>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="research-demo.js"></script>
+  <script defer src="../analytics-consent.js"></script>
+</body>
+</html>

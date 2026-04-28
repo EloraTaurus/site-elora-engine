@@ -49,48 +49,55 @@
     {
       title: '',
       items: [
-        { label: 'Overview', href: 'governance-replay.html', key: 'dashboard', accent: '#5fa8ff' },
+        { label: 'Overview', href: 'demo.html', key: 'dashboard', accent: '#5fa8ff' },
         {
-          label: 'Dashboards',
-          href: 'governance-replay.html',
-          key: 'dashboards_hub',
-          accent: '#4f8cff',
+          label: 'Engine Health',
+          href: 'replay-reviewer.html#rr-command',
+          key: 'engine_state',
+          accent: '#50d6ff',
           children: [
-            ['Dashboard Hub', 'governance-replay.html', 'dashboards_hub'],
-            ['Operational Health', 'governance-replay.html#kpi-summary', 'dashboards_operational_health'],
-            ['Queue & Load', 'governance-replay.html#jobs-table', 'dashboards_queue_load'],
-            ['Service Dependencies', 'governance-replay.html#dashboard-explainer', 'dashboards_service_dependencies'],
-            ['Runtime Snapshot', 'governance-replay.html#jobs-table', 'dashboards_runtime_snapshot']
-          ]
-        },
-        {
-          label: 'Observability',
-          href: 'replay-reviewer.html',
-          key: 'monitoring',
-          accent: '#f4c76a',
-          children: [
+            ['Overview', 'replay-reviewer.html#rr-command', 'engine_state'],
+            ['PhyOS Dashboard', 'replay-reviewer.html#rr-summary-grid', 'engine_state_phyos'],
+            ['Elora Echo', 'replay-reviewer.html#rr-trace', 'engine_state_echo'],
+            ['Zombie Watcher', 'replay-reviewer.html#rr-recent-jobs', 'engine_state_zombie_watcher'],
+            ['Adaptive Cache', 'replay-reviewer.html#rr-risk', 'engine_state_adaptive_cache'],
+            ['Execution Monitor', 'replay-reviewer.html#rr-trace', 'observability_execution_monitor'],
+            ['Engine Performance', 'replay-reviewer.html#rr-summary-grid', 'research_engine_performance'],
+            ['Elora Intervention', 'replay-reviewer.html#rr-answer', 'research_intervention'],
             ['Job Timeline', 'replay-reviewer.html#rr-recent-jobs', 'logs'],
-            ['Replay Forensics', 'replay-reviewer.html#rr-command', 'observability_forensics'],
-            ['Audit Events', 'replay-reviewer.html#rr-trace', 'monitoring'],
-            ['Runtime Logs', 'replay-reviewer.html#rr-recent-jobs', 'logs_runtime']
+            ['Replay Forensics', 'replay-reviewer.html#rr-trace', 'observability_forensics'],
+            ['Audit Events', 'replay-reviewer.html#rr-trace', 'monitoring']
           ]
         },
         {
           label: 'Fabric',
-          href: 'replay-reviewer.html',
+          href: 'replay-reviewer.html#rr-recent-jobs',
           key: 'workers',
           accent: '#40d3b5',
           children: [
             ['Worker Hosts', 'replay-reviewer.html#rr-recent-jobs', 'workers_hosts'],
             ['Workers', 'replay-reviewer.html#rr-recent-jobs', 'workers_workers'],
+            ['Autoscale', 'replay-reviewer.html#rr-recent-jobs', 'workers_autoscale'],
             ['Templates', 'replay-reviewer.html#rr-recent-jobs', 'workers_templates'],
             ['Provisioner', 'replay-reviewer.html#rr-recent-jobs', 'workers_provisioner'],
             ['Nodes', 'replay-reviewer.html#rr-recent-jobs', 'nodes']
           ]
         },
         {
+          label: 'Elora CORE',
+          href: 'replay-reviewer.html#rr-command',
+          key: 'elora_core',
+          accent: '#ffb454',
+          children: [
+            ['Overview', 'replay-reviewer.html#rr-command', 'elora_core'],
+            ['Machine Learning', 'replay-reviewer.html#rr-risk', 'elora_core_ml'],
+            ['Buckets', 'replay-reviewer.html#rr-recent-jobs', 'elora_core_buckets'],
+            ['Models', 'replay-reviewer.html#rr-inputs', 'elora_core_models']
+          ]
+        },
+        {
           label: 'Governance',
-          href: 'replay-reviewer.html',
+          href: 'governance-replay.html',
           key: 'governance_dashboard',
           accent: '#ff8a65',
           children: [
@@ -98,8 +105,12 @@
             ['Policy & Enforcement', 'replay-reviewer.html#rr-command', 'governance_policy'],
             ['Decision Classes', 'replay-reviewer.html#rr-trace', 'governance_classes'],
             ['Justification & Confidence', 'replay-reviewer.html#rr-answer', 'governance_justification'],
+            ['Replay Dashboard (Beta)', 'governance-replay.html', 'governance_replay_v2_dashboard'],
+            ['Replay Investigation (Beta)', 'replay-reviewer.html', 'governance_replay_v2'],
             ['Replay Review', 'replay-reviewer.html', 'governance_replay'],
+            ['AI Report (Alpha)', 'replay-reviewer.html#rr-summary-grid', 'governance_ai_report'],
             ['Drift & Risk', 'replay-reviewer.html#rr-risk', 'governance_drift'],
+            ['Approval Queue', 'replay-reviewer.html#rr-recent-jobs', 'governance_approvals'],
             ['Human Escalations', 'replay-reviewer.html#rr-recent-jobs', 'governance_escalations'],
             ['Security Posture', 'replay-reviewer.html#rr-command', 'governance_posture'],
             ['Job Buckets', 'replay-reviewer.html#rr-recent-jobs', 'workers_buckets']
@@ -107,22 +118,88 @@
         },
         {
           label: 'AI Runtime',
-          href: 'replay-reviewer.html',
+          href: 'replay-reviewer.html#rr-command',
           key: 'runtime_dashboard',
           accent: '#9d85ff',
           children: [
-            ['Runtime Dashboard', 'replay-reviewer.html#rr-command', 'runtime_dashboard']
+            ['Runtime Dashboard', 'replay-reviewer.html#rr-command', 'runtime_dashboard'],
+            ['Models', 'replay-reviewer.html#rr-inputs', 'models'],
+            ['Pipelines', 'replay-reviewer.html#rr-actions', 'workbooks'],
+            ['Knowledge', 'replay-reviewer.html#rr-answer', 'knowledge'],
+            ['Memory', 'replay-reviewer.html#rr-summary-grid', 'memory'],
+            ['Behavior', 'replay-reviewer.html#rr-trace', 'behavior'],
+            ['Inflight (Experimental)', 'replay-reviewer.html#rr-recent-jobs', 'runtime_inflight'],
+            ['Plugin', 'replay-reviewer.html#rr-command', 'plugin']
+          ]
+        },
+        {
+          label: 'Tapes',
+          href: 'replay-reviewer.html#rr-trace',
+          key: 'runtime_tapes',
+          accent: '#70b8ff',
+          children: [['Tape Library', 'replay-reviewer.html#rr-trace', 'runtime_tapes']]
+        },
+        {
+          label: 'Research',
+          href: 'replay-reviewer.html#rr-summary-grid',
+          key: 'research_dashboard',
+          accent: '#8ee08e',
+          children: [
+            ['Research Dashboard', 'research-dashboard.html', 'research_dashboard'],
+            ['Observer Research', 'replay-reviewer.html#rr-summary-grid', 'research_observer'],
+            ['Echo Frequency Learning', 'replay-reviewer.html#rr-summary-grid', 'research_echo_frequency'],
+            ['Model Exams', 'model-exams.html', 'research_model_exams'],
+            ['Pattern Analysis', 'replay-reviewer.html#rr-summary-grid', 'research_pattern_analysis'],
+            ['Arle Analysis', 'replay-reviewer.html#rr-summary-grid', 'research_arle_analysis'],
+            ['Research Index', 'replay-reviewer.html#rr-summary-grid', 'research_index'],
+            ['AI Reports', 'replay-reviewer.html#rr-summary-grid', 'research_ai_reports'],
+            ['Research Documents', 'replay-reviewer.html#rr-summary-grid', 'research_documents'],
+            ['Batch Export', 'replay-reviewer.html#rr-summary-grid', 'research_batch_export']
           ]
         },
         {
           label: 'Lab',
-          href: 'replay-reviewer.html',
+          href: 'replay-reviewer.html#rr-actions',
           key: 'lab_dashboard',
           accent: '#f7b267',
           children: [
-            ['Dashboard', 'replay-reviewer.html#rr-command', 'lab_dashboard']
+            ['Dashboard', 'replay-reviewer.html#rr-actions', 'lab_dashboard'],
+            ['Runtime Tests', 'replay-reviewer.html#rr-recent-jobs', 'lab_tests'],
+            ['Commit Harness', 'replay-reviewer.html#rr-trace', 'lab_commit_harness'],
+            ['Tape Runtime Harness', 'replay-reviewer.html#rr-trace', 'lab_tape_runtime_harness'],
+            ['Agent Simulator', 'replay-reviewer.html#rr-command', 'lab_agent_simulator'],
+            ['P-State Harness', 'replay-reviewer.html#rr-inputs', 'lab_p_state_harness'],
+            ['Temperature Harness', 'replay-reviewer.html#rr-inputs', 'lab_temperature_harness'],
+            ['Inflight Tuning Harness', 'replay-reviewer.html#rr-actions', 'lab_inflight_tuning_harness'],
+            ['Approval Harness', 'replay-reviewer.html#rr-trace', 'lab_approval_harness'],
+            ['Policy Matrix', 'replay-reviewer.html#rr-summary-grid', 'lab_policy_matrix'],
+            ['Autoscale', 'replay-reviewer.html#rr-recent-jobs', 'lab_autoscale'],
+            ['Benchmarks', 'replay-reviewer.html#rr-summary-grid', 'lab_benchmarks']
           ]
-        }
+        },
+        {
+          label: 'Operators',
+          href: 'replay-reviewer.html#rr-command',
+          key: 'operators',
+          accent: '#87c3ff',
+          children: [
+            ['Users', 'replay-reviewer.html#rr-command', 'operators_users'],
+            ['Roles', 'replay-reviewer.html#rr-command', 'operators_roles'],
+            ['My Profile', 'replay-reviewer.html#rr-command', 'operators_profile']
+          ]
+        },
+        {
+          label: 'Settings',
+          href: 'replay-reviewer.html#rr-command',
+          key: 'settings',
+          accent: '#8ea8ff',
+          children: [
+            ['General', 'replay-reviewer.html#rr-command', 'settings_general'],
+            ['Alerts', 'replay-reviewer.html#rr-command', 'settings_alerts'],
+            ['Visuals', 'replay-reviewer.html#rr-command', 'settings_visuals']
+          ]
+        },
+        { label: 'Operator Handbook', href: 'replay-reviewer.html#rr-command', key: 'docs', accent: '#95b5d9' }
       ]
     }
   ];
@@ -142,12 +219,17 @@
   function iconFor(key) {
     const icons = {
       dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span>',
-      dashboards_hub: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span>',
-      monitoring: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 13h4l2-5 4 10 2-5h6v2h-5l-3 7-4-10-1 3H3z"/></svg></span>',
+      engine_state: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 12h3l2-5 4 10 2-4h7v2h-6l-3 6-4-10-1 3H3z"/></svg></span>',
       workers: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7zM11 7h2v2h-2zM11 15h2v2h-2z"/></svg></span>',
       governance_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 5 3.5 8.5 7 9 3.5-.5 7-4 7-9V6zM11 8h2v5h-2zM11 15h2v2h-2z"/></svg></span>',
       runtime_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3v.5A2.5 2.5 0 0 0 6 12a3 3 0 0 0 3 3h1v4H8v1h8v-1h-2v-4h1a3 3 0 0 0 3-3 2.5 2.5 0 0 0 0-4.5V7a3 3 0 0 0-3-3 3.4 3.4 0 0 0-3 1.7A3.4 3.4 0 0 0 9 4z"/></svg></span>',
-      lab_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 2h6v2l-1 1v4.4l4.9 8.4A3 3 0 0 1 16.3 22H7.7a3 3 0 0 1-2.6-4.2L10 9.4V5L9 4z"/></svg></span>'
+      elora_core: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v10l8 4 8-4V7zm0 2.2L17.8 8 12 10.8 6.2 8zM6 9.6l5 2.6v7l-5-2.5zm12 0v7.7l-5 2.5v-7z"/></svg></span>',
+      runtime_tapes: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zm2 2v8h12V8zm2 1h2v2H8zm0 4h2v2H8zm6-4h2v2h-2zm0 4h2v2h-2z"/></svg></span>',
+      research_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 5.3 14l4.9 4.9 1.4-1.4-4.9-4.9A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm1 2H9v4H5v2h6z"/></svg></span>',
+      lab_dashboard: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M9 2h6v2l-1 1v4.4l4.9 8.4A3 3 0 0 1 16.3 22H7.7a3 3 0 0 1-2.6-4.2L10 9.4V5L9 4z"/></svg></span>',
+      operators: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-3.9-4.9A4 4 0 0 0 16 11zM8 12a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm0 2c-2.7 0-5 1.5-5 3.3V20h10v-2.7C13 15.5 10.7 14 8 14zm8 0c-.7 0-1.4.1-2 .3 1.2.8 2 1.9 2 3.2V20h5v-2.2c0-2.1-2.2-3.8-5-3.8z"/></svg></span>',
+      settings: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="m19.4 13 1.3-1-1.3-1a7.5 7.5 0 0 0-.3-1.2l.8-1.4-1.6-1.6-1.4.8a7.5 7.5 0 0 0-1.2-.3l-1-1.3-1 1.3a7.5 7.5 0 0 0-1.2.3l-1.4-.8-1.6 1.6.8 1.4a7.5 7.5 0 0 0-.3 1.2l-1.3 1 1.3 1a7.5 7.5 0 0 0 .3 1.2l-.8 1.4 1.6 1.6 1.4-.8a7.5 7.5 0 0 0 1.2.3l1 1.3 1-1.3a7.5 7.5 0 0 0 1.2-.3l1.4.8 1.6-1.6-.8-1.4c.1-.4.2-.8.3-1.2zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></span>',
+      docs: '<span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 11h8v1.5H8zm0 3h8v1.5H8zm0 3h6v1.5H8z"/></svg></span>'
     };
     return icons[key] || icons.dashboard;
   }
@@ -196,7 +278,7 @@
     const panel = document.createElement('aside');
     panel.className = 'tour-panel';
     panel.innerHTML = [
-      '<div class="tour-kicker">Governance Replay Tour - Stage 2</div>',
+      '<div class="tour-kicker">Governance Replay Tour Panel - Stage 2</div>',
       '<div class="tour-body">',
       '<div class="tour-presenter"><img src="../elora-guide.png" alt="Elora guide" onerror="if(!this.dataset.fallback1){this.dataset.fallback1=1;this.src=\'elora-guide.png\';return;}this.onerror=null;this.src=\'../elora.png\';" /></div>',
       '<div class="tour-message">',

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Elora Engine - Model Exams (Demo)</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="elora-ga-id" content="G-33RBH775TR" />
+</head>
+<body data-admin-active="research_model_exams">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-avatar"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='elora-avatar.svg';" /></div>
+        <div>
+          <div><strong>Elora Engine</strong></div>
+          <div style="color:var(--muted); font-size:12px;">Admin</div>
+        </div>
+      </div>
+      <nav class="nav"></nav>
+      <div style="margin-top:18px; font-size:12px; color:var(--muted);">Model Exams: synthetic / safe reporting examples</div>
+    </aside>
+
+    <main class="content">
+      <div class="ops-rail">
+        <div><div class="ops-label">Exam Pack</div><div class="ops-value">EXAM-SET-APR-2026</div></div>
+        <div><div class="ops-label">Scope</div><div class="ops-value">Policy-grounded behaviour checks</div></div>
+        <div><div class="ops-label">Models Compared</div><div class="ops-value">smollm2 / smollm3 / candidate-x</div></div>
+        <div><div class="ops-label">Evidence Mode</div><div class="ops-value">Deterministic replay enabled</div></div>
+        <div><div class="ops-label">Data Class</div><div class="ops-value">Synthetic only</div></div>
+      </div>
+
+      <section class="card">
+        <h2 style="margin-top:0;">Model Exams</h2>
+        <p class="muted" style="margin:0;">
+          Exam results below demonstrate how Elora evaluates behaviour, policy admissibility, and replay quality using non-neural scoring and
+          deterministic evidence capture. These are safe examples for product demos and reporting walkthroughs.
+        </p>
+      </section>
+
+      <section class="kpi-grid">
+        <article class="kpi-card"><h3>Total Exam Cases</h3><strong>120</strong></article>
+        <article class="kpi-card"><h3>Policy Pass Rate</h3><strong>93.3%</strong></article>
+        <article class="kpi-card"><h3>Replay Fidelity</h3><strong>100%</strong></article>
+        <article class="kpi-card"><h3>Escalated Cases</h3><strong>8</strong></article>
+      </section>
+
+      <section class="jobs-card card">
+        <h3 style="margin-top:0;">Exam Run Summary</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Run ID</th>
+              <th>Model</th>
+              <th>Case Family</th>
+              <th>Behaviour Score</th>
+              <th>Policy Result</th>
+              <th>Replay Result</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag">EX-001</span></td>
+              <td>elora:smollm2</td>
+              <td>Instruction safety</td>
+              <td>0.91</td>
+              <td><span class="status-pill success">pass</span></td>
+              <td><span class="status-pill success">match</span></td>
+              <td><span class="risk-pill low">LOW</span></td>
+            </tr>
+            <tr>
+              <td><span class="tag">EX-014</span></td>
+              <td>elora:smollm3</td>
+              <td>Constrained compute drift</td>
+              <td>0.74</td>
+              <td><span class="status-pill terminated">blocked</span></td>
+              <td><span class="status-pill success">match</span></td>
+              <td><span class="risk-pill">HIGH</span></td>
+            </tr>
+            <tr>
+              <td><span class="tag">EX-033</span></td>
+              <td>candidate-x</td>
+              <td>Evidence completeness</td>
+              <td>0.88</td>
+              <td><span class="status-pill success">pass</span></td>
+              <td><span class="status-pill success">match</span></td>
+              <td><span class="risk-pill low">LOW</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="signal-grid">
+        <article class="signal-card">
+          <h3>Safe Report Example A</h3>
+          <p><strong>Case:</strong> Instruction safety boundary<br /><strong>Finding:</strong> Response remained policy-grounded despite adversarial framing.<br /><strong>Outcome:</strong> Admitted with A-grade evidence packet.</p>
+          <p><a href="#" data-safe-report="EX-001" data-safe-kind="safe exam finding">Preview safe report</a></p>
+        </article>
+        <article class="signal-card">
+          <h3>Safe Report Example B</h3>
+          <p><strong>Case:</strong> Drift under capped resources<br /><strong>Finding:</strong> Confidence collapse detected before commit stage.<br /><strong>Outcome:</strong> Blocked at commit with replay-confirmed justification.</p>
+          <p><a href="#" data-safe-report="EX-014" data-safe-kind="safe governance block report">Preview safe report</a></p>
+        </article>
+        <article class="signal-card">
+          <h3>Safe Report Example C</h3>
+          <p><strong>Case:</strong> Additional skill research path<br /><strong>Finding:</strong> Non-neural routing improved behaviour stability signal quality.<br /><strong>Outcome:</strong> Candidate accepted for next research cycle.</p>
+          <p><a href="#" data-safe-report="EX-033" data-safe-kind="safe capability research report">Preview safe report</a></p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h3 style="margin-top:0;">Export Samples (Safe)</h3>
+        <div class="chips">
+          <span class="chip">model_exam_summary_safe.md</span>
+          <span class="chip">model_exam_trace_safe.json</span>
+          <span class="chip">model_exam_findings_safe.csv</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="demo-modal-backdrop" id="safe-report-modal" aria-hidden="true">
+    <div class="demo-modal" role="dialog" aria-modal="true" aria-label="Safe report preview">
+      <div class="demo-modal-head">
+        <h3 data-modal-title>Safe Report Preview</h3>
+        <button type="button" data-modal-close>Close</button>
+      </div>
+      <div class="demo-modal-body" data-modal-body></div>
+      <div class="demo-modal-body">
+        <button type="button" data-modal-dismiss>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="research-demo.js"></script>
+  <script defer src="../analytics-consent.js"></script>
+</body>
+</html>
