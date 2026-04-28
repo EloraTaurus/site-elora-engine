@@ -112,17 +112,17 @@
   function buildUI(pref) {
     var style = document.createElement('style');
     style.textContent = [
-      '.cookie-fab{position:fixed;left:16px;bottom:16px;z-index:1000;width:44px;height:44px;border-radius:999px;border:1px solid rgba(109,173,255,.55);background:rgba(10,28,52,.92);color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35);font-size:20px;line-height:1;padding:0;}',
-      '.cookie-panel{position:fixed;left:16px;bottom:66px;z-index:1001;width:min(340px,calc(100vw - 24px));border:1px solid rgba(109,173,255,.45);border-radius:12px;background:rgba(7,21,40,.97);box-shadow:0 20px 45px rgba(0,0,0,.45);padding:12px;display:none;color:#d7e8ff;font-family:inherit;}',
+      '.cookie-fab{position:fixed;left:16px;bottom:16px;z-index:1000;width:44px;height:44px;border-radius:999px;border:1px solid var(--cookie-fab-border, rgba(130,181,238,.72));background:var(--cookie-fab-bg, rgba(22,56,96,.96));color:#f8fbff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 26px rgba(18,44,74,.28);font-size:20px;line-height:1;padding:0;}',
+      '.cookie-panel{position:fixed;left:16px;bottom:66px;z-index:1001;width:min(340px,calc(100vw - 24px));border:1px solid var(--cookie-panel-border, rgba(164,193,228,.82));border-radius:12px;background:var(--cookie-panel-bg, rgba(241,247,255,.98));box-shadow:0 18px 38px rgba(32,69,106,.20);padding:12px;display:none;color:var(--cookie-panel-text, #153a62);font-family:inherit;}',
       '.cookie-panel.open{display:block;}',
       '.cookie-title{font-size:15px;font-weight:700;margin:0 0 6px 0;}',
-      '.cookie-copy{font-size:13px;line-height:1.45;color:#b9d1f0;margin:0 0 10px 0;}',
-      '.cookie-status{font-size:12px;color:#9fbde3;margin-bottom:8px;}',
-      '.cookie-link{font-size:12px;color:#9fd3ff;text-decoration:underline;display:inline-block;margin-bottom:8px;}',
+      '.cookie-copy{font-size:13px;line-height:1.45;color:var(--cookie-panel-muted, #3a5f87);margin:0 0 10px 0;}',
+      '.cookie-status{font-size:12px;color:var(--cookie-panel-muted, #3a5f87);margin-bottom:8px;}',
+      '.cookie-link{font-size:12px;color:var(--brand-link, #2f6eb4);text-decoration:underline;display:inline-block;margin-bottom:8px;}',
       '.cookie-actions{display:flex;gap:8px;flex-wrap:wrap;}',
-      '.cookie-btn{border:1px solid rgba(109,173,255,.45);background:rgba(14,36,66,.9);color:#d7e8ff;border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer;}',
-      '.cookie-btn.primary{border-color:rgba(52,211,153,.7);color:#bbf7d0;}',
-      '.cookie-btn.deny{border-color:rgba(248,113,113,.7);color:#fecaca;}',
+      '.cookie-btn{border:1px solid var(--chip-border, #b7cde8);background:#f5f9ff;color:var(--chip-text, #17395f);border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer;}',
+      '.cookie-btn.primary{border-color:var(--elora-cobalt, #3f6fbb);background:linear-gradient(180deg,#4a7ec4,#2f66a9);color:#f4f9ff;}',
+      '.cookie-btn.deny{border-color:#c4d4e9;background:#edf3fb;color:#37587f;}',
       '@media (max-width:760px){.cookie-fab{left:10px;bottom:10px;width:40px;height:40px;font-size:18px}.cookie-panel{left:10px;bottom:56px;width:calc(100vw - 20px)}}'
     ].join('');
     document.head.appendChild(style);

@@ -3,24 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Elora Engine is an operator-governed AI runtime with a deterministic commit boundary and governance replay." />
+  <meta name="description" content="Elora is a research-first AI governance runtime using non-neural machine learning to detect AI behaviours and govern execution at a deterministic commit boundary." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://elorataurus.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Elora Engine - Operator-governed AI runtime" />
-  <meta property="og:description" content="Authenticated ingress, proposal-first inference, deterministic commit authorization, and governance replay." />
+  <meta property="og:description" content="Research-first AI governance runtime: non-neural machine learning for behaviour detection, proposal-first inference, deterministic commit authorization, and governance replay." />
   <meta property="og:url" content="https://elorataurus.com/" />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Elora Engine - Operator-governed AI runtime" />
-  <meta name="twitter:description" content="Architectural preface to the Elora governance control-plane model." />
+  <meta name="twitter:description" content="Research-first governance control plane using non-neural machine learning to detect and govern AI behaviour." />
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
   <title>Elora Engine - Operator-governed AI runtime</title>
   <link rel="icon" href="elora.png" />
   <link rel="stylesheet" href="style.css" />
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
-<body>
+<body class="home-page">
+  <div id="welcome-overlay" class="welcome-overlay" aria-live="polite">
+    <div class="welcome-card">
+      <div class="welcome-spinner" aria-hidden="true"></div>
+      <h2>Welcome to The Elora Taurus Website</h2>
+      <p>Loading research architecture surfaces...</p>
+    </div>
+  </div>
   <section class="top-stage" id="home">
     <header class="topbar">
       <div class="topbar-inner">
@@ -43,156 +50,101 @@
       </div>
     </header>
     <div class="shell">
-      <section class="hero hero-guide-curve">
+      <section class="hero hero-guide-curve hero-slider-shell">
         <div class="hero-copy">
-          <h1>Elora Engine</h1>
-          <p>Operator-governed AI runtime.</p>
-          <p>Elora is a UK-based independent project structured around a governance control plane. Inference generates proposals; authorization occurs at a deterministic commit boundary before delivery or execution.</p>
+          <div class="hero-slider" data-hero-slider>
+            <article class="hero-slide is-active" data-slide>
+              <h1 class="hero-title-silver">Research-first AI governance runtime built on non-neural machine learning.</h1>
+              <p>Elora is a custom Python research platform that uses non-neural machine learning to detect AI behaviour patterns and govern execution through a deterministic proposal-to-commit boundary.</p>
+            </article>
+            <article class="hero-slide" data-slide>
+              <h1 class="hero-title-silver">Behaviour detection feeds evidence-first governance decisions.</h1>
+              <p>Detected behaviour signals are scored, linked to policy controls, and captured as structured evidence so allow or block outcomes can be replayed deterministically without regenerating model output.</p>
+            </article>
+            <article class="hero-slide" data-slide>
+              <h1 class="hero-title-silver">Researching AI behaviour under constrained compute conditions.</h1>
+              <p>Current R&D measures instability, drift, and token-efficiency behaviour in resource-limited runtime settings, then applies bounded intervention methods before commit authorization.</p>
+            </article>
+            <article class="hero-slide" data-slide>
+              <h1 class="hero-title-silver">Extending Elora beyond typical inference control-plane skills.</h1>
+              <p>Alongside governance control-plane research, Elora explores how non-neural methods can teach additional operational skills not typically built into AI inference engines, while remaining policy-bounded and auditable.</p>
+            </article>
+            <div class="hero-slider-controls">
+              <button type="button" class="hero-slider-btn" data-slide-prev aria-label="Previous slide">Prev</button>
+              <div class="hero-slider-dots" data-slide-dots aria-label="Hero slide navigation"></div>
+              <button type="button" class="hero-slider-btn" data-slide-next aria-label="Next slide">Next</button>
+            </div>
+          </div>
           <div class="hero-capabilities" aria-label="Core engine capabilities">
-            <div class="hero-capabilities-head">Engine Capabilities</div>
+            <div class="hero-capabilities-head">Research Capabilities</div>
             <div class="chips">
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Proposal → Commit Execution</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Deterministic Decision Boundary</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Replayable Governance Evidence</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Policy-Bound Admissibility</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Worker / Tape Runtime Model</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Tamper-Evident Audit Trail</span>
+              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Non-Neural AI Behaviour Detection</span>
+              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Proposal-to-Commit Governance Control</span>
+              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Deterministic Replay Evidence</span>
+              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Policy and Admissibility Evaluation</span>
+              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Constrained-Compute Behaviour Research</span>
+              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Additional Skill Research Beyond Standard Control Planes</span>
             </div>
           </div>
           <div class="cta-row">
-            <a class="btn" href="overview/">Overview</a>
-            <a class="btn alt" href="architecture/">Architecture</a>
-            <a class="btn mission" href="docs/">Documentation</a>
-            <a class="btn alt" href="demo/">Replay Demo</a>
-            <a class="btn alt" href="https://www.linkedin.com/company/elorataurus/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn" href="overview/">Platform Overview</a>
+            <a class="btn alt" href="architecture/">Governance Architecture</a>
+            <a class="btn mission" href="docs/">Technical Documentation</a>
+            <a class="btn alt" href="demo/">Replay Walkthrough</a>
+            <a class="btn alt" href="research/">Research Program</a>
           </div>
         </div>
         <aside class="hero-guide-standalone" aria-label="Elora guide">
           <img class="hero-guide-image" src="elora-guide.png" alt="Elora guide" onerror="this.onerror=null;this.src='elora.png';" />
         </aside>
       </section>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-row">
+            <strong>The Elora Taurus Project</strong>
+            <nav class="footer-links">
+              <a href="overview/">Overview</a>
+              <a href="architecture/">Architecture</a>
+              <a href="demo/">Replay Demo</a>
+              <a href="docs/">Documentation</a>
+              <a href="research/">Research</a>
+              <a href="changelog/">Changelog</a>
+              <a href="cookie-policy/">Cookie Policy</a>
+            </nav>
+          </div>
+          <div class="footer-note">This page is a front-door architectural preface. Detailed system explanation is in Overview, Architecture, and Documentation.</div>
+          <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
+        </div>
+      </footer>
     </div>
   </section>
-
-  <section class="section surface-light">
-    <div class="section-inner">
-      <h2>System Architecture</h2>
-      <p class="section-intro">Core flow from client request to governed execution outcome. Worker Fabric covers external action execution paths; direct response paths can complete without worker dispatch.</p>
-      <div class="card architecture-visual">
-        <img
-          src="elora-architecture.png"
-          alt="Elora system architecture flow from clients and plugins to engine control plane, commit validation, worker fabric, and external systems."
-          class="architecture-image"
-          onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='architecture-flow.png';}else{this.closest('.architecture-visual').classList.add('img-missing');}"
-        />
-        <pre class="architecture-flow architecture-flow-fallback">Clients / Plugins
-        |
-        v
-Ingress / Edge Gateway
-(Authenticated Access Points)
-        |
-        v
-
-========================================
-CONTROL PLANE
-========================================
-
-Elora Engine
-(Control Plane Authority)
-        |
-        v
-Policy Gate
-(Guardrails & Rules)
-        |
-        v
-Inference
-(Proposal Generation)
-        |
-        v
-Justification
-(Confidence / Rationale Check)
-
------------- COMMIT BOUNDARY ------------
-
-Commit Validation
-(Policy + Authority Admissibility)
-        |
-     +--+---+
-     |      |
-     v      v
-    DENY   ALLOW
-Terminate Execute
-
----------- EXECUTION BOUNDARY ----------
-
-Worker Fabric
-(WorkerHosts / Agents)
-
-----------------------------------------
-
-GOVERNANCE REPLAY
-(Evidence / Replay / Recompute)
-
-Evidence Capture
-        |
-Deterministic Replay
-        |
-Decision Recompute
-
-Governance evidence is captured on touch, not after, so every job is evidenced regardless of which point it fails.</pre>
-      </div>
-    </div>
-  </section>
-
-  <section class="section surface-deep">
-    <div class="section-inner">
-      <h2>What Makes The System Different</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Authenticated ingress first</h3>
-          <p>Caddy provides TLS edge routing and controlled ingress paths. Request authorization is enforced by the engine using bearer API key plus signed request validation.</p>
-        </div>
-        <div class="card">
-          <h3>Inference produces proposals</h3>
-          <p>Model outputs are treated as candidate decisions, not authority.</p>
-        </div>
-        <div class="card">
-          <h3>Commit enforces authorization</h3>
-          <p>Admissibility is evaluated against captured state at the commit boundary.</p>
-        </div>
-        <div class="card">
-          <h3>Scoped job tokens after authorization</h3>
-          <p>After an authorized start request, the engine issues short-lived job identifiers and tokens for status polling. These are scoped runtime handles, not edge-auth substitutes.</p>
-        </div>
-        <div class="card">
-          <h3>Governance replay explains decisions</h3>
-          <p>Operator surfaces explain why an outcome was allowed or blocked.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-row">
-        <strong>The Elora Taurus Project</strong>
-        <nav class="footer-links">
-          <a href="overview/">Overview</a>
-          <a href="architecture/">Architecture</a>
-          <a href="demo/">Replay Demo</a>
-          <a href="docs/">Documentation</a>
-          <a href="research/">Research</a>
-          <a href="changelog/">Changelog</a>
-        
-          <a href="cookie-policy/">Cookie Policy</a></nav>
-      </div>
-      <div class="footer-note">This page is a front-door architectural preface. Detailed system explanation is in Overview, Architecture, and Documentation.</div>
-      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
-    </div>
-  </footer>
 
   <script>
     (function () {
+      const overlay = document.getElementById('welcome-overlay');
+      const key = 'elora_site_welcome_seen_v1';
+      const hideOverlay = function () {
+        if (!overlay) return;
+        overlay.classList.add('hidden');
+        window.setTimeout(function () {
+          if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+        }, 420);
+      };
+
+      try {
+        const seen = localStorage.getItem(key);
+        if (seen === '1') {
+          hideOverlay();
+        } else {
+          window.setTimeout(function () {
+            try { localStorage.setItem(key, '1'); } catch (e) {}
+            hideOverlay();
+          }, 1750);
+        }
+      } catch (e) {
+        window.setTimeout(hideOverlay, 1750);
+      }
+
       const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
       const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
 
@@ -218,6 +170,72 @@ Governance evidence is captured on touch, not after, so every job is evidenced r
           navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
         }
       });
+
+      const slider = document.querySelector('[data-hero-slider]');
+      if (slider) {
+        const slides = Array.from(slider.querySelectorAll('[data-slide]'));
+        const dotsWrap = slider.querySelector('[data-slide-dots]');
+        const prevBtn = slider.querySelector('[data-slide-prev]');
+        const nextBtn = slider.querySelector('[data-slide-next]');
+        let idx = 0;
+        let timer = null;
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const draw = function () {
+          slides.forEach(function (el, i) {
+            const active = i === idx;
+            el.classList.toggle('is-active', active);
+            el.setAttribute('aria-hidden', active ? 'false' : 'true');
+          });
+          if (dotsWrap) {
+            Array.from(dotsWrap.querySelectorAll('button')).forEach(function (dot, i) {
+              dot.classList.toggle('is-active', i === idx);
+              dot.setAttribute('aria-pressed', i === idx ? 'true' : 'false');
+            });
+          }
+        };
+
+        const go = function (next) {
+          idx = (next + slides.length) % slides.length;
+          draw();
+        };
+
+        if (dotsWrap) {
+          dotsWrap.innerHTML = '';
+          slides.forEach(function (_, i) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'hero-slider-dot' + (i === 0 ? ' is-active' : '');
+            dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            dot.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+            dot.addEventListener('click', function () {
+              go(i);
+              restartAuto();
+            });
+            dotsWrap.appendChild(dot);
+          });
+        }
+
+        const stopAuto = function () {
+          if (timer) window.clearInterval(timer);
+          timer = null;
+        };
+        const startAuto = function () {
+          if (prefersReduced) return;
+          timer = window.setInterval(function () { go(idx + 1); }, 6200);
+        };
+        const restartAuto = function () {
+          stopAuto();
+          startAuto();
+        };
+
+        if (prevBtn) prevBtn.addEventListener('click', function () { go(idx - 1); restartAuto(); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { go(idx + 1); restartAuto(); });
+        slider.addEventListener('mouseenter', stopAuto);
+        slider.addEventListener('mouseleave', startAuto);
+        draw();
+        startAuto();
+      }
     })();
   </script>
   <script defer src="analytics-consent.js"></script>
