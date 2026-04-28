@@ -184,9 +184,10 @@ a:hover { color: var(--brand-link-hover); }
 
 .topbar.is-scrolled {
   border-bottom-color: var(--topbar-border);
-  backdrop-filter: blur(8px);
-  background: rgba(245, 250, 255, 0.86);
-  box-shadow: 0 8px 20px rgba(36, 62, 102, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(247, 251, 255, 0.97);
+  box-shadow: 0 10px 24px rgba(36, 62, 102, 0.12);
 }
 
 /* Final polish pass: tighter visual consistency */
@@ -244,6 +245,14 @@ a:hover { color: var(--brand-link-hover); }
   border-bottom: 0;
   backdrop-filter: none;
   background: transparent;
+}
+
+.home-page .topbar.is-scrolled {
+  border-bottom: 1px solid var(--topbar-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(247, 251, 255, 0.97);
+  box-shadow: 0 10px 24px rgba(36, 62, 102, 0.12);
 }
 
 .topbar-inner {
