@@ -1025,3 +1025,85 @@ button:hover { border-color: #55b8ff; background: #1a3f67; }
   font-size: 13px;
 }
 .tour-locked .nav a { pointer-events: none; opacity: 0.65; }
+
+/* Light theme alignment for demo admin surfaces */
+:root {
+  --bg: #f7f9fd;
+  --bg-2: #edf2fb;
+  --panel: #ffffff;
+  --panel-strong: #f3f8ff;
+  --text: #2f4f79;
+  --muted: #627fa5;
+  --accent: #3f6fbb;
+}
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(1300px 900px at 80% -10%, rgba(124, 205, 234, 0.14), transparent 45%),
+    radial-gradient(900px 700px at 20% 110%, rgba(63, 111, 187, 0.1), transparent 55%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+}
+
+.sidebar {
+  background: #f4f8ff;
+  border-right: 1px solid #c8d9ee;
+}
+
+.content { background: transparent; }
+
+.nav a { color: #4a6e98; }
+.nav a:hover { color: #1f3f68; background: #eaf2ff; border-color: #9fc0e6; }
+.nav a.active {
+  background: #e1ecff;
+  color: #1d3f68;
+  border-color: #7fa7da;
+  box-shadow: inset 3px 0 0 #7a83c8;
+}
+
+.ops-rail,
+.banner,
+.card,
+.kpi,
+.kpi-card,
+.signal-card,
+.jobs-card,
+.rr-command,
+.table,
+.demo-modal,
+.demo-box,
+.demo-timeline li {
+  background: #ffffff;
+  border-color: #c8d9ee;
+  color: #2f4f79;
+}
+
+.demo-modal-head {
+  background: #edf5ff;
+  border-bottom: 1px solid #c8d9ee;
+}
+
+.table th {
+  background: #edf5ff;
+  color: #35597f;
+  border-bottom: 1px solid #c8d9ee;
+}
+
+.table td {
+  color: #2f4f79;
+  border-bottom: 1px solid #d7e3f2;
+}
+
+.table tr:hover td { background: #f6fbff; }
+
+input, textarea, select, .search {
+  background: #ffffff;
+  border-color: #c8d9ee;
+  color: #2f4f79;
+}
+
+button, .nav-toggle, .sidebar-mobile-toggle {
+  background: linear-gradient(180deg, #eaf4ff, #dfeefe);
+  border-color: #8fb7e2;
+  color: #17345c;
+}
