@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How Elora learns: model routing, model profiles, governance adherence scoring, and deterministic learning boundaries." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Elora Taurus Project - Elora Learning System" />
+  <meta property="og:description" content="How Elora learns and how learning remains bounded by governance and commit controls." />
+  <meta property="og:image" content="https://elorataurus.com/social.png" />
+  <title>The Elora Taurus Project - Elora Learning System</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .wiki-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+    .wiki-chip { display:inline-block; margin-right:8px; margin-top:6px; padding:2px 8px; border:1px solid #6ea8df; border-radius:999px; font-size:12px; color:#dbeeff; }
+    .metric-line { font-size:13px; color:#dbeeff; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <section class="top-stage">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project overview">
+          <div class="brand-icon"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='../admin/elora-avatar.svg';"></div>
+          <div><strong>The Elora Taurus Project</strong><small>AI Runtime Systems & Governance Architecture</small></div>
+        </a>
+        <nav class="top-links">
+          <a class="nav-btn" href="../overview/">Overview</a>
+          <a class="nav-btn" href="../architecture/">Architecture</a>
+          <a class="nav-btn" href="../demo/">Replay Demo</a>
+          <a class="nav-btn" href="../docs/">Documentation</a>
+          <a class="nav-btn active" href="../research/">Research</a>
+          <a class="nav-btn" href="../changelog/">Changelog</a>
+        </nav>
+      </div>
+    </header>
+    <div class="shell">
+      <section class="hero about-hero">
+        <div class="about-lead">
+          <h1>Elora Learning System</h1>
+          <p>How Elora learns model behavior, governance adherence, and runtime suitability using deterministic, auditable methods.</p>
+          <div class="cta-row">
+            <a class="btn" href="../research/">Back to Research</a>
+            <a class="btn alt" href="../docs/">Open Documentation</a>
+            <a class="btn mission" href="#model-wiki">Model Wiki</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section surface-light">
+    <div class="section-inner">
+      <p class="section-intro">Elora uses deterministic machine learning methods: Bayesian suitability scoring, case-based reasoning against prior runs, bucketed maturity tracking, and policy-bound routing decisions. Learning improves recommendation quality over time while staying auditable and governed.</p>
+      <h2>What Elora Learns</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Model Suitability</h3>
+          <p>Elora tracks which models perform best for specific task families using bucketed evidence, exam outcomes, and runtime stability signals.</p>
+        </div>
+        <div class="card">
+          <h3>Governance Adherence</h3>
+          <p>Elora scores model adherence to governance controls across guardrail representations (code, markdown, sqlite3) and records confidence by sample depth.</p>
+        </div>
+        <div class="card">
+          <h3>Observer Alignment</h3>
+          <p>Observer outputs are scored for alignment with expected guarded outcomes and policy-control evidence.</p>
+        </div>
+        <div class="card">
+          <h3>Operational Envelope</h3>
+          <p>Elora learns practical stability bands from runtime behavior (latency, drift/collapse indicators, safe context pressure ranges).</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top:20px;">How It Works</h2>
+      <ul>
+        <li>Measure: capture deterministic runtime and research outcomes.</li>
+        <li>Score: convert outcomes into explicit metrics (success, risk, adherence, confidence).</li>
+        <li>Store: update model/profile scoped learning state and evidence buckets.</li>
+        <li>Recommend: use learned evidence to suggest best model per task.</li>
+        <li>Govern: policy layer validates recommendations; commit boundary remains authoritative.</li>
+      </ul>
+
+      <h2 style="margin-top:20px;">Planned Expansion</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Dynamic Observer Questions</h3>
+          <p>Observer prompts will adapt by scenario family and policy-control focus so evaluation quality improves over repeated runs.</p>
+        </div>
+        <div class="card">
+          <h3>Governance Training Tracks</h3>
+          <p>Dedicated scenario packs will compare guardrail methods and score control adherence consistency per model and profile.</p>
+        </div>
+        <div class="card">
+          <h3>Engine-Only Readiness</h3>
+          <p>Readiness scoring will measure whether Elora can detect and classify breaches with reduced or no external guardrail scaffolding.</p>
+        </div>
+        <div class="card">
+          <h3>Portable Learning Assets</h3>
+          <p>Learning artifacts are structured for export/import so Elora can carry validated knowledge between deployments.</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top:20px;">What It Does Not Do</h2>
+      <ul>
+        <li>Does not train model weights.</li>
+        <li>Does not bypass policy or commit controls.</li>
+        <li>Does not use random routing decisions in governed paths.</li>
+      </ul>
+
+      <h2 id="model-wiki" style="margin-top:24px;">Model Wiki (Coming Soon)</h2>
+      <p class="section-intro">A public-facing Model Wiki is in development and will be released in a staged rollout.</p>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin-top:0;">Live Model Wiki Preview</h3>
+        <p class="note" id="wiki-status"><strong>Coming Soon:</strong> public preview is not live yet.</p>
+        <div class="cta-row" style="margin-bottom:8px;">
+          <a class="btn" href="../demo/model-wiki-sample-report.html">Open Sample Model Wiki Report</a>
+        </div>
+        <div id="wiki-list" class="wiki-list"></div>
+      </div>
+      <p class="note" style="margin-top:10px;">Sample report format is available now for layout preview only.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <strong>The Elora Taurus Project</strong>
+        <nav class="footer-links">
+          <a href="../overview/">Overview</a>
+          <a href="../architecture/">Architecture</a>
+          <a href="../demo/">Replay Demo</a>
+          <a href="../docs/">Documentation</a>
+          <a href="../research/">Research</a>
+          <a href="../changelog/">Changelog</a>
+          <a href="../cookie-policy/">Cookie Policy</a>
+        </nav>
+      </div>
+      <div class="footer-note">This page summarizes learning behavior at a public-safe level. Production deployments include deeper telemetry and secured controls.</div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      const statusEl = document.getElementById('wiki-status');
+      const listEl = document.getElementById('wiki-list');
+      if (!statusEl || !listEl) return;
+
+      const render = (payload) => {
+        const rows = Array.isArray((payload || {}).profiles) ? payload.profiles : [];
+        if (!rows.length) {
+          statusEl.textContent = "Coming soon. Public preview is not yet available.";
+          listEl.innerHTML = "";
+          return;
+        }
+        statusEl.textContent = "Sample preview content.";
+        listEl.innerHTML = rows.map((r) => `
+          <div class="card">
+            <h3 style="margin-top:0;">${String(r.model || "unknown")} (${String(r.profile || "default")})</h3>
+            <div class="metric-line">Grade: <strong>${String(r.grade || "n/a")}</strong> · Overall: <strong>${Number(r.stars || 0).toFixed(2)}★</strong></div>
+            <div class="metric-line">Guardrails: code ${Number(((r.guardrails || {}).code) || 0).toFixed(2)}★ · md ${Number(((r.guardrails || {}).md) || 0).toFixed(2)}★ · sqlite3 ${Number(((r.guardrails || {}).sqlite3) || 0).toFixed(2)}★</div>
+            <div class="metric-line"><span class="wiki-chip">Strengths</span>${Array.isArray(r.strengths) ? r.strengths.join("; ") : "n/a"}</div>
+            <div class="metric-line"><span class="wiki-chip">Weaknesses</span>${Array.isArray(r.weaknesses) ? r.weaknesses.join("; ") : "n/a"}</div>
+          </div>
+        `).join("");
+      };
+
+      render({ profiles: [] });
+    })();
+  </script>
+</body>
+</html>

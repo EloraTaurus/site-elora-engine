@@ -1,0 +1,42 @@
+{
+  "schema_version": "public_model_wiki_v1",
+  "generated_at": 1777392000,
+  "profiles": [
+    {
+      "model": "llama3.2:1b",
+      "profile": "observer",
+      "grade": "B",
+      "stars": 3.9,
+      "guardrails": {
+        "code": 3.6,
+        "md": 4.1,
+        "sqlite3": 3.8
+      },
+      "strengths": [
+        "low latency",
+        "stable under short context"
+      ],
+      "weaknesses": [
+        "long-chain reasoning drift"
+      ]
+    },
+    {
+      "model": "qwen2.5:0.5b-instruct",
+      "profile": "observer",
+      "grade": "B",
+      "stars": 3.5,
+      "guardrails": {
+        "code": 3.4,
+        "md": 3.7,
+        "sqlite3": 3.3
+      },
+      "strengths": [
+        "fast response",
+        "clear refusal posture"
+      ],
+      "weaknesses": [
+        "narrow context envelope"
+      ]
+    }
+  ]
+}

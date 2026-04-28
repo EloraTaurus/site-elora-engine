@@ -18,6 +18,38 @@
   <title>The Elora Taurus Project - Research</title>
   <link rel="icon" href="../elora.png" />
   <link rel="stylesheet" href="../style.css" />
+  <style>
+    .upcoming-feature {
+      margin-top: 22px;
+      border: 1px solid #365f8e;
+      border-radius: 14px;
+      background:
+        radial-gradient(900px 260px at 100% 0%, rgba(107, 200, 255, 0.18), transparent 62%),
+        linear-gradient(145deg, #153457, #1b4470);
+      color: #eaf3ff;
+      box-shadow: 0 14px 30px rgba(8, 23, 42, 0.24);
+      overflow: hidden;
+    }
+    .upcoming-feature-inner {
+      padding: 18px 18px 16px;
+    }
+    .upcoming-kicker {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid #78b7ee;
+      border-radius: 999px;
+      padding: 4px 10px;
+      color: #d5ebff;
+      background: rgba(11, 29, 50, 0.26);
+      margin-bottom: 10px;
+    }
+    .section.surface-light .upcoming-feature h3,
+    .section.surface-light .upcoming-feature p,
+    .section.surface-light .upcoming-feature li { color: #eaf3ff; }
+    .section.surface-light .upcoming-feature .note { color: #c8dcf3; }
+  </style>
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
 <body>
@@ -99,6 +131,11 @@
       <p class="section-intro">Core research and disclosure materials are grouped below for faster access.</p>
       <div class="grid-2">
         <div class="card">
+          <h3>Elora Learning System</h3>
+          <p>How Elora learns model strengths, governance adherence, and routing suitability through deterministic scoring and bounded governance.</p>
+          <div class="cta-row"><a class="btn" href="../elora-learning/">Open Learning System</a></div>
+        </div>
+        <div class="card">
           <h3>Technical Disclosure</h3>
           <p>Dated milestones, standards baseline, terminology, and capability chronology for defensive publication.</p>
           <div class="cta-row"><a class="btn" href="../prior-art/">Open Technical Disclosure</a></div>
@@ -137,6 +174,14 @@
           <div class="cta-row">
             <a class="btn" href="../publications/">Open Publications</a>
           </div>
+        </div>
+      </div>
+      <div class="upcoming-feature" role="region" aria-label="Upcoming Research Project">
+        <div class="upcoming-feature-inner">
+          <span class="upcoming-kicker">Upcoming Research Project</span>
+          <h3 style="margin-top:0;">Interactive Control Study: The Wrestling Game</h3>
+          <p>Planned research explores using a model as Elora's "hands" to execute game actions while Elora evaluates instruction-following, timing, and policy-safe behavior under dynamic pressure.</p>
+          <p class="note">This will run as a controlled program with safe telemetry boundaries, deterministic scoring, and reproducible scenario playback.</p>
         </div>
       </div>
     </div>
