@@ -1060,6 +1060,15 @@ button:hover { border-color: #55b8ff; background: #1a3f67; }
   --btn-border: #8fb7e2;
 }
 
+/* Engine shell parity */
+.shell {
+  grid-template-columns: 292px 1fr;
+}
+
+.shell.nav-compact {
+  grid-template-columns: 84px 1fr;
+}
+
 body {
   color: var(--text);
   background:
@@ -1071,11 +1080,24 @@ body {
 .sidebar {
   background: #f4f8ff;
   border-right: 1px solid var(--line-soft);
+  padding: 18px 16px;
 }
 
 .content { background: transparent; }
 
-.nav a { color: #4a6e98; }
+.brand { margin-bottom: 16px; }
+
+.brand strong {
+  font-size: 31px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.nav a {
+  color: #4a6e98;
+  min-height: 35px;
+  border-radius: 0;
+}
 .nav a:hover { color: var(--text-strong); background: #eaf2ff; border-color: #9fc0e6; }
 .nav a.active {
   background: #e1ecff;
@@ -1245,6 +1267,41 @@ button, .nav-toggle, .sidebar-mobile-toggle {
 .demo-box,
 .demo-timeline li {
   color: var(--text);
+}
+
+/* Chat popup window should also be white in light theme */
+.admin-chat-window {
+  border: 1px solid var(--line-soft);
+  background: #ffffff;
+  color: var(--text);
+  box-shadow: 0 16px 36px rgba(63, 111, 187, 0.18);
+}
+
+.admin-chat-head {
+  border-bottom: 1px solid var(--line-soft);
+  background: #edf5ff;
+  color: var(--text);
+}
+
+.admin-chat-body {
+  background: #ffffff;
+}
+
+.admin-chat-bubble.user {
+  background: #eaf4ff;
+  border-color: #bcd3ee;
+  color: #22476f;
+}
+
+.admin-chat-bubble.assistant {
+  background: #f7fbff;
+  border-color: #d2e0ef;
+  color: #2f4f79;
+}
+
+.admin-chat-foot {
+  border-top: 1px solid var(--line-soft);
+  background: #f7fbff;
 }
 
 #rr-focus-job td,
