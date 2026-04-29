@@ -1252,6 +1252,18 @@ button, .nav-toggle, .sidebar-mobile-toggle {
   color: #17345c;
 }
 
+.tour-actions button {
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: #17345c;
+}
+
+.tour-actions button:hover,
+.tour-actions a:hover {
+  border-color: #6fa9e0;
+  background: var(--btn-bg-hover);
+}
+
 .end-demo-notice p,
 .focus-guide p {
   color: #4e6b93;

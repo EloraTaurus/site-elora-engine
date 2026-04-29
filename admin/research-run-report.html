@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Elora Engine - Research Run Report (Demo)</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="elora-ga-id" content="G-33RBH775TR" />
+</head>
+<body data-admin-active="research_dashboard">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-avatar"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='elora-avatar.svg';" /></div>
+        <div>
+          <div><strong>Elora Engine</strong></div>
+          <div style="color:var(--muted); font-size:12px;">Admin</div>
+        </div>
+      </div>
+      <nav class="nav"></nav>
+      <div style="margin-top:18px; font-size:12px; color:var(--muted);">Run report: synthetic / public-safe extract</div>
+    </aside>
+
+    <main class="content">
+      <div class="ops-rail" id="rr-head">
+        <div><div class="ops-label">Cycle Job</div><div class="ops-value"><code>observer_cycle_1777425128117</code></div></div>
+        <div><div class="ops-label">Status</div><div class="ops-value"><span class="status-pill success">completed</span></div></div>
+        <div><div class="ops-label">Mode</div><div class="ops-value">comparison</div></div>
+        <div><div class="ops-label">Execution</div><div class="ops-value">server_cpu</div></div>
+        <div><div class="ops-label">Run By</div><div class="ops-value">Kyuboid</div></div>
+      </div>
+
+      <section class="card" id="rr-intro">
+        <h2 style="margin-top:0;">Observer Research Report: <code>observer_cycle_1777425128117</code></h2>
+        <p class="muted" style="margin:0 0 10px;">Curated walkthrough aligned to the live report shape: overview, scorecard, execution summary, metric analysis, findings, comparison, and Echo timeline. PhyOS/coupling-sensitive sections are intentionally excluded in this public-safe version.</p>
+        <div class="cta-row">
+          <button class="btn" type="button" id="rr-tour-start">Start Guided Walkthrough</button>
+          <a class="btn alt" href="research-dashboard.html">Back to Research Dashboard</a>
+        </div>
+      </section>
+
+      <section class="signal-grid" id="rr-overview">
+        <article class="signal-card">
+          <h3>Overview</h3>
+          <p>Status: completed<br />Scenario: Constitutional Boundary Arc (50)<br />Requested cycles: 48<br />Completed cycles: 48<br />Report tags: observer_0.8.0-alpha, report_0.8.0-alpha</p>
+        </article>
+        <article class="signal-card" id="rr-exec-summary">
+          <h3>Execution Summary</h3>
+          <p>Trigger: scheduled comparison run<br />Decision: commit-dominant path<br />Action: bounded intervention checks<br />Outcome: stable completion</p>
+        </article>
+        <article class="signal-card" id="rr-safe-visual">
+          <h3>Safe Visual</h3>
+          <p>Baseline stability band:</p>
+          <div style="margin-top:8px; background:#dbe9f8; border:1px solid #bdd2eb; border-radius:999px; height:14px; overflow:hidden;">
+            <div style="width:84%; height:100%; background:linear-gradient(90deg,#7a83c8,#5fa8ff);"></div>
+          </div>
+          <p class="muted" style="margin-top:8px;">84% within target band</p>
+        </article>
+      </section>
+
+      <section class="jobs-card card" id="rr-scorecard">
+        <h3 style="margin-top:0;">Cycle Scorecard</h3>
+        <table class="table">
+          <thead><tr><th>Dimension</th><th>Score</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>stability</td><td>0.89</td><td><span class="status-pill success">good</span></td></tr>
+            <tr><td>drift_control</td><td>0.82</td><td><span class="status-pill success">good</span></td></tr>
+            <tr><td>intervention_quality</td><td>0.78</td><td><span class="status-pill success">good</span></td></tr>
+            <tr><td>observer_quality</td><td>0.85</td><td><span class="status-pill success">good</span></td></tr>
+            <tr><td>observer_alignment</td><td>0.86</td><td><span class="status-pill success">good</span></td></tr>
+            <tr><td>overall</td><td>0.84</td><td><span class="status-pill success">A-</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="jobs-card card" id="rr-metrics">
+        <h3 style="margin-top:0;">Metric Analysis (Safe Subset)</h3>
+        <table class="table">
+          <thead><tr><th>Name</th><th>Value</th><th>Threshold</th><th>Status</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>confidence_min</td><td>0.44</td><td>&gt;= 0.40</td><td><span class="status-pill success">pass</span></td><td>Commit confidence above configured floor.</td></tr>
+            <tr><td>uncertainty_max</td><td>0.27</td><td>&lt;= 0.30</td><td><span class="status-pill success">pass</span></td><td>Uncertainty remained within policy bound.</td></tr>
+            <tr><td>token_efficiency</td><td>0.79</td><td>&gt;= 0.70</td><td><span class="status-pill success">pass</span></td><td>Output efficiency acceptable for profile.</td></tr>
+            <tr><td>drift_signal</td><td>0.31</td><td>&lt;= 0.45</td><td><span class="status-pill success">pass</span></td><td>No high drift pressure observed.</td></tr>
+            <tr><td>latency_p95_ms</td><td>1184</td><td>&lt;= 1600</td><td><span class="status-pill success">pass</span></td><td>Runtime latency stable under scenario load.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="jobs-card card" id="rr-findings">
+        <h3 style="margin-top:0;">Findings (Safe Subset)</h3>
+        <table class="table">
+          <thead><tr><th>Severity</th><th>Title</th><th>Detail</th><th>Strategy</th><th>Cycle</th></tr></thead>
+          <tbody>
+            <tr><td><span class="risk-pill low">LOW</span></td><td>Stable Commit Window</td><td>No authority drift between proposal and commit phases.</td><td>bounded_commit_checks</td><td>44</td></tr>
+            <tr><td><span class="risk-pill low">LOW</span></td><td>Improved Token Efficiency</td><td>Token spend reduced against baseline pairing.</td><td>profile_compare</td><td>45</td></tr>
+            <tr><td><span class="risk-pill">HIGH</span></td><td>One Confidence Dip</td><td>Single sub-threshold dip recovered after bounded intervention.</td><td>regulated_retry</td><td>47</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="jobs-card card" id="rr-comparison">
+        <h3 style="margin-top:0;">Comparison (Baseline vs Regulated)</h3>
+        <table class="table">
+          <thead><tr><th>Measure</th><th>Baseline</th><th>Regulated</th><th>Delta</th></tr></thead>
+          <tbody>
+            <tr><td>token_output_total</td><td>126,402</td><td>112,453</td><td>-11.0%</td></tr>
+            <tr><td>runtime_total_ms</td><td>129,115.4</td><td>116,303.6</td><td>-9.9%</td></tr>
+            <tr><td>block_events</td><td>3</td><td>0</td><td>-100%</td></tr>
+            <tr><td>confidence_median</td><td>0.71</td><td>0.78</td><td>+0.07</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="jobs-card card" id="rr-echo">
+        <h3 style="margin-top:0;">Echo Scorecard and Timeline</h3>
+        <div class="chips" style="margin-bottom:10px;">
+          <span class="chip">echo_signal_quality: 0.84</span>
+          <span class="chip">echo_stability_mode: documenting</span>
+          <span class="chip">timeline_events: 12</span>
+          <span class="chip">latest_event: regulated_alignment_confirmed</span>
+          <span class="chip">observer_versions: baseline_v3.1 / regulated_v3.2</span>
+          <span class="chip">event_density: 0.42 events/min</span>
+          <span class="chip">cross_strategy_matches: 91.7%</span>
+        </div>
+        <table class="table">
+          <thead><tr><th>Time (UTC)</th><th>Event</th><th>Interpretation</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>2026-04-29 01:16:08</td><td>signal_ingest</td><td>Observer and runtime signals merged.</td><td><span class="status-pill success">ok</span></td></tr>
+            <tr><td>2026-04-29 01:19:42</td><td>drift_watch</td><td>Short-lived drift rise detected and bounded.</td><td><span class="status-pill success">ok</span></td></tr>
+            <tr><td>2026-04-29 01:22:11</td><td>regulated_alignment_confirmed</td><td>Regulated strategy restored confidence margin.</td><td><span class="status-pill success">ok</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card" id="rr-step-details">
+        <h3 style="margin-top:0;">Step Details (Curated Sample)</h3>
+        <p class="muted" style="margin:0 0 10px;">Detailed per-step traces, full graphics, and PhyOS/coupling internals are removed in this public-safe edition. The live engine retains full depth for operators and research analysis.</p>
+        <div class="chips">
+          <span class="chip">captured_step_fields: 64</span>
+          <span class="chip">policy_flags_tracked: 18</span>
+          <span class="chip">runtime_metrics_tracked: 27</span>
+          <span class="chip">intervention_markers: 11</span>
+          <span class="chip">comparison_dimensions: 22</span>
+          <span class="chip">echo_derived_signals: 9</span>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="demo-modal-backdrop" id="guide-chooser-modal" aria-hidden="true">
+    <div class="demo-modal" role="dialog" aria-modal="true" aria-label="Choose another guide">
+      <div class="demo-modal-head">
+        <h3>Choose Another Guide</h3>
+        <button type="button" id="guide-chooser-close">Close</button>
+      </div>
+      <div class="demo-modal-body">
+        <p class="muted">Pick the next curated walkthrough:</p>
+        <div class="cta-row">
+          <a class="btn" data-tour-allow="1" href="governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Governance Replay</a>
+          <a class="btn alt" data-tour-allow="1" href="research-dashboard.html">Research Dashboard</a>
+          <a class="btn alt" data-tour-allow="1" href="model-exams.html?tour=model_exams&amp;step=0&amp;tour_lock=1">Model Exams</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="research-demo.js"></script>
+  <script>
+    (function () {
+      const TOUR_ID = 'research_report';
+      const steps = [
+        { id: 'rr-intro', title: 'Report Intro', text: 'This report walkthrough is curated to show breadth of collected evidence while staying public-safe.' },
+        { id: 'rr-overview', title: 'Overview', text: 'Run identity, scenario metadata, cycle completion, and report tags establish report context.' },
+        { id: 'rr-exec-summary', title: 'Execution Summary', text: 'Trigger, decision, action, and outcome show control-plane intent and result.' },
+        { id: 'rr-scorecard', title: 'Cycle Scorecard', text: 'Core quality dimensions are scored for quick operator interpretation.' },
+        { id: 'rr-metrics', title: 'Metric Analysis', text: 'Interpreted metrics tie thresholds to policy-relevant meaning.' },
+        { id: 'rr-findings', title: 'Findings', text: 'Findings summarize notable outcomes by severity and strategy.' },
+        { id: 'rr-comparison', title: 'Comparison', text: 'Baseline vs regulated comparison demonstrates measurable effect size.' },
+        { id: 'rr-echo', title: 'Echo Data', text: 'Echo scorecard and timeline provide learned behaviour telemetry without exposing PhyOS internals.' },
+        { id: 'rr-step-details', title: 'Safe Boundary', text: 'Full internal charts and coupling/PhyOS internals are intentionally omitted in this public version.' }
+      ];
+
+      let panel = null;
+      let idx = 0;
+      let syncingHistory = false;
+      let lockActive = false;
+
+      function getParams() {
+        return new URLSearchParams(window.location.search);
+      }
+
+      function withTourParams(step) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('tour', TOUR_ID);
+        url.searchParams.set('step', String(step));
+        url.searchParams.set('tour_lock', '1');
+        return url.pathname + url.search;
+      }
+
+      function ensurePanel() {
+        if (panel) return panel;
+        panel = document.createElement('aside');
+        panel.className = 'tour-panel';
+        panel.innerHTML = [
+          '<div class="tour-kicker">Research Report Walkthrough</div>',
+          '<div class="tour-body">',
+          '<div class="tour-presenter"><img src="../elora-guide.png" alt="Elora guide" onerror="if(!this.dataset.fallback1){this.dataset.fallback1=1;this.src=\'elora-guide.png\';return;}this.onerror=null;this.src=\'../elora.png\';" /></div>',
+          '<div class="tour-message">',
+          '<h3 class="tour-title"></h3>',
+          '<p class="tour-copy"></p>',
+          '<div class="tour-actions">',
+          '<button type="button" data-tour-prev="1">Previous</button>',
+          '<button type="button" data-tour-next="1">Next</button>',
+          '<button type="button" data-tour-close="1">Close</button>',
+          '</div>',
+          '</div>',
+          '</div>'
+        ].join('');
+        document.body.appendChild(panel);
+        panel.querySelector('[data-tour-prev="1"]').addEventListener('click', function () { if (idx > 0) go(idx - 1); });
+        panel.querySelector('[data-tour-next="1"]').addEventListener('click', function () {
+          if (idx >= steps.length - 1) {
+            showGuideChooser();
+            return;
+          }
+          go(idx + 1, true);
+        });
+        panel.querySelector('[data-tour-close="1"]').addEventListener('click', function () {
+          if (lockActive) return;
+          panel.remove();
+          panel = null;
+          document.querySelectorAll('.tour-highlight, .tour-dim').forEach(function (el) {
+            el.classList.remove('tour-highlight');
+            el.classList.remove('tour-dim');
+          });
+          const url = new URL(window.location.href);
+          url.searchParams.delete('tour');
+          url.searchParams.delete('step');
+          url.searchParams.delete('tour_lock');
+          syncingHistory = true;
+          window.history.replaceState({}, '', url.pathname + (url.searchParams.toString() ? ('?' + url.searchParams.toString()) : ''));
+          syncingHistory = false;
+        });
+        return panel;
+      }
+
+      function go(nextIndex, pushHistory) {
+        idx = nextIndex;
+        const step = steps[idx];
+        const target = document.getElementById(step.id);
+        if (!target) return;
+
+        const p = ensurePanel();
+        p.querySelector('.tour-title').textContent = step.title;
+        p.querySelector('.tour-copy').textContent = step.text;
+        const nextBtn = p.querySelector('[data-tour-next="1"]');
+        if (nextBtn) nextBtn.textContent = idx >= steps.length - 1 ? 'Choose Next Guide' : 'Next';
+
+        document.querySelectorAll('.tour-highlight, .tour-dim').forEach(function (el) {
+          el.classList.remove('tour-highlight');
+          el.classList.remove('tour-dim');
+        });
+
+        const content = document.querySelector('.content');
+        if (content) {
+          Array.from(content.children).forEach(function (child) { child.classList.add('tour-dim'); });
+        }
+
+        let node = target;
+        while (node && node !== content) {
+          node.classList.remove('tour-dim');
+          node = node.parentElement;
+        }
+
+        target.classList.add('tour-highlight');
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        const rect = target.getBoundingClientRect();
+        p.style.left = Math.max(16, Math.min(window.innerWidth - p.offsetWidth - 16, rect.right + 12)) + 'px';
+        p.style.top = Math.max(16, Math.min(window.innerHeight - p.offsetHeight - 16, rect.top)) + 'px';
+
+        if (pushHistory) {
+          syncingHistory = true;
+          window.history.pushState({ tour: TOUR_ID, step: idx }, '', withTourParams(idx));
+          syncingHistory = false;
+        }
+      }
+
+      const start = document.getElementById('rr-tour-start');
+      if (start) start.addEventListener('click', function () { go(0, true); });
+      function showGuideChooser() {
+        const chooser = document.getElementById('guide-chooser-modal');
+        if (!chooser) return;
+        chooser.classList.add('active');
+        chooser.setAttribute('aria-hidden', 'false');
+      }
+      function hideGuideChooser() {
+        const chooser = document.getElementById('guide-chooser-modal');
+        if (!chooser) return;
+        chooser.classList.remove('active');
+        chooser.setAttribute('aria-hidden', 'true');
+      }
+      const chooserClose = document.getElementById('guide-chooser-close');
+      if (chooserClose) chooserClose.addEventListener('click', hideGuideChooser);
+      const chooser = document.getElementById('guide-chooser-modal');
+      if (chooser) chooser.addEventListener('click', function (event) {
+        if (event.target === chooser) hideGuideChooser();
+      });
+
+      function initTourLock() {
+        const params = getParams();
+        if (params.get('tour') !== TOUR_ID || params.get('tour_lock') !== '1') return;
+        lockActive = true;
+        document.body.classList.add('tour-locked');
+        if (start) start.disabled = true;
+        document.addEventListener('click', function (event) {
+          const anchor = event.target && event.target.closest ? event.target.closest('a') : null;
+          if (!anchor) return;
+          if (anchor.closest('.tour-panel')) return;
+          if (anchor.getAttribute('data-tour-allow') === '1') return;
+          event.preventDefault();
+        }, true);
+      }
+
+      window.addEventListener('popstate', function () {
+        if (syncingHistory) return;
+        const params = getParams();
+        if (params.get('tour') !== TOUR_ID) return;
+        const next = Number(params.get('step') || 0);
+        const safe = Number.isFinite(next) ? Math.max(0, Math.min(steps.length - 1, next)) : 0;
+        go(safe, false);
+      });
+
+      (function initFromUrl() {
+        initTourLock();
+        const params = getParams();
+        if (params.get('tour') !== TOUR_ID) return;
+        const raw = Number(params.get('step') || 0);
+        const startAt = Number.isFinite(raw) ? Math.max(0, Math.min(steps.length - 1, raw)) : 0;
+        go(startAt, false);
+      })();
+    })();
+  </script>
+  <script defer src="../analytics-consent.js"></script>
+</body>
+</html>

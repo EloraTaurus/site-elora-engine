@@ -32,7 +32,7 @@
         <div><div class="ops-label">Data Class</div><div class="ops-value">Synthetic only</div></div>
       </div>
 
-      <section class="card">
+      <section class="card" id="mx-intro">
         <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap;">
           <div>
             <h2 style="margin-top:0;">Model Exams</h2>
@@ -41,21 +41,21 @@
             </p>
           </div>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <a href="#"><button type="button">Launch Step-by-Step</button></a>
+            <button type="button" id="mx-tour-start">Start Guided Walkthrough</button>
             <a href="research-dashboard.html"><button type="button">Back to Dashboard</button></a>
             <a href="#"><button type="button">Open Research Docs</button></a>
           </div>
         </div>
       </section>
 
-      <section class="kpi-grid">
+      <section class="kpi-grid" id="mx-kpis">
         <article class="kpi-card"><h3>Model Overview</h3><strong>3</strong><p class="muted">models in selected exam filter</p></article>
         <article class="kpi-card"><h3>Running Exams</h3><strong>2</strong><p class="muted">active exam runs now</p></article>
         <article class="kpi-card"><h3>Learning Behaviour</h3><strong>0.82</strong><p class="muted">current stability index</p></article>
         <article class="kpi-card"><h3>Replay Fidelity</h3><strong>100%</strong><p class="muted">deterministic match rate</p></article>
       </section>
 
-      <section class="signal-grid">
+      <section class="signal-grid" id="mx-overview">
         <article class="signal-card">
           <h3>Model Overview</h3>
           <p>Filter: instruction_safety_pack<br />Best policy pass: elora:smollm2 (96.1%)<br />Best stability: candidate-x (0.88)<br />Best replay speed: smollm3 (742ms median)</p>
@@ -70,7 +70,7 @@
         </article>
       </section>
 
-      <section class="jobs-card card">
+      <section class="jobs-card card" id="mx-control">
         <h3 style="margin-top:0;">Exam Control Snapshot</h3>
         <table class="table">
           <thead>
@@ -110,7 +110,7 @@
         </table>
       </section>
 
-      <section class="jobs-card card">
+      <section class="jobs-card card" id="mx-runs">
         <h3 style="margin-top:0;">Exam Runs</h3>
         <table class="table">
           <thead>
@@ -164,7 +164,7 @@
         </table>
       </section>
 
-      <section class="jobs-card card">
+      <section class="jobs-card card" id="mx-escalation">
         <h3 style="margin-top:0;">Escalation Queue (Synthetic)</h3>
         <table class="table">
           <thead>
@@ -198,7 +198,7 @@
         </table>
       </section>
 
-      <section class="jobs-card card">
+      <section class="jobs-card card" id="mx-distribution">
         <h3 style="margin-top:0;">Decision Class Distribution (Synthetic)</h3>
         <table class="table">
           <thead>
@@ -236,25 +236,25 @@
         </table>
       </section>
 
-      <section class="signal-grid">
+      <section class="signal-grid" id="mx-reports">
         <article class="signal-card">
           <h3>Safe Report Example A</h3>
           <p><strong>Case:</strong> Instruction safety boundary<br /><strong>Finding:</strong> Response remained policy-grounded despite adversarial framing.<br /><strong>Outcome:</strong> Admitted with A-grade evidence packet.</p>
-          <p><a href="#" data-safe-report="EX-001" data-safe-kind="safe exam finding">Preview safe report</a></p>
+          <p><a href="#" data-tour-allow="1" data-safe-report="EX-001" data-safe-kind="safe exam finding">Preview safe report</a></p>
         </article>
         <article class="signal-card">
           <h3>Safe Report Example B</h3>
           <p><strong>Case:</strong> Drift under capped resources<br /><strong>Finding:</strong> Confidence collapse detected before commit stage.<br /><strong>Outcome:</strong> Blocked at commit with replay-confirmed justification.</p>
-          <p><a href="#" data-safe-report="EX-014" data-safe-kind="safe governance block report">Preview safe report</a></p>
+          <p><a href="#" data-tour-allow="1" data-safe-report="EX-014" data-safe-kind="safe governance block report">Preview safe report</a></p>
         </article>
         <article class="signal-card">
           <h3>Safe Report Example C</h3>
           <p><strong>Case:</strong> Additional skill research path<br /><strong>Finding:</strong> Non-neural routing improved behaviour stability signal quality.<br /><strong>Outcome:</strong> Candidate accepted for next research cycle.</p>
-          <p><a href="#" data-safe-report="EX-033" data-safe-kind="safe capability research report">Preview safe report</a></p>
+          <p><a href="#" data-tour-allow="1" data-safe-report="EX-033" data-safe-kind="safe capability research report">Preview safe report</a></p>
         </article>
       </section>
 
-      <section class="card">
+      <section class="card" id="mx-exports">
         <h3 style="margin-top:0;">Export Samples (Safe)</h3>
         <div class="chips">
           <span class="chip">model_exam_summary_safe.md</span>
@@ -279,8 +279,190 @@
       </div>
     </div>
   </div>
+  <div class="demo-modal-backdrop" id="guide-chooser-modal" aria-hidden="true">
+    <div class="demo-modal" role="dialog" aria-modal="true" aria-label="Choose another guide">
+      <div class="demo-modal-head">
+        <h3>Choose Another Guide</h3>
+        <button type="button" id="guide-chooser-close">Close</button>
+      </div>
+      <div class="demo-modal-body">
+        <p class="muted">Pick the next curated walkthrough:</p>
+        <div class="cta-row">
+          <a class="btn" data-tour-allow="1" href="governance-replay.html?tour=governance_replay&amp;step=0&amp;tour_lock=1">Governance Replay</a>
+          <a class="btn alt" data-tour-allow="1" href="research-dashboard.html">Research Dashboard</a>
+          <a class="btn alt" data-tour-allow="1" href="research-run-report.html?tour=research_report&amp;step=0&amp;tour_lock=1">Research Report</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="research-demo.js"></script>
+  <script>
+    (function () {
+      const TOUR_ID = 'model_exams';
+      const steps = [
+        { id: 'mx-intro', title: 'Model Exams Intro', text: 'This guided path shows how Elora evaluates model behaviour with deterministic scoring and replay evidence.' },
+        { id: 'mx-kpis', title: 'Topline Signals', text: 'These KPI cards summarize model-overview depth, live run activity, learning behaviour, and replay fidelity.' },
+        { id: 'mx-overview', title: 'Overview Panels', text: 'Overview panels show model-level pass, stability, and learning behaviour posture for quick triage.' },
+        { id: 'mx-control', title: 'Control Snapshot', text: 'Control snapshots compare target policy thresholds versus observed values.' },
+        { id: 'mx-runs', title: 'Exam Runs', text: 'Run-level records include mode, execution layer, behaviour score, policy result, and replay outcome.' },
+        { id: 'mx-escalation', title: 'Escalation Queue', text: 'High-risk exam outcomes are queued with primary flags and reviewer ownership.' },
+        { id: 'mx-distribution', title: 'Decision Class Distribution', text: 'Distribution rollups show confidence medians and block rates by decision class.' },
+        { id: 'mx-reports', title: 'Safe Report Examples', text: 'These openable cards demonstrate report depth using synthetic-safe artifacts.' },
+        { id: 'mx-exports', title: 'Export Coverage', text: 'Export formats indicate the breadth of machine-readable evidence available for analysis.' }
+      ];
+
+      let panel = null;
+      let idx = 0;
+      let syncingHistory = false;
+      let lockActive = false;
+
+      function getParams() { return new URLSearchParams(window.location.search); }
+      function withTourParams(step) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('tour', TOUR_ID);
+        url.searchParams.set('step', String(step));
+        url.searchParams.set('tour_lock', '1');
+        return url.pathname + url.search;
+      }
+
+      function ensurePanel() {
+        if (panel) return panel;
+        panel = document.createElement('aside');
+        panel.className = 'tour-panel';
+        panel.innerHTML = [
+          '<div class="tour-kicker">Model Exams Guided Tour</div>',
+          '<div class="tour-body">',
+          '<div class="tour-presenter"><img src="../elora-guide.png" alt="Elora guide" onerror="if(!this.dataset.fallback1){this.dataset.fallback1=1;this.src=\\'elora-guide.png\\';return;}this.onerror=null;this.src=\\'../elora.png\\';" /></div>',
+          '<div class="tour-message">',
+          '<h3 class="tour-title"></h3>',
+          '<p class="tour-copy"></p>',
+          '<div class="tour-actions">',
+          '<button type="button" data-tour-prev="1">Previous</button>',
+          '<button type="button" data-tour-next="1">Next</button>',
+          '<button type="button" data-tour-close="1">Close</button>',
+          '</div>',
+          '</div>',
+          '</div>'
+        ].join('');
+        document.body.appendChild(panel);
+        panel.querySelector('[data-tour-prev="1"]').addEventListener('click', function () { if (idx > 0) go(idx - 1, true); });
+        panel.querySelector('[data-tour-next="1"]').addEventListener('click', function () {
+          if (idx >= steps.length - 1) {
+            showGuideChooser();
+            return;
+          }
+          go(idx + 1, true);
+        });
+        panel.querySelector('[data-tour-close="1"]').addEventListener('click', function () {
+          if (lockActive) return;
+          panel.remove();
+          panel = null;
+          document.querySelectorAll('.tour-highlight, .tour-dim').forEach(function (el) {
+            el.classList.remove('tour-highlight');
+            el.classList.remove('tour-dim');
+          });
+          const url = new URL(window.location.href);
+          url.searchParams.delete('tour');
+          url.searchParams.delete('step');
+          url.searchParams.delete('tour_lock');
+          syncingHistory = true;
+          window.history.replaceState({}, '', url.pathname + (url.searchParams.toString() ? ('?' + url.searchParams.toString()) : ''));
+          syncingHistory = false;
+        });
+        return panel;
+      }
+
+      function go(nextIndex, pushHistory) {
+        idx = nextIndex;
+        const step = steps[idx];
+        const target = document.getElementById(step.id);
+        if (!target) return;
+        const p = ensurePanel();
+        p.querySelector('.tour-title').textContent = step.title;
+        p.querySelector('.tour-copy').textContent = step.text;
+        const nextBtn = p.querySelector('[data-tour-next="1"]');
+        if (nextBtn) nextBtn.textContent = idx >= steps.length - 1 ? 'Choose Next Guide' : 'Next';
+
+        document.querySelectorAll('.tour-highlight, .tour-dim').forEach(function (el) {
+          el.classList.remove('tour-highlight');
+          el.classList.remove('tour-dim');
+        });
+        const content = document.querySelector('.content');
+        if (content) Array.from(content.children).forEach(function (child) { child.classList.add('tour-dim'); });
+        let node = target;
+        while (node && node !== content) {
+          node.classList.remove('tour-dim');
+          node = node.parentElement;
+        }
+        target.classList.add('tour-highlight');
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        const rect = target.getBoundingClientRect();
+        p.style.left = Math.max(16, Math.min(window.innerWidth - p.offsetWidth - 16, rect.right + 12)) + 'px';
+        p.style.top = Math.max(16, Math.min(window.innerHeight - p.offsetHeight - 16, rect.top)) + 'px';
+        if (pushHistory) {
+          syncingHistory = true;
+          window.history.pushState({ tour: TOUR_ID, step: idx }, '', withTourParams(idx));
+          syncingHistory = false;
+        }
+      }
+
+      const start = document.getElementById('mx-tour-start');
+      if (start) start.addEventListener('click', function () { go(0, true); });
+      function showGuideChooser() {
+        const chooser = document.getElementById('guide-chooser-modal');
+        if (!chooser) return;
+        chooser.classList.add('active');
+        chooser.setAttribute('aria-hidden', 'false');
+      }
+      function hideGuideChooser() {
+        const chooser = document.getElementById('guide-chooser-modal');
+        if (!chooser) return;
+        chooser.classList.remove('active');
+        chooser.setAttribute('aria-hidden', 'true');
+      }
+      const chooserClose = document.getElementById('guide-chooser-close');
+      if (chooserClose) chooserClose.addEventListener('click', hideGuideChooser);
+      const chooser = document.getElementById('guide-chooser-modal');
+      if (chooser) chooser.addEventListener('click', function (event) {
+        if (event.target === chooser) hideGuideChooser();
+      });
+
+      function initTourLock() {
+        const params = getParams();
+        if (params.get('tour') !== TOUR_ID || params.get('tour_lock') !== '1') return;
+        lockActive = true;
+        document.body.classList.add('tour-locked');
+        if (start) start.disabled = true;
+        document.addEventListener('click', function (event) {
+          const anchor = event.target && event.target.closest ? event.target.closest('a') : null;
+          if (!anchor) return;
+          if (anchor.closest('.tour-panel')) return;
+          if (anchor.getAttribute('data-tour-allow') === '1') return;
+          event.preventDefault();
+        }, true);
+      }
+
+      window.addEventListener('popstate', function () {
+        if (syncingHistory) return;
+        const params = getParams();
+        if (params.get('tour') !== TOUR_ID) return;
+        const next = Number(params.get('step') || 0);
+        const safe = Number.isFinite(next) ? Math.max(0, Math.min(steps.length - 1, next)) : 0;
+        go(safe, false);
+      });
+
+      (function initFromUrl() {
+        initTourLock();
+        const params = getParams();
+        if (params.get('tour') !== TOUR_ID) return;
+        const raw = Number(params.get('step') || 0);
+        const startAt = Number.isFinite(raw) ? Math.max(0, Math.min(steps.length - 1, raw)) : 0;
+        go(startAt, false);
+      })();
+    })();
+  </script>
   <script defer src="../analytics-consent.js"></script>
 </body>
 </html>
