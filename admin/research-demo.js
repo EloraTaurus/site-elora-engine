@@ -104,7 +104,6 @@
             ['Research Dashboard', 'research-dashboard.html', 'research_dashboard'],
             ['Observer Research', 'research-dashboard.html#rd-signals', 'research_observer'],
             ['Echo Frequency Learning', 'research-dashboard.html#rd-signals', 'research_echo_frequency'],
-            ['Model Exams', 'model-exams.html', 'research_model_exams'],
             ['Pattern Analysis', 'research-dashboard.html#rd-signals', 'research_pattern_analysis'],
             ['Arle Analysis', 'research-dashboard.html#rd-signals', 'research_arle_analysis'],
             ['Research Index', 'research-dashboard.html#rd-index', 'research_index'],

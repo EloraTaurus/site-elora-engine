@@ -253,7 +253,6 @@
             ['Research Dashboard', 'research-dashboard.html', 'research_dashboard'],
             ['Observer Research', 'stage-3-deep-dive.html#rr-summary-grid', 'research_observer'],
             ['Echo Frequency Learning', 'stage-3-deep-dive.html#rr-summary-grid', 'research_echo_frequency'],
-            ['Model Exams', 'model-exams.html', 'research_model_exams'],
             ['Pattern Analysis', 'stage-3-deep-dive.html#rr-summary-grid', 'research_pattern_analysis'],
             ['Arle Analysis', 'stage-3-deep-dive.html#rr-summary-grid', 'research_arle_analysis'],
             ['Research Index', 'stage-3-deep-dive.html#rr-summary-grid', 'research_index'],

@@ -148,7 +148,6 @@
             ['Research Dashboard', 'research-dashboard.html', 'research_dashboard'],
             ['Observer Research', 'replay-reviewer.html#rr-summary-grid', 'research_observer'],
             ['Echo Frequency Learning', 'replay-reviewer.html#rr-summary-grid', 'research_echo_frequency'],
-            ['Model Exams', 'model-exams.html', 'research_model_exams'],
             ['Pattern Analysis', 'replay-reviewer.html#rr-summary-grid', 'research_pattern_analysis'],
             ['Arle Analysis', 'replay-reviewer.html#rr-summary-grid', 'research_arle_analysis'],
             ['Research Index', 'replay-reviewer.html#rr-summary-grid', 'research_index'],

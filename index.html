@@ -22,10 +22,16 @@
 </head>
 <body class="home-page">
   <div id="welcome-overlay" class="welcome-overlay" aria-live="polite">
-    <div class="welcome-card">
-      <div class="welcome-spinner" aria-hidden="true"></div>
-      <h2>Welcome to The Elora Taurus Website</h2>
-      <p>Loading research architecture surfaces...</p>
+    <div class="welcome-card welcome-card-split">
+      <div class="welcome-copy">
+        <p class="welcome-kicker">Welcome</p>
+        <h2>Welcome to Project Elora Taurus</h2>
+        <p>Preparing your experience...</p>
+        <button type="button" id="welcome-skip" class="welcome-skip">Skip</button>
+      </div>
+      <div class="welcome-visual" aria-hidden="true">
+        <img src="elora-guide.png" alt="" onerror="this.onerror=null;this.src='elora.png';" />
+      </div>
     </div>
   </div>
   <section class="top-stage" id="home">
@@ -122,14 +128,18 @@
   <script>
     (function () {
       const overlay = document.getElementById('welcome-overlay');
+      const skipBtn = document.getElementById('welcome-skip');
       const key = 'elora_site_welcome_seen_v1';
+      let done = false;
       const hideOverlay = function () {
-        if (!overlay) return;
+        if (!overlay || done) return;
+        done = true;
         overlay.classList.add('hidden');
         window.setTimeout(function () {
           if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
         }, 420);
       };
+      if (skipBtn) skipBtn.addEventListener('click', hideOverlay);
 
       try {
         const seen = localStorage.getItem(key);
@@ -139,10 +149,10 @@
           window.setTimeout(function () {
             try { localStorage.setItem(key, '1'); } catch (e) {}
             hideOverlay();
-          }, 1750);
+          }, 1200);
         }
       } catch (e) {
-        window.setTimeout(hideOverlay, 1750);
+        window.setTimeout(hideOverlay, 1200);
       }
 
       const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
