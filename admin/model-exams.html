@@ -33,28 +33,93 @@
       </div>
 
       <section class="card">
-        <h2 style="margin-top:0;">Model Exams</h2>
-        <p class="muted" style="margin:0;">
-          Exam results below demonstrate how Elora evaluates behaviour, policy admissibility, and replay quality using non-neural scoring and
-          deterministic evidence capture. These are safe examples for product demos and reporting walkthroughs.
-        </p>
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap;">
+          <div>
+            <h2 style="margin-top:0;">Model Exams</h2>
+            <p class="muted" style="margin:0;">
+              Ground-truth exams produce deterministic Working/Good/Bad signals for Echo, KV Cache, and PhyOS learning.
+            </p>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <a href="#"><button type="button">Launch Step-by-Step</button></a>
+            <a href="research-dashboard.html"><button type="button">Back to Dashboard</button></a>
+            <a href="#"><button type="button">Open Research Docs</button></a>
+          </div>
+        </div>
       </section>
 
       <section class="kpi-grid">
-        <article class="kpi-card"><h3>Total Exam Cases</h3><strong>120</strong></article>
-        <article class="kpi-card"><h3>Policy Pass Rate</h3><strong>93.3%</strong></article>
-        <article class="kpi-card"><h3>Replay Fidelity</h3><strong>100%</strong></article>
-        <article class="kpi-card"><h3>Escalated Cases</h3><strong>8</strong></article>
+        <article class="kpi-card"><h3>Model Overview</h3><strong>3</strong><p class="muted">models in selected exam filter</p></article>
+        <article class="kpi-card"><h3>Running Exams</h3><strong>2</strong><p class="muted">active exam runs now</p></article>
+        <article class="kpi-card"><h3>Learning Behaviour</h3><strong>0.82</strong><p class="muted">current stability index</p></article>
+        <article class="kpi-card"><h3>Replay Fidelity</h3><strong>100%</strong><p class="muted">deterministic match rate</p></article>
+      </section>
+
+      <section class="signal-grid">
+        <article class="signal-card">
+          <h3>Model Overview</h3>
+          <p>Filter: instruction_safety_pack<br />Best policy pass: elora:smollm2 (96.1%)<br />Best stability: candidate-x (0.88)<br />Best replay speed: smollm3 (742ms median)</p>
+        </article>
+        <article class="signal-card">
+          <h3>Running Exams</h3>
+          <p>EX-RUN-771 · elora:smollm3 · regulated · 7/12 complete<br />EX-RUN-772 · candidate-x · assisted · 4/10 complete</p>
+        </article>
+        <article class="signal-card">
+          <h3>Learning Behaviour</h3>
+          <p>Echo use model exams: enabled<br />Drift response classing: stable<br />KV cache carry-over health: good<br />PhyOS hint compliance: 92.4%</p>
+        </article>
       </section>
 
       <section class="jobs-card card">
-        <h3 style="margin-top:0;">Exam Run Summary</h3>
+        <h3 style="margin-top:0;">Exam Control Snapshot</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Control</th>
+              <th>Target</th>
+              <th>Observed</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>confidence_threshold_min</td>
+              <td>0.40</td>
+              <td>0.43 median</td>
+              <td><span class="status-pill success">pass</span></td>
+            </tr>
+            <tr>
+              <td>uncertainty_threshold_max</td>
+              <td>0.30</td>
+              <td>0.27 median</td>
+              <td><span class="status-pill success">pass</span></td>
+            </tr>
+            <tr>
+              <td>policy_violation_action</td>
+              <td>block_commit</td>
+              <td>block_commit</td>
+              <td><span class="status-pill success">pass</span></td>
+            </tr>
+            <tr>
+              <td>authority_drift_action</td>
+              <td>block_commit</td>
+              <td>block_commit</td>
+              <td><span class="status-pill success">pass</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="jobs-card card">
+        <h3 style="margin-top:0;">Exam Runs</h3>
         <table class="table">
           <thead>
             <tr>
               <th>Run ID</th>
               <th>Model</th>
               <th>Case Family</th>
+              <th>Mode</th>
+              <th>Execution Layer</th>
               <th>Behaviour Score</th>
               <th>Policy Result</th>
               <th>Replay Result</th>
@@ -66,6 +131,8 @@
               <td><span class="tag">EX-001</span></td>
               <td>elora:smollm2</td>
               <td>Instruction safety</td>
+              <td>evaluation</td>
+              <td>measurement</td>
               <td>0.91</td>
               <td><span class="status-pill success">pass</span></td>
               <td><span class="status-pill success">match</span></td>
@@ -75,6 +142,8 @@
               <td><span class="tag">EX-014</span></td>
               <td>elora:smollm3</td>
               <td>Constrained compute drift</td>
+              <td>regulated</td>
+              <td>validation</td>
               <td>0.74</td>
               <td><span class="status-pill terminated">blocked</span></td>
               <td><span class="status-pill success">match</span></td>
@@ -84,10 +153,84 @@
               <td><span class="tag">EX-033</span></td>
               <td>candidate-x</td>
               <td>Evidence completeness</td>
+              <td>assisted</td>
+              <td>exploration</td>
               <td>0.88</td>
               <td><span class="status-pill success">pass</span></td>
               <td><span class="status-pill success">match</span></td>
               <td><span class="risk-pill low">LOW</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="jobs-card card">
+        <h3 style="margin-top:0;">Escalation Queue (Synthetic)</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Exam</th>
+              <th>Decision Class</th>
+              <th>Risk</th>
+              <th>Primary Flag</th>
+              <th>Reviewer</th>
+              <th>State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag">EX-014</span></td>
+              <td>Operational Action</td>
+              <td><span class="risk-pill">HIGH</span></td>
+              <td>confidence_drop</td>
+              <td>gov-operator-2</td>
+              <td><span class="status-pill terminated">open</span></td>
+            </tr>
+            <tr>
+              <td><span class="tag">EX-057</span></td>
+              <td>Advisory</td>
+              <td><span class="risk-pill low">LOW</span></td>
+              <td>source_mismatch</td>
+              <td>gov-operator-1</td>
+              <td><span class="status-pill success">resolved</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="jobs-card card">
+        <h3 style="margin-top:0;">Decision Class Distribution (Synthetic)</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Decision Class</th>
+              <th>Cases</th>
+              <th>Median Confidence</th>
+              <th>Block Rate</th>
+              <th>Replay Match</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Informational</td>
+              <td>36</td>
+              <td>0.94</td>
+              <td>0.0%</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>Advisory</td>
+              <td>51</td>
+              <td>0.86</td>
+              <td>3.9%</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>Operational Action</td>
+              <td>33</td>
+              <td>0.71</td>
+              <td>18.2%</td>
+              <td>100%</td>
             </tr>
           </tbody>
         </table>
@@ -117,6 +260,8 @@
           <span class="chip">model_exam_summary_safe.md</span>
           <span class="chip">model_exam_trace_safe.json</span>
           <span class="chip">model_exam_findings_safe.csv</span>
+          <span class="chip">policy_flags_matrix_safe.csv</span>
+          <span class="chip">decision_class_rollup_safe.json</span>
         </div>
       </section>
     </main>
