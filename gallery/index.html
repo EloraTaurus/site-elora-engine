@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Gallery of Elora Engine visuals: governance replay, research dashboard, and architecture views with contextual walkthrough notes." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://elorataurus.com/gallery/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Elora Taurus Project - Gallery" />
+  <meta property="og:description" content="Explore key Elora Engine visuals with guided context explaining governance, research telemetry, and architecture surfaces." />
+  <meta property="og:url" content="https://elorataurus.com/gallery/" />
+  <meta property="og:image" content="https://elorataurus.com/social.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Elora Taurus Project - Gallery" />
+  <meta name="twitter:description" content="Engine gallery with contextual notes across governance replay, research dashboard, and architecture surfaces." />
+  <meta name="twitter:image" content="https://elorataurus.com/social.png" />
+  <title>The Elora Taurus Project - Gallery</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="../style.css" />
+  <meta name="elora-ga-id" content="G-33RBH775TR" />
+</head>
+<body>
+  <section class="top-stage" id="gallery">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project overview">
+          <div class="brand-icon"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='../admin/elora-avatar.svg';"></div>
+          <div>
+            <strong>The Elora Taurus Project</strong>
+            <small>AI Runtime Systems & Governance Architecture</small>
+          </div>
+        </a>
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-gallery"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-gallery" data-top-links="1" class="top-links">
+          <a class="nav-btn" href="../overview/">Overview</a>
+          <a class="nav-btn" href="../architecture/">Architecture</a>
+          <a class="nav-btn" href="../demo/">Demo</a>
+          <a class="nav-btn active" href="../gallery/">Gallery</a>
+          <a class="nav-btn" href="../docs/">Documentation</a>
+          <a class="nav-btn" href="../research/">Research</a>
+          <a class="nav-btn" href="../changelog/">Changelog</a>
+        </nav>
+      </div>
+    </header>
+    <div class="shell">
+      <section class="hero hero-guide-curve">
+        <div class="about-lead">
+          <h1>Engine Gallery</h1>
+          <p>Curated snapshots of Elora Engine surfaces with context for what each view shows and why it matters in research-first governance operations.</p>
+          <p>All visuals are public-safe and synthetic where needed.</p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section surface-light">
+    <div class="section-inner">
+      <h2>Gallery Carousel</h2>
+      <p class="section-intro">Use previous/next controls or dots to move through each engine image and explanation.</p>
+
+      <div class="gallery-carousel" data-gallery-carousel>
+        <div class="gallery-stage">
+          <figure class="gallery-slide is-active" data-gallery-slide>
+            <img src="../content/gallery-engine/engine-research-dashboard.png" alt="Elora Engine research dashboard view" onerror="this.onerror=null;this.src='../elora-demo-screenshot.png';" />
+          </figure>
+          <figure class="gallery-slide" data-gallery-slide>
+            <img src="../content/gallery-engine/engine-governance-replay.png" alt="Elora Engine governance replay view" onerror="this.onerror=null;this.src='../elora-architecture.png';" />
+          </figure>
+          <figure class="gallery-slide" data-gallery-slide>
+            <img src="../content/gallery-engine/engine-tour-panel.png" alt="Elora Engine tour panel view" onerror="this.onerror=null;this.src='../social.png';" />
+          </figure>
+          <figure class="gallery-slide" data-gallery-slide>
+            <img src="../content/gallery-engine/engine-report-view.png" alt="Elora Engine report view" onerror="this.onerror=null;this.src='../background.png';" />
+          </figure>
+        </div>
+
+        <div class="gallery-info" data-gallery-info>
+          <h3 data-gallery-title>Research Dashboard Surface</h3>
+          <p data-gallery-copy>This view shows high-density research telemetry: run windows, savings, policy snapshots, and safe report indexing used to communicate behaviour evidence at a glance.</p>
+        </div>
+
+        <div class="gallery-controls">
+          <button type="button" class="hero-slider-btn" data-gallery-prev>Prev</button>
+          <div class="hero-slider-dots" data-gallery-dots aria-label="Gallery navigation"></div>
+          <button type="button" class="hero-slider-btn" data-gallery-next>Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-row">
+        <strong>The Elora Taurus Project</strong>
+        <nav class="footer-links">
+          <a href="../overview/">Overview</a>
+          <a href="../architecture/">Architecture</a>
+          <a href="../demo/">Demo</a>
+          <a href="../gallery/">Gallery</a>
+          <a href="../docs/">Documentation</a>
+          <a href="../research/">Research</a>
+          <a href="../changelog/">Changelog</a>
+          <a href="../cookie-policy/">Cookie Policy</a>
+        </nav>
+      </div>
+      <div class="footer-note">This gallery is a public-safe visual walkthrough and does not expose live runtime endpoints or private operator telemetry.</div>
+      <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
+      const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
+
+      navToggles.forEach(function (toggle) {
+        const controls = toggle.getAttribute('aria-controls');
+        const links = controls ? document.getElementById(controls) : null;
+        if (!links) return;
+        toggle.addEventListener('click', function () {
+          const open = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        links.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 760) {
+          topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
+          navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
+        }
+      });
+
+      const carousel = document.querySelector('[data-gallery-carousel]');
+      if (!carousel) return;
+
+      const slides = Array.from(carousel.querySelectorAll('[data-gallery-slide]'));
+      const dotsWrap = carousel.querySelector('[data-gallery-dots]');
+      const prevBtn = carousel.querySelector('[data-gallery-prev]');
+      const nextBtn = carousel.querySelector('[data-gallery-next]');
+      const titleEl = carousel.querySelector('[data-gallery-title]');
+      const copyEl = carousel.querySelector('[data-gallery-copy]');
+      let idx = 0;
+
+      const content = [
+        {
+          title: 'Research Dashboard Surface',
+          copy: 'This view shows high-density research telemetry: run windows, savings, policy snapshots, and safe report indexing used to communicate behaviour evidence at a glance.'
+        },
+        {
+          title: 'Architecture Reference View',
+          copy: 'The architecture visual maps how proposal-to-commit control, evidence capture, and deterministic replay sit together in the Elora runtime governance model.'
+        },
+        {
+          title: 'Public Demo Presentation Surface',
+          copy: 'This image demonstrates the public-safe style language used across site and demo pages to keep governance concepts readable for external stakeholders.'
+        },
+        {
+          title: 'Interface Theme Layer',
+          copy: 'Background and spacing layers establish the white-first operator look while preserving contrast for policy-critical controls and status indicators.'
+        }
+      ];
+
+      function draw() {
+        slides.forEach(function (el, i) {
+          const active = i === idx;
+          el.classList.toggle('is-active', active);
+          el.setAttribute('aria-hidden', active ? 'false' : 'true');
+        });
+        if (titleEl) titleEl.textContent = content[idx].title;
+        if (copyEl) copyEl.textContent = content[idx].copy;
+        if (dotsWrap) {
+          Array.from(dotsWrap.querySelectorAll('button')).forEach(function (dot, i) {
+            dot.classList.toggle('is-active', i === idx);
+            dot.setAttribute('aria-pressed', i === idx ? 'true' : 'false');
+          });
+        }
+      }
+
+      function go(next) {
+        idx = (next + slides.length) % slides.length;
+        draw();
+      }
+
+      if (dotsWrap) {
+        dotsWrap.innerHTML = '';
+        slides.forEach(function (_, i) {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'hero-slider-dot' + (i === 0 ? ' is-active' : '');
+          dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+          dot.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+          dot.addEventListener('click', function () { go(i); });
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', function () { go(idx - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { go(idx + 1); });
+      draw();
+    })();
+  </script>
+  <script defer src="../analytics-consent.js"></script>
+</body>
+</html>

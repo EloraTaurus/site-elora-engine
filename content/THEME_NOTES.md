@@ -5,6 +5,7 @@ Last updated: 2026-04-28
 ## Purpose
 - Keep website, replay demo, and engine-facing admin surfaces visually aligned.
 - Make future color adjustments quick and low-risk by editing shared tokens first.
+- For full standards, use `demo/content/branding-pack/README.md`.
 
 ## Primary Palette
 - `--elora-glacier`: `#f7f9fd` (base light)
@@ -43,4 +44,3 @@ Last updated: 2026-04-28
 - Avoid very pale gradients on hero headings without either:
   - darker gradient endpoint, or
   - stronger text shadow.
-

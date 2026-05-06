@@ -1,5 +1,16 @@
 # Site / Demo Changelog
 
+## 2026-05-06
+- Synced public-safe Engine changelog (`demo/content/CHANGELOG_ENGINE.md`) with latest 0.2.0 release-line milestones through:
+  - `2026-05-01` refresh-governance and runtime-observability safeguards,
+  - `2026-05-02` research queue self-heal and bounded view-cache behavior,
+  - `2026-05-05` state-adapter migration and role/disclosure hardening,
+  - `2026-05-06` ERIS runtime-intelligence and Curiosity queue governance milestones.
+- Synced public LLM changelog (`demo/content/CHANGELOG_LLM.md`) to the latest line through `0.21 (2026-05-06)`.
+- Added governance/prior-art chronology updates to public Technical Disclosure page, including current chronology extension through early May milestones.
+- Added new public Gallery route and image-carousel walkthrough surface for engine snapshots and contextual feature narration.
+- Paused Model Exams public demo entry points and shifted walkthrough priority to Governance Replay + Research Dashboard/report flows.
+
 ## 2026-04-28
 - Introduced unified light-theme skin across website and replay/admin engine demo surfaces:
   - white-base UI treatment with shared cobalt/violet palette tokens,
