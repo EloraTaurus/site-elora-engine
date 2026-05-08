@@ -227,6 +227,22 @@ Ingress
 - Proof type: Governance learning-signal generation and cross-module coordination boundary
 - Evidence summary: Dedicated Model Exams signal/event contracts and Elora CORE coordination surfaces were introduced to aggregate learning/state evidence while preserving module separation and read-only persona translation boundaries.
 
+### Machine Learning Progression Milestone (Bucketed Learning + Signal Fusion)
+
+- Date: `2026-04-25`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine/LLM changelog entries (`2026-04-25`)
+- Proof type: Deterministic non-neural machine-learning progression
+- Evidence summary: ML progression expanded with bucketed-learning continuity, weighted fusion across learned signals, and stronger governance-aligned scoring maturity.
+
+### ERIS Runtime Machine-Learning Domain Formalization
+
+- Date: `2026-05-06`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine/LLM changelog entries (`2026-05-06`)
+- Proof type: Runtime self-intelligence machine-learning domain formalization
+- Evidence summary: ERIS was formalized as a dedicated runtime-learning domain for worker/process/pressure posture intelligence, separated from model-behaviour learning domains.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

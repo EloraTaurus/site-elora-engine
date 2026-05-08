@@ -180,6 +180,22 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Added Model Exams run/event/feature export surfaces and Elora CORE coordination boundaries for module-state aggregation, learning visibility, and read-only persona translation with preserved policy independence.
 
+#### Machine Learning Progression Milestone (Bucketed Learning + Signal Fusion)
+
+- Date: `2026-04-25`
+- Source anchor: Engine + LLM changelog (`2026-04-25`)
+- Evidence class: Non-neural ML maturity expansion
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Expanded ML maturity with bucketed-learning continuity, weighted learned-signal fusion, and governance-aligned scoring progression.
+
+#### ERIS Runtime Machine-Learning Domain Formalization Milestone
+
+- Date: `2026-05-06`
+- Source anchor: Engine + LLM changelog (`2026-05-06`)
+- Evidence class: Runtime self-intelligence ML domain formalization
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Formalized ERIS as a dedicated runtime-machine-learning domain for runtime posture intelligence, separate from model-behaviour learning domains.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components

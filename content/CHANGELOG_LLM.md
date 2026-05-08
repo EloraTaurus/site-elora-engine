@@ -2,6 +2,20 @@
 
 Disclosure level: Public (capability chronology). Implementation-level route names, internal thresholds, and reproducibility-critical details are intentionally omitted.
 
+Machine learning implementation anchors (public-safe):
+- Initial ML foundation implementation: `2026-04-24`
+- ML maturity expansion: `2026-04-25`
+- ERIS runtime-ML formalization in LLM-facing chronology: `2026-05-06` (`0.21`)
+
+## 0.22 - 2026-05-06
+- Added public-safe milestone coverage for governed Elora Human Interaction trial rollout.
+- Added autonomous Elora operator-messaging milestone coverage independent of chat-window focus.
+- Added runtime-priority safety milestone coverage so interaction remains subordinate to active research/runtime-critical execution.
+- Added anti-spam governance milestone coverage for bounded autonomous messaging cadence.
+- Added offline-delivery milestone coverage so Elora can leave messages for operators to review on next login.
+- Added launcher unread-badge milestone coverage for pending Elora messages while chat is closed.
+- Added message-retention milestone coverage by removing operator clear control from the Elora interaction chat surface.
+
 ## 0.21 - 2026-05-06
 - Added public-safe milestone coverage for ERIS runtime intelligence.
 - Added runtime learning/state visibility surfaces for worker, process, pressure, and profile posture.

@@ -2,9 +2,40 @@
 
 Disclosure level: Public (high-detail technical summary). Internal route inventories, exact operational thresholds, and direct reproducibility playbooks are intentionally omitted.
 
+Machine learning implementation anchors (public-safe):
+- Initial ML foundation implementation: `2026-04-24` (Model Exams + CORE learning coordination)
+- ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
+- ERIS runtime-ML domain formalization: `2026-05-06`
+
 ## ------------- 0.2.0 --------------
 
+## 2026-05-08
+- Added trial interaction capture milestone coverage for Elora `[Question]` prompts and operator answers stored for analysis-only (non-persistent learning).
+- Added permission-gated follow-up questioning milestone coverage (`[Question][Permission]`) with explicit consent states for safer bounded dialogue flow.
+- Added operator quick-consent milestone coverage in admin chat (`Yes, proceed` / `Not right now` / `No`) to reduce ambiguity in consent interpretation.
+- Added autonomous no-response follow-up milestone coverage for pending trial questions in active-operator windows.
+- Added autonomous offline anti-spam milestone coverage so only one offline-targeted message is emitted before hold-until-active behavior.
+- Added chat avatar rendering stability milestone coverage for fixed 1:1 presentation without flex compression artifacts.
+- Added Curiosity governance hardening milestone coverage for Elora-only proposal origination and explicit human-confirmed preparation flow.
+
+## 2026-05-07
+- Added Curiosity governance milestone coverage for signal-proposal lifecycle controls (suggest, propose, approve, reject, cancel, delete) under split-authority review posture.
+- Added approved-signal catalog integration milestone coverage so accepted Curiosity signals feed tracked learning-visibility surfaces.
+- Added Curiosity auto-suggestion milestone coverage for detecting and proposing new signals from active focus recommendations.
+- Added Curiosity operator UX milestone coverage for clearer proposal management and approval workflow handling in CORE.
+- Added safe deletion guardrail milestone coverage to prevent pending/active-run proposal removal side effects.
+- Added observer prefill and resume continuity milestone coverage for queue-origin learning runs.
+- Added admin `Approve + Prepare` milestone coverage to preserve governed approval plus explicit pre-run human confirmation.
+- Added CPU-safe model posture milestone coverage for Curiosity proposal prefill/dispatch behavior and operator-visible clamp explainability.
+
 ## 2026-05-06
+- Added public-safe Elora Human Interaction milestone coverage for governed trial-mode operator chat.
+- Added autonomous operator-messaging milestone coverage so Elora can post without requiring chat-window activity.
+- Added safety-first runtime-priority milestone coverage where interaction remains secondary to active research/repair/runtime-critical work.
+- Added anti-spam/autonomy-governance milestone coverage for bounded autonomous messaging cadence.
+- Added offline delivery milestone coverage so Elora can leave operator-targeted messages for next sign-in.
+- Added pending-message visibility milestone coverage with launcher unread count while chat is closed.
+- Added message-retention milestone coverage by removing operator UI clear action from Elora interaction chat.
 - Added public-safe milestone coverage for ERIS runtime-state expansion with stronger worker/process/pressure learning visibility.
 - Added runtime intelligence visibility milestones aligned to Engine Health and Elora CORE workflows.
 - Added cache-backed runtime-view milestone coverage for lower read pressure during active learning cycles.
@@ -14,6 +45,11 @@ Disclosure level: Public (high-detail technical summary). Internal route invento
 - Added split-authority governance posture coverage for Curiosity approvals, including proposer/approver separation.
 - Added Curiosity runtime posture-state visibility coverage (`idle`, `scheduled`, `triggered`, `queued`, `running`, `cooling_down`) with cooldown and execution-window context.
 - Added runtime worker planning visibility upgrades for compute/RAM continuity diagnostics.
+- Added Curiosity Research governance hardening coverage for mandatory learning-intent fields, proposal expiry/review lifecycle, and stale auto-archive behavior.
+- Added Elora Translate observe-first trial milestone coverage with explicit operator-visible translation traceability.
+- Added machine-language-gated reverse translation milestone coverage so human-readable outputs are not unnecessarily transformed.
+- Added replay/report translation visibility milestone coverage for prompt/output comparison and translation-status auditability.
+- Added research dashboard translation-tag milestone coverage (`translate.observe`, `translate.off`, `translate.active_scaffold`) for run-level filtering and comparison.
 
 ## 2026-05-05
 - Added state-adapter-first control-plane milestone coverage for expanded read-scope aggregation and reduced high-fanout reads.
