@@ -140,12 +140,13 @@
       const carousel = document.querySelector('[data-gallery-carousel]');
       if (!carousel) return;
 
-      const slides = Array.from(carousel.querySelectorAll('[data-gallery-slide]'));
+      let slides = Array.from(carousel.querySelectorAll('[data-gallery-slide]'));
       const dotsWrap = carousel.querySelector('[data-gallery-dots]');
       const prevBtn = carousel.querySelector('[data-gallery-prev]');
       const nextBtn = carousel.querySelector('[data-gallery-next]');
       const titleEl = carousel.querySelector('[data-gallery-title]');
       const copyEl = carousel.querySelector('[data-gallery-copy]');
+      const stageEl = carousel.querySelector('.gallery-stage');
       let idx = 0;
 
       const content = [
@@ -166,6 +167,60 @@
           copy: 'Background and spacing layers establish the white-first operator look while preserving contrast for policy-critical controls and status indicators.'
         }
       ];
+
+      function normalizeSlide(basePath, item) {
+        if (!item || !item.src) return null;
+        return {
+          src: basePath + encodeURIComponent(item.src).replace(/%2F/g, '/'),
+          alt: item.alt || item.title || 'Elora Engine gallery image',
+          title: item.title || 'Engine Surface',
+          copy: item.copy || 'Public-safe engine gallery image.'
+        };
+      }
+
+      async function loadManifest() {
+        const candidates = [
+          { url: '../content/gallery-image/manifest.json', base: '../content/gallery-image/' },
+          { url: '../content/gallery-engine/manifest.json', base: '../content/gallery-engine/' }
+        ];
+        for (let i = 0; i < candidates.length; i += 1) {
+          const c = candidates[i];
+          try {
+            const resp = await fetch(c.url, { cache: 'no-store' });
+            if (!resp.ok) continue;
+            const json = await resp.json();
+            if (!json || !Array.isArray(json.slides)) continue;
+            const parsed = json.slides
+              .map(function (s) { return normalizeSlide(c.base, s); })
+              .filter(Boolean);
+            if (parsed.length) return parsed;
+          } catch (_) {}
+        }
+        return [];
+      }
+
+      function renderSlides(manifestSlides) {
+        if (!stageEl || !manifestSlides.length) return;
+        stageEl.innerHTML = '';
+        content.length = 0;
+        manifestSlides.forEach(function (item, i) {
+          const fig = document.createElement('figure');
+          fig.className = 'gallery-slide' + (i === 0 ? ' is-active' : '');
+          fig.setAttribute('data-gallery-slide', '');
+          const img = document.createElement('img');
+          img.src = item.src;
+          img.alt = item.alt;
+          img.onerror = function () {
+            this.onerror = null;
+            this.src = '../elora-demo-screenshot.png';
+          };
+          fig.appendChild(img);
+          stageEl.appendChild(fig);
+          content.push({ title: item.title, copy: item.copy });
+        });
+        slides = Array.from(carousel.querySelectorAll('[data-gallery-slide]'));
+        idx = 0;
+      }
 
       function draw() {
         slides.forEach(function (el, i) {
@@ -188,7 +243,8 @@
         draw();
       }
 
-      if (dotsWrap) {
+      function buildDots() {
+        if (!dotsWrap) return;
         dotsWrap.innerHTML = '';
         slides.forEach(function (_, i) {
           const dot = document.createElement('button');
@@ -201,9 +257,16 @@
         });
       }
 
+      async function init() {
+        const manifestSlides = await loadManifest();
+        if (manifestSlides.length) renderSlides(manifestSlides);
+        buildDots();
+        draw();
+      }
+
       if (prevBtn) prevBtn.addEventListener('click', function () { go(idx - 1); });
       if (nextBtn) nextBtn.addEventListener('click', function () { go(idx + 1); });
-      draw();
+      init();
     })();
   </script>
   <script defer src="../analytics-consent.js"></script>

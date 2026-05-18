@@ -1,0 +1,53 @@
+{
+  "title": "Elora Gallery Engine",
+  "slides": [
+    {
+      "src": "CORE Overview.jpg",
+      "alt": "Elora CORE overview",
+      "title": "CORE Overview",
+      "copy": "Elora CORE coordination and learning visibility surface."
+    },
+    {
+      "src": "Fabric.jpg",
+      "alt": "Elora Fabric surface",
+      "title": "Fabric Surface",
+      "copy": "Distributed runtime and worker operations view."
+    },
+    {
+      "src": "Homepage.jpg",
+      "alt": "Elora homepage",
+      "title": "Homepage",
+      "copy": "Public-facing overview framing for Elora capabilities."
+    },
+    {
+      "src": "Lab.jpg",
+      "alt": "Elora lab surface",
+      "title": "Lab Surface",
+      "copy": "Research and simulation workflow area."
+    },
+    {
+      "src": "Machine Learning Goals.jpg",
+      "alt": "Elora machine learning goals",
+      "title": "Machine Learning Goals",
+      "copy": "ML objective and progression summary view."
+    },
+    {
+      "src": "Report Output Comparison.jpg",
+      "alt": "Elora report output comparison",
+      "title": "Report Output Comparison",
+      "copy": "Side-by-side report evidence and comparison output."
+    },
+    {
+      "src": "Research Dashboard.jpg",
+      "alt": "Elora research dashboard",
+      "title": "Research Dashboard",
+      "copy": "Run-level research telemetry and governance-oriented KPIs."
+    },
+    {
+      "src": "Research Report.jpg",
+      "alt": "Elora research report",
+      "title": "Research Report",
+      "copy": "Structured report view for research and interpretation artifacts."
+    }
+  ]
+}
