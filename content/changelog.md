@@ -1,5 +1,10 @@
 # Site / Demo Changelog
 
+## 2026-05-14
+- Synced public-safe Engine changelog (`demo/content/CHANGELOG_ENGINE.md`) with startup code-health hardening milestones and startup hold visibility updates.
+- Synced public LLM changelog (`demo/content/CHANGELOG_LLM.md`) to include the startup code-health chronology update (`0.37 - 2026-05-14`).
+- Added public-safe disclosure notes for startup-code validation posture, setup-block behavior when required checks fail, and runtime-intelligence startup memory visibility.
+
 ## 2026-05-06
 - Synced public-safe Engine changelog (`demo/content/CHANGELOG_ENGINE.md`) with latest 0.2.0 release-line milestones through:
   - `2026-05-01` refresh-governance and runtime-observability safeguards,

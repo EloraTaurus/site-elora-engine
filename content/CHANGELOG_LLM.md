@@ -7,6 +7,46 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25`
 - ERIS runtime-ML formalization in LLM-facing chronology: `2026-05-06` (`0.21`)
 
+## 0.37 - 2026-05-14
+- Added startup code-health milestone coverage with a dedicated startup validation stage before full admin-surface availability.
+- Added setup-posture gate milestone coverage where required code-health failures can hold startup in a blocked state.
+- Expanded startup progress visibility milestones with code-health status and startup code-error summaries.
+- Expanded Runtime Intelligence milestone coverage for startup code-health memory signals in operator-facing summaries.
+- Added operator control milestone coverage for startup code-health enable/require posture and bounded scan limits.
+
+## 0.34 - 2026-05-13
+- Added persistent Elora reasoning-panel milestone coverage so deterministic method context can remain visible across admin-page navigation.
+- Added cross-page interaction-trace continuity milestone coverage for safer method/decision visibility after page transitions.
+- Added handoff-transparency milestone coverage so Elora can explicitly report rejected LLM attempts before deterministic fallback responses.
+- Added replay/audit explainability milestone coverage for richer handoff rejection and candidate metadata visibility.
+
+## 0.32 - 2026-05-13
+- Added security-hardening milestone coverage for path-scoped browser policy controls across admin/public surfaces.
+- Added public-surface policy-tightening milestone coverage that reduces high-risk script execution allowances.
+- Added modular hardening milestone coverage via dedicated security grouping for API-surface policy construction.
+- Added CSP regression-test milestone coverage for policy divergence and controlled compatibility toggles.
+- Added operator-readiness milestone coverage with a dedicated capability matrix that highlights missing prerequisites and operational impact.
+- Added security-navigation milestone coverage moving Security into a dedicated top-level admin surface for faster operator access.
+- Added capability-gate milestone coverage so selected high-risk functions can be present but blocked until security prerequisites are met (including Fabric setup controls, SMTP controls, governance policy mutations, and local workerhost deployment policy).
+- Added proactive operator-notification milestone coverage for readiness transitions (blocked/degraded/restored posture changes).
+- Added local workerhost policy-gate milestone coverage to require explicit enablement before high-risk local deployment paths are available.
+
+## 0.31 - 2026-05-12
+- Added public-surface security hardening milestones for status and simulation endpoints with safer default exposure posture.
+- Added abuse-control milestones for public request size enforcement and burst-rate limiting.
+- Added operator security-baseline milestones for finite admin session lifetime defaults and stronger secrets-key posture checks.
+- Added worker/auth hardening milestone coverage for constant-time token verification paths.
+- Added URL-context safety milestone coverage for constrained remote fetch behavior (protocol/network/size/content-type guards).
+- Added upload-safety milestone coverage for stricter media-type validation before admin asset persistence.
+- Added targeted security-regression test coverage milestones across the hardened surfaces.
+
+## 0.30 - 2026-05-12
+- Added public-safe milestone coverage for API governance route-discovery and CI guardrail enforcement to prevent runtime API coverage drift.
+- Added runtime intelligence milestone coverage for broader bounded API/service inventory visibility in Elora-facing diagnostics.
+- Added attribution-accuracy milestone coverage to reduce wildcard telemetry pressure concentration and improve per-surface hotspot identification.
+- Added adaptive-cache isolation milestone coverage for safer independent throttling/degrade posture under heavy cache-analysis load.
+- Added polling-overlap hardening milestone coverage across startup/runtime telemetry surfaces to reduce self-induced refresh contention.
+
 ## 0.22 - 2026-05-06
 - Added public-safe milestone coverage for governed Elora Human Interaction trial rollout.
 - Added autonomous Elora operator-messaging milestone coverage independent of chat-window focus.

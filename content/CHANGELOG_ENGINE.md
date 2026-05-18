@@ -9,6 +9,50 @@ Machine learning implementation anchors (public-safe):
 
 ## ------------- 0.2.0 --------------
 
+## 2026-05-18
+- Added NNLSL deterministic-method milestone coverage for bounded semantic translation, Markov/n-gram synthesis, and evolutionary optimization tracks with replay-stable method evidence.
+- Added method-router milestone coverage for deterministic arbitration across classical method candidates with stable tie-break and hash contracts.
+- Added replay-determinism hardening milestone coverage with precision/normalization contracts for method outputs and stable cross-run evidence comparison.
+- Added explain-verify closure milestone coverage for unknown/ambiguous outcomes, including explicit follow-up context signals and runtime trace visibility.
+- Added trust-tier semantics milestone coverage with canonical confidence tiers carried across runtime evidence surfaces.
+- Added bounded HCU resource-contract milestone coverage for pre-helper eligibility, runtime-priority framing, and deterministic fallback posture when contracts are not satisfied.
+- Added operator-documentation and panel-routing milestone coverage for ML/NNLSL technique visibility and direct handbook jump-link access from interaction surfaces.
+
+## 2026-05-14
+- Added startup code-health milestone coverage with a dedicated bring-up validation phase that checks source integrity before full admin navigation release.
+- Added startup safety-gate milestone coverage so required code-health failures can hold setup posture in blocked state until resolved.
+- Expanded startup progress-page milestone coverage with explicit code-health status and code-error visibility during warmup hold.
+- Expanded Runtime Intelligence milestone coverage with startup code-health memory signals in summary and startup interpretation surfaces.
+- Added operator control milestone coverage for startup code-health enable/require posture and bounded scan limits.
+- Added startup code-health regression-test milestone coverage for failure detection, disabled-mode behavior, and required-gate blocking semantics.
+
+## 2026-05-13
+- Added persistent Elora reasoning visibility at the top of admin pages so deterministic decision/method context remains visible across navigation.
+- Added cross-page interaction-trace continuity so method context can recover after page transitions without waiting for a new chat response.
+- Added explicit handoff-explainability milestone coverage where Elora can report that an LLM attempt was rejected and continue with deterministic fallback output.
+- Added interaction-handoff observability milestone coverage with richer rejection/candidate metadata for replay/audit review.
+- Added security-surface modularization milestone coverage for separated API policy controls and safer admin/public boundary handling.
+- Added operator readiness milestone coverage with a structured capability matrix for missing prerequisites and gate posture visibility.
+- Added top-level Security surface milestone coverage so security controls/readiness are first-class navigation instead of nested settings tabs.
+- Added feature-gate enforcement milestone coverage for selected high-risk admin actions (Fabric setup, SMTP controls, governance policy mutations, and local workerhost deployment) so functionality can remain visible but blocked until requirements are met.
+- Added capability-transition notification milestone coverage so operators receive explicit readiness-state changes in active notifications.
+- Added local workerhost policy-gate milestone coverage requiring explicit enablement before local Docker-socket deployment actions are allowed.
+- Added staged MFA rollout milestone coverage with disabled-by-default policy controls, role-scoped enforcement toggles, and operator-facing readiness visibility.
+- Added startup hardening milestone coverage with restart-bound admin session revocation controls, first-privileged-login startup reporting, and warmup hold behavior to reduce avoidable operator load during engine bring-up.
+- Added key-setup hardening milestone coverage with a local unsaved key generator surface and a safety gate that restricts broader admin actions when critical key posture is incomplete.
+
+## 2026-05-12
+- Added API governance inventory milestone coverage with deterministic route discovery, architecture reporting, and explicit service-branch mapping visibility.
+- Added CI governance guard milestone coverage to prevent API-like coverage regressions in route registration and service mapping.
+- Added runtime-governor hardening milestone coverage for stronger pressure-response decisions (including latency-heavy route handling) with bounded operator alerting.
+- Added adaptive-cache isolation milestone coverage so high-cost cache analytics/tuning can be independently throttled/degraded without broadly impacting core runtime surfaces.
+- Added startup/runtime telemetry fidelity milestone coverage so Runtime State and Runtime Intelligence now surface a broader bounded API/service inventory by default.
+- Added refresh-loop anti-overlap milestone coverage across Startup, Runtime State, and Runtime Intelligence surfaces to reduce self-induced polling contention.
+- Added adaptive-cache interaction safety milestone coverage so expensive cache execution is explicit/manual rather than implicitly re-triggered during basic page refresh/switch interactions.
+- Added service-attribution accuracy milestone coverage to reduce pressure-score concentration from wildcard API buckets and improve per-surface runtime diagnosis.
+- Added scanner/topology alignment milestone coverage so wildcard/prefix API discovery paths map more reliably to governed service branches.
+- Updated API discovery baseline evidence with zero API-like uncovered/unmapped governance gaps under current branch map posture.
+
 ## 2026-05-08
 - Added trial interaction capture milestone coverage for Elora `[Question]` prompts and operator answers stored for analysis-only (non-persistent learning).
 - Added permission-gated follow-up questioning milestone coverage (`[Question][Permission]`) with explicit consent states for safer bounded dialogue flow.
