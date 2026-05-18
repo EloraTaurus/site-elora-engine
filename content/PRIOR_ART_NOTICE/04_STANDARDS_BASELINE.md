@@ -98,21 +98,53 @@ These terms are commonly used as near-equivalents across standards, platforms, a
   - admission control
   - pre-action policy check
   - authorization checkpoint
+- **Proof before execution**:
+  - verification before release
+  - pre-execution validation
+  - policy/evidence check before action
+  - assess-before-enforce
+- **Continuity**:
+  - runtime continuity
+  - operational resilience
+  - fault-tolerant progression
+  - bounded recovery and resume controls
+- **Binding**:
+  - policy binding
+  - context binding
+  - identity-bound decisioning
+  - request-to-decision integrity linkage
 - **Proposal before execution**:
   - request under evaluation
   - candidate output
   - pending authorization artifact
   - pre-commit candidate
+- **Execution governance**:
+  - policy-governed execution
+  - governance-enforced runtime control
+  - auditable policy-constrained execution
+- **Authority before execution**:
+  - authorization prior to action
+  - approval-before-release
+  - decision authority checkpoint
 - **Execution authorization**:
   - policy decision
   - access decision
   - allow/deny decision
   - permit/deny determination
+- **Deny before consequence**:
+  - block before side effects
+  - preventive denial
+  - fail-safe denial before execution impact
 - **Structural refusal**:
   - deny by default
   - fail-safe default
   - fail securely
   - block on policy mismatch
+- **Commit control**:
+  - commit boundary control
+  - release authorization control
+  - final authorization gate
+  - enforce-before-commit
 - **Execution boundary**:
   - policy enforcement point (PEP)
   - authorization enforcement point
@@ -135,3 +167,36 @@ These terms are commonly used as near-equivalents across standards, platforms, a
 - Kubernetes Admission Control docs (pre-persistence gate after authn/authz; public CNCF documentation): https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/
 - OWASP Access Control guidance (deny by default / fail securely): https://devguide.owasp.org/en/04-design/02-web-app-checklist/07-access-controls/
 - Saltzer & Schroeder (1975) secure design principles (fail-safe defaults): https://web.cs.wpi.edu/~cs557/f14/papers/saltzer1975_alt.html
+
+## Additional Historical Grounding for Commit/Control Boundaries
+
+### Transaction Processing and Commit Semantics
+
+- ACID transaction principles and commit semantics are longstanding database/transaction-processing foundations.
+- These concepts establish explicit pre-commit validity and durable commit control as core system behavior.
+- Historical anchors:
+  - Jim Gray, *The Transaction Concept: Virtues and Limitations* (1981)
+  - Gray & Reuter, *Transaction Processing: Concepts and Techniques* (1991)
+
+### Formal Methods and Model Checking
+
+- Formal specification and verification methods have long used pre-action proof/validation framing for correctness and safety properties.
+- This includes temporal logic approaches for concurrent/distributed systems and model-checking workflows for safety/liveness guarantees.
+- Historical anchors:
+  - Leslie Lamport, *The Temporal Logic of Actions* (1994)
+  - Broad model-checking lineage in software/hardware verification before modern AI-era governance language.
+
+### Distributed Consensus and Quorum Lineage
+
+- Consensus protocols established pre-2025 authority/commit ordering in replicated systems, including quorum-driven decision acceptance.
+- These patterns ground commit control as a distributed-systems primitive rather than an AI-specific invention.
+- Historical anchors:
+  - Paxos lineage (Lamport; widely deployed pre-2025)
+  - Additional consensus families (e.g., PBFT, Raft) with explicit quorum and commit semantics.
+
+### Secure Workflow and Orchestration Lineage
+
+- Workflow orchestration standards have long modeled controlled step transitions, approval paths, and policy-bound process execution.
+- Historical anchors:
+  - WS-BPEL 2.0 (OASIS Standard, 2007)
+  - Enterprise workflow/governance patterns predating AI-specific execution-governance narratives.
