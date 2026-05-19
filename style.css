@@ -345,6 +345,33 @@ a:hover { color: var(--brand-link-hover); }
   box-shadow: 0 0 0 1px rgba(122, 131, 200, 0.25) inset;
 }
 
+.nav-btn.prior-art-btn {
+  border-color: #bfa9ff;
+  background: #efe8ff;
+  color: #533889;
+  box-shadow: 0 0 0 1px rgba(166, 131, 245, 0.28) inset;
+  font-weight: 700;
+}
+
+.nav-btn.prior-art-btn:hover {
+  border-color: #a98bf5;
+  background: #e6dcff;
+  color: #462e78;
+}
+
+.btn.prior-art-cta {
+  background: linear-gradient(180deg, #c9b7ff, #b097f3);
+  border-color: #a283ea;
+  color: #2f2152;
+  font-weight: 700;
+}
+
+.btn.prior-art-cta:hover {
+  background: linear-gradient(180deg, #d7c8ff, #bba5f6);
+  border-color: #9372df;
+  color: #241744;
+}
+
 .hero {
   margin-top: 20px;
   border: none;
