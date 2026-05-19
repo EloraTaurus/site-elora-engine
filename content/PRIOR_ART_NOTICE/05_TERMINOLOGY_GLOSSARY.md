@@ -46,8 +46,24 @@ The operational severity label assigned to a run or decision context to support 
 
 UI/API surfaces used by human operators to inspect evidence, replay chronology, and policy outcomes.
 
+## External Phrase Mapping (Reviewer Aid)
+
+The phrases below are included as reviewer mapping aids. They are not exclusive to any single implementation lineage.
+
+- `proof before execution` -> pre-execution validation, policy/evidence check before action
+- `continuity` -> runtime continuity, bounded recovery/resume behavior
+- `binding` -> policy/context/identity binding across decision stages
+- `execution governance` -> policy-governed execution with auditable controls
+- `authority before execution` -> authorization prior to release/action
+- `admissibility` -> governance-condition satisfaction at authorization boundary
+- `deny before consequence` -> preventive deny/block before side effects
+- `commit control` -> final authorization gate at release boundary
+
+For standards-level lineage and dated sources, see:
+- `04_STANDARDS_BASELINE.md`
+
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-03-09`
+- Last updated: `2026-05-19`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.

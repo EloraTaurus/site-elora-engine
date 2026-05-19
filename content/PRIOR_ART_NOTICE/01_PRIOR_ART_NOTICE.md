@@ -61,6 +61,24 @@ Current public release line reflected on this disclosure page is `0.2.0`.
 
 Public references here intentionally use short commit fingerprints because the source repository is private. Full hashes and immutable evidence bundles are retained offline.
 
+## Terminology Clarification (Public-Facing)
+
+Elora recognizes that practitioners and claimants may use different wording for closely related governance/control concepts.
+
+Elora’s public disclosure uses project-specific wording such as:
+- `proposal`
+- `commit`
+- `authorization boundary`
+- `blocked commit validation`
+- `replay evidence`
+
+Equivalent language is widely used across industry and standards communities (for example policy gate, admission control, deny-by-default, enforcement point, pre-action authorization).  
+
+This archive is intended to:
+- document Elora’s own implementation chronology and architecture,
+- keep terminology mapping transparent for external reviewers,
+- avoid ambiguity between Elora’s terms and external phrase variants.
+
 ## Universal Disclaimer
 
 The Elora Taurus Project operates as an open, independent personal research and experimentation initiative. The milestones listed here, from early logic gates to distributed execution boundaries, are timestamped through third-party infrastructure and public disclosures where possible.
