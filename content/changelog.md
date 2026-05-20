@@ -1,5 +1,11 @@
 # Site / Demo Changelog
 
+## 2026-05-20
+- Synced public-safe Engine changelog (`demo/content/CHANGELOG_ENGINE.md`) with constitutional-governance baseline and memory-governance substrate milestones.
+- Synced public LLM changelog (`demo/content/CHANGELOG_LLM.md`) with constitutional fail-closed and operator memory-consent chronology updates (`0.38 - 2026-05-20`).
+- Updated public major-milestone stream (`demo/content/CHANGELOG_PUBLIC.md`) to mark constitutional + memory safety substrate completion and emergence-prep phase status.
+- Synced public-safe changelog streams with governed cognitive-artifact substrate progress (role-gated APIs, tombstone lifecycle controls, and replayable lineage) as the final pre-emergence safety layer.
+
 ## 2026-05-14
 - Synced public-safe Engine changelog (`demo/content/CHANGELOG_ENGINE.md`) with startup code-health hardening milestones and startup hold visibility updates.
 - Synced public LLM changelog (`demo/content/CHANGELOG_LLM.md`) to include the startup code-health chronology update (`0.37 - 2026-05-14`).

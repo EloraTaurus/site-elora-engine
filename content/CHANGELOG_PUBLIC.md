@@ -7,6 +7,12 @@ Format:
 
 ## Major Milestones
 
+## 2026-05-20
+- Constitutional-governance baseline established with explicit doctrine boundaries and signed policy-change controls.
+- Memory-governance baseline established with tombstone-only lifecycle behavior and operator consent-aware access controls.
+- Governed cognitive-artifact substrate established for dreams/self-memory/response-seeds/lexicon-responses with role-gated write paths and replayable event lineage.
+- Build progression now marks constitutional, memory, and cognitive-artifact safety substrate as complete, with cognitive-emergence synthesis tracked as next-phase in progress.
+
 ## 2026-05-18
 - NNLSL deterministic-method baseline expanded with bounded classical reasoning tracks and stronger replay-stable evidence contracts.
 - Trust-tier semantics and explain-verify closure patterns expanded for clearer operator interpretation of uncertain outcomes.

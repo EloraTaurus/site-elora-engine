@@ -7,6 +7,13 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25`
 - ERIS runtime-ML formalization in LLM-facing chronology: `2026-05-06` (`0.21`)
 
+## 0.38 - 2026-05-20
+- Added constitutional-governance milestone coverage for explicit preservation-boundary doctrine and signed policy-change controls.
+- Added fail-closed memory-influence posture coverage when constitutional safety dependencies are degraded or unavailable.
+- Added memory-governance milestone coverage for tombstone-only lifecycle behavior in place of hard-delete semantics.
+- Added operator memory-consent milestone coverage with per-operator/profile opt-in controls and bounded consent-aware memory access behavior.
+- Added governed cognitive-artifact chronology coverage for role-gated registration/tombstone handling and replayable hash-linked lineage across pre-emergence artifact classes.
+
 ## 0.37 - 2026-05-14
 - Added startup code-health milestone coverage with a dedicated startup validation stage before full admin-surface availability.
 - Added setup-posture gate milestone coverage where required code-health failures can hold startup in a blocked state.

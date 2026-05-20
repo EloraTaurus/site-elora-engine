@@ -151,6 +151,43 @@ These terms are commonly used as near-equivalents across standards, platforms, a
   - commit boundary
   - release gate
 
+## Phrase-Variant Index (Public Reviewer Search Aid)
+
+These phrase variants are included so reviewers can map public claims to established standards language without implying exclusivity over wording.
+
+- `admissibility before execution`:
+  - admission control before persistence
+  - policy evaluation before action
+  - authorize then enforce
+- `authority before execution`:
+  - authorization prior to action
+  - approval-before-release
+  - decision authority checkpoint
+- `proof before execution`:
+  - pre-execution verification
+  - verification before release
+  - evidence check before side effects
+- `execution governance`:
+  - policy-governed execution
+  - governance-enforced runtime control
+  - policy-constrained execution path
+- `commit control`:
+  - final authorization gate
+  - commit-boundary enforcement
+  - release-control checkpoint
+- `deny before consequence`:
+  - deny by default before side effects
+  - preventive denial before execution impact
+  - fail-safe block before action
+- `binding`:
+  - policy binding
+  - context binding
+  - request-to-decision binding
+- `continuity`:
+  - runtime continuity
+  - bounded recovery/resume
+  - operational continuity controls
+
 ## Neutral Legal and Disclosure Position
 
 - This document is a technical and standards-baseline record, not a legal conclusion.

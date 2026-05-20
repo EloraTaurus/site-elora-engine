@@ -7,7 +7,22 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
-## ------------- 0.2.0 --------------
+## ------------- 0.2.x Chronology --------------
+
+## ------------- 0.2.4 --------------
+### Release Focus
+- Constitutional governance baseline plus cognitive substrate expansion.
+
+## 2026-05-20
+- Added constitutional-governance baseline milestone coverage with immutable root posture, signed policy-version change flow, role-gated approvals, and emergency-lock controls.
+- Added constitutional fail-closed interaction milestone coverage where memory influence is withheld under degraded/unavailable governance dependency posture.
+- Added memory lifecycle-governance milestone coverage replacing hard-delete behavior with tombstone-only transitions while preserving continuity/audit evidence.
+- Added operator memory-consent milestone coverage with per-operator/profile opt-in, retention/classification controls, and consent-aware runtime access behavior.
+- Added governed cognitive-artifact substrate milestone coverage for dream/self-memory/response-seed/lexicon-response records with role-gated admin APIs, hash-chain event lineage, and fail-closed write posture before emergence rollout.
+
+## ------------- 0.2.3 --------------
+### Release Focus
+- NNLSL deterministic method-chain and bounded pre-helper governance contracts.
 
 ## 2026-05-18
 - Added NNLSL deterministic-method milestone coverage for bounded semantic translation, Markov/n-gram synthesis, and evolutionary optimization tracks with replay-stable method evidence.
@@ -17,6 +32,10 @@ Machine learning implementation anchors (public-safe):
 - Added trust-tier semantics milestone coverage with canonical confidence tiers carried across runtime evidence surfaces.
 - Added bounded HCU resource-contract milestone coverage for pre-helper eligibility, runtime-priority framing, and deterministic fallback posture when contracts are not satisfied.
 - Added operator-documentation and panel-routing milestone coverage for ML/NNLSL technique visibility and direct handbook jump-link access from interaction surfaces.
+
+## ------------- 0.2.2 --------------
+### Release Focus
+- Security and readiness hardening across startup, policy gates, and operator controls.
 
 ## 2026-05-14
 - Added startup code-health milestone coverage with a dedicated bring-up validation phase that checks source integrity before full admin navigation release.
@@ -52,6 +71,10 @@ Machine learning implementation anchors (public-safe):
 - Added service-attribution accuracy milestone coverage to reduce pressure-score concentration from wildcard API buckets and improve per-surface runtime diagnosis.
 - Added scanner/topology alignment milestone coverage so wildcard/prefix API discovery paths map more reliably to governed service branches.
 - Updated API discovery baseline evidence with zero API-like uncovered/unmapped governance gaps under current branch map posture.
+
+## ------------- 0.2.1 --------------
+### Release Focus
+- Runtime observability, Curiosity governance lifecycle, and ERIS expansion.
 
 ## 2026-05-08
 - Added trial interaction capture milestone coverage for Elora `[Question]` prompts and operator answers stored for analysis-only (non-persistent learning).
@@ -121,6 +144,10 @@ Machine learning implementation anchors (public-safe):
 - Added background-loop observability milestone coverage with clearer lifecycle posture.
 - Added runaway safeguard milestone coverage for unscheduled activity and idle overhead reduction.
 - Added autoscale/control-loop efficiency milestone coverage for safer low-overhead background behavior.
+
+## ------------- 0.2.0 --------------
+### Release Focus
+- Model Exams + CORE learning foundation with adaptive runtime learning maturity.
 
 ## 2026-04-30
 - Added observer runtime stability milestone coverage for fallback-path reliability hardening.

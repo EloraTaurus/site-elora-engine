@@ -59,11 +59,28 @@ The phrases below are included as reviewer mapping aids. They are not exclusive 
 - `deny before consequence` -> preventive deny/block before side effects
 - `commit control` -> final authorization gate at release boundary
 
+## Highlight Terms (Dispute-Mapping Index)
+
+These terms are intentionally listed as reviewer mapping keywords:
+
+- `proof before execution`
+- `continuity`
+- `binding`
+- `execution governance`
+- `authority before execution`
+- `admissibility`
+- `deny before consequence`
+- `commit control`
+
+Interpretation rule:
+
+- phrase differences do not change the underlying control primitive when the architecture still performs policy evaluation and authorization before execution.
+
 For standards-level lineage and dated sources, see:
 - `04_STANDARDS_BASELINE.md`
 
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-05-19`
+- Last updated: `2026-05-20`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.
