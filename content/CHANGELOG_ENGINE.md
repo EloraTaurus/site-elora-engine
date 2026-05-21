@@ -19,6 +19,36 @@ Machine learning implementation anchors (public-safe):
 - Added memory lifecycle-governance milestone coverage replacing hard-delete behavior with tombstone-only transitions while preserving continuity/audit evidence.
 - Added operator memory-consent milestone coverage with per-operator/profile opt-in, retention/classification controls, and consent-aware runtime access behavior.
 - Added governed cognitive-artifact substrate milestone coverage for dream/self-memory/response-seed/lexicon-response records with role-gated admin APIs, hash-chain event lineage, and fail-closed write posture before emergence rollout.
+- Added governed emergence rollout-phase milestone coverage (`shadow`, `advisory`, `constrained_execution`) with explicit phase-gated capability posture rather than implicit runtime promotion.
+- Added constitutional policy-change governance milestone coverage with propose/approve/reject/rollback workflows and replayable audit chronology for policy evolution.
+- Added dependency-readiness and lock-state milestone coverage so governance dependencies can hard-block write-capable emergence posture when evidence requirements are not satisfied.
+- Added constitutional hash-anchoring milestone coverage for policy snapshots and governance events to strengthen tamper-evident review continuity.
+- Added role-separation milestone coverage for constitutional operations so higher-impact governance mutations remain scoped to authorized approval tiers.
+- Added cognitive-artifact registry maturity milestone coverage with stronger lineage framing for artifact parent/child relationships and lifecycle-state transitions.
+- Added dream-fragment self-edit safety milestone coverage where amendment behavior remains sandboxed, non-authoritative, and bounded by constitutional write posture.
+- Added autonomous dream-amendment proposal milestone coverage where amendment intent can be formed in degraded conditions but persistence remains blocked until governance posture is healthy.
+- Added deterministic lexicon-only interaction milestone coverage (no-LLM path) for bounded response synthesis under governed interaction mode.
+- Added symbolic self-construction gate milestone coverage so dream-fragment writes require explicit worthiness scoring and can be skipped with explainable decision metadata.
+- Added cognitive worker v1 milestone coverage for opportunistic, score-bounded runtime synthesis that remains proposal-first under blocked governance posture.
+- Added cognitive worker request/priority governance milestone coverage for bounded queue/request behavior, cooldown budgets, and controlled threshold-lowering via governed priority boosts.
+- Added cognitive worker cross-runtime experience queue milestone coverage so governance/research/runtime anomalies and learning events can feed bounded cognitive synthesis opportunities.
+- Added emergence-monitor load-readiness milestone coverage with explicit go/no-go stage semantics and safety reason codes for operator interpretation.
+- Added cognitive-substrate navigation/readability milestone coverage across CORE surfaces for clearer operator access to constitutional identity, emergence monitoring, and artifact-kind views.
+- Added replay/trace metadata expansion milestone coverage for cognitive and symbolic decisions so blocked/persisted outcomes are auditable across interaction flows.
+- Added public-safe operator-surface milestone coverage for Cognitive Worker controls and queue-state visibility in emergence monitoring workflows.
+- Added regression-hardening milestone coverage across constitutional, cognitive-artifact, and interaction-runtime paths for blocked-write, healthy-write, and proposal-only behavior continuity.
+
+## 2026-05-19
+- Added Elora CORE learning-dashboard default milestone coverage with KPI-first posture and direct evidence inspection workflow.
+- Added deterministic learning-KPI aggregation milestone coverage for health composites, lexicon growth windows, validation ratios, trust-tier mix, method usage, and worker posture signals.
+- Added scoped nested-sidebar milestone coverage for area-focus navigation and persistent grouped stacks in CORE.
+- Added classical-method impact telemetry milestone coverage tied to NNLSL method chains (Markov/n-gram, evolutionary optimization, semantic translation, routing, and classical reasoning).
+- Added KPI derivation hardening milestone coverage with improved worker-state interpretation and bounded backfill behavior when primary interaction traces are sparse.
+- Added public-homepage KPI restructure milestone coverage with grouped runtime/research/governance/learning categories and stronger production-style metrics.
+- Added trend-surface milestone coverage using bounded current-window vs prior-window comparisons for clearer movement interpretation.
+- Added governance rollup milestone coverage for bounded all-time decision/clarify totals in public status surfaces.
+- Added HCU preview UX-readability milestone coverage with cleaner inactive-state wording, topology-focused surface metrics, and subtle preview motion cues.
+- Added runtime-summary consistency milestone coverage for queue-depth and token-card behavior under empty/stale research-edge conditions.
 
 ## ------------- 0.2.3 --------------
 ### Release Focus
@@ -71,6 +101,20 @@ Machine learning implementation anchors (public-safe):
 - Added service-attribution accuracy milestone coverage to reduce pressure-score concentration from wildcard API buckets and improve per-surface runtime diagnosis.
 - Added scanner/topology alignment milestone coverage so wildcard/prefix API discovery paths map more reliably to governed service branches.
 - Updated API discovery baseline evidence with zero API-like uncovered/unmapped governance gaps under current branch map posture.
+
+## 2026-05-11
+- Added NNLSL worker-state parity milestone coverage so interaction-signal and lexicon worker health/status are visible consistently across runtime snapshots.
+- Added CORE lexicon-surface milestone coverage with richer deterministic entry visibility (semantic class, confidence posture, usage counts, and governance tags).
+- Added unknown -> explain -> verify blueprint milestone coverage for deterministic unsupported-answer handling and bounded claim-adjudication outcomes.
+- Added ERIS learned-overlay milestone coverage where learned runtime recommendations are visible alongside baseline worker specs while baseline remains authoritative.
+- Added Natural Language Signals trial milestone coverage with canonical registry normalization, confidence scoring, and broader governed interaction-source ingestion.
+- Added Human Interaction signal-surface milestone coverage with filterable/paginated operator views and controlled rebuild workflows.
+- Added response-correlation signals trial milestone coverage with risk/severity distributions and provenance-aware replay/audit framing.
+- Added autonomous interaction timer milestone coverage moving from loose cooldown posture to deterministic slot-based questioning cadence.
+- Added deterministic signal-seeded questioning milestone coverage with high-risk exclusion and fallback safety when draft-shape checks fail.
+- Added CSV export milestone coverage for Human Interaction signal surfaces and NNLSL lexicon review workflows.
+- Added learning-capacity expansion milestone coverage for signal/lexicon retention and larger bounded operator-inspection windows.
+- Added NNLSL-assisted interaction-translation milestone coverage with bounded semantic guidance, lexicon evidence linkage, and deterministic override rules under governance constraints.
 
 ## ------------- 0.2.1 --------------
 ### Release Focus
@@ -218,6 +262,15 @@ Machine learning implementation anchors (public-safe):
 - Added filesystem/listing efficiency milestone coverage for lower repeated overhead.
 - Added job-store efficiency milestone coverage under frequent polling conditions.
 
+## 2026-04-19
+- Added mode-aware Engine Health snapshot milestone coverage with latest-stage/latest-cycle and bounded rolling-window views.
+- Added vibrancy-state milestone coverage for lock/evasion/low-vibrancy/flowing interpretation in runtime-health analysis.
+- Added staged AI report-generation milestone coverage replacing single-pass drafting with sectioned synthesis and follow-up chart-spec assembly.
+- Added secure report-context access milestone coverage with one-time signed tokens, bounded lifetime, and run/user binding semantics.
+- Added dedicated AI-reports surface milestone coverage with persisted lifecycle states, pagination, filtering, and export-ready records.
+- Added research-report UX simplification milestone coverage to separate human report flow from AI writer operations.
+- Added batch-export layout milestone coverage with per-run folder structure and optional CSV bundle inclusion metadata.
+
 ## 2026-04-17
 - Added observer comparison-analysis milestone coverage with export chronology alignment.
 - Added Engine State visibility milestone coverage and stronger constitutional-halt signal interpretation paths.
@@ -241,6 +294,13 @@ Machine learning implementation anchors (public-safe):
 - Added governance replay direct-load reliability milestone coverage.
 - Added execution-monitor live runtime visibility milestone coverage.
 - Added terminal-style output and compact telemetry milestone coverage for operations readability.
+
+## 2026-04-10
+- Added researcher read-only scope-expansion milestone coverage across broader AI-runtime and lab inspection surfaces.
+- Added write-boundary hardening milestone coverage so research-role actions remain enabled only on approved research/profile workflows.
+- Added non-research surface UI hardening milestone coverage with disabled controls and no-edit posture for protected areas.
+- Added tape-security enforcement milestone coverage for explicit deny-on-mutation behavior under read-only researcher posture.
+- Added denied-attempt audit milestone coverage for replayable accountability when protected mutation actions are attempted by restricted roles.
 
 ## 2026-04-09
 - Added browser-assisted research hardening milestone coverage in public-safe form.
@@ -268,3 +328,175 @@ Machine learning implementation anchors (public-safe):
 - Added inflight runtime evidence milestone coverage and replay/readability improvements.
 - Added asynchronous report-generation milestone coverage for constrained environments.
 - Added bounded browser-assisted proposal-integrity and telemetry milestone coverage for experimental research paths.
+
+## 2026-04-02
+- Added pre-generation inflight control milestone coverage to distinguish bounded pre-generation controls from future true token-step orchestration.
+- Added inflight apply-timing milestone coverage with requested-vs-executed timing capture for replay clarity.
+- Added inflight decision-evidence milestone coverage with richer reason labeling and multi-reason traceability.
+
+## 2026-03-31
+- Added admin/session security-hardening milestone coverage for resilient secret handling and encrypted-at-rest metadata posture.
+- Added trusted-proxy and host-header sanitization milestone coverage for safer endpoint derivation and transport checks.
+- Added logout/session-invalidation hardening milestone coverage to reduce sticky-session and auth-drift edge cases.
+
+## 2026-03-29
+- Added public lab-status performance milestone coverage with lighter polling payload posture for dashboard efficiency.
+- Added on-demand job-detail replay milestone coverage so deep replay payloads load only when a specific run is opened.
+- Added bounded public telemetry-read model milestone coverage for lower CPU pressure under status polling.
+
+## 2026-03-28
+- Added top-level Execution Monitor milestone coverage as a dedicated runtime-visibility surface in admin navigation.
+- Added governed execution-lifecycle strip milestone coverage with commit-state emphasis (`approved`, `pending`, `denied`).
+- Added guided monitor-flow milestone coverage for deterministic walkthrough of assignment->proposal->commit execution stages.
+
+## ------------- 0.17 --------------
+
+## 2026-03-24
+- Added runtime-mode modularity milestone coverage with explicit software/hardware-backed posture scaffolding.
+- Added attestation-policy scaffold milestone coverage for future hardware-trust posture integration.
+- Added runtime-security framing milestone coverage to separate capability posture from deployment-state assumptions.
+
+## 2026-03-23
+- Expanded public replay-depth milestone coverage so longer runs preserve fuller evidence chronology in lab surfaces.
+- Added integrity-fairness denominator milestone coverage to prevent misleading zeroed metrics on non-evaluable legacy runs.
+- Added large-window rollup fidelity milestone coverage for more accurate totals/percentages across high-volume periods.
+
+## 2026-03-22
+- Added Engine Crusher milestone coverage for deterministic high-volume lab load simulation.
+- Added fixed-batch structure milestone coverage for consistent run comparability across stress suites.
+- Added operator pacing-control milestone coverage for queue-safe simulation scheduling.
+
+## 2026-03-20
+- Added Agent Simulator harness milestone coverage for deterministic multi-step loop testing without model inference dependency.
+- Added simulator API and persistence milestone coverage so runs flow into existing Jobs and Replay evidence surfaces.
+- Added synthetic-lab evidence continuity milestone coverage for repeatable governance validation workflows.
+
+## 2026-03-19
+- Added Fabric/WorkerHost modularization milestone coverage for cleaner lifecycle routing and control-plane maintainability.
+- Added worker registration/heartbeat enrichment milestone coverage including policy posture and inference-node inventory visibility.
+- Added GPU-readiness continuity milestone coverage for runtime placement and host-capability interpretation.
+
+## 2026-03-15
+- Added tape-provenance hardening milestone coverage with deterministic tape-identity capture at commit boundaries.
+- Added tape-hash admissibility milestone coverage with explicit mismatch/missing violation semantics.
+- Added replay completeness milestone coverage for distinguishing full tape-snapshot presence in governance evidence.
+
+## 2026-03-13
+- Added tape-runtime architecture milestone coverage with tape registry, assignment, and loaded-tape visibility posture.
+- Added Tape Library admin-surface milestone coverage for tape management and runtime identity mapping.
+- Added runtime modularity milestone coverage linking worker behavior context to tape-centered governance framing.
+
+## 2026-03-08
+- Added public lab-status API milestone coverage for website-facing validation and health summaries.
+- Added optional token-gated access milestone coverage for controlled server-to-server public status pulls.
+- Added signed public-payload milestone coverage and curated sanitized output posture for safe external consumption.
+- Added timeline-first replay investigation milestone coverage for faster governance-review workflows.
+
+## 2026-03-07
+- Added Governance Replay V2 scaffold milestone coverage with timeline-first incident review layout.
+- Added replay migration-bridge milestone coverage using existing jobs/replay APIs for read-only transition posture.
+- Added beta navigation milestone coverage while preserving legacy replay fallback path.
+
+## 2026-03-06
+- Added policy snapshot v1-shape milestone coverage with richer confidence/authority/risk explainability blocks.
+- Added commit evaluator rule-evidence milestone coverage with explicit policy evaluation pass/fail outputs.
+- Added chat-admission policy-gate milestone coverage to make enforcement posture operationally testable.
+- Added governance policy UI expansion milestone coverage for clearer operator policy-control interpretation.
+
+## 2026-03-03
+- Added Governance Incident Map milestone coverage as a topology-first admissibility analysis surface.
+- Added layered topology refinement milestone coverage to reduce visual crossing and emphasize commit-boundary authority flow.
+- Added focused incident-map scope milestone coverage by removing non-admissibility nodes from primary analysis flow.
+- Added full-screen incident-map milestone coverage for higher-signal operator investigation sessions.
+
+## 2026-03-02
+- Added centralized commit-enforcement milestone coverage so async and direct chat paths share one governance boundary.
+- Added proposal/commit lifecycle-event milestone coverage for replay timeline clarity across decision phases.
+- Added commit-snapshot fidelity milestone coverage with stronger config/policy capture for deterministic recompute.
+- Added worker-scoped policy-override milestone coverage under controlled governance evaluation semantics.
+
+## 2026-02-28
+- Added commit-stage enforcement milestone coverage where inference remains proposal-only until final commit validation succeeds.
+- Added blocked-commit termination milestone coverage for policy-failure outcomes in governed flows.
+- Added replay-event persistence milestone coverage for risk/anomaly reconstruction chronology.
+- Added deterministic commit-contract milestone coverage (`commit_eval_v1`) for no-rerun recompute semantics.
+
+## ------------- 0.16 --------------
+
+## 2026-02-24
+- Added admin session-signing hardening milestone coverage with resilient fallback-key persistence semantics.
+- Added stricter session-validation and throttle-race protections milestone coverage for auth robustness.
+- Added proxy-header trust-control milestone coverage and aligned secure-transport handling for cookie/security posture.
+
+## 2026-02-19
+- Added authenticated admin-chat bridge milestone coverage decoupling internal dashboard chat from public routes.
+- Added governance summary API milestone coverage for 24-hour risk/cost telemetry interpretation.
+- Added Fabric status API milestone coverage for dashboard dependency visibility.
+- Added worker lifecycle bearer-token enforcement milestone coverage across control-plane operations.
+
+## 2026-02-14
+- Added first-run bootstrap-admin milestone coverage with explicit super-admin creation flow.
+- Added Fabric module-availability checks milestone coverage with clear unavailable-state responses.
+- Added worker container-name and metadata passthrough milestone coverage for plugin-connected deployment paths.
+
+## ------------- 0.15 --------------
+
+## 2026-02-12
+- Added Fabric provision-mode split milestone coverage (`vm` vs `container`) for clearer lifecycle routing.
+- Added worker mode persistence/visibility milestone coverage for operational ownership clarity.
+- Added container-provision eventing and UI split milestone coverage for VM vs container orchestration flows.
+
+## 2026-02-10
+- Added Fabric setup gating milestone coverage so worker operations require initial platform configuration posture.
+- Added setup persistence fallback milestone coverage plus encrypted-at-rest handling for sensitive admin secrets.
+- Added provisioning-failure observability milestone coverage so worker lifecycle remains visible under failure states.
+
+## 2026-02-09
+- Added session-job reuse milestone coverage to avoid per-reply job fragmentation in active chats.
+- Added retention-based history milestone coverage and live runtime event-stream visibility for chat runs.
+- Added normalized source-attribution milestone coverage for runtime/audit provenance clarity.
+
+## 2026-02-05
+- Added pipeline runtime scaffolding milestone coverage (nodes, registry, artifacts, events).
+- Added runtime test path milestone coverage with artifact/event output and model-backed inference wiring.
+- Added guardrail-stage milestone coverage with configurable abort/restricted behavior and explicit violation eventing.
+
+## 2026-02-03
+- Added active-pipeline minimum-source enforcement milestone coverage.
+- Added mandatory Justification stage milestone coverage in baseline pipeline posture.
+- Added governance-pipeline visual and builder-scaffold milestone coverage for structured workflow design.
+
+## ------------- 0.14 --------------
+
+## 2026-01-31
+- Added memory-to-prompt augmentation milestone coverage under permissioned context controls.
+- Added behavior-driven prompt/source-gating milestone coverage for GPT/RAG runtime shaping.
+- Added soul-reflection scheduler/manual trigger milestone coverage with bounded assistant-response logging support.
+- Added safe math shortcut milestone coverage for constrained price-range queries using context signals.
+
+## ------------- 0.13 --------------
+
+## 2026-01-29
+- Added API-route modularization milestone coverage splitting admin/public/chat paths for maintainability.
+- Added admin UI scaffolding milestone coverage with login and forced password-change posture.
+- Added bootstrap-credential and signed-session-cookie milestone coverage with baseline password policy hardening.
+
+## ------------- 0.12 --------------
+
+## 2026-01-24
+- Added short-lived job token model milestone coverage with TTL and minimal in-memory history posture.
+- Added stage-event streaming milestone coverage and SSE completion payload enrichment with session context.
+- Added job start/status polling milestone coverage with local SQLite-backed persistence.
+- Added default prompt-tightening milestone coverage to reduce duplicated system-prompt governance text.
+
+## ------------- 0.11 --------------
+
+## 2026-01-20
+- Added core module reorganization milestone coverage into API/core/services boundaries.
+- Added required API-key posture milestone coverage (no permissive default fallback).
+- Added signed-request verification milestone coverage using timestamped HMAC request integrity checks.
+- Added loopback-only dev bypass milestone coverage and max-body-size enforcement for safer ingress controls.
+
+## 2026-01-02
+- Added prompt-injection detection milestone coverage with safe refusal behavior in chat flows.
+- Added enriched failure-log milestone coverage with hashed input excerpt and injection-suspicion indicators.
