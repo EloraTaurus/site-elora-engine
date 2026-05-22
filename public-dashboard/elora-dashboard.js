@@ -3,13 +3,13 @@
 
   var CONFIG_VERSION = "dashboard-v1.1.0";
   var DEFAULTS = {
-    endpoint: "/public/api/dashboard/telemetry-v1",
+    endpoint: "https://ai.elorataurus.com/public/api/dashboard/telemetry-v1",
     pollMs: 7000,
     minPollMs: 2000,
     maxPollMs: 30000,
     maxEventDots: 14,
     staleAfterOverrideS: 0,
-    musicSrc: "/soundtrack/",
+    musicSrc: "https://ai.elorataurus.com/soundtrack/",
     musicVolume: 0.1,
     musicAutoplay: false,
     tonePresets: {

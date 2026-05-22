@@ -8,7 +8,7 @@ Portable dashboard package for public website embedding.
 - `index.html`: local host/demo page for verification.
 
 ## Default telemetry source
-- `GET /public/api/dashboard/telemetry-v1`
+- `GET https://ai.elorataurus.com/public/api/dashboard/telemetry-v1`
 
 ## Drop-in usage
 ```html
@@ -23,7 +23,7 @@ window.EloraDashboard.mount("#public-dashboard", {
   endpoint: "https://ai.elorataurus.com/public/api/dashboard/telemetry-v1",
   pollMs: 7000,
   staleAfterOverrideS: 18,
-  musicSrc: "/soundtrack/",
+  musicSrc: "https://ai.elorataurus.com/soundtrack/",
   musicVolume: 0.1,
   musicAutoplay: false
 });
