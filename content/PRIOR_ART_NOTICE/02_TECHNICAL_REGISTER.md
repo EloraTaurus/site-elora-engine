@@ -243,6 +243,114 @@ Ingress
 - Proof type: Runtime self-intelligence machine-learning domain formalization
 - Evidence summary: ERIS was formalized as a dedicated runtime-learning domain for worker/process/pressure posture intelligence, separated from model-behaviour learning domains.
 
+## 6) Targeted Prior-Art Milestones (Learning + Model Selection)
+
+### Model Learning Implementation Foundation
+
+- Date: `2026-04-24`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-24`)
+- Proof type: Deterministic model-learning signal foundation
+- Evidence summary: Model Exams signal contracts and CORE learning coordination were implemented as a learning foundation with replayable evidence and bounded governance semantics.
+
+### Elora Selection of Observer Model
+
+- Date: `2026-04-28`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-28`)
+- Proof type: Observer model-routing and selection evidence
+- Evidence summary: Observer runs gained stage-level observer model selection/routing support, and selected observer model identity was captured in run evidence for audit/report visibility.
+
+### Elora Selection of Model for Governed LLM Handover
+
+- Date: `2026-05-12`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-05-12`)
+- Proof type: Governed hybrid handover model-selection execution
+- Evidence summary: Interaction runtime gained explicit governed hybrid handover execution for research-summary route handling, including selected-model use under policy-bounded, replayable control flow.
+
+## 7) High-Value Architecture Anchors (Explicit Chronology)
+
+### Inference-as-Proposal with Commit-Bound Authorization
+
+- Date: `2026-02-28`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-02-28`)
+- Proof type: Deterministic execution-boundary governance
+- Evidence summary: Runtime formalized proposal-versus-commit control where model output remains non-authoritative until commit-stage policy/admissibility re-validation succeeds.
+
+### Deterministic Replay Contract and Lifecycle Event Chain
+
+- Date: `2026-03-02`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-03-02`)
+- Proof type: Replayable decision reconstruction and event-level accountability
+- Evidence summary: Commit enforcement, proposal/commit lifecycle events, and snapshot fidelity were consolidated to support deterministic replay and evidence-chain inspection across direct and async paths.
+
+### Tape Provenance Admissibility at Commit Boundary
+
+- Date: `2026-03-15`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-03-15`)
+- Proof type: Provenance integrity enforcement
+- Evidence summary: Commit evaluation incorporated tape provenance identity checks and mismatch/missing violations so authorization depends on captured provenance completeness.
+
+### Policy Snapshot V1 and Rule-Level Evaluation Evidence
+
+- Date: `2026-03-06`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-03-06`)
+- Proof type: Structured policy-state adjudication record
+- Evidence summary: Policy snapshot structure and explicit rule-level evaluation outputs were formalized to improve explainable governance outcomes and replay integrity.
+
+### Signed Public Status and Curated Disclosure Payloads
+
+- Date: `2026-03-08`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-03-08`)
+- Proof type: Public telemetry authenticity and safe-disclosure control
+- Evidence summary: Public status/report surfaces introduced token-gated and signed payload patterns with curated summaries for transparent chronology without exposing sensitive internals.
+
+### Model Learning Signal Foundation (Model Exams + CORE)
+
+- Date: `2026-04-24`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-24`)
+- Proof type: Deterministic learning-signal generation and aggregation
+- Evidence summary: Model Exams signal/event contracts and CORE coordination established a bounded model-learning foundation with replay-linked feature surfaces.
+
+### Observer Stage-Level Model Routing with Evidence Capture
+
+- Date: `2026-04-28`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-04-28`)
+- Proof type: Stage-level model-selection control in research runtime
+- Evidence summary: Observer routing expanded to per-stage model selection with selected model identity persisted for audit/report visibility.
+
+### Governed LLM Handover Execution with Selected-Model Traceability
+
+- Date: `2026-05-12`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-05-12`)
+- Proof type: Hybrid handover execution under deterministic governance controls
+- Evidence summary: Interaction runtime added explicit governed handover execution path with selected-model usage and replay-safe traceability boundaries.
+
+### Constitutional Policy Versioning, Signed Change Flow, and Emergency Lock
+
+- Date: `2026-05-20`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-05-20`)
+- Proof type: Governance-state mutation control and policy continuity assurance
+- Evidence summary: Constitutional governance baseline introduced signed policy-change workflows, role-gated approvals, and emergency-lock posture for controlled policy evolution.
+
+### Lexicon-Only Deterministic Runtime Fallback (No-LLM Path)
+
+- Date: `2026-05-20`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-05-20`)
+- Proof type: Deterministic bounded synthesis fallback
+- Evidence summary: Interaction runtime gained explicit lexicon-only deterministic response path that can bypass LLM generation while preserving governed replayability and boundary controls.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

@@ -101,6 +101,7 @@ Machine learning implementation anchors (public-safe):
 - Added service-attribution accuracy milestone coverage to reduce pressure-score concentration from wildcard API buckets and improve per-surface runtime diagnosis.
 - Added scanner/topology alignment milestone coverage so wildcard/prefix API discovery paths map more reliably to governed service branches.
 - Updated API discovery baseline evidence with zero API-like uncovered/unmapped governance gaps under current branch map posture.
+- Added prior-art anchor milestone for governed LLM handover model execution (`route=llm_rag_research_summary`) with explicit selected-model usage under deterministic policy boundaries.
 
 ## 2026-05-11
 - Added NNLSL worker-state parity milestone coverage so interaction-signal and lexicon worker health/status are visible consistently across runtime snapshots.
@@ -217,6 +218,7 @@ Machine learning implementation anchors (public-safe):
 - Added governance-training record/scenario milestone coverage for breach-vs-near-breach comparative evaluation.
 - Added learned Echo threshold profile milestone coverage and improved correlation visibility.
 - Added operator threshold confidence-band and stability-envelope visibility milestones.
+- Added prior-art anchor milestone for observer model selection/routing where observer model can be selected per stage and recorded in run evidence.
 
 ## 2026-04-27
 - Added learning-efficacy visibility milestone coverage in Engine Health.
@@ -240,6 +242,7 @@ Machine learning implementation anchors (public-safe):
 - Added Elora CORE coordination/control-view milestone coverage with explicit boundary framing.
 - Added CORE persona/readability milestone coverage as presentation-layer behavior only.
 - Added Echo learning persistence and scheduled/on-demand refresh milestone coverage.
+- Added prior-art anchor milestone for model-learning implementation foundation (Model Exams + CORE learning signals as deterministic non-neural learning inputs).
 
 ## Previous Versions (0.18 and earlier)
 
