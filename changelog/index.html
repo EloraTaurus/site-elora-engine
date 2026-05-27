@@ -226,10 +226,10 @@
       async function loadEngineChangelog() {
         if (!changelogPageContent) return;
         const engineCandidates = []
-          .concat(makeCandidatePaths('CHANGELOG_PUBLIC.md'))
-          .concat(makeCandidatePaths('CHANGELOG_PUBLIC'))
           .concat(makeCandidatePaths('CHANGELOG_ENGINE.md'))
           .concat(makeCandidatePaths('CHANGELOG_ENGINE'))
+          .concat(makeCandidatePaths('CHANGELOG_PUBLIC.md'))
+          .concat(makeCandidatePaths('CHANGELOG_PUBLIC'))
           .concat(makeCandidatePaths('changelog.md'));
         const md = await fetchFirst(engineCandidates);
         changelogPageContent.innerHTML = md

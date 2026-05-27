@@ -13,6 +13,22 @@ Machine learning implementation anchors (public-safe):
 ### Release Focus
 - Constitutional governance baseline plus cognitive substrate expansion.
 
+## 2026-05-27
+- Added a separate P3 integrity/system worker-setting milestone track to strengthen learning safety and runtime stability through planned integrity audit, consistency, worker-health, and bounded recovery workers.
+- Added planned runtime-inventory anchors for these integrity/system workers so readiness posture can be surfaced before execution rollout.
+- Added autonomous-continuity milestone coverage for bounded reflection/recurrence worker visibility in Runtime State, including throughput, lag, and replay-safe health signals.
+- Added continuity backlog-risk milestone coverage with healthy/elevated/critical posture and explicit stalled/lagging/zero-throughput counters.
+- Added public-safe autonomous continuity proof milestone coverage in dashboard telemetry (`autonomous_continuity`) with sanitized progression metrics only.
+- Added public learning-presence milestone coverage where the Cognitive Pulse shifts to learning tone during active continuity learning and the insights panel switches from execution-focused to learning-focused cards.
+- Added learning-momentum badge milestone coverage (idle/healthy/elevated/critical) for clearer public interpretation of active learning posture.
+- Added public proof-panel expansion milestone coverage with a dedicated Autonomous Continuity proof card.
+- Updated public KPI runtime-unit milestone coverage so Total Research Runtime is shown in hours instead of seconds for clearer long-horizon readability.
+- Added continuity hygiene milestone coverage with bounded backlog rehydration and stale continuity-artifact lifecycle cleanup posture.
+- Added continuity-runtime visibility milestone coverage where replay/reflection/recurrence/hygiene workers are surfaced together for easier operator interpretation.
+- Added worker-inventory governance milestone coverage with explicit functional grouping, rollout-phase tagging, governance-gate posture, and CPU-cap readiness markers.
+- Added P3 continuity-expansion milestone anchors (planned/disabled) for replay relevance, lexicon drift, continuity compaction, and runtime resource optimization tracks.
+- Added Runtime State navigation/readability milestone coverage with grouped worker views and faster section-jump controls.
+
 ## 2026-05-20
 - Added constitutional-governance baseline milestone coverage with immutable root posture, signed policy-version change flow, role-gated approvals, and emergency-lock controls.
 - Added constitutional fail-closed interaction milestone coverage where memory influence is withheld under degraded/unavailable governance dependency posture.
