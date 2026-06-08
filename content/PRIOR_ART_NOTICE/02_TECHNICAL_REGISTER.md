@@ -243,6 +243,38 @@ Ingress
 - Proof type: Runtime self-intelligence machine-learning domain formalization
 - Evidence summary: ERIS was formalized as a dedicated runtime-learning domain for worker/process/pressure posture intelligence, separated from model-behaviour learning domains.
 
+### Constitutional Governance and Cognitive-Artifact Research Expansion
+
+- Date: `2026-05-20`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine/LLM changelog entries (`2026-05-20`)
+- Proof type: Governance-research substrate expansion
+- Evidence summary: Constitutional governance baselines and cognitive-artifact research surfaces were expanded so behavioural interpretation, refusal posture, and evidence-bearing operator review could be studied under a stronger bounded-governance framework.
+
+### Autonomous Continuity and Learning-Momentum Controls
+
+- Date window: `2026-05-27` to `2026-05-29`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine/LLM changelog entries (`2026-05-27`, `2026-05-29`)
+- Proof type: Guided continuity and bounded self-progression controls
+- Evidence summary: Long-run continuity, autonomous session carry-forward, and learning-momentum tracking were extended for guided research operation while preserving commit-bound authority and operator visibility.
+
+### Training and Education Worker Foundations
+
+- Date: `2026-06-05`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine/LLM changelog entries (`2026-06-05`)
+- Proof type: Supervised symbolic teaching and bounded skill-progression framework
+- Evidence summary: A Training and Education worker foundation was introduced to support symbolic lesson progression, supervised capability teaching, and research into non-standard skills for a governance engine.
+
+### Greeting-Foundation Symbolic Communication Retention
+
+- Date: `2026-06-08`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine/LLM changelog entries (`2026-06-08`)
+- Proof type: Communication retention and symbolic continuity milestone
+- Evidence summary: Greeting-foundation communication learning was extended into longer-lived symbolic retention, establishing a dated milestone for bounded communication continuity without changing governance authority semantics.
+
 ## 6) Targeted Prior-Art Milestones (Learning + Model Selection)
 
 ### Model Learning Implementation Foundation

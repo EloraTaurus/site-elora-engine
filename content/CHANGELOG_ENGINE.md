@@ -13,6 +13,22 @@ Machine learning implementation anchors (public-safe):
 ### Release Focus
 - Constitutional governance baseline plus cognitive substrate expansion.
 
+## 2026-06-08
+- Tightened autonomous communication training so early background lessons stay on greeting-foundation work until stable retained basic greeting memories exist.
+- Added stronger symbolic communication-memory retention for passed training lessons, including learned token/meaning structure needed for later reuse rather than only prompt/response storage.
+- Added greeting-foundation progress visibility in both Training & Education trials and Runtime State, including curriculum focus, stable greeting-memory count, and latest retained greeting-memory id.
+- Improved training-worker runtime summaries so communication-memory and greeting-foundation posture can be checked directly during soak/review.
+
+## 2026-06-05
+- Added dedicated training-and-education worker visibility milestones across Runtime State and the public-safe dashboard so symbolic lesson progression can be observed without exposing operator content.
+- Added normalized training-worker summary signals for dataset, lesson mode, difficulty, education stage, score/pass posture, retained communication promotion, and dominant bounded failure reasons.
+- Added public-safe training worker placement/resource posture coverage including current vCore/cpuset selection plus RAM and I/O snapshots.
+- Improved runtime worker grouping/readability so language-expression training workers appear as a first-class `Training + Education` family rather than a generic internal bucket.
+- Improved training-cycle runtime interpretation so completed lesson items and queued lesson work are reflected more accurately in worker activity posture.
+- Added symbolic interaction provenance milestone coverage so bounded replies retain learned-fragment attribution, source artifact family, and phrase-level provenance for operator audit visibility.
+- Added non-neural-first interaction policy telemetry milestone coverage so LLM avoidance posture is explicit and reviewable rather than inferred indirectly.
+- Added governed admin-chat alignment milestone coverage so the main popup chat returns to the Elora interaction path while direct diagnostics remain a separate bounded surface.
+
 ## 2026-05-27
 - Added a separate P3 integrity/system worker-setting milestone track to strengthen learning safety and runtime stability through planned integrity audit, consistency, worker-health, and bounded recovery workers.
 - Added planned runtime-inventory anchors for these integrity/system workers so readiness posture can be surfaced before execution rollout.
@@ -28,6 +44,22 @@ Machine learning implementation anchors (public-safe):
 - Added worker-inventory governance milestone coverage with explicit functional grouping, rollout-phase tagging, governance-gate posture, and CPU-cap readiness markers.
 - Added P3 continuity-expansion milestone anchors (planned/disabled) for replay relevance, lexicon drift, continuity compaction, and runtime resource optimization tracks.
 - Added Runtime State navigation/readability milestone coverage with grouped worker views and faster section-jump controls.
+
+## 2026-05-28
+- Added runtime scheduler decision-audit milestone coverage with durable bounded decision logs and summary counts (total/allowed/blocked) to support safe decision-only rollout before constrained execution.
+- Added Runtime State scheduler-visibility milestone coverage so operators can see scheduler mode, recent decision timing, reason-code context, and blocked reasoning in one panel.
+- Added live decision-emission milestone coverage where replay worker cycles now append decision-audit records continuously (including idle/queue-empty cycles) for reliable scheduler heartbeat visibility.
+- Added scheduler guardrail milestone coverage with explicit stale-heartbeat and unexpected blocked-reason spike checks surfaced in runtime telemetry before constrained fan-out phases.
+- Added decision-only soak activation milestone coverage with live guardrail pass-state telemetry to support day-2 go/no-go review.
+- Added constrained-pilot milestone scaffold with explicit move-cap, cooldown, rollback-switch, and simulation-only controls before execution-path rollout.
+- Added P0 worker-fanout observability milestone coverage by expanding runtime worker telemetry with placement and execution fields (`mode`, `pid`, `cpuset/vCore`) plus read/write throughput and IOPS indicators.
+- Added host resource context to runtime worker summary (per-core CPU, iowait, and related pressure indicators) to support safe pre-fanout scheduling analysis.
+- Updated Runtime State worker tables with Phase-0 fanout-ready columns so both current workers and planned P3 worker families can be surfaced under one contract.
+- Added continuity-state consistency shadow-worker milestone coverage with bounded diagnostic checks for queue/lease health and replay-stage consistency posture before constrained fanout moves.
+- Added historic cognitive-experience requeue milestone coverage so previously deferred continuity events can be reintroduced in bounded batches for governed learning progression.
+- Added emergence-monitor operator-feedback milestone coverage with persistent action outcomes, dismissible success/failure toasts, and a short auto-refresh countdown for clearer live-state interpretation.
+- Added queue-movement visibility milestone coverage with lightweight delta reporting (queue depth, queued total, consumed total) between refresh cycles.
+- Added admin route-hardening milestone coverage to ensure cognitive-experience queue actions resolve through the intended admin-governed path instead of generic API fallback behavior.
 
 ## 2026-05-20
 - Added constitutional-governance baseline milestone coverage with immutable root posture, signed policy-version change flow, role-gated approvals, and emergency-lock controls.

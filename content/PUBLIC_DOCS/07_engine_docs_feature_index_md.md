@@ -23,10 +23,14 @@ Companion summary: `FEATURES.md` (current + in-development operator pack).
 |---|---|---|---|
 | Admin Dashboard and Governance | Partial | Admin control plane | `OPERATORS/ADMIN_DASHBOARD_AND_GOVERNANCE.md` |
 | Jobs Audit and Replay | Partial | Governance replay and jobs views | `OPERATORS/JOBS_AUDIT_AND_REPLAY.md` |
+| Research Dashboard and Reports | Partial | Research dashboard, run reports, guided demo surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
+| ERIS Runtime Intelligence | Partial | Runtime posture and bounded ML interpretation surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
+| Behaviour Learning Direction (EBLS) | Planned | Behaviour learning and model-wiki direction | `OPERATORS/MODELS_AND_PROFILES.md` |
 | Fabric / Workers / WorkerHosts | Partial | Worker operations and host inventory | `OPERATORS/FABRIC_AND_WORKER_OPERATIONS.md` |
 | Pipelines and Runtime Controls | Partial | Pipeline and runtime controls | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | Models / Permissions / Profiles | Partial | Model and behavior controls | `OPERATORS/MODELS_AND_PROFILES.md` |
 | Knowledge / Memory / Workbooks | Partial | Knowledge, memory, workbook controls | `OPERATORS/KNOWLEDGE_MEMORY_WORKBOOKS.md` |
+| Training and Education | Partial | Guided training/education worker and lesson progression surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | Security / Auth / OTP / Sessions | Live / Partial | Security and authentication workflows | `OPERATORS/SECURITY_AND_ACCESS_CONTROL.md` |
 | Alerts / SMTP / Rules | Partial | Alerting and notification controls | `OPERATORS/ALERTS_AND_NOTIFICATION_POSTURE.md` |
 | Configuration / Assets / Public Status | Partial | Configuration and status surfaces | `OPERATORS/CONFIGURATION_AND_PUBLIC_STATUS.md` |

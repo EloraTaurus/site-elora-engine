@@ -7,6 +7,40 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25`
 - ERIS runtime-ML formalization in LLM-facing chronology: `2026-05-06` (`0.21`)
 
+## 0.68 - 2026-06-05
+- Added interaction-expression provenance milestone coverage so symbolic replies retain learned-fragment attribution, source artifact family, and phrase-level provenance for operator audit visibility.
+- Added non-neural-first interaction policy telemetry milestone coverage so LLM avoidance posture is explicit and auditable rather than inferred indirectly.
+- Added Runtime State visibility milestone coverage for latest symbolic reply preview, artifact provenance, and last LLM-policy decision.
+- Added admin-chat alignment milestone coverage so the main popup chat returns to the governed Elora interaction path while NNLSL Harness remains the direct diagnostics route.
+- Added phrase/sentence learning baseline milestone coverage for distinguishing simple token assembly from more structured symbolic response formation.
+
+## 0.67 - 2026-05-29
+- Added replay-scoring hardening milestone coverage for bounded continuity-event normalization and safer eligible-keep decisions across backfilled event sets.
+- Added scheduler decision and runtime-placement visibility milestone coverage for continuity-worker health, inferred-score quality, and vCore/cpuset posture.
+- Added public continuity-proof milestone coverage with bounded placement signals and worker-state visibility.
+- Added isolated continuity-worker milestone coverage for replay, reflection, and recurrence process-mode experimentation.
+
+## 0.66 - 2026-05-27
+- Added autonomous continuity runtime milestone coverage with reflection/recurrence throughput, lag, and worker risk posture visibility.
+- Added public learning-momentum milestone coverage where the homepage pulse shifts into learning mode during active continuity learning.
+- Added public autonomous-continuity proof milestone coverage with sanitized worker metrics and no sensitive content fields.
+- Added continuity backlog-risk milestone coverage with healthy, elevated, and critical state interpretation.
+
+## 0.65 - 2026-05-22
+- Added public dashboard telemetry milestone coverage with dedicated public-safe runtime data service and short-lived caching.
+- Added live public homepage update milestone coverage for runtime state, token flow, queue posture, and pulse/insight visibility.
+- Added public soundtrack, pulse-contract, and dashboard-bundle milestone coverage for website-safe runtime presence surfaces.
+- Added Cloudflare-origin gate milestone coverage and public payload redaction guardrails for safer internet-facing telemetry delivery.
+
+## 0.64 - 2026-05-20
+- Added emergence load-readiness milestone coverage with explicit go/no-go state interpretation for safe runtime loading decisions.
+- Added operator visibility milestone coverage for direct readiness-state inspection in the emergence-monitor posture.
+
+## 0.63 - 2026-05-20
+- Added deterministic lexicon-only interaction milestone coverage for bounded non-neural response synthesis under governed interaction mode.
+- Added no-LLM enforcement milestone coverage for direct and streaming interaction paths when lexicon-only mode is active.
+- Added runtime metadata visibility milestone coverage for lexicon-only interaction posture and deterministic fallback behavior.
+
 ## 0.38 - 2026-05-20
 - Added constitutional-governance milestone coverage for explicit preservation-boundary doctrine and signed policy-change controls.
 - Added fail-closed memory-influence posture coverage when constitutional safety dependencies are degraded or unavailable.

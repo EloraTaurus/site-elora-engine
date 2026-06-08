@@ -1,8 +1,8 @@
 {
-  "title": "Elora Engine Docs",
-  "description": "Concept to operations documentation for Elora Engine, governance architecture, fabric execution, security posture, and validation.",
+  "title": "Elora Research Engine Docs",
+  "description": "Public-safe documentation for Elora as a research engine with governance capability, including ERIS runtime intelligence, behaviour-learning direction, and operator evidence architecture.",
   "section_intro": "Read in sequence: Overview -> Architecture -> Governance -> Runtime -> Fabric -> Operators -> API -> Security -> Testing -> Roadmap.",
-  "last_updated": "2026-03-10",
+  "last_updated": "2026-06-08",
   "folder": "PUBLIC_DOCS",
   "sections": [
     {

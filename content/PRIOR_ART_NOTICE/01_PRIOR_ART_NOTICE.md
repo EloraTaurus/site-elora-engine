@@ -12,6 +12,7 @@ This notice is published to document technical milestones and maintain a clear p
 - Elora supports open AI governance standards and opposes unnecessary gatekeeping of common safety and control patterns.
 - Elora uses established cryptographic primitives and distributed-systems design patterns that pre-date this project by decades.
 - Elora’s learning stack references longstanding non-neural/classical ML and statistical-control families, applied under bounded governance controls.
+- Public references now also cover ERIS runtime intelligence, the in-development EBLS behaviour-learning direction, constitutional research controls, and supervised symbolic teaching milestones where they can be disclosed safely.
 - Public technical disclosure is intentionally detailed enough for reduction-to-practice chronology, while withholding direct reproducibility handles (exact implementation playbooks, full route/config inventories, and copy-ready internal run paths).
 - The disclosure objective is verifiable chronology and architectural accountability, not turnkey replication.
 
@@ -22,6 +23,7 @@ The Elora Taurus Project advocates for open AI governance patterns that can be i
 ### Notice to Practitioners
 
 Researchers, developers, and examiners are encouraged to cite this disclosure and its timestamped references as implementation chronology evidence for AI governance and cryptographic execution-enforcement patterns.
+They may also cite later public-safe learning milestones covering runtime intelligence, behaviour-detection research direction, and symbolic teaching/retention foundations added through June 2026.
 
 ## Disclosure Scope
 

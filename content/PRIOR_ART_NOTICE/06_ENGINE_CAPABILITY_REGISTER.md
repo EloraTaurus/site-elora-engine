@@ -196,6 +196,38 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Formalized ERIS as a dedicated runtime-machine-learning domain for runtime posture intelligence, separate from model-behaviour learning domains.
 
+#### Constitutional Governance and Cognitive-Artifact Research Milestone
+
+- Date: `2026-05-20`
+- Source anchor: Engine + LLM changelog (`2026-05-20`)
+- Evidence class: Governance research substrate and behavioural interpretation expansion
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Expanded constitutional governance and cognitive-artifact research surfaces so behaviour interpretation, refusal posture, and evidence-linked operator review could be studied in a more structured bounded-governance frame.
+
+#### Autonomous Continuity and Learning-Momentum Milestone
+
+- Date window: `2026-05-27` to `2026-05-29`
+- Source anchor: Engine + LLM changelog (`2026-05-27`, `2026-05-29`)
+- Evidence class: Guided continuity and bounded autonomous progression controls
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added longer-run continuity controls, autonomous carry-forward behaviour, and learning-momentum tracking for research sessions while preserving operator oversight.
+
+#### Training and Education Worker Milestone
+
+- Date: `2026-06-05`
+- Source anchor: Engine + LLM changelog (`2026-06-05`)
+- Evidence class: Supervised symbolic teaching and skill-formation research
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added Training and Education worker foundations for lesson progression, symbolic teaching, and bounded capability formation research outside standard inference-control expectations.
+
+#### Greeting-Foundation Symbolic Communication Retention Milestone
+
+- Date: `2026-06-08`
+- Source anchor: Engine + LLM changelog (`2026-06-08`)
+- Evidence class: Communication-learning retention and symbolic continuity
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Extended greeting-foundation communication learning into retained symbolic continuity, establishing a dated public-safe milestone for longer-lived communication behavior tracking.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components

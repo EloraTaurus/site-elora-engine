@@ -19,6 +19,11 @@
 - scoped capability tokens for worker->GPU interactions,
 - deterministic telemetry handoff across nodes.
 
+5) Research-engine maturity
+- deepen public-safe research dashboards and report storytelling,
+- improve operator understanding of continuity, intervention, and behavioural evidence,
+- keep demo-safe documentation aligned with the real research direction without exposing internal playbooks.
+
 ## Mid-term transition priorities
 
 - multi-VM control/data split with private engine control plane,
@@ -26,6 +31,9 @@
 - retrieval architecture split (metadata vs vector index responsibilities),
 - governance portability across local and remote execution tiers.
 - trust-mode progression from software-only controls to hardware-backed attestation evidence.
+- broader ERIS maturity for runtime posture interpretation under bounded controls.
+- EBLS expansion so Elora can learn recognizable AI behaviours through non-neural methods and link them back to policy-relevant evidence.
+- supervised Training and Education pathways for adding bounded capability skills not typically associated with inference control planes.
 
 ## Hardware attestation research direction (high-level)
 
@@ -40,6 +48,9 @@
 - How should decision classes evolve per worker type without policy sprawl?
 - What replay completeness SLO should be enforced before production certification?
 - How should risk-tier routing decisions be encoded once remote GPUs are introduced?
+- Which non-neural learning methods best distinguish meaningful AI behaviour classes under constrained compute conditions?
+- How should ERIS and EBLS remain separated so runtime self-intelligence never becomes execution authority?
+- What evidence depth is sufficient for public disclosure of serious research capability without handing over private operational methods?
 
 ## Advanced acceptance criteria examples
 

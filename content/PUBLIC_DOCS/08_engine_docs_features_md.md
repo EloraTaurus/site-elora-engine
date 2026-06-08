@@ -6,7 +6,7 @@ Note: This is a public documentation copy for the demo site. Sensitive runtime i
 
 ## Elora Engine Features (Current + In Development)
 
-Last updated: 2026-03-29
+Last updated: 2026-06-08
 
 Purpose: operator-facing summary of what Elora has today and what is actively being built.
 
@@ -23,6 +23,8 @@ Status labels:
 | Dashboards | `Live/Partial` multi-dashboard admin navigation (`Overview`, `Dashboards`, `Governance`, `AI Runtime`, `Fabric`, `Observability`, `Lab`, `Operators`, `Settings`) | Consolidation and UX simplification across dashboard groups |
 | Observability | `Partial` job timeline and replay-oriented views, runtime event visibility, raw evidence panels | Replay forensics polish, compact operator-first incident triage |
 | Governance | `Partial` governance dashboard, policy editor v1, replay review, decision/admissibility metadata, commit boundary visibility | Governance Incident Map redesign, policy traceability depth (`rule_id/version`), stricter admissibility completeness |
+| Research | `Partial` guided research dashboard, synthetic public-safe run reports, observer continuity views, and curated report walkthroughs | Broader public-safe report depth, more run exemplars, and stronger comparison storytelling |
+| Learning | `Partial` ERIS runtime intelligence surfaces and bounded non-neural learning outputs | EBLS behaviour-learning expansion, model wiki growth, and additional supervised capability teaching |
 | AI Runtime | `Partial` models, pipeline controls, behavior, memory, knowledge, plugin controls | Runtime dashboard expansion, profile mapping improvements, context and retrieval controls |
 | Fabric | `Partial` WorkerHost + Provisioner surfaces, worker lifecycle controls, template/provisioning scaffolds | Clear VM vs container split hardening, worker-host telemetry depth, safer lifecycle actions |
 | Lab | `Partial` commit harness and runtime validation surfaces | Expanded deterministic test packs and release proof workflows |
@@ -36,6 +38,8 @@ Status labels:
 | Deterministic Recompute | `Partial` `commit_input_v1` + `commit_decision_v1` capture and lab recompute support | Contract hardening for authority and decision class admissibility |
 | Policy Controls | `Partial` policy editor v1 with worker-scoped mapping and authority toggles | More granular policy classes and richer rule-level outputs |
 | Risk & Confidence | `Partial` confidence/risk surfacing in governance and replay views | Better operator-first anomaly/risk prioritization and class-based policies |
+| Constitutional Governance | `Partial` constitutional halt signaling, repair-aware escalation visibility, and commit-bound refusal posture | Deeper constitutional evidence linkage and broader halt-class modelling |
+| Cognitive Artifact Research | `Partial` bounded cognitive-state and artifact-trace research surfaces connected to report outputs | Expanded public-safe behavioural interpretation views and cross-run comparison |
 
 ## Data and Runtime Features
 
@@ -45,6 +49,8 @@ Status labels:
 | Provider Telemetry | `Partial` provider/model/latency/token/error capture in job metrics | Consistent multi-provider schema and routing-aware analysis |
 | Knowledge + Memory | `Partial` knowledge/memory admin surfaces and profile controls | Bucket/profile ergonomics and retrieval/memory strategy hardening |
 | Pipeline Runtime | `Partial` extended canonical runtime stages with pre-inference evidence capture (`prompt`, `memory`, `knowledge`) and commit-aware flow | Runtime-type overlays, skipped-stage clarity, deeper governance-native stage controls |
+| Continuity and Learning Momentum | `Partial` queued continuity flows, long-run research persistence, and bounded autonomous progression tracking | Broader continuity policy controls and richer momentum evidence |
+| Echo Behaviour Signals | `Partial` Echo instability cues and frequency-learning visibility for runtime interpretation | Stronger Echo-linked report narratives and additional model/profile comparisons |
 
 ## Integrations
 
@@ -53,6 +59,7 @@ Status labels:
 | WordPress Plugin | `Partial` plugin-connected chat path, source attribution, governance-aware outcomes | Move more plugin workload into managed Fabric worker lifecycle |
 | WorkerHost | `Partial` local host/container lifecycle APIs and dashboard controls | Distributed host registration, stronger host-level telemetry and controls |
 | Provisioner | `Partial` VM provisioning path and operator setup guides | Environment hardening and safer production-ready workflows |
+| Training and Education Worker | `Partial` bounded lesson progression, guided examples, and symbolic communication research surfaces | Expanded teaching curricula and supervised capability formation workflows |
 
 ## Security and Access
 
@@ -68,6 +75,8 @@ Elora is already operating as a governance-first runtime with:
 - proposal-first commit enforcement,
 - replay and admissibility evidence surfaces,
 - operator dashboards across governance/observability/runtime/fabric,
+- ERIS runtime intelligence for bounded posture interpretation,
+- research dashboards that expose deep evidence without handing over private implementation detail,
 - and active progression toward stronger deterministic control-plane behavior.
 
-The current development priority is hardening evidence integrity, admissibility completeness, and operator-speed governance workflows.
+The current development priority is hardening evidence integrity, admissibility completeness, behaviour-learning research depth, and operator-speed governance workflows.

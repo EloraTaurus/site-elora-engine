@@ -1,15 +1,17 @@
 # Site / Demo Changelog
 
-## 2026-05-20
-- Synced public-safe Engine changelog (`demo/content/CHANGELOG_ENGINE.md`) with constitutional-governance baseline and memory-governance substrate milestones.
-- Synced public LLM changelog (`demo/content/CHANGELOG_LLM.md`) with constitutional fail-closed and operator memory-consent chronology updates (`0.38 - 2026-05-20`).
-- Updated public major-milestone stream (`demo/content/CHANGELOG_PUBLIC.md`) to mark constitutional + memory safety substrate completion and emergence-prep phase status.
-- Synced public-safe changelog streams with governed cognitive-artifact substrate progress (role-gated APIs, tombstone lifecycle controls, and replayable lineage) as the final pre-emergence safety layer.
+## 2026-06-08
+- Synced public-safe Engine changelog to the current internal chronology through `0.2.4`, including `2026-06-05` and `2026-06-08` research-engine learning milestones.
+- Synced public-safe LLM changelog forward to recent bounded capability milestones, including symbolic interaction provenance, public telemetry, continuity learning, and lexicon-only interaction chronology.
+- Updated public website/demo framing to describe Elora as a `Research Engine with Governance Capability`.
+- Refreshed changelog landing-page copy so current-line messaging reflects training, runtime intelligence, continuity learning, and governance-safe controls.
+- Added public Training & Education progress coverage for greeting-foundation work, including stable retained greeting-memory counts and current curriculum focus.
+- Improved public-safe continuity/training chronology so symbolic communication progress is described as retained learning, not just worker/runtime activity.
+- Removed stale changelog-maintenance wording in favor of direct capability milestones.
 
-## 2026-05-14
-- Synced public-safe Engine changelog (`demo/content/CHANGELOG_ENGINE.md`) with startup code-health hardening milestones and startup hold visibility updates.
-- Synced public LLM changelog (`demo/content/CHANGELOG_LLM.md`) to include the startup code-health chronology update (`0.37 - 2026-05-14`).
-- Added public-safe disclosure notes for startup-code validation posture, setup-block behavior when required checks fail, and runtime-intelligence startup memory visibility.
+## 2026-06-05
+- Added public-safe coverage for Training & Education worker visibility, symbolic lesson progression, and operator-safe communication-memory promotion posture.
+- Expanded changelog coverage for Runtime State and public proof surfaces that show bounded learning progression without exposing operator content.
 
 ## 2026-05-06
 - Synced public-safe Engine changelog (`demo/content/CHANGELOG_ENGINE.md`) with latest 0.2.0 release-line milestones through:
@@ -31,7 +33,7 @@
   - centralized repeated colors, borders, and elevation values into semantic CSS tokens,
   - reduced one-off style drift risk across website and engine-facing demo surfaces.
 - Added theme reference notes: `demo/content/THEME_NOTES.md`.
-- Synced website research/disclosure language to the current project positioning: `AI Runtime Systems & Governance Architecture`.
+- Synced website research/disclosure language to the then-current platform positioning.
 - Added public-safe milestone coverage for latest `v0.2.0` engine advances (`2026-04-26`, `2026-04-27`, `2026-04-28`):
   - Pattern Analysis learning surfaces, transition visibility, and model-profile trend capture,
   - Observer stage-memory learning and governance-learning accumulation,
