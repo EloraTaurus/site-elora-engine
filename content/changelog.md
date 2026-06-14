@@ -1,5 +1,32 @@
 # Site / Demo Changelog
 
+This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
+
+## 2026-06-14
+Context: this phase was focused on making the public story match the actual direction of the engine. That meant reflecting tighter communication governance, safer learning-store rebuild posture, and clearer continuity of preserved runtime/research history.
+- Synced the public demo changelog forward to the latest `0.2.4` engine chronology so the website now reflects June governance, runtime-intelligence, and learning-surface milestones already captured in the public-safe Engine changelog.
+- Updated public changelog framing to include operator communication hardening, governed lexicon promotion posture, and runtime-intelligence history recovery after storage-domain cutover issues.
+- Added public-safe wording that research/history visibility was preserved during rebuild work rather than silently disappearing from the public narrative.
+- Refreshed changelog landing-page summary copy so the current-line description now reflects archive continuity, rebuild work, and governance-safe communication controls.
+- Added public-safe milestone coverage for stricter language-pack isolation so bounded symbolic replies stay tied to governed sources rather than older learned residue.
+- Added public-safe note for safer rebuild-phase controls across active learning stores, including draft-first promotion posture and tighter live-surface cutover handling.
+- Added changelog coverage for portable chat-trace export and operator-review improvements so guided demo narrative better reflects audit-minded review workflows.
+
+## 2026-06-13
+Context: during rebuild work, the important point was not just that systems were being repaired, but that prior research evidence remained available. Public materials now explain that preserved history and restored visibility were part of the work, not an afterthought.
+- Added explicit public-safe note that research subsystem/database issues forced rebuild work, while historic research reports were preserved and surfaced as a read-only archive.
+- Synced public site/demo messaging to reflect archive-overlay visibility for historical research rather than presenting the rebuilt surfaces as uninterrupted continuity.
+- Updated public demo chronology so visitors can see that recovery, preservation, and rebuild activity formed part of the current research-engine workstream.
+- Added public-safe milestone coverage for archive-backed research dashboard restoration so preserved run counts and historical visibility remain available during rebuild phases.
+- Added public-safe note that governance/runtime research activity can still be surfaced through fallback job-history paths when the primary research store is being repaired.
+- Added public wording for historical report-view restoration and archive mounting so public demo history is framed as deliberately preserved evidence, not leftover UI state.
+
+## 2026-06-12
+Context: these updates were part of the wider push to keep Elora research-first and governance-first, with early symbolic communication and language learning kept under tighter review before being allowed to shape live interactions.
+- Added public-safe changelog coverage for stronger operator training controls, governed communication-language pack separation, and safer fallback retirement on the active communication path.
+- Updated public demo wording so recent communication-learning work is represented as bounded research and governance progression rather than generic UI churn.
+- Added public-safe milestone coverage for early communication-foundation work remaining under tighter operator review before promotion into live symbolic interaction paths.
+
 ## 2026-06-08
 - Synced public-safe Engine changelog to the current internal chronology through `0.2.4`, including `2026-06-05` and `2026-06-08` research-engine learning milestones.
 - Synced public-safe LLM changelog forward to recent bounded capability milestones, including symbolic interaction provenance, public telemetry, continuity learning, and lexicon-only interaction chronology.

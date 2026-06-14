@@ -7,6 +7,9 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25`
 - ERIS runtime-ML formalization in LLM-facing chronology: `2026-05-06` (`0.21`)
 
+Context for this changelog:
+This record focuses on the bounded interaction, runtime-learning, and public telemetry side of Elora's LLM-facing systems. It is intended to show how non-neural methods, governed fallbacks, learning visibility, and public-safe runtime proof surfaces have been expanding together rather than as isolated UI additions.
+
 ## 0.68 - 2026-06-05
 - Added interaction-expression provenance milestone coverage so symbolic replies retain learned-fragment attribution, source artifact family, and phrase-level provenance for operator audit visibility.
 - Added non-neural-first interaction policy telemetry milestone coverage so LLM avoidance posture is explicit and auditable rather than inferred indirectly.

@@ -13,6 +13,17 @@ Machine learning implementation anchors (public-safe):
 ### Release Focus
 - Constitutional governance baseline plus cognitive substrate expansion.
 
+Context for this phase:
+This line of work combined three threads that matter together: strengthening governance boundaries around interaction and symbolic learning, preserving historical research/runtime evidence during rebuild activity, and making more of Elora's internal learning and runtime posture legible through public-safe surfaces. The result was not just new features, but a cleaner explanation of how Elora learns, how she is constrained, and how continuity is preserved when subsystems have to be repaired or restructured.
+
+## 2026-06-14
+- Tightened operator communication governance so bounded symbolic replies no longer fall back to menu-style interpretation prompts during ambiguous operator exchanges.
+- Hardened live lexicon sourcing for operator communication so governed/manual language sources are favored over stale or automatically accumulated residue from earlier learning passes.
+- Changed automatic lexicon backfill posture so newly observed language stays in draft review state until explicitly promoted through governed operator pathways.
+- Added public-safe milestone coverage for retiring legacy interpretation-menu behavior from the active operator path while preserving audit/reference continuity.
+- Fixed a runtime-intelligence cutover issue where a newly created empty runtime-learning store could be preferred over a populated legacy store, causing CORE runtime-intelligence surfaces to show zeroed learning totals despite preserved history.
+- Added regression coverage and deploy-path guidance so runtime-intelligence history remains visible across storage-domain migration and rename states.
+
 ## 2026-06-08
 - Tightened autonomous communication training so early background lessons stay on greeting-foundation work until stable retained basic greeting memories exist.
 - Added stronger symbolic communication-memory retention for passed training lessons, including learned token/meaning structure needed for later reuse rather than only prompt/response storage.
