@@ -16,6 +16,54 @@ Machine learning implementation anchors (public-safe):
 Context for this phase:
 This line of work combined three threads that matter together: strengthening governance boundaries around interaction and symbolic learning, preserving historical research/runtime evidence during rebuild activity, and making more of Elora's internal learning and runtime posture legible through public-safe surfaces. The result was not just new features, but a cleaner explanation of how Elora learns, how she is constrained, and how continuity is preserved when subsystems have to be repaired or restructured.
 
+## 2026-06-18
+- Reworked the public runtime dashboard monitor into a more terminal-like governed evidence surface with a dedicated `Model Runtime Monitor` replacing the earlier static center placeholder.
+- Added a bounded runtime evidence panel capable of showing public-safe request/output excerpts, decision state, intervention reasoning, compaction posture, and Adaptive Cache status in one live area.
+- Tightened watcher behavior so the live stream reads more like an operator terminal:
+  - chronological append flow
+  - overflow-only auto-follow
+  - single-line terminal-style event rows
+  - stronger emphasis for `Decision` and `Intervention` evidence
+- Improved watcher evidence retention so refusal/clarify/governance outcomes remain visible even after the monitor falls back into maintenance or learning telemetry.
+- Reduced duplicate maintenance/cache chatter in the watcher so the stream stays focused on meaningful runtime evidence instead of repeating the same cache update in multiple forms.
+- Added a compact inline runtime summary strip (`Model | Stage | Decision | Intervention`) to reclaim vertical space for the live stream.
+- Added a header-level `LIVE` indicator beside `Runtime Evidence` and removed browser-specific CSS causing Firefox client-side warnings.
+- Expanded the public-safe Inference Governor milestone track with benchmark and runtime-detection progress, including:
+  - model-aware CPU benchmark lane direction
+  - repeated-run comparison posture
+  - clearer stock-runtime observability boundaries
+  - improved operator readability for benchmark/detection evidence
+
+## 2026-06-17
+- Expanded the public homepage into an auto-refreshing governed KPI dashboard with:
+  - HCU topology preview
+  - Cognitive Pulse runtime rail
+  - grouped KPI sections
+  - proof panels
+  - embedded changelog/about technical disclosure surfaces
+- Hardened current-job runtime telemetry so the dashboard can more accurately prefer:
+  - active stage token totals
+  - cumulative run totals for completed research-linked jobs
+  - narrower live queue interpretation when stale queued rows exist
+- Expanded runtime-summary visibility with public-safe context posture including compaction ratio, inflight compute-saved percentage, supported context window, and inflight context usage when available.
+- Added research-step fallback extraction so context-compaction and related runtime evidence can still surface even when flat job-level counters are incomplete.
+- Expanded the Project Snapshot view with a datastore inventory summary covering grouped public-safe roles across control plane, runtime, research, learning, and cognition.
+- Added public-safe milestone coverage for the revised Observer intervention-measurement direction where efficiency, recovery, and quality are treated as separate reporting dimensions instead of one raw compute delta.
+- Added early public-safe milestone coverage for the Inference Governor detection and observability lane, including host/runtime posture visibility and a dedicated review surface for later CPU-aware optimization research.
+
+## 2026-06-16
+- Formalized the Inference Governor as a distinct execution-governance boundary between AI Runtime cognition and infrastructure/control-plane behavior.
+- Added milestone coverage for explicit Governor contracts, adapter seams, feature flags, and runtime snapshot helpers so execution policy can be observed through one cleaner boundary.
+- Added public-safe Governor UI/status visibility milestones covering queue/model/latency posture, inflight state, compatibility posture, and bounded compute-efficiency context.
+- Added CPU profiling architecture milestone coverage for future observability-first execution research, including TTFT, total runtime, per-vCore CPU use, RAM pressure, and memory-bandwidth context.
+
+## 2026-06-15
+- Expanded the governed communication-foundation pack into a structured symbolic foundation with `84` approved single-word items for early pack-only operator interaction.
+- Added public-safe symbolic-layer scaffolding so pack-driven operator replies can be assembled through bounded template rules rather than loose fragment ordering alone.
+- Added anchor/template groundwork for deictic reference, scoped term meaning, and stricter symbolic status replies during non-neural operator communication trials.
+- Moved passive NNLSL signal learning further away from live operator vocabulary by storing observed terms as review candidates instead of writing them straight into the active lexicon.
+- Archived the previous direct-write passive lexicon backfill path for audit reference while keeping the new governed candidate-review boundary live.
+
 ## 2026-06-14
 - Tightened operator communication governance so bounded symbolic replies no longer fall back to menu-style interpretation prompts during ambiguous operator exchanges.
 - Hardened live lexicon sourcing for operator communication so governed/manual language sources are favored over stale or automatically accumulated residue from earlier learning passes.
@@ -23,6 +71,17 @@ This line of work combined three threads that matter together: strengthening gov
 - Added public-safe milestone coverage for retiring legacy interpretation-menu behavior from the active operator path while preserving audit/reference continuity.
 - Fixed a runtime-intelligence cutover issue where a newly created empty runtime-learning store could be preferred over a populated legacy store, causing CORE runtime-intelligence surfaces to show zeroed learning totals despite preserved history.
 - Added regression coverage and deploy-path guidance so runtime-intelligence history remains visible across storage-domain migration and rename states.
+
+## 2026-06-13
+- Restored research KPI reporting across rebuilt environments by combining live telemetry with preserved read-only historical archive totals instead of treating rebuilt stores as empty new histories.
+- Expanded public-safe runtime totals so archive-backed research evidence can contribute to long-horizon counts for runs, steps, runtime, tokens, savings, interventions, and successful repairs while active-job state remains live.
+- Added historical research archive milestone coverage for preserved runs, reports, model exams, and exportable cycle bundles under isolated read-only posture.
+- Broadened research visibility so governance-linked runtime work remains visible even when primary research storage is degraded or mid-rebuild.
+
+## 2026-06-12
+- Added explicit pause/resume boundaries for autonomous lesson execution so manually stopped training does not silently re-arm.
+- Added communication-foundation language-pack import milestone coverage for governed lexicon bootstrap workflows and bounded symbolic vocabulary activation.
+- Expanded split-store fallback and cleanup milestone coverage so governance, audit, runtime, memory, and related stores can be reconciled away from legacy persistence with a safer migration posture.
 
 ## 2026-06-08
 - Tightened autonomous communication training so early background lessons stay on greeting-foundation work until stable retained basic greeting memories exist.
@@ -40,6 +99,16 @@ This line of work combined three threads that matter together: strengthening gov
 - Added non-neural-first interaction policy telemetry milestone coverage so LLM avoidance posture is explicit and reviewable rather than inferred indirectly.
 - Added governed admin-chat alignment milestone coverage so the main popup chat returns to the Elora interaction path while direct diagnostics remain a separate bounded surface.
 
+## 2026-05-30
+- Added Cognitive Process Supervisor milestone coverage so replay, reflection, and recurrence continuity work can be monitored as a coordinated governed process family rather than as isolated background loops.
+- Improved public-safe runtime interpretation of continuity-worker health, replay intake, and bounded learning progression during live operation.
+
+## 2026-05-29
+- Added replay-score backfill hardening milestone coverage so preserved continuity sets recover more gracefully when older score fields have degraded or become low-information.
+- Added continuity placement-policy and safe-zone benchmarking milestone coverage so worker rollout can be reviewed against safer placement envelopes before broader execution increases.
+- Expanded public continuity visibility with more coherent process-isolation and worker-card framing suitable for dashboard interpretation without exposing sensitive internals.
+- Added maturity milestone coverage for reflection, recurrence, consistency, and promotion-gate surfaces so continuity health is reviewable through bounded telemetry rather than opaque queue state alone.
+
 ## 2026-05-27
 - Added a separate P3 integrity/system worker-setting milestone track to strengthen learning safety and runtime stability through planned integrity audit, consistency, worker-health, and bounded recovery workers.
 - Added planned runtime-inventory anchors for these integrity/system workers so readiness posture can be surfaced before execution rollout.
@@ -55,6 +124,10 @@ This line of work combined three threads that matter together: strengthening gov
 - Added worker-inventory governance milestone coverage with explicit functional grouping, rollout-phase tagging, governance-gate posture, and CPU-cap readiness markers.
 - Added P3 continuity-expansion milestone anchors (planned/disabled) for replay relevance, lexicon drift, continuity compaction, and runtime resource optimization tracks.
 - Added Runtime State navigation/readability milestone coverage with grouped worker views and faster section-jump controls.
+
+## 2026-05-21
+- Added the first public runtime KPI surface foundations around HCU topology preview, Cognitive Pulse, and grouped public-facing runtime interpretation.
+- Marked the homepage direction change away from a generic landing-page hero and toward a public-safe operational schema showing governed runtime, research, and learning presence.
 
 ## 2026-05-28
 - Added runtime scheduler decision-audit milestone coverage with durable bounded decision logs and summary counts (total/allowed/blocked) to support safe decision-only rollout before constrained execution.
