@@ -22,6 +22,57 @@ Exclude:
 - sensitive environment/configuration names
 - copy-reproducible security implementation sequences
 
+## 2026-07-06
+
+- Runtime Memory comparison reports now render prompt/response evidence as bounded comparison cards rather than a very wide table.
+- Prompt and response excerpts now use independent scrollable panes, reducing overlap and keeping large text evidence readable in the dashboard.
+- Prompt/response cards now show key context beside the excerpt, including backend, mode, stage, memory timing, runtime timing, token count, fragment count, guardrail adherence, prompt leakage, and persona drift.
+- Report sections now include explanatory subtitles so reviewers can distinguish memory lookup timing, inference/runtime timing, behaviour scoring, and token-driven runtime differences.
+- Experiment Health now derives report-readiness values from available evidence when older comparison payloads do not already include populated health metadata.
+- Public/exported Runtime Memory evidence reports now use the same prompt/response card layout and health fallback as the dashboard report view.
+- Dashboard token totals now include Memory Observer observer tokens, memory context tokens, and processed-token totals where available, improving comparison summaries beyond raw model input/output counts.
+- Regression coverage was added for Runtime Memory report rendering, dashboard archive totals, public dashboard telemetry, and research scenario compatibility.
+
+## 2026-07-05
+
+- Runtime Memory comparison reports now open through the standard Observer report experience rather than only through dedicated comparison export links.
+- Runtime Memory comparison evidence exports continue to support JSON, internal HTML, and public-safe HTML.
+- Comparison report presentation now more closely matches the public Observer evidence report design.
+- Wide evidence tables now scroll horizontally so stage, prompt, response, and backend-comparison data remain readable at dashboard scale.
+- Prompt and response evidence rows use a wider layout to reduce unnecessary report height.
+- Backend job dashboard rows now derive Runtime Memory comparison parent state from the associated child Observer runs.
+- Completed Runtime Memory comparison batches no longer appear as queued simply because the parent mirror record did not execute direct stages.
+- Public dashboard research telemetry now resolves Runtime Memory comparison parents and aggregates child-run input/output token totals.
+- Regression coverage was added for comparison status hydration, dashboard token aggregation, and research job visibility.
+
+## 2026-07-04
+
+- Observer Runtime Memory comparison reports were expanded into public-safe evidence reports suitable for portfolio, research, and dashboard review.
+- Public report sections now include:
+  - Report Version
+  - Experiment Health
+  - Evidence Quality
+  - Evidence Highlights
+  - Engineering Interpretation
+  - Execution Environment
+  - Execution Configuration
+  - Benchmark Configuration
+  - Reproducibility
+  - Statistical Summary
+  - Visual Comparisons
+- The report is now versioned as an Observer Evidence Report and includes schema, generated timestamp, observer version, benchmark version, and public evidence id support.
+- Host hardware, execution environment, runtime metadata, storage metadata, and accelerator flags are separated so reproducibility evidence is easier to interpret.
+- Resource statistics now include average, peak, minimum, and sample count for CPU/RAM/GPU plus best-effort storage activity counters where available.
+- Visual comparisons use lightweight HTML/CSS only and cover memory pipeline time, persona drift, prompt leakage, guardrail adherence, runtime comparison, CPU usage, and RAM usage.
+- Visual comparison bars use semantic categories for memory, behaviour, resources, and runtime.
+- Behaviour charts now source available telemetry for persona drift, guardrail adherence, prompt leakage, response stability, and drift rather than showing avoidable empty values.
+- Runtime labels now resolve common automatic local-runtime placeholders where possible, and version metadata is detected when local runtime executables expose it.
+- Public stage comparison defaults to a first-stage preview with complete stage detail available behind an expandable section.
+- Evidence reports now include a SHA-256 fingerprint for generated-evidence integrity tracking.
+- Report wording is constrained to measured observations and avoids unsupported backend-superiority claims.
+- Public rendering continues to exclude prompts, injected memory content, raw guardrails, private memory, filesystem paths, local runtime identifiers, secrets, stack traces, and private operator notes.
+- Large merged comparison reports retain all stage rows so public evidence output matches the canonical Observer comparison data.
+
 ## 2026-06-17
 
 - Observer intervention measurement framework v2 proposed to separate `Efficiency`, `Recovery`, and `Quality` into distinct reporting layers instead of treating raw compute deltas as the sole measure of intervention value.

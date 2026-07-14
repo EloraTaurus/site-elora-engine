@@ -7,7 +7,187 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
+## 2026-07-14
+- Expanded module-owned memory reporting so the runtime can distinguish active memory, correctly instrumented modules that are currently idle, and areas that still need wiring. Runtime State, model routing, inference discovery, provider calls, language learning, replay, and reflection now expose bounded ownership and deterministic cleanup evidence without retaining sensitive request content.
+- Runtime resource views now receive a lightweight update when managed work starts, becomes idle, is paged, or is cleared. The redesigned admin header separates CPU, total runtime RAM, parent-engine RAM, peak usage, and sample freshness without continuously scanning host or worker inventory.
+- Public Dashboard caches now declare their own retained memory estimates by component. Background refresh work appears only while active and is cleared when complete, while ordinary public reads continue using lightweight cached snapshots.
+- Fixed a public dashboard inventory path that could read large runtime data files merely to count project lines. The inventory is now limited to source files, reads them in small fixed chunks behind a single cached build, and dashboard API hydration runs sequentially with a bounded live-telemetry request.
+
+## 2026-07-12
+- Memory Governance exports now request a current sequential snapshot, and the dashboard exposes snapshot capture time and cache age so operators can identify stale evidence.
+
+## 2026-07-11
+- Runtime State now serves as a read-only operational view of worker CPU, current and peak memory, I/O, placement, activity, and Governance evidence. Worker configuration and authority remain in Security. A new benchmark specification defines how Elora can learn conservative resource leases feature by feature before enforcing a fixed memory envelope.
+- Extended Engine Health self-healing across the three Performance detail areas. SQLite and API Governance now use bounded disposable snapshot builds, check resource admission before starting, and only poll live when an operator requests it. Runtime Monitor suspends its feed while hidden and discards retained job and event data when closed. All three report their active lifecycle to Memory Governance and are released when the operator leaves or is absent.
+- Security now has a dedicated Runtime Workers child page covering each registered worker's purpose, lifecycle, safety context, required RAM/CPU, configured source, and current state. Administrators can apply audited Auto, On, or Off policy to supported workers; planned and queue-owned workers remain read-only, and the deployment defaults now match bounded NNLSL CPU and batch limits.
+- Non-Neural Language Synthesis learning is now governed as short on-demand work instead of a continuously resident worker. Elora checks memory and CPU admission, processes a bounded language batch, resumes from a saved cursor when more remains, skips unchanged data, and reports why the worker stopped plus its measured CPU and shared-process memory change.
+- Corrected runtime self-healing so an expired admin-page presence lease clears only demand-driven dashboard work and does not stop active Observer research. Independent child processes are protected from bulk cleanup, externally stopped work reports the responsible reason, and Memory Governance now separates parent and child RAM/CPU with explicit ownership and lifecycle state.
+- Observer research now ties each accepted request to its own cycle and managed process. New work can queue behind an active child instead of being rejected by its process lock. Elora detects abandoned run records, stops work that has made no progress within its bounded stage window, releases the associated memory declaration, and preserves Runtime Memory runs as a distinct dashboard category.
+- Observer now uses the memory it needs while running. When a run finishes, Elora reviews whether its information is already safely stored, retains only a compact reusable artifact when justified, and otherwise evicts the completed process memory. Any retained Virtual Memory artifact has an automatic expiry.
+
 ## ------------- 0.2.x Chronology --------------
+
+## ------------- 0.2.5 --------------
+### Release Focus
+- Runtime Governance visibility through the Inference Governor, with public-safe observe, reason, recommend, and govern framing.
+- Public dashboard hardening so live runtime, proof, KPI, and model-routing evidence behave more like bounded snapshot consumers than expensive request-time generators.
+- Reviewer/operator explainability for Governor decisions without introducing runtime mutation on the public surface.
+
+Context for this phase:
+This line moved the public side of Elora from a runtime-status display toward a more legible governance evidence surface. The main work was making the dashboard easier to interpret, making Governor recommendations understandable to reviewers, and reducing the risk that public visibility features would create avoidable load or reveal implementation detail that does not belong on an open surface.
+
+## 2026-07-10
+- Long-running Observer research can now be checkpointed into persistent Elora Virtual Memory when its time and RAM thresholds are met. Elora evicts the live process, allows an explicit resume from saved cycle progress, and removes the checkpoint when it is no longer needed.
+- Server-based Observer research now runs in disposable managed processes, allowing large temporary research memory to be physically discarded when a run finishes. Memory Governance distinguishes measured RAM from module declarations and records Observer's measured peak before release.
+- Observer now stops optional post-run learning maintenance if it exceeds a bounded timeout, allowing completed research memory to be released instead of remaining live behind a finished report.
+- Expanded Elora's runtime self-healing beyond Echo, Zombie Watcher, and PhyOS to Engine Overview and Performance.
+- Expensive aggregate work can now run in a bounded child process. If it hangs, Elora terminates it, releases its managed state, stops passive page refresh, clears the page's transient work, and informs the operator.
+- Added a reusable admin self-healing controller so future modules can adopt consistent request deadlines, cleanup, release, retry, and Elora notification behaviour.
+- Normal navigation cleanup remains silent; intervention notifications are reserved for failures and timeout-driven stops.
+- Added operator-presence awareness to runtime self-healing. Admin tabs now hold short leases; after the final tab closes, logs out, or expires and a grace period passes, Elora clears only demand-driven admin processes and caches that no longer serve an operator.
+- Autonomous workers, active research, and public services are preserved. Returning operators receive an Elora notification describing the cleanup, and Memory Governance exposes the current presence and reclaim state.
+- Added a fail-closed guard for the Elora Echo overview dashboard.
+- If Echo overview data cannot load, the page now stops retrying in the background and shows a reportable error instead of remaining stuck on loading data.
+- The memory-heavy Echo overview build now runs in a separate child process with a hard timeout, so a stuck load can be terminated and discarded instead of keeping memory tied up in the main admin process.
+- Failed Echo overview loads now trigger cleanup for the managed Echo overview state so retained memory can be released after the failed request unwinds.
+- The dashboard aborts active Echo fetches, clears chart surfaces, and releases Echo overview state when the failure circuit opens.
+- The admin dashboard now includes a reusable Elora notification toast with the configured Elora avatar, so resource interventions can be surfaced consistently to operators.
+- Echo uses that toast to tell the operator when loading has been stopped, including when the isolated child process was terminated.
+- Operators can retry intentionally by changing an Echo filter or reopening the page, but passive failure no longer keeps the page refreshing repeatedly.
+- Added regression coverage for the safe-error path, subprocess timeout termination, notification surface, and retry-stop behaviour.
+- Extended the same managed-module fail-safe pattern to Zombie Watcher, PhyOS Dashboard, and PhyOS cycle options.
+- These Engine Health modules now declare resource intent before expensive work starts, run heavier build steps in isolated child processes, and return bounded stopped/error payloads if loading fails or times out.
+- Zombie Watcher and PhyOS now release their managed resources and show an Elora notification when loading is stopped, rather than continuing to refresh or hold memory after a failed build.
+- Improved Elora notification visibility so intervention toasts have an opaque background and stay above admin dashboard content.
+- Observer Research runs now register live managed memory only while the runner is active, then release it when the run completes, fails, or is cancelled; completed reports remain available from persistent storage rather than staying resident as live services.
+- Observer report completion now uses a bounded learning-maintenance pass and performs a measured runtime-memory reclaim after queued run data is no longer live.
+- Shared process-memory estimates for in-process workers are shown as estimates rather than being added together as separate allocations, preventing misleading managed-memory totals.
+- Runtime Memory Governance now records module-reported RAM, observed runtime RAM, host memory context, and recent cleanup history so operators can identify RAM-heavy modules even after they have been cleared from the live pool.
+- The Memory Governance dashboard now surfaces live module usage and recent cleanup events in a lighter registry-based view rather than relying on deep runtime scans.
+- Added the first persistent binary virtual-memory layer under Runtime Memory storage. Eligible modules can checkpoint restart-safe state to disk before releasing RAM, while integrity checks, quotas, and explicit module eviction keep the accounting honest.
+- Persistent virtual pages remain available after an engine restart and their disk usage is visible in the Memory Governance and Runtime Memory storage views. Automatic paging remains off until each module has a tested restore contract.
+
+## 2026-07-09
+- Added first-pass worker self-reporting for Runtime Memory Governance.
+- Managed runtime workers can now declare their requested memory, requested CPU, enabled/disabled state, and lifecycle posture to the central governance layer before they run.
+- Memory Governance visibility can therefore rely more on module-reported ownership and less on expensive runtime discovery work.
+- Disabled or deferred workers remain visible with requested-resource metadata, helping operators understand which modules want memory even when those modules are not currently active.
+- Active workers are treated as resident/protected, while idle or inactive worker records remain suitable candidates for future cache or virtual-memory handling.
+- Worker lifecycle updates now flow through lightweight control-plane signals rather than adding another background scanner.
+- Governance summaries now count module-reported worker resources in attribution and instrumentation status, so reported workers are not still shown as missing from the memory map.
+- This supports the longer-term direction of running Elora on tighter-memory systems by making module admission and runtime-resource decisions explicit before work starts.
+- Added regression coverage for worker resource declarations, admission records, lifecycle heartbeats, and idle-worker eligibility in the managed memory pool.
+
+## 2026-07-07
+- Added a shared Observer Evidence Core for report generation.
+- Standard Observer, Runtime Memory Comparison, and Public Evidence reports can now expose the same baseline evidence shape before their specialized deep-dive sections.
+- The shared core includes token accounting, runtime timing, Runtime Memory pipeline timing, resource pressure, and stage-level metadata.
+- Research dashboard report pages and exported reports now show the same core evidence, so reviewers can compare normal Research runs and Memory Comparison runs with a consistent token/runtime/resource ledger.
+- Runtime Memory Comparison reports keep their backend and memory effectiveness analysis, while normal Observer reports gain the shared evidence baseline.
+
+## 2026-07-06
+- Improved Observer Runtime Memory evidence report usability.
+- Prompt and response comparisons now use readable evidence cards with scrollable excerpts instead of oversized comparison tables.
+- Report sections now explain what is being measured, including the distinction between memory lookup time, model runtime, token volume, and behavioural evidence.
+- Experiment Health now populates from available comparison evidence when older report payloads do not already include a health summary.
+- Public/exported reports and in-dashboard reports now use the same prompt/response evidence layout for Runtime Memory comparisons.
+- Dashboard token totals now include Memory Observer processing evidence where available, including observer-token, memory-context-token, and processed-token totals.
+
+- Added a reusable Observer Governance Evidence framework for report generation.
+- Observer reports can now describe which governed runtime state was assembled, why it was selected, whether validation passed, whether required state was missing or unavailable, how relationships were traversed, and whether the runtime stayed inside its intended authority boundary.
+- Standard Observer, Runtime Memory Comparison, and Public Evidence reports now share the same governance evidence structure instead of treating governance as a Runtime Memory-only feature.
+- Research dashboard report pages now show Governance Evidence directly, so internal review does not require downloading an HTML export.
+- Runtime Memory Comparison reports can now compare governance evidence across backend/mode rows as another dimension alongside memory timing, behavioural telemetry, and resource evidence.
+- Public reports expose governance metadata only: loaded/missing/stale/unavailable status, validation status, relationship counts, authority status, timings, and confidence.
+- Public reports continue to exclude prompts, guardrail text, policies, runtime memory contents, user/session memory contents, operator notes, internal instructions, and raw runtime internals.
+- Added a concise Governance Verdict so reviewers can quickly see whether the runtime evidence supports trust in the governed state that was intended for execution.
+- Added regression coverage to keep governance evidence present across internal and public report renderers.
+
+## 2026-07-04
+- Expanded Observer Runtime Memory comparison exports into a public-safe engineering evidence report.
+- Public reports now include Evidence Highlights, Engineering Interpretation, Experiment Health, Evidence Quality, Execution Environment, Benchmark Configuration, Reproducibility, statistical summaries, and lightweight visual comparisons.
+- The report is now versioned as an Observer Evidence Report so future Observer research scenarios can reuse the same public evidence structure.
+- Host hardware, execution environment, runtime metadata, storage metadata, accelerator flags, and resource statistics are separated more clearly for reproducibility.
+- The report describes what was tested, how it was tested, where it was tested, and what was observed, while preserving the boundary around prompts, injected memory, raw guardrails, filesystem paths, secrets, stack traces, and private runtime notes.
+- Runtime Memory evidence is now separated more clearly from inference timing and behavioural evidence so reviewers can distinguish memory pipeline behaviour from model generation behaviour.
+- Report wording remains evidence-based and avoids claiming that any memory backend is superior unless a measured experiment supports that conclusion.
+- Visual comparisons now use consistent categories for memory, behaviour, resources, and runtime without relying on external libraries.
+- Final report polish reduces avoidable runtime placeholders, improves local runtime/version detection where available, adds behaviour chart coverage for stability and drift, adds an evidence fingerprint, and keeps public stage detail concise with expandable full detail.
+- Added regression coverage to keep public evidence sections present, redacted, and able to render large merged comparison reports without dropping stages.
+
+## 2026-07-02
+- Added the first Runtime Memory binary-fragment research prototype.
+- Runtime Memory now has a dedicated storage area so editable Markdown source, compiled binary fragments, SQLite comparison data, and benchmark exports can be inspected separately from other engine data.
+- Markdown remains the source of truth, while compiled `.bin` fragments provide an experimental runtime representation for deterministic context assembly.
+- The prototype compares Markdown, SQLite, and binary memory backends against the same source information and reports latency, consistency, guardrail/persona adherence, context size, and storage footprint.
+- The benchmark explicitly avoids claiming that binary memory is faster or better until larger cold-start, warm-cache, and hardware-specific evidence exists.
+- Added operator tooling for compiling, validating, rebuilding indexes, viewing statistics, exporting benchmark datasets, and running the comparison benchmark.
+- Refactored the Runtime Memory implementation into smaller production-shaped modules before live use.
+- Added a standalone public reference project for other builders and researchers who want to test or adapt the Runtime Memory Pipeline idea independently.
+
+## 2026-07-01
+- Added a follow-up database-pressure hardening pass focused on keeping background dashboard/admin warm work bounded over time.
+- Reduced repeated research history hydration for run summaries by sharing one read path for related summary data instead of loading overlapping detail twice.
+- Tightened diagnostic scan limits for research engine-health views so recovery and investigation surfaces remain bounded during unstable periods.
+- Improved cache identity for parameterized engine-health views so cached diagnostic responses better match the requested view shape.
+- Retired a live admin-facing legacy repair route from the normal request path while preserving controlled repair capability outside the public/admin surface.
+- Reduced duplicate active/queued research reads across dashboard and observer surfaces by sharing a bounded activity snapshot.
+- Reduced repeated observer-stage history reads by moving related summary extraction onto a bulk read path.
+- Kept research utility views request-cached while avoiding unnecessary background warming after those pages are visited.
+- Removed an unused future-route placeholder after confirming it was not part of the active route surface.
+- Kept Elora Core and Runtime Intelligence admin views request-cached while avoiding extra background warm work from normal page visits.
+- Reduced unnecessary cache variants by normalizing view parameters before serving cached Elora Core and Runtime Intelligence responses.
+- Removed older retired/audit-only code paths from the active tree after confirming they were no longer imported by live routes or tests.
+- Made normal admin visibility pages avoid recurring background warm jobs, leaving cached views on demand unless warm scheduling is explicitly enabled.
+- Reduced research dashboard retry pressure by making run-list loading less likely to abort and immediately issue a second database-backed request.
+- Added polling overlap guards for research runner status/watchdog reads so slow responses cannot stack repeated backend work.
+- Reduced routine admin shell API pressure by keeping health checks side-effect free, moving full posture/config reads to explicit surfaces, and caching lightweight shell badge/config data.
+- Added a bounded operator-facing API budget view that groups services by type and shows managed limits/recommendations from existing runtime telemetry without adding per-service polling.
+- Added read/write/commit visibility to SQLite pressure telemetry so operators can identify database I/O pressure before applying stricter limits.
+- Added an Engine Health performance hub so database I/O, API governance, and runtime-monitor detail are opened deliberately from one lightweight snapshot instead of being treated as one large default view.
+- Grouped Runtime State into operator tabs so the existing runtime evidence is easier to inspect without adding new polling or backend fan-out.
+- Changed the new performance/pressure surfaces to start idle and load only after an operator action, with opt-in live refresh that stops when the page is no longer active.
+- Added passive SQLite runtime intelligence that checks total pressure deltas and only focuses on detailed caller/path evidence when a spike is detected.
+- Tightened shared SQLite connection handling so scoped helper usage closes connections at the end of the block.
+- Added a second pressure-hardening pass for runtime-state and cognitive-continuity loops so repeated status views and idle worker checks avoid unnecessary database writes.
+- Reduced repeated admin/config/research read pressure by lengthening existing short-lived caches and reusing identity data already loaded for admin session checks.
+- Added regression coverage around read-only idle worker checks, unchanged runtime-state persistence, one-time schema setup, and SQLite handle cleanup.
+- Added focused regression coverage for bounded API warm-view behaviour.
+
+## 2026-06-30
+- Reduced avoidable SQLite connection pressure across boot-time and frequently polled runtime/admin paths by ensuring repeated state-store setup work is guarded per database path instead of rerunning on every short-lived access.
+- Hardened runtime database tuning so path-level setup is not repeatedly issued for the same SQLite files during normal operation.
+- Reduced authenticated admin request write pressure by caching short-lived identity/session checks and throttling routine `last seen` updates.
+- Added clearer SQLite pressure attribution so operators can identify which code paths still drive high connect counts, not just which profile or database file is active.
+- Followed the new caller attribution into the next hot paths by reducing repeated research schema checks, reusing continuity diagnostic reads more efficiently, and caching resolved database paths for high-frequency stores.
+- Added short-lived read caching for repeated state and research summary reads during dashboard/status refreshes, plus schema-bootstrap guarding for Elora CORE storage.
+- Added a clearer optimization layer for dashboard/admin refreshes: shared research snapshots for overlapping dashboard facts and a lazy per-request admin metadata snapshot for repeated admin settings reads.
+- Followed live telemetry after the optimization pass by guarding admin schema bootstrap once per process, removing overly broad admin metadata preloading from generic admin polls, and caching research run list reads during abort/retry loops.
+- Added follow-up Fabric storage hardening so routine worker/host heartbeat evidence is retained more selectively and repair/replacement workflows are safer around live SQLite sidecar files.
+- Hardened the research dashboard against heavy all-time history reads by keeping summary work bounded, avoiding background warming of expensive dashboard aggregates, and coalescing duplicate cache builds during abort/retry loops.
+- Added focused regression coverage for the connection-pressure reductions and observability improvements.
+
+## 2026-06-25
+- Expanded the public runtime/dashboard narrative around the Inference Governor so visitors can follow an `Observe -> Reason -> Recommend -> Govern` flow instead of starting from raw technical telemetry.
+- Added a dedicated public-safe `Runtime Governance` panel for interpreted Observation, Recommendation, Runtime Health, Research State, Active Policies, Recent Decisions, and bounded Operator Actions visibility.
+- Improved public decision explainability so recent Governor decisions now read as interpreted evidence reports with clearer reasoning, expected outcomes, confidence, and safety-bound policy posture.
+- Preserved the public boundary by keeping mutation disabled and hiding raw operational identifiers, topology details, and developer-only evidence behind collapsed review layers.
+- Added a lighter-weight governance evidence API path so interpreted Governor state can be read without forcing heavier KPI, proof, or model-routing rebuild work.
+- Split dashboard section refresh into more controlled sequenced rebuild behavior so public-safe evidence refreshes do not fan out into avoidable concurrent rebuild pressure.
+- Added section-index/freshness visibility so reviewers can understand when dashboard evidence is ready, restored, queued, warming, or pending without mistaking placeholder state for live evidence.
+- Tightened proof and continuity presentation so empty or placeholder payloads no longer overwrite more meaningful preserved evidence during refresh windows.
+
+## 2026-06-23
+- Continued hardening the public dashboard as a snapshot-consumer surface rather than a request-time generator, reducing the chance that one public visit triggers unnecessary full evidence rebuilds.
+- Improved section-level freshness and hydration handling so KPI, proof, and model-routing evidence can restore independently and explain their state more clearly to reviewers.
+- Added stronger public review context around the dashboard to explain the runtime safety boundary, the purpose of the surface, and why the evidence shown matters.
+- Expanded public-safe Inference Governor visibility with clearer CPU/runtime observability framing, benchmark progress wording, and bounded detection evidence suitable for later optimization research.
+- Added public-safe cycle-timing/reporting milestone coverage so Observer runtime analysis can be discussed as stage-timing evidence without exposing internal implementation paths.
+
+## 2026-06-22
+- Moved the public dashboard further toward restored-snapshot and fail-soft behavior so populated evidence is preserved during cold starts, pending refreshes, and partial backend rebuild windows.
+- Reduced startup and hydration contention by separating lighter public telemetry from heavier dashboard evidence sections and allowing those sections to recover asynchronously.
+- Added public-safe visibility for the Source of Truth -> Snapshot -> Dashboard Display direction so the dashboard can be understood as a consumer of governed evidence rather than the producer of it.
 
 ## ------------- 0.2.4 --------------
 ### Release Focus

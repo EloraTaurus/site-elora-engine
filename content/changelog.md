@@ -2,6 +2,39 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-07-01
+Context: this update continues the recovery and hardening work by making repeated dashboard/admin visibility paths more bounded and by retiring an old live repair surface from normal operation.
+- Added public-safe coverage for bounded API warm-view scheduling so background refresh work does not accumulate stale view variants.
+- Added public-safe coverage for lighter research summary reads and tighter research engine-health diagnostic scan limits.
+- Updated the changelog narrative to reflect cache-key alignment and legacy repair-surface retirement as part of reducing avoidable database pressure.
+- Added public-safe coverage for reducing repeated research active/queue reads and avoiding background warming for research utility views that are already request-cached.
+- Noted removal of an unused future-route placeholder as part of keeping the codebase cleaner during recovery work.
+- Added public-safe coverage for keeping Elora Core and Runtime Intelligence views cached on demand without adding extra recurring warm jobs.
+- Added public-safe coverage for reducing avoidable cache variants and removing retired legacy code from the active tree after reachability checks.
+- Added public-safe coverage for making normal admin visibility warm scheduling opt-in and reducing research dashboard abort/retry pressure.
+- Added public-safe coverage for preventing overlapping research runner status/watchdog polls during slow backend responses.
+- Added public-safe coverage for reducing routine admin shell API pressure through lighter cached shell summaries and side-effect-free health polling.
+
+## 2026-06-30
+Context: this update syncs the public/demo narrative with the latest engine pressure-reduction work. The important public-facing point is that runtime visibility and admin observability are being improved while reducing unnecessary database churn behind the scenes.
+- Added public-safe coverage for SQLite connection-pressure reduction work across boot-time state stores and frequent admin/runtime reads.
+- Updated changelog framing to mention short-lived admin identity/session caching, routine write throttling, and path-level database setup guards without exposing operational internals.
+- Added public-safe wording for improved SQLite pressure attribution so remaining hot paths can be investigated with clearer evidence.
+- Synced the follow-up caller-attribution pass covering reduced research schema-check churn, more efficient continuity diagnostics, and cached database path resolution for high-frequency stores.
+- Added public-safe coverage for short-lived read caching across repeated state/research dashboard refresh reads and Elora CORE schema-bootstrap guarding.
+- Added public-safe coverage for the new dashboard/admin snapshot optimization layer that shares repeated research/admin facts within a refresh or request window.
+- Added public-safe coverage for the live telemetry follow-up that tightened admin initialization, backed out overly broad admin metadata preloading, and reduced research run retry pressure.
+- Added public-safe coverage for Fabric storage hardening that reduces routine heartbeat event churn and makes database repair/replacement safer around SQLite sidecar files.
+- Added public-safe coverage for research dashboard hardening that keeps all-time history summaries bounded and prevents repeated dashboard abort/retry loops from multiplying backend work.
+
+## 2026-06-25
+Context: this phase moved the public story into the new `0.2.5` line. The emphasis shifted from simply showing runtime presence to showing governed reasoning and evidence in a way reviewers can actually follow, without opening up mutating controls or implementation detail that should stay private.
+- Synced the public demo changelog and public-safe engine changelog to the new `0.2.5` release line.
+- Added public-safe milestone coverage for the Inference Governor as a visible runtime-governance layer with interpreted observe, reason, recommend, and govern framing.
+- Updated public changelog framing to cover the new `Runtime Governance` dashboard panel, interpreted decision reports, and clearer reviewer-facing Governor evidence.
+- Added public-safe wording for dashboard section freshness, restored snapshots, warming state, and consumer-path hardening so the public dashboard is described as a governed evidence surface rather than a live internal operator console.
+- Extended public milestone coverage for dashboard rebuild/load reduction work, including sequenced section refreshes and preservation of more meaningful evidence during pending refresh windows.
+
 ## 2026-06-14
 Context: this phase was focused on making the public story match the actual direction of the engine. That meant reflecting tighter communication governance, safer learning-store rebuild posture, and clearer continuity of preserved runtime/research history.
 - Synced the public demo changelog forward to the latest `0.2.4` engine chronology so the website now reflects June governance, runtime-intelligence, and learning-surface milestones already captured in the public-safe Engine changelog.
