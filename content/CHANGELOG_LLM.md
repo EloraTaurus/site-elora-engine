@@ -10,6 +10,59 @@ Machine learning implementation anchors (public-safe):
 Context for this changelog:
 This record focuses on the bounded interaction, runtime-learning, and public telemetry side of Elora's LLM-facing systems. It is intended to show how non-neural methods, governed fallbacks, learning visibility, and public-safe runtime proof surfaces have been expanding together rather than as isolated UI additions.
 
+## 0.77 - 2026-07-17
+- Added bounded CPU Governor sharing for direct deterministic NNLSL turns so memory admission and CPU slot ownership are visible together rather than inferred separately.
+- Added public-safe operator evidence for CPU wait, measured usage, breach posture, and slot release across Admin Chat and the NNLSL Lab Harness.
+- Added separate lifecycle visibility for lexicalization, educational data reads, schema preparation, and teaching-pack work under explicit resource controls.
+- Kept the active authority boundary unchanged: hard CPU or slot failures fail closed and optional neural handoff remains separately governed.
+
+## 0.76 - 2026-07-17
+- Added a disabled shadow-only data-driven lexicalization path where governed concepts, constructions, and trusted Lexicon evidence can support sentence building without active code-owned response vocabulary.
+- Added educational token-to-sense and token-to-role evidence so approved sentences support bounded selection without becoming copy-ready responses.
+- Kept the shadow result explicitly non-authoritative: it remains traceable for review but cannot alter Elora's live governed response or promote language by itself.
+- Removed the earlier preferred-lemma assembler from the active runtime while retaining it as historical comparison evidence.
+
+## 0.75 - 2026-07-16
+- Added bounded per-word Lexicon assembly for selected interaction intents so trusted active words can be chosen for governed slots instead of relying on full stored sentences.
+- Added replay-visible lexical selection evidence including selected entry IDs, trust/source posture, grammar context, fallback reason, and output influence state.
+- Kept safety-critical refusal, clarification, claim, and handoff language fail-closed and separately governed.
+- Marked this path as an auditable baseline while the next semantic content-planning stage remained pending.
+
+## 0.74 - 2026-07-16
+- Replaced duplicated chat-history projections with a bounded row-based operator record and migration path.
+- Separated routine browser polling from autonomous interaction and signal-worker execution.
+- Reduced live chat and status reads to bounded scalar projections instead of loading complete research and learning datasets.
+- No neural model, provider, prompt, or handoff authority changed.
+
+## 0.73 - 2026-07-16
+- Added bounded memory admission, checkpoints, release, cooldown, and reclaim evidence for direct non-neural interaction turns.
+- Restored operator chat to the governed NNLSL path so model selection occurs only after non-neural processing requests neural assistance.
+- Added deterministic greeting support and compact runtime projections while separating NNLSL resource accounting from optional neural handoff.
+- Confirmed repeated non-neural turns stabilise within a bounded runtime profile after initial loading.
+
+## 0.72 - 2026-07-16
+- Tightened runtime-memory attribution and bounded public/admin telemetry reads that previously loaded more research evidence than required.
+- Added clearer separation between process memory, traced runtime allocations, native estimates, and advisory route correlations.
+- Kept diagnostic attribution read-only: it cannot claim ownership or trigger autonomous reclamation.
+- Reduced retained runtime-intelligence state substantially in validation without changing inference authority.
+
+## 0.71 - 2026-07-16
+- Added a deterministic read-only preview of the governed lexical education contract covering senses, examples, relationships, constructions, review, and shadow compilation.
+- Added operator-visible teaching and trace previews while keeping drafts non-authoritative and unable to influence live responses.
+- Established the semantic-data boundary for later data-driven lexicalization work without creating live tables, scheduling workers, or changing neural routing.
+
+## 0.70 - 2026-07-16
+- Added deterministic full-store NNLSL snapshots, replay verification, guarded rollback, and schema-compatibility checks before educational work proceeds.
+- Re-enabled the contained Lexicon candidate worker only against governed local language and training resources, with zero active promotion authority.
+- Kept operator explanations non-authoritative and excluded neural, research-job, and historical Observer prose from the contained worker's learning inputs.
+- Aligned worker admission and resource metadata around a bounded on-demand lifecycle.
+
+## 0.69 - 2026-07-16
+- Documented the governed lexical-education architecture around atomic lexemes, explicit senses, typed examples, semantic relationships, and bounded construction patterns.
+- Defined future neural and Observer-derived language evidence as quarantined shadow education requiring provenance and explicit human promotion.
+- Reaffirmed that inferred language evidence cannot become validated meaning or governance authority by itself.
+- This milestone was architectural planning only and did not change live model routing or runtime behaviour.
+
 ## 0.68 - 2026-06-05
 - Added interaction-expression provenance milestone coverage so symbolic replies retain learned-fragment attribution, source artifact family, and phrase-level provenance for operator audit visibility.
 - Added non-neural-first interaction policy telemetry milestone coverage so LLM avoidance posture is explicit and auditable rather than inferred indirectly.

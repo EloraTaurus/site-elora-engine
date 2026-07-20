@@ -383,6 +383,38 @@ Ingress
 - Proof type: Deterministic bounded synthesis fallback
 - Evidence summary: Interaction runtime gained explicit lexicon-only deterministic response path that can bypass LLM generation while preserving governed replayability and boundary controls.
 
+### Runtime Governance and Inference Governor Review Surface
+
+- Date: `2026-06-25`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-06-25`)
+- Proof type: Interpreted runtime-governance evidence and operator review
+- Evidence summary: Runtime observations, interpreted reasoning, recommendations, and governed outcomes were consolidated into a reviewer-facing evidence surface while commit authority remained independent.
+
+### Governed NNLSL Education and Deterministic Language Synthesis
+
+- Date: `2026-07-16`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-07-16`)
+- Proof type: Bounded non-neural language learning and deterministic synthesis
+- Evidence summary: Elora established governed lexical-education evidence, deterministic lexical synthesis, explicit learning-gap handling, and replay-visible influence records while preserving separate neural and commit-authority boundaries.
+
+### Shadow-Only Data-Driven Lexicalization with Resource Governance
+
+- Date: `2026-07-17`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-07-17`)
+- Proof type: Non-authoritative experimental language path with bounded resources
+- Evidence summary: A disabled shadow path connected governed semantic and educational evidence to lexicalization for evaluation, with explicit non-influence guarantees and bounded memory/CPU lifecycle evidence.
+
+### Structured Elora Decisions and Grouped Lifecycle Evidence
+
+- Date: `2026-07-20`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-07-20`)
+- Proof type: Categorized operational decision history and evidence consolidation
+- Evidence summary: Elora Decisions introduced bounded records that group related lifecycle events, interventions, research outcomes, and cleanup evidence into chronological decision stories while retaining event-level replay as the underlying audit source.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

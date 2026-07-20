@@ -2,6 +2,18 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-07-20
+Context: this update moves the public chronology into the `0.2.6` line and reflects the new Elora Decisions module without exposing internal runtime evidence or delivery configuration.
+- Added public-safe coverage for categorized Elora decision history and grouped lifecycle stories.
+- Added public-safe wording for memory-reclaim attribution, including the distinction between Elora initiating a reclaim and proving ownership of unattributed process memory.
+- Added Observer Research run-summary coverage, including completed cycles and detected-versus-applied intervention counts.
+- Added public-safe coverage for measurable consolidation of correlated Observer updates into retained decision timelines.
+- Clarified that page, toast, and email representations come from one bounded record while external delivery remains disabled.
+- Reframed the Research and Governed Inference pages around the current 0.2.6 architecture, including NNLSL education, bounded neural handoff, resource governance, and structured Elora Decisions.
+- Restored the missing public-safe LLM chronology for versions `0.71` through `0.74` and aligned those milestones to the dated internal record.
+- Extended the Technical Disclosure and Prior Art pack through `2026-07-20`, including Runtime Governance, governed NNLSL, shadow-only lexicalization, and Elora Decisions milestones.
+- Updated public disclosure terminology and release metadata from `0.2.0` to `0.2.6` without exposing internal schemas, thresholds, routes, or deployment contracts.
+
 ## 2026-07-01
 Context: this update continues the recovery and hardening work by making repeated dashboard/admin visibility paths more bounded and by retiring an old live repair surface from normal operation.
 - Added public-safe coverage for bounded API warm-view scheduling so background refresh work does not accumulate stale view variants.

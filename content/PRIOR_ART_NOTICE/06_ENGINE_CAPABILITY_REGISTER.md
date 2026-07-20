@@ -228,6 +228,30 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Extended greeting-foundation communication learning into retained symbolic continuity, establishing a dated public-safe milestone for longer-lived communication behavior tracking.
 
+#### Runtime Governance and Inference Governor Evidence Milestone
+
+- Date: `2026-06-25`
+- Source anchor: Engine changelog (`2026-06-25`)
+- Evidence class: Interpreted runtime evidence and governance review
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Consolidated runtime observations, interpreted reasoning, recommendations, and governed outcomes into a clearer reviewer-facing surface without moving commit authority into the intelligence layer.
+
+#### Governed NNLSL Language-Education Milestone
+
+- Date window: `2026-07-16` to `2026-07-17`
+- Source anchor: Engine + LLM changelog (`2026-07-16`, `2026-07-17`)
+- Evidence class: Governed non-neural language learning, deterministic synthesis, and bounded resource operation
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added governed lexical and educational evidence, deterministic language assembly, explicit learning-gap handling, shadow-only data-driven evaluation, and separate memory/CPU lifecycle evidence while retaining human promotion and neural-handoff boundaries.
+
+#### Elora Decisions 0.2.6 Milestone
+
+- Date: `2026-07-20`
+- Source anchor: Engine changelog (`2026-07-20`)
+- Evidence class: Structured operational decision history and evidence presentation
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added categorized Elora Decisions that consolidate related operational events, research outcomes, interventions, and cleanup into bounded chronological records backed by the underlying replay evidence.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components

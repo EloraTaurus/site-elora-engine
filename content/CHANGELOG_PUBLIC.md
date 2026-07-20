@@ -7,6 +7,18 @@ Format:
 
 ## Major Milestones
 
+## 2026-07-20
+- Opened the `0.2.6` release line with Elora Decisions as a dedicated categorized record of important operational decisions.
+- Added chronological decision stories, explicit memory-reclaim attribution, and one bounded Observer Research outcome summary per run.
+
+## 2026-07-17
+- Added a disabled shadow-only data-driven lexicalization path backed by governed semantic, construction, and educational evidence.
+- Added bounded memory and CPU lifecycle evidence for deterministic NNLSL work while preserving separate neural and commit-authority boundaries.
+
+## 2026-07-16
+- Added governed lexical-education contracts, deterministic lexical synthesis, explicit learning-gap handling, and replay-visible output-influence evidence.
+- Bounded operator chat, research-status, and runtime-memory reads so non-neural interaction remains inspectable without loading complete evidence stores.
+
 ## 2026-05-20
 - Constitutional-governance baseline established with explicit doctrine boundaries and signed policy-change controls.
 - Memory-governance baseline established with tombstone-only lifecycle behavior and operator consent-aware access controls.

@@ -7,6 +7,46 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
+## 2026-07-20
+- Opened the `0.2.6` release line around Elora Decisions: a dedicated, categorized history of important operational decisions rather than a stream of disconnected notifications.
+- Related actions can now be read as one chronological decision story, making preparation, intervention, completion, cancellation, and failure easier to investigate.
+- Memory cleanup records now state when Elora initiated a reclaim while preserving uncertainty where the released process memory cannot yet be assigned to a fully instrumented owner.
+- Observer Research now creates one run summary showing completed work, detected intervention conditions, interventions actually applied, Observer outcomes, and repair results, with access to the durable report.
+- Earlier correlated Observer review records are consolidated into their matching decision timeline without discarding the underlying history, and the interface shows the resulting decision-versus-event reduction.
+- Page, toast, and email forms continue to derive from the same bounded record; external delivery remains disabled pending dedicated delivery controls.
+
+## 2026-07-19
+- Added an Elora Decisions view that presents structured operational decisions in Elora's own notification format, complete with her image, reason, outcome, and supporting evidence. The same record can be previewed as an on-screen page item, toast, or email before external delivery is enabled.
+- Memory lifecycle decisions now distinguish preparation from completed reclaim and state whether allocator cleanup produced an immediate measured RAM reduction. Decision history is bounded, persistent, and reviewable.
+- Added a reviewed terminal-memory lifecycle for completed runtime work. Rebuildable caches enter a visible pending-reclaim state and are cleared by a lightweight background service within a bounded window, while durable reports and explicitly retained Virtual Memory artifacts remain available.
+- Runtime Memory Governance now distinguishes pending terminal cleanup from active work and records the resulting cleanup and measured allocator-memory evidence.
+
+## 2026-07-17
+- Added a disabled shadow implementation for data-driven non-neural sentence construction. Elora first creates a semantic concept plan, then selects trusted words for governed grammatical roles using meanings, relationships, quality evidence, and reviewed examples rather than response-word lists embedded in code.
+- Educational sentences are stored as token-to-sense and token-to-role evidence. They can support a choice but cannot be copied as complete responses.
+- Runtime traces expose the candidate construction, selected word evidence, alternatives, and missing-language gaps while explicitly preventing the shadow result from changing Elora's governed response.
+- The former hand-guided lexical assembler was removed from the active runtime and retained only as historical comparison evidence.
+- The shadow stage remains disabled pending target database snapshot, explicit education-pack compilation, and deployed replay/resource review. No neural-model or governance authority changed.
+- Added explicit resource controls for the new path: Admin Chat and the Lab Harness now share the CPU Governor scheduler, enforce bounded thread-CPU checkpoints, and release both CPU and memory reservations before any optional model handoff. The selector and educational data operations are independently visible in governance telemetry.
+
+## 2026-07-16
+- Stabilised shared NNLSL chat memory by making polling read-only, moving history into bounded row-based storage, removing heavyweight learning snapshots from popup refreshes, reducing the live message projection, and replacing full job/research hydration with lightweight status reads.
+- Repeated reasoning turns and runtime-status reads now plateau below roughly 55 MiB in local process validation instead of growing with each response.
+- Added a dedicated Memory Governance lease for direct non-neural interaction, with an absolute engine-process admission ceiling, sequential execution by default, five fail-closed pipeline checkpoints, immediate turn-terminal release, deterministic soft/hard breach handling, and configurable constrained-hardware limits.
+- Quiet NNLSL interaction state now expires independently of whether the admin page remains open, and retained language/chat projections share a deterministic cache ceiling.
+- Runtime Memory Governance and Elora's interaction trace now show NNLSL reservation, growth, release, idle eviction, breach, denial, and reclaim evidence without retaining conversation content in the controller.
+- A fresh deterministic greeting completed in about 167 ms with a 50.3 MiB process high-water and no neural handoff.
+- Restored simple Elora Interaction requests to the lightweight governed NNLSL route and prevented the legacy model queue from accepting that interaction mode.
+- Added deterministic greeting interpretation and response generation without neural handoff.
+- Reduced live Elora Interaction memory by replacing its full CORE-state build with a compact governed projection and adding explicit cache eviction on restart or operator absence.
+- A fresh no-LLM interaction now peaks at about 55.9 MB; twelve repeated turns increased the first-turn high-water by only about 0.22 MB.
+- Reduced NNLSL Lexicon interaction memory by using compact ranking records instead of retaining full educational entries during broad candidate selection. Detailed meanings and examples remain available when a specific entry is selected.
+- Corrected runtime object reporting so linked management records are shown separately rather than being counted as duplicate active objects.
+- Replaced high-frequency API telemetry serialization with a bounded, throttled structural estimate, reducing request-time CPU and memory churn under active admin and Lexicon traffic.
+- Expanded Runtime Memory Governance with bounded parent-memory origin and trend evidence so unexplained engine memory can be separated from LLM/inference activity without silently enabling intrusive heap tracing.
+- Fixed a public runtime-intelligence refresh path that loaded complete Adaptive Cache audit history and oversized research runtime evidence merely to produce small status summaries. Recent audit and research status reads are now bounded projections.
+- Optimised the public latest-word evidence card to use a lightweight indexed Lexicon summary read instead of loading full educational records.
+
 ## 2026-07-14
 - Expanded module-owned memory reporting so the runtime can distinguish active memory, correctly instrumented modules that are currently idle, and areas that still need wiring. Runtime State, model routing, inference discovery, provider calls, language learning, replay, and reflection now expose bounded ownership and deterministic cleanup evidence without retaining sensitive request content.
 - Runtime resource views now receive a lightweight update when managed work starts, becomes idle, is paged, or is cleared. The redesigned admin header separates CPU, total runtime RAM, parent-engine RAM, peak usage, and sample freshness without continuously scanning host or worker inventory.
@@ -26,6 +66,12 @@ Machine learning implementation anchors (public-safe):
 - Observer now uses the memory it needs while running. When a run finishes, Elora reviews whether its information is already safely stored, retains only a compact reusable artifact when justified, and otherwise evicts the completed process memory. Any retained Virtual Memory artifact has an automatic expiry.
 
 ## ------------- 0.2.x Chronology --------------
+
+## ------------- 0.2.6 --------------
+### Release Focus
+- Dedicated Elora Decisions history with categorized, reviewable records.
+- Chronological decision stories that group related lifecycle updates.
+- Clearer memory-reclaim attribution and Observer Research intervention summaries.
 
 ## ------------- 0.2.5 --------------
 ### Release Focus

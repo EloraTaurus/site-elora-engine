@@ -46,6 +46,18 @@ The operational severity label assigned to a run or decision context to support 
 
 UI/API surfaces used by human operators to inspect evidence, replay chronology, and policy outcomes.
 
+## Elora Decision
+
+A bounded, categorized record that groups related operational events into a reviewer-readable decision story. It supplements rather than replaces event-level replay evidence and does not create execution authority.
+
+## NNLSL
+
+Elora's Non-Neural Language and Symbolic Learning domain. It uses governed lexical, semantic, relationship, educational, and construction evidence for bounded deterministic language work, with explicit gaps and separately governed neural handoff.
+
+## Shadow Evidence
+
+Traceable experimental evidence that is available for evaluation but is explicitly prevented from influencing live output, promotion, governance, or execution authority.
+
 ## External Phrase Mapping (Reviewer Aid)
 
 The phrases below are included as reviewer mapping aids. They are not exclusive to any single implementation lineage.
@@ -82,5 +94,5 @@ For standards-level lineage and dated sources, see:
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-05-20`
+- Last updated: `2026-07-20`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.

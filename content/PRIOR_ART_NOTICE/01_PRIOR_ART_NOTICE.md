@@ -23,7 +23,7 @@ The Elora Taurus Project advocates for open AI governance patterns that can be i
 ### Notice to Practitioners
 
 Researchers, developers, and examiners are encouraged to cite this disclosure and its timestamped references as implementation chronology evidence for AI governance and cryptographic execution-enforcement patterns.
-They may also cite later public-safe learning milestones covering runtime intelligence, behaviour-detection research direction, and symbolic teaching/retention foundations added through June 2026.
+They may also cite later public-safe learning milestones covering runtime intelligence, behaviour-detection research direction, symbolic teaching, governed non-neural language learning, runtime-resource evidence, and structured operational decisions added through July 2026.
 
 ## Disclosure Scope
 
@@ -46,9 +46,11 @@ Current public anchor surfaces:
 - Public website repository: `https://github.com/EloraTaurus/elorataurus.com`
 - Public demo changelog surface: `https://elorataurus.com/changelog/`
 
-## Disclosure Continuity (2026-04 Extension)
+## Disclosure Continuity (2026-04 to 2026-07 Extension)
 
 This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, report comparability improvements, repair/self-healing-path visibility controls, and later-month CORE/Model-Exams research milestones.
+
+The July 2026 extension adds bounded runtime-governance evidence, governed NNLSL education and deterministic language synthesis, shadow-only lexicalization research, and Elora Decisions as a structured operational decision-history layer. These entries document capability and authority boundaries without publishing internal schemas, thresholds, routes, or deployment contracts.
 
 These additions preserve the same publication posture:
 
@@ -60,7 +62,7 @@ These additions preserve the same publication posture:
 
 This page is a technical disclosure record, not a patent filing, legal notice template, or claim of novelty over foundational methods. It exists to preserve chronology, architectural intent, and public accountability.
 
-Current public release line reflected on this disclosure page is `0.2.0`.
+Current public release line reflected on this disclosure page is `0.2.6`.
 
 Public references here intentionally use short commit fingerprints because the source repository is private. Full hashes and immutable evidence bundles are retained offline.
 
