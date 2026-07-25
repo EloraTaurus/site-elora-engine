@@ -12,7 +12,7 @@ This notice is published to document technical milestones and maintain a clear p
 - Elora supports open AI governance standards and opposes unnecessary gatekeeping of common safety and control patterns.
 - Elora uses established cryptographic primitives and distributed-systems design patterns that pre-date this project by decades.
 - Elora’s learning stack references longstanding non-neural/classical ML and statistical-control families, applied under bounded governance controls.
-- Public references now also cover ERIS runtime intelligence, the in-development EBLS behaviour-learning direction, constitutional research controls, and supervised symbolic teaching milestones where they can be disclosed safely.
+- Public references now also cover ERIS runtime intelligence, the in-development EBLS behaviour-learning direction, constitutional research controls, supervised symbolic teaching, Threat Intelligence, and Guardrail Defence milestones where they can be disclosed safely.
 - Public technical disclosure is intentionally detailed enough for reduction-to-practice chronology, while withholding direct reproducibility handles (exact implementation playbooks, full route/config inventories, and copy-ready internal run paths).
 - The disclosure objective is verifiable chronology and architectural accountability, not turnkey replication.
 
@@ -50,7 +50,7 @@ Current public anchor surfaces:
 
 This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, report comparability improvements, repair/self-healing-path visibility controls, and later-month CORE/Model-Exams research milestones.
 
-The July 2026 extension adds bounded runtime-governance evidence, governed NNLSL education and deterministic language synthesis, shadow-only lexicalization research, and Elora Decisions as a structured operational decision-history layer. These entries document capability and authority boundaries without publishing internal schemas, thresholds, routes, or deployment contracts.
+The July 2026 extension adds bounded runtime-governance evidence, governed NNLSL education and deterministic language synthesis, shadow-only lexicalization research, Elora Decisions, evidence-backed Threat Findings, Governance Session investigations, and environment-qualified Guardrail Defence. These entries document capability and authority boundaries without publishing internal schemas, detector content, thresholds, routes, or deployment contracts.
 
 These additions preserve the same publication posture:
 

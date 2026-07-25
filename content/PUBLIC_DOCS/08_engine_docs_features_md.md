@@ -6,7 +6,7 @@ Note: This is a public documentation copy for the demo site. Sensitive runtime i
 
 ## Elora Engine Features (Current + In Development)
 
-Last updated: 2026-06-08
+Last updated: 2026-07-24
 
 Purpose: operator-facing summary of what Elora has today and what is actively being built.
 
@@ -25,6 +25,9 @@ Status labels:
 | Governance | `Partial` governance dashboard, policy editor v1, replay review, decision/admissibility metadata, commit boundary visibility | Governance Incident Map redesign, policy traceability depth (`rule_id/version`), stricter admissibility completeness |
 | Research | `Partial` guided research dashboard, synthetic public-safe run reports, observer continuity views, and curated report walkthroughs | Broader public-safe report depth, more run exemplars, and stronger comparison storytelling |
 | Learning | `Partial` ERIS runtime intelligence surfaces and bounded non-neural learning outputs | EBLS behaviour-learning expansion, model wiki growth, and additional supervised capability teaching |
+| Threat Intelligence | `Live/Partial` bounded observations, evidence-backed findings, Governance Session investigations, and reviewed evidence promotion | Broader investigation maturity without transferring authority from Governance |
+| Guardrail Defence | `Live/Partial` environment-qualified model-adherence and Elora-interception scorecards | Larger comparable evidence windows and expanded public-safe reporting |
+| Elora Decisions | `Live/Partial` categorized operational decision histories with bounded relations to source evidence | Wider producer coverage and notification delivery controls |
 | AI Runtime | `Partial` models, pipeline controls, behavior, memory, knowledge, plugin controls | Runtime dashboard expansion, profile mapping improvements, context and retrieval controls |
 | Fabric | `Partial` WorkerHost + Provisioner surfaces, worker lifecycle controls, template/provisioning scaffolds | Clear VM vs container split hardening, worker-host telemetry depth, safer lifecycle actions |
 | Lab | `Partial` commit harness and runtime validation surfaces | Expanded deterministic test packs and release proof workflows |
@@ -40,6 +43,7 @@ Status labels:
 | Risk & Confidence | `Partial` confidence/risk surfacing in governance and replay views | Better operator-first anomaly/risk prioritization and class-based policies |
 | Constitutional Governance | `Partial` constitutional halt signaling, repair-aware escalation visibility, and commit-bound refusal posture | Deeper constitutional evidence linkage and broader halt-class modelling |
 | Cognitive Artifact Research | `Partial` bounded cognitive-state and artifact-trace research surfaces connected to report outputs | Expanded public-safe behavioural interpretation views and cross-run comparison |
+| Threat Evidence Boundary | `Live/Partial` separate detection, recommendation, policy result, actual action, confidence, and provenance evidence | Wider producer coverage and stronger completeness reporting |
 
 ## Data and Runtime Features
 
@@ -76,7 +80,10 @@ Elora is already operating as a governance-first runtime with:
 - replay and admissibility evidence surfaces,
 - operator dashboards across governance/observability/runtime/fabric,
 - ERIS runtime intelligence for bounded posture interpretation,
+- Threat Intelligence findings and append-only investigation activity,
+- Guardrail Defence evidence separating model and Elora defence layers,
+- Elora Decisions for grouped operational review,
 - research dashboards that expose deep evidence without handing over private implementation detail,
 - and active progression toward stronger deterministic control-plane behavior.
 
-The current development priority is hardening evidence integrity, admissibility completeness, behaviour-learning research depth, and operator-speed governance workflows.
+The current development priority is hardening evidence integrity, admissibility completeness, behaviour-learning depth, threat-investigation maturity, and operator-speed governance workflows.

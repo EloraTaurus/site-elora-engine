@@ -7,6 +7,20 @@ Format:
 
 ## Major Milestones
 
+## 2026-07-24
+- Expanded Threat Intelligence into evidence-backed findings and governed investigations grouped by evidenced Governance Session.
+- Connected attack-related findings, Elora Decisions, Replay, Observer, policy, guardrail, and runtime evidence through bounded exact-identifier relations without merging their authority.
+- Added clearer confidence and risk-context reporting while preserving the rule that Threat Intelligence cannot authorize execution, rewrite Governance outcomes, or activate detectors.
+
+## 2026-07-23
+- Added continuous Observer-stage threat review, bounded Threat Observations, independently reviewed evidence promotion, and dedicated investigation-oriented operator surfaces.
+- Added environment-qualified Guardrail Defence scorecards that separate model adherence, Elora interception, and escaped outcomes.
+- Connected Threat Intelligence activity to Runtime Memory Governance with explicit ownership and deterministic cleanup.
+
+## 2026-07-22
+- Expanded Elora Decisions from individual run outcomes to grouped Observer jobs, runtime-protection incidents, and evidence-qualified learning narratives.
+- Added explicit concern-versus-authority context and bounded relations to the matching audit and research evidence.
+
 ## 2026-07-20
 - Opened the `0.2.6` release line with Elora Decisions as a dedicated categorized record of important operational decisions.
 - Added chronological decision stories, explicit memory-reclaim attribution, and one bounded Observer Research outcome summary per run.

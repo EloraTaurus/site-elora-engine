@@ -8,6 +8,9 @@
 - Research direction: non-neural AI behaviour detection and governed runtime study
 - Runtime intelligence: ERIS (Elora Runtime Intelligence System)
 - Behaviour learning direction: EBLS (in development)
+- Threat evidence: bounded Threat Findings and Governance Session investigations
+- Defence evaluation: environment-qualified Guardrail Defence scorecards
+- Decision review: categorized Elora Decisions linked to canonical source evidence
 - Replay stance: deterministic admissibility reconstruction
 - Control posture: security-first, operator-accountable, audit-oriented
 - Public scope: architecture and governance model with synthetic demo data

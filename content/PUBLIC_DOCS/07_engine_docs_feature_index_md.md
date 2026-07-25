@@ -26,6 +26,9 @@ Companion summary: `FEATURES.md` (current + in-development operator pack).
 | Research Dashboard and Reports | Partial | Research dashboard, run reports, guided demo surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | ERIS Runtime Intelligence | Partial | Runtime posture and bounded ML interpretation surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | Behaviour Learning Direction (EBLS) | Planned | Behaviour learning and model-wiki direction | `OPERATORS/MODELS_AND_PROFILES.md` |
+| Threat Intelligence | Live / Partial | Bounded observations, evidence-backed findings, Governance Session investigations, and reviewed evidence promotion | `OPERATORS/SECURITY_AND_ACCESS_CONTROL.md` |
+| Guardrail Defence | Live / Partial | Environment-qualified model-adherence and Elora-interception evidence | `OPERATORS/SECURITY_AND_ACCESS_CONTROL.md` |
+| Elora Decisions | Live / Partial | Categorized decision histories with bounded source-evidence relations | `OPERATORS/JOBS_AUDIT_AND_REPLAY.md` |
 | Fabric / Workers / WorkerHosts | Partial | Worker operations and host inventory | `OPERATORS/FABRIC_AND_WORKER_OPERATIONS.md` |
 | Pipelines and Runtime Controls | Partial | Pipeline and runtime controls | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | Models / Permissions / Profiles | Partial | Model and behavior controls | `OPERATORS/MODELS_AND_PROFILES.md` |

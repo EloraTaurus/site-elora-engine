@@ -58,6 +58,18 @@ Elora's Non-Neural Language and Symbolic Learning domain. It uses governed lexic
 
 Traceable experimental evidence that is available for evaluation but is explicitly prevented from influencing live output, promotion, governance, or execution authority.
 
+## Threat Finding
+
+A bounded evidence-backed security record derived from one or more atomic detections. It separates detection, classification, recommendation, actual action, policy result, confidence, and available provenance without becoming an authorization decision.
+
+## Governance Session
+
+An evidenced correlation boundary used to group related findings and investigation activity when the same exact session identifier is available. Evidence without session provenance remains explicitly ungrouped.
+
+## Guardrail Defence Scorecard
+
+An environment-qualified comparison record that separates model adherence, Elora interception, no-escape performance, and combined defence evidence. Standings are limited to sufficiently comparable runtime conditions.
+
 ## External Phrase Mapping (Reviewer Aid)
 
 The phrases below are included as reviewer mapping aids. They are not exclusive to any single implementation lineage.
@@ -94,5 +106,5 @@ For standards-level lineage and dated sources, see:
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-07-20`
+- Last updated: `2026-07-24`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.

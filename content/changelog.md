@@ -2,6 +2,32 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-07-24
+Context: this update brings the public site into line with Threat Intelligence becoming an evidence-backed findings and investigation system, while preserving the separation between observation, investigation, decisions, replay, and Governance authority.
+- Added red Threat markers and bounded defence summaries to attack-related Elora Decisions.
+- Added direct navigation from a Decision to its full Threat Intelligence finding while leaving routine control observations unmarked.
+- Updated the homepage, Overview, Research, Architecture, Changelog, and public documentation to present Threat Intelligence and Guardrail Defence as current 0.2.6 capabilities.
+- Added public-safe coverage for Governance Session grouping, bounded trace correlation, append-only investigation activity, and separate recommended-versus-actual action evidence.
+- Expanded the Technical Disclosure and Prior Art chronology through `2026-07-24` without exposing internal schemas, detector content, thresholds, or operational routes.
+- Clarified throughout the website that Threat Intelligence cannot authorize execution, rewrite Governance outcomes, or activate detectors.
+
+## 2026-07-23
+Context: this update makes Guardrail Defence results comparable without presenting model behaviour as independent of the machine and runtime used for the trial.
+- Extended the Engine Operations isolation repair to SQLite evidence so live counters and runtime-intelligence observations remain visible while storage inspection stays bounded and disposable.
+- Restored public-safe Engine Operations evidence after correcting an isolation boundary that prevented disposable performance projections from seeing the running engine's bounded API telemetry.
+- Added public-safe coverage for environment-qualified Guardrail Defence scoring, including separate model and Elora defence layers.
+- Added comparable historical model standings and attack/file-type breakdowns without treating results from different hardware or runtime methods as equivalent.
+
+## 2026-07-22
+Context: this update extends the `0.2.6` Elora Decisions narrative from individual Observer runs to complete logical research jobs.
+- Added public-safe coverage for expandable child-run timelines under one Observer job decision.
+- Added related navigation to the matching audit and research review surfaces where those records are available.
+- Added operator-facing completion time, token processing, cycle progress, and intervention summaries without exposing research payloads or internal telemetry dumps.
+- Added public-safe concern and authority context so a decision can state whether Elora acted within current governance or needs operator review.
+- Added grouped Runtime decision coverage for API pressure protection and the full Focus Mode protection-and-recovery lifecycle.
+- Added public-safe learning direction covering current visibility, desired evidence, operating needs, current learning, retained learning, and next learning targets.
+- Added clear separation between Curiosity hypotheses, passed training trials, and promoted retained communication learning.
+
 ## 2026-07-20
 Context: this update moves the public chronology into the `0.2.6` line and reflects the new Elora Decisions module without exposing internal runtime evidence or delivery configuration.
 - Added public-safe coverage for categorized Elora decision history and grouped lifecycle stories.

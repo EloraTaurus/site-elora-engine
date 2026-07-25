@@ -15,6 +15,7 @@ This index points to source documentation used to map public-safe technical disc
 - `engine/docs/OPERATORS/README.md`
 - `engine/docs/OPERATORS/INFERENCE_COMMIT_GOVERNANCE.md`
 - `engine/docs/ARCHITECTURE/ERIS_EBLS_BOUNDARY_V1.md`
+- `engine/docs/ARCHITECTURE/THREAT_INTELLIGENCE_INVESTIGATION_PLATFORM_ROADMAP.md`
 - `engine/docs/OPERATORS/ELORA_ML_TECHNIQUES_AND_ENGINE_PANEL_MAP.md`
 - `engine/docs/OPERATORS/ELORA_MODEL_INTELLIGENCE_PACK.md`
 - `engine/docs/OPERATORS/JOBS_AUDIT_AND_REPLAY.md`

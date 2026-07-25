@@ -15,6 +15,11 @@ Execution authority is enforced at a deterministic commit boundary where admissi
 - Research surfaces collect structured runtime, intervention, and behavioural evidence.
 - ERIS contributes bounded runtime intelligence about operational posture.
 - EBLS is the in-development learning direction focused on teaching Elora how to recognize and reason about AI behaviours themselves.
+- Threat Intelligence turns bounded detections into evidence-backed findings and governed investigations while remaining observational rather than authoritative.
+- Guardrail Defence separates model adherence, Elora interception, and escaped outcomes under comparable runtime conditions.
+- Elora Decisions groups related operational outcomes into reviewer-readable histories backed by replay and source evidence.
+
+Governance Sessions and bounded trace identifiers can relate Threat Findings, Elora Decisions, Replay, Observer reports, and policy evidence. Correlation does not merge these records or transfer authority between them.
 
 ## Why this matters
 
@@ -26,3 +31,4 @@ This model supports accountable operations:
 - governance telemetry separated from raw runtime telemetry
 - behaviour research tied back to evidence rather than intuition
 - experimentation around non-neural learning methods without handing authority to model output
+- security investigation tied to canonical evidence without allowing findings to authorize execution

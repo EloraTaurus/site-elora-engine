@@ -7,6 +7,67 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
+## 2026-07-24
+- Attack-related Elora Decisions now show a clear red Threat marker and a concise defence
+  outcome, with a direct link to the full Threat Intelligence record.
+- Routine control observations remain available for evidence without being labelled as
+  attacks.
+- Threat findings now clearly distinguish the source surface, execution runtime, Fabric
+  Worker Host, Governance Session, control mode, governed boundary, and policy result.
+- New Research Observer runs receive a Governance Session ID and current Engine version,
+  and findings explain both Elora's recommendation and the action or model-held outcome.
+- Threat detections with the same evidenced Governance Session now appear as one grouped
+  investigation, while each detection and finding remains independently auditable.
+- Redesigned Threat Observations as a searchable session investigation journal showing
+  the affected models, endpoints, Worker Hosts, policies, guardrails, attack types,
+  defence outcomes, and atomic evidence timeline.
+- Evidence without session provenance remains visibly ungrouped, and opening a finding
+  now reuses its session investigation instead of creating a duplicate case.
+- Expanded Threat Intelligence from individual security observations into evidence-backed findings that explain what happened, which runtime and governance controls were active, what Elora recommended, and what action actually occurred.
+- Added a governed investigation workspace where operators can assign a case, record chronological activity, track containment, and document resolution and learning outcomes without rewriting the original security evidence.
+- Findings can link directly to the relevant Elora Decision and available Replay, policy, guardrail, Worker Host, and source-report evidence while those systems remain separately owned.
+- Added clearer confidence reporting across detection, blocking, decision, classification, attribution, relationship strength, and evidence completeness rather than presenting one universal certainty score.
+- Expanded risk context to explain possible progression, likely impact, and potentially affected assets, data, tools, or permissions using cautious compliance language.
+- Introduced a bounded shared trace envelope across security findings, Elora Decisions, and Replay so established identifiers can be followed without filling in missing evidence.
+- Preserved the core safety boundary: Threat Intelligence learns from and explains security evidence, but it cannot grant permission, rewrite Governance decisions, or activate detectors through investigation activity.
+
+## 2026-07-23
+- Restored SQLite connection, statement, transaction, lock, caller, and runtime-intelligence evidence across the Performance and SQLite I/O views while retaining disposable storage-inspection workers.
+- Restored API request, latency, route, and memory evidence in Engine Operations by carrying bounded live-process telemetry into its isolated performance projections.
+- Performance workers remain disposable after aggregation, retaining the memory-safety boundary while showing the evidence owned by the running engine.
+- Added environment-qualified Guardrail Defence model scorecards that distinguish model adherence, Elora interception, and escaped violations.
+- Guardrail reports now show the recorded hardware/runtime context, attack and file-type performance, and a current standing based only on comparable prior runs.
+- Restored SQL, API, and runtime performance links under Engine Operations and repaired read access to their live data routes.
+- Added Engine Operations API naming while keeping previous Engine Health integrations compatible.
+- Completed a wider navigation and memory scan, updating remaining visible legacy labels and ensuring recurring admin pollers stop when operators navigate away.
+- Top-level admin areas now open their menus instead of navigating immediately, with each area landing page shown as the first bold, colour-coded item; Governance Dashboard is visible again.
+- Verified landing coverage across admin, Research, and Viewer navigation: every area has an accessible first destination, with operational hubs clearly distinguished from overview dashboards.
+- Connected Threat Intelligence and Trial Rails to Runtime Memory Governance so their page activity, bounded work, caches, and managed workers have visible ownership and deterministic cleanup.
+- Elora can stop registered Threat Intelligence workers when their governed lifecycle requires it, while protected independent research and unrelated system processes remain outside automatic cleanup.
+- Added a Threat Intelligence dashboard summary linking operators to its Memory Governance evidence.
+- Simplified the admin sidebar so landing pages are not repeated and pages no longer appear as shortcuts under unrelated areas.
+- Renamed the visible Runtime Threat Intelligence area to Threat Intelligence and restyled its Level 2 groups as bold, colour-backed accordions.
+- Released table observers during in-app navigation and bounded notification history and live admin connections to prevent retained browser and server memory from accumulating.
+- Added Threat Intelligence as Elora's dedicated runtime-security area, separating attack evidence from Governance authority and general AI execution.
+- Added attack-vector and Threat Observation views, with Trial Rails acting as the adversarial research entry point.
+- Observer trials now distinguish whether the model respected a guardrail, breached it and was stopped by Elora, or produced a violation that escaped.
+- Security observations are bounded and privacy-aware: raw prompts and responses are not copied into the threat-learning store.
+- Learned threat candidates remain quarantined and cannot authorize execution or promote themselves into enforcement.
+- Improved sidebar navigation so returning from an area closes its expanded groups.
+- Every Observer stage now receives continuous input/output threat-pattern review, even when no adversarial Trial Rail is selected.
+- Reports show monitoring coverage and detections, while only detected patterns enter the bounded Threat Observation store.
+- Observer report bundles include a dedicated Threat Intelligence CSV measurement sheet.
+- Added Detector Versions and an independently reviewed evidence-promotion queue; evidence approval cannot activate a detector or override Governance.
+
+## 2026-07-22
+- Observer Research decision history now follows the logical job: related child runs appear in one expandable timeline with a final parent result once the full set has ended.
+- Operators can move from a decision to its related audit trail, parent research review, or individual child review where applicable.
+- Job summaries now include completion time, processed-token breakdowns, cycle progress, and detected-versus-applied intervention counts alongside the decision outcome.
+- Decision details now distinguish an observed concern from the authority used to act on it, including whether operator review is required.
+- API pressure interventions and Focus Mode capacity protection now appear as bounded decision stories with their recovery steps, rather than as repeated standalone warnings.
+- Added public-safe Learning decisions that explain what Elora can observe, what evidence is missing, what she is learning toward, and what she wants permission or capability to operate.
+- Curiosity proposals remain labelled as unverified learning direction, while operator-training outcomes distinguish trial success from evidence-backed learning that was actually promoted and retained.
+
 ## 2026-07-20
 - Opened the `0.2.6` release line around Elora Decisions: a dedicated, categorized history of important operational decisions rather than a stream of disconnected notifications.
 - Related actions can now be read as one chronological decision story, making preparation, intervention, completion, cancellation, and failure easier to investigate.

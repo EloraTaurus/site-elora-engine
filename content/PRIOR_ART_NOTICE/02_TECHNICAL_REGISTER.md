@@ -415,6 +415,30 @@ Ingress
 - Proof type: Categorized operational decision history and evidence consolidation
 - Evidence summary: Elora Decisions introduced bounded records that group related lifecycle events, interventions, research outcomes, and cleanup evidence into chronological decision stories while retaining event-level replay as the underlying audit source.
 
+### Logical Research Decisions and Concern-Authority Context
+
+- Date: `2026-07-22`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-07-22`)
+- Proof type: Grouped research-decision evidence with explicit authority posture
+- Evidence summary: Observer child executions, terminal parent outcomes, runtime-protection incidents, and learning progression were consolidated into bounded decision narratives that distinguish observed concern from the authority available to act.
+
+### Threat Intelligence and Environment-Qualified Guardrail Defence
+
+- Date: `2026-07-23`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-07-23`)
+- Proof type: Bounded threat observation, evidence review, and comparable defence scoring
+- Evidence summary: Continuous Observer-stage threat review, quarantined evidence promotion, and environment-qualified Guardrail Defence scorecards separated model adherence, Elora interception, and escaped outcomes without granting detection or learning authority over Governance.
+
+### Evidence-Backed Threat Findings and Governance Session Investigations
+
+- Date: `2026-07-24`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-07-24`)
+- Proof type: Governed security investigation and bounded cross-domain correlation
+- Evidence summary: Threat observations project into evidence-backed findings and append-only investigations grouped by exact Governance Session provenance, with bounded relations to canonical Elora Decisions, Replay, research, policy, guardrail, and runtime evidence.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

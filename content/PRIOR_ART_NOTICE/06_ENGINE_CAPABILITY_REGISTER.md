@@ -252,6 +252,22 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Added categorized Elora Decisions that consolidate related operational events, research outcomes, interventions, and cleanup into bounded chronological records backed by the underlying replay evidence.
 
+#### Threat Intelligence and Guardrail Defence Milestone
+
+- Date window: `2026-07-23` to `2026-07-24`
+- Source anchor: Engine changelog (`2026-07-23`, `2026-07-24`)
+- Evidence class: Evidence-backed threat findings, governed investigations, and environment-qualified defence evaluation
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added continuous threat review, bounded observations, evidence-backed findings, Governance Session investigations, independently reviewed evidence promotion, and scorecards that separate model adherence from Elora interception and escaped outcomes.
+
+#### Cross-Domain Trace and Canonical Relation Milestone
+
+- Date: `2026-07-24`
+- Source anchor: Engine changelog (`2026-07-24`)
+- Evidence class: Bounded evidence correlation across separately authoritative domains
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added exact-identifier trace relations between Threat Findings, Elora Decisions, Replay, Observer, policies, guardrails, Worker Hosts, and source reports without copying canonical records or manufacturing missing provenance.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components

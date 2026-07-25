@@ -22,6 +22,8 @@
 5) Research-engine maturity
 - deepen public-safe research dashboards and report storytelling,
 - improve operator understanding of continuity, intervention, and behavioural evidence,
+- mature Threat Intelligence findings and investigation workflows without allowing detections to become authority,
+- expand environment-qualified Guardrail Defence comparisons while preserving comparability limits,
 - keep demo-safe documentation aligned with the real research direction without exposing internal playbooks.
 
 ## Mid-term transition priorities
@@ -51,6 +53,9 @@
 - Which non-neural learning methods best distinguish meaningful AI behaviour classes under constrained compute conditions?
 - How should ERIS and EBLS remain separated so runtime self-intelligence never becomes execution authority?
 - What evidence depth is sufficient for public disclosure of serious research capability without handing over private operational methods?
+- What evidence threshold should move a quarantined threat observation into reviewed learning without activating enforcement?
+- Which Governance Session boundaries are sufficient for investigation grouping without creating false cross-session attribution?
+- How should defence standings communicate environmental comparability without overstating model-level conclusions?
 
 ## Advanced acceptance criteria examples
 
