@@ -439,6 +439,38 @@ Ingress
 - Proof type: Governed security investigation and bounded cross-domain correlation
 - Evidence summary: Threat observations project into evidence-backed findings and append-only investigations grouped by exact Governance Session provenance, with bounded relations to canonical Elora Decisions, Replay, research, policy, guardrail, and runtime evidence.
 
+### Language-Neutral Observer Engine and Threat Interpretation Boundaries
+
+- Date window: `2026-07-27` to `2026-07-29`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-07-27`, `2026-07-28`, `2026-07-29`)
+- Proof type: Portable deterministic engine contracts and evidence-only threat interpretation
+- Evidence summary: Observer signal, semantic, Governance reduction, and Pipeline boundaries gained versioned language-neutral contracts and conformance evidence, while learned threat hypotheses remained explicitly separated from intervention and Governance authority.
+
+### Governed Live Threat Detection Engine
+
+- Date: `2026-07-31`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entry (`2026-07-31`)
+- Proof type: Bounded live prompt/output threat review with repair-stable evidence
+- Evidence summary: Deterministic threat review moved into bounded pre-inference and final-output execution with independent resource evidence and idempotent stage persistence, while remaining evidence-only rather than an authorization gate.
+
+### Threat Case Reports, Decision Bridge, and Assurance Mapping
+
+- Date: `2026-08-03`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-08-03`)
+- Proof type: Governed case reporting and explainable threat-to-Governance correlation
+- Evidence summary: Threat Cases gained bounded reports, attack and runtime timelines, canonical evidence links, gap-aware assurance mappings, and an explicit bridge from recommendation through Governance evaluation to final action and decision reason.
+
+### Explainable Runtime Authority and Residual-Risk Acceptance
+
+- Date: `2026-08-03`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-08-03`)
+- Proof type: Bounded authorization, permission, and revocable risk-acceptance evidence
+- Evidence summary: Governed work can retain who initiated it, which authority decided commit, the effective permission context, policy basis, and separately authorized residual-risk acceptance without allowing Case authority to rewrite runtime decisions, findings, or Replay.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

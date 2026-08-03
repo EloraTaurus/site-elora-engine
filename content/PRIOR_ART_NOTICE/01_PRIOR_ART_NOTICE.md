@@ -23,7 +23,7 @@ The Elora Taurus Project advocates for open AI governance patterns that can be i
 ### Notice to Practitioners
 
 Researchers, developers, and examiners are encouraged to cite this disclosure and its timestamped references as implementation chronology evidence for AI governance and cryptographic execution-enforcement patterns.
-They may also cite later public-safe learning milestones covering runtime intelligence, behaviour-detection research direction, symbolic teaching, governed non-neural language learning, runtime-resource evidence, and structured operational decisions added through July 2026.
+They may also cite later public-safe milestones covering runtime intelligence, behaviour-detection research, symbolic teaching, governed non-neural language learning, Threat Intelligence, structured operational decisions, and explainable authority evidence added through August 2026.
 
 ## Disclosure Scope
 
@@ -46,11 +46,11 @@ Current public anchor surfaces:
 - Public website repository: `https://github.com/EloraTaurus/elorataurus.com`
 - Public demo changelog surface: `https://elorataurus.com/changelog/`
 
-## Disclosure Continuity (2026-04 to 2026-07 Extension)
+## Disclosure Continuity (2026-04 to 2026-08 Extension)
 
 This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, report comparability improvements, repair/self-healing-path visibility controls, and later-month CORE/Model-Exams research milestones.
 
-The July 2026 extension adds bounded runtime-governance evidence, governed NNLSL education and deterministic language synthesis, shadow-only lexicalization research, Elora Decisions, evidence-backed Threat Findings, Governance Session investigations, and environment-qualified Guardrail Defence. These entries document capability and authority boundaries without publishing internal schemas, detector content, thresholds, routes, or deployment contracts.
+The July and August 2026 extension adds bounded runtime-governance evidence, governed NNLSL education, language-neutral Observer Engine boundaries, Elora Decisions, live threat detection, evidence-backed Threat Findings, Governance Session investigations, environment-qualified Guardrail Defence, Threat Case Reports, decision bridging, and residual-risk authority evidence. These entries document capability and authority boundaries without publishing internal schemas, detector content, thresholds, routes, or deployment contracts.
 
 These additions preserve the same publication posture:
 

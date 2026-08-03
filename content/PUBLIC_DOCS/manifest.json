@@ -1,8 +1,8 @@
 {
   "title": "Elora Research Engine Docs",
-  "description": "Public-safe documentation for Elora as a research engine with governance capability, including ERIS runtime intelligence, behaviour-learning direction, and operator evidence architecture.",
+  "description": "Public-safe documentation for Elora as a research engine with governance capability, including runtime intelligence, behaviour learning, Threat Intelligence, and operator evidence architecture.",
   "section_intro": "Read in sequence: Overview -> Architecture -> Governance -> Runtime -> Fabric -> Operators -> API -> Security -> Testing -> Roadmap.",
-  "last_updated": "2026-06-08",
+  "last_updated": "2026-08-03",
   "folder": "PUBLIC_DOCS",
   "sections": [
     {
@@ -22,7 +22,8 @@
         { "file": "02_architecture_governance_control_plane.md", "title": "Governance Control Plane" },
         { "file": "02_architecture_commit_boundary_and_admissibility.md", "title": "Commit Boundary and Admissibility" },
         { "file": "02_architecture_risk_model_and_operator_workflow.md", "title": "Risk Model and Operator Workflow" },
-        { "file": "02_architecture_replay_forensics_and_accountability.md", "title": "Replay Forensics and Accountability" }
+        { "file": "02_architecture_replay_forensics_and_accountability.md", "title": "Replay Forensics and Accountability" },
+        { "file": "02_architecture_threat_intelligence.md", "title": "Threat Intelligence Architecture" }
       ]
     },
     {

@@ -6,7 +6,7 @@ Note: This is a public documentation copy for the demo site. Sensitive runtime i
 
 ## Elora Engine Features (Current + In Development)
 
-Last updated: 2026-07-24
+Last updated: 2026-08-03
 
 Purpose: operator-facing summary of what Elora has today and what is actively being built.
 
@@ -24,10 +24,13 @@ Status labels:
 | Observability | `Partial` job timeline and replay-oriented views, runtime event visibility, raw evidence panels | Replay forensics polish, compact operator-first incident triage |
 | Governance | `Partial` governance dashboard, policy editor v1, replay review, decision/admissibility metadata, commit boundary visibility | Governance Incident Map redesign, policy traceability depth (`rule_id/version`), stricter admissibility completeness |
 | Research | `Partial` guided research dashboard, synthetic public-safe run reports, observer continuity views, and curated report walkthroughs | Broader public-safe report depth, more run exemplars, and stronger comparison storytelling |
-| Learning | `Partial` ERIS runtime intelligence surfaces and bounded non-neural learning outputs | EBLS behaviour-learning expansion, model wiki growth, and additional supervised capability teaching |
-| Threat Intelligence | `Live/Partial` bounded observations, evidence-backed findings, Governance Session investigations, and reviewed evidence promotion | Broader investigation maturity without transferring authority from Governance |
+| Observer Research | `Partial` bounded run lifecycles, stage evidence, logical research jobs, interventions, and durable report outputs | Broader comparison, scenario-pack, and public-safe evidence depth |
+| Learning | `Partial` ERIS runtime intelligence, NNLSL, supervised teaching, and bounded non-neural learning outputs | EBLS behaviour-learning expansion, Model Wiki growth, and additional supervised capability teaching |
+| Threat Intelligence | `Live/Partial` live bounded detection, a grouped Case queue, evidence-backed atomic findings, Governance Session investigations, interactive Case Reports, decision/authorization bridging, and revocable residual-risk evidence | Broader provenance, recommendation trend analysis, saved Case views, signed export governance, and formal incident correlation without transferring authority from Governance |
 | Guardrail Defence | `Live/Partial` environment-qualified model-adherence and Elora-interception scorecards | Larger comparable evidence windows and expanded public-safe reporting |
 | Elora Decisions | `Live/Partial` categorized operational decision histories with bounded relations to source evidence | Wider producer coverage and notification delivery controls |
+| Runtime Governance | `Partial` observe, reason, recommend, and governed-intervention evidence across pressure, memory, and resource state | Wider producer coverage and richer reviewer-facing decision narratives |
+| Engine Protocol | `Partial` versioned language-neutral boundaries and deterministic conformance work for selected Engines | Expanded portable implementations and compatibility evidence |
 | AI Runtime | `Partial` models, pipeline controls, behavior, memory, knowledge, plugin controls | Runtime dashboard expansion, profile mapping improvements, context and retrieval controls |
 | Fabric | `Partial` WorkerHost + Provisioner surfaces, worker lifecycle controls, template/provisioning scaffolds | Clear VM vs container split hardening, worker-host telemetry depth, safer lifecycle actions |
 | Lab | `Partial` commit harness and runtime validation surfaces | Expanded deterministic test packs and release proof workflows |
@@ -43,7 +46,7 @@ Status labels:
 | Risk & Confidence | `Partial` confidence/risk surfacing in governance and replay views | Better operator-first anomaly/risk prioritization and class-based policies |
 | Constitutional Governance | `Partial` constitutional halt signaling, repair-aware escalation visibility, and commit-bound refusal posture | Deeper constitutional evidence linkage and broader halt-class modelling |
 | Cognitive Artifact Research | `Partial` bounded cognitive-state and artifact-trace research surfaces connected to report outputs | Expanded public-safe behavioural interpretation views and cross-run comparison |
-| Threat Evidence Boundary | `Live/Partial` separate detection, recommendation, policy result, actual action, confidence, and provenance evidence | Wider producer coverage and stronger completeness reporting |
+| Threat Evidence Boundary | `Live/Partial` separate threat and Governance severity, detection, recommendation, recommendation disposition, Governance rationale, policy result, actual action, confidence, and provenance evidence | Wider producer coverage and stronger completeness reporting |
 
 ## Data and Runtime Features
 

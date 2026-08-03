@@ -268,6 +268,30 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Additional evidence channels: Changelog references, operator release notes, public disclosure updates
 - Summary of updates (changelog-ready): Added exact-identifier trace relations between Threat Findings, Elora Decisions, Replay, Observer, policies, guardrails, Worker Hosts, and source reports without copying canonical records or manufacturing missing provenance.
 
+#### Observer Engine Protocol and Threat Research Milestone
+
+- Date window: `2026-07-27` to `2026-07-29`
+- Source anchor: Engine + LLM changelog (`2026-07-27`, `2026-07-28`, `2026-07-29`)
+- Evidence class: Portable deterministic engine boundaries, semantic evidence, and learned threat interpretation
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added language-neutral Observer engine contracts, conformance evidence, governed semantic observations, explicit run purposes, repeatable Threat Intelligence packs, and learned threat hypotheses that remain evidence-only.
+
+#### Live Threat Detection Engine Milestone
+
+- Date: `2026-07-31`
+- Source anchor: Engine + LLM changelog (`2026-07-31`)
+- Evidence class: Bounded live AI threat review and durable stage evidence
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added governed pre-inference and final-output threat review with independent resource receipts, repair-stable evidence, and no transfer of intervention or commit authority.
+
+#### Threat Case Assurance and Runtime Authority Milestone
+
+- Date: `2026-08-03`
+- Source anchor: Engine + LLM changelog (`2026-08-03`)
+- Evidence class: Case reporting, assurance mapping, decision bridging, and authority traceability
+- Additional evidence channels: Changelog references, operator release notes, public disclosure updates
+- Summary of updates (changelog-ready): Added bounded Threat Case Reports, gap-aware assurance mappings, threat-recommendation disposition, final Governance rationale, explicit effective-permission context, and append-only revocable residual-risk acceptance evidence.
+
 ## Platform and Runtime Baseline
 
 ### Core Stack Components

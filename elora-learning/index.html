@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="How ERIS and EBLS learning domains work in Elora: runtime self-intelligence using non-neural/classical ML, AI behaviour learning, and policy-bound governance." />
+  <meta name="description" content="How Elora's ERIS, EBLS, NNLSL, and supervised teaching domains learn from bounded evidence without acquiring execution authority." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Elora Taurus Project - Elora Learning System" />
-  <meta property="og:description" content="Public-safe overview of ERIS runtime learning, EBLS behaviour learning, and Model Wiki preview outputs under commit-bound governance." />
+  <meta property="og:title" content="The Elora Taurus Project - Elora Learning Systems" />
+  <meta property="og:description" content="Public-safe overview of runtime intelligence, behaviour learning, governed language learning, supervised teaching, and Model Wiki evidence." />
   <meta property="og:image" content="https://elorataurus.com/social.png" />
-  <title>The Elora Taurus Project - Elora Learning System</title>
+  <link rel="canonical" href="https://elorataurus.com/elora-learning/" />
+  <title>The Elora Taurus Project - Elora Learning Systems</title>
   <link rel="icon" href="../elora.png" />
   <link rel="stylesheet" href="../style.css" />
   <style>
     .wiki-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
-    .wiki-chip { display:inline-block; margin-right:8px; margin-top:6px; padding:2px 8px; border:1px solid #6ea8df; border-radius:999px; font-size:12px; color:#dbeeff; }
-    .metric-line { font-size:13px; color:#dbeeff; margin-top:6px; }
+    .wiki-chip { display:inline-block; margin-right:8px; margin-top:6px; padding:2px 8px; border:1px solid #b7cde8; border-radius:999px; font-size:12px; color:#2f4f79; }
+    .metric-line { font-size:13px; color:#2f4f79; margin-top:6px; }
   </style>
 </head>
 <body>
@@ -26,10 +27,12 @@
           <div class="brand-icon"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='../admin/elora-avatar.svg';"></div>
           <div><strong>The Elora Taurus Project</strong><small>Research Engine with Governance Capability</small></div>
         </a>
-        <nav class="top-links">
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="learning-nav"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="learning-nav" data-top-links="1" class="top-links">
           <a class="nav-btn" href="../overview/">Overview</a>
           <a class="nav-btn" href="../architecture/">Architecture</a>
           <a class="nav-btn" href="../demo/">Demo</a>
+          <a class="nav-btn" href="../gallery/">Gallery</a>
           <a class="nav-btn" href="../docs/">Documentation</a>
           <a class="nav-btn active" href="../research/">Research</a>
           <a class="nav-btn prior-art-btn" href="../prior-art/">Prior Art</a>
@@ -41,10 +44,11 @@
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1>Elora Learning System</h1>
-          <p>How ERIS and EBLS separate runtime self-intelligence from AI behaviour learning, while remaining deterministic, policy-bounded, and audit-ready.</p>
+          <h1>Elora Learning Systems</h1>
+          <p>How runtime intelligence, AI behaviour learning, governed language learning, and supervised teaching remain separate, evidence-led, policy-bounded domains.</p>
           <div class="cta-row">
-            <a class="btn" href="../research/">Back to Research</a>
+            <a class="btn" href="../capabilities/">All Capabilities</a>
+            <a class="btn alt" href="../research/">Back to Research</a>
             <a class="btn alt" href="../docs/">Open Documentation</a>
             <a class="btn mission" href="#model-wiki">Model Wiki</a>
           </div>
@@ -55,7 +59,7 @@
 
   <section class="section surface-light">
     <div class="section-inner">
-      <p class="section-intro">Elora uses two learning domains. ERIS learns runtime-system behaviour and pressure posture using bounded non-neural/classical ML and statistical methods. EBLS learns AI model behaviour, governance adherence, and model/profile suitability from governed evidence.</p>
+      <p class="section-intro">Elora separates learning by subject and authority. ERIS studies Elora's runtime, EBLS studies AI behaviour, NNLSL studies governed language and symbolic learning, and supervised teaching supports bounded additional skills. None can authorize consequence-bearing action.</p>
 
       <h2>ERIS and EBLS Boundary</h2>
       <div class="grid-2">
@@ -66,6 +70,18 @@
         <div class="card">
           <h3>EBLS (Behaviour Learning)</h3>
           <p>EBLS learns model behaviour and governance outcomes: suitability, adherence, pattern outcomes, and observer/model-exam learning evidence across task/profile contexts.</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top:20px;">Additional Learning Domains</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>NNLSL (Language and Symbolic Learning)</h3>
+          <p>Non-Neural Language and Symbolic Learning studies how Elora can acquire governed lexical, relational, and educational evidence without treating a neural model as the default source of meaning or authority.</p>
+        </div>
+        <div class="card">
+          <h3>Supervised Training and Education</h3>
+          <p>Curated lessons, examinations, retained evidence, and explicit promotion controls support skills beyond conventional inference control planes while keeping learning reviewable and reversible.</p>
         </div>
       </div>
 
@@ -164,6 +180,7 @@
         <strong>The Elora Taurus Project</strong>
         <nav class="footer-links">
           <a href="../overview/">Overview</a>
+          <a href="../capabilities/">Capabilities</a>
           <a href="../architecture/">Architecture</a>
           <a href="../demo/">Demo</a>
           <a href="../docs/">Documentation</a>
@@ -203,5 +220,7 @@
       render({ profiles: [] });
     })();
   </script>
+  <script>(function(){document.querySelectorAll('[data-nav-toggle="1"]').forEach(function(t){const l=document.getElementById(t.getAttribute('aria-controls'));if(!l)return;t.addEventListener('click',function(){const o=l.classList.toggle('open');t.setAttribute('aria-expanded',String(o));});});})();</script>
+  <script defer src="../analytics-consent.js"></script>
 </body>
 </html>

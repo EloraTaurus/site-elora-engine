@@ -56,6 +56,8 @@
 - What evidence threshold should move a quarantined threat observation into reviewed learning without activating enforcement?
 - Which Governance Session boundaries are sufficient for investigation grouping without creating false cross-session attribution?
 - How should defence standings communicate environmental comparability without overstating model-level conclusions?
+- How should time-bounded residual-risk acceptance be reviewed without being mistaken for runtime authorization?
+- Which Case Report assurance mappings are sufficiently evidenced for operator use while remaining clearly short of certification?
 
 ## Advanced acceptance criteria examples
 

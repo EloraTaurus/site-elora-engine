@@ -24,11 +24,15 @@ Companion summary: `FEATURES.md` (current + in-development operator pack).
 | Admin Dashboard and Governance | Partial | Admin control plane | `OPERATORS/ADMIN_DASHBOARD_AND_GOVERNANCE.md` |
 | Jobs Audit and Replay | Partial | Governance replay and jobs views | `OPERATORS/JOBS_AUDIT_AND_REPLAY.md` |
 | Research Dashboard and Reports | Partial | Research dashboard, run reports, guided demo surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
+| Observer Research Engine | Partial | Bounded runs, logical research jobs, stage evidence, and durable reports | Public overview: `/observer-research/` |
 | ERIS Runtime Intelligence | Partial | Runtime posture and bounded ML interpretation surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | Behaviour Learning Direction (EBLS) | Planned | Behaviour learning and model-wiki direction | `OPERATORS/MODELS_AND_PROFILES.md` |
-| Threat Intelligence | Live / Partial | Bounded observations, evidence-backed findings, Governance Session investigations, and reviewed evidence promotion | `OPERATORS/SECURITY_AND_ACCESS_CONTROL.md` |
+| NNLSL and Supervised Teaching | Partial | Governed language, symbolic learning, and additional capability teaching | Public overview: `/elora-learning/` |
+| Threat Intelligence | Live / Partial | Live detection, bounded observations, governed Cases, Case Reports, decision bridging, and reviewed evidence promotion | `02_architecture_threat_intelligence.md` |
 | Guardrail Defence | Live / Partial | Environment-qualified model-adherence and Elora-interception evidence | `OPERATORS/SECURITY_AND_ACCESS_CONTROL.md` |
 | Elora Decisions | Live / Partial | Categorized decision histories with bounded source-evidence relations | `OPERATORS/JOBS_AUDIT_AND_REPLAY.md` |
+| Runtime Governance | Partial | Inference Governor, runtime state, pressure, memory, and resource evidence | Public overview: `/runtime-governance/` |
+| Elora Engine Protocol | Partial | Versioned deterministic Engine boundaries and conformance research | Public overview: `/engine-protocol/` |
 | Fabric / Workers / WorkerHosts | Partial | Worker operations and host inventory | `OPERATORS/FABRIC_AND_WORKER_OPERATIONS.md` |
 | Pipelines and Runtime Controls | Partial | Pipeline and runtime controls | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | Models / Permissions / Profiles | Partial | Model and behavior controls | `OPERATORS/MODELS_AND_PROFILES.md` |

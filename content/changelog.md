@@ -2,6 +2,30 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-08-03
+Context: Threat Intelligence now has enough implemented depth to stand as its own public architecture section rather than remaining only a research-programme summary.
+- Added a scalable Capabilities hub so the growing Engine surface can be explored by Governance and Evidence, Research and Learning, and Threat and Defence programmes without overcrowding the global navigation.
+- Added dedicated public-safe pages for Elora Decisions, Runtime Governance, Observer Research, Guardrail Defence, and the Elora Engine Protocol.
+- Expanded the Elora Learning page into Elora Learning Systems, explicitly separating ERIS, EBLS, NNLSL, and supervised Training and Education domains.
+- Added focused capability links across Home, Overview, Research, Architecture, and Threat Intelligence, and registered the new pages in the public sitemap.
+- Added a dedicated public Threat Intelligence page covering the detection-to-Case hierarchy, live detection, learned interpretation, Guardrail Defence, Case Reports, Governance decision bridging, residual-risk evidence, and assurance mappings.
+- Linked the new section from Home, Overview, Research, Architecture, and Changelog, and added it to the public sitemap.
+- Added a dedicated public documentation article and updated the feature inventory to reflect the current Threat Intelligence Case and authorization model.
+- Synced the public LLM chronology from `0.78` through `0.89`, retaining capability and authority boundaries while omitting reproducibility-sensitive contracts and runtime detail.
+- Extended the Technical Disclosure and Prior Art chronology through `2026-08-03` for the language-neutral Observer Engine, threat interpretation, live detection, Case Reports, decision bridging, and residual-risk authority evidence.
+
+## 2026-07-31
+Context: this update makes the operator shell calmer while the live Threat Detection Engine moves bounded threat review into the active Observer path.
+- Moved Dashboard beneath Overview rather than presenting it as a separate operational area.
+- Lightened the top-level area accordions and improved reliable delivery of local theme, area-colour, and avatar styling.
+- Added public-safe chronology for live pre-inference and final-output threat review, independent resource receipts, repair-stable evidence, and the unchanged evidence-only authority boundary.
+
+## 2026-07-27 to 2026-07-29
+Context: this phase established portable deterministic Observer boundaries and expanded Threat Intelligence research without changing the rule that observations and learned hypotheses cannot authorize execution.
+- Added public-safe coverage for language-neutral Signal, Semantic, Governance decision, and Pipeline contracts with shared conformance evidence.
+- Added Semantic Observation, learned threat interpretation, explicit monitoring activation, repeatable Threat Intelligence research packs, and bounded investigation context.
+- Clarified that external inference, persistence, intervention, promotion, and commit authority remain outside the evidence-only interpretation engines.
+
 ## 2026-07-24
 Context: this update brings the public site into line with Threat Intelligence becoming an evidence-backed findings and investigation system, while preserving the separation between observation, investigation, decisions, replay, and Governance authority.
 - Added red Threat markers and bounded defence summaries to attack-related Elora Decisions.

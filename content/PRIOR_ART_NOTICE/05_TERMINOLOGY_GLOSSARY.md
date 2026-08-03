@@ -70,6 +70,22 @@ An evidenced correlation boundary used to group related findings and investigati
 
 An environment-qualified comparison record that separates model adherence, Elora interception, no-escape performance, and combined defence evidence. Standings are limited to sufficiently comparable runtime conditions.
 
+## Threat Case
+
+A governed investigation boundary that groups related atomic findings, evidence, controls, risks, and append-only case activity. Grouping does not rewrite the underlying findings or their source evidence.
+
+## Decision Bridge
+
+A bounded relation showing Threat Intelligence assessment and recommendation alongside the separately authoritative Governance evaluation, recommendation disposition, final runtime action, commit result, and decision reason.
+
+## Residual-Risk Acceptance
+
+An explicit, time-bounded and revocable authority record for a stated Threat Case risk. It cannot retroactively authorize a runtime action, remove a finding, or replace Governance Replay.
+
+## Effective Runtime Permissions
+
+The evidenced permission context available to a governed action, such as filesystem, network, external API, shell, memory, model-tool, or secret access. Missing producer evidence remains not recorded rather than inferred.
+
 ## External Phrase Mapping (Reviewer Aid)
 
 The phrases below are included as reviewer mapping aids. They are not exclusive to any single implementation lineage.
@@ -106,5 +122,5 @@ For standards-level lineage and dated sources, see:
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-07-24`
+- Last updated: `2026-08-03`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.

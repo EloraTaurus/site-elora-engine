@@ -7,6 +7,74 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
+## 2026-08-03
+- Added dedicated, printable Threat Intelligence Case Reports with interactive attack
+  maps, runtime timelines, evidence, control context, related detections, and governed
+  investigation activity.
+- Added a case-first investigation queue that groups atomic findings into their governed
+  Case and shows high-level triage context before opening the detailed report.
+- Added operational assurance mappings for the EU AI Act, NIST AI RMF, UK AI principles,
+  and ICO guidance using evidence-present, partial, and not-evidenced states. The report
+  explicitly does not claim legal compliance or certification.
+- Added an evidence-backed bridge between Threat Intelligence recommendations and final
+  Governance decisions, including why an attempted attack may remain a finding when the
+  model produced an acceptable response and the commit was approved.
+- Added separate threat and downstream Governance severity plus accepted, modified,
+  overridden, and not-assessed recommendation outcomes.
+- Added a clear authorization chain showing who started a governed Research run, which
+  Governance authority approved or denied the commit, the permissions and policy basis
+  used, and whether anyone separately accepted residual risk. Missing records remain
+  visible and are not treated as proof that an attempted attack was safe.
+- Added authenticated, expiring residual-risk acceptance for Threat Cases with explicit
+  reason, risk statement, scope, evidence, revocation, and protected append-only history.
+  Cases resolved on that authority reopen automatically when it expires or is revoked.
+- Added one explainable Governance record across Pipeline and chat/API commit paths so an
+  operator can see who authorised an action, why, the effective filesystem/network/tool
+  permissions, the evaluated risk, and the evidence supporting the result.
+- Bounded ECHO and PhyOS read paths around compact metric projections, shared single-flight
+  loading, capped chart series, and side-effect-free read-only page access.
+- Registered ECHO, Zombie Watcher, PhyOS dashboard, and cycle work with explicit Runtime
+  Memory Governance ownership, resource telemetry, lifecycle, and terminal release.
+- Added restart-safe Virtual Memory checkpoints for the latest successful bounded surface
+  state; failed or stale loads are not restored.
+- Restored the full Threat Case Report layout and improved the compact operator navigation
+  while preserving accessible labels and smaller-screen behaviour.
+
+## 2026-07-31
+- Simplified the operator navigation by placing Dashboard directly beneath Overview and softening the top-level area accordions.
+- Improved first-paint reliability by removing a remote theme dependency, loading local styles earlier, and preserving Elora's square avatar while the full theme initializes.
+- Added a governed live Threat Detection Engine with independent bounded prompt and final-output scans.
+- Preserved Semantic Observation and learned Threat Interpretation evidence across same-cycle repair work rather than allowing repair reruns to discard it.
+- Added independent CPU and memory receipts, terminal release, live job evidence, and idempotent per-stage persistence without granting the detector intervention or Governance authority.
+
+## 2026-07-29
+- Added repeatable bounded Threat Intelligence research packs with frozen alert expectations and explicit monitoring, Trial Rail, and governance-mode controls.
+- Added bounded semantic investigation context, secondary vector evidence, accurate pre-inference containment wording, and payload-free Elora Decision persistence receipts.
+- Added explicit Observer Threat Intelligence activation and diagnostics across runtime, reports, exports, and execution evidence.
+- Added deterministic learned Threat Interpretation from bounded semantic and governed lexical risk evidence; hypotheses remain evidence-only and cannot intervene, self-promote, or modify Governance.
+- Added portable Governance preparation and deterministic decision-reduction boundaries with versioned conformance evidence while keeping provider inference and persistence external.
+- Added explicit Observer execution and report purposes plus Pipeline persistence policies so research modes and failure boundaries are recorded rather than inferred.
+
+## 2026-07-28
+- Added evidence-only Semantic Observation for recognized terms, prioritized unresolved language, salient phrases, and Threat Intelligence surface context.
+- Routed deterministic Semantic engines through managed CPU and memory admission, measured leases, and terminal release while keeping external provider and Lexicon I/O separate.
+- Expanded the language-neutral Observer Engine architecture with self-contained Signal and Semantic contracts, manifests, conformance corpora, and compatible reference implementations.
+- Added checkpoint-resumable bounded Observer scenarios so durable completed work can continue under the same research identity after a managed process window ends.
+
+## 2026-07-27
+- Began Elora's polyglot Engine Architecture foundation with versioned,
+  language-neutral contracts and shared behavioural conformance testing.
+- Established Observer Signals as the first replaceable engine boundary and
+  froze current Pipeline ordering and governance-control behaviour for future
+  compatible implementations.
+- Added explicit Pipeline cancellation, portable node execution outcomes, and
+  bounded evidence-only compatibility and promotion checks while preserving
+  existing default runtime behaviour.
+- Observer reports now show a payload-free manifest of the Engine boundaries,
+  stores, memory backends, and providers touched during each research run.
+- Added portable Observer benchmark snapshots and controlled comparison
+  evidence for future cross-language Engine research.
+
 ## 2026-07-24
 - Attack-related Elora Decisions now show a clear red Threat marker and a concise defence
   outcome, with a direct link to the full Threat Intelligence record.

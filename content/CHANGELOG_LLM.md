@@ -10,6 +10,56 @@ Machine learning implementation anchors (public-safe):
 Context for this changelog:
 This record focuses on the bounded interaction, runtime-learning, and public telemetry side of Elora's LLM-facing systems. It is intended to show how non-neural methods, governed fallbacks, learning visibility, and public-safe runtime proof surfaces have been expanding together rather than as isolated UI additions.
 
+## 0.89 - 2026-08-03
+- Added authenticated, expiring, and revocable residual-risk acceptance evidence for Threat Cases with protected append-only authority history.
+- Added one explainable Governance decision record across Pipeline and chat/API commit paths, covering authorizer, reason, effective permissions, residual risk, and supporting evidence.
+- Kept Case risk acceptance separate from the runtime decision, Threat Finding, Elora Decision, and Replay evidence.
+
+## 0.88 - 2026-08-03
+- Added an evidence-bound bridge from Threat Intelligence assessment and recommendation through Governance evaluation, final action, commit outcome, and decision reason.
+- Added separate authorization evidence for who started governed Research work, which authority decided commit, which permission scope applied, and whether residual risk was separately accepted.
+- Missing authority, policy coverage, or acceptance remains visibly unrecorded rather than being inferred as safe.
+
+## 0.87 - 2026-07-31
+- Added a governed live Threat Detection Engine with bounded prompt and final-output review.
+- Preserved semantic and threat evidence across same-cycle Observer repair work without granting detector intervention or Governance authority.
+
+## 0.86 - 2026-07-29
+- Added bounded smoke and progressive Threat Intelligence research packs with locked repeatable alert expectations.
+- Kept scenario execution, monitoring, Trial Rails, and governance mode under separate explicit controls.
+
+## 0.85 - 2026-07-29
+- Added bounded semantic investigation evidence, accurate pre-inference containment attribution, secondary threat detections, and payload-free Elora Decision receipts.
+- Preserved one immutable primary observation while retaining supporting vector and semantic evidence.
+
+## 0.84 - 2026-07-29
+- Added explicit Observer Threat Intelligence activation and diagnostics across runtime and report surfaces.
+- Kept passive monitoring independent from Trial Rails so observation does not inject adversarial material into ordinary research runs.
+
+## 0.83 - 2026-07-29
+- Added deterministic learned-threat interpretation from bounded Semantic Observation and eligible governed lexical risk evidence.
+- Hypotheses remain evidence-only and cannot intervene, promote themselves, modify Governance, or become detector authority.
+
+## 0.82 - 2026-07-29
+- Added portable Governance preparation contracts and atomic per-node Pipeline artifact batching with explicit compatibility fallback.
+- Kept inference and evidence persistence outside the pure deterministic Governance preparation boundary.
+
+## 0.81 - 2026-07-29
+- Added explicit Observer execution purpose and report emphasis so governance and memory research modes are not inferred from incidental configuration.
+- Added a deterministic Governance Decision Engine boundary and explicit Pipeline persistence policies with payload-free outcome evidence.
+
+## 0.80 - 2026-07-28
+- Routed Observer Semantic engines through Elora-managed CPU and memory admission, measured leases, and terminal release.
+- Kept external embedding and governed Lexicon reads outside deterministic implementation timing and authority.
+
+## 0.79 - 2026-07-28
+- Completed the current Observer Semantic refactor with portable algorithm profiles, bounded inputs, conformance evidence, and improved unresolved-term ranking.
+- Preserved established runtime output contracts while preparing language-independent implementations.
+
+## 0.78 - 2026-07-28
+- Added evidence-only Semantic Observation covering recognised words, prioritized unresolved terms, salient phrases, and Threat Intelligence surface context.
+- Added per-cycle semantic evidence to report and export views without changing learning, intervention, or Governance decisions.
+
 ## 0.77 - 2026-07-17
 - Added bounded CPU Governor sharing for direct deterministic NNLSL turns so memory admission and CPU slot ownership are visible together rather than inferred separately.
 - Added public-safe operator evidence for CPU wait, measured usage, breach posture, and slot release across Admin Chat and the NNLSL Lab Harness.

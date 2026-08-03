@@ -7,6 +7,35 @@ Format:
 
 ## Major Milestones
 
+## 2026-08-03
+- Added dedicated Threat Intelligence Case Reports with an interactive attack/defence
+  map, investigation timeline, supporting evidence, related detections, control context,
+  and governed case history.
+- Made grouped Threat Cases the primary investigation queue, with high-level provenance,
+  control, outcome, ownership and containment context ahead of the detailed report.
+- Added gap-aware operational evidence mapping for the EU AI Act, NIST AI RMF, UK AI
+  principles, and ICO guidance. Reports explicitly support assurance and audit preparation
+  without claiming legal compliance, conformity, or independent certification.
+- Added an explainable bridge from threat recommendation to final Governance decision,
+  showing why a commit was approved or denied, whether the recommendation was followed,
+  and how attempted-attack severity differs from downstream Governance risk.
+- Added a separate authorization and permission trace showing who started governed work,
+  which authority decided commit, the policy basis used, and whether residual risk was
+  separately accepted. Missing evidence remains explicitly unrecorded.
+- Added authenticated, expiring, and revocable residual-risk acceptance evidence for
+  Threat Cases without allowing acceptance to rewrite runtime decisions, findings, or Replay.
+- Established one explainable Governance decision record across Pipeline and chat/API
+  commit paths, including bounded effective-permission and supporting-evidence context.
+
+## 2026-07-31
+- Added a governed live Threat Detection Engine with bounded pre-inference and final-output review, independent resource evidence, and repair-stable stage persistence.
+- Kept detector and learned interpretation outputs evidence-only; neither receives intervention or commit authority.
+
+## 2026-07-27 to 2026-07-29
+- Established language-neutral Observer Signal, Semantic, Governance decision, and Pipeline boundaries with versioned contracts and conformance evidence.
+- Added evidence-only Semantic Observation, learned threat interpretation, explicit Threat Intelligence activation, repeatable research packs, and recorded run/report purposes.
+- Preserved existing runtime and Governance behaviour while preparing deterministic engines for portable implementations.
+
 ## 2026-07-24
 - Expanded Threat Intelligence into evidence-backed findings and governed investigations grouped by evidenced Governance Session.
 - Connected attack-related findings, Elora Decisions, Replay, Observer, policy, guardrail, and runtime evidence through bounded exact-identifier relations without merging their authority.
