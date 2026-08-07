@@ -2,6 +2,12 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-08-07
+Context: the active release line now reflects Threat Intelligence becoming an operational, always-on Observer capability.
+- Advanced current public release references to `0.2.7`, beginning with the `2026-08-06` monitored run that independently produced a deterministic Threat Intelligence finding.
+- Kept Elora Decisions' original introduction in `0.2.6` and made its lifecycle, notification, and cross-module integration continuing focus work alongside Threat Intelligence.
+- Reserved `0.2.8` for a later maturation milestone rather than presenting unfinished notification, investigation, learning, reporting, or governed-response work as current.
+
 ## 2026-08-03
 Context: Threat Intelligence now has enough implemented depth to stand as its own public architecture section rather than remaining only a research-programme summary.
 - Added a scalable Capabilities hub so the growing Engine surface can be explored by Governance and Evidence, Research and Learning, and Threat and Defence programmes without overcrowding the global navigation.
@@ -30,7 +36,7 @@ Context: this phase established portable deterministic Observer boundaries and e
 Context: this update brings the public site into line with Threat Intelligence becoming an evidence-backed findings and investigation system, while preserving the separation between observation, investigation, decisions, replay, and Governance authority.
 - Added red Threat markers and bounded defence summaries to attack-related Elora Decisions.
 - Added direct navigation from a Decision to its full Threat Intelligence finding while leaving routine control observations unmarked.
-- Updated the homepage, Overview, Research, Architecture, Changelog, and public documentation to present Threat Intelligence and Guardrail Defence as current 0.2.6 capabilities.
+- Updated the homepage, Overview, Research, Architecture, Changelog, and public documentation to present Threat Intelligence and Guardrail Defence as developing `0.2.6` capabilities.
 - Added public-safe coverage for Governance Session grouping, bounded trace correlation, append-only investigation activity, and separate recommended-versus-actual action evidence.
 - Expanded the Technical Disclosure and Prior Art chronology through `2026-07-24` without exposing internal schemas, detector content, thresholds, or operational routes.
 - Clarified throughout the website that Threat Intelligence cannot authorize execution, rewrite Governance outcomes, or activate detectors.
@@ -53,7 +59,7 @@ Context: this update extends the `0.2.6` Elora Decisions narrative from individu
 - Added clear separation between Curiosity hypotheses, passed training trials, and promoted retained communication learning.
 
 ## 2026-07-20
-Context: this update moves the public chronology into the `0.2.6` line and reflects the new Elora Decisions module without exposing internal runtime evidence or delivery configuration.
+Context: this update introduces Elora Decisions during the `0.2.6` line without exposing internal runtime evidence or delivery configuration.
 - Added public-safe coverage for categorized Elora decision history and grouped lifecycle stories.
 - Added public-safe wording for memory-reclaim attribution, including the distinction between Elora initiating a reclaim and proving ownership of unattributed process memory.
 - Added Observer Research run-summary coverage, including completed cycles and detected-versus-applied intervention counts.

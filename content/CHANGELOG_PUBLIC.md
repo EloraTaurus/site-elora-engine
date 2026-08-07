@@ -7,6 +7,13 @@ Format:
 
 ## Major Milestones
 
+## 2026-08-07
+- Advanced the active Engine release line to `0.2.7`, beginning with the `2026-08-06`
+  monitored run after always-on Threat Intelligence independently captured a deterministic
+  finding during ordinary Observer Research.
+- Elora Decisions was introduced during `0.2.6` and remains a primary focus alongside
+  operational Threat Intelligence through `0.2.7` and toward the fuller `0.2.8` milestone.
+
 ## 2026-08-03
 - Added dedicated Threat Intelligence Case Reports with an interactive attack/defence
   map, investigation timeline, supporting evidence, related detections, control context,
@@ -51,7 +58,7 @@ Format:
 - Added explicit concern-versus-authority context and bounded relations to the matching audit and research evidence.
 
 ## 2026-07-20
-- Opened the `0.2.6` release line with Elora Decisions as a dedicated categorized record of important operational decisions.
+- Introduced Elora Decisions during the `0.2.6` release line as a dedicated categorized record of important operational decisions.
 - Added chronological decision stories, explicit memory-reclaim attribution, and one bounded Observer Research outcome summary per run.
 
 ## 2026-07-17

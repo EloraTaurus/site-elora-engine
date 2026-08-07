@@ -7,6 +7,100 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
+## 2026-08-07
+- Observer lifecycle explanations now show the assigned lease, predicted runtime,
+  completed work and forecast confidence instead of leaving operators to infer them.
+- Elora explicitly distinguishes a refreshed forecast from an actual lease change. A
+  renewal assessed in observation mode is identified as evidence only, not as an applied
+  extension.
+- Timing explanations can include historical coverage, stage timing, safety reserves,
+  provider timeouts and remaining deadline headroom without copying prompt or model output.
+- Planned child-process checkpoints now explain completed and remaining stages and retain
+  the same logical run identity across resume.
+- Decision updates can now reach the live admin event path with bounded notification intent,
+  while actual toast delivery remains disabled until its operator policy is activated.
+- Longer Observer decision histories disclose retained versus pruned lifecycle events rather
+  than silently presenting a partial timeline as complete.
+
+## 2026-08-06
+- Long Observer Research runs now calculate their complete workload and runtime budget
+  before execution, including comparison lanes and recovery headroom.
+- Runtime estimates refresh only after durable progress. Material changes and lease warnings
+  are grouped into an operator-readable decision history, while detailed source evidence
+  remains separately auditable.
+- Historical timing can improve an initial estimate only when enough evidence matches the
+  same model, execution environment, lane and context class. Sparse or mismatched evidence
+  keeps the conservative fallback.
+- Research status now shows expected work, estimated duration, confidence and warning
+  posture for accepted, active and queued Observer runs.
+- Observer setup can now preview a selected run before starting it. The preview shows the
+  planned workload, timing and safety-readiness evidence without creating a run or sending
+  prompt content, rules or provider credentials.
+- Long-run readiness explicitly checks that Threat Intelligence and Elora Decisions evidence
+  are in scope, the deadline and stop controls are coherent, and the initial lease covers the
+  forecast. Remaining checkpoint and renewal limits are shown as cautions rather than hidden.
+- Provider timeout and process lifecycle evidence is retained without copying prompts or
+  model output into the operator decision history. Automatic lease extension remains
+  disabled while admission and absolute-limit controls are validated.
+- Large Research workloads can now continue through bounded managed child processes while
+  retaining one logical job and report. Planned checkpoint/resume boundaries are recorded
+  separately from failures.
+- Observer setup again includes ungoverned, governed, Runtime Memory and translated-lane
+  comparison choices, including bounded 300-stage and full 720-stage research matrices.
+  The plan preview shows how the selected work will be divided before it starts.
+- Workload totals now include selected memory backends and scenario/lane cases, and repeated
+  comparison planning reuses one content-free timing snapshot for lower persistence load.
+
+## 2026-08-05
+- Added an evidence-led intent indicator to Threat Findings and Case Reports. It keeps
+  observed Behaviour, assessed Intent, evidence sufficiency and review status separate,
+  so detection confidence is never presented as proof of motive.
+- Findings now identify missing investigation evidence and can request reassessment when
+  newer activity exists. Search covers actor and intent context plus runtime, detector,
+  job and trace provenance.
+- Hardened Pipeline evidence so incomplete promotion measurements fail closed, repeated
+  artifacts remain independently auditable, and governed event failures are acknowledged
+  at their durable storage boundary. Invalid or ambiguous graph definitions now stop before
+  execution. Terminal outcomes remain identifiable even without artifacts, and mismatched
+  handler evidence cannot cross into another run or node record. Runtime-owned Pipeline data
+  is now protected from later nested mutation while exported contract data remains caller-owned.
+- Began a folder-by-folder code review, adding concise developer comments that explain
+  architectural intent and tracking optimisation opportunities separately.
+- Threat Intelligence is now an always-on evidence control for Observer Research model
+  interactions, including normal scenarios. Optional adversarial Trial Rails remain separate.
+- Added bounded stalled-run recovery: Elora can retry a stalled stage, force-advance it with
+  an explicit known evidence gap, or stop the run when the permitted recovery budget is
+  exhausted.
+- Stop and Force Advance now target only the worker owned by that Research run. Skipped work
+  is never presented as completed model, policy, guardrail or detection evidence, and stopping
+  an active run preserves queued Research by default.
+
+## 2026-08-04
+- Added a Threat Intelligence Understand overview that follows prompts, files and runtime
+  requests into the model, connecting attempted influence, model behaviour and the final
+  Governance outcome without treating an observed pattern as proof of motive or compromise.
+- Behaviour Patterns now appear in a searchable three-column desktop catalogue with
+  common targets, legitimate lookalikes, progression, operator checks and mitigations.
+- Added governed, evidence-backed intent review for Behaviour Findings. Authorised
+  investigators can revise an assessment without overwriting the detection, and the Case
+  retains the full assessor, rationale, confidence, permission and evidence history.
+- New Research findings explicitly retain the authenticated run actor and access context,
+  making internal, authorised test activity distinguishable from missing actor evidence.
+- Threat Intelligence now describes observed security activity as Behaviour Patterns,
+  recognising that the same pattern can result from external attack, internal misuse,
+  convenience, curiosity, accident or misunderstanding.
+- Threat Case reports separate the observed pattern from actor identity, access and an
+  evidence-backed intent assessment. Missing identity or intent remains visible rather
+  than being assumed malicious.
+- Pattern guidance explains possible objectives, why the behaviour matters, legitimate or
+  accidental lookalikes, internal misuse risk, potential progression, investigation
+  guidance, mitigations, and the Case evidence associated with it.
+- Expanded the detailed evidence view to expose the provenance, confidence, trace,
+  detections, events, entities, relations, risk and authorization records already captured.
+- Replaced the crowded all-relation map with a Case-centred spider view that includes actor
+  context and opens one investigation branch at a time while preserving the full graph in
+  the evidence export.
+
 ## 2026-08-03
 - Added dedicated, printable Threat Intelligence Case Reports with interactive attack
   maps, runtime timelines, evidence, control context, related detections, and governed
@@ -137,7 +231,7 @@ Machine learning implementation anchors (public-safe):
 - Curiosity proposals remain labelled as unverified learning direction, while operator-training outcomes distinguish trial success from evidence-backed learning that was actually promoted and retained.
 
 ## 2026-07-20
-- Opened the `0.2.6` release line around Elora Decisions: a dedicated, categorized history of important operational decisions rather than a stream of disconnected notifications.
+- Introduced Elora Decisions during the `0.2.6` release line as a bounded view of important operational decisions and related evidence.
 - Related actions can now be read as one chronological decision story, making preparation, intervention, completion, cancellation, and failure easier to investigate.
 - Memory cleanup records now state when Elora initiated a reclaim while preserving uncertainty where the released process memory cannot yet be assigned to a fully instrumented owner.
 - Observer Research now creates one run summary showing completed work, detected intervention conditions, interventions actually applied, Observer outcomes, and repair results, with access to the durable report.
@@ -196,11 +290,18 @@ Machine learning implementation anchors (public-safe):
 
 ## ------------- 0.2.x Chronology --------------
 
+## ------------- 0.2.7 --------------
+### Release Focus
+- Always-on Threat Intelligence across Observer Research, anchored by the first independently captured deterministic finding from the `2026-08-06` monitored run.
+- Evidence-backed investigation spanning observations, Findings, grouped Cases, reports, public summaries, and Governance relations.
+- Continued Elora Decisions lifecycle, notification, and cross-module integration work with operator-readable authority, outcome, and uncertainty explanations.
+- `0.2.8` is reserved for deeper notification, investigation, learning, reporting, and governed-response workflows.
+
 ## ------------- 0.2.6 --------------
 ### Release Focus
-- Dedicated Elora Decisions history with categorized, reviewable records.
-- Chronological decision stories that group related lifecycle updates.
-- Clearer memory-reclaim attribution and Observer Research intervention summaries.
+- Managed Runtime Memory, CPU Governance, bounded child execution, and deterministic terminal release for constrained systems.
+- Governed NNLSL resource contracts, self-healing admin workloads, and explicit runtime ownership evidence.
+- Introduction of Elora Decisions, plus early Threat Intelligence evidence and investigation foundations supporting the `0.2.7` operational focus.
 
 ## ------------- 0.2.5 --------------
 ### Release Focus

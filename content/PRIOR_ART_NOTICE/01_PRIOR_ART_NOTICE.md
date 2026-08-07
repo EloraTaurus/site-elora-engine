@@ -62,7 +62,7 @@ These additions preserve the same publication posture:
 
 This page is a technical disclosure record, not a patent filing, legal notice template, or claim of novelty over foundational methods. It exists to preserve chronology, architectural intent, and public accountability.
 
-Current public release line reflected on this disclosure page is `0.2.6`.
+Current public release line reflected on this disclosure page is `0.2.7`.
 
 Public references here intentionally use short commit fingerprints because the source repository is private. Full hashes and immutable evidence bundles are retained offline.
 

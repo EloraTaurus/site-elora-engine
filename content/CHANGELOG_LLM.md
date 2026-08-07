@@ -10,6 +10,24 @@ Machine learning implementation anchors (public-safe):
 Context for this changelog:
 This record focuses on the bounded interaction, runtime-learning, and public telemetry side of Elora's LLM-facing systems. It is intended to show how non-neural methods, governed fallbacks, learning visibility, and public-safe runtime proof surfaces have been expanding together rather than as isolated UI additions.
 
+## 0.91 - 2026-08-05
+- Threat Findings and Case Reports now separate behaviour detection, assessed intent,
+  evidence sufficiency and review status. Detection confidence is never presented as
+  confidence in motive.
+- Missing provenance becomes an operator collection checklist, and newer finding evidence
+  can require reassessment without overwriting prior intent-review history.
+- Investigation search now covers actor and intent context as well as detector, runtime,
+  job and correlation provenance.
+
+## 0.90 - 2026-08-04
+- Added a Threat Intelligence Understand overview that follows input into the model and a
+  searchable three-column Behaviour Pattern catalogue with examples, common approaches,
+  possible intent, AI/runtime targets, lookalikes, progression and operator checks.
+- Expanded the versioned knowledge baseline for all ten Behaviour Patterns while keeping
+  general intent guidance separate from authenticated, evidence-backed intent review.
+- Propagated authenticated Research actor context into new Observer and Trial Rail
+  findings and retained intent reassessments as append-only Case evidence.
+
 ## 0.89 - 2026-08-03
 - Added authenticated, expiring, and revocable residual-risk acceptance evidence for Threat Cases with protected append-only authority history.
 - Added one explainable Governance decision record across Pipeline and chat/API commit paths, covering authorizer, reason, effective permissions, residual risk, and supporting evidence.
