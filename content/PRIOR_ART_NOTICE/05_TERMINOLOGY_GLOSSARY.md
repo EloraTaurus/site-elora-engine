@@ -86,6 +86,26 @@ An explicit, time-bounded and revocable authority record for a stated Threat Cas
 
 The evidenced permission context available to a governed action, such as filesystem, network, external API, shell, memory, model-tool, or secret access. Missing producer evidence remains not recorded rather than inferred.
 
+## Research Claim Ladder
+
+A report-visible distinction between recorded evidence, derived calculation, interpretation, provisional support, and independent validation. Progression requires the evidence appropriate to that standing; a functioning instrument does not validate its own research claim.
+
+## Evidence Passport
+
+A bounded set of links and state references connecting a headline claim or grouped finding to its comparison cohort, validity evidence, limitations, and exact supporting run steps.
+
+## Research Review Packet
+
+A privacy-bounded orientation artifact for human or AI review. It summarizes proposition, claim standing, limitations, grouped findings, and evidence references without replacing the complete forensic report or copying protected payloads.
+
+## Session Behaviour Trajectory
+
+An ordered projection of evidenced behaviour observations across a governed research session. It can show recurrence and mitigation but does not by itself establish identity, intent, causation, escalation, circumvention, or compromise.
+
+## Terminal Working-Memory Release
+
+Evidence that disposable runtime state owned by a completed or failed workload reached its declared release boundary. It is distinct from deletion of durable reports, reviewed profiles, promoted learning, or canonical audit evidence.
+
 ## External Phrase Mapping (Reviewer Aid)
 
 The phrases below are included as reviewer mapping aids. They are not exclusive to any single implementation lineage.
@@ -122,5 +142,5 @@ For standards-level lineage and dated sources, see:
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-08-03`
+- Last updated: `2026-08-26`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.

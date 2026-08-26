@@ -50,7 +50,7 @@ Current public anchor surfaces:
 
 This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, report comparability improvements, repair/self-healing-path visibility controls, and later-month CORE/Model-Exams research milestones.
 
-The July and August 2026 extension adds bounded runtime-governance evidence, governed NNLSL education, language-neutral Observer Engine boundaries, Elora Decisions, live threat detection, evidence-backed Threat Findings, Governance Session investigations, environment-qualified Guardrail Defence, Threat Case Reports, decision bridging, and residual-risk authority evidence. These entries document capability and authority boundaries without publishing internal schemas, detector content, thresholds, routes, or deployment contracts.
+The July and August 2026 extension adds bounded runtime-governance evidence, governed NNLSL education, language-neutral Observer Engine boundaries, Elora Decisions, live threat detection, evidence-backed Threat Findings, Governance Session investigations, environment-qualified Guardrail Defence, Threat Case Reports, decision bridging, residual-risk authority evidence, governed report generation, claim-state and evidence-passport contracts, bounded outside-review packets, session behaviour trajectories, and governed learning-memory Decisions. These entries document capability and authority boundaries without publishing internal schemas, detector content, thresholds, routes, protected instrumentation, or deployment contracts.
 
 These additions preserve the same publication posture:
 

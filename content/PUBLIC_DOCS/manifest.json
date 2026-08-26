@@ -2,7 +2,7 @@
   "title": "Elora Research Engine Docs",
   "description": "Public-safe documentation for Elora as a research engine with governance capability, including runtime intelligence, behaviour learning, Threat Intelligence, and operator evidence architecture.",
   "section_intro": "Read in sequence: Overview -> Architecture -> Governance -> Runtime -> Fabric -> Operators -> API -> Security -> Testing -> Roadmap.",
-  "last_updated": "2026-08-03",
+  "last_updated": "2026-08-26",
   "folder": "PUBLIC_DOCS",
   "sections": [
     {

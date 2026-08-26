@@ -471,6 +471,54 @@ Ingress
 - Proof type: Bounded authorization, permission, and revocable risk-acceptance evidence
 - Evidence summary: Governed work can retain who initiated it, which authority decided commit, the effective permission context, policy basis, and separately authorized residual-risk acceptance without allowing Case authority to rewrite runtime decisions, findings, or Replay.
 
+### Privacy-Bounded Research Authorization and Authoritative Decision Correlation
+
+- Date window: `2026-08-12` to `2026-08-13`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-08-12`, `2026-08-13`)
+- Proof type: Persistent research authorization evidence and canonical Governance Decision linkage
+- Evidence summary: Observer research retained server-derived authorization through queues, managed execution, recovery and completion while linking authoritative outcomes through Replay, Threat Cases and Elora Decisions without copying prompt, response, credential, or private identity content.
+
+### Causal-Research Controls and Evidence-Qualified Intervention Evaluation
+
+- Date: `2026-08-14`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-08-14`)
+- Proof type: Counterbalanced research design and independently reviewable intervention evidence
+- Evidence summary: Observer added counterbalanced or reproducibly assigned comparison lanes, scenario-isolation receipts, independent label storage, and separate measures for behaviour-detection accuracy and intervention warrant, proportionality, timing, effect, and utility without claiming causal proof from an individual run.
+
+### Governed Research Report Execution and Export-Safe Evidence Boundary
+
+- Date window: `2026-08-18` to `2026-08-23`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-08-18`, `2026-08-19`, `2026-08-20`, `2026-08-23`)
+- Proof type: Managed report-generation lifecycle and projection-before-packaging disclosure control
+- Evidence summary: Observer reports gained a layered Schematic research view and governed managed generation with durable artifacts, bounded scheduling, integrity-labelled packaging, terminal memory cleanup, and removal of protected instrumentation before downloadable evidence is rendered or compressed.
+
+### Observer Claim Ladder, Evidence Passports, and Outside-Review Contract
+
+- Date window: `2026-08-24` to `2026-08-25`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-08-24`, `2026-08-25`)
+- Proof type: Evidence-qualified research interpretation and bounded independent-review preparation
+- Evidence summary: Observer separated Research Verdict, Reasoning and Comparison, and Forensic Evidence; labelled recorded, derived, interpreted, provisionally supported, and independently validated claims; linked claims through evidence passports; exposed instrument contradictions; and produced bounded Review Packets without copying protected or forensic payloads.
+
+### Session Behaviour Trajectory with Intent and Causation Boundary
+
+- Date: `2026-08-25`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-08-25`)
+- Proof type: Ordered cross-turn threat evidence with privacy-bounded authorization separation
+- Evidence summary: Threat Intelligence added a deduplicated across-turn trajectory linking recurrence, mitigations and evidence gaps to exact report stages while separating synthetic personas from authorization and explicitly refusing to infer intent, causation, escalation, circumvention, or compromise from sequence order.
+
+### Governed Learning Memory and Evidence-Qualified Learning Decisions
+
+- Date: `2026-08-26`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine and LLM changelog entries (`2026-08-26`)
+- Proof type: Learning workload memory lifecycle and measured-versus-retained evidence distinction
+- Evidence summary: Model Exams, Operator Training, NNLSL candidate processing, and Echo Frequency Learning joined Runtime Memory Governance with active ownership and terminal release evidence, while Elora Decisions distinguished measured results, candidate changes, confirmed retained evidence, and promoted learning without transferring policy, deployment, or commit authority.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

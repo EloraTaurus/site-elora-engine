@@ -7,6 +7,225 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
+## 2026-08-26
+- Model Exams, Operator Training and NNLSL lexical-learning work now participate in Runtime Memory
+  Governance and expose bounded terminal release evidence.
+- Elora Decisions can summarize what the work measured or retained while distinguishing exam
+  evidence, ML-bucket evidence, lexical candidates and actually promoted communication patterns.
+  Each learning narrative links back to both its source evidence and Memory Governance.
+- Echo Frequency Learning is now represented as governed runtime work while active and has an
+  explicit terminal-memory boundary. Completed or failed runs release disposable scan and
+  predictor state immediately while preserving their durable research results and learned
+  profiles.
+- Scheduled Echo profile refreshes follow the same memory lifecycle, with release evidence
+  available to operators through Runtime Memory Governance.
+- Added public-safe authored context and run-specific capability states so an Observer report
+  distinguishes what Elora can do generally from what the retained run actually exercised.
+- Rebuilt Hypothesis presentation around declared research questions, nulls, comparison methods,
+  observed outcomes, validation boundaries and traceable evidence paths. Protected methods remain
+  Engine-only where disclosure would expose private instrumentation.
+- Added an opt-in Elora-styled Observer report preview using the existing export-safe evidence
+  projection and complete Schematic reading model. Established report formats remain available.
+
+## 2026-08-25
+- Added a bounded Session Behaviour Trajectory for ordered across-turn Threat Intelligence
+  evidence, with paired-lane deduplication and exact links back to retained report stages.
+- Synthetic research personas remain separate from redacted run authorization, and sequence order
+  is not treated as proof of intent, causation, escalation, circumvention or compromise.
+- Added smaller Research Review Packets for human and AI orientation around the proposition, claim
+  standing, limitations, material findings and evidence references without copying forensic data.
+- Added visible instrument self-audit exceptions where retained decision and commit evidence
+  conflicts, preserving the contradiction rather than silently selecting a favourable record.
+- Added an independent-label calibration path for intervention warrant, proportionality, safety
+  effect, utility and confidence while keeping calibration separate from independent validation.
+
+## 2026-08-24
+- Added a run-aware Research Summary that names comparison lanes and only those research surfaces
+  actually captured or exercised; missing metadata remains explicitly not recorded.
+- Introduced a three-depth reading contract: Research Verdict, Reasoning and Comparison, and
+  Forensic Evidence, with evidence passports linking claims to validity, cohorts and exact steps.
+- Added a claim ladder separating recorded, derived, interpreted, provisionally supported and
+  independently validated evidence. Successful instrumentation alone cannot create validation.
+- Made comparable-answer efficiency coverage-gated and outcome-aware. Refusals, blocks, failures,
+  missing outputs and safety outcomes retain explicit treatment rather than being averaged away.
+- Qualified token and runtime savings as bounded measurements or proxies, not evidence of answer
+  quality, direct compute reduction, energy savings or causal safety improvement.
+- Added reviewed Behaviour Knowledge, report-scoped framework checklists and a Governance proof
+  chain while preserving identity, intent, legal, compliance and authority boundaries.
+- Strengthened compressed-report integrity checks and retained exact evidence links across mobile,
+  desktop and restored report packages.
+
+## 2026-08-23
+- Moved memory-heavy Observer report generation into Runtime Memory Governance using managed child
+  processes, bounded serial execution and deterministic terminal cleanup.
+- Report requests now produce durable governed artifacts rather than retaining full rendering work
+  inside the initiating web request.
+- Dense Threat Intelligence Case and observation presentation follows the same managed boundary;
+  report evidence, integrity and public/private disclosure rules remain unchanged.
+
+## 2026-08-20
+- Independent review feedback improved the public Observer report's timing
+  labels, evidence-scope wording, provider observations, drift terminology,
+  integrity claims, confidence wording and links to supporting proposal records.
+- Wide evidence tables now remain usable at narrow widths without causing the
+  entire report page to overflow horizontally.
+- The five-domain report now labels Runtime Intelligence completeness within
+  its captured scope and links findings to exact supporting step records.
+- Framework mappings show source-check dates and state that standing requires
+  revalidation when their source or applicability changes.
+- The Engine dashboard now includes a public Attributions panel acknowledging
+  documented independent review, technical contribution, research direction
+  and community feedback. The same source is intended to support the future
+  official website attribution page.
+
+## 2026-08-19
+- Added an optional compressed Schematic Observer report for design review. It
+  restores the exact Schematic document in the browser instead of approximating
+  it with a second, accordion-heavy compact interface.
+- The supplied full report reduced by 81.7%, from about 36.38 MB to 6.65 MB,
+  while retaining the same visual presentation and interaction model.
+- Kept compressed linked JSON as a separate machine- and AI-oriented export for
+  selective evidence review without duplicating repeated values.
+- It preserves the five-domain research story, validity and claim boundaries,
+  evidence traceability, responsive navigation and printable presentation.
+- Proprietary PhyOS telemetry remains inside authenticated Elora surfaces and
+  is excluded before downloadable evidence is linked or compressed.
+
+## 2026-08-18
+- Added an opt-in Schematic Observer report that reorganises retained evidence into Research
+  Briefing, Behaviour and Governance, Research Analysis, Runtime and Diagnostics, and Evidence
+  Annex while preserving deep links and complete public-safe evidence.
+- Standalone reports package their presentation, charts, navigation and projected evidence for
+  offline review without calling an external model or Elora service.
+- Protected PhyOS measurements, internal parameters, formulas, raw objects and recoverable graphs
+  are now removed from public HTML, JSON, Markdown and CSV payloads before packaging rather than
+  being hidden only through presentation controls.
+- Authorized internal research surfaces retain the complete protected evidence. Reproducible
+  experiment, provider and ordinary runtime evidence outside the protected layer remains available.
+
+## 2026-08-14
+- Standalone HTML Research reports now retain their familiar wrapped section menu while it
+  remains visible during reading. Live Admin reports keep their original page-flow navigation,
+  while Threat Case tab navigation remains available during investigation.
+- Exported Research reports now use the project's AI Runtime Intelligence and Governance
+  architecture tagline and carry an embedded Elora portrait beside the project name so the
+  branded header remains intact when the report is shared or opened offline.
+- The Research roadmap now separates Behaviour detection accuracy from Elora intervention
+  correctness, including whether an action was warranted, proportionate, timely, effective
+  and utility-preserving. This is a future validation design, not a claimed score.
+- Research experiments can now retain independently reviewed, blinded outcomes for unsafe
+  completion, attempted circumvention, caveat preservation, utility and detector accuracy.
+- Governed and ungoverned lane order can be counterbalanced or reproducibly randomized, while
+  multi-model batches share one experiment identity and seeded assignment record.
+- Runtime evidence now separates available provider generation phases and adds content-free
+  database/cache timing. Missing direct provider queue evidence remains labelled missing.
+- These additions establish a stronger causal-research workflow without claiming that one run
+  proves safety improvement, generalization or regulatory compliance.
+- Research reports now distinguish a functioning research instrument from a validated safety
+  claim. They show whether independent labels and scenario-isolation evidence exist, how much
+  runtime is explained by named telemetry, and what work remains before causal conclusions.
+- Runtime attribution now reflects the complete retained run rather than one final sample, and
+  requested scenario resets cannot be presented as successful without receipts.
+- Deployment-specific Engine, WorkerHost and infrastructure addresses are supplied through
+  environment configuration rather than fixed machine addresses in source examples.
+- Standalone Research reports now omit authenticated internal navigation, retain Case and
+  Decision references for evidence correlation, redact literal network addresses and contain
+  wide evidence tables within the report viewport.
+- Research reports now include a compact Threat Intelligence Investigation Briefing covering
+  recorded outcomes, test conditions, model permissions, evidence gaps and one representative
+  explanation of how Elora classified observed behaviour. Raw source content remains in the
+  authenticated Case rather than the high-level preview.
+- Research and Threat Case reports display one shared Engine/build identity. Normal builds
+  advance from the latest dated changelog entry and a same-day revision, while deployment
+  overrides remain available.
+
+## 2026-08-12
+- Repaired runtime bindings across Observer scenarios, Model Exam timeout recovery, operator
+  training controls, public Lab explainability and Research health telemetry. These changes
+  restore the evidence paths used to explain scenario transitions, admissibility gaps and
+  timeout retries before longer Research runs resume.
+- Observer scenarios can now be assembled into one sustained evaluation or independently
+  governed scenario runs beneath a combined batch report. This makes long, progressive
+  fictional-persona experiments easier to schedule and compare without manual queueing.
+- Research operators can tune cycle, scenario and governed/ungoverned transition timing,
+  reset conversation context, vary lane order and request provider model isolation. Elora
+  retains the resulting timing, isolation and cache evidence without claiming more certainty
+  than the provider can support.
+- Threat Intelligence now consolidates related Research evidence into one session-level
+  pattern summary while retaining the underlying observations. Equivalent strategy lanes
+  no longer inflate the apparent number of source interactions.
+- Cases can show whether evidence came from the prompt or model, what repeated, how it was
+  mitigated, what authorization context existed and which evidence is still missing.
+- Monitoring review is append-only and reasoned, and Elora can notify operators when eligible
+  actor-linked pattern monitoring begins without claiming that the actor is malicious.
+- Added a clearly labelled fictional-persona Research pack for controlled, progressive
+  behaviour experiments. Synthetic prompts remain separate from the real run authorizer and
+  cannot become part of a real person's behavioural history.
+- Research investigations now retain one consistent record of who authorised the run and
+  which permissions were in effect as work moves through queues, managed children,
+  checkpoints, recovery and completion.
+- Threat Intelligence Cases, Elora Decisions and Replay can reference the same bounded
+  authorization proof. Missing identity or permission evidence is shown as a gap, while
+  credentials and prompt content are excluded.
+- Resuming a run no longer changes its original attribution, and comparison summaries only
+  name a shared actor when all child runs carry matching authorization evidence.
+- Added explainable contextual Behaviour evidence so Elora can record which combination of
+  a boundary action, protected context and requested outcome supported a learned security
+  hypothesis. This evidence remains distinct from an authoritative detector or a judgement
+  of user intent.
+- Quoted examples, descriptive security discussion, negated instructions and ordinary
+  Governance comparisons are retained as ambiguous or incomplete evidence rather than
+  being treated as attack directives.
+- Prompt and model-response evidence remain separately attributable, while Research reports
+  can now show when a risky word was withheld because its surrounding relationship was not
+  sufficient.
+- Improved learned Threat Intelligence precision by separating a Lexicon entry's candidate
+  provenance from security-risk evidence. Ordinary words no longer become learned risk
+  hypotheses merely because they originated in Elora's reviewed learning queue.
+- Existing learned entries are handled safely without erasing their review history, and genuine
+  reviewed risk tags remain available as evidence.
+- Added a tracked delivery plan for contextual Behaviour reasoning and privacy-bounded pattern
+  analysis over eligible Governance Sessions. Repeated activity remains review evidence, not an
+  automatic judgement of user intent.
+
+## 2026-08-10
+- Observer now explains when Elora temporarily holds execution because of runtime pressure,
+  including why it happened and when to retry. Operators can explicitly queue the selected job
+  without forcing it to run; execution remains governed until capacity is admitted.
+- Admin API failures now retain their structured explanation instead of appearing as a generic
+  Engine-update page, while genuine transport outages still return a safe retryable response.
+- Stabilised Admin navigation styling so moving between areas no longer changes shell, sidebar,
+  avatar or content dimensions by reordering the CSS cascade. Page-specific styles continue to
+  load independently, and corrected status colour variables prevent accents from disappearing.
+- Reworked the first public dashboard section into a live operational workspace. A compact
+  input/output strip now sits below a wider white runtime evidence feed, with current and run token
+  telemetry, throughput, confidence, execution state, queue depth and compaction still visible.
+- Recent public-safe Elora Decisions now sit beside that feed and expand to show what Elora is
+  broadly seeing, doing and learning. Elora's image identifies the Decisions rail, and smaller
+  screens place the same list below the feed.
+- Added a limited Elora Decisions timeline to the public dashboard. It shows the five latest
+  public-safe actions, including threat reporting, lease decisions, runtime pressure protection,
+  API protection, memory reclaim, recovery, and learning activity.
+- Internal evidence, identifiers, links, reasons, metrics, authority details, and source wording
+  remain excluded through a fixed public disclosure vocabulary.
+- Added a single visible Engine build identity for each deployment. The admin shell now refreshes
+  independently of its safely cached, build-versioned assets, preventing old CSS from being mixed
+  with a newer interface across workers, browsers or caching proxies.
+- Operators can see the active release and build in the sidebar and response metadata,
+  making incomplete styling and deployment-cache mismatches much easier to verify.
+- Selecting an Attack Map evidence block now opens and illuminates its complete recorded
+  relationship path across connected Actor, Behaviour, Governance, Decision and Risk domains.
+  Unrelated context remains available but recedes.
+- Elora Decisions can now record when security-relevant interaction monitoring begins for an
+  authenticated Research session. The post links to supporting investigation evidence while
+  keeping actor identity separate from intent: it does not claim that the operator is malicious.
+- Response-only model language is excluded from user attribution, and learned hypotheses remain
+  distinct from deterministic Behaviour detections.
+- Added an optional runtime-grounded security vocabulary expansion and new contextual phrase
+  patterns for claimed security testing and prior-answer consistency pressure. These signals
+  support review and future Agent Detection but cannot independently prove authorization,
+  policy breach or compromise.
+
 ## 2026-08-07
 - Observer lifecycle explanations now show the assigned lease, predicted runtime,
   completed work and forecast confidence instead of leaving operators to infer them.

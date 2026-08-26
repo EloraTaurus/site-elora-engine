@@ -2,6 +2,36 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-08-26
+Context: the 0.2.7 line now combines governed learning-memory lifecycles with a substantially more reviewable Observer evidence system.
+- Extended governed learning memory to Model Exams, Operator Training and NNLSL candidate
+  processing, with terminal release evidence rather than unowned working sets.
+- Added bounded “what I learned” Decisions that distinguish measurement, retained evidence,
+  candidate vocabulary and promoted communication learning, with links to Memory Governance.
+- Active frequency-learning work appears under Runtime Memory Governance, then releases its
+  disposable scan and predictor state when the run completes or fails.
+- Durable research findings and learned profiles remain available after working memory is
+  reclaimed; scheduled Echo refresh work follows the same boundary.
+- Added public-safe Observer context, run-specific capability states, declared hypothesis logic,
+  and an opt-in Elora-styled report preview without changing the underlying evidence contract.
+
+## 2026-08-23 to 2026-08-25
+Context: Observer reporting now leads with what its evidence can support and provides bounded paths for outside review.
+- Added governed, memory-bounded Report Builder execution with durable artifacts and terminal cleanup.
+- Added a three-depth report structure spanning Research Verdict, Reasoning and Comparison, and Forensic Evidence.
+- Added an explicit claim ladder, evidence passports, comparable-answer coverage gates, and qualified savings measurements.
+- Added bounded Research Review Packets, visible instrument self-audit exceptions, and an independent-label calibration path.
+- Added Session Behaviour Trajectories that preserve ordered evidence without claiming actor intent, causation, escalation, or compromise.
+- Added reviewed Behaviour Knowledge, report-scoped framework evidence checklists, and stronger Governance proof boundaries.
+
+## 2026-08-10
+Context: the operator interface now carries one verifiable identity from deployment through to
+the browser.
+- Added a timestamped `0.2.7` Engine build identity shared across workers and all admin assets.
+- Made the authenticated admin shell non-cacheable while retaining fingerprinted asset caching,
+  preventing a stale page shell from pairing with incomplete or outdated theme styling.
+- Surfaced the active build in the sidebar and response metadata for deployment diagnosis.
+
 ## 2026-08-07
 Context: the active release line now reflects Threat Intelligence becoming an operational, always-on Observer capability.
 - Advanced current public release references to `0.2.7`, beginning with the `2026-08-06` monitored run that independently produced a deterministic Threat Intelligence finding.

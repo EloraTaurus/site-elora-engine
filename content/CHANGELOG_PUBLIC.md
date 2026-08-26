@@ -7,6 +7,20 @@ Format:
 
 ## Major Milestones
 
+## 2026-08-23 to 2026-08-26
+- Added governed Report Builder execution, bounded serial rendering, durable report artifacts,
+  and deterministic terminal-memory cleanup for Observer and dense Threat Intelligence views.
+- Reorganised Observer evidence into Research Verdict, Reasoning and Comparison, and Forensic
+  Evidence, supported by a claim ladder and evidence passports rather than a single headline score.
+- Added coverage-gated comparison evidence, qualified token/runtime measurements, visible
+  instrument self-audit exceptions, and an independent-label calibration pathway.
+- Added outside-review packets and a bounded Session Behaviour Trajectory that retain exact
+  evidence links while excluding prompts, responses, private identifiers, and protected methods.
+- Added governed learning-memory and “what I learned” Decisions for Model Exams, Operator
+  Training, NNLSL candidate processing, and Echo Frequency Learning.
+- Added an opt-in Elora-styled Observer report preview using the same export-safe evidence and
+  disclosure boundary as the established Schematic report.
+
 ## 2026-08-07
 - Advanced the active Engine release line to `0.2.7`, beginning with the `2026-08-06`
   monitored run after always-on Threat Intelligence independently captured a deterministic

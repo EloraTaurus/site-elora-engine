@@ -10,6 +10,84 @@ Machine learning implementation anchors (public-safe):
 Context for this changelog:
 This record focuses on the bounded interaction, runtime-learning, and public telemetry side of Elora's LLM-facing systems. It is intended to show how non-neural methods, governed fallbacks, learning visibility, and public-safe runtime proof surfaces have been expanding together rather than as isolated UI additions.
 
+## 1.09 - 2026-08-26
+- Added a versioned public-safe explanation of Elora's experimental non-neural operating model, active-development status, and evidence boundaries.
+- Research Briefing now distinguishes general Engine capability from the capabilities evidenced or exercised in the current run.
+- Hypothesis reporting now states the research question, alternative and null hypotheses, comparison method, observed result, validation boundary, and evidence paths without exposing protected instrumentation.
+
+## 1.08 - 2026-08-26
+- Added an opt-in Elora-styled design preview for the complete Observer Schematic report, including a compressed package for practical review.
+- The preview uses the same export-safe evidence, reader depths, claim states, and anchors as the established report formats; it is a presentation option rather than a new evidence contract.
+
+## 1.07 - 2026-08-25
+- Added an export-safe Session Behaviour Trajectory for ordered across-turn Threat Intelligence evidence.
+- The trajectory deduplicates paired-lane observations, separates synthetic research personas from redacted run authorization, and links each turn to retained report evidence.
+- Sequence order remains observation evidence and is not presented as proof of intent, causation, escalation, circumvention, or compromise.
+
+## 1.06 - 2026-08-25
+- Added bounded Research Review Packet exports for human and AI orientation around proposition, claim standing, limitations, material findings, and exact evidence references.
+- Added instrument self-audit visibility for contradictory retained records rather than smoothing conflicts away.
+- Added an independent-label calibration path for intervention warrant, proportionality, safety effect, utility, and confidence while keeping calibration separate from validation or causal proof.
+
+## 1.05 - 2026-08-24
+- Added a run-aware Research Summary that names comparison lanes and only the research surfaces actually captured or exercised.
+- Missing provider, build, target, and version metadata is now shown as not recorded rather than inferred.
+
+## 1.04 - 2026-08-24
+- Reorganised Observer reports into Research Verdict, Reasoning and Comparison, and Forensic Evidence reading depths.
+- Added a claim ladder separating recorded, derived, interpreted, provisionally supported, and independently validated evidence.
+- Evidence passports connect headline claims and grouped findings to validity, comparison cohorts, and exact run steps.
+
+## 1.03 - 2026-08-24
+- Made comparable-answer efficiency coverage-gated and outcome-aware rather than treating every safety-labelled or failed stage as equivalent evidence.
+- Grouped repeated findings while retaining exact step links and strengthened Trial Rail, Governance, AI Ethics, and framework claim boundaries.
+- Compressed reports now verify both package and restored-document integrity before rendering.
+
+## 1.02 - 2026-08-24
+- Added explanatory context to each Schematic concept covering what Elora captures, how evidence is formed, and what remains protected.
+- Comparable-answer cohorts exclude missing, failed, empty, blocked, or refusal outcomes with explicit reasons.
+- Token and runtime reductions are bounded measurements and proxies, not proof of response quality, energy reduction, or direct compute savings.
+
+## 1.01 - 2026-08-24
+- Added reviewed Behaviour Knowledge alongside observed behaviour while preserving identity, intent, and causation boundaries.
+- Added report-visible framework evidence checklists and a Governance proof chain that distinguishes recognition, control, and retained terminal outcomes.
+- Trial Rails display evidenced boundary exercises rather than presenting routine background checks as completed tests.
+
+## 1.00 - 2026-08-23
+- Moved memory-heavy Observer report and dense Threat Intelligence presentation work into governed managed children with bounded serial execution and terminal cleanup.
+- Report content, integrity, and private/public disclosure boundaries remain unchanged by the worker separation.
+
+## 0.99 - 2026-08-17
+- Added a simulation-only file-ingress research scenario for metadata, embedded-instruction, and synthetic privacy-signal testing without reading or executing real uploads.
+- Advanced the portable Observer cutover through dedicated scoring, stage evidence, replay, semantic, threat, intervention, persistence, and Trial Rail boundaries.
+- Managed Engine hosts retain independent resource receipts and explicit implementation identity without collapsing ambiguous implementations.
+
+## 0.98 - 2026-08-14
+- Grouped collaborative PhyOS runtime-observation measures into a dedicated internal research section while retaining public export restrictions around protected instrumentation.
+
+## 0.97 - 2026-08-14
+- Added a lightweight Threat Intelligence briefing to Observer reports across Behaviour, reviewed knowledge, AI Risk and Ethics, Governance response, framework evidence, and learned-evidence authority.
+- Framework material remains operational evidence mapping rather than legal, certification, or compliance determination.
+
+## 0.96 - 2026-08-13
+- Added an experimental evidence-led AI Risk and Ethics Case view spanning user, agent, and model behaviour.
+- The view separates observed behaviour, potential review dimensions, realised-impact evidence, intent, and compliance rather than assigning an ethics label or authoritative conclusion.
+
+## 0.95 - 2026-08-13
+- Added provider-free Observer Engine preflight evidence so readiness or failure is retained before a live research run.
+
+## 0.94 - 2026-08-13
+- Hardened the portable Observer boundary with deferred Engine loading and explicit implementation identity and timing evidence.
+
+## 0.93 - 2026-08-13
+- Began the compatibility-safe portable Observer host transition with Semantic Engine canary execution and package-integrity evidence.
+
+## 0.92 - 2026-08-13
+- Added privacy-minimising Observer authorization context and retained identity presentation policy without accepting client-asserted identity.
+- Projected authoritative execution outcomes through Research, Threat Intelligence, Replay, and Elora Decisions while keeping actor-input threat evidence separate from model-output Governance evaluation.
+- Added explicit Scenario Batch reset evidence and constitutional-halt states; only a retained enforced terminal record may claim that Elora stopped a run.
+- Every evaluated commit now links to a stable authoritative Governance Decision reference, with missing legacy authority remaining visibly unrecorded.
+
 ## 0.91 - 2026-08-05
 - Threat Findings and Case Reports now separate behaviour detection, assessed intent,
   evidence sufficiency and review status. Detection confidence is never presented as

@@ -470,6 +470,30 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Public-facing documentation and demo transparency
 - Evidence summary: Guided governance replay tour, architecture pack, changelog publication, technical disclosure pack, and standards/glossary references.
 
+### Observer Evidence Reading and Claim-State Contract
+
+- Date window: `2026-08-24` to `2026-08-25`
+- Evidence class: Layered research interpretation, traceable claim standing, and bounded outside review
+- Evidence summary: Observer reports separate Research Verdict, Reasoning and Comparison, and Forensic Evidence; claim states distinguish recorded through independently validated evidence; evidence passports link findings to exact steps; and Review Packets provide bounded orientation without replacing the full report.
+
+### Governed Report Builder and Durable Research Artifacts
+
+- Date window: `2026-08-20` to `2026-08-23`
+- Evidence class: Runtime-governed report generation and terminal-memory lifecycle
+- Evidence summary: Memory-heavy report generation and dense investigation presentation execute within managed resource boundaries, produce authorized integrity-labelled artifacts, and release terminal working state while preserving report evidence and disclosure policy.
+
+### Threat Session Behaviour Trajectory
+
+- Date: `2026-08-25`
+- Evidence class: Ordered, deduplicated and privacy-bounded Threat Intelligence evidence
+- Evidence summary: Observer can present recurrence and mitigation across an evidenced session while separating synthetic actors from authorization and reserving intent, causation, escalation, circumvention, and compromise as unsupported unless independently evidenced.
+
+### Governed Learning Memory and Learning Decisions
+
+- Date: `2026-08-26`
+- Evidence class: Runtime ownership, terminal release, and evidence-qualified learning narrative
+- Evidence summary: Model Exams, Operator Training, NNLSL candidate processing and Echo Frequency Learning expose governed working-memory lifecycles, while Decisions separate measured outcomes, candidate evidence, retained learning receipts and promoted communication learning.
+
 ## Public-Safe Evidence Notes
 
 - This register is intentionally high-level and public-safe.

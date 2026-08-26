@@ -6,7 +6,7 @@ Note: This is a public documentation copy for the demo site. Sensitive runtime i
 
 ## Elora Engine Features (Current + In Development)
 
-Last updated: 2026-08-03
+Last updated: 2026-08-26
 
 Purpose: operator-facing summary of what Elora has today and what is actively being built.
 
@@ -23,13 +23,13 @@ Status labels:
 | Dashboards | `Live/Partial` multi-dashboard admin navigation (`Overview`, `Dashboards`, `Governance`, `AI Runtime`, `Fabric`, `Observability`, `Lab`, `Operators`, `Settings`) | Consolidation and UX simplification across dashboard groups |
 | Observability | `Partial` job timeline and replay-oriented views, runtime event visibility, raw evidence panels | Replay forensics polish, compact operator-first incident triage |
 | Governance | `Partial` governance dashboard, policy editor v1, replay review, decision/admissibility metadata, commit boundary visibility | Governance Incident Map redesign, policy traceability depth (`rule_id/version`), stricter admissibility completeness |
-| Research | `Partial` guided research dashboard, synthetic public-safe run reports, observer continuity views, and curated report walkthroughs | Broader public-safe report depth, more run exemplars, and stronger comparison storytelling |
-| Observer Research | `Partial` bounded run lifecycles, stage evidence, logical research jobs, interventions, and durable report outputs | Broader comparison, scenario-pack, and public-safe evidence depth |
-| Learning | `Partial` ERIS runtime intelligence, NNLSL, supervised teaching, and bounded non-neural learning outputs | EBLS behaviour-learning expansion, Model Wiki growth, and additional supervised capability teaching |
-| Threat Intelligence | `Live/Partial` live bounded detection, a grouped Case queue, evidence-backed atomic findings, Governance Session investigations, interactive Case Reports, decision/authorization bridging, and revocable residual-risk evidence | Broader provenance, recommendation trend analysis, saved Case views, signed export governance, and formal incident correlation without transferring authority from Governance |
+| Research | `Partial` guided dashboard, public-safe run reports, bounded Review Packets, claim-state evidence, and curated walkthroughs | Independent-label calibration, broader run exemplars, and stronger causal-validation design |
+| Observer Research | `Partial` bounded run lifecycles, stage evidence, logical jobs, Research Verdicts, evidence passports, comparison cohorts, and durable reports | Broader outside review, scenario packs, public-safe evidence depth, and independent validation |
+| Learning | `Partial` ERIS runtime intelligence, NNLSL, supervised teaching, Model Exam evidence, and governed learning-memory Decisions | EBLS behaviour-learning expansion, Model Wiki growth, and additional supervised capability teaching |
+| Threat Intelligence | `Live/Partial` live bounded detection, grouped Cases, atomic findings, Governance Session investigations, Case Reports, decision/authorization bridging, and Session Behaviour Trajectories | Broader provenance, recommendation trend analysis, saved Case views, signed export governance, and formal incident correlation without transferring authority from Governance |
 | Guardrail Defence | `Live/Partial` environment-qualified model-adherence and Elora-interception scorecards | Larger comparable evidence windows and expanded public-safe reporting |
 | Elora Decisions | `Live/Partial` categorized operational decision histories with bounded relations to source evidence | Wider producer coverage and notification delivery controls |
-| Runtime Governance | `Partial` observe, reason, recommend, and governed-intervention evidence across pressure, memory, and resource state | Wider producer coverage and richer reviewer-facing decision narratives |
+| Runtime Governance | `Partial` observe, reason, recommend, and governed-intervention evidence plus managed report and learning-memory lifecycles | Wider producer coverage and richer reviewer-facing decision narratives |
 | Engine Protocol | `Partial` versioned language-neutral boundaries and deterministic conformance work for selected Engines | Expanded portable implementations and compatibility evidence |
 | AI Runtime | `Partial` models, pipeline controls, behavior, memory, knowledge, plugin controls | Runtime dashboard expansion, profile mapping improvements, context and retrieval controls |
 | Fabric | `Partial` WorkerHost + Provisioner surfaces, worker lifecycle controls, template/provisioning scaffolds | Clear VM vs container split hardening, worker-host telemetry depth, safer lifecycle actions |
@@ -47,6 +47,8 @@ Status labels:
 | Constitutional Governance | `Partial` constitutional halt signaling, repair-aware escalation visibility, and commit-bound refusal posture | Deeper constitutional evidence linkage and broader halt-class modelling |
 | Cognitive Artifact Research | `Partial` bounded cognitive-state and artifact-trace research surfaces connected to report outputs | Expanded public-safe behavioural interpretation views and cross-run comparison |
 | Threat Evidence Boundary | `Live/Partial` separate threat and Governance severity, detection, recommendation, recommendation disposition, Governance rationale, policy result, actual action, confidence, and provenance evidence | Wider producer coverage and stronger completeness reporting |
+| Research Claim Discipline | `Partial` recorded-to-validated claim ladder, evidence passports, comparison coverage gates, exclusions, and instrument self-audit exceptions | Larger independently labelled cohorts and stronger causal-validation evidence |
+| Report Evidence Boundary | `Partial` export-safe projections, integrity-labelled packaging, bounded review packets, and governed report generation | Expanded selective review formats and independent verification workflows |
 
 ## Data and Runtime Features
 
@@ -86,6 +88,8 @@ Elora is already operating as a governance-first runtime with:
 - Threat Intelligence findings and append-only investigation activity,
 - Guardrail Defence evidence separating model and Elora defence layers,
 - Elora Decisions for grouped operational review,
+- claim ladders, evidence passports, and bounded Review Packets for qualified research interpretation,
+- governed report and learning-memory lifecycles with terminal release evidence,
 - research dashboards that expose deep evidence without handing over private implementation detail,
 - and active progression toward stronger deterministic control-plane behavior.
 
