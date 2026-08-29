@@ -2,6 +2,26 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-08-29
+Context: the public chronology now distinguishes Elora's established Runtime Intelligence timing
+substrate from the later TOCTOU-specific research contract without exposing the private engine.
+- Published a standalone Runtime Timing and TOCTOU Research technical disclosure correlating local
+  `.git` implementation anchors with official updates promoted to the project's private GitHub
+  repository.
+- Kept historical runtime timing separate from the TOCTOU work introduced on `2026-08-27`:
+  earlier request, cycle, provider, stage, wall/CPU/wait and micro-operation timing is provenance
+  for the measurement substrate, not an earlier claim to TOCTOU-specific research.
+- Linked the existing public Observer Research sample at
+  `https://ai.elorataurus.com/research-evidence.html` as evidence of cycle and stage-level runtime
+  measurement.
+- Linked the existing public Runtime Intelligence report at
+  `https://ai.elorataurus.com/published-evidence.html` as evidence of stage, CPU and inferred-wait
+  attribution published before the TOCTOU-specific interpretation layer.
+- Added a public Prior Art deep link for the complete bounded chronology and non-claim statement:
+  `https://elorataurus.com/prior-art/?article=RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md`.
+- Preserved the boundary between private implementation provenance, public disclosure dates and
+  independently timestamped third-party evidence.
+
 ## 2026-08-28
 Context: Governance now presents a governed session as a forensic reconstruction rather than a
 flat collection of audit rows.

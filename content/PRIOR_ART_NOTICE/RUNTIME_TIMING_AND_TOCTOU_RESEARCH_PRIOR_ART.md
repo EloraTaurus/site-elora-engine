@@ -407,29 +407,34 @@ The following public-evidence placeholders should be completed without changing 
 
 ### Public changelog publication
 
-- Status: `[PLACEHOLDER — publication event not independently verified]`
-- Published changelog URL: `[PLACEHOLDER]`
-- Publication/update timestamp: `[PLACEHOLDER]`
-- Milestones covered: `[PLACEHOLDER]`
-- Public wording/hash: `[PLACEHOLDER]`
+- Status: `[PREPARED 2026-08-29 — live deployment verification pending]`
+- Published changelog URL: `https://elorataurus.com/changelog/`
+- Source: `demo/content/changelog.md` and `demo/changelog/index.html`
+- Publication/update timestamp: `[VERIFY after deployment]`
+- Milestones covered: Historical Runtime Intelligence timing substrate; separate `2026-08-27` TOCTOU-specific research contract; public evidence links; private/public evidence boundaries.
+- Public wording/hash: `[RECORD after live verification]`
 
 ### Public report evidence
 
-- Status: `[PLACEHOLDER — public report artifact not independently verified]`
-- Report title and stable report ID: `[PLACEHOLDER]`
-- Public URL or immutable artifact digest: `[PLACEHOLDER]`
-- Report generation timestamp: `[PLACEHOLDER]`
-- Runtime/Observer/build versions: `[PLACEHOLDER]`
-- Temporal fields safely disclosed: `[PLACEHOLDER]`
-- Redaction/distribution boundary: `[PLACEHOLDER]`
+- Status: `Verified live on 2026-08-29`
+- Observer Research sample URL: `https://ai.elorataurus.com/research-evidence.html`
+- Observer Research source anchor: `engine/research-evidence.html`; earliest local commit `70abc128d387bb062235b9c5bceb808016c2f1fc` on `2026-06-28 22:50:26 +02:00`; current local SHA-256 `92795e147c8e13725dd80c12c9f52d0e86bba05fba8de77f1b5fee36813be243`.
+- Observer Research evidence: Public sample run, 48/48 cycles, 96 captured steps, per-step `time_to_complete_ms`, public wall-clock range and CPU/RAM envelope.
+- Runtime Intelligence report URL: `https://ai.elorataurus.com/published-evidence.html`
+- Runtime Intelligence report ID: `ORI-2026-0001782760906508`; generated and described as published on `2026-06-30`; Observer `0.8.0-alpha`; telemetry schema `0.8.0-alpha`; pipeline `0.2.0`.
+- Runtime Intelligence source anchor: `engine/published-evidence.html`; earliest local commit `9c2d2d4326c1b10171a446c7fcd7302e8b401e24` on `2026-06-28 22:58:29 +02:00`; current local SHA-256 `422abc69b34c1b5f40916fd5647c46894dde26da7cc2bb284803845ea77750f9`.
+- Runtime Intelligence evidence: stage duration, dominant-stage attribution, local CPU attribution, provider/proposal wait and inferred-wait evidence, evidence completeness and bounded diagnosis confidence.
+- Evidential boundary: These reports publicly evidence the historical temporal measurement substrate. They are not claimed as TOCTOU-specific reports, and the local SHA-256 values have not yet been compared byte-for-byte with the deployed HTTP response bodies.
+- Redaction/distribution boundary: Public sample/public telemetry subset; infrastructure identifiers, raw prompts, private traces and protected policy logic excluded.
 
 ### Website disclosure
 
-- Status: `[PLACEHOLDER — website publication not independently verified]`
-- Page URL: `[PLACEHOLDER]`
-- First publication date: `[PLACEHOLDER]`
-- Later material revision dates: `[PLACEHOLDER]`
-- Archived snapshot or third-party timestamp: `[PLACEHOLDER]`
+- Status: `Verified live on 2026-08-29`
+- Page URL: `https://elorataurus.com/prior-art/?article=RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md`
+- Base Prior Art page first-publication statement: `2026-03-09`
+- Runtime Timing and TOCTOU article: first directly verified live on `2026-08-29`; this is not backdated to the base page's first-publication date.
+- Later material revision dates: `2026-08-29` private-repository chronology clarification and public-evidence correlation.
+- Archived snapshot or third-party timestamp: `[PLACEHOLDER — required for the separate independently timestamped evidence item]`
 
 ### Other independently timestamped public evidence
 
@@ -481,6 +486,6 @@ The intended disclosure is limited to Elora's dated implementation sequence, evi
 - [x] Preserve non-claim boundaries for established computer-science concepts.
 - [x] Correlate local `.git` implementation anchors with official private GitHub repository updates.
 - [ ] Add public changelog publication evidence.
-- [ ] Add public report evidence.
-- [ ] Add website disclosure evidence.
+- [x] Add public report evidence.
+- [x] Add website disclosure evidence.
 - [ ] Add other independently timestamped public evidence.
