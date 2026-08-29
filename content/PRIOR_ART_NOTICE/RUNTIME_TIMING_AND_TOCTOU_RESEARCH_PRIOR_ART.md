@@ -115,6 +115,22 @@ It does **not** establish Observer cycle timing, the later internal engine-stage
 - `CHANGELOG_RESEARCH`: Not applicable and no matching entry. The file was first added on `2026-04-09`.
 - Discrepancy preserved: implementation evidence exists in source history without a contemporaneous timing-specific changelog entry.
 
+#### Supporting Governance Replay export — not a separate implementation milestone
+
+- Embedded run date: `2026-03-06 21:44:44` to `21:45:22 UTC`
+- Artifact: `governance-replay-job-50.json` (private retained export)
+- Artifact SHA-256: `ce520c36641703cc6e85b99314bf13a24f2a42beba7db8bfbdefeac1a43d67c6`
+- Replay contract: `replay_v1`; control flow: `control_flow_v1`; commit evaluator: `commit_eval_v1`
+- Evidence class: Timestamped Governance Replay and proposal-to-commit boundary reconstruction
+
+The export retains 13 hash-chained events across intake, policy gate, drafting, proposal, justification and commit boundaries. It records `36,981 ms` total duration, `36,966.49 ms` provider latency, proposal creation and validation timestamps, commit request and denial timestamps, 15 commit checks, three recorded violations, a valid replay chain and an explicit `blocked_commit_validation` outcome caused by `commit_policy_violation`.
+
+This artifact corroborates that Elora retained temporal evidence across a governed proposal-to-commit lifecycle by `2026-03-06`. It is supporting evidence for decision-boundary chronology, not the earliest timing implementation and not a replacement for the source commits above.
+
+The export also records the proposal and commit authority snapshots as `not_captured`. That absence is material: it demonstrates that timestamped replay and commit-boundary evidence existed while the state-propagation evidence later required for TOCTOU-specific interpretation was not present in this record. The export is therefore **not** evidence of an early TOCTOU implementation.
+
+The artifact is not currently committed to the implementation repository or published. Its embedded timestamps, matching local filesystem time and digest support retained-artifact identification, but do not independently establish a public-disclosure date. Raw proposal text and protected configuration content should remain private; only this bounded metadata summary belongs in the public disclosure.
+
 ### 2. Observer cycle wall/CPU timing
 
 - Implementation date: `2026-04-05`
