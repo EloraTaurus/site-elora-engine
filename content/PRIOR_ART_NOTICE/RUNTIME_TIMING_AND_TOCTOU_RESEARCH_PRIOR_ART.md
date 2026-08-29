@@ -423,12 +423,13 @@ The following public-evidence placeholders should be completed without changing 
 
 ### Public changelog publication
 
-- Status: `[PREPARED 2026-08-29 — live deployment verification pending]`
+- Status: `Verified live on 2026-08-29`
 - Published changelog URL: `https://elorataurus.com/changelog/`
-- Source: `demo/content/changelog.md` and `demo/changelog/index.html`
-- Publication/update timestamp: `[VERIFY after deployment]`
+- Public evidence verified: The dedicated **Runtime Timing and TOCTOU Research Disclosure** card, its bounded distinction and its links to the disclosure and public evidence reports were visible on the live page.
+- Source: `demo/changelog/index.html`; matching long-form entries are retained in `demo/content/CHANGELOG_ENGINE.md` and `demo/content/changelog.md`.
+- Publication/update date: `2026-08-29` (first directly verified live on that date; no more precise independent server publication time is claimed here).
 - Milestones covered: Historical Runtime Intelligence timing substrate; separate `2026-08-27` TOCTOU-specific research contract; public evidence links; private/public evidence boundaries.
-- Public wording/hash: `[RECORD after live verification]`
+- Public wording boundary: Existing public timing reports evidence the historical measurement substrate and are not retrospectively described as TOCTOU research.
 
 ### Public report evidence
 
@@ -454,13 +455,15 @@ The following public-evidence placeholders should be completed without changing 
 
 ### Other independently timestamped public evidence
 
-- Status: `[PLACEHOLDER]`
-- Evidence type, such as release, post, archive, conference material or signed artifact: `[PLACEHOLDER]`
-- Publisher/platform: `[PLACEHOLDER]`
-- Public URL or artifact digest: `[PLACEHOLDER]`
-- Independent timestamp: `[PLACEHOLDER]`
-- Milestone(s) supported: `[PLACEHOLDER]`
-- Relationship to private implementation evidence: `[PLACEHOLDER]`
+- Status: `Partial — first external archive timestamp exists; complete article playback not verified`
+- Evidence type: Internet Archive Wayback Machine snapshot
+- Publisher/platform: Internet Archive
+- Snapshot URL: `https://web.archive.org/web/20260829214749/https://elorataurus.com/prior-art/?article=RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md`
+- Independent timestamp: `2026-08-29 21:47:49 UTC`
+- Milestone(s) supported: The public Prior Art route and Runtime Timing/TOCTOU article URL existed by the archive timestamp.
+- Playback boundary: Verification on `2026-08-29` found that the archived page shell loaded but the JavaScript-fetched disclosure article did not load inside Wayback playback. This snapshot is not treated as a complete archived copy of the article body.
+- Required follow-up: After the Governance Replay supporting section and changelog update are deployed, archive both the deep-link page and the direct Markdown resource at `https://elorataurus.com/content/PRIOR_ART_NOTICE/RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md`. Archive the public changelog separately.
+- Relationship to private implementation evidence: The archive independently timestamps a public route; it does not replace local `.git`, private GitHub official-update or retained-artifact evidence for implementation dates.
 
 ## Claims and Non-Claims
 
@@ -501,7 +504,7 @@ The intended disclosure is limited to Elora's dated implementation sequence, evi
 - [x] Distinguish implementation dates from later documentation dates.
 - [x] Preserve non-claim boundaries for established computer-science concepts.
 - [x] Correlate local `.git` implementation anchors with official private GitHub repository updates.
-- [ ] Add public changelog publication evidence.
+- [x] Add public changelog publication evidence.
 - [x] Add public report evidence.
 - [x] Add website disclosure evidence.
 - [ ] Add other independently timestamped public evidence.

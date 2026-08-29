@@ -8,6 +8,15 @@ Machine learning implementation anchors (public-safe):
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
 ## 2026-08-29
+- Published the standalone **Runtime Timing and TOCTOU Research** disclosure, separating Elora's
+  established request, Observer-cycle, provider, stage, wall/CPU/wait and micro-operation timing
+  substrate from the TOCTOU-specific check, state, use and consequence research introduced on
+  `2026-08-27`.
+- Correlated fine-grained local `.git` implementation anchors with later official updates promoted
+  to the project's private GitHub repository without describing the private repository as public
+  prior art.
+- Linked the public Observer Research sample and Runtime Intelligence report as evidence of the
+  historical timing substrate. Those reports are not retrospectively described as TOCTOU reports.
 - Governance Provenance now surfaces the retained run authorizer, authority source, provider,
   model and worker host, while keeping that run identity distinct from commit authority.
 - Commit stages use immediate outcome colours—green for allowed, red when stopped and amber for
