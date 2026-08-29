@@ -2,6 +2,21 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-08-28
+Context: Governance now presents a governed session as a forensic reconstruction rather than a
+flat collection of audit rows.
+- Replaced the former Dashboard and Replay destinations with a Provenance journey spanning period,
+  date, session and structured investigation views.
+- Added turn-scoped Stage Replay with a snaking pipeline, explicit `Turn › Stage` hierarchy,
+  timing and token surfaces, evidence inspection and recorded-value turn comparison.
+- Added filter-responsive Runtime Intelligence with semantic transition classes, live percentile
+  summaries, turn/range comparison and bounded evidence inspection.
+- Extended TOCTOU visibility to ordinary retained session transitions independently of Threat Case
+  creation. State-change and collision evidence remains distinct from vulnerability, exploitation,
+  causation and impact claims.
+- Kept the new experience on existing retained telemetry and preserved the separation between
+  observation, investigation, Threat promotion and Governance authority.
+
 ## 2026-08-26
 Context: the 0.2.7 line now combines governed learning-memory lifecycles with a substantially more reviewable Observer evidence system.
 - Extended governed learning memory to Model Exams, Operator Training and NNLSL candidate

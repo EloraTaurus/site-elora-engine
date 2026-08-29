@@ -1301,6 +1301,68 @@ a:hover { color: var(--brand-link-hover); }
   margin: 0 0 10px;
 }
 
+.changelog-content blockquote {
+  margin: 10px 0 14px;
+  border-left: 3px solid #5d8fc7;
+  border-radius: 0 8px 8px 0;
+  background: #eef5fd;
+  color: #17395f;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.changelog-content code {
+  border-radius: 5px;
+  background: #edf3fa;
+  color: #17395f;
+  padding: 1px 4px;
+  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.pack-markdown-table {
+  width: 100%;
+  margin: 10px 0 16px;
+  overflow-x: auto;
+}
+
+.pack-markdown-table table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.pack-markdown-table th,
+.pack-markdown-table td {
+  border: 1px solid #cfdbec;
+  padding: 8px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.pack-markdown-table th {
+  background: #e8f1fc;
+  color: #17395f;
+}
+
+.pack-markdown-code {
+  margin: 10px 0 16px;
+  border: 1px solid #c8d9ee;
+  border-radius: 10px;
+  background: #102039;
+  color: #dce8f7;
+  padding: 12px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.pack-markdown-code code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
 .architecture-flow {
   margin: 0;
   padding: 2px 0;

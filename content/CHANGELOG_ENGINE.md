@@ -7,6 +7,81 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
+## 2026-08-29
+- Governance Provenance now surfaces the retained run authorizer, authority source, provider,
+  model and worker host, while keeping that run identity distinct from commit authority.
+- Commit stages use immediate outcome colours—green for allowed, red when stopped and amber for
+  held/not-reached or mixed results—and state when no separate human commit approver was recorded.
+- Added colour-coded Runtime Window pills and explicit timing semantics so operators can
+  distinguish orchestration, Governance, possible model work, planned waits, commit and delivery.
+- Runtime durations are now described as elapsed time between retained checkpoints. Mixed
+  windows separate known pressure backoff, confirmed provider transport and unattributed elapsed
+  time; post-execution receipts no longer make long inference attempts look like pressure time.
+- Research Observer Sequence prompts now appear as distinct actor turns in Governance Provenance,
+  while generated Chain continuations remain internal runtime operations.
+- Comparison lanes correlate their evidence to the same logical turn instead of duplicating the
+  prompt, and retained per-cycle token counts populate the corresponding Stage Replay turn.
+- Prompt boundaries are content-free and older runs retain a conservative compatibility view.
+
+## 2026-08-28
+- Reorganised Governance around a read-only **Provenance** workspace that moves from weekly or
+  monthly activity, to daily session summaries, to a complete governed-session investigation.
+- Added turn-aware Stage Replay with a snaking pipeline, stage timing and token surfaces, risk and
+  evidence context, event inspection and recorded-value comparison between turns.
+- Made the stage hierarchy explicit as `Turn N › Stage N`, with transition windows showing the
+  two stage numbers they connect before presenting the transition type and duration.
+- Added filter-responsive Runtime Intelligence for turn or range, lifecycle transition, boundary
+  class, lane, strategy, duration and evidence state. Percentiles now describe the selected set
+  instead of mixing fundamentally different kinds of work without context.
+- Added bounded comparison of transition medians across turns or ranges, without treating timing
+  correlation as evidence of its cause.
+- Expanded TOCTOU provenance beyond promoted Threat Cases so ordinary windows, state changes,
+  collisions, stale-state evidence and evidence gaps remain reviewable across the retained
+  session. These observations do not independently establish a vulnerability or attack.
+- The new views reuse retained operational telemetry, exclude raw prompts and preserve the
+  existing Governance and commit-authority boundaries.
+
+## 2026-08-27
+- Observer plan previews and Research reports now identify the effective Threat Intelligence
+  protection posture, including sensitivity, enforcement mode, protected scope, severity threshold
+  and settings revision. The report keeps monitoring evidence distinct from Governance authority
+  and excludes refusal wording and detailed detector configuration from portable exports.
+- Threat Intelligence Protection Settings now explain the purpose, effect and boundary of every
+  configuration area. Greyed-out **Upcoming** placeholders show how profiles, trajectory controls,
+  calibration, responses and evidence governance could expand without presenting them as live,
+  and the section-heading layout has been corrected for readability.
+- Added observe-only measurement of the Governance window between a state check, decision,
+  runtime action and recorded consequence. Elora distinguishes an ordinary measured window from
+  progressively stronger state-collision and stale-state evidence without automatically calling
+  it a vulnerability or attack.
+- Threat Case Reports now include a **Runtime Windows** tab with a T0–T6 timeline, bounded state
+  revisions, interval summaries, runtime-pressure context and explicit evidence gaps.
+- Added a reviewed Governance and AI-risk vocabulary pack and new contextual phrase families for
+  control lifecycle, oversight, fairness and recursive learning. Standalone words remain context,
+  not Threat verdicts.
+- Threat Intelligence can now surface a possible cumulative control-erosion trajectory when
+  several canonical turns contain different kinds of control-weakening evidence. It remains a
+  review hypothesis and does not claim malicious intent or that a control was actually changed.
+- Threat Intelligence settings now open as distinct configuration views rather than one long
+  page. Behaviour Patterns can inherit or override the global protection action and sensitivity.
+- Threat Cases now retain append-only severity tags, including later escalation or reviewed
+  de-escalation, so an evolving situation remains one explainable investigation story.
+- Case Reports and Elora Decisions show the current tag and why it changed while keeping severity
+  separate from conclusions about actor intent or compromise.
+- Public Elora Decisions now combines routine idle and memory-reclaim activity into one expandable
+  daily chain. This prevents repeated maintenance updates from displacing more significant recent
+  Decisions while keeping internal resource and reclaim details private.
+- Added a governed Threat Intelligence protection configuration for Observer with monitor-only
+  and pre-inference protection modes, Behaviour Pattern controls, sensitivity levels and a safe
+  configurable response for stopped prompts.
+- Added a Defender-inspired settings workspace with a left-hand configuration tree and distinct
+  areas for detection types, sensitivity, user response and audit evidence.
+- Detection evidence remains distinct from enforcement authority. A configured block records its
+  policy revision and rationale without including the submitted prompt or detector internals.
+- Improved Case reporting so unsafe output that was committed is distinct from an input-only
+  finding followed by a safe model response, and operator headlines no longer treat every
+  supporting evidence record as a separate incident.
+
 ## 2026-08-26
 - Model Exams, Operator Training and NNLSL lexical-learning work now participate in Runtime Memory
   Governance and expose bounded terminal release evidence.

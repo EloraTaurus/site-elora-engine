@@ -115,6 +115,7 @@
           <li><strong>2026-08-24:</strong> Research Verdict, Reasoning and Comparison, Forensic Evidence, claim ladders, evidence passports, and coverage-gated comparison methods were implemented.</li>
           <li><strong>2026-08-25:</strong> Bounded outside-review packets, instrument self-audit exceptions, independent-label calibration, and Session Behaviour Trajectories were implemented with explicit intent and causation boundaries.</li>
           <li><strong>2026-08-26:</strong> Governed learning-memory lifecycles and evidence-qualified learning Decisions expanded across Model Exams, Operator Training, NNLSL candidate processing, and Echo Frequency Learning.</li>
+          <li><strong>2026-08-27:</strong> Established Runtime Intelligence timing was formally distinguished from new observe-only TOCTOU research, which added explicit check, state, use and consequence boundaries without retrospectively classifying earlier temporal instrumentation as TOCTOU (official private GitHub repository update fingerprint: <code>41db815</code>).</li>
         </ul>
         <p>Elora relies on established cryptographic methods and system-safety patterns. Milestones are timestamped through public changelog surfaces, public updates, private-repository commit fingerprints, and external timeline evidence channels with full offline evidence retention.</p>
       </div>
@@ -146,7 +147,7 @@
           <a href="../cookie-policy/">Cookie Policy</a></nav>
       </div>
       <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
-      <div class="footer-note">Edition: Technical Disclosure v1 | First public disclosure: 2026-03-09 | Last updated: 2026-08-26</div>
+      <div class="footer-note">Edition: Technical Disclosure v1 | First public disclosure: 2026-03-09 | Last updated: 2026-08-29</div>
       <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
     </div>
   </footer>
@@ -165,11 +166,12 @@
       const defaultPackKey = 'PRIOR_ART_NOTICE';
       const query = new URLSearchParams(window.location.search);
       const requestedPack = (query.get('pack') || defaultPackKey).toUpperCase().replace(/[^A-Z0-9_-]/g, '');
+      const requestedArticle = (query.get('article') || '').replace(/[^A-Za-z0-9_.-]/g, '');
       let activePack = {
         title: 'Technical Disclosure and Prior Art',
         description: 'Timestamped architecture milestones intended to establish public prior-art signals for governance and core engine capabilities.',
         section_intro: 'Use this page for dated milestones, evidence references, and capability-based implementation chronology.',
-        last_updated: '2026-06-08',
+        last_updated: '2026-08-29',
         folder: defaultPackKey,
         articles: [
           { file: '01_PRIOR_ART_NOTICE.md', title: 'Notice and Scope' },
@@ -178,6 +180,7 @@
           { file: '03_EVIDENCE_METHOD.md', title: 'Evidence Method' },
           { file: '04_STANDARDS_BASELINE.md', title: 'Standards Baseline' },
           { file: '06_ENGINE_CAPABILITY_REGISTER.md', title: 'Engine Capability Register' },
+          { file: 'RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md', title: 'Runtime Timing & TOCTOU Lineage' },
           { file: '07_DOCUMENTATION_SOURCES.md', title: 'Documentation Sources' }
         ]
       };
@@ -212,7 +215,7 @@
       });
 
       function esc(s) {
-        return s
+        return String(s || '')
           .replace(/&/g, '&amp;')
           .replace(/</g, '&lt;')
           .replace(/>/g, '&gt;')
@@ -220,28 +223,112 @@
           .replace(/'/g, '&#39;');
       }
 
+      function renderInlineMarkdown(value) {
+        return esc(value)
+          .replace(/`([^`]+)`/g, '<code>$1</code>')
+          .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      }
+
       function renderSimpleMarkdown(md) {
         const lines = md.split(/\r?\n/);
         const html = [];
-        let inList = false;
+        let listType = '';
+        let codeLines = null;
+        let tableRows = [];
+
+        function closeList() {
+          if (!listType) return;
+          html.push('</' + listType + '>');
+          listType = '';
+        }
+
+        function openList(type) {
+          if (listType === type) return;
+          closeList();
+          listType = type;
+          html.push('<' + type + ' class="list">');
+        }
+
+        function tableCells(row) {
+          const trimmed = row.trim().replace(/^\|/, '').replace(/\|$/, '');
+          return trimmed.split('|').map(function (cell) { return cell.trim(); });
+        }
+
+        function flushTable() {
+          if (!tableRows.length) return;
+          const rows = tableRows.map(tableCells);
+          const hasHeader = rows.length > 1 && rows[1].every(function (cell) {
+            return /^:?-{3,}:?$/.test(cell);
+          });
+          const bodyStart = hasHeader ? 2 : 0;
+          html.push('<div class="pack-markdown-table"><table>');
+          if (hasHeader) {
+            html.push('<thead><tr>' + rows[0].map(function (cell) {
+              return '<th>' + renderInlineMarkdown(cell) + '</th>';
+            }).join('') + '</tr></thead>');
+          }
+          html.push('<tbody>');
+          rows.slice(bodyStart).forEach(function (cells) {
+            html.push('<tr>' + cells.map(function (cell) {
+              return '<td>' + renderInlineMarkdown(cell) + '</td>';
+            }).join('') + '</tr>');
+          });
+          html.push('</tbody></table></div>');
+          tableRows = [];
+        }
+
         lines.forEach(function (line) {
           const t = line.trim();
+
+          if (codeLines !== null) {
+            if (t.startsWith('```')) {
+              html.push('<pre class="pack-markdown-code"><code>' + esc(codeLines.join('\n')) + '</code></pre>');
+              codeLines = null;
+            } else {
+              codeLines.push(line);
+            }
+            return;
+          }
+
+          if (t.startsWith('```')) {
+            closeList();
+            flushTable();
+            codeLines = [];
+            return;
+          }
+
+          if (t.startsWith('|') && t.endsWith('|')) {
+            closeList();
+            tableRows.push(t);
+            return;
+          }
+          flushTable();
+
           if (!t) {
-            if (inList) { html.push('</ul>'); inList = false; }
+            closeList();
             return;
           }
-          if (t.startsWith('### ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h4>' + esc(t.slice(4)) + '</h4>'); return; }
-          if (t.startsWith('## ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h3>' + esc(t.slice(3)) + '</h3>'); return; }
-          if (t.startsWith('# ')) { if (inList) { html.push('</ul>'); inList = false; } html.push('<h2>' + esc(t.slice(2)) + '</h2>'); return; }
+          if (t.startsWith('### ')) { closeList(); html.push('<h4>' + renderInlineMarkdown(t.slice(4)) + '</h4>'); return; }
+          if (t.startsWith('## ')) { closeList(); html.push('<h3>' + renderInlineMarkdown(t.slice(3)) + '</h3>'); return; }
+          if (t.startsWith('# ')) { closeList(); html.push('<h2>' + renderInlineMarkdown(t.slice(2)) + '</h2>'); return; }
+          if (t.startsWith('> ')) { closeList(); html.push('<blockquote>' + renderInlineMarkdown(t.slice(2)) + '</blockquote>'); return; }
           if (t.startsWith('- ')) {
-            if (!inList) { html.push('<ul class="list">'); inList = true; }
-            html.push('<li>' + esc(t.slice(2)) + '</li>');
+            openList('ul');
+            html.push('<li>' + renderInlineMarkdown(t.slice(2)) + '</li>');
             return;
           }
-          if (inList) { html.push('</ul>'); inList = false; }
-          html.push('<p>' + esc(t) + '</p>');
+          const ordered = t.match(/^\d+\.\s+(.+)$/);
+          if (ordered) {
+            openList('ol');
+            html.push('<li>' + renderInlineMarkdown(ordered[1]) + '</li>');
+            return;
+          }
+          closeList();
+          html.push('<p>' + renderInlineMarkdown(t) + '</p>');
         });
-        if (inList) html.push('</ul>');
+        closeList();
+        flushTable();
+        if (codeLines !== null) html.push('<pre class="pack-markdown-code"><code>' + esc(codeLines.join('\n')) + '</code></pre>');
         return html.join('');
       }
 
@@ -312,7 +399,7 @@
         }
       }
 
-      async function loadArticle(file) {
+      async function loadArticle(file, syncLocation) {
         const rel = '/content/' + activePack.folder + '/' + file;
         const md = await fetchFirst(makeCandidatePaths(rel));
         if (!md) {
@@ -321,6 +408,11 @@
         }
         reader.innerHTML = renderSimpleMarkdown(md);
         setActiveNav(file);
+        if (syncLocation && window.history && window.history.replaceState) {
+          const nextUrl = new URL(window.location.href);
+          nextUrl.searchParams.set('article', file);
+          window.history.replaceState({}, '', nextUrl.toString());
+        }
       }
 
       function renderNav() {
@@ -338,7 +430,7 @@
           btn.addEventListener('click', function () {
             const file = btn.getAttribute('data-pack-file');
             if (!file) return;
-            loadArticle(file);
+            loadArticle(file, true);
           });
         });
         initNavCollapsibles();
@@ -363,7 +455,10 @@
         applyPackMeta(activePack);
         renderNav();
         if (activePack.articles && activePack.articles.length) {
-          loadArticle(activePack.articles[0].file);
+          const selected = activePack.articles.find(function (item) {
+            return requestedArticle && item.file === requestedArticle;
+          }) || activePack.articles[0];
+          loadArticle(selected.file, false);
         }
       }
 

@@ -7,6 +7,17 @@ Format:
 
 ## Major Milestones
 
+## 2026-08-28
+- Rebuilt Governance around a read-only Provenance journey from time period, to day, to session,
+  to a structured investigation containing replay, runtime, decisions and evidence.
+- Added turn-aware pipeline reconstruction and comparison with explicit `Turn › Stage` numbering,
+  making long governed sessions easier to follow without exposing submitted content.
+- Added filter-responsive Runtime Intelligence and turn/range comparison so latency distributions
+  describe comparable transition types rather than mixing orchestration and model-processing work.
+- Extended TOCTOU visibility across every retained session transition, including ordinary windows
+  where no state change or collision occurred, while keeping Threat Case promotion separate and
+  preserving the boundary that timing evidence alone does not prove exploitation.
+
 ## 2026-08-23 to 2026-08-26
 - Added governed Report Builder execution, bounded serial rendering, durable report artifacts,
   and deterministic terminal-memory cleanup for Observer and dense Threat Intelligence views.
