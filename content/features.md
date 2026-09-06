@@ -1,6 +1,6 @@
 # Elora Engine Features and Direction
 
-Started as a solo build in late January 2026, Elora has evolved into a governance-first AI control-plane project focused on admissibility, replayability, and operator accountability.
+Started as a solo build in late January 2026, Elora has evolved into a research engine with governance capability, focused on admissibility, provenance, governed interaction, runtime evidence, and operator accountability.
 
 ## What Elora Can Do Today (Engine)
 
@@ -10,12 +10,20 @@ Started as a solo build in late January 2026, Elora has evolved into a governanc
 - Unified commit enforcement across direct and async execution paths.
 - Guardrail-aware terminal outcomes including blocked commit states.
 
-### Governance and Replay
+### Governance Provenance, Decisions, and Replay
 
-- Governance surfaces for risk, decision framing, and operator triage.
-- Replay timeline with risk/anomaly context and evidence-oriented review.
+- Session-level Governance Provenance across preparation, actor turns, execution lanes, runtime state, TOCTOU evidence, guardrails, and commit outcomes.
+- Elora Decisions for bounded lifecycle narratives and Stage Replay for focused evidence inspection.
 - Deterministic recompute direction using captured commit artifacts.
-- Governance and observability are treated as separate surfaces: runtime sequence vs admissibility/accountability assessment.
+- Observation, interpretation, recommendation, policy, guardrail, and commit authority remain separately labelled.
+
+### Governed Interaction and Runtime Integrity
+
+- Testing Edge conversations with run identity, AI Behaviour provenance, Memory Governance, lifecycle, model/provider, token, and outcome evidence.
+- Provider-readiness queues, bounded pressure holds, explicit recovery state, and no overlapping dispatch.
+- Conservative model-aware context selection with observable fallback when capability is unknown.
+- Terminal completion checks that prevent incomplete provider output from becoming an approved answer.
+- Managed public-safe Governance Provenance reports and optional JSON from one bounded projection.
 
 ### Security and Integrity Posture
 
@@ -34,6 +42,7 @@ Started as a solo build in late January 2026, Elora has evolved into a governanc
 ## What Is Available On This Public Website Today
 
 - Governance Replay guided tour using synthetic records.
+- Governance Provenance capability guide for the current `0.2.8` architecture.
 - Stage-level trace walkthrough with structured JSON evidence views.
 - Governance Architecture Pack article reader.
 - Dedicated public changelog page.
@@ -43,7 +52,7 @@ Started as a solo build in late January 2026, Elora has evolved into a governanc
 - Admissibility completeness hardening (decision-class and authority coverage).
 - Evidence model stabilization (canonical bundles, reduced duplication).
 - Deeper policy traceability (`rule_id`, version, reason, severity outputs).
-- Faster operator-speed governance review/report workflows.
+- A complete public-safe Governance Provenance and Testing Edge walkthrough.
 - Expanded worker fabric and distributed execution walkthroughs.
 - WorkerHost bootstrap builder and host lifecycle operations (`sync`, runtime update, token recycle/remove) for distributed node management.
 - GPU-aware host telemetry and inference-node/model reporting for compute-aware routing.

@@ -3,6 +3,9 @@
 
   var PREF_KEY = 'elora_cookie_pref_v1';
   var OPEN_KEY = 'elora_cookie_panel_open_v1';
+  var SCRIPT_BASE = document.currentScript && document.currentScript.src
+    ? new URL('.', document.currentScript.src)
+    : new URL('.', window.location.href);
   var GA_ID = (window.ELORA_GA_ID || '').trim();
   if (!GA_ID) {
     var meta = document.querySelector('meta[name="elora-ga-id"]');
@@ -157,7 +160,7 @@
     var panel = document.createElement('section');
     panel.className = 'cookie-panel';
     panel.setAttribute('aria-hidden', 'true');
-    var policyHref = location.pathname.indexOf('/admin/') >= 0 ? '../cookie-policy.html' : 'cookie-policy.html';
+    var policyHref = new URL('cookie-policy/', SCRIPT_BASE).href;
     panel.innerHTML = '' +
       '<h3 class="cookie-title">Cookie Settings</h3>' +
       '<p class="cookie-copy">Analytics cookies are optional. You can accept or deny tracking at any time.</p>' +

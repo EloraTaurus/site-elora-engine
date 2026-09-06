@@ -494,6 +494,30 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Runtime ownership, terminal release, and evidence-qualified learning narrative
 - Evidence summary: Model Exams, Operator Training, NNLSL candidate processing and Echo Frequency Learning expose governed working-memory lifecycles, while Decisions separate measured outcomes, candidate evidence, retained learning receipts and promoted communication learning.
 
+### Governance Provenance Journey
+
+- Date window: `2026-08-27` to `2026-09-06`
+- Evidence class: Session, turn, lane, lifecycle, Runtime Intelligence, TOCTOU, guardrail, and commit reconstruction
+- Evidence summary: Governance review moved from fragmented audit/replay presentation to one bounded provenance journey while preserving Stage Replay as a focused inspection view and retaining separate canonical evidence authorities.
+
+### Governed Testing Edge
+
+- Date window: `2026-09-01` to `2026-09-06`
+- Evidence class: Governed interaction, AI Behaviour provenance, and runtime-memory ownership
+- Evidence summary: Observer conversations expose run profile, selected Behaviour pack, lifecycle, provider/model, token, memory, policy, guardrail, and commit evidence without copying the full forensic record into the interaction surface.
+
+### Provider-Aware Runtime Integrity
+
+- Date window: `2026-09-03` to `2026-09-06`
+- Evidence class: Readiness, bounded recovery, adaptive context, and terminal completion evidence
+- Evidence summary: Explicit queue holds, audited recovery, conservative model-aware context selection, provider-memory attribution limits, and terminal response checks prevent unavailable or incomplete inference from being silently treated as policy failure or approved output.
+
+### Schematic Governance Provenance Report
+
+- Date: `2026-09-06`
+- Evidence class: Managed public-safe provenance reporting
+- Evidence summary: A readable report and optional JSON companion are derived from the same bounded projection through managed report work, with protected content and operational internals excluded before presentation.
+
 ## Public-Safe Evidence Notes
 
 - This register is intentionally high-level and public-safe.

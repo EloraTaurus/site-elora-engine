@@ -451,18 +451,20 @@ The following public-evidence placeholders should be completed without changing 
 - Base Prior Art page first-publication statement: `2026-03-09`
 - Runtime Timing and TOCTOU article: first directly verified live on `2026-08-29`; this is not backdated to the base page's first-publication date.
 - Later material revision dates: `2026-08-29` private-repository chronology clarification and public-evidence correlation.
-- Archived snapshot or third-party timestamp: `[PLACEHOLDER — required for the separate independently timestamped evidence item]`
+- Archived snapshot: `https://web.archive.org/web/20260829214749/https://elorataurus.com/prior-art/?article=RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md` — route shell and the then-current pre-supporting-section article revision; see playback boundary below.
 
 ### Other independently timestamped public evidence
 
-- Status: `Partial — first external archive timestamp exists; complete article playback not verified`
-- Evidence type: Internet Archive Wayback Machine snapshot
+- Status: `Verified — independently timestamped changelog disclosure captured; supplemental full-article recapture recommended`
+- Evidence type: Internet Archive Wayback Machine snapshots
 - Publisher/platform: Internet Archive
-- Snapshot URL: `https://web.archive.org/web/20260829214749/https://elorataurus.com/prior-art/?article=RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md`
-- Independent timestamp: `2026-08-29 21:47:49 UTC`
-- Milestone(s) supported: The public Prior Art route and Runtime Timing/TOCTOU article URL existed by the archive timestamp.
-- Playback boundary: Verification on `2026-08-29` found that the archived page shell loaded but the JavaScript-fetched disclosure article did not load inside Wayback playback. This snapshot is not treated as a complete archived copy of the article body.
-- Required follow-up: After the Governance Replay supporting section and changelog update are deployed, archive both the deep-link page and the direct Markdown resource at `https://elorataurus.com/content/PRIOR_ART_NOTICE/RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md`. Archive the public changelog separately.
+- Prior Art route snapshot: `https://web.archive.org/web/20260829214749/https://elorataurus.com/prior-art/?article=RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md` at `2026-08-29 21:47:49 UTC`.
+- Direct Markdown snapshot: `https://web.archive.org/web/20260829214750/https://elorataurus.com/content/PRIOR_ART_NOTICE/RUNTIME_TIMING_AND_TOCTOU_RESEARCH_PRIOR_ART.md` at `2026-08-29 21:47:50 UTC`.
+- Changelog snapshot: `https://web.archive.org/web/20260829230655/https://elorataurus.com/changelog/` at `2026-08-29 23:06:55 UTC`.
+- Verified independent evidence: The archived changelog visibly contains the **Runtime Timing and TOCTOU Research Disclosure** card and its distinction between historical timing instrumentation and the later TOCTOU-specific research. The archived response identifies the same deployed HTML revision as the live page through `ETag "6a93569b-447e"` and origin last-modified time `2026-08-29 22:00:59 UTC`.
+- Milestone(s) supported: Public publication of the Runtime Timing/TOCTOU disclosure summary, evidence links and historical non-retrospective boundary by `2026-08-29 23:06:55 UTC`.
+- Earlier-capture boundary: The `21:47:50` direct-Markdown capture correctly retained the older `11,741`-byte source last modified at `21:45:41 UTC`. The expanded live source was published later at `22:00:59 UTC` and is `40,765` bytes. The older archive is not evidence of the subsequently added Governance Replay supporting section or checked changelog item.
+- Recommended follow-up: Archive the expanded direct Markdown resource and deep-link page again so the complete current article body is independently retained as well as its already archived changelog disclosure.
 - Relationship to private implementation evidence: The archive independently timestamps a public route; it does not replace local `.git`, private GitHub official-update or retained-artifact evidence for implementation dates.
 
 ## Claims and Non-Claims
@@ -507,4 +509,4 @@ The intended disclosure is limited to Elora's dated implementation sequence, evi
 - [x] Add public changelog publication evidence.
 - [x] Add public report evidence.
 - [x] Add website disclosure evidence.
-- [ ] Add other independently timestamped public evidence.
+- [x] Add other independently timestamped public evidence.

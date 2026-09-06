@@ -1,6 +1,6 @@
 # Architecture and Control Plane
 
-Last updated: 2026-03-07
+Last updated: 2026-09-06
 
 First implemented (from changelog): 2026-02-28
 
@@ -26,6 +26,14 @@ This architecture is built for defensibility:
 - lower policy bypass risk,
 - clearer post-incident reconstruction,
 - tighter operator accountability.
+
+## Governance Provenance
+
+The current `0.2.8` architecture reconstructs governance as a session-level evidence journey. Preparation, actor turns, governed and comparison lanes, runtime transitions, continuous TOCTOU state, policy, guardrails, and commit outcomes remain linked but semantically separate. Stage Replay is a focused inspection view within this wider provenance model.
+
+## Governed Interaction and Provider Integrity
+
+The Testing Edge brings conversation-shaped Observer interaction under run identity, AI Behaviour provenance, Memory Governance, readiness, context, provider, and completion evidence. Provider transport success is not sufficient for approval: incomplete output remains evidence and cannot become a commit candidate.
 
 ## Current Deployment Reality
 

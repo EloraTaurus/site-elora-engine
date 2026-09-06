@@ -106,6 +106,30 @@ An ordered projection of evidenced behaviour observations across a governed rese
 
 Evidence that disposable runtime state owned by a completed or failed workload reached its declared release boundary. It is distinct from deletion of durable reports, reviewed profiles, promoted learning, or canonical audit evidence.
 
+## Governance Provenance
+
+A session-level reconstruction that connects preparation, actor turns, execution lanes, lifecycle, Runtime Intelligence, TOCTOU, policy, guardrail, and commit evidence while preserving the distinct meaning and authority of each source record.
+
+## Stage Replay
+
+A focused turn-and-stage inspection view within Governance Provenance. It presents retained execution evidence but does not replace the wider session journey or create a new source of authority.
+
+## Governed Testing Edge
+
+A conversation-shaped Observer research surface that exposes run, AI Behaviour, memory, provider, lifecycle, and governance evidence. It does not turn conversational output into execution authority or replace the forensic report.
+
+## TOCTOU Evidence State
+
+Retained evidence about relevant check, state, use, and consequence moments. A difference or collision is an investigation signal and does not alone prove vulnerability, exploitation, causation, or impact.
+
+## Prompt Composition Receipt
+
+A content-free record of final prompt composition cost and effective runtime configuration after governed context fitting. It is distinct from provider token accounting and does not disclose prompt content.
+
+## Provider Completion Integrity
+
+The separation between transport success and a terminally complete model response. Incomplete output may be retained as diagnostic evidence but cannot be promoted as an approved answer or commit candidate.
+
 ## External Phrase Mapping (Reviewer Aid)
 
 The phrases below are included as reviewer mapping aids. They are not exclusive to any single implementation lineage.
@@ -142,5 +166,5 @@ For standards-level lineage and dated sources, see:
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-08-26`
+- Last updated: `2026-09-06`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.

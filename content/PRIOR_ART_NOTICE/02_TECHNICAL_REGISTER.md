@@ -519,6 +519,38 @@ Ingress
 - Proof type: Learning workload memory lifecycle and measured-versus-retained evidence distinction
 - Evidence summary: Model Exams, Operator Training, NNLSL candidate processing, and Echo Frequency Learning joined Runtime Memory Governance with active ownership and terminal release evidence, while Elora Decisions distinguished measured results, candidate changes, confirmed retained evidence, and promoted learning without transferring policy, deployment, or commit authority.
 
+### Governance Provenance and Continuous TOCTOU Reconstruction
+
+- Date window: `2026-08-27` to `2026-09-06`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entries (`2026-08-27` to `2026-09-06`)
+- Proof type: Session-level governance reconstruction and time-of-check to time-of-use evidence
+- Evidence summary: Existing retained telemetry was brought into a period-to-session-to-turn provenance journey spanning governed and comparison lanes, runtime transitions, guardrails, commit outcomes, and bounded TOCTOU evidence states. State change remains evidence for investigation rather than automatic proof of exploitability, causation, or impact.
+
+### Governed Testing Edge and AI Behaviour Provenance
+
+- Date window: `2026-09-01` to `2026-09-06`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entries (`2026-09-01` to `2026-09-06`)
+- Proof type: Governed human/Observer interaction with runtime ownership and separated authority evidence
+- Evidence summary: A conversation-shaped Testing Edge retained run identity, selected AI Behaviour pack, provider/model context, lifecycle, token and Memory Governance evidence while keeping Behaviour, policy, guardrail, and commit outcomes separate. A reusable starter Behaviour pack was added without granting profile content policy or commit authority.
+
+### Provider Readiness, Context Governance, and Completion Integrity
+
+- Date window: `2026-09-03` to `2026-09-06`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entries (`2026-09-03` to `2026-09-06`)
+- Proof type: Bounded inference admission, recovery, context, and terminal-output evidence
+- Evidence summary: Observer work can remain queued through explicit readiness and pressure states; recovery is bounded and audited; context selection uses retained demand and available model/resource evidence with conservative fallback; and transport success is separated from terminal completion so incomplete output cannot become an approved answer or commit candidate.
+
+### Managed Public-Safe Governance Provenance Reporting
+
+- Date: `2026-09-06`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entry (`2026-09-06`)
+- Proof type: Governed report execution and projection-bounded disclosure
+- Evidence summary: Elora-managed work prepares readable Schematic Governance Provenance reports and optional JSON from one allow-listed projection, preserving lane, lifecycle, commit, guardrail, runtime-class, and TOCTOU evidence while excluding prompts, responses, private identities, protected infrastructure, and internal event detail.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

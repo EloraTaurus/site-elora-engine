@@ -7,7 +7,38 @@ Format:
 
 ## Major Milestones
 
-## 2026-08-28
+## 0.2.8 — Governance Provenance and Governed Interaction
+
+### Release Focus
+
+- Governance Provenance, governed interaction and public-safe session reporting.
+- Active from `2026-08-27`.
+
+### 2026-09-06
+- Advanced the active Engine release line to `0.2.8` after Governance Provenance,
+  continuous TOCTOU reconstruction, the governed Testing Edge and Elora-managed
+  session reporting formed a coherent architecture milestone.
+- Added public-safe Elora Schematic Provenance reports with optional JSON derived
+  from the same disclosure-safe projection.
+- Added a database-backed, streamed Testing Edge that presents autonomous Observer
+  runs as conversations without creating a second execution authority. Operators can
+  use focus mode, inspect five recent tests and read older turns without the live view
+  forcing them back to the latest message.
+- Added an Elora run profile with model/provider, progress, token, Memory Governance,
+  AI Behaviour, policy guardrail and commit evidence derived from retained records.
+- Released the `Generic Business Assistant` v1.0.0 starter Behaviour pack as an
+  editable, non-authoritative example of a helpful business assistant with clear
+  guardrails and Knowledge settings.
+- Made Trial Rail configuration compatibility visible at selection time, preventing
+  unsupported application, pack and file-type combinations from reaching preview.
+- Distinguished `Turn 0` session preparation, actor-authored turns and governed or
+  ungoverned execution lanes. Follow-up prompts remain turns; internal runtime work
+  does not inflate the actor-turn count.
+- Clarified Runtime Intelligence with semantic transition classes, measured provider
+  time, planned waits, pressure cohorts and colour-coded commit outcomes so elapsed
+  windows are not mistaken for inference, pressure or orchestration ownership.
+
+### 2026-08-28
 - Rebuilt Governance around a read-only Provenance journey from time period, to day, to session,
   to a structured investigation containing replay, runtime, decisions and evidence.
 - Added turn-aware pipeline reconstruction and comparison with explicit `Turn › Stage` numbering,
@@ -37,7 +68,7 @@ Format:
   monitored run after always-on Threat Intelligence independently captured a deterministic
   finding during ordinary Observer Research.
 - Elora Decisions was introduced during `0.2.6` and remains a primary focus alongside
-  operational Threat Intelligence through `0.2.7` and toward the fuller `0.2.8` milestone.
+  operational Threat Intelligence through the completed `0.2.7` release window.
 
 ## 2026-08-03
 - Added dedicated Threat Intelligence Case Reports with an interactive attack/defence

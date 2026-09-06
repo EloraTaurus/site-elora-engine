@@ -1,6 +1,6 @@
 # Engine Capabilities (Current)
 
-Last updated: 2026-03-20
+Last updated: 2026-09-06
 
 First implemented (from changelog): 2026-02-28
 
@@ -12,6 +12,8 @@ First implemented (from changelog): 2026-02-28
 
 ## Governance and Policy
 
+- Governance Provenance from period and session context into turns, lanes, lifecycle, Runtime Intelligence, TOCTOU, guardrail, and commit evidence.
+- Stage Replay and Elora Decisions as focused views over separately retained source evidence.
 - Governance dashboard and policy editor surfaces.
 - Worker-scoped policy mapping (v1).
 - Authority/admissibility checks with configurable strictness.
@@ -24,11 +26,20 @@ First implemented (from changelog): 2026-02-28
 - Hash-chained replay events for tamper-evident decision trails.
 - Session/auth hardening controls across admin/operator surfaces.
 
-## Replay and Audit
+## Governed Interaction and Provenance
 
-- Replay timeline with risk and anomaly signals.
+- Governed Testing Edge conversations with run identity, AI Behaviour provenance, Memory Governance, model/provider, token, lifecycle, and separated outcome evidence.
+- Stage Replay timelines with risk, runtime, policy, guardrail, and commit signals.
 - Hash-chained event records for tamper-evidence.
 - Deterministic recompute support using captured commit artifacts.
+- Managed public-safe Schematic provenance reports and optional JSON from the same bounded projection.
+
+## Provider and Runtime Integrity
+
+- Readiness queues and bounded pressure holds prevent overlapping or premature provider dispatch.
+- Audited, opt-in recovery remains distinct from policy denial and automatic restart authority.
+- Model-aware context selection uses available capability and resource evidence with conservative fallback.
+- Terminal completion checks retain incomplete output as evidence rather than approving it as an answer.
 
 ## Operator Surfaces
 
@@ -52,3 +63,4 @@ First implemented (from changelog): 2026-02-28
 - Q1 2026: proposal-to-commit enforcement and governance/replay operator surfaces implemented.
 - March 2026: architecture-context publication and governance pipeline documentation added to the public site.
 - March 2026 (mid-late): Fabric host operations expanded with bootstrap builder, runtime update controls, and GPU host telemetry surfaces.
+- August to September 2026: Governance Provenance, continuous TOCTOU reconstruction, governed Testing Edge interaction, provider-aware runtime integrity, and bounded provenance reporting entered the active `0.2.8` line.

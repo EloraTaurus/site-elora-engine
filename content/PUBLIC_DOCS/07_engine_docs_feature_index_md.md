@@ -22,6 +22,8 @@ Companion summary: `FEATURES.md` (current + in-development operator pack).
 | Area | Current Status | Primary Surface | Operator Guide |
 |---|---|---|---|
 | Admin Dashboard and Governance | Partial | Admin control plane | `OPERATORS/ADMIN_DASHBOARD_AND_GOVERNANCE.md` |
+| Governance Provenance | Live / Partial | Session, turn, lane, lifecycle, Runtime Intelligence, TOCTOU, guardrail, commit, and report evidence journey | Public overview: `/governance-provenance/` |
+| Governed Testing Edge | Live / Partial | Conversation-shaped Observer execution with AI Behaviour, Memory Governance, provider, lifecycle, and outcome evidence | Public overview: `/governance-provenance/` |
 | Jobs Audit and Replay | Partial | Governance replay and jobs views | `OPERATORS/JOBS_AUDIT_AND_REPLAY.md` |
 | Research Dashboard and Reports | Partial | Research dashboard, layered run reports, Review Packets, and guided demo surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | Observer Research Engine | Partial | Bounded runs, logical jobs, claim ladders, evidence passports, comparison cohorts, and durable reports | Public overview: `/observer-research/` |

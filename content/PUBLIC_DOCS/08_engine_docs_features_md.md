@@ -6,7 +6,7 @@ Note: This is a public documentation copy for the demo site. Sensitive runtime i
 
 ## Elora Engine Features (Current + In Development)
 
-Last updated: 2026-08-26
+Last updated: 2026-09-06
 
 Purpose: operator-facing summary of what Elora has today and what is actively being built.
 
@@ -21,10 +21,10 @@ Status labels:
 | Area | Current State | In Development |
 |---|---|---|
 | Dashboards | `Live/Partial` multi-dashboard admin navigation (`Overview`, `Dashboards`, `Governance`, `AI Runtime`, `Fabric`, `Observability`, `Lab`, `Operators`, `Settings`) | Consolidation and UX simplification across dashboard groups |
-| Observability | `Partial` job timeline and replay-oriented views, runtime event visibility, raw evidence panels | Replay forensics polish, compact operator-first incident triage |
-| Governance | `Partial` governance dashboard, policy editor v1, replay review, decision/admissibility metadata, commit boundary visibility | Governance Incident Map redesign, policy traceability depth (`rule_id/version`), stricter admissibility completeness |
+| Observability | `Partial` Governance Provenance, Stage Replay, Runtime Intelligence, continuous TOCTOU state, lifecycle views, and bounded evidence inspection | Wider producer coverage and additional public-safe review paths |
+| Governance | `Partial` provenance journey, policy and admissibility evidence, Elora Decisions, guardrail outcomes, and commit-boundary visibility | Broader session/report coverage and stronger completeness evidence |
 | Research | `Partial` guided dashboard, public-safe run reports, bounded Review Packets, claim-state evidence, and curated walkthroughs | Independent-label calibration, broader run exemplars, and stronger causal-validation design |
-| Observer Research | `Partial` bounded run lifecycles, stage evidence, logical jobs, Research Verdicts, evidence passports, comparison cohorts, and durable reports | Broader outside review, scenario packs, public-safe evidence depth, and independent validation |
+| Observer Research | `Partial` governed Testing Edge, readiness queue, bounded run lifecycles, stage evidence, Research Verdicts, evidence passports, comparison cohorts, and durable reports | Broader outside review, scenario packs, public-safe evidence depth, and independent validation |
 | Learning | `Partial` ERIS runtime intelligence, NNLSL, supervised teaching, Model Exam evidence, and governed learning-memory Decisions | EBLS behaviour-learning expansion, Model Wiki growth, and additional supervised capability teaching |
 | Threat Intelligence | `Live/Partial` live bounded detection, grouped Cases, atomic findings, Governance Session investigations, Case Reports, decision/authorization bridging, and Session Behaviour Trajectories | Broader provenance, recommendation trend analysis, saved Case views, signed export governance, and formal incident correlation without transferring authority from Governance |
 | Guardrail Defence | `Live/Partial` environment-qualified model-adherence and Elora-interception scorecards | Larger comparable evidence windows and expanded public-safe reporting |
@@ -49,6 +49,8 @@ Status labels:
 | Threat Evidence Boundary | `Live/Partial` separate threat and Governance severity, detection, recommendation, recommendation disposition, Governance rationale, policy result, actual action, confidence, and provenance evidence | Wider producer coverage and stronger completeness reporting |
 | Research Claim Discipline | `Partial` recorded-to-validated claim ladder, evidence passports, comparison coverage gates, exclusions, and instrument self-audit exceptions | Larger independently labelled cohorts and stronger causal-validation evidence |
 | Report Evidence Boundary | `Partial` export-safe projections, integrity-labelled packaging, bounded review packets, and governed report generation | Expanded selective review formats and independent verification workflows |
+| Provider Completion Integrity | `Partial` terminal completion evidence keeps incomplete output out of approved answer and commit paths | Wider provider compatibility evidence and failure classification |
+| Model-Aware Context Governance | `Partial` bounded selection from retained-history demand, available model evidence, and conservative resource policy | Live evidence growth across additional model families |
 
 ## Data and Runtime Features
 
@@ -82,7 +84,8 @@ Status labels:
 
 Elora is already operating as a governance-first runtime with:
 - proposal-first commit enforcement,
-- replay and admissibility evidence surfaces,
+- Governance Provenance, Stage Replay, continuous TOCTOU, and admissibility evidence surfaces,
+- governed Testing Edge conversations with AI Behaviour and Memory Governance evidence,
 - operator dashboards across governance/observability/runtime/fabric,
 - ERIS runtime intelligence for bounded posture interpretation,
 - Threat Intelligence findings and append-only investigation activity,

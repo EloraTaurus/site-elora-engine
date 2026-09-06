@@ -1,5 +1,35 @@
 # Engine Changelog
 
+## 0.2.8 — Governance Provenance and Governed Interaction
+
+### Release Focus
+
+- Governance Provenance brings session replay, audit evidence, governed and
+  ungoverned turn comparison, runtime timing and continuous TOCTOU evidence into
+  one investigation journey.
+- The governed Testing Edge connects conversation evidence, Memory Governance
+  and AI Behaviour profiles without publishing private prompts or settings.
+- Public-safe Elora Schematic reports make retained evidence easier to review.
+
+Release window: active from `2026-08-27`.
+
+### 2026-09-06
+- Streamlined resource-admission checks while preserving safety limits.
+- Added an easy-to-read Governance Provenance report with governed/ungoverned
+  turn journeys, runtime evidence and optional public-safe JSON.
+- Improved prompt-cost visibility and avoided redundant prompt assembly.
+- Improved readability of routine CPU governance Decisions.
+- Clarified PhyOS Runtime Signals attribution in Observer reports and permitted
+  exports, crediting Carlo Arleo and The Elora Taurus Project without widening
+  public disclosure of protected telemetry.
+- Repaired PhyOS dashboard loading failures and reduced unnecessary database and
+  chart work. Displayed runtime costs now follow the selected research data.
+- Extended resource governance and grouped CPU/memory visibility across PhyOS and
+  related Engine Operations diagnostics, with bounded work and reliable cleanup.
+  Existing safety controls remain intact; unmeasured resource costs are explicit.
+- Validated the combined governance/PhyOS changes with 120 passing regression
+  tests; local checks do not establish production performance gains.
+
 Disclosure level: Public (high-detail technical summary). Internal route inventories, exact operational thresholds, and direct reproducibility playbooks are intentionally omitted.
 
 Machine learning implementation anchors (public-safe):
@@ -7,7 +37,117 @@ Machine learning implementation anchors (public-safe):
 - ML maturity expansion: `2026-04-25` (bucketed learning + weighted signal fusion progression)
 - ERIS runtime-ML domain formalization: `2026-05-06`
 
-## 2026-08-29
+### 2026-09-05
+- Improved Startup Recovery controls and informational check outcomes.
+- Clarified recovery availability and deployment permission status.
+- Added modular, opt-in recovery controls with visible audit outcomes and safe
+  defaults for deployment-specific recovery tools.
+- Improved Observer queue resilience and reduced diagnostic overhead without
+  weakening provider recovery or governance checks.
+- Queued Observer work now resumes readiness checks after an Engine restart.
+- Observer can retain adaptive parameter controls without automatic answer
+  rewrites, with clearer repetition evidence and unchanged commit protections.
+- Added Decision evidence downloads for filtered journals and individual lifecycle records.
+
+### 2026-09-04
+- Added self-healing provider pressure holds with clear lifecycle reporting;
+  moderate background I/O no longer ends an Observer run.
+- Improved model-aware context selection with bounded memory-cost estimates,
+  adaptive history fitting and explicit conservative-fallback evidence.
+- Added clear estimated KV-memory visibility and privacy-bounded research-session
+  attribution without claiming ownership of provider memory.
+- Improved Observer context governance and safe queued continuation, with clearer
+  explanations of resource holds and preserved response evidence.
+- Strengthened response-completion checks and incomplete-capture reporting;
+  prepared runtime stability improvements for testing.
+
+### 2026-09-03
+- Fixed compressed history entries in the Testing Edge sidebar.
+- Observer runs now update one lifecycle post from acceptance through completion.
+- Added scheduled/actioning Observer notices with timing context, plus expandable
+  recent-run history in Testing Edge.
+- Observer submissions now wait safely for provider readiness, with visible
+  reasons and cancellation, before inference can start.
+- Observer now explains recorded outcomes and missing checks, separating resource
+  holds, threat containment and commit decisions.
+- Observer conversations now show submitted prompts and a waiting indicator
+  before recorded responses arrive, without changing governance decisions.
+- Improved Observer failure handling and audit clarity, separating unavailable
+  inference from security-policy decisions while preserving recovery safeguards.
+- Fixed a WorkerHost CPU-control compatibility issue and strengthened regression coverage;
+  existing safety controls remain unchanged.
+- Added measured post-response Observer handover with bounded resource evidence and audited
+  recovery; optional CPU restrictions remain off pending a short live trial.
+- Strengthened CPU-control auditing, memory accounting and conflict safeguards ahead of a
+  staged live pilot, with pinning still disabled.
+- Added an optional, reversible provider CPU-control pilot with resource-cost reporting and
+  recovery safeguards. Disabled by default; safety checks remain unchanged.
+- Added bounded CPU Governance pressure evidence and improved Observer repair/stall diagnostics,
+  with clearer separation between measured resource pressure and unavailable hardware data.
+- Observer now defaults to custom Behaviour selection, explains missing settings, and improves
+  repair-timing evidence without changing recovery or enforcement policy.
+
+### 2026-09-02
+- Observer reports now distinguish provider model time from the wider turn resource window, retain
+  additive repair-attempt timing, and expose timing-contract failures instead of presenting them as
+  unexplained runtime.
+- Testing Edge Observer conversations now use a live stream backed by compact database views rather
+  than repeatedly downloading complete stage evidence.
+- Tokens, responses, Behaviour identity, guardrail results, commit outcomes and Memory Governance
+  remain visible, while large internal evidence documents stay in Governance Provenance.
+- The five latest test summaries are inexpensive to display and each transcript loads only when it
+  is opened. The ordered research store remains the conversation source of truth; semantic indexes
+  continue to support Knowledge and Memory retrieval.
+- Testing Edge now includes a responsive Elora profile panel beside Observer conversations, showing
+  run progress, token totals and content-free governance outcomes from the evidence already loaded.
+
+### 2026-09-01
+- Testing Edge conversations now expose Runtime Memory Governance evidence and avoid retaining a
+  duplicate durable browser transcript. Observer reports clearly identify the synthetic test user
+  or fictional scenario persona and its simulation-only authority.
+- Reports show content-free AI Behaviour profile and pack provenance, while keeping exact settings
+  private, and distinguish AI Behaviour guardrail matches from Governance policy and Threat
+  Intelligence outcomes.
+- The content boundary also covers HTML, Markdown and report-data exports, including raw
+  configuration annexes; reports retain attribution and outcome receipts rather than instruction
+  or matched-rule text.
+- Released **Generic Business Assistant v1.0.0**, the first built-in AI Behaviour pack. It provides
+  a useful, professional baseline with strict guardrails, approved Knowledge retrieval and alerts,
+  while Memory, Web, reflective context and external actions remain off by default.
+- Packs install as editable profiles through an explicit audited action. They do not silently alter
+  global Behaviour or model mappings, and Governance Policy & Enforcement remains authoritative.
+- Testing Edge live refreshes now respect manual reading position. Scrolling up pauses follow-latest
+  behaviour until the reader chooses the visible **Latest** control.
+- Observer tests can apply the normal saved AI Behaviour personality, guardrail rules and Knowledge
+  permissions through current, Knowledge-grounded, guardrail-focused, personality-only,
+  neutral-control or custom run presets.
+- Selected Knowledge retrieval runs inside the existing Knowledge Resolve stage, allowing its
+  measured time and content-free source receipt to appear in Governance Provenance while the
+  retrieved context informs the model response.
+- TOCTOU evidence now has a consistent four-moment experiment view: state checked, decision
+  issued, state or action used, and consequence observed. It is derived from existing telemetry,
+  keeping current evidence exports compatible.
+- Governance Provenance distinguishes no observed state drift from timing-only or incomplete
+  evidence and adds pressure-aware comparison cohorts for waits, inference/provider work and
+  retained system telemetry. Missing pressure evidence is labelled unavailable rather than quiet.
+- Future external API adapters can attach metadata-only version and conditional-use receipts
+  without copying protected state or giving the evidence path enforcement authority.
+- Governance Provenance now separates Observer session preparation from actor turns, keeping
+  startup, recovery and closeout evidence visible without inflating conversation activity.
+- Governed, baseline and translated execution paths are reconstructed as separate lanes beneath
+  the same actor prompt. This prevents comparison work from manufacturing very long stage times.
+- Stage cards distinguish a retained event point or timestamp span from a measured execution
+  timer. Fresh runs also carry forward the content-free stage and provider timings Observer
+  already computes, while historical exports clearly retain their timestamp-only limitation.
+- Added a standalone Testing Edge that presents Observer runs and governed human interaction in a
+  familiar chat workspace. It opens to the read-only Observer conversation by default, reuses
+  existing retained evidence and interaction runtimes, and does not introduce a second execution
+  authority.
+- The Testing Edge can hide the surrounding admin shell for a full-page conversation view and
+  lists the five latest completed Observer tests with retained prompt, response, guardrail and
+  commit outcomes.
+
+### 2026-08-29
 - Published the standalone **Runtime Timing and TOCTOU Research** disclosure, separating Elora's
   established request, Observer-cycle, provider, stage, wall/CPU/wait and micro-operation timing
   substrate from the TOCTOU-specific check, state, use and consequence research introduced on
@@ -32,7 +172,7 @@ Machine learning implementation anchors (public-safe):
   prompt, and retained per-cycle token counts populate the corresponding Stage Replay turn.
 - Prompt boundaries are content-free and older runs retain a conservative compatibility view.
 
-## 2026-08-28
+### 2026-08-28
 - Reorganised Governance around a read-only **Provenance** workspace that moves from weekly or
   monthly activity, to daily session summaries, to a complete governed-session investigation.
 - Added turn-aware Stage Replay with a snaking pipeline, stage timing and token surfaces, risk and
@@ -50,7 +190,7 @@ Machine learning implementation anchors (public-safe):
 - The new views reuse retained operational telemetry, exclude raw prompts and preserve the
   existing Governance and commit-authority boundaries.
 
-## 2026-08-27
+### 2026-08-27
 - Observer plan previews and Research reports now identify the effective Threat Intelligence
   protection posture, including sensitivity, enforcement mode, protected scope, severity threshold
   and settings revision. The report keeps monitoring evidence distinct from Governance authority
@@ -591,23 +731,24 @@ Machine learning implementation anchors (public-safe):
 - Observer research now ties each accepted request to its own cycle and managed process. New work can queue behind an active child instead of being rejected by its process lock. Elora detects abandoned run records, stops work that has made no progress within its bounded stage window, releases the associated memory declaration, and preserves Runtime Memory runs as a distinct dashboard category.
 - Observer now uses the memory it needs while running. When a run finishes, Elora reviews whether its information is already safely stored, retains only a compact reusable artifact when justified, and otherwise evicts the completed process memory. Any retained Virtual Memory artifact has an automatic expiry.
 
-## ------------- 0.2.x Chronology --------------
+## Release chronology
 
-## ------------- 0.2.7 --------------
-### Release Focus
+### 0.2.8 — Governance Provenance and Governed Interaction
+- Governance Provenance and continuous TOCTOU evidence across retained sessions.
+- Governed Testing Edge interaction and public-safe Elora Schematic reporting.
+
+### 0.2.7 — Operational Threat Intelligence and Elora Decisions
 - Always-on Threat Intelligence across Observer Research, anchored by the first independently captured deterministic finding from the `2026-08-06` monitored run.
 - Evidence-backed investigation spanning observations, Findings, grouped Cases, reports, public summaries, and Governance relations.
 - Continued Elora Decisions lifecycle, notification, and cross-module integration work with operator-readable authority, outcome, and uncertainty explanations.
-- `0.2.8` is reserved for deeper notification, investigation, learning, reporting, and governed-response workflows.
+- Completed release window: `2026-08-06` to `2026-08-26`.
 
-## ------------- 0.2.6 --------------
-### Release Focus
+### 0.2.6 — Constrained Runtime and Resource Governance
 - Managed Runtime Memory, CPU Governance, bounded child execution, and deterministic terminal release for constrained systems.
 - Governed NNLSL resource contracts, self-healing admin workloads, and explicit runtime ownership evidence.
 - Introduction of Elora Decisions, plus early Threat Intelligence evidence and investigation foundations supporting the `0.2.7` operational focus.
 
-## ------------- 0.2.5 --------------
-### Release Focus
+### 0.2.5 — Public Runtime Presence and Dashboard Telemetry
 - Runtime Governance visibility through the Inference Governor, with public-safe observe, reason, recommend, and govern framing.
 - Public dashboard hardening so live runtime, proof, KPI, and model-routing evidence behave more like bounded snapshot consumers than expensive request-time generators.
 - Reviewer/operator explainability for Governor decisions without introducing runtime mutation on the public surface.

@@ -1,6 +1,6 @@
 # Snapshot
 
-Last updated: 2026-03-29
+Last updated: 2026-09-06
 
 First implemented (from changelog): 2026-02-28
 
@@ -10,19 +10,22 @@ This snapshot is the quickest way to understand Elora's current posture.
 
 - Governance-first runtime flow with explicit proposal-to-commit boundary.
 - Commit-stage admissibility decisions that can block outcomes by policy class.
-- Replay-capable governance surfaces with tamper-evident chain metadata.
+- Session-level Governance Provenance with Stage Replay, turn/lane structure, Runtime Intelligence, continuous TOCTOU state, guardrails, and commit evidence.
+- Governed Testing Edge conversations with AI Behaviour provenance, Memory Governance, and provider/completion evidence.
+- Bounded provider-readiness, pressure-hold, recovery, context-selection, and completion-integrity controls.
 - Security-first admin/runtime posture with hardened auth and transport controls.
 
 ## What This Public Site Shows
 
 - A guided Governance Replay tour with synthetic decision evidence.
+- A public-safe Governance Provenance capability guide for the current `0.2.8` line.
 - Public architecture and positioning context in document form.
 - A changelog and feature narrative aligned with current build direction.
 
 ## What Is In Active Build
 
-- Admissibility completeness hardening and stricter authority coverage.
-- Canonical evidence bundles and deeper rule-level policy trace detail.
+- Wider Governance Provenance and Testing Edge public walkthrough coverage.
+- Admissibility completeness hardening and broader producer evidence coverage.
 - Expanded fabric/distributed control-plane workflows and tours.
 - WorkerHost runtime distribution and runtime-hash consistency checks across hosts.
 - GPU-aware host operations with inference-node/model visibility in Fabric.
@@ -42,6 +45,8 @@ This snapshot is the quickest way to understand Elora's current posture.
 - March 2026 (late): Engine-local WorkerHost deploy path and runtime inventory/ops telemetry added.
 - March 2026 (late): Runtime pipeline expanded to explicitly capture prompt/memory/knowledge checks before inference and carry these signals through commit/replay.
 - Research track opened: hardware-backed attestation exploration (including LUNA and OpenTitan feasibility work).
+- August 2026: Governance Provenance and continuous TOCTOU research introduced over retained session evidence.
+- September 2026: governed Testing Edge, AI Behaviour pack provenance, model-aware context governance, provider readiness/recovery evidence, completion integrity, and public-safe Schematic provenance reporting entered the active `0.2.8` line.
 
 ## Scope Note
 

@@ -2,6 +2,37 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-09-06
+Context: the active `0.2.8` release line now treats governed interaction and session
+provenance as one reviewable evidence journey.
+- Added public-safe framing for Governance Provenance, continuous TOCTOU evidence,
+  the governed Testing Edge and Elora-managed Provenance reports with an optional
+  disclosure-safe JSON view.
+- Added the Testing Edge as a conversation-shaped view of retained Observer evidence,
+  with focus mode, recent test history, reader-controlled live following, an Elora run
+  profile, token totals and separate Behaviour, policy, guardrail and commit outcomes.
+- Presented Observer preparation as `Turn 0` and kept actor turns distinct from their
+  governed and ungoverned execution lanes. Follow-up prompts remain actor turns, while
+  internal re-evaluation and comparison work remains runtime activity.
+- Clarified Runtime Intelligence with semantic transition classes, provider timing,
+  recorded event spans, intentional waits and pressure cohorts so a long elapsed window
+  is not silently presented as pressure or orchestration time.
+- Added visible execution identity, provider/model context and colour-coded allowed,
+  held and blocked commit outcomes without treating the run authorizer as the commit
+  approver when that evidence was not recorded.
+- Added public-safe coverage for the `Generic Business Assistant` AI Behaviour starter
+  pack and for Memory Governance ownership of Testing Edge sessions.
+- Made incompatible Trial Rail choices unavailable in configuration rather than allowing
+  a combination that could only fail during plan preview.
+- Kept raw prompts, responses, actor identifiers, private AI Behaviour settings and
+  internal infrastructure outside the portable report boundary.
+- Updated the public capability, research, overview, runtime, inference, demo and
+  disclosure pages to identify `0.2.8` as the current Engine line.
+- Added a dedicated Governance Provenance capability guide and revised public wording
+  so Stage Replay is presented as an inspection view inside the wider provenance journey.
+- Extended the public feature and prior-art registers with bounded entries for governed
+  interaction, provider readiness/recovery, model-aware context and completion integrity.
+
 ## 2026-08-29
 Context: the public chronology now distinguishes Elora's established Runtime Intelligence timing
 substrate from the later TOCTOU-specific research contract without exposing the private engine.
