@@ -1,5 +1,20 @@
 # Engine Changelog
 
+- Preview planned tools, skills and synthetic capability permissions without enabling them.
+
+- New synthetic Tools & skills menu in the research shell.
+
+- Research chat calibration now combines written replies with recorded virtual tools.
+
+- Improved research progress and provider-control failure explanations.
+
+- Improved Elora Decisions with job activity chains, expandable request history and an attention
+  filter, reducing repetitive routine entries in the operator workspace.
+
+- Synthetic Access: short calibration and clearer permission-test coverage.
+
+- Synthetic Access: material permission rechecks and certificate-linked run evidence.
+
 ## 0.2.8 — Governance Provenance and Governed Interaction
 
 ### Release Focus
@@ -12,6 +27,12 @@
 - Public-safe Elora Schematic reports make retained evidence easier to review.
 
 Release window: active from `2026-08-27`.
+
+### 2026-09-07
+- Added an adaptive synthetic-user runtime permissions pack, capped at 50 turns.
+- Added synthetic permissions snapshot certificates and an everyday-access test.
+- Added resource-wait safeguards and recorded simulated approval timelines.
+- Added a governed synthetic permissions research sandbox with disposable file fixtures.
 
 ### 2026-09-06
 - Streamlined resource-admission checks while preserving safety limits.
