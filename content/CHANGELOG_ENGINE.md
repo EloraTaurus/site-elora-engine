@@ -1,5 +1,95 @@
 # Engine Changelog
 
+### 2026-09-10 — Workspace profiles and responsive account controls
+
+- Added a collapsible Elora panel that gives conversations more space, with a compact account pill and an icon-only mobile presentation.
+- Added an in-page profile editor sharing the Engine Account's name and email, plus internally stored profile photos with preview, save and removal. Successful edits update the Workspace header immediately.
+- Tidied the organisation-permissions menu and added Switch user through the existing sign-out flow. Synthetic policy-test subjects remain separate from signed-in accounts.
+- Demo organisation and subscription labels are placeholders; external identity synchronisation is not connected.
+- Fixed photo selection being blocked by the existing image-security policy. Automated and local browser checks passed; verification in the deployed interface remains pending.
+
+### 2026-09-10 — Clearer runtime evidence and bounded recovery
+
+- Added retained per-turn operation timing and CPU evidence that accounts for overlapping work while keeping unavailable measurements explicit.
+- Extended Elora/Schematic runtime-memory comparison reports with reusable evidence sections for historical records.
+- Added persistent no-progress protection for repeated Observer child restarts and reduced redundant notification and transcript refreshes. Existing execution and governance boundaries remain enforced.
+
+### 2026-09-10 — Workspace permission test panel
+
+Added an Admin organisation panel with synthetic users, tool policies and separate AI and agent policies. Users can switch between test identities and ask Elora to explain a policy result without leaving the testing case. These test policies do not grant live application access.
+
+### 2026-09-09 — Workspace Skill Journey and comparison controls
+
+- Governance Provenance now includes a dedicated, compact Workspace skills investigation for retained Document Review evidence. Portable reports distinguish context preparation, budget admission, model eligibility, dispatch, completion checks, approval, inspection and release.
+- Held reviews remain visible independently of consequence-commit totals. Recorded provider-wait intervals do not establish provider execution time; missing authority attribution stays explicitly unavailable.
+- Existing reports need regeneration from retained evidence to include the journey; historical exports cannot reconstruct omitted records.
+- Runtime Memory comparison Stop now cancels the selected group's unfinished work while preserving completed siblings and unrelated runs. Incomplete cleanup remains explicit and prevents deletion until stopping succeeds.
+- Targeted checks passed; these changes do not establish live-provider or deployment verification.
+
+### 2026-09-09 — Clearer governed document reviews
+
+Document Review now protects the response space required to complete its task and records why budget adjustments are accepted or held. Automated responses appear as Elora, with their runtime or model origin retained in evidence.
+
+### 2026-09-09 — Fix conflicting review response limits
+
+- Resolved a chat-specific limit that blocked the larger Document Review allowance. Resource-pressure and context safeguards still apply. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — More room for document reviews
+
+- Increased the requested review response allowance while preserving context and resource limits. Reviews stop before inference when the admitted answer allowance is too small. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — Explain incomplete-response holds
+
+- Added clearer reasons when a review response cannot be verified as complete, keeping approval and completeness separate. No automatic retry or limit increase. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — A dedicated Document Review skill package
+
+- Document Review now has a versioned tape manifest for bundling the feature with its Engine executor. Configuration and permission checks remain separate, and generic fallback is refused. Automated checks passed; live registration remains pending.
+
+### 2026-09-09 — Earlier checks for runtime readiness
+
+- Document Review now checks required runtime evidence before calling the model and rechecks authority before approval. Missing configuration stops the review earlier without weakening release safeguards. Automated checks passed; live setup verification remains pending.
+
+### 2026-09-09 — Clearer approval evidence
+
+- Document Review can now explain recorded approval failures more precisely, distinguishing an explicit denial from missing evidence. Release safeguards remain enforced. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — See the model and waiting time
+
+- Workspace now shows the selected review model and an evidence-based provider waiting timer. A completed wait does not imply that the response was approved for release. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — Document Review compatibility refinement
+
+- Improved the initial review request's compatibility without adding automatic retries or weakening governance checks. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — Human explanations, separate evidence
+
+- Document Review now separates a plain-language outcome explanation from the expandable recorded checks. Hold messages read more naturally while preserving uncertainty and access boundaries. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — Clearer stopped-review messages
+
+- Document Review now distinguishes recorded provider failures from document-permission failures and clearly labels where a review stopped. Explanations remain evidence-based; live verification is pending.
+
+### 2026-09-09 — Clearer evidence of held document reviews
+
+- Provenance reports now highlight why a document review was held when the reason was recorded. They distinguish preventing inference from withholding a response after execution may have begun, without inventing missing findings. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — Clear explanations when reviews are held
+
+- Elora now explains why a review was withheld using recorded checks, without asking a model to generate the explanation. Where evidence is incomplete, she says so and gives an appropriate next step. Automated checks passed; live verification remains pending.
+
+### 2026-09-09 — Clearer Document Review progress
+
+- Workspace now shows Elora's current recorded review stage in a compact live indicator, with detailed checks available to expand.
+- Corrected an internal handoff failure and clarified when a review has stopped without releasing a response. Automated released/held flows passed; live verification remains pending.
+
+### 2026-09-09 — Workspace Document Review preview
+
+- Attach a text or Markdown document, describe what you want reviewed and press Send. Elora keeps the original private and controls what context may reach inference and whether a response may be released.
+- Added an integrated attachment picker, existing-document selection and progress based on recorded checks. Attaching a document does not start a review.
+- Fixed a review-opening failure and added clearer unavailable and retry states. Automated checks cover opening recovery and the attachment-to-Send flow; live rollout verification remains pending.
+- Initial inspection uses a bounded sensitivity baseline and holds confidential/restricted-labelled content. It is not a complete sensitive-data or malware scanner.
+
 - Preview planned tools, skills and synthetic capability permissions without enabling them.
 
 - New synthetic Tools & skills menu in the research shell.
@@ -14,6 +104,12 @@
 - Synthetic Access: short calibration and clearer permission-test coverage.
 
 - Synthetic Access: material permission rechecks and certificate-linked run evidence.
+
+### 2026-09-08 — File-permission behaviour research
+
+- Added an opt-in observation layer over structured Synthetic Access receipts, separating permission truth, observed behaviour and Governance response.
+- Authorised access remains a negative control, and an isolated denial is not automatically a finding. Repeated or changing access pressure can contribute bounded findings to a session Case and linked Decision.
+- The layer is disabled by default, has no enforcement or automatic-learning authority, and does not infer successful access or actor intent from model narration.
 
 ## 0.2.8 — Governance Provenance and Governed Interaction
 

@@ -2,6 +2,16 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-09-10
+Context: the public website now reflects the 7–10 September additions within the existing `0.2.8` line.
+- Added Workspace Document Review coverage: private originals, explicit attachment and Send, governed context and response budgets, recorded progress, completion checks and controlled release.
+- Added Workspace profile and synthetic organisation-policy testing coverage, keeping test identities, authenticated accounts and future integrations distinct.
+- Extended Governance Provenance with the retained Workspace Skill Journey, including held outcomes and explicit limits on timing and authority attribution.
+- Added Synthetic Access research coverage for virtual permission trials, configuration certificates and observation-only file-permission behaviour findings.
+- Updated runtime coverage for scoped comparison stopping, persistent no-progress protection, per-turn timing and CPU evidence, and retrospective comparison reports.
+- Refreshed the visible Changelog summary and overview, and filled missing public Engine entries for Workspace journeys, comparison stopping and permission-behaviour research.
+- Kept the existing release number and evidence boundaries. Repository and local test results do not establish deployment or live-provider success.
+
 ## 2026-09-06
 Context: the active `0.2.8` release line now treats governed interaction and session
 provenance as one reviewable evidence journey.

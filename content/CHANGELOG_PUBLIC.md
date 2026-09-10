@@ -14,6 +14,27 @@ Format:
 - Governance Provenance, governed interaction and public-safe session reporting.
 - Active from `2026-08-27`.
 
+### 2026-09-10
+- Refined Workspace with a collapsible Elora panel, responsive account controls and an in-page profile editor with internally stored photos.
+- Added Admin organisation-policy testing across synthetic users, with separate tool, AI and agent policies. Test grants do not provide live application access or change authenticated identity.
+- Improved retained per-turn timing and runtime-comparison evidence, added no-progress protection for repeated Observer restarts, and reduced redundant interface refreshes.
+- Fixed photo previews under the existing image-security policy. Local automated and browser checks passed; deployed confirmation remains separate. Demo account labels and future external identity integrations do not imply connected services.
+
+### 2026-09-09
+- Introduced the Workspace Document Review preview: attach an authorised text or Markdown document, describe the review and explicitly Send. Originals remain private; only permitted derived context reaches inference.
+- Added governed task budgets, recorded model/wait visibility, plain-language hold explanations and separate completion, approval and release checks.
+- Added the retained Workspace Skill Journey to Governance Provenance and portable reports. Missing authority evidence remains unavailable, and provider wait is not relabelled as measured provider execution.
+- Added scoped Runtime Memory comparison stopping with explicit incomplete-cleanup outcomes.
+- Initial review scope uses a bounded sensitivity baseline and the configured provider. Broader formats and integrations remain future work; local tests alone do not establish live readiness.
+
+### 2026-09-08
+- Extended synthetic research with mixed conversation and virtual read/list tasks, a tools-and-skills catalogue and explicit development-only capability previews.
+- Added optional observation-only file-permission behaviour research with authorised negative controls, isolated-denial non-findings and bounded session evidence. It does not grant execution authority or infer intent.
+
+### 2026-09-07
+- Added bounded Synthetic Access trials using disposable virtual files and permissions, with permission rechecks at commit and recorded outcomes distinct from model claims.
+- Added permission-configuration certificates. A certificate describes a snapshot; it is not a signed verdict or proof of a successful run.
+
 ### 2026-09-06
 - Advanced the active Engine release line to `0.2.8` after Governance Provenance,
   continuous TOCTOU reconstruction, the governed Testing Edge and Elora-managed
