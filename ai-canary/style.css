@@ -1,0 +1,44 @@
+.evaluation {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.evaluation h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  color: var(--elora-deep);
+}
+
+.evaluation .intro {
+  font-size: 1.125rem;
+  margin-bottom: 40px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.metrics dt {
+  color: var(--muted);
+}
+
+.metrics .card {
+  margin: 0;
+}
+
+.metrics dd {
+  margin: 12px 0 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--elora-deep);
+}
+
+@media (max-width: 640px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+}

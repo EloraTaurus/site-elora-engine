@@ -1,5 +1,118 @@
 # Engine Changelog
 
+### 2026-09-14 — Module ownership foundations
+
+- Initial engine package organization and clearer parent/child resource ownership, with RAM budgets kept separate from allocation estimates. Full module supervision and deployed verification remain pending.
+
+### 2026-09-14 — Sense module organization
+
+- Clearer Engine Runtime and Performance navigation, with on-demand supervision for internal diagnostic tools and more detailed service ownership. Deployed verification remains pending.
+
+### 2026-09-14 — Sense loading and clarity improvements
+
+- Faster navigation into runtime tools, with deeper inspection loaded on demand. Improved CPU values, memory evidence and service ownership views. Local checks passed; deployed verification remains pending.
+
+### 2026-09-14 — A lighter working interface
+
+- Removed the global status bar and its background sampling. Sense keeps its live inspector, while chat loads settings on demand. Deployed verification remains pending.
+
+### 2026-09-14 — Inspect what Sense owns
+
+- Explore Sense and its Live inspector service, including resource estimates and lifecycle. Service ownership stays separate from machine measurements; future services appear only when implemented. Local checks passed; deployed verification remains pending.
+
+### 2026-09-14 — Runtime tools together in Sense
+
+- Inference Governor, Memory Governance and Performance now open within Sense, including their CPU, cache, I/O and runtime-monitoring tools. Existing links continue to work. Local checks passed; deployed verification remains pending.
+
+### 2026-09-14 — Introducing Sense
+
+- Added a WorkSpace-style runtime workbench with service details, focus mode and a lightweight resource inspector that refreshes while visible. Existing governance and performance tools remain accessible.
+- Unavailable measurements are labelled clearly. GPU, model and token integrations and migration of existing tools are still to come. Local checks passed; deployed verification remains pending.
+
+### 2026-09-13 — Configure, then send
+
+- Added clearer comparison setup pills and saved configurations. Accepting a suggestion, configuring it and sending the request are separate actions.
+
+### 2026-09-13 — Clearer suggestion states
+
+- Added Elora suggestion cards with Add to request and Not now, a distinct accepted comparison pill and persistent draft dismissal. Suggestions do not rewrite your message or execute automatically.
+
+### 2026-09-13 — Subtle chat suggestions
+
+- Comparison suggestions now appear as a small chip above the input without disrupting typing layout.
+
+### 2026-09-13 — Comparison suggestions
+
+- Compare selected years head to head and open the comparison builder from an optional suggestion while typing. Deployed verification remains pending.
+
+### 2026-09-13 — Document comparison builder
+
+- Choose Compare data on an attached document to build charts from supported tables without using a neural model. Select your data, filters and display before creating the chart. Deployed verification remains pending.
+
+### 2026-09-12 — Membership comparison charts
+
+- Added stacked and grouped charts for multi-series comparisons, with Elora colours, legends and source tables. Included fictional membership renewal examples. Deployed verification remains pending.
+
+### 2026-09-11 — Document Review usage visibility
+
+- Connected measured review token usage to provenance metrics and evidence. Historical runs without retained measurements remain unchanged. Deployed verification remains pending.
+
+### 2026-09-11 — More concise document replies
+
+- Generic document follow-ups now request text-only answers instead of repeated tables. Deployed behavioural verification is pending.
+
+### 2026-09-11 — Interactive document charts
+
+- Added chart value tooltips, keyboard focus and SVG image saving, with coordinated Elora-style colours. Deployed browser verification remains pending.
+
+### 2026-09-11 — Recovery wait reporting
+
+- Corrected remaining recovery cooldown time in recorded evidence. Existing recovery protections remain enforced; deployed verification is pending.
+
+### 2026-09-11 — Additional document charts
+
+- Added pie, doughnut and horizontal bar charts and extended the default review provider wait to three minutes. Source and confidentiality checks remain enforced. Deployed verification remains pending.
+
+### 2026-09-11 — Clearer provider failures
+
+- Improved review failure evidence without including document content or provider error text. Deployed verification remains pending.
+
+### 2026-09-11 — Review provider compatibility
+
+- Adjusted structured-response constraints for provider compatibility while preserving all final validation checks. Focused automated checks passed; deployed verification remains pending.
+
+### 2026-09-11 — Document Review formatting reliability
+
+- Added structured response constraints to improve table and chart formatting reliability. Source and confidentiality checks remain enforced before release.
+- Automated checks passed; live provider verification remains pending.
+
+### 2026-09-11 — Keep reviewing an attached document
+
+- Keep a document attached for further questions and remove it when finished. Each question receives fresh access and protection checks.
+- Follow-ups use the document itself; earlier answers are not yet included as conversation context. Deployed verification remains pending.
+
+### 2026-09-11 — Clearer table and chart validation
+
+- Added content-free explanations of failed table and chart checks, including locations when available. Existing protection checks remain enforced.
+- Focused automated checks passed; deployed verification remains pending.
+
+### 2026-09-11 — Clearer review diagnostics
+
+- Improved explanations for reviews stopped by final integrity and disclosure checks, without exposing document content.
+- Automated checks passed; deployed verification remains pending.
+
+### 2026-09-11 — Document Review reliability
+
+- Fixed a document whitespace issue that could stop a review before a model response. Existing integrity checks remain enforced.
+- Automated checks passed; deployed verification remains pending.
+
+### 2026-09-11 — Richer Document Review and clearer protection notices
+
+- Document Review can present permitted source data as tables, bar charts and line charts, with supporting excerpts.
+- Elora shows document-check progress and explains recognised sensitive-data redactions. Admin notifications and session-linked decisions make those actions visible without including removed values.
+- Added a searchable file grid and confirmed deletion of stored uploads. Existing review and audit records remain available.
+- Tested with automated checks and local fictional-data demonstrations. Live-model and deployed verification remain pending; existing confidentiality and release controls remain in place.
+
 ### 2026-09-10 — Workspace profiles and responsive account controls
 
 - Added a collapsible Elora panel that gives conversations more space, with a compact account pill and an icon-only mobile presentation.
@@ -1652,3 +1765,6 @@ This line of work combined three threads that matter together: strengthening gov
 ## 2026-01-02
 - Added prompt-injection detection milestone coverage with safe refusal behavior in chat flows.
 - Added enriched failure-log milestone coverage with hashed input excerpt and injection-suspicion indicators.
+### 2026-09-13 — Comparison proposals
+
+Elora can propose document comparisons for review. Send opens review for recognised comparison drafts; model review is an explicit alternative. Saved comparisons run without a model, and edits to the message require renewed review.
