@@ -1,5 +1,299 @@
 # Engine Changelog
 
+### 2026-09-22 — Elora Execution Evidence Records
+
+- Refined shareable records with clear identities, a concise outcome summary and an authority timeline. Requester details stay private, and recorded observations remain distinct from unproven conclusions.
+
+### 2026-09-22 — Clearer evidence certificates
+
+- Certificates now lead with key permission and outcome observations, with links to supporting evidence. New exports include preparation details and an anonymous requester alias without claiming proof of origin.
+
+### 2026-09-22 — Evidence certificate design
+
+- Shareable execution reports now have an Elora certificate-style cover, embedded JSON and an interactive evidence annex. Their scope and unsigned status remain visible.
+
+### 2026-09-22 — More complete execution stories
+
+- Shareable reports now show more recorded lifecycle detail, execution ownership and scoped CPU measurements while protecting internal identities. Missing evidence and limits on what the report proves remain explicit.
+
+### 2026-09-22 — More precise public execution stories
+
+- Improved authority-check explanations, evidence references and missing-evidence descriptions. Reports label unsupported claims clearly and show recorded relationships without inferring unproven connections or successful enforcement.
+
+### 2026-09-22 — Shareable execution stories
+
+- Added downloadable public JSON and interactive HTML stories from captured execution evidence, with confidential fields omitted and limitations visible. Reports distinguish recorded observations from conclusions that the evidence does not establish.
+
+### 2026-09-22 — Scoped evidence links
+
+- Execution stories now support links between individual tool operations and their recorded permission evidence, with explicit verification limits.
+
+### 2026-09-22 — Clearer permission outcomes
+
+- Improved explanations of permission holds and their evidence, keeping successful controls distinct from threat findings.
+
+### 2026-09-22 — Shorter permission-test responses
+
+- Simplified the test review request and improved diagnostics for incomplete answers while preserving release checks.
+
+### 2026-09-22 — Permission-test reliability
+
+- Fixed an evidence-capacity limit that could hold an otherwise authorised review. Added local testing of permission revocation while a provider request is in progress.
+
+### 2026-09-22 — Beyond permission checks
+
+- Local tests verify that changed or unavailable document content can prevent release even while permission remains allowed. Descriptive metadata changes preserve release.
+
+### 2026-09-22 — Workspace permission evidence
+
+- Improved local permission checks and explanations when current permissions cannot be established.
+
+### 2026-09-22 — Clearer execution scope
+
+- Execution stories distinguish individual tool-test observations from claims about the entire run.
+
+### 2026-09-22 — Clearer permission-test evidence
+
+- Improved reporting of permission holds. Four live test cases recorded their expected outcomes; one reporting correction awaits deployed verification.
+
+### 2026-09-22 — Permission-test startup correction
+
+- Corrected prompt preparation for the dedicated permission test. Local checks pass; deployed validation is pending.
+
+### 2026-09-21 — Permission-test startup fix
+
+- Fixed account resolution for the Workspace permission test without relaxing access checks.
+
+### 2026-09-21 — Dedicated permission tests
+
+- Added a dedicated Observer permission-test mode to avoid conflicting experiment settings.
+
+### 2026-09-21 — More precise governance evidence
+
+- Execution stories clarify what policy checks evaluated, distinguish enforcement settings from proof, and explain remaining evidence gaps.
+
+### 2026-09-21 — Connected governance testing
+
+- Observer can now exercise Document Review with permission changes at selected checkpoints. Execution Atlas presents scoped tool outcomes and exports retained observations. The first deployed model validation remains pending.
+
+### 2026-09-21 — Shareable governance test results
+
+- Local authority-revocation tests now export a content-free JSON evidence summary with clear test scope and limitations.
+
+### 2026-09-21 — Authority revocation validation
+
+- Added five local scenarios covering successful review and authority removal at successive stages. Document Review checks authority again before inference. External permission-service testing remains future work.
+
+### 2026-09-21 — Clearer registration checks
+
+- Required registration checks now stop commit when current evidence is unavailable, while keeping lookup failures distinct from observed removal. Local regression checks pass.
+
+### 2026-09-21 — Response delivery checks
+
+- Streaming answers now arrive after the completed-response governance check. Progress events remain available while the answer is prepared.
+- Local checks cover allowed, blocked and unavailable responses; deployed verification remains pending.
+
+### 2026-09-21 — Clearer historical evidence
+
+- Improved gate-evidence lookup and missing-evidence explanations. Reports distinguish corrected interpretations from original historical records.
+- A supplied replay re-export passed independent integrity checking. Broader authority and governability assurance remain under review.
+
+### 2026-09-21 — Clearer blocked outcomes and evidence downloads
+
+- Reports now distinguish recorded commit denials from earlier advisory decisions more accurately.
+- Improved preservation of replay evidence during download for offline integrity checking. Local checks passed; historical records remain unchanged and fresh export verification is pending.
+
+### 2026-09-21 — Clearer Governance evidence and navigation
+
+- Added a Governance landing overview, consistent navigation, evidence context and resource drill-downs.
+- Reduced repeated dashboard reconstruction and made summary freshness clearer. Live performance confirmation remains pending.
+- Improved incomplete-input handling and replay-record reliability. Reports now distinguish observed metadata from proven validation or authority, preserving uncertainty and historical evidence.
+- Local checks passed; a governed smoke completed. Further comparison and post-fix verification remain pending, and these changes do not establish universal governance assurance.
+
+### 2026-09-21 — Broader execution stories
+
+- Execution stories bring together recorded timing and selected decision evidence, with clearer outcomes and missing-evidence notices. Shared JSON captures can be produced independently of the operational viewer, without changing runtime controls.
+
+### 2026-09-17 — Execution story exports
+
+- Added JSON downloads of recorded execution stories, including available measurements and evidence gaps, without including task content or changing execution behaviour.
+
+### 2026-09-17 — Storage Governor in Sense
+
+- Storage Governor joins Sense's Engine Runtime tools with matching styling and governed, on-demand scans.
+- Existing links remain valid. Further runtime and investigation moves are planned; Task Manager remains available.
+
+### 2026-09-17 — Exploring execution in Sense
+
+- Added an observational Execution Atlas for exploring recorded work, its recorded order and available timing evidence.
+- Improved CPU measurement clarity and navigation through longer research histories. The Atlas distinguishes missing evidence from measured activity and does not change scheduling or governance decisions.
+- Local checks passed; deployment and live validation remain pending.
+
+### 2026-09-17 — Workspace recall evidence
+
+- Workspace now shows bounded per-turn recall delivery evidence and cumulative selected-turn statistics. Missing evidence is not presented as a supported recall claim.
+- Actual admitted context remains separate from requested capacity; a larger configured window does not prove that it was exercised.
+
+### 2026-09-17 — Evidence-backed recall claims
+
+- Added explicit recall-claim and context-event evidence so correct answers can be related to retained recall boundaries without relying on generic source labels or compaction badges.
+- Historical runs cannot gain counterfactual or final-boundary evidence that was never recorded.
+
+### 2026-09-17 — Correction-aware recall research
+
+- Added bounded prioritisation of relevant user corrections and controlled recall-capacity comparisons. Source and extracted-content fingerprints support review without exposing conversation content publicly.
+- Capacity experiments remain governed by actual model and resource evidence; they do not establish automatic growth safety.
+
+### 2026-09-17 — Conversation compaction visibility
+
+- Workspace exposes one retained compaction boundary and keeps transient completion notices out of persisted conversation history.
+- Report evidence distinguishes original from fitted context and records whether the fitted block survived final submission preparation.
+
+### 2026-09-17 — Bounded session recall memory
+
+- Added a bounded session-memory projection with expiry, capacity rejection and final-prompt survival evidence. It is a local content-admission mechanism, not a claim of complete process-memory governance.
+- Updated abstention scoring so conservative answers are not incorrectly rejected solely for declining to invent an unsupported fact.
+
+### 2026-09-16 — Comparison provenance evidence
+
+- Governance Provenance comparison exports now retain lane- and turn-specific runtime, context-admission, recall and request-binding evidence where recorded. Existing retained data can be re-exported without rerunning the model.
+
+### 2026-09-16 — Context provenance and fact tracing
+
+- Added explicit evidence for context fitting, temporary recall allocation, final payload survival and fact presence across successive boundaries.
+- Expected fitting is not labelled a TOCTOU breach, and the final boundary proves transport submission rather than provider use or semantic recall.
+
+### 2026-09-16 — Adaptive Context challenge controls
+
+- Added matched context and recall scenarios, automatic required settings and run-type compatibility checks so unsuitable experiment combinations are rejected before scheduling.
+- These experiments study bounded continuous-session recall; they do not establish durable restart recovery or provider cache reuse.
+
+### 2026-09-16 — Workspace context visibility
+
+- Workspace now presents compact actual-admission, context, reasoning and recall status separately from requested settings.
+- Added an independent no-answer stop for repeated thinking-only turns plus clearer preview and dispatch diagnostics. Explicit Thinking Off now disables provider thinking rather than inheriting a default.
+
+### 2026-09-15 — Context Benchmark
+
+- Added experimental Context Window, Thinking/Response and Thinking Effort benchmarks with run-identified downloads and retained recent results. Rankings require operator review and do not prove quality improvement.
+
+### 2026-09-15 — Model thinking profiles
+
+- Added advisory Light, Medium and Heavy thinking profiles for Observer and Workspace. Thinking and answers share one governed context budget; separate presentation does not imply independently enforced channel limits.
+
+### 2026-09-15 — Adaptive context evidence
+
+- Added bounded context-growth proposals informed by comparable retained performance evidence, with safe fallback after material decline.
+- Missing model or provider capacity evidence can correctly hold growth. Resource Governance retains final admission authority.
+
+### 2026-09-15 — Thinking and answer diagnostics
+
+- Added separate bounded previews, explicit missing-answer and judging states, and protection against empty-answer comparisons claiming useful savings.
+- Thinking-only output remains diagnostic evidence, not an approved answer.
+
+### 2026-09-15 — Inflight history and learning visibility
+
+- Added All time, 30-day, 14-day and 7-day Savings and Status history based on retained evidence, with current settings shown separately.
+- Added clearer views of execution conditions and learned candidates. Observations, proposed changes and outcomes remain distinct; estimated savings are not proof of improvement, and streaming visibility grants no mid-generation control.
+- Combined Inflight and Adaptive Cache smoke validation with Qwen 3.5 0.8B is pending. Missing capacity evidence can legitimately keep context growth on hold.
+
+### 2026-09-15 — Observer context and thinking budgets
+
+- Observer can adjust context using measured performance and memory constraints, and back off when larger contexts slow down substantially.
+- Thinking and answers receive separate advisory targets within one shared limit; resource governance retains final authority.
+- Unsupported hybrid cache allocations keep their conservative fallback. Local tests passed; live smoke validation and deployment remain pending.
+
+### 2026-09-14 — Webpage provenance fix
+
+- Fixed missing webpage review stages in Provenance and added terminal outcome recording.
+
+### 2026-09-14 — Document Review model update
+
+- Updated the Document Review tape to use qwen3.5:0.8b.
+
+### 2026-09-14 — Model thinking in chat
+
+- Workspace can show a model's separate thinking output as it arrives, ahead of the approved final answer.
+
+### 2026-09-14 — Small-model default
+
+- Updated the default model to qwen3.5:0.8b.
+
+### 2026-09-14 — Webpage review tape
+
+- Added a governed webpage experiment with injection observations, provenance and no model action authority. Updated saved model defaults to llama3.2:latest.
+
+### 2026-09-14 — Webpage hold diagnostics
+
+- Added approval diagnostics and JSON export for held webpage reviews.
+
+### 2026-09-14 — Webpage review fix
+
+- Fixed the model handoff for webpage reviews and improved held-request diagnostics.
+
+### 2026-09-14 — Explore transformer flow
+
+- Open a block’s reference attention and feed-forward diagram from Atlas’s horizontal Flow stages.
+
+### 2026-09-14 — Faster model exploration
+
+- Added automatic model inspection, expandable structure nodes and pop-up tools for stored details and tokenizer arrays.
+
+### 2026-09-14 — Follow the model’s stages
+
+- Atlas can explain supported transformer blocks through a Flow view, connecting computation concepts to the model’s stored tensors. The diagram is a reference, not live inference.
+
+### 2026-09-14 — More ways to explore
+
+- Explore tensor membership and relative element counts in new Atlas views. Sense and WorkSpace now share a lighter visual foundation.
+
+### 2026-09-14 — Observing output as it arrives
+
+- Added early, observe-only checks during streamed generation. Elora can flag some patterns before an answer finishes, while retaining final response checks. Live-server validation is pending.
+
+### 2026-09-14 — Dive inside tensors
+
+- Atlas now opens in 3D and switches to 2D or table views. Explore inside a tensor’s shape and step back through its logical regions.
+
+### 2026-09-14 — A lighter Atlas
+
+- Updated model exploration with coloured layer columns, a side inspector and a light blue/violet workspace. Static structure remains distinct from live inference activity.
+
+### 2026-09-14 — Atlas observatory
+
+- Explore model tensors in an interactive 3D view and open contextual explanations from Elora’s floating guide. The view explains stored model structure; live inference tracing remains future work. Validated locally, with deployment checks pending.
+
+### 2026-09-14 — Explore model anatomy with Atlas
+
+- Added a visual model explorer with tensor structure, stored-weight inspection and plain-language guidance. A new focus mode provides more space to explore.
+- Clearly separates stored model information from live inference activity. Local tests and browser checks passed; deployment validation remains pending.
+
+### 2026-09-14 — Automatic model overview
+
+- Sense now opens directly to a cached capability table, with a more compact layout and clear support indicators.
+
+### 2026-09-14 — Models in Sense
+
+- Sense now contains model capabilities, availability, size information and comparison. Workspace keeps chat tools and the model selected for each review.
+
+### 2026-09-14 — Compatible models for review tools
+
+- Elora can select a compatible model for webpage and document review, with capability inspection and explicit operator declarations. Model support stays separate from permission to act; unavailable or changed evidence holds the request.
+- Local checks passed. Vision execution and live model verification remain pending.
+
+### 2026-09-14 — Review webpages in chat
+
+- Added a globe-icon Review Webpage tool that stays selected while you paste links into the conversation, with clear link validation and live activity updates.
+- Elora can flag suspected injection attempts while allowing unchanged page text into a read-only model experiment. Chat evidence shows the source and findings; existing authority and release controls remain in place. Browser actions and vision are not enabled, and live model testing remains pending.
+
+### 2026-09-14 — Sense resource ownership
+
+- Added module-based memory/resource exploration and grouped API correlation evidence, with lighter diagnostic collection and bounded request behavior. Measurement gaps remain explicit.
+
+### 2026-09-14 — Lighter CPU Governance
+
+- Removed broad background collection from the CPU Governance overview and grouped Inflight and Adaptive Cache under Inference. Deployed performance verification remains pending.
+
 ### 2026-09-14 — Module ownership foundations
 
 - Initial engine package organization and clearer parent/child resource ownership, with RAM budgets kept separate from allocation estimates. Full module supervision and deployed verification remain pending.

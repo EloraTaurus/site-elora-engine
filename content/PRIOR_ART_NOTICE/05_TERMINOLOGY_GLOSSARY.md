@@ -130,6 +130,30 @@ A content-free record of final prompt composition cost and effective runtime con
 
 The separation between transport success and a terminally complete model response. Incomplete output may be retained as diagnostic evidence but cannot be promoted as an approved answer or commit candidate.
 
+## Sense
+
+Elora's read-only runtime investigation workbench for model capabilities, managed-service ownership, resource evidence, storage diagnostics and recorded execution. Sense does not grant scheduling, policy, intervention or commit authority.
+
+## Execution Atlas
+
+An observational view of retained stages, pipeline nodes, provider attempts, operations, measurements and evidence relationships. Recorded order or shared execution context does not by itself establish dependency, causation or authority.
+
+## Governed Workspace
+
+A conversation-shaped human interaction surface for bounded document/webpage tasks, comparisons, model interaction and context research. Task output remains subject to Engine-owned admission, completion, approval and release decisions.
+
+## Recall Claim
+
+A bounded statement that relates retained conversation-memory evidence to a response or probe. A correct answer, compaction marker or generic source label alone does not establish that recall supplied the fact.
+
+## Execution Evidence Record
+
+A portable public-safe projection of one bounded captured execution story. It may include scoped authority, lifecycle, operation, measurement, outcome, integrity and gap evidence, but does not independently authenticate origin or certify whole-execution Governance.
+
+## Governed Response Delivery
+
+The boundary that keeps answer content internal until completed-response commit evaluation authorises release. Progress visibility or provider completion does not itself authorise delivery.
+
 ## External Phrase Mapping (Reviewer Aid)
 
 The phrases below are included as reviewer mapping aids. They are not exclusive to any single implementation lineage.
@@ -166,5 +190,5 @@ For standards-level lineage and dated sources, see:
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-09-06`
+- Last updated: `2026-09-23`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.

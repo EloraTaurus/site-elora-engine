@@ -14,6 +14,38 @@ Format:
 - Governance Provenance, governed interaction and public-safe session reporting.
 - Active from `2026-08-27`.
 
+### 2026-09-22
+- Added Elora Execution Evidence Records: public-safe, certificate-style HTML and matching JSON derived from one bounded capture projection.
+- Added concise outcome, Governability and authority timelines before an interactive evidence annex, while retaining unknown, conflicting and unsupported claims explicitly.
+- Added report-local aliases for requester, subject, generator, record and execution identities. Private account, process, thread and resource identifiers remain excluded.
+- Added scoped execution-operation and Workspace permission relationships only where retained identifiers support them. Shared executors, timing proximity and local agreement do not establish causation, independent authenticity or whole-execution authority.
+- Added generation metadata, stable non-secret references and checksums without presenting the unsigned record as system-origin authentication, non-repudiation or Governance certification.
+- Improved permission-test reliability, current local authority observations and content-binding evidence. Local tests and partial live observations remain distinct from external authority-service or universal enforcement assurance.
+
+### 2026-09-21
+- Added a shared Governance workbench, evidence inspector and resource drill-downs with clearer summary freshness and coverage limits.
+- Added shared captured execution stories for reuse by Sense, reports and public-safe projections without creating a second control path.
+- Strengthened incomplete-input handling, new-event replay reliability, historical-denial presentation and portable replay integrity inputs while preserving original retained evidence.
+- Added governed direct-streaming delivery so answer content remains internal until completed-response commit evaluation.
+- Added controlled Workspace authority-revocation research across successive boundaries, explicit registration freshness and content-free public test summaries. Local fixture evidence does not establish deployed or external identity authority.
+
+### 2026-09-17
+- Added Sense Execution Atlas for observational exploration of recorded stages, pipeline work, provider attempts, operation identity, scoped thread CPU and evidence gaps.
+- Added public-safe execution-story JSON exports without task content or new runtime authority.
+- Added bounded Workspace session-recall evidence, fact tracing, correction-aware recall, compaction visibility and selected-turn statistics. Correct output alone does not prove exclusive recall.
+- Moved Storage Governor into Sense and retained governed on-demand diagnostic ownership.
+
+### 2026-09-14 to 2026-09-16
+- Established Sense as the runtime investigation workbench for models, module ownership, Inference Governor, Memory Governance, Performance and live inspection.
+- Added model capability comparison, transformer/tensor exploration and light observatory views while keeping presentation distinct from routing authority or causal claims.
+- Added Context Window and Thinking/Response benchmarks, advisory thinking profiles, explicit thinking-off dispatch, no-answer protection and bounded preview diagnostics.
+- Added Adaptive Context and recall experiments with actual-admission evidence, explicit temporary-recall allocation, fact-boundary tracing and compatible run controls. Requested capacity is not reported as exercised capacity.
+
+### 2026-09-11 to 2026-09-13
+- Extended Workspace Document Review with persistent follow-ups, presentation validation, charts, image export, provider diagnostics and content-free usage evidence.
+- Added model-free comparison building, head-to-head document comparisons and explicit operator acceptance of suggestions.
+- Added accurate WorkerHost recovery cooldown receipts without changing the underlying safety interval or extending cooldown on refused attempts.
+
 ### 2026-09-10
 - Refined Workspace with a collapsible Elora panel, responsive account controls and an in-page profile editor with internally stored photos.
 - Added Admin organisation-policy testing across synthetic users, with separate tool, AI and agent policies. Test grants do not provide live application access or change authenticated identity.

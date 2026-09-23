@@ -25,6 +25,27 @@ Started as a solo build in late January 2026, Elora has evolved into a research 
 - Terminal completion checks that prevent incomplete provider output from becoming an approved answer.
 - Managed public-safe Governance Provenance reports and optional JSON from one bounded projection.
 
+### Sense and Execution Atlas
+
+- Unified runtime investigation for model capabilities, module ownership, Inference Governor, Memory Governance, Performance and Storage Governor.
+- Read-only execution maps across retained stages, pipeline work, provider attempts and operation evidence.
+- Scoped thread/process CPU, wall-time and provider-elapsed evidence with missing values preserved as unknown.
+- Explicit separation between recorded order, ownership, inferred relationship, causation and authority.
+
+### Workspace, Context and Recall
+
+- Governed document and webpage review with persistent follow-ups, comparisons, charts and evidence-backed hold/release explanations.
+- Adaptive Context and benchmark surfaces that distinguish requested configuration from actual admission.
+- Advisory model-thinking profiles and separate thinking/answer presentation within shared context limits.
+- Bounded conversation compaction, session recall, fact tracing and correction-aware evidence without treating correct output as proof of recall.
+
+### Portable Execution Evidence
+
+- Shared captured execution stories reusable across Sense, Governance and reports.
+- Public Execution Evidence Records with certificate-style summaries, interactive annexes and matching allow-listed JSON.
+- Scoped authority, lifecycle, measurement, operation and outcome evidence with explicit gaps and unsupported claims.
+- Report-local aliases, stable non-secret references and checksums without claims of signing, independent authenticity or certification.
+
 ### Security and Integrity Posture
 
 - Protected routes with token/session requirements on sensitive paths.
@@ -43,6 +64,9 @@ Started as a solo build in late January 2026, Elora has evolved into a research 
 
 - Governance Replay guided tour using synthetic records.
 - Governance Provenance capability guide for the current `0.2.8` architecture.
+- Sense and Execution Atlas capability guide.
+- Governed Workspace capability guide.
+- Elora Execution Evidence Records capability guide.
 - Stage-level trace walkthrough with structured JSON evidence views.
 - Governance Architecture Pack article reader.
 - Dedicated public changelog page.

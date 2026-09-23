@@ -22,6 +22,13 @@ Exclude:
 - sensitive environment/configuration names
 - copy-reproducible security implementation sequences
 
+## 2026-09-21
+
+- Governance now uses a shared workbench layout with an overview, evidence inspector and resource drill-downs.
+- Overview reads retained summaries with disclosed freshness limits, reducing repeated reconstruction and large report transfers. End-to-end performance remains to be measured.
+- Observer reports no longer equate metadata presence or missing violation counters with verified governance. Commit checks reject incomplete or malformed prerequisites in enforced operation.
+- Replay integrity now handles cooperating writers more reliably. Local concurrency and recovery tests passed; historical invalid evidence remains unchanged and fresh-run verification is pending.
+
 ## 2026-07-06
 
 - Runtime Memory comparison reports now render prompt/response evidence as bounded comparison cards rather than a very wide table.

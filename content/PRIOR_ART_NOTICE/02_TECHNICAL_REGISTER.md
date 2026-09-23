@@ -551,6 +551,38 @@ Ingress
 - Proof type: Governed report execution and projection-bounded disclosure
 - Evidence summary: Elora-managed work prepares readable Schematic Governance Provenance reports and optional JSON from one allow-listed projection, preserving lane, lifecycle, commit, guardrail, runtime-class, and TOCTOU evidence while excluding prompts, responses, private identities, protected infrastructure, and internal event detail.
 
+### Governed Workspace and Skill-Journey Evidence
+
+- Date window: `2026-09-09` to `2026-09-17`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entries (`2026-09-09` to `2026-09-17`)
+- Proof type: Governed human interaction, document review, context and recall evidence
+- Evidence summary: Workspace introduced explicit document/webpage review initiation, bounded context and response admission, model compatibility, completion, approval and release evidence; later work added persistent follow-up, comparison, charts, thinking presentation, conversation compaction, session recall and fact-boundary evidence without treating configured capacity or correct output as proof of recall.
+
+### Sense and Observational Execution Atlas
+
+- Date window: `2026-09-14` to `2026-09-17`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entries (`2026-09-14` to `2026-09-17`)
+- Proof type: Read-only runtime ownership, model-capability and recorded-execution investigation
+- Evidence summary: Sense grouped model, runtime, resource and managed-service investigation while Execution Atlas presented retained stages, provider attempts, operations, scoped CPU measurements and evidence gaps. Recorded order, ownership, relationship, causation and Governance authority remain distinct.
+
+### Authority Revocation and Governed Response Delivery
+
+- Date window: `2026-09-21` to `2026-09-22`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entries (`2026-09-21`, `2026-09-22`)
+- Proof type: Current standing, bounded authority recheck, content binding, hold and response-release evidence
+- Evidence summary: Controlled Document Review scenarios retained separate current registration, permission and subject/content-binding observations at protected boundaries. Direct streaming answer content remained internal until completed-response commit evaluation. Local fixtures, partial live observations and retained holds do not establish external authority integration, universal enforcement or transition atomicity.
+
+### Elora Execution Evidence Records
+
+- Date: `2026-09-22`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Public anchor: Engine changelog entries (`2026-09-22`)
+- Proof type: Projection-bounded portable execution record with explicit assurance limits
+- Evidence summary: Shared captured execution stories gained public-safe certificate-style HTML and matching JSON with report-local aliases, generation context, scoped authority and outcome summaries, measurements, evidence gaps and checksums. The unsigned record does not independently authenticate origin, exclude recreation, certify Governance or establish whole-execution coverage.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

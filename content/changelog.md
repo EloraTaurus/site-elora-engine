@@ -2,6 +2,15 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-09-23
+Context: the public website now exposes the major 11–22 September systems already recorded in the detailed Engine changelog.
+- Added dedicated public-safe pages for Sense and Execution Atlas, governed Workspace, and Elora Execution Evidence Records.
+- Updated Overview, Research, Capabilities, Governance Provenance and the visible Changelog to cover model and runtime investigation, adaptive context, recall, thinking profiles, authority-revocation research, governed response delivery and portable execution stories.
+- Extended the public milestone stream through 22 September while preserving the detailed, entry-by-entry Engine chronology as the authoritative public-safe change record.
+- Updated feature inventories, terminology and prior-art registers for captured execution stories, scoped CPU evidence, authority freshness, content binding, evidence certificates and their explicit assurance limits.
+- Kept `0.2.8` as the current line; no later release number was inferred from dated implementation entries.
+- Preserved the boundary between implemented code, local fixtures, partial live observations, deployed validation and whole-execution assurance.
+
 ## 2026-09-10
 Context: the public website now reflects the 7–10 September additions within the existing `0.2.8` line.
 - Added Workspace Document Review coverage: private originals, explicit attachment and Send, governed context and response budgets, recorded progress, completion checks and controlled release.

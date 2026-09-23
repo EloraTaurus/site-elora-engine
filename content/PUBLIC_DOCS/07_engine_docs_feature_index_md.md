@@ -24,6 +24,9 @@ Companion summary: `FEATURES.md` (current + in-development operator pack).
 | Admin Dashboard and Governance | Partial | Admin control plane | `OPERATORS/ADMIN_DASHBOARD_AND_GOVERNANCE.md` |
 | Governance Provenance | Live / Partial | Session, turn, lane, lifecycle, Runtime Intelligence, TOCTOU, guardrail, commit, and report evidence journey | Public overview: `/governance-provenance/` |
 | Governed Testing Edge | Live / Partial | Conversation-shaped Observer execution with AI Behaviour, Memory Governance, provider, lifecycle, and outcome evidence | Public overview: `/governance-provenance/` |
+| Execution Evidence Records | Live / Partial | Public-safe captured execution stories, authority summaries, interactive annexes and matching JSON | Public overview: `/execution-evidence/` |
+| Sense and Execution Atlas | Live / Partial | Runtime investigation, model capabilities, module ownership, resource evidence and observational execution maps | Public overview: `/sense/` |
+| Governed Workspace | Live / Partial | Document/webpage review, comparisons, charts, context, recall, permission and delivery evidence | Public overview: `/workspace/` |
 | Jobs Audit and Replay | Partial | Governance replay and jobs views | `OPERATORS/JOBS_AUDIT_AND_REPLAY.md` |
 | Research Dashboard and Reports | Partial | Research dashboard, layered run reports, Review Packets, and guided demo surfaces | `OPERATORS/PIPELINES_AND_RUNTIME.md` |
 | Observer Research Engine | Partial | Bounded runs, logical jobs, claim ladders, evidence passports, comparison cohorts, and durable reports | Public overview: `/observer-research/` |
@@ -34,6 +37,7 @@ Companion summary: `FEATURES.md` (current + in-development operator pack).
 | Guardrail Defence | Live / Partial | Environment-qualified model-adherence and Elora-interception evidence | `OPERATORS/SECURITY_AND_ACCESS_CONTROL.md` |
 | Elora Decisions | Live / Partial | Categorized decision histories with bounded source-evidence relations | `OPERATORS/JOBS_AUDIT_AND_REPLAY.md` |
 | Runtime Governance | Partial | Inference Governor, runtime state, managed report work, learning memory, and terminal release evidence | Public overview: `/runtime-governance/` |
+| Adaptive Context and Recall Research | Partial | Context admission, benchmarks, thinking profiles, compaction, session recall and fact-boundary evidence | Public overview: `/workspace/` |
 | Research Evidence Contracts | Partial | Claim states, evidence passports, self-audit exceptions, and bounded outside-review packets | Public overview: `/observer-research/` |
 | Elora Engine Protocol | Partial | Versioned deterministic Engine boundaries and conformance research | Public overview: `/engine-protocol/` |
 | Fabric / Workers / WorkerHosts | Partial | Worker operations and host inventory | `OPERATORS/FABRIC_AND_WORKER_OPERATIONS.md` |

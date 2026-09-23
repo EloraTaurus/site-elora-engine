@@ -518,6 +518,30 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Managed public-safe provenance reporting
 - Evidence summary: A readable report and optional JSON companion are derived from the same bounded projection through managed report work, with protected content and operational internals excluded before presentation.
 
+### Governed Workspace and Adaptive Context
+
+- Date window: `2026-09-09` to `2026-09-17`
+- Evidence class: Governed review, model interaction, context admission, compaction and recall evidence
+- Evidence summary: Workspace supports bounded document/webpage tasks, follow-ups, comparisons and presentations while exposing requested versus admitted context, thinking/answer evidence, recall selection, fact tracing, completion and release boundaries.
+
+### Sense and Execution Atlas
+
+- Date window: `2026-09-14` to `2026-09-17`
+- Evidence class: Observational runtime, model, module and execution investigation
+- Evidence summary: Sense groups runtime investigation by capability and ownership; Atlas explores retained execution sequence, provider attempts, scoped CPU and evidence relationships without controlling scheduling or Governance.
+
+### Current Authority and Governed Delivery
+
+- Date window: `2026-09-21` to `2026-09-22`
+- Evidence class: Registration freshness, scoped permission, content binding, dispatch/commit/release holds and response delivery
+- Evidence summary: Controlled local scenarios preserve unavailable and denied authority separately, recheck scoped standing at protected boundaries and withhold direct-stream answer content until completed-response commit evaluation. External authority and universal assurance remain outside the demonstrated scope.
+
+### Execution Evidence Records
+
+- Date: `2026-09-22`
+- Evidence class: Public-safe captured execution story and portable evidence certificate
+- Evidence summary: One bounded allow-list projection produces a concise certificate-style summary, interactive annex and matching JSON with aliases, checksums, explicit unknowns and unsupported claims. It is an unsigned evidence artifact rather than independent certification.
+
 ## Public-Safe Evidence Notes
 
 - This register is intentionally high-level and public-safe.
