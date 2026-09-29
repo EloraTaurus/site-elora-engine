@@ -583,6 +583,50 @@ Ingress
 - Proof type: Projection-bounded portable execution record with explicit assurance limits
 - Evidence summary: Shared captured execution stories gained public-safe certificate-style HTML and matching JSON with report-local aliases, generation context, scoped authority and outcome summaries, measurements, evidence gaps and checksums. The unsigned record does not independently authenticate origin, exclude recreation, certify Governance or establish whole-execution coverage.
 
+### Standing Examination v1 Definition and Freeze
+
+- Date window: `2026-09-23` to `2026-09-24`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Verified fingerprints: `664d743ea`, `7f2dd68c8`
+- Public anchor: Engine and Research changelog entries (`2026-09-23`, `2026-09-24`)
+- Proof type: Frozen paired examination definition, proposition/falsifier, evidence contract and retained public-record path
+- Evidence summary: Standing Examination v1 fixed a standing-preserving and standing-defeating classification change for one private Workspace owner-release consequence while nominal permission remained ALLOW. The definition was frozen before formal results and bound source facts, Engine derivation, consequence evidence, execution-time build identity, paired invariants and EER/public-report integration. Definition and infrastructure tests are not examination results.
+
+### Native Classification Standing and Mandatory Release Enforcement
+
+- Date: `2026-09-24`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Verified fingerprints: `5736ae135`, `e6ee65231`
+- Public anchor: Engine, Live and Research changelog entries (`2026-09-24`)
+- Proof type: Current Engine implementation and protected-boundary enforcement
+- Evidence summary: An Engine-owned rule derives current classification standing from bound owner, resource, content, classification and revision facts. Missing, defeated or unestablished standing holds the scoped Document Review response instead of authorising release. This is not mathematical identity derivation and does not establish equivalent enforcement on every Engine path.
+
+### Standing Examination Evidence Admission and Retained Results
+
+- Date window: `2026-09-24` to `2026-09-25`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Verified fingerprints: `195c750f5`, `f87353545`, `41be34b1c`
+- Public anchor: Engine, Live and Research changelogs; Public Reports `standing-exam` collection
+- Proof type: Later formal demonstration with explicit evidence sufficiency, contradictions, gaps and claim ceiling
+- Evidence summary: Paired results retain preserving/defeating case evidence, source and derivation observations, consequence outcomes, build references and stop conditions. The catalogue includes evidence-insufficient runs and bounded passed records. A pass applies only to the examined build and paired scope; governability does not propagate. Public Reports are project evidence, not independent certification.
+
+### Examination Context, Generation Budget and Timing Evidence
+
+- Date: `2026-09-25`
+- Repository: `EloraTaurus/llm-elora-engine` (private)
+- Verified fingerprints: `2e3f97637`, `f9b0ce68c`
+- Public anchor: Engine and Live changelog entries (`2026-09-25`)
+- Proof type: Examination-condition and export-quality evidence
+- Evidence summary: The deployment and built-in context baseline moved from 2,048 to 4,096 tokens after a retained truncated examination condition. Newer exports distinguish run timing from report generation and expose requested/final output allowances and available provider counters. The configuration change does not guarantee completion, establish an operating envelope or alter historical results.
+
+## Evidence-Class Reconciliation Notes
+
+- Multiple historical fingerprints in the pre-current-history sections do not resolve in this checkout. The high-value early anchors `566e498`, `ad70562`, `09d2f3b`, `b943abb` and `58bd292` are among them. They remain operator-supplied/private-history evidence rather than newly Git-verified anchors.
+- Standing's implementation origin is not the 2026-09-23 examination definition. Current-authority rechecks, protected-boundary holds and governed delivery are evidenced on `2026-09-21` and `2026-09-22`.
+- Formal records dated on or after `2026-09-24` are later demonstrations. Missing run dates in older projections remain `not established`; filesystem or later publication timestamps are not substituted.
+- `engine/examinations/IMPLEMENTATION.md` and the title of `engine/examinations/standing/v1/EXAMINATION.md` retain preparation-era wording that says no formal case had run or describes the examination as proposed. Later frozen artifacts, changelogs and retained Public Reports establish that those status phrases are stale; the proposition and claim ceilings remain controlling.
+- The 2026-09-29 repository commit contains an unrelated document and provides no Elora capability chronology anchor.
+
 ## Public-Safe Mapping Notes
 
 - Evidence is published as implementation chronology and capability mapping.

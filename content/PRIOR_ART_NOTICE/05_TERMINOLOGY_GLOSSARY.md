@@ -154,6 +154,22 @@ A portable public-safe projection of one bounded captured execution story. It ma
 
 The boundary that keeps answer content internal until completed-response commit evaluation authorises release. Progress visibility or provider completion does not itself authorise delivery.
 
+## Standing
+
+A bounded determination that the current actor, authority, resource and governing facts permit a specific consequence at a protected boundary. Standing may be preserved, defeated or unknown. It is not a universal identity score, mathematical identity derivation or system-wide governability claim.
+
+## Current Authority
+
+Authority established from the authoritative state observed at the relevant boundary, rather than inherited solely from prompt, proposal or admission time. Current-authority evidence can include registration/session freshness, scoped permission, owner/content binding and source revision, depending on the path.
+
+## Examination Evidence Record
+
+A retained public-safe projection of a formal examination's frozen definition, paired cases, result, contradictions, gaps, build context and claim ceiling. It records project evidence; it is not independent certification.
+
+## Identity Domains
+
+Elora distinguishes human/operator identity, organisation identity, permissions/authority, runtime or Tape identity, provenance/record identity, and model/provider identity. Evidence in one domain must not be treated as proof in another without an explicit retained binding.
+
 ## External Phrase Mapping (Reviewer Aid)
 
 The phrases below are included as reviewer mapping aids. They are not exclusive to any single implementation lineage.
@@ -167,7 +183,7 @@ The phrases below are included as reviewer mapping aids. They are not exclusive 
 - `deny before consequence` -> preventive deny/block before side effects
 - `commit control` -> final authorization gate at release boundary
 
-## Highlight Terms (Dispute-Mapping Index)
+## Cross-Framework Terminology Index
 
 These terms are intentionally listed as reviewer mapping keywords:
 
@@ -190,5 +206,5 @@ For standards-level lineage and dated sources, see:
 ## Definition Governance
 
 - First published in public disclosure: `2026-03-09`
-- Last updated: `2026-09-23`
+- Last updated: `2026-09-29`
 - Changes to definitions should be additive, date-stamped, and backward-referenced in changelog entries.

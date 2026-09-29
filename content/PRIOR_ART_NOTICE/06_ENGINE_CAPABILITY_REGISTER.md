@@ -542,6 +542,33 @@ This register documents non-governance capabilities implemented in Elora so the 
 - Evidence class: Public-safe captured execution story and portable evidence certificate
 - Evidence summary: One bounded allow-list projection produces a concise certificate-style summary, interactive annex and matching JSON with aliases, checksums, explicit unknowns and unsupported claims. It is an unsigned evidence artifact rather than independent certification.
 
+### Classification Standing
+
+- Date window: `2026-09-21` to `2026-09-24`
+- Evidence class: Current permission, owner/content/classification fact binding, Engine-derived standing and consequence release/hold
+- Code anchors: `engine/core/workspace_skills/document_review/execution.py`, `engine/core/workspace_skills/document_review/classification.py`, `engine/core/governance/classification_standing.py`
+- Evidence summary: Document Review rechecks bounded authority and current resource facts rather than inheriting prompt-time authority. The native rule can preserve, defeat or leave standing unknown for one private owner-release consequence. Human/operator, organisation, permission, runtime/Tape, provenance and provider identities are not collapsed into one identity mechanism.
+
+### Standing Examination v1
+
+- Date window: `2026-09-23` to `2026-09-25`
+- Evidence class: Frozen paired examination, build-bound retained evidence and bounded formal result
+- Code anchors: `engine/examinations/standing/v1/`, `engine/core/examinations/`, `engine/core/execution_story/standing.py`
+- Evidence summary: A standing-preserving and standing-defeating source change are examined under shared nominal permission and one exact response-release consequence. Retained records include insufficient-evidence and bounded passed outcomes. Satisfaction is limited to the examined build and pair; it is not system-wide governability, external certification or proof of identical behaviour across other consequences.
+
+### Public Reports Catalogue and Record Binding
+
+- Date window: `2026-09-24` to `2026-09-25`
+- Evidence class: Operator-selected publication, stable catalogue identity, paired formats and retained metadata conflicts
+- Code anchors: `engine/core/public_reports/`, `engine/api/public_reports.py`, `engine/publications/approved/`
+- Evidence summary: Deliberately approved HTML/JSON records are hydrated into bounded collections with content digests, stable catalogue identifiers, explicit metadata issues and download/preview routes. Publication does not certify, endorse or independently validate a result.
+
+### Execution Build and Examination-Condition Evidence
+
+- Date window: `2026-09-23` to `2026-09-25`
+- Evidence class: Write-once build history, execution-time build binding, selected configuration, context/generation budget and run/export timing
+- Evidence summary: Executions retain the launch build rather than using export-time backfill. Later Standing records expose bounded context, generation and timing evidence while preserving missing values and historical verdicts. Build identity is not source attestation, and timing is not a universal operating-envelope claim.
+
 ## Public-Safe Evidence Notes
 
 - This register is intentionally high-level and public-safe.

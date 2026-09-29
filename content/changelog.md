@@ -2,6 +2,14 @@
 
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
+## 2026-09-29
+Context: the public Technical Disclosure now distinguishes implementation chronology from later examination and current-state evidence.
+- Reconciled the Prior Art pack against Engine, Live, LLM and Research changelogs and current repository evidence.
+- Added a chronology/evidence matrix separating earliest implementation, earliest located public disclosure, later formal demonstration and current implementation.
+- Added a dedicated Standing/current-authority lineage from proposal-to-commit and TOCTOU precursors through 21–22 September authority enforcement, the later frozen examination, retained results and 25 September evidence refinements.
+- Added public-safe distinctions between established engineering foundations and Elora's implementation assembly, plus explicit unresolved evidence gaps and fingerprint-verification status.
+- Added canonical Public Reports and bounded Standing examination references without widening the examination's claim ceiling.
+
 ## 2026-09-23
 Context: the public website now exposes the major 11–22 September systems already recorded in the detailed Engine changelog.
 - Added dedicated public-safe pages for Sense and Execution Atlas, governed Workspace, and Elora Execution Evidence Records.

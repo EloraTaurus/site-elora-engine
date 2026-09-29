@@ -39,6 +39,18 @@ These standards and concepts are publicly documented and widely implemented acro
 
 Elora Taurus references them as interoperable building blocks in an applied governance architecture record.
 
+## Established Foundations and Elora-Specific Assembly
+
+### Established Engineering Foundations
+
+Elora does not claim invention of IAM, user or organisation identity, permission-based access control, least privilege, Zero Trust, separation of concerns, privilege separation, deterministic policy evaluation, SHA-256, HMAC, tamper-evident or hash-linked records, audit logging, provenance, transaction/commit boundaries, reference-monitor concepts, current-state validation, TOCTOU analysis, or distributed worker/control-plane separation.
+
+### Elora-Specific Implementation Record
+
+The project chronology concerns Elora's particular implementation and assembly of those established primitives across proposal-to-commit Governance, current-authority/Standing evaluation, Governance Provenance, Replay, Elora Decisions, Observer, Threat Intelligence, WorkerHost/Fabric, evidence bindings, Execution Evidence Records, Workspace, Sense and Execution Atlas.
+
+The editorial distinction is: these are established bricks; the registers document how and when Elora assembled them. This is an implementation chronology, not a claim that Elora originated the underlying engineering concepts.
+
 ## Terminology Baseline for Governance Language (Pre-2025)
 
 The following language families were already established in open standards and widely used practice before 2025.
@@ -82,7 +94,7 @@ The following language families were already established in open standards and w
   - Saltzer & Schroeder secure design principles (1975; fail-safe defaults)
   - OWASP access-control guidance (deny by default / fail securely, published well before 2025)
 
-## Defensive Positioning Note
+## Standards-Lineage Positioning
 
 If challenged language asserts exclusivity over phrases like admissibility-gated release, structural refusal, or pre-action authorization, the standards record shows those concepts are long-established, cross-industry control patterns predating 2025.
 

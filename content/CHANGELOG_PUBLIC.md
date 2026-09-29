@@ -14,6 +14,14 @@ Format:
 - Governance Provenance, governed interaction and public-safe session reporting.
 - Active from `2026-08-27`.
 
+### 2026-09-23 to 2026-09-25
+- Added execution-time build identity, write-once Build History, selected configuration evidence, permission timing and richer public execution-record telemetry without export-time identity backfill.
+- Defined and froze Standing Examination v1 as a paired examination of one private Workspace owner-release consequence. The examination did not originate Standing: current-authority rechecks and governed delivery were already evidenced on 21–22 September.
+- Added native classification-standing derivation and mandatory scoped release enforcement. Missing, defeated or unknown standing holds the response rather than authorising release.
+- Added retained Examination Evidence Records and a Standing Exams collection in Public Reports. Published records preserve insufficient-evidence and bounded passed outcomes, contradictions, gaps and their original claim ceilings.
+- Added scoped standing bindings, CPU-admission diagnostics, execution/Fabric routing provenance, a 4,096-token context baseline, generation-budget visibility, and separate examination versus report-generation timing.
+- The bounded passed record applies only to its examined build and paired scope. It does not establish system-wide governability, external authority integration, transition atomicity, independent certification or equivalent behaviour on every consequence path.
+
 ### 2026-09-22
 - Added Elora Execution Evidence Records: public-safe, certificate-style HTML and matching JSON derived from one bounded capture projection.
 - Added concise outcome, Governability and authority timelines before an interactive evidence annex, while retaining unknown, conflicting and unsupported claims explicitly.

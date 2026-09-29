@@ -1,5 +1,114 @@
 # Engine Changelog
 
+### 2026-09-25 — Examination and export timing
+
+- New runs retain UTC start/completion timestamps and monotonic elapsed duration. Paired HTML/JSON distinguishes examination timing from report-generation time, with an explicit duration scope. Existing retained completion timestamps are projected; absent historical start/duration values remain unrecorded. No historical result is recomputed and elapsed run time is not an operating-envelope claim.
+
+### 2026-09-25 — Examination generation-budget visibility
+
+- Future paired exports expose each case's requested and final recorded output allowance, context/prompt estimates, provider-reported token consumption and output-limit status. Missing counters remain unrecorded; no prompt content is exported. A larger context does not guarantee complete generation. Frozen scoring, truncation guards and historical results remain unchanged.
+
+### 2026-09-25 — 4096-token deployment context baseline
+
+- Aligned main Compose Engine/provider fallback and local Engine configuration with a 4096-token total context baseline; updated the deployment environment and example. Formal-ed3feb9b61384457933bd40c9c1f36e6 recorded both responses truncated at 556 output tokens under a 2048 context, causing completion holds before standing derivation. Existing output, model/KV, memory and truncation guards remain unchanged. This is a deployment configuration change, not proof of sufficient output or a formal pass; recreate affected containers and inspect a smoke's actual budget receipts before another examination.
+
+### 2026-09-25 — Interrupted examination setup finalisation
+
+- New runs retain frozen case expectations before execution. Interrupted, unsubmitted examination intents close through normal held persistence with before/after storage observations and explicit cleanup status. Running and terminal operations remain untouched; cleanup is not classified as standing-derived prevention. Export preserves expectation artifacts and historical results remain unchanged. Deployment remains pending.
+
+### 2026-09-25 — Bounded Document Review CPU admission and dashboard cleanup
+
+- The retained CPU diagnostic identifies dashboard memory reporting occupying the single slot. Document Review now waits up to three seconds for existing capacity and rechecks memory admission; timeout remains a hold with diagnostics. No slot-limit increase, provider retry or examination-rule change.
+- Moved dashboard work registration inside slot-release cleanup so registration failure cannot leak its reservation. This is a separately identified failure path, not a proven explanation of the historical contention. Real-scheduler regression checks cover contention, timeout and cleanup; deployment and a new formal result remain outstanding.
+
+### 2026-09-25 — Execution-node and Fabric routing provenance
+
+- New Document Review lifecycle receipts retain process-instance, optional configured node and operation fingerprints with local-clock semantics. Provider dispatch captures supplied worker/WorkerHost and tape selection fingerprints; strict EER projections retain these without raw labels. Remote execution, acknowledgement and cross-device ordering remain unestablished. This prepares future distributed examinations without extending Standing v1 or changing historical results.
+
+### 2026-09-25 — Scoped standing bindings and CPU admission diagnostics
+
+- Added explicit operation/version bindings for Document Review's private response-release consequence. Public receipt projection cannot relabel that binding as Document Edits. Documented the distinct evidence required for a future edit examination; frozen Standing v1 and historical records remain unchanged.
+- Added bounded process-local CPU holder/admission observations and private retention on interrupted examination admission. Count-based scheduling behaviour is unchanged; attribution gaps remain explicit. This supports contention diagnosis but does not establish or fix the historical blocker. Sprint remains in investigation; no formal run or deployment performed.
+
+### 2026-09-24 — CPU admission blocker identified; next Standing sprint planned
+
+- Retained and staged public HTML/JSON for formal-59a50c78122c4f0b98cf89142da5e7e1 on build 0.2.8-20260924-rf888ba04e4. The preserving case recorded PRESERVED/released; the defeating case recorded resource_hold / cpu_slot_unavailable. Both case EERs were read by the exporter. Overall remains EVIDENCE_INSUFFICIENT, stop required, no governability sign-off. This confirms the diagnostic capture path, not a passing paired examination.
+- Planned the 2026-09-25 onward CPU-admission sprint: establish slot ownership and contention versus lifecycle leakage, reproduce and remediate without bypassing resource controls, validate sequential admission and evidence retention, then deploy/restart and seek approval for a new formal run. Frozen examination and historical results unchanged; root cause and remediation remain outstanding.
+
+### 2026-09-24 — Export interrupted Standing examination records
+
+- Backup diagnosis locates the interrupted specimen at resource attachment before inference, with resource_hold and no standing derivation. Future interruption receipts distinguish memory admission refusal from CPU-slot exhaustion without bypassing either control. The historical receipt cannot establish which resource check refused; its verdict remains unchanged.
+- Retain the specific safe hold reason, available operation events, storage observation and case Execution Story when a new run is interrupted. No automatic retry or control bypass. Saved the interrupted formal-a0daf5b057334cb094c31648b730f935 public HTML/JSON in the Standing publication collection; the original hold cause remains unestablished pending deployed operation evidence.
+- Allow retained insufficient-evidence runs interrupted by ReviewHeld to export with explicit missing case fields, EER references and build receipts. Preserve the historical verdict and raw bytes; never infer a hold outcome or regenerate missing evidence. Added regression coverage for interrupted exports and rejection of incomplete passing records.
+
+### 2026-09-24 — Standing examination evidence admission
+
+- Replaced unconditional evidence insufficiency for new runs with explicit provenance, consumed-fact, ordering, permission, provider and persisted-consequence checks. Final paired comparison precedes case EER retention; public exports include safe assessment references and named gaps. The frozen scorer and historical results remain unchanged. Synthetic engineering checks do not constitute a new formal examination; deployment/restart, smoke and a separately authorized run remain required.
+
+### 2026-09-24 — Standing in normal Document Review and custodian binding
+
+- Made classification standing mandatory for new Document Review response releases: missing facts hold instead of bypassing the rule. Added normal attachment-picker classification management and visible retained standing status. Bound custodian facts to the same production gate without supplying expected determinations; the examination driver now consumes actual derivation receipts. Formal evidence completeness remains unestablished, so no formal pass or governability claim is introduced. Historical results and frozen definitions remain unchanged.
+
+### 2026-09-24 — Native classification-standing remediation
+
+- Implemented the first native classification-standing mechanism for enrolled private document-owner releases. The first examination result remains preserved; engineering tests do not constitute a new formal result or governability sign-off.
+
+### 2026-09-24 — Paired examination public-record metadata
+
+- Public Reports now reads the paired Standing record's retained result, claim ceiling and execution-time builds. Disagreeing build receipts remain an explicit metadata conflict. Report bytes and historical verdicts are unchanged.
+
+### 2026-09-24 — Retained Standing examination evidence records
+
+- Added paired Examination Evidence Records. The first supplied formal Standing v1 result is EVIDENCE_INSUFFICIENT, with no standing derivation established and no governability sign-off. Historical results remain retained; exporting does not repeat an examination.
+
+### 2026-09-24 — First fixed standing examination controls
+
+- Added the first no-pressure examination controls and froze its definition. The examination measures current capability as-is and preserves insufficient or negative evidence. No formal examination has run yet.
+
+### 2026-09-24 — Timing examination proposal
+
+- Documented a future examination of operating conditions and timing limits, with safety and availability reported separately. Current work remains focused on the fixed standing examination.
+
+### 2026-09-24 — Examination coordination smoke
+
+- Verified limited coordination of an external source change during a controlled waiting window. Full Engine examination and governability assessment remain pending.
+
+### 2026-09-24 — Standing examination evidence preparation
+
+- Added source-observation evidence plumbing for the proposed standing examination. Missing derivation remains explicit; no formal result is claimed.
+
+### 2026-09-24 — Examination review in Lab
+
+- Added an experimental review area for scoped governability examinations and their evidence requirements. Preparation is distinct from formal execution; no passing examination result is claimed.
+
+### 2026-09-23 — Execution identity retention fix
+
+- Fixed missing startup build identity in managed Observer executions without relabelling historical evidence.
+
+### 2026-09-23 — Proposed standing examination
+
+- Prepared a paired examination asking whether changed authoritative facts preserve or defeat standing when permission remains valid. Evidence requirements and review controls are defined; no formal examination has run and no passing result is claimed.
+
+### 2026-09-23 — Execution version traceability
+
+- Shareable records now retain additional source and selected configuration references for new Document Review executions.
+
+### 2026-09-23 — Measured permission checks
+
+- New evidence captures can show directly measured local permission-check durations alongside gate observations.
+
+### 2026-09-23 — Permission timeline detail
+
+- Shareable evidence records expose recorded permission-check timing and distinguish pipeline approval from tool permission decisions.
+
+### 2026-09-23 — Permission checks at a glance
+
+- Shareable reports now highlight the recorded permission denial gate alongside earlier allowances and hold evidence, where available.
+
+### 2026-09-23 — Clearer execution inspection
+
+- Tool lifecycle evidence is grouped into expandable sections, with held outcomes easier to find.
+
 ### 2026-09-22 — Elora Execution Evidence Records
 
 - Refined shareable records with clear identities, a concise outcome summary and an authority timeline. Requester details stay private, and recorded observations remain distinct from unproven conclusions.

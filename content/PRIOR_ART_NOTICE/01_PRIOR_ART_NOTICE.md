@@ -16,6 +16,14 @@ This notice is published to document technical milestones and maintain a clear p
 - Public technical disclosure is intentionally detailed enough for reduction-to-practice chronology, while withholding direct reproducibility handles (exact implementation playbooks, full route/config inventories, and copy-ready internal run paths).
 - The disclosure objective is verifiable chronology and architectural accountability, not turnkey replication.
 
+## Development Methodology
+
+Elora has been independently developed as a solo research project since January 2026. The project uses extensive AI-assisted engineering workflows, including OpenAI Codex, for implementation, refactoring, investigation, documentation, and testing support.
+
+AI assistance is treated as an implementation and development workflow, not architectural authority. Architectural direction, integration decisions, implementation review, testing, and acceptance of generated or modified implementation remain operator-directed. Accepted changes are retained through the normal history of the project's private Git repository.
+
+Public chronology is represented through short commit fingerprints, changelogs, technical disclosures, and selected public evidence. Codex token counts, chat counts, activity statistics, and screenshots are not used as evidence of authorship or technical provenance. They may corroborate sustained development activity, but they do not establish when or how any specific Elora mechanism was implemented.
+
 ## Global Open Standards Advocacy
 
 The Elora Taurus Project advocates for open AI governance patterns that can be inspected, tested, and reused across jurisdictions. By publishing this archive as a reference implementation record, the project aims to reduce gatekeeping of foundational safety engineering techniques.
@@ -38,19 +46,24 @@ For each milestone, include one or more public references:
 - Public changelog entry URL
 - Commit fingerprint (and public URL only if repository visibility allows)
 - Release/tag reference (if used)
-- Public announcement URL (e.g., LinkedIn post)
+- Dated public announcement URL where applicable
 
 Current public anchor surfaces:
 
 - GitHub organisation profile: `https://github.com/EloraTaurus`
 - Public website repository: `https://github.com/EloraTaurus/elorataurus.com`
 - Public demo changelog surface: `https://elorataurus.com/changelog/`
+- Public Reports catalogue: `https://ai.elorataurus.com/public-reports/`
+- Standing and current-authority chronology: `https://elorataurus.com/prior-art/?article=09_STANDING_CURRENT_AUTHORITY.md`
+- Chronology and evidence-class matrix: `https://elorataurus.com/prior-art/?article=08_CHRONOLOGY_EVIDENCE_MATRIX.md`
 
 ## Disclosure Continuity (2026-04 to 2026-09 Extension)
 
 This disclosure archive was extended in April 2026 to include public-safe chronology for observer research runtime work, evidence-model expansion, long-run context handling, report comparability improvements, repair/self-healing-path visibility controls, and later-month CORE/Model-Exams research milestones.
 
-The July through September 2026 extension adds bounded runtime-governance evidence, governed NNLSL education, language-neutral Observer Engine boundaries, Elora Decisions, live threat detection, evidence-backed Threat Findings, Governance Session investigations, environment-qualified Guardrail Defence, Threat Case Reports, decision bridging, residual-risk authority evidence, governed report generation, claim-state and evidence-passport contracts, bounded outside-review packets, session behaviour trajectories, governed learning-memory Decisions, session-level Governance Provenance, continuous TOCTOU reconstruction, governed Testing Edge and Workspace interaction, model-aware context and recall research, Sense and Execution Atlas, authority-revocation evidence, governed response delivery, captured execution stories, and public Execution Evidence Records. These entries document capability and authority boundaries without publishing internal schemas, detector content, thresholds, routes, prompts, protected instrumentation, or deployment contracts.
+The July through September 2026 extension adds bounded runtime-governance evidence, governed NNLSL education, language-neutral Observer Engine boundaries, Elora Decisions, live threat detection, evidence-backed Threat Findings, Governance Session investigations, environment-qualified Guardrail Defence, Threat Case Reports, decision bridging, residual-risk authority evidence, governed report generation, claim-state and evidence-passport contracts, bounded outside-review packets, session behaviour trajectories, governed learning-memory Decisions, session-level Governance Provenance, continuous TOCTOU reconstruction, governed Testing Edge and Workspace interaction, model-aware context and recall research, Sense and Execution Atlas, authority-revocation evidence, governed response delivery, captured execution stories, public Execution Evidence Records, current classification Standing, and the bounded Standing Examination v1 record. These entries document capability and authority boundaries without publishing internal schemas, detector content, thresholds, routes, prompts, protected instrumentation, or deployment contracts.
+
+The chronology now distinguishes earliest implementation evidence, earliest located public disclosure, later formal demonstration and current implementation. The 2026-09-23 to 2026-09-25 Standing examination sequence is documented as later examination of a lineage already evidenced by current-authority and governed-delivery work on 2026-09-21 and 2026-09-22.
 
 These additions preserve the same publication posture:
 

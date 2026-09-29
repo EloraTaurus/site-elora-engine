@@ -46,8 +46,31 @@ When needed, Elora can verify chronology by correlating:
 - External timeline evidence channels (Discord/Facebook/public posts)
 - Internal full-hash evidence archive
 
+## Evidence Classes
+
+Every chronology entry should identify which question its evidence can answer:
+
+1. **Earliest implementation evidence**: a private commit, historical code artifact or retained implementation record. This is not automatically public disclosure.
+2. **Earliest public disclosure**: a dated public changelog, website page, report or release. A private commit date must not be substituted.
+3. **Later formal demonstration**: a bounded examination or report showing a property for its recorded build, path, conditions and evidence. It is not the invention date of the underlying mechanism.
+4. **Current implementation**: behaviour established in the current repository. Current presence is not evidence of historical presence.
+5. **External / independent validation**: evidence produced under genuinely independent review. Elora's own tests, examinations and reports do not qualify merely because they are publicly accessible.
+
+If a date or evidence class cannot be established, the register uses `unknown`, `not established` or an explicit evidence gap.
+
+## Source Precedence and Conflicts
+
+- Retained implementation history and exact artifacts are stronger for implementation dating than later summaries.
+- Public pages and publication records are stronger for public-disclosure dating than private repository metadata.
+- A formal examination's frozen proposition, raw retained result and claim ceiling control interpretation of that examination.
+- Changelog/register conflicts are recorded rather than silently resolved.
+- Filesystem times, filename dates and later export dates are not used to invent missing run dates.
+- Short fingerprints are marked verified only when they resolve in the inspected repository history.
+
 ## Disclosure Boundary
 
 Elora publishes enough information for technical chronology and architectural accountability without exposing private source code, sensitive implementation details, or internal operational identifiers.
 
 This disclosure method is intentionally capability-first: it prioritizes dated proof of what exists and how boundaries behave, while avoiding publication of copy-ready runbooks for active research tracks.
+
+Public Reports preserve the published projection and its limitations. Publication is operator choice, not certification, endorsement or independent validation.
