@@ -29,7 +29,7 @@ This architecture is built for defensibility:
 
 ## Governance Provenance
 
-The current `0.2.8` architecture reconstructs governance as a session-level evidence journey. Preparation, actor turns, governed and comparison lanes, runtime transitions, continuous TOCTOU state, policy, guardrails, and commit outcomes remain linked but semantically separate. Stage Replay is a focused inspection view within this wider provenance model.
+The Governance Provenance architecture introduced in `0.2.8` and retained in the next `0.2.10` deployment line reconstructs governance as a session-level evidence journey. Preparation, actor turns, governed and comparison lanes, runtime transitions, continuous TOCTOU state, policy, guardrails, and commit outcomes remain linked but semantically separate. Stage Replay is a focused inspection view within this wider provenance model.
 
 ## Governed Interaction and Provider Integrity
 

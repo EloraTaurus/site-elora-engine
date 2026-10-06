@@ -1,5 +1,10 @@
 # Site / Demo Changelog
 
+## 2026-10-06 — Release chronology alignment
+
+- Group the detailed and milestone changelogs into governed Workspace/runtime investigation (0.2.9) and execution evidence/Standing/public records (0.2.10), preserving dated history and captured execution versions.
+- Align current documentation with 0.2.10 as the next deployment line. This source update does not establish that the website or Engine has been deployed, and it does not redate earlier capability snapshots or examination results.
+
 This changelog tracks the public-facing side of Elora: website framing, guided demo coverage, public-safe disclosures, and the way internal engine milestones are translated into material that can be shown openly. Recent entries especially reflect a period of rebuild and consolidation, where research history had to be preserved, surfaced safely, and reconnected to newer research-engine and governance narratives.
 
 ## 2026-09-29

@@ -7,12 +7,42 @@ Format:
 
 ## Major Milestones
 
-## 0.2.8 — Governance Provenance and Governed Interaction
+## 0.2.10 — Execution Evidence, Standing and Public Records
 
 ### Release Focus
 
-- Governance Provenance, governed interaction and public-safe session reporting.
-- Active from `2026-08-27`.
+- Traceable execution builds and inspectable build history.
+- Scoped Standing and local release evidence, with examination limitations preserved.
+- Public Reports collections and content-withheld research records.
+- Bounded memory/context studies, local Engine identity and an evidence-based engineering portfolio.
+
+Development scope: `2026-09-23` onward. Release band assigned on `2026-10-06`; historical execution versions remain unchanged. Selected for the next deployment; live deployment is not established by this changelog.
+
+### 2026-10-06 — Engineering portfolio navigation and architecture
+
+- Refine the portfolio into a searchable engineering inventory with a development timeline, an In Development list and an Architecture overview.
+- Preserve evidence limits and distinguish dated repository/catalogue counts from live runtime activity. Local checks pass; these publication changes await deployment and remain separate from Engine builds.
+
+### 2026-10-06 — Engineering portfolio and next release
+
+- Add a public engineering catalogue linked to Public Reports, retaining implementation limits while withholding private code locations. Portfolio revisions remain separate from Engine builds. Live deployment is pending.
+- Select 0.2.10 for the next deployment, with 0.2.9 organizing the earlier governed Workspace milestone. Historical records keep their original execution versions and outcomes.
+
+### 2026-10-06 — Bounded research additions
+
+- Add isolated synthetic-user memory studies, context-only research profiles and clearer inference/reviewer context reporting. Live-provider validation remains separate.
+- Add advisory endpoint resource planning without changing execution authority or reserving resources.
+
+### 2026-10-02 — Public research records
+
+- Add content-withheld Observer summaries, separate record/collection identities and matching HTML/JSON bundles. Preserve private exports, historical results and unavailable evidence.
+- Add fictional report-template previews and clearer retained outcome/export progress displays without creating execution evidence.
+
+### 2026-09-29 — Local release evidence and publication collections
+
+- Recheck local Document Review permission in the committing transaction and retain bounded release evidence. This does not establish atomicity with external authority systems.
+- Group verified public execution members under evidence-set summaries with scoped claims and date provenance. Preserve earlier artifacts and their outcomes.
+- Add indexed build archival and bounded historical lookup while retaining original build records.
 
 ### 2026-09-23 to 2026-09-25
 - Added execution-time build identity, write-once Build History, selected configuration evidence, permission timing and richer public execution-record telemetry without export-time identity backfill.
@@ -21,6 +51,16 @@ Format:
 - Added retained Examination Evidence Records and a Standing Exams collection in Public Reports. Published records preserve insufficient-evidence and bounded passed outcomes, contradictions, gaps and their original claim ceilings.
 - Added scoped standing bindings, CPU-admission diagnostics, execution/Fabric routing provenance, a 4,096-token context baseline, generation-budget visibility, and separate examination versus report-generation timing.
 - The bounded passed record applies only to its examined build and paired scope. It does not establish system-wide governability, external authority integration, transition atomicity, independent certification or equivalent behaviour on every consequence path.
+
+## 0.2.9 — Governed Workspace Execution and Runtime Investigation
+
+### Release Focus
+
+- Governed document reviews and follow-up work in Workspace.
+- Sense and Execution Atlas for inspecting recorded runtime evidence.
+- Context, recall and permission research with explicit evidence limits.
+
+Development scope: `2026-09-09` to `2026-09-22`. Release band assigned on `2026-10-06`; historical execution versions remain unchanged. This retrospective band does not assert a separately deployed 0.2.9 release.
 
 ### 2026-09-22
 - Added Elora Execution Evidence Records: public-safe, certificate-style HTML and matching JSON derived from one bounded capture projection.
@@ -66,6 +106,13 @@ Format:
 - Added the retained Workspace Skill Journey to Governance Provenance and portable reports. Missing authority evidence remains unavailable, and provider wait is not relabelled as measured provider execution.
 - Added scoped Runtime Memory comparison stopping with explicit incomplete-cleanup outcomes.
 - Initial review scope uses a bounded sensitivity baseline and the configured provider. Broader formats and integrations remain future work; local tests alone do not establish live readiness.
+
+## 0.2.8 — Governance Provenance and Governed Interaction
+
+### Release Focus
+
+- Governance Provenance, governed interaction and public-safe session reporting.
+- Development scope: `2026-08-27` to `2026-09-08`.
 
 ### 2026-09-08
 - Extended synthetic research with mixed conversation and virtual read/list tasks, a tools-and-skills catalogue and explicit development-only capability previews.

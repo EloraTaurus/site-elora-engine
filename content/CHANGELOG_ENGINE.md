@@ -1,5 +1,73 @@
 # Engine Changelog
 
+## 0.2.10 — Execution Evidence, Standing and Public Records
+
+### Release Focus
+
+- Traceable execution builds and inspectable build history.
+- Scoped Standing and local release evidence, with examination limitations preserved.
+- Public Reports collections and content-withheld research records.
+- Bounded memory/context studies, local Engine identity and an evidence-based engineering portfolio.
+
+Development scope: `2026-09-23` onward. Release band assigned on `2026-10-06`; historical execution versions remain unchanged. Selected for the next deployment; live deployment is not established by this changelog.
+
+### 2026-10-06 — Engineering portfolio navigation and architecture
+
+- Present the engineering inventory as a Workspace-style catalogue, with searchable mechanism rows, a development timeline and accessible evidence limits.
+- Add In Development for selected unfinished or insufficiently validated scopes, and Architecture for documented modules, datastore roles and methods. Dated summary counts describe repository size and catalogue scope, not live activity or engineering quality.
+- Local automated and desktop/mobile checks pass. Portfolio revisions remain separate from Engine builds; deployment of these presentation changes is pending.
+
+### 2026-10-06 — Engineering portfolio and next release
+
+- Add a public engineering catalogue linked to Public Reports, retaining implementation limits while withholding private code locations. Portfolio revisions remain separate from Engine builds. Live deployment is pending.
+- Select 0.2.10 for the next deployment, with 0.2.9 organizing the earlier governed Workspace milestone. Historical records keep their original execution versions and outcomes.
+
+### 2026-10-06 — Bounded research additions
+
+- Add isolated synthetic-user memory studies, context-only research profiles and clearer inference/reviewer context reporting. Live-provider validation remains separate.
+- Add advisory endpoint resource planning without changing execution authority or reserving resources.
+
+### 2026-10-06 — Local Engine identity foundation
+
+- Engines can retain a local identity across restarts and name changes, with a tested local inference baseline for future federation work. Existing evidence keeps its original meaning; connecting or delegating between Engines remains future work. Deployment validation is pending.
+
+### 2026-09-29 — Public Reports polish
+
+- Improve card alignment, add a collapsible Elora panel and refine date labels and claim-boundary presentation.
+
+### 2026-09-29 — Clearer public evidence collections
+
+- Refine evidence-set summaries with clearer test methods, bounded claims and visible limitations across desktop and mobile layouts.
+- Add collection dates with explicit provenance while preserving individual execution timestamps and original evidence files.
+
+### 2026-09-29 — Scoped evidence claims
+
+- Add evidence-conditioned claim statements and explicit exclusions to public execution run overviews.
+
+### 2026-09-29 — Execution run collections
+
+- Group related execution records beneath a run overview with subject tags, test method, limitations and individual case files.
+
+### 2026-09-29 — Public execution details
+
+- Add scoped timing and clearer held/released test results with expected-result comparison. Public bundle filenames now include their public IDs.
+
+### 2026-09-29 — Structured review generation
+
+- Make structured review generation mode explicit while preserving token limits and incomplete-output holds. Deployment validation pending.
+
+### 2026-09-29 — Observer evidence bundles
+
+- Added an entire-run retained-story download with individual public record folders and clearer scope boundaries.
+
+### 2026-09-29 — Inspectable local release binding
+
+- Added scoped release-transaction receipts and timing to new public evidence records where retained by execution.
+
+### 2026-09-29 — Document Review release consistency
+
+- Improved local permission/release ordering and rollback consistency. Broader external authority guarantees remain outside this change.
+
 ### 2026-09-25 — Examination and export timing
 
 - New runs retain UTC start/completion timestamps and monotonic elapsed duration. Paired HTML/JSON distinguishes examination timing from report-generation time, with an explicit duration scope. Existing retained completion timestamps are projected; absent historical start/duration values remain unrecorded. No historical result is recomputed and elapsed run time is not an operating-envelope claim.
@@ -108,6 +176,16 @@
 ### 2026-09-23 — Clearer execution inspection
 
 - Tool lifecycle evidence is grouped into expandable sections, with held outcomes easier to find.
+
+## 0.2.9 — Governed Workspace Execution and Runtime Investigation
+
+### Release Focus
+
+- Governed document reviews and follow-up work in Workspace.
+- Sense and Execution Atlas for inspecting recorded runtime evidence.
+- Context, recall and permission research with explicit evidence limits.
+
+Development scope: `2026-09-09` to `2026-09-22`. Release band assigned on `2026-10-06`; historical execution versions remain unchanged. This retrospective band does not assert a separately deployed 0.2.9 release.
 
 ### 2026-09-22 — Elora Execution Evidence Records
 
@@ -621,12 +699,6 @@ Document Review now protects the response space required to complete its task an
 
 - Synthetic Access: material permission rechecks and certificate-linked run evidence.
 
-### 2026-09-08 — File-permission behaviour research
-
-- Added an opt-in observation layer over structured Synthetic Access receipts, separating permission truth, observed behaviour and Governance response.
-- Authorised access remains a negative control, and an isolated denial is not automatically a finding. Repeated or changing access pressure can contribute bounded findings to a session Case and linked Decision.
-- The layer is disabled by default, has no enforcement or automatic-learning authority, and does not infer successful access or actor intent from model narration.
-
 ## 0.2.8 — Governance Provenance and Governed Interaction
 
 ### Release Focus
@@ -638,7 +710,13 @@ Document Review now protects the response space required to complete its task an
   and AI Behaviour profiles without publishing private prompts or settings.
 - Public-safe Elora Schematic reports make retained evidence easier to review.
 
-Release window: active from `2026-08-27`.
+Release window: `2026-08-27` to `2026-09-08`.
+
+### 2026-09-08 — File-permission behaviour research
+
+- Added an opt-in observation layer over structured Synthetic Access receipts, separating permission truth, observed behaviour and Governance response.
+- Authorised access remains a negative control, and an isolated denial is not automatically a finding. Repeated or changing access pressure can contribute bounded findings to a session Case and linked Decision.
+- The layer is disabled by default, has no enforcement or automatic-learning authority, and does not infer successful access or actor intent from model narration.
 
 ### 2026-09-07
 - Added an adaptive synthetic-user runtime permissions pack, capped at 50 turns.

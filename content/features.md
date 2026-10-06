@@ -63,7 +63,7 @@ Started as a solo build in late January 2026, Elora has evolved into a research 
 ## What Is Available On This Public Website Today
 
 - Governance Replay guided tour using synthetic records.
-- Governance Provenance capability guide for the current `0.2.8` architecture.
+- Governance Provenance capability guide, retained in the `0.2.10` release line selected for the next deployment.
 - Sense and Execution Atlas capability guide.
 - Governed Workspace capability guide.
 - Elora Execution Evidence Records capability guide.

@@ -1,6 +1,8 @@
 # Snapshot
 
-Last updated: 2026-09-06
+Capability snapshot: 2026-09-06
+
+Release alignment reviewed: 2026-10-06. The next deployment line is `0.2.10`; this does not establish live deployment or redate the capability snapshot below.
 
 First implemented (from changelog): 2026-02-28
 
@@ -18,7 +20,7 @@ This snapshot is the quickest way to understand Elora's current posture.
 ## What This Public Site Shows
 
 - A guided Governance Replay tour with synthetic decision evidence.
-- A public-safe Governance Provenance capability guide for the current `0.2.8` line.
+- A public-safe Governance Provenance capability guide, introduced in `0.2.8` and retained in the next `0.2.10` deployment line.
 - Public architecture and positioning context in document form.
 - A changelog and feature narrative aligned with current build direction.
 

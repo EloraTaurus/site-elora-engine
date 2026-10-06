@@ -75,7 +75,7 @@ These additions preserve the same publication posture:
 
 This page is a technical disclosure record, not a patent filing, legal notice template, or claim of novelty over foundational methods. It exists to preserve chronology, architectural intent, and public accountability.
 
-Current public release line reflected on this disclosure page is `0.2.8`.
+The release line selected for the next deployment is `0.2.10` (6 October 2026). Historical implementation, disclosure and examination dates and captured execution versions remain unchanged; this version alignment does not establish live deployment.
 
 Public references here intentionally use short commit fingerprints because the source repository is private. Full hashes and immutable evidence bundles are retained offline.
 
