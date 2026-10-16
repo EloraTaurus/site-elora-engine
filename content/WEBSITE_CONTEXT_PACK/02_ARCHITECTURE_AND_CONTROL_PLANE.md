@@ -1,10 +1,22 @@
 # Architecture and Control Plane
 
-Last updated: 2026-09-06
+Last updated: 2026-10-16
 
 First implemented (from changelog): 2026-02-28
 
 ## Control-Plane Model
+
+Session recall is Engine-managed: records are scoped, selected within a budget,
+admitted into context and inspected through retained delivery evidence. Storage
+persistence does not itself give a model unrestricted database access. Memory
+Atlas is an observational projection over those records, not a second memory
+authority or a learning-promotion engine.
+
+Optional signal and model-review availability is recorded separately from
+mandatory commit controls. Observations, heuristic fallbacks and unavailable
+assessments must remain distinguishable; optional output cannot acquire release
+authority merely by being present. Local structured-review improvements and
+new stress studies still need their own live validation.
 
 Elora separates generation from authorization:
 - Inference proposes.

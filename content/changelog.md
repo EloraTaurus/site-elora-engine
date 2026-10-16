@@ -1,5 +1,20 @@
 # Site / Demo Changelog
 
+## 2026-10-16 — Memory, Recall & Evidence and technical refresh
+
+- Final source review clarifies actor-model delivery coverage, the uninstrumented
+  opinion-model path and the pending study's size: 100 turns per arm, 200 total.
+- Add the public Memory, Recall & Evidence page with Engine-managed scoped recall,
+  read-only Atlas source inspection and a fictional browser-local walkthrough.
+- Separate persistence from model access, and stored/recalled/admitted/submitted
+  evidence from internal model reliance. Distinguish current session features,
+  controlled observations, pending hundred-turn validation and future user-memory/NNLSL integration.
+- Link the guide from Home, Capabilities, Research, Observer, Sense and Documentation.
+  Refresh the technical manifests, memory guide, architecture/maturity notes and
+  outdated documentation paths; add allowlisted document deep links.
+- Update the public and dashboard technical chronology without inventing a new
+  release, rewriting historical results or claiming this source update is deployed.
+
 ## 2026-10-06 — Release chronology alignment
 
 - Group the detailed and milestone changelogs into governed Workspace/runtime investigation (0.2.9) and execution evidence/Standing/public records (0.2.10), preserving dated history and captured execution versions.

@@ -1,5 +1,233 @@
 # Engine Changelog
 
+## 2026-10-16 — Consolidated engineering publication
+
+- Consolidate portfolio output into one current folder with an independent generation number and one prior JavaScript file. Keep dated source evidence and serving Engine build identity separate; update the serving reader once for the new layout. No live deployment performed.
+
+## 2026-10-16 — Engineering inventory evidence refresh
+
+- Expand the engineering catalogue to 129 entries: optional extensions and Memory Atlas, plus shared eFed combat, contest, spatial, replay, measurement and type-policy mechanisms. Retained exports/databases and passing local fixtures have bounded evidence labels; incomplete reviews and failed planning trials remain visible. No fresh live deployment claim, profile rescore or Engine build-identity change.
+
+## 2026-10-16 — Engine stress comparison prepared
+
+- Website source refresh adds Memory, Recall & Evidence with fictional inspection
+  examples and updates related public technical guides, navigation and changelogs.
+  Keep session recall, controlled runtime observations, pending hundred-turn
+  validation and future user-memory/NNLSL integration separately labelled. This
+  publication-source change does not create an Engine release or establish deployment.
+
+- Complete local rotation, isolated-memory and export review. Tighten feature accounting so unsupported evidence and configuration cannot imply successful execution. All 304 targeted checks and browser fixtures pass; the new study awaits live validation.
+
+- Fix child rotation counts and context-stack echo detection. Add a hundred-turn-per-arm comparison of native delivery with and without Simplified preparation, retaining isolated memory through rotations and mandatory safety. Include varied local tasks and separate Engine observations from model response scores. Local tests and browser checks pass; live validation is pending.
+
+## 2026-10-15 — Optional extension runtime extraction
+
+- Relocate remaining PhyOS-derived runtime/report calculations and signal package into extensions, with generic approved contracts and independent governance retained. Preserve historical evidence/attribution and unknown measurements.
+- Add separate removal/disablement coverage and a safe 31-file server cleanup checklist that excludes builds and persistent data. Contribution map v0.19.0; 274 local tests pass. Deployment and live comparisons remain pending; no demonstrated-benefit claim.
+
+## 2026-10-15 — Dynamic extension boundary checkpoint
+
+- Add reviewed manifest discovery, generic optional dispatch, physical-removal regressions and standalone source packaging. Independent governance and history remain intact. Contribution map v0.18.0 identifies remaining extraction; full source separation and live deployment are not claimed.
+
+
+## 2026-10-15 — Mandatory-control regression
+
+- Confirm optional-assessment independence as an architecture correction, not relaxed safety. Both-off real policy, guardrail, behaviour and threat-boundary tests preserve refusal while normal governed release completes. 31 targeted tests pass with temporary stores; contribution map v0.17.1. Deployment pending; historical evidence unchanged.
+
+## 2026-10-15 — Independent Elora governance
+
+- Make PhyOS and model review optional evidence unless policy requires them. Retain independent release checks and required-evidence holds; close missing-evidence fail-open defaults. Memory experiment settings and historical evidence remain unchanged. Deployment pending.
+
+## 2026-10-14 — Observer reviewer policy repair
+
+- Forward requested reasoning mode to reviewer admission/dispatch, retain completion diagnostics and reject empty reviews without weakening release holds. No budget increases or historical rewrites. Deployment and short standalone validation pending.
+
+## 2026-10-14 — Observer review hold clarity
+
+- Clarify the reviewer-off negative test and distinguish unavailable-review holds from model-reported high risk in new events. Preserve release safeguards and historical evidence; deployment pending.
+
+## 2026-10-14 — Optional Observer evidence and halt reporting
+
+- Keep unavailable PhyOS measurements out of model review prompts while preserving independent governance, release holds and historical evidence. Add specific content-free review failure diagnostics.
+- Separate Intervention panel loading and clarify historical halt counts versus unknown/current operational health. Update contribution map; deployment pending.
+
+## 2026-10-14 — PhyOS integration packaging
+
+- Move remaining identified contribution calculations into the integration extension without changing formulas. Keep independent Elora services, governance and historical evidence in the host. Update component inventory and contribution map; deployment pending.
+
+## 2026-10-14 — Extension dashboard packaging
+
+- Move combined ECHO/Zombie pages and dedicated styles into the integration extension, keeping their URLs and functionality through existing hooks. Independent Elora services remain available without PhyOS; deployment pending.
+
+## 2026-10-14 — Memory telemetry and container limits
+
+- Pending telemetry now shows Unknown, preserving measured zero. Improve cgroup discovery and report limit status explicitly while retaining process/container safeguards and checking visible parent limits. Local validation only; deployment pending.
+
+## 2026-10-14 — CORE memory admission
+
+- Separate process ceilings from container accounting without raising limits. Retain independent container, CPU and disk safeguards and governed compact fallback. 54 targeted tests pass; deployment pending.
+
+## 2026-10-14 — Extensions information popups
+
+- Replace expandable information rows with consistent popup buttons and remove the dark table-row hover effect.
+
+## 2026-10-14 — Unavailable report measurements
+
+- Keep missing optional measurements unavailable across report scores and comparisons, with chart gaps rather than fabricated zeros. Preserve historical records and independent readiness checks.
+
+## 2026-10-14 — Optional preflight schema checks
+
+- Validate preflight report contracts for extension-enabled and standalone configurations. Keep execution readiness separate from legacy derived report scores that still require missing-evidence handling improvements.
+
+## 2026-10-14 — Standalone Observer readiness
+
+- Distinguish unavailable optional signals from failed independent readiness checks. Observer can pass preflight without PhyOS while preserving independent governance and release holds.
+
+## 2026-10-14 — Cleaner extension controls
+
+- Toggle and save each extension, with dependency-aware menus and clearer unavailable states. Changes still require restart; independent capabilities and historical records remain intact.
+
+## 2026-10-14 — Extension API visibility
+
+- Show available extension-route call counts using existing telemetry. Provider usage and costs remain unknown where attribution is unavailable.
+
+## 2026-10-14 — Extension usage details
+
+- Show available resource records alongside each extension, with links to governance details. Unmeasured usage and unestablished recommendations remain clearly unknown.
+
+## 2026-10-14 — Extension resource visibility
+
+- Make registered extension activity easier to inspect in memory and CPU governance without changing limits or active-run settings. Unknown costs remain unknown; 45 targeted checks pass.
+
+## 2026-10-14 — Easier extension inspection
+
+- Organise extensions in a compact table with activation toggles and information panels. Licensing, connections and declared dependencies are easier to inspect; changes still require a governed save and restart.
+
+## 2026-10-14 — Extensions visual refresh
+
+- Cleaner extension cards, clearer activation status and a more readable settings form, with responsive layout and unchanged safety controls.
+
+## 2026-10-14 — Clearer PhyOS activation controls
+
+- Administrators can save an enabled or disabled state in Extensions and see when a restart is required. Active runs and historical records remain unchanged.
+- 65 targeted checks pass. No automatic restart or new extension authority is introduced; live validation remains pending.
+
+## 2026-10-14 — Easier optional-module validation
+
+- Add guided Observer validation presets and a run checklist, preserving guardrails and historical evidence. Separate successful completion checks from expected safety holds.
+- 61 targeted checks pass. Browser and live-run validation remain pending; no comparative benefit is claimed.
+
+## 2026-10-14 — Removable extension interfaces
+
+- Keep optional extension interfaces with their components while preserving Elora's independent governance and historical records.
+- All 193 targeted checks pass, including separate removal and disablement tests. Attribution and pending licensing remain explicit; live validation and comparative benefits remain outstanding.
+
+## 2026-10-14 — Extensions visibility
+
+- Add read-only inspection of PhyOS and Elora–PhyOS integration, showing dependencies, attribution and pending licensing separately from operational health.
+- Preserve independent governance and historical records. All 184 targeted checks pass; live validation and comparative benefits remain pending. No installer or new activation authority was added.
+
+## 2026-10-14 — Optional PhyOS integration
+
+- Separate PhyOS as an optional source module, preserving mathematical behaviour, attribution and Elora's independent governance.
+- Controlled Observer tests complete both with and without PhyOS; missing decision support still holds release when required. All 159 targeted checks pass. Live validation and evidence of comparative benefit remain outstanding.
+
+## 2026-10-14 — Optional PhyOS boundary
+
+- Validate controlled Observer operation without PhyOS while preserving model review and guardrails. Hold release when the unavailable PhyOS heuristic would be the only decision source.
+- Preserve historical evidence and attribution. All 115 targeted checks pass; live validation and comparative benefits remain unestablished. Further extraction has not begun.
+
+## 2026-10-14 — PhyOS boundary preparation
+
+- Improve handling of unavailable observations while preserving historical evidence and collaborative attribution. Make additional PhyOS contributions inspectable without assuming they improve results.
+- Local tests cover foundational loading and existing fallback behaviour. Full operation without PhyOS is not yet established; Observer policy dependencies remain under review. Existing release authority has not been replaced.
+
+## 2026-10-14
+
+- Complete local delivery-matrix review, including single-arm continuity, independent batch memory, checkpoint evidence and downloadable reports. Safety and sampling checks remain enforced. Live server validation is still required.
+
+- Prepare delivery/lane comparison studies with isolated child memory and process continuity, plus a larger multi-project correction test. Enlarge Memory Atlas and add evidence-based memory completion summaries while preserving mandatory safety. The supplied twenty-turn native run answered all four probes correctly; the new studies await live validation.
+
+- Adopt native message roles for session-memory Research tests following a successful six-turn native smoke. Preserve governed execution and inspectable memory evidence; longer correction tests remain unvalidated.
+
+- Finish the comparison readiness review with clearer submission evidence and resume checks. Local tests pass; live model behaviour remains unverified.
+
+- Clarify memory-comparison task instructions and fix sampling across delivery methods while preserving mandatory safety controls. Reports expose matching evidence and literal responses. Local checks pass; live behaviour remains pending validation.
+
+## 2026-10-13
+
+- Complete local readiness checks for the delivery comparison's child progress and JSON evidence exports; preserve arm order and failure attribution. Live model validation remains pending.
+
+- Add an Observer comparison of flat and native-role prompt delivery through three isolated, governed child experiments. Retain inspectable memory delivery and response evidence under one parent report. Local tests pass; live refusal reduction remains unvalidated.
+
+- Connect Memory Atlas to versioned Adaptive Prompt Delivery with a session-memory presentation that preserves exact evidence and mandatory safety controls. Local preparation and browser checks pass; effectiveness against the observed model refusals remains unvalidated.
+
+- Clarify Memory Atlas task instructions after live evidence confirmed memory delivery but exposed unnecessary model refusals. Preserve mandatory safety controls and explicit uncertainty; local checks pass and corrected live behaviour remains pending.
+
+- Add a read-only Memory Atlas for inspecting session memory, recall paths, model delivery evidence and sources. Provide a responsive list/detail view and recall graph; internal model reliance remains unknown and learning integration remains deferred.
+- Add fixed session-memory Research scenarios and simplify Observer setup so scenario selection applies its experiment properties automatically. Correct prompt-delivery inheritance and Research JSON report generation. Local regression and browser checks pass; deployment and a fresh live smoke remain pending.
+
+## 2026-10-12
+
+- Add project-by-project scheduling and a safe agent-style Research task that requests an Elora virtual tool and completes an answer from its result. Preserve governed execution and exportable evidence; live validation remains pending.
+
+- Add four eFed engineering records for card combat, session rooms, turn-deadline fallback and participant-specific concealment; update the existing rule-based AI entry. Source inspection and synthetic local checks support these bounded claims, including concurrency checks. The catalogue now contains 120 combined entries; live eFed validation remains outstanding and Engine build identity is unchanged.
+
+- Add arithmetic context diagnostics and an Engine-assisted planning Research scenario to investigate small-model capability on constrained hardware. Reports distinguish model work from deterministic support; live capability gains remain unvalidated.
+
+- Add a two-project Research comparison using one calculation or prerequisite check per step, then selection and scheduling. Retain direct controls, strict validation and complete overhead evidence; live capability gains remain unvalidated.
+
+- Add four source-reviewed engineering mechanisms from recent changelogs, bringing the inventory to 102 Engine / 116 combined entries. Preserve separate review dates and the original live-review scope; no new deployment or effectiveness result is claimed.
+
+- Show all 112 engineering inventory entries by default, with coloured project attribution pills and a pill-based Project filter. Keep Engine-specific evidence pages explicitly scoped and regenerate the portfolio deployment bundle.
+
+- Clarify the eFed image evidence review after tracing the local serving code: demo image selection is separate from WebP negotiation, unavailable derivatives fall back to originals, and serving does not generate derivatives. Preserve earlier reviews and unresolved ledger references without treating them as failed image delivery. Live response behaviour remains untested; Engine build identity unchanged.
+
+- Refine the eFed portfolio evidence after a supplemental export: all original image references now resolve, with remaining generated-image gaps recorded separately. No new game functionality or deployment claim is added.
+
+- Define Micro-tasking Research around small-model capability gain on constrained business hardware, with separate resource-feasibility and overhead reporting. A larger model is not a required alternative.
+
+- Add bounded retained-data evidence to selected eFed inventory entries, with a public-safe review summary and explicit gaps. Keep backup observations separate from source inspection, live-system testing and independent verification.
+
+- Add explicit output contracts and separate format/reasoning scores to a new planning Research variant. Preserve previous experiments and strict validation without repairing model answers. Local checks pass; live validation remains pending.
+
+- Group the Engineering Inventory by project under The Elora Taurus Project, adding initial WordPress plugin and eFed Manager Studio source inventories. Each project retains its own evidence scope; Engine live observations do not validate the new entries.
+
+- Add a Research planning variant with one candidate per step and validated progress carried into selection and scheduling. Compare delivery methods while retaining one parent-task result and total inference cost. Local checks pass; live validation remains pending.
+
+- Add a constrained planning Research scenario to compare Simplified plus micro-tasking against Simplified direct and the other delivery controls, with complete-answer validation and exportable total-cost results.
+
+- Improve Research benchmark failure reports so deferred requests are distinguishable from incomplete generation, with unavailable token costs clearly labelled unknown.
+
+- Add None, Optimised and Simplified Prompt Delivery choices to Observer, independent of Thinking. Add an Agent Research category with safe locked scenarios and retained delivery evidence. Local validation passes; live model experiments remain pending.
+
+- Prepare simple, action-free Research tasks to compare direct and micro-task delivery across None, Optimised and Simplified. Add exportable evidence and an Elora Research report showing correctness and total inference cost. Local checks pass; live small-model results remain pending.
+
+### Micro-tasking — Research pilot prepared locally
+
+- Strengthen the research pilot with session-authority checks between internal steps and before sending requests or releasing results. Revocation stops further admission while completed evidence is preserved. Small-model effectiveness and supervision benefits remain separate questions to validate; the pilot still performs no browser actions.
+
+- Add an experimental comparison of one direct model request with smaller bounded requests assembled into one result. The first pilot uses a fixed supplied-record task, validates intermediate answers and retains original restrictions and evidence. It does not execute browser actions or break down arbitrary prompts yet.
+- Local pilot checks pass. Live model-quality and total-cost comparisons remain pending; no production capability or learned model envelope is claimed.
+
+## 2026-10-09
+
+### Adaptive Prompt Delivery — local implementation
+
+- Add None, Optimised and Simplified delivery choices for new Browser Sessions. Each uses a separately versioned deterministic preparation method while preserving the original task, restrictions and Governance. None remains the comparison baseline, and thinking stays independent.
+- Add a Sense page to compare the normal and selected preparation side by side, with character totals and clearly labeled input-token estimates. It uses editable sample context without running a model, visiting a page or learning from the prompt.
+- Targeted local checks pass. Deployment and live model-quality comparisons remain pending. Conversational preparation, recursive task loops and task decomposition remain future work.
+
+## 2026-10-08
+
+### Browser session — local implementation
+
+- Prepare an Elora-controlled browser viewer with setup guidance, action approval, interrupt/stop controls and evidence capture. Initial scope is restricted public HTML and DOM observations; live deployment and screenshot input to the model are not established.
+
+### 2026-10-08 — Webpage response format
+
+- Corrected webpage reviews inheriting Document Review's output format.
+
 ## 0.2.10 — Execution Evidence, Standing and Public Records
 
 ### Release Focus
@@ -10,6 +238,11 @@
 - Bounded memory/context studies, local Engine identity and an evidence-based engineering portfolio.
 
 Development scope: `2026-09-23` onward. Release band assigned on `2026-10-06`; historical execution versions remain unchanged. Selected for the next deployment; live deployment is not established by this changelog.
+
+### 2026-10-08 — Clearer engineering evidence
+
+- Clarify what each implementation establishes, what it does not, and whether its evidence comes from source inspection, bounded tests or retained historical operation. Preserve limitations and distinguish these from deployment and independent verification.
+- Add an evidence guide and filters while keeping the portfolio layout. Local checks pass; the publication update awaits deployment and changes no Engine runtime behaviour.
 
 ### 2026-10-06 — Engineering portfolio navigation and architecture
 

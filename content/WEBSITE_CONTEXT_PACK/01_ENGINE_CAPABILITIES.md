@@ -1,6 +1,6 @@
 # Engine Capabilities (Current)
 
-Last updated: 2026-09-06
+Last updated: 2026-10-16
 
 First implemented (from changelog): 2026-02-28
 
@@ -42,6 +42,16 @@ First implemented (from changelog): 2026-02-28
 - Terminal completion checks retain incomplete output as evidence rather than approving it as an answer.
 
 ## Operator Surfaces
+
+- Read-only Memory Atlas session inspection, source references and recorded
+  recall/provider-delivery evidence, separate from Execution Atlas.
+- Isolated Observer delivery comparisons with durable logical children and
+  session memory retained through planned worker rotations.
+- Separate model probe/task scores and recognized Engine feature receipts.
+  The hundred-turn comparison is locally prepared; live validation is pending.
+- Optional signal/model-review availability and fallback evidence remain
+  separate from independent mandatory commit controls. Availability does not
+  establish contribution or benefit.
 
 - Dashboard groups for overview, governance, observability, AI runtime, fabric, lab, and admin operations.
 - Raw evidence visibility for operator and auditor workflows.

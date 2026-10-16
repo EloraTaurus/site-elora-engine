@@ -2,7 +2,7 @@
   "title": "Elora Research Engine Docs",
   "description": "Public-safe documentation for Elora as a research engine with governance capability, including runtime intelligence, behaviour learning, Threat Intelligence, and operator evidence architecture.",
   "section_intro": "Read in sequence: Overview -> Architecture -> Governance -> Runtime -> Fabric -> Operators -> API -> Security -> Testing -> Roadmap.",
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-10-16",
   "folder": "PUBLIC_DOCS",
   "sections": [
     {
@@ -60,7 +60,7 @@
         { "file": "10_engine_docs_operators_admin_dashboard_and_governance_md.md", "title": "Admin Dashboard and Governance" },
         { "file": "19_engine_docs_operators_pipelines_and_runtime_md.md", "title": "Pipelines and Runtime" },
         { "file": "18_engine_docs_operators_models_and_profiles_md.md", "title": "Models and Profiles" },
-        { "file": "17_engine_docs_operators_knowledge_memory_workbooks_md.md", "title": "Knowledge, Memory, Workbooks" },
+        { "file": "17_engine_docs_operators_knowledge_memory_workbooks_md.md", "title": "Knowledge, Memory and Evidence" },
         { "file": "11_engine_docs_operators_alerts_and_notification_posture_md.md", "title": "Alerts and Notification" },
         { "file": "12_engine_docs_operators_configuration_and_public_status_md.md", "title": "Configuration and Public Status" },
         { "file": "13_engine_docs_operators_fabric_and_worker_operations_md.md", "title": "Fabric and Worker Operations" }

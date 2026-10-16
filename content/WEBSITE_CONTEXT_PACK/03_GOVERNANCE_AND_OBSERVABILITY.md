@@ -1,10 +1,17 @@
 # Governance and Observability
 
-Last updated: 2026-09-06
+Last updated: 2026-10-16
 
 First implemented (from changelog): 2026-02-19
 
 ## Governance Focus
+
+Memory inspection now separates stored, recalled, admitted and submitted
+evidence. Memory Atlas is a read-only view; it does not grant execution or
+learning authority. Observer comparison reports retain child identity,
+rotation evidence and model outcomes without treating configuration flags as
+executed features. Unknown receipt formats remain unverified, and a passing
+safety evaluation is not proof that a denial path was exercised.
 
 Governance is treated as a first-class control surface, not a logging sidebar.
 

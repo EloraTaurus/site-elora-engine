@@ -1,10 +1,15 @@
 # Elora Engine Demo (Static)
 
-Static, non-functional demo that mirrors the **current** Elora Engine information architecture and surfaces.
+Static public website and synthetic demo for Elora Engine. Capability guides,
+curated technical documents and scripted demonstrations remain separate from
+the private operational Engine.
 
 ## Included
 - Public demo status page (`demo/index.html`)
-- Framework overview page (`demo/about.html`)
+- Framework overview (`demo/overview/`) and architecture (`demo/architecture/`)
+- Memory, Recall & Evidence (`demo/memory-recall/`): Engine-managed session
+  recall, read-only Memory Atlas and a fictional source-inspection example
+- Public documentation (`demo/docs/`) loaded from curated Markdown manifests
 - Client-side demo chat (scripted responses only)
 - Guided walkthroughs (`?tour=...&step=...`) for:
   - Engine snapshot
@@ -23,3 +28,23 @@ Static, non-functional demo that mirrors the **current** Elora Engine informatio
 - No backend writes
 
 Purpose: represent current engine UX and structure with demo-safe content.
+
+## Updating and reviewing
+
+Update static HTML together with its related content sources; a Markdown edit
+does not automatically regenerate a capability page. See `content/README.md`
+for the runtime-loaded manifests and changelog streams. New public pages need
+incoming links, canonical metadata and a sitemap entry.
+
+Serve this directory with a local static HTTP server to check page links,
+document loading, keyboard interactions and responsive layout. The website
+uses its existing deployment process; local edits do not establish publication.
+Keep implementation, controlled runtime observations, local validation and
+pending live studies separately labelled. Do not copy private research exports
+or operational identifiers into public examples.
+
+Browser QA for the new guide is in `scripts/test_demo_memory_recall.cjs`.
+With a local server serving `demo/`, run it with Node and Playwright available;
+`ELORA_DEMO_PREVIEW_URL` can override its default loopback preview address.
+It checks responsive layout, keyboard tabs, document deep links, incoming links,
+manifest loading and the changelog without making Engine/model requests.

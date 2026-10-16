@@ -4,6 +4,15 @@ Started as a solo build in late January 2026, Elora has evolved into a research 
 
 ## What Elora Can Do Today (Engine)
 
+### Session Recall and Memory Atlas
+
+- Engine-managed session storage, compaction, scoped recall and bounded context admission.
+- Read-only Memory Atlas source inspection, distinct from Execution Atlas.
+- Separate stored, recalled, admitted and provider-submitted evidence; internal model reliance remains unknown.
+- Logical-session continuity across planned Observer worker rotations and isolated delivery arms.
+- The hundred-turn Engine stress comparison is prepared locally, with live validation pending.
+- General production user memory and a session-memory-to-NNLSL bridge remain future integration; existing NNLSL and synthetic-user research are separate.
+
 ### Runtime and Commit Boundary
 
 - Proposal-first runtime flow with commit-stage validation.
@@ -61,6 +70,8 @@ Started as a solo build in late January 2026, Elora has evolved into a research 
 - WordPress integration and source-aware request context paths.
 
 ## What Is Available On This Public Website Today
+
+- Memory, Recall & Evidence capability guide with a fictional source-inspection example.
 
 - Governance Replay guided tour using synthetic records.
 - Governance Provenance capability guide, retained in the `0.2.10` release line selected for the next deployment.

@@ -1,6 +1,6 @@
 # Roadmap and Research Direction
 
-Last updated: 2026-04-25
+Last updated: 2026-10-16
 
 First implemented (from changelog): 2026-02-28
 
@@ -12,6 +12,15 @@ Elora is positioned as a research-based runtime engine:
 - replay/audit evidence is being expanded through iterative research tracks.
 
 ## Active Engineering Priorities
+
+Current memory checkpoint: scoped session recall and read-only Memory Atlas
+are implemented. Controlled delivery/lifecycle observations exist, while the
+new two-arm hundred-turn Engine stress study awaits live validation. Next
+evaluation targets are continuity under more pressure, correction handling,
+observed resource growth and evidence quality. General real-user memory and a
+session-memory-to-NNLSL bridge remain future integration work, with explicit
+ownership, consent and learning standards required. These are separate from
+existing NNLSL research and synthetic-user experiments.
 
 1. Commit admissibility hardening
 - enforce required decision-class and authority completeness rules.

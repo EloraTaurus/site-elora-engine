@@ -2,6 +2,13 @@
 
 Capability snapshot: 2026-09-06
 
+Memory/Observer addendum reviewed: 2026-10-16. Session recall, read-only Memory
+Atlas and isolated delivery comparisons are implemented. A controlled
+twelve-arm run retained rotation and request-delivery evidence; the harder
+hundred-turn comparison is locally prepared, not live-validated. See Memory,
+Recall and Evidence for current scope and future user-memory/NNLSL boundaries.
+Other dated material below retains its original review date.
+
 Release alignment reviewed: 2026-10-06. The next deployment line is `0.2.10`; this does not establish live deployment or redate the capability snapshot below.
 
 First implemented (from changelog): 2026-02-28

@@ -1,5 +1,13 @@
 # Quick Facts
 
+Memory/Observer addendum reviewed: 2026-10-16.
+
+- Session memory: Engine-managed scoped recall with bounded context admission
+- Memory inspection: read-only Memory Atlas in Sense, separate from Execution Atlas
+- Evidence boundary: stored, recalled, admitted and submitted are distinct; model reliance is unknown
+- Research state: controlled delivery/rotation observations exist; the new hundred-turn comparison awaits live validation
+- Future integration: general real-user cross-session memory and session-memory-to-NNLSL promotion are not established by the session feature
+
 - Project: The Elora Taurus Project
 - Positioning: Independent research engine with governance capability
 - Runtime core: Custom-built Python engine on self-managed infrastructure

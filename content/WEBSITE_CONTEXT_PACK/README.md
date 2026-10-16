@@ -24,6 +24,11 @@ Recommended website order:
 12. `05_ROADMAP_AND_MATURITY.md`
 13. `08_PARTNER_POSITIONING.md`
 
+`14_MEMORY_RECALL_AND_EVIDENCE.md` is linked after Engine Capabilities in the
+live manifest. It explains current session recall/Atlas, observed comparison
+mechanics and pending user-memory/NNLSL integration. Memory-related documents
+were reviewed on 2026-10-16; historical timelines retain their original dates.
+
 Reasoning for this order:
 - open with positioning and origin for context,
 - move into current capabilities and control-plane model,

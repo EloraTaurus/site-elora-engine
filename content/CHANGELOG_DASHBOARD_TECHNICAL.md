@@ -22,6 +22,28 @@ Exclude:
 - sensitive environment/configuration names
 - copy-reproducible security implementation sequences
 
+## 2026-10-16 — Memory and Observer evidence
+
+- Add public-safe Memory Atlas coverage for saved fragments, recall paths, source
+  inspection, model identity and exact block-delivery observations. Keep the graph
+  read-only and source records authoritative.
+- Describe managed isolated child comparisons and memory continuity across planned
+  rotations. Controlled lifecycle/delivery observations do not establish provider
+  cache erasure, perfect recall or internal model reliance.
+- Separate model response scores from recognized Engine activity receipts. Unknown
+  receipts, configuration flags and untriggered growth remain unverified. Private
+  JSON retains detailed evidence; public projections withhold private content.
+- Record local repairs for inflated child rotation totals, missed context-stack
+  echoes and report preparation failures. Existing downloaded artifacts and
+  historical source receipts are not silently rewritten.
+- The Native only versus Native with Simplified preparation hundred-turn study
+  is locally prepared with mandatory safeguards retained; its live validation is
+  pending. Existing non-neural learning and optional signal/model-review systems
+  remain separate from an unimplemented session-memory learning bridge.
+- Add a fictional website source inspector, manifest-listed document deep links
+  and refreshed technical copy. Website source verification is separate from
+  Engine build identity, publication and live model effectiveness.
+
 ## 2026-09-21
 
 - Governance now uses a shared workbench layout with an overview, evidence inspector and resource drill-downs.

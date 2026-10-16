@@ -3,11 +3,13 @@
   "description": "Structured feature and architecture context for what Elora can do today and what is in active build.",
   "section_intro": "Start with Snapshot, then use the left navigation for deeper context pages.",
   "folder": "WEBSITE_CONTEXT_PACK",
+  "last_updated": "2026-10-16",
   "articles": [
     { "file": "00_SNAPSHOT.md", "title": "Snapshot" },
     { "file": "00_PROJECT_POSITIONING.md", "title": "Project Positioning" },
     { "file": "10_PROJECT_ORIGIN_AND_BUILD.md", "title": "Project Origin and Build" },
     { "file": "01_ENGINE_CAPABILITIES.md", "title": "Engine Capabilities" },
+    { "file": "14_MEMORY_RECALL_AND_EVIDENCE.md", "title": "Memory, Recall and Evidence" },
     { "file": "02_ARCHITECTURE_AND_CONTROL_PLANE.md", "title": "Architecture and Control Plane" },
     { "file": "11_GOVERNANCE_PIPELINE.md", "title": "Governance Pipeline" },
     { "file": "03_GOVERNANCE_AND_OBSERVABILITY.md", "title": "Governance and Observability" },

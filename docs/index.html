@@ -50,11 +50,12 @@
         <div class="about-lead">
           <h1 id="pack-page-title">Public Documentation Pack</h1>
           <p id="pack-page-description">Public-safe Elora documentation covering research-engine architecture, governance controls, behaviour-learning direction, and operator evidence workflows.</p>
-          <p class="section-intro" id="pack-last-updated">Last updated: 2026-06-08</p>
+          <p class="section-intro" id="pack-last-updated">Memory and recall review: 2026-10-16</p>
           <div class="cta-row">
             <a class="btn" href="../architecture/">Back to Architecture</a>
           <a class="btn alt" href="../demo/">Open Demo</a>
           <a class="btn alt" href="../admin/demo.html">Open Curated Demo Hub</a>
+          <a class="btn alt" href="../memory-recall/">Memory, Recall &amp; Evidence</a>
           </div>
         </div>
       </section>
@@ -132,7 +133,7 @@
         title: 'Public Documentation Pack',
         description: 'Public-safe Elora documentation covering research-engine architecture, governance controls, behaviour-learning direction, and operator evidence workflows.',
         section_intro: 'Select a document from the left to view a public-safe copy.',
-        last_updated: '2026-06-08',
+        last_updated: '2026-10-16',
         folder: defaultPackKey,
         sections: [
           {
@@ -353,7 +354,10 @@
           return Array.isArray(section.articles) && section.articles.length > 0;
         });
         if (firstSection && firstSection.articles && firstSection.articles[0]) {
-          loadArticle(firstSection.articles[0].file);
+          const requestedArticle = query.get('doc');
+          const allowedArticles = (activePack.sections || []).flatMap(function (section) { return section.articles || []; });
+          const selectedArticle = allowedArticles.find(function (article) { return article.file === requestedArticle; });
+          loadArticle(selectedArticle ? selectedArticle.file : firstSection.articles[0].file);
         }
       }
 

@@ -7,6 +7,40 @@ Format:
 
 ## Major Milestones
 
+### 2026-10-16 — Simpler engineering inventory updates
+
+- Replace accumulated generated release folders with one current publication, an independent generation number and the previous changed JavaScript. Historical evidence remains separately retained. The new serving layout requires a one-time reader update; no live deployment was performed.
+
+### 2026-10-16 — Engineering evidence refresh
+
+- Expand the inventory to 129 records across Elora Engine, eFed Manager Studio and WordPress. Add recent architecture and game-engine mechanisms with source, local-test and retained export/database evidence. Keep limitations and unsuccessful outcomes visible; no independent certification or new live functionality claim is implied.
+
+### 2026-10-16 — Inspectable session recall
+
+- Add a public Memory, Recall & Evidence guide with fictional examples and a clear
+  distinction between Engine-managed retrieval and model database access.
+- Describe working session recall/Atlas and controlled rotation/delivery observations
+  separately from pending hundred-turn Engine stress validation and future real-user
+  memory/NNLSL integration. Recall is not automatic learning or proof of model reliance.
+- Refresh related public technical documents, navigation and changelog coverage.
+  These are local website-source updates; publication and new live-study results remain separate.
+
+### 2026-10-12 — Engineering inventory by project
+
+- Add today's eFed card combat, transient multiplayer rooms, timed legal-action fallback and pending-attack concealment to the inventory; extend its existing rule-based AI record. The catalogue now contains 120 entries. Source inspection and local synthetic checks are recorded separately from live gameplay and deployment, which remain unverified.
+
+- Refresh the inventory with prompt preparation, bounded micro-task research, restricted browser execution and live browsing policy evaluation. The catalogue now contains 116 entries; the four additions have source evidence, with runtime and effectiveness checks still outstanding.
+
+- Combine all 112 engineering entries in the default inventory, with coloured project pills in the Project column and filter. Architecture and live-review evidence remain separately scoped to Elora Engine.
+
+- Clarify the eFed image evidence review after tracing the local serving code: demo image selection is separate from WebP negotiation, unavailable derivatives fall back to originals, and serving does not generate derivatives. Preserve earlier reviews and unresolved ledger references without treating them as failed image delivery. Live response behaviour remains untested; Engine build identity unchanged.
+
+- Update the eFed retained-data review after a supplemental file export. Original image coverage is complete; generated-image evidence remains partial, with the review history and limitations retained.
+
+- Add a bounded eFed retained-data review for migration, setup and image artefacts. The portfolio distinguishes retained records from live functionality tests and records outstanding evidence without publishing raw game or account data.
+
+- Add a Project selector for Elora Engine, WordPress and eFed Manager Studio under The Elora Taurus Project. Initial WordPress and eFed records explain implemented mechanisms, third-party boundaries and outstanding validation. Their source inspections are separate from Engine's live-system review.
+
 ## 0.2.10 — Execution Evidence, Standing and Public Records
 
 ### Release Focus
@@ -17,6 +51,12 @@ Format:
 - Bounded memory/context studies, local Engine identity and an evidence-based engineering portfolio.
 
 Development scope: `2026-09-23` onward. Release band assigned on `2026-10-06`; historical execution versions remain unchanged. Selected for the next deployment; live deployment is not established by this changelog.
+
+### 2026-10-08 — Clearer engineering evidence
+
+- Add a dated AI-assisted Live System Review, scoped observation/source tags and a reproducible claim-review process. Show review completion out of 100% separately from observation coverage, with stage status and outstanding work. Initial full adjudication coverage is 0/98; nine mechanisms have scoped live observations. Completion does not mean claims passed or were independently certified. Updated publication is prepared locally, independently of Engine builds.
+
+- Add explicit supported claims, non-claims and evidence classifications to the portfolio, retaining historical observations and limitations. Source inspection, testing and runtime evidence remain separate from deployment and independent verification. Local checks pass; publication is pending.
 
 ### 2026-10-06 — Engineering portfolio navigation and architecture
 
