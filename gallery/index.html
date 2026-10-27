@@ -20,11 +20,11 @@
   <link rel="stylesheet" href="../style.css" />
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
-<body>
+<body class="public-site">
   <section class="top-stage" id="gallery">
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project overview">
+        <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project home">
           <div class="brand-icon"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='../admin/elora-avatar.svg';"></div>
           <div>
             <strong>The Elora Taurus Project</strong>
@@ -33,15 +33,25 @@
         </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-gallery"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
         <nav id="top-links-gallery" data-top-links="1" class="top-links">
+          <span class="site-nav-label">Explore Elora</span>
+          <a class="nav-btn" href="../">Home</a>
+          <a class="nav-btn" href="../explore/">Explore</a>
           <a class="nav-btn" href="../overview/">Overview</a>
+          <a class="nav-btn" href="../capabilities/">Capabilities</a>
+          <a class="nav-btn" href="../projects/">Projects &amp; Contributions</a>
           <a class="nav-btn" href="../architecture/">Architecture</a>
           <a class="nav-btn" href="../demo/">Demo</a>
-          <a class="nav-btn active" href="../gallery/">Gallery</a>
+          <a class="nav-btn active" aria-current="page" href="../gallery/">Gallery</a>
           <a class="nav-btn" href="../docs/">Documentation</a>
           <a class="nav-btn" href="../research/">Research</a>
-          <a class="nav-btn prior-art-btn" href="../prior-art/">Prior Art</a>
-
+          <a class="nav-btn" href="../publications/">Publications</a>
+          <a class="nav-btn" href="../prior-art/">Prior Art</a>
           <a class="nav-btn" href="../changelog/">Changelog</a>
+          <span class="site-nav-label site-nav-public">Public evidence</span>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/engineering" target="_blank" rel="noopener">Engineering <span aria-hidden="true">↗</span></a>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/public-reports/" target="_blank" rel="noopener">Public Reports <span aria-hidden="true">↗</span></a>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
     </header>
@@ -64,16 +74,16 @@
       <div class="gallery-carousel" data-gallery-carousel>
         <div class="gallery-stage">
           <figure class="gallery-slide is-active" data-gallery-slide>
-            <img src="../content/gallery-engine/engine-research-dashboard.png" alt="Elora Engine research dashboard view" onerror="this.onerror=null;this.src='../elora-demo-screenshot.png';" />
+            <img src="../content/gallery-engine/Research%20Dashboard.jpg" alt="Elora Engine research dashboard view" />
           </figure>
           <figure class="gallery-slide" data-gallery-slide>
-            <img src="../content/gallery-engine/engine-governance-replay.png" alt="Elora Engine governance replay view" onerror="this.onerror=null;this.src='../elora-architecture.png';" />
+            <img src="../content/gallery-engine/CORE%20Overview.jpg" alt="Elora CORE overview" />
           </figure>
           <figure class="gallery-slide" data-gallery-slide>
-            <img src="../content/gallery-engine/engine-tour-panel.png" alt="Elora Engine tour panel view" onerror="this.onerror=null;this.src='../social.png';" />
+            <img src="../elora-demo-screenshot.png" alt="Elora synthetic demo overview" />
           </figure>
           <figure class="gallery-slide" data-gallery-slide>
-            <img src="../content/gallery-engine/engine-report-view.png" alt="Elora Engine report view" onerror="this.onerror=null;this.src='../background.png';" />
+            <img src="../content/gallery-engine/Research%20Report.jpg" alt="Elora Engine research report view" />
           </figure>
         </div>
 
@@ -96,6 +106,9 @@
       <div class="footer-row">
         <strong>The Elora Taurus Project</strong>
         <nav class="footer-links">
+          <a href="../explore/">Explore</a>
+          <a href="../projects/">Projects &amp; Contributions</a>
+          <a href="../publications/">Publications</a>
           <a href="../overview/">Overview</a>
           <a href="../architecture/">Architecture</a>
           <a href="../demo/">Demo</a>

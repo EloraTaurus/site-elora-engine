@@ -3,9 +3,10 @@
   "description": "Structured feature and architecture context for what Elora can do today and what is in active build.",
   "section_intro": "Start with Snapshot, then use the left navigation for deeper context pages.",
   "folder": "WEBSITE_CONTEXT_PACK",
-  "last_updated": "2026-10-16",
+  "last_updated": "2026-10-27",
   "articles": [
     { "file": "00_SNAPSHOT.md", "title": "Snapshot" },
+    { "file": "15_PUBLIC_WORK_AND_RESEARCH.md", "title": "Public Work, Agents and Memory Delivery" },
     { "file": "00_PROJECT_POSITIONING.md", "title": "Project Positioning" },
     { "file": "10_PROJECT_ORIGIN_AND_BUILD.md", "title": "Project Origin and Build" },
     { "file": "01_ENGINE_CAPABILITIES.md", "title": "Engine Capabilities" },

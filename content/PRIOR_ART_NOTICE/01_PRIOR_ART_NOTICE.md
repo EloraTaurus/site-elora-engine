@@ -1,5 +1,11 @@
 # Technical Disclosure and Prior Art
 
+Archive update prepared 2026-10-27: the
+[October Implementation Supplement](../prior-art/?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md)
+covers later Agent, memory and publication work. Its repository milestone dates
+are separate from verified public disclosure dates. The original notice and
+historical evidence below retain their own scope.
+
 The Elora Taurus Project is an independent personal research and experimentation initiative focused on practical AI governance, execution boundaries, and accountable operator control.
 
 The project is independently designed and operated from the United Kingdom.

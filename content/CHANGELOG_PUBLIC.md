@@ -7,6 +7,106 @@ Format:
 
 ## Major Milestones
 
+### 2026-10-27 — Shared portrait, clearer navigation and technical archive refresh
+
+- Use Home and Explore throughout the public website. Match line icons across public surfaces and reuse the Engineering portrait with soft fades and responsive hero sizing.
+- Update the technical archive with an October implementation supplement covering Agent integration, memory experiments and evidence publication. Repository dates, public disclosure and examination results remain separate.
+
+### 2026-10-27 — Discover the work and contributions
+
+- Add the Explore directory (initially labelled All Pages) and consistent navigation to the public guides, research, publications and demos.
+- Add focused guides for Agent integration, Memory Delivery, related eFed and WordPress work, and documented research contributions and architectural exchange. Link implementation and evidence surfaces while retaining their scope and attribution.
+
+### 2026-10-27 — Consistent design across public Elora websites
+
+- Bring the main website's public pages into the Engineering, Dashboard and Public Reports design family, with a framed layout, desktop sidebar, mobile menu and consistent headings, cards and controls.
+- Add direct links to the public engineering and evidence surfaces. Preserve the existing guides and interactive examples; this website update is prepared locally for publication.
+
+### 2026-10-26 — Consistent public dashboard and evidence library
+
+- Bring the dashboard and Public Reports closer to the engineering portfolio's design, with cleaner sidebar navigation and category-based report browsing.
+- Surface recorded examination results, examined Engine versions and run dates where retained; distinguish run timing from report export/publication and preserve missing historical values.
+- Improve interactive compressed report previews while preserving original evidence downloads. Update the engineering catalogue without implying live deployment, certification or independent verification of report claims.
+
+### 2026-10-26 — External research Agent integration — prepared locally
+
+- Prepare an OAuth-protected MCP trial so external assistants can use Elora's governed tools while retaining their own inference provider. Each Agent has a separate identity and explicitly delegated access.
+- Start with read-only synthetic evidence and a connection tester. Comparing approved research, drafting bespoke reports, rendering and publication are planned stages with independent permission gates.
+- Add a public integration overview and record the security and deployment boundaries. Local validation passes; no live connection or access to the wider research collection is claimed. See the [Engine changelog](CHANGELOG_ENGINE.md) for detail.
+
+### 2026-10-22 — Late Engine/eFed engineering inventory refresh — prepared locally
+
+- Add experimental bounded recall and Adaptive Working Knowledge entries plus eFed federation-scoped access; expand existing dashboard, replay, migration, booking and execution mechanisms. Group related variants instead of counting each as a new system. The combined catalogue is 140 entries: 109 Engine, 27 eFed and four WordPress.
+- Retain hashed source/test evidence, including 123 Engine tests, 14 migration tests, 274 eFed PHP checks and local HTTP permission/workflow checks. Keep experimental negative/tied results, uncommitted prototype scope and old-report revision limits explicit. Existing database captures do not corroborate today's live rollout.
+- Regenerate private/public inventory outputs and include experimental integration scopes in In Development. Preserve the 98-entry review sprint, nine scoped browser observations, zero adjudications and previous profile scores. No live deployment or independent verification added.
+
+### 2026-10-22 — Portfolio search and sharing metadata — prepared locally
+
+- Generate page title, description, canonical URL and Open Graph/large-image social metadata in initial HTML from the shared portfolio source, reusing the existing Elora background artwork. Include the visible introduction before JavaScript loads.
+- Permit indexing only for the successful portfolio landing page and share artwork; keep APIs, errors and Public Reports excluded and preserve CSP/framing protections. Server header changes require the Engine update/restart alongside the generated publication. No server deployment or external search/share validation performed.
+
+### 2026-10-22 — Artwork palette and responsive project labels
+
+- Match the Taurus website link to the supplied artwork's cyan/blue/lavender colours and deepen the Engine gradient's blue endpoint to match the heading. Keep dark readable labels. Give list pills a wrapping label and more column space; use inventory cards at tablet widths to avoid squeezed project names. Regenerate the publication; no evidence changes or live deployment.
+
+### 2026-10-22 — Final portfolio project link presentation
+
+- Order the header links as Elora Engine, The Elora Taurus Project and eFed Manager Studio. Use a light green-to-blue Engine gradient and a separate pale pink-to-purple Taurus website gradient with dark readable labels. Retain existing project attribution and evidence; regenerate the publication without live deployment.
+
+### 2026-10-22 — Clearer project colours
+
+- Use black/red for eFed and left-to-right teal/blue for Elora across project pills, following Elora's existing palette. Mark the selected filter separately so project colours do not suggest whether a project is active.
+
+### 2026-10-22 — Portfolio scaling and mobile menu
+
+- Keep Elora's artwork at a consistent size across desktop widths, fading before the inventory. Add a collapsible mobile navigation menu so the catalogue appears sooner on small screens.
+
+### 2026-10-22 — Engineering portfolio artwork
+
+- Add the supplied Elora illustration behind the portfolio header, with fading and responsive treatment that keeps text and search controls usable. Evidence and review status are unchanged.
+
+### 2026-10-22 — Clearer catalogue totals
+
+- Label the 107 Engine records and 137 combined project records explicitly in JSON and Reading Guide. Keep frozen sprint scope, later additions, browser observations and completed adjudications as separate counts.
+
+### 2026-10-22 — Contextual eFed evidence panel
+
+- Show the collapsed eFed retained-data review below inventory search/filters only when eFed Manager Studio is selected.
+
+### 2026-10-22 — Clearer portfolio navigation and context
+
+- Keep the catalogue heading and profile link on one compact line, separated by a pipe.
+- Add an Engineer Profile link to Nathan's LinkedIn and an About the Engineer reference link. Shorten the technology navigation label and explain documentation classifications through tooltips. Keep Inventory as the landing page and retain historical evidence dates.
+
+### 2026-10-22 — Portfolio sidebar icons
+
+- Add consistent icons beside the engineering portfolio's sidebar pages and public links while keeping their text labels visible.
+
+### 2026-10-22 — Technology catalogue page
+
+- Make Technology Stack & Engineering Disciplines a separate sidebar page, with tabs for platform engineering, AI/runtime systems, research practices and frontend/web technologies. Keep configuration and workflow context under Research & Development Environment.
+
+### 2026-10-22 — Development environment and engineering practices
+
+- Add tabs separating the MacBook development workstation, AI-assisted engineering workflow, research infrastructure, technologies/disciplines and evidence scope. Link technical examples to the inventory and identify planning-only work. Distinguish AI-assisted implementation and internal review from independent verification.
+
+### 2026-10-22 — Clearer claim-review progress
+
+- Explain why engineering claims need review and clarify that sprint completion measures adjudication progress, not implementation or existing test coverage. Highlight the dated status snapshot and retain the distinction between AI-assisted review and independent verification.
+
+### 2026-10-22 — Windows setup evidence and inventory sweep
+
+- Expand existing engineering records for Windows prerequisite preparation, verified downloads and restart/resume, plus bounded Governance diagnostics and Inflight evidence projections. Source review and local fixtures support the descriptions; actual Windows installation and current server behavior remain separately unverified. Catalogue count remains 137.
+
+### 2026-10-22 — Portfolio introduction and research environment
+
+- Add the Independent Engineering Portfolio introduction, direct project links and a Research & Development Environment page. Document supplied host resources separately from implementation evidence and measured performance.
+- Distinguish the AI runtime and research site from the project website with descriptive link tooltips and accessible labels. Keep the eFed retained-data review collapsed and move it below the headline statistics.
+
+### 2026-10-21 — Engineering inventory refresh
+
+- Update the catalogue to 137 entries across Elora Engine, eFed Manager Studio and WordPress. Add implemented mechanisms with dated source, local-test and retained-export evidence, including unsuccessful outcomes and validation gaps. Independent certification and current live deployment remain separate.
+
 ### 2026-10-16 — Simpler engineering inventory updates
 
 - Replace accumulated generated release folders with one current publication, an independent generation number and the previous changed JavaScript. Historical evidence remains separately retained. The new serving layout requires a one-time reader update; no live deployment was performed.

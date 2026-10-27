@@ -1,5 +1,10 @@
 # Chronology and Evidence Matrix
 
+October update prepared 2026-10-27: checked later repository milestones and
+their disclosure/validation limits are listed in the
+[October Implementation Supplement](../prior-art/?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md).
+The earlier implementation/disclosure dates and evidence gaps below are retained.
+
 This matrix separates implementation evidence, public disclosure, later formal demonstration, and current implementation. A later examination date is not the origin date of the mechanism it examines.
 
 | Mechanism / capability | Earliest implementation evidence | Earliest located public disclosure | Evidence class | Current evidence / later demonstration |

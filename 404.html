@@ -21,12 +21,17 @@
         "llm-inference",
         "architecture-layers", "governance-pack", "prior-art",
         "ecosystem-collaboration", "ecosystem-aegis", "cookie-policy",
-        "lab", "execution-monitor", "admin"
+        "lab", "execution-monitor", "admin", "explore", "projects",
+        "agent-integration", "memory-delivery", "capabilities", "gallery",
+        "memory-recall", "sense", "workspace", "execution-evidence",
+        "governance-provenance", "runtime-governance", "observer-research",
+        "elora-decisions", "elora-learning", "threat-intelligence", "guardrail-defence"
       ]);
 
       var parts = path.replace(/^\/+|\/+$/g, "").split("/").filter(Boolean);
       var projectBase = "";
-      if (parts.length > 0 && !sections.has(parts[0])) {
+      var topSection = (parts[0] || "").replace(/\.html$/i, "");
+      if (parts.length > 0 && !sections.has(topSection) && !aliases[topSection]) {
         projectBase = "/" + parts[0];
       }
 
@@ -71,7 +76,7 @@
 <body>
   <div class="wrap">
     <p>Page not found.</p>
-    <p><a href="./">Return to home</a></p>
+    <p><a href="/explore/">Explore</a> · <a href="/">Return to home</a></p>
   </div>
 </body>
 </html>

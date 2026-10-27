@@ -14,10 +14,10 @@
       "copy": "Distributed runtime and worker operations view."
     },
     {
-      "src": "Homepage.jpg",
-      "alt": "Elora homepage",
-      "title": "Homepage",
-      "copy": "Public-facing overview framing for Elora capabilities."
+      "src": "../../elora-demo-screenshot.png",
+      "alt": "Elora synthetic demo overview",
+      "title": "Demo Overview",
+      "copy": "Retained screenshot of the synthetic demonstration interface."
     },
     {
       "src": "Lab.jpg",

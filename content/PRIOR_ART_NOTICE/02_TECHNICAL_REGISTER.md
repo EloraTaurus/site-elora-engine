@@ -1,5 +1,11 @@
 # Technical Register (Capability-First Milestone Archive)
 
+October update prepared 2026-10-27: see the
+[October Implementation Supplement](../prior-art/?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md)
+for delegated Agent connections, bounded task evidence and memory/publication
+mechanisms. Historical register dates and unresolved fingerprints below are
+preserved; this supplement does not retrospectively verify them.
+
 This register is organized by functional capability so reviewers can map implementation evidence to governance concepts directly.
 
 ## Technical Disclosure Summary

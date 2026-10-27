@@ -20,11 +20,11 @@
   <link rel="stylesheet" href="../style.css" />
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
-<body>
+<body class="public-site">
   <section class="top-stage" id="prior-art">
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project overview">
+        <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project home">
           <div class="brand-icon"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='../admin/elora-avatar.svg';"></div>
           <div>
             <strong>The Elora Taurus Project</strong>
@@ -33,14 +33,25 @@
         </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-prior-art"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
         <nav id="top-links-prior-art" data-top-links="1" class="top-links">
+          <span class="site-nav-label">Explore Elora</span>
+          <a class="nav-btn" href="../">Home</a>
+          <a class="nav-btn" href="../explore/">Explore</a>
           <a class="nav-btn" href="../overview/">Overview</a>
+          <a class="nav-btn" href="../capabilities/">Capabilities</a>
+          <a class="nav-btn" href="../projects/">Projects &amp; Contributions</a>
           <a class="nav-btn" href="../architecture/">Architecture</a>
           <a class="nav-btn" href="../demo/">Demo</a>
           <a class="nav-btn" href="../gallery/">Gallery</a>
           <a class="nav-btn" href="../docs/">Documentation</a>
           <a class="nav-btn" href="../research/">Research</a>
-          <a class="nav-btn prior-art-btn active" href="../prior-art/">Prior Art</a>
+          <a class="nav-btn" href="../publications/">Publications</a>
+          <a class="nav-btn active" aria-current="page" href="../prior-art/">Prior Art</a>
           <a class="nav-btn" href="../changelog/">Changelog</a>
+          <span class="site-nav-label site-nav-public">Public evidence</span>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/engineering" target="_blank" rel="noopener">Engineering <span aria-hidden="true">↗</span></a>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/public-reports/" target="_blank" rel="noopener">Public Reports <span aria-hidden="true">↗</span></a>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
     </header>
@@ -49,8 +60,8 @@
         <div class="about-lead">
           <h1 id="pack-page-title">Technical Disclosure and Prior Art</h1>
           <p id="pack-page-description">Public-safe technical chronology separating implementation evidence, public disclosure, later formal examination, and current governance capability.</p>
-          <p class="note" id="pack-edition">Edition: Technical Disclosure v1</p>
-          <p class="section-intro" id="pack-last-updated">Last updated: 2026-09-29</p>
+          <p class="note" id="pack-edition">Edition: Technical Disclosure v1 · October supplement</p>
+          <p class="section-intro" id="pack-last-updated">Last updated: 2026-10-27</p>
           <p class="note" id="pack-disclosure-meta">First public disclosure date: 2026-03-09 | Jurisdiction: Global public internet publication | Purpose: Defensive publication and technical chronology</p>
           <div class="cta-row">
             <a class="btn" href="../research/">Back to Research</a>
@@ -68,8 +79,10 @@
       <p id="pack-section-intro" class="section-intro">Inspect dated capability milestones, evidence classes, Standing lineage, source references, and explicit claim boundaries.</p>
       <div class="card card-highlight" style="margin-bottom:14px;">
         <h3>How to Read This Record</h3>
+        <p>The October supplement was prepared on 27 October 2026. That revision date does not assign an earlier public disclosure date to later work or establish live publication of this revision.</p>
         <p>The archive keeps four questions separate: when a mechanism was first implemented, when it was first located in public disclosure, when it was later examined, and what exists in the current repository. A later examination does not become the origin date of the mechanism it tests.</p>
         <div class="cta-row">
+          <a class="btn" href="?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md#pack-reader-content">October Supplement</a>
           <a class="btn" href="?article=08_CHRONOLOGY_EVIDENCE_MATRIX.md#pack-reader-content">Evidence Matrix</a>
           <a class="btn alt" href="?article=09_STANDING_CURRENT_AUTHORITY.md#pack-reader-content">Standing Lineage</a>
           <a class="btn alt" href="?article=03_EVIDENCE_METHOD.md#pack-reader-content">Evidence Method</a>
@@ -157,6 +170,9 @@
       <div class="footer-row">
         <strong>The Elora Taurus Project</strong>
         <nav class="footer-links">
+          <a href="../explore/">Explore</a>
+          <a href="../projects/">Projects &amp; Contributions</a>
+          <a href="../publications/">Publications</a>
           <a href="../overview/">Overview</a>
           <a href="../architecture/">Architecture</a>
           <a href="../demo/">Demo</a>
@@ -167,8 +183,8 @@
         
           <a href="../cookie-policy/">Cookie Policy</a></nav>
       </div>
-      <div class="footer-note">This site is a guided snapshot for public visibility. Production deployments include expanded telemetry, policy trace depth, JSON drill-down outputs, and secured operator controls.</div>
-      <div class="footer-note">Edition: Technical Disclosure v1 | First public disclosure: 2026-03-09 | Last updated: 2026-09-29</div>
+      <div class="footer-note">Guides retain their own review dates. Explore the <a href="https://ai.elorataurus.com/engineering">Engineering catalogue</a> for documented implementation scope and <a href="https://ai.elorataurus.com/public-reports/">Public Reports</a> for deliberately published evidence.</div>
+      <div class="footer-note">Edition: Technical Disclosure v1 · October supplement | Original archive disclosure: 2026-03-09 | Local revision prepared: 2026-10-27</div>
       <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
     </div>
   </footer>
@@ -192,10 +208,11 @@
         title: 'Technical Disclosure and Prior Art',
         description: 'Public-safe technical chronology separating implementation evidence, public disclosure, later formal examination, and current governance capability.',
         section_intro: 'Inspect dated capability milestones, evidence classes, Standing lineage, source references, and explicit claim boundaries.',
-        last_updated: '2026-09-29',
+        last_updated: '2026-10-27',
         folder: defaultPackKey,
         articles: [
           { file: '01_PRIOR_ART_NOTICE.md', title: 'Notice and Scope' },
+          { file: '10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md', title: 'October Implementation Supplement' },
           { file: '02_TECHNICAL_REGISTER.md', title: 'Governance Technical Register' },
           { file: '08_CHRONOLOGY_EVIDENCE_MATRIX.md', title: 'Chronology & Evidence Matrix' },
           { file: '09_STANDING_CURRENT_AUTHORITY.md', title: 'Standing & Current Authority' },

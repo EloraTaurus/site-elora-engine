@@ -5,6 +5,9 @@ curated technical documents and scripted demonstrations remain separate from
 the private operational Engine.
 
 ## Included
+- Explore (`demo/explore/`): static grouped directory with optional client-side filters
+- Projects & Contributions (`demo/projects/`): related project work, research-data contributions and architectural exchange
+- External Agent Integration (`demo/agent-integration/`) and Memory Delivery Research (`demo/memory-delivery/`): public scope and evidence guides
 - Public demo status page (`demo/index.html`)
 - Framework overview (`demo/overview/`) and architecture (`demo/architecture/`)
 - Memory, Recall & Evidence (`demo/memory-recall/`): Engine-managed session
@@ -30,6 +33,19 @@ the private operational Engine.
 Purpose: represent current engine UX and structure with demo-safe content.
 
 ## Updating and reviewing
+
+The public information pages use the `public-site` body class and shared
+`style.css` shell: a framed pale-blue surface, desktop navigation rail and
+collapsible mobile menu. Public evidence links connect Engineering, Public
+Dashboard and Public Reports. The shell is scoped separately from synthetic
+admin demos, the Lab and canary experiments. Public page heroes use
+`elora-engineering.png`, copied unchanged from Engineering's portrait, with
+horizontal and vertical fades and lower opacity on narrow screens. The older
+`background.png` remains available to existing references. The cookie
+policy uses matching
+light colours in its standalone layout. Deploy the updated HTML pages together
+with the shared stylesheet; this static-site presentation does not require an
+Engine build or restart.
 
 Update static HTML together with its related content sources; a Markdown edit
 does not automatically regenerate a capability page. See `content/README.md`

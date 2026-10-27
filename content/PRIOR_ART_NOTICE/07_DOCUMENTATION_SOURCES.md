@@ -1,5 +1,16 @@
 # Documentation Source Index (Engine, Fabric, WorkerHost)
 
+## October supplement sources
+
+The October Implementation Supplement was prepared on 2026-10-27 from the
+public-safe Engine chronology, Engineering entries E110/E111 and checked Git
+commit dates/messages for the listed milestones. The source review does not
+establish a first public publication date for those additions.
+
+Use the public Engineering catalogue, Public Reports and the public changelog
+links in the supplement for current published context. The archive's earlier
+unresolved fingerprint references remain unresolved by this targeted refresh.
+
 This index points to source documentation used to map public-safe technical disclosure entries.
 
 ## Engine Documentation Sources

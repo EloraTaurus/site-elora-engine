@@ -19,6 +19,11 @@ These markdown files are the editable copy source for the static demo pages.
 
 ## Update workflow
 
+The prior-art archive includes an additive October implementation supplement
+prepared on 27 October 2026. Its compilation date does not establish a first
+public disclosure date. Keep the manifest, reader fallback list and visible
+revision date aligned; retain earlier archive and examination dates unchanged.
+
 1. Edit copy in the relevant markdown file.
 2. Keep section IDs unchanged so mapping stays clear.
 3. Apply matching changes to static HTML/JS, incoming page links and sitemap metadata.

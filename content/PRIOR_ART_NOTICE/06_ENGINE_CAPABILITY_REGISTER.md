@@ -1,5 +1,11 @@
 # Engine Capability Register (Beyond Governance)
 
+October update prepared 2026-10-27: the
+[October Implementation Supplement](../prior-art/?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md)
+adds Memory Delivery, external Agent integration and public evidence navigation
+to this dated archive. Earlier capability descriptions keep their original
+review scope; new publication and runtime validation are not inferred.
+
 This register documents non-governance capabilities implemented in Elora so the technical disclosure reflects the wider platform, not only governance-specific work.
 
 ## Early Milestones and External Evidence

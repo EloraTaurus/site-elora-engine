@@ -1,5 +1,318 @@
 # Engine Changelog
 
+### 2026-10-27 — Public navigation, portrait heroes and October disclosure supplement
+
+- Use Home and Explore consistently across the public website, with a 35-destination directory and guides for projects, contributions, Agent integration and Memory Delivery. Correct evidence destinations and missing gallery references.
+- Match line icons across the main site, Public Dashboard, Public Reports and Engineering. Reuse Engineering's Elora portrait with soft fades and a 620px minimum hero height on wide desktop screens; mobile remains content-sized.
+- Add an October implementation supplement to the technical disclosure archive. Repository milestone dates remain separate from public publication dates, historical disclosures and examination results. These website changes are prepared locally for upload.
+
+### 2026-10-27 — Agent task investigation and observation review
+
+- Add Agent-scoped synthetic jobs, retained task origins, paginated active/previous task navigation and linked task evidence. Hash-linked ledger checks and review holds retain their existing bounded authority scope.
+- Record human-controlled observation delivery, retry, review and explicit escalation as scoped Agent workflow development. Broader production research access and autonomous execution are not established by these synthetic paths.
+
+### 2026-10-27 — Isolated memory selection comparison
+
+- Add a separate frozen-versus-role-aware selection experiment while preserving the existing Memory Delivery treatment. Retain selector identity, source-role decisions, correction links and uncovered fields separately from the renderer.
+- Keep lexical heuristics, request integrity, context admission and model answers distinct. Local source and fixture evidence do not establish a winning selector or new live model results.
+
+### 2026-10-27 — Public website directory and research guides
+
+- Add Explore (initially labelled All Pages), Projects & Contributions, External Agent Integration and Memory Delivery guides. Connect public navigation, documentation manifests, research entry points and evidence links; preserve each project's attribution and experimental scope. This is a static website update prepared locally.
+
+### 2026-10-27 — Synthetic Task Ledger
+
+- Add an Agent-linked ledger with retained originals, separate task adjustments and linked stage evidence. Detect changed stage records, contain affected access and require human review while preserving quarantine. The trial remains synthetic and read-only.
+
+### 2026-10-27 — Agent plan history viewer
+
+- Display synthetic plan purposes, amendments, revisions and linked decision evidence. Agent settings save when toggled, using existing server authority checks.
+
+### 2026-10-27 — Clearer Agent controls
+
+- Make account controls directly accessible in visible blocks with contextual help. Keep consequential warnings visible and preserve existing authority checks.
+
+### 2026-10-27 — Synthetic Agent task plans
+
+- Add an opt-in read-only research workflow with versioned plans, constrained amendments and separately governed step execution. Plans cannot expand permissions.
+- Keep Do Not Enter independent and test stale revisions, concurrency, permission changes and replay. Broader production task monitoring remains future work.
+
+### 2026-10-27 — Synthetic Agent containment experiment
+
+- Add opt-in Do Not Enter discovery and a server-enforced forbidden read: deny execution, suspend the offending Agent and revoke its connection authority. Fresh consent is required after restoration.
+- Preserve the human owner and other Agents; add deterministic enforcement tests and correlated evidence. Broader automatic production containment remains disabled.
+
+### 2026-10-26 — Load evidence for Agent suspension
+
+- Add CPU, memory and storage evidence beside suspension timing records, with scope and sampling limits. Prepare matched idle/inference testing without expanding Agent access.
+
+### 2026-10-26 — Agent test navigation and live results
+
+- Add Connection tester tabs for test controls, suspension timings, CPU/memory and load comparison.
+- Record two server-enforced suspension trials below the 200 ms processing target and same-grant recovery, without claiming a worst-case guarantee or measured CPU/SSD contention.
+
+### 2026-10-26 — Agent resource Governance foundation
+
+- Reuse shared CPU/memory admission for synthetic Agent reads and show scoped resource samples in Agents. Capacity holds preserve the connection; suspension bypasses normal-work gates.
+- Add server-side enforcement tests. Live inference-load performance and reserved control capacity remain unverified.
+
+### 2026-10-26 — Agent controls and synthetic availability comparison
+
+- Add an immediate-save suspension switch and clearer per-Agent cards. Keep permanent connection revocation and one-time termination distinct.
+- Add controlled resume/renew and idle-versus-inference-labelled synthetic sampling, without generating inference or automatically changing access under load. Results describe local measurements; live load tolerance is still to be verified.
+
+### 2026-10-26 — Agent enforcement timing measurements
+
+- Show correlated control/rejection timings and a measured sub-200 ms target in Agents. Separate server intervals from external client awareness, incomplete measurements and functional enforcement results; no performance SLA or external runtime cutoff is implied.
+
+### 2026-10-26 — OAuth renewal request diagnostics
+
+- Add credential-free token-request lifecycle logging to distinguish requests reaching Elora from renewal rejections or success. Preserve existing permission and suspension controls; client recovery after Resume remains under investigation.
+
+### 2026-10-26 — Agent staged tests and session controls
+
+- Show timed synthetic reads, permission/session interventions and observed rejection results in Agents. Keep local harness timings distinct from external client latency.
+- Add recoverable Agent suspension and access-session termination while retaining OAuth consent; preserve explicit connection revocation as a separate control. Broader research and publication remain disabled.
+
+### 2026-10-26 — OAuth rejection compatibility fix
+
+- Keep expected OAuth authority rejections as protocol errors instead of server errors on Python 3.11. Preserve permission enforcement and add a safe startup version marker to help verify deployment consistency.
+
+### 2026-10-26 — Agent evidence and security previews
+
+- Add labelled Provenance and Security foundations to Agents, using existing recorded receipts and boundary observations. Keep incomplete evidence explicit and do not infer malicious intent from a denied request.
+- Preserve the synthetic read-only trial and document the staged plan for shared-system integration; no threat findings or automated responses are enabled.
+
+### 2026-10-26 — Renewable demo Agent connections
+
+- Keep authenticated demo connections recognised when Read sample is changed; check current research permissions on every call and block evidence/listing server-side when disabled.
+- Add rotating refresh credentials with a maximum 30-day connection lifetime, replay protection and explicit revocation. Keep the synthetic-only ceiling and existing Governance; update account/consent guidance. Deployment requires one fresh consent and live renewal/revocation checks.
+
+### 2026-10-26 — Reliable OAuth identity-reader startup
+
+- Initialize the Engine's read-only-peer WAL support at startup and surface its readiness explicitly. Keep identity access read-only in the OAuth service and require live deployment checks before retrying the connection.
+
+### 2026-10-26 — OAuth identity lookup compatibility
+
+- Preserve read-only identity access during token exchange using live SQLite readers and Engine-managed WAL availability. Keep revocation checks current and validate actual identity queries before the adapter accepts connections. Live deployment remains to be checked.
+
+### 2026-10-26 — OAuth service storage permissions
+
+- Align the private OAuth service user with its existing shared database ownership and validate access at startup. Preserve filesystem restrictions and the synthetic read-only Agent boundary. Live verification remains pending.
+
+### 2026-10-26 — General MCP client setup guidance
+
+- Make OAuth Clients instructions application/provider-neutral while retaining explicit client compatibility and authorization requirements.
+
+### 2026-10-26 — Clearer OAuth client registration
+
+- Add an OAuth Clients section to Agents with separate name and generated-ID labels, a copy button and explicit GPT configuration instructions. Keep application registration separate from Agent permissions.
+
+### 2026-10-26 — OAuth client compatibility
+
+- Accept optional client language hints during MCP authorization while preserving registered-client, callback, PKCE and read-scope protections. Live reconnection remains pending deployment.
+
+### 2026-10-26 — Login authenticator field
+
+- Show the authenticator or recovery-code field on the initial sign-in screen so enrolled users can submit their credentials together. Accounts without OTP can leave it blank.
+
+### 2026-10-26 — Administration cleanup and reusable assets
+
+- Simplify Administration navigation, headings and user-management controls. Share its styles and behavior across pages and use the existing content-navigation mechanism.
+- Version shared static images and assets so browsers can reuse unchanged files and fetch updated uploads. Keep account pages, authenticator material and private profile photos outside public caching. Live browser validation remains pending.
+
+### 2026-10-26 — Focused Administration workspace
+
+- Give Administration a direct outward-arrow launcher and default full-viewport focus with an exit control. Retain account-management permissions and existing page behavior.
+
+### 2026-10-26 — Authenticator QR codes and account recovery
+
+- Add locally generated QR pairing for Microsoft Authenticator and single-use recovery-code sign-in alongside the account password. Keep recovery credentials separate from Agent approvals.
+- Add protected recovery-code regeneration and confirmed authenticator replacement. Keep the old key active until the new app is verified, then revoke old codes and sessions. Local security and QR checks pass; phone and server testing remain pending.
+
+### 2026-10-26 — Administration layout and Profile authenticator setup
+
+- Bring Administration pages into the Sense-family workbench and make OTP setup discoverable in My Profile, including Microsoft Authenticator instructions and enabled status.
+- Repair enrollment confirmation and generated-secret verification, preserve existing enrolled authenticators, and keep permission/session protections. Local tests pass; live pairing and browser validation remain pending.
+
+### 2026-10-26 — Elora Agents sharing and navigation
+
+- Add Elora Agents social preview metadata using the existing engineering artwork. Give the dashboard launcher a person icon, lavender colour and outward arrow matching Sense's launch behaviour.
+
+### 2026-10-26 — Engineering publication design for Agent connections
+
+- Reuse the engineering publication's public stylesheet, Elora portrait and hero artwork for the MCP overview. Keep the research collection, synthetic trial and planned workflow clearly distinguished, without public sign-in links or inventory scripts.
+
+### 2026-10-26 — Elora styling for the public Agent connection page
+
+- Bring the public MCP overview into Elora's Sense visual style with section navigation, research and connection content, and a scope information panel. Adapt the layout for smaller screens.
+- Preserve the synthetic read-only trial and planned workflow labels without public sign-in links or account details. Local regression checks pass; deployed visual verification remains pending.
+
+### 2026-10-26 — Governed external Agent connection trial — prepared locally
+
+- Prepare distinct Agent identities and short-lived OAuth sessions using Elora's existing authentication, delegated permissions and Governance checks. Add a management workbench, explicit owner consent and a synthetic connection tester.
+- Limit the MCP trial to synthetic evidence reads. Drafting, rendering, real Research access and publication remain disabled; permission changes invalidate existing sessions.
+- Add a public Agent connection overview explaining the research-analysis direction and the wider collection of over 200 reports without implying those reports are available through the demo. Remove public sign-in links.
+- Review MCP security guidance and strengthen consent/callback presentation and browser protections. Local tests and deployment configuration checks pass; live deployment, external-client behavior and newer protocol compatibility remain unverified. The implementation is not a security certification.
+
+### 2026-10-25 — Sense memory_formats 1.2.0 presentation
+
+- Default the Memory delivery preview to the shared four memory-only renderings: natural language, mixed, JSON-only and positional with legend. Show the separate current request, source metadata, origin, renderer paths, token estimates and explicit budget failures.
+- Label JSON as deterministic rendering, not legacy Translation. Keep inference metrics unmeasured and older experiments distinct; no duplicated renderer, live inference, memory writes, learning or production integration.
+
+### 2026-10-25 — Automatic Sense task panels and demo tabs
+
+- Automatically reveal recognised task fields inside the composer with a removable task pill and reduced-motion-aware animation. Keep focus in the original message and preserve edited details for reconciliation; place examples above the input.
+- Split Intent composer, Prompt comparison and Memory delivery into keyboard-accessible page tabs. Workbench v3 extracts bounded image-subject/objective text with provenance; unknown details stay unresolved. Local preparation and mocked UI checks passed; no live tool calls, learning or Workspace activation.
+
+### 2026-10-25 — Integrated Sense composer expansion
+
+- Expand optional task details within the original prompt box, retaining the message as its top section. Explicit expansion, normal-text collapse, field preservation and preview-only behaviour remain unchanged; desktop/mobile browser checks passed locally.
+
+### 2026-10-25 — Sense sample requests and Workspace-style composer
+
+- Add a grouped, versioned library of 15 sample requests and bounded paraphrase recognition. Choosing an example only replaces the message after an explicit Use example action; quoted/negated controls remain unclassified.
+- Present the Sense demo with Workspace-style rounded input, compact inspect arrow and optional task details. No live Workspace integration, personal learning or tool/model dispatch; existing APD and AWK boundaries remain unchanged.
+
+### 2026-10-25 — Sense optional tool-intent suggestions (local prototype)
+
+- Extend the stable Sense composer with optional image, research and code task hints alongside document revision. Fields expand only on request; capability pills describe candidate intent, not tool availability or authority.
+- Add live recognition evidence, None/applicable Optimised/experimental Structured selection, copy and full reset. Preserve original text for newly suggested families, distinguish clarification, and support the longer document-revision example. Existing Simplified, frozen AWK and production dispatch remain unchanged; no deployment or live model benefit claimed.
+
+### 2026-10-24 — Generic task parser preview
+
+- Prepare a Sense comparison for turning document-review requests into explicit source, criteria, steps and output requirements. Retain original intent and unresolved wording, with clearly estimated token counts. This is a deterministic preview; live validation remains pending.
+
+### 2026-10-22 — Late Engine/eFed engineering inventory refresh — prepared locally
+
+- Add experimental bounded recall and Adaptive Working Knowledge entries plus eFed federation-scoped access; expand existing dashboard, replay, migration, booking and execution mechanisms. Group related variants instead of counting each as a new system. The combined catalogue is 140 entries: 109 Engine, 27 eFed and four WordPress.
+- Retain hashed source/test evidence, including 123 Engine tests, 14 migration tests, 274 eFed PHP checks and local HTTP permission/workflow checks. Keep experimental negative/tied results, uncommitted prototype scope and old-report revision limits explicit. Existing database captures do not corroborate today's live rollout.
+- Regenerate private/public inventory outputs and include experimental integration scopes in In Development. Preserve the 98-entry review sprint, nine scoped browser observations, zero adjudications and previous profile scores. No live deployment or independent verification added.
+
+### 2026-10-22 — Portfolio search and sharing metadata — prepared locally
+
+- Generate page title, description, canonical URL and Open Graph/large-image social metadata in initial HTML from the shared portfolio source, reusing the existing Elora background artwork. Include the visible introduction before JavaScript loads.
+- Permit indexing only for the successful portfolio landing page and share artwork; keep APIs, errors and Public Reports excluded and preserve CSP/framing protections. Server header changes require the Engine update/restart alongside the generated publication. No server deployment or external search/share validation performed.
+
+### 2026-10-22 — Artwork palette and responsive project labels
+
+- Match the Taurus website link to the supplied artwork's cyan/blue/lavender colours and deepen the Engine gradient's blue endpoint to match the heading. Keep dark readable labels. Give list pills a wrapping label and more column space; use inventory cards at tablet widths to avoid squeezed project names. Regenerate the publication; no evidence changes or live deployment.
+
+### 2026-10-22 — Final portfolio project link presentation
+
+- Order the header links as Elora Engine, The Elora Taurus Project and eFed Manager Studio. Use a light green-to-blue Engine gradient and a separate pale pink-to-purple Taurus website gradient with dark readable labels. Retain existing project attribution and evidence; regenerate the publication without live deployment.
+
+## 2026-10-22 — Project identity gradients
+
+- Give project pills consistent gradients, including black/red eFed and teal-to-blue Elora following the existing palette, with a checkmark and outline for the selected filter. Regenerate the publication without changing evidence.
+
+## 2026-10-22 — Stable artwork and mobile navigation
+
+- Keep the portfolio artwork at a consistent 620px scale and fade it before the inventory content. Collapse mobile navigation behind a Menu button with keyboard support and closing after selection. Regenerate the existing publication.
+
+## 2026-10-22 — Engineering portfolio artwork
+
+- Add the supplied Elora backdrop with responsive readability and control protection. Include a verified PNG in the publication; its new serving support requires a one-time Engine reader update/restart. Preserve older bundle support, existing security policy and all inventory/review counts.
+
+## 2026-10-22 — Explicit catalogue and review totals
+
+- Explain the 107-Engine versus 137-combined entry counts and separate frozen review scope, later additions, observations and adjudications. Generate totals from source arrays/ledger and reuse them in Reading Guide without changing review progress.
+
+## 2026-10-22 — Project-scoped retained review
+
+- Place the collapsed eFed retained-data review below search/filters and show it only for the eFed project selection. Preserve review content and Engine build identity.
+
+## 2026-10-22 — Portfolio identity and classification guidance
+
+- Place the Engineer Profile link beside the catalogue title with a pipe separator, reducing toolbar height.
+- Add top-bar/reference LinkedIn profile links, shorten the technology sidebar label and explain statistics with hover/focus guidance. Display the latest evidence date with historical scope retained. Keep Inventory as the default page and regenerate independently of Engine build tracking.
+
+## 2026-10-22 — Portfolio sidebar icons
+
+- Reuse existing SVG glyphs for sidebar pages and public navigation links, retaining text labels and accessible controls. Regenerate the publication independently of Engine build tracking.
+
+## 2026-10-22 — Technology catalogue navigation
+
+- Give Technology Stack & Engineering Disciplines its own sidebar page with four category tabs. Reuse the structured catalogue and its evidence links/boundaries; retain the separate research environment page and unchanged review/assessment state.
+
+## 2026-10-22 — Development environment and engineering practice tabs
+
+- Add tabbed workstation configuration, AI-assisted workflow, research infrastructure and evidence-linked technologies/disciplines. Distinguish owner-described practice, implemented mechanisms, third-party capabilities, research and planning. Clarify reviewer independence without changing methodology scores or sprint progress; publication remains independent of Engine build tracking.
+
+## 2026-10-22 — Claim-review progress explanation
+
+- Add a short explanation above the sprint and distinguish claim-review completion from implementation/test coverage. Display the retained review status date prominently; results and Engine build identity are unchanged.
+
+## 2026-10-22 — Windows setup and engineering evidence sweep
+
+- Expand the existing Windows installer entry with prerequisite downloads/verification, WSL readiness and restart/resume, WebView2 setup and optional Ollama installation. Refresh bounded Governance reads and Inflight retained-history projections. Record source hashes and passing local fixtures separately from unverified Windows runtime acceptance; retain 137 entries and earlier reviews. Regenerate the publication without deploying.
+
+## 2026-10-22 — Engineering portfolio context
+
+- Add a shared portfolio introduction, links to the projects and a Research & Development Environment page documenting supplied host resources. Regenerate the publication independently of Engine build tracking.
+- Clarify project destinations through tooltips and accessible labels; move the collapsed eFed retained-data panel below the statistics. Prepare generation 5 in the existing publication folder without deploying to the server.
+
+## 2026-10-21 — Engineering inventory refresh
+
+- Expand the inventory to 137 entries covering recent recall/replay/migration mechanisms and eFed planning, portable cores and image ownership. Keep failed probes, backup gaps and validation limits beside positive evidence. Regenerate the existing folder with an independent publication generation; no new live review or deployment is implied.
+
+## 2026-10-19 — Realistic memory stress and response boundaries
+
+- Extend the pending protocol with fictional payment reminders queried after
+  more than 70 intervening turns and a separate revoked-permission status check.
+  Retain three isolated arms, memory across rotations and mandatory safeguards.
+  These test conversation recall; no payment tool, execution or permission
+  enforcement result is claimed. Fresh runs are required across revisions;
+  private JSON preserves failed answers and recall-delivery evidence.
+
+- Flatten recursive summary prefixes and present generated native-history
+  summaries as quoted data. Clarify current-task and exact acknowledgement
+  instructions without rewriting model answers or weakening mandatory guards.
+- Capture discarded user sources when a long active tail forces history trimming,
+  using existing bounded session admission. Separate correction paragraphs from
+  later task briefs; retain original stored sources and explicit capacity limits.
+- Add a three-arm, hundred-turn realistic protocol: Native recall, Simplified
+  recall and a Native no-injected-recall control. Lock a 2,048-token requested
+  context and larger response allowance, with long exchanges, rule-breaking
+  probes, benign controls and isolated memory across rotations.
+- Separate strict task scores, content/format observations, actual response
+  lengths and recorded safety outcomes. Keep failures and unknown evidence visible.
+- Prepare sanitized observation packets with source checksums and explicit limits.
+  Existing observations retain their recorded context size; the new tiny-context
+  protocol and revised model behaviour await live verification. No publication,
+  recursive learning or new execution permissions are introduced.
+
+## 2026-10-18 — Memory Atlas long-study navigation and exports
+
+- Accumulate bounded turn-index pages automatically and show record counts,
+  distinct turns and their range. Refresh the capture boundary to include newly
+  committed turns; preserve separate comparison-arm sessions.
+- Add private JSON downloads for the selected turn or complete indexed session,
+  preserving inspection limits and delivery evidence. Session exports are
+  bounded, cancel on navigation and do not download a partial file on failure.
+- Keep inspection read-only and supervised, with no inference, learning or
+  retention changes. Timing review identifies provider waiting/input processing
+  as the dominant measured cost; inference settings and safeguards are unchanged.
+- Local navigation and export checks remain separate from deployed verification.
+
+## 2026-10-18 — Session correction recall repair
+
+- Select relevant user-attributed corrections before the session recall budget
+  cutoff, rather than allowing older lexical matches to crowd them out. Repeated
+  old quotes use their earliest retained generation; stored sources remain intact.
+- Align SQLite and Markdown session recall estimates with final context
+  admission. Keep whole excerpts, record budget exclusions and distinguish
+  submitted correction excerpts from complete stored fragments in Memory Atlas.
+- Retain selection and allocation receipts in private JSON. Mandatory guardrails,
+  context ceilings and fixed comparison sampling remain enforced. No recursive
+  learning or NNLSL integration is enabled.
+- Final review binds the prepared session selection to its query and context,
+  prevents a later extraction pass from overriding it, and records final memory
+  admission separately from initial fitting when the shared budget trims recall.
+- Offline preparation checks on the thirty factual probes from the three supplied
+  studies now retain the expected corrections. Fresh live-model verification of
+  the repair remains pending; previous model answers are unchanged.
+
 ## 2026-10-16 — Consolidated engineering publication
 
 - Consolidate portfolio output into one current folder with an independent generation number and one prior JavaScript file. Keep dated source evidence and serving Engine build identity separate; update the serving reader once for the new layout. No live deployment performed.

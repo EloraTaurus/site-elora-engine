@@ -2141,6 +2141,145 @@ button:hover {
   justify-content: flex-start;
 }
 
+/* Public website shell: shared with Engineering, Dashboard and Public Reports.
+   Scoped explicitly so synthetic demos and canary experiments keep their layout. */
+body.public-site {
+  --text: #203958;
+  --muted: #526d90;
+  --line: #d9e5f7;
+  --panel: #fff;
+  --panel-2: #f7faff;
+  --brand-link: #315daa;
+  --hero-body: #526d90;
+  box-sizing: border-box;
+  width: calc(100% - 36px);
+  max-width: 1920px;
+  min-height: calc(100dvh - 36px);
+  margin: 18px auto;
+  padding-left: 250px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #f7faff;
+  box-shadow: 0 8px 32px #395c9510;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  text-rendering: geometricPrecision;
+}
+.public-site .topbar,
+.public-site .topbar.is-scrolled {
+  position: fixed;
+  top: 18px;
+  bottom: 18px;
+  left: max(18px, calc((100vw - 1920px) / 2));
+  width: 250px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 23px 14px 20px;
+  overflow-y: auto;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 16px 0 0 16px;
+  background: linear-gradient(180deg, #fff, #f1f6ff);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.public-site .topbar-inner { display: flex; flex-direction: column; align-items: stretch; gap: 26px; padding: 0; }
+.public-site .brand { gap: 10px; letter-spacing: -.025em; }
+.public-site .brand > div:last-child { min-width: 0; }
+.public-site .brand strong { display: block; font-size: 14px; line-height: 1.4; font-weight: 650; }
+.public-site .brand small { margin-top: 5px; font-size: 10px; line-height: 1.5; letter-spacing: 0; }
+.public-site .brand-icon { width: 32px; height: 32px; flex: 0 0 32px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.public-site .top-links { display: flex; position: static; flex-direction: column; align-items: stretch; width: auto; gap: 4px; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.public-site .nav-toggle { display: none; background: #fff; color: #315daa; border-color: #d9e5f7; }
+.site-nav-label { padding: 0 12px 8px; color: #526d90; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.site-nav-public { margin-top: 18px; padding-top: 18px; border-top: 1px solid #d9e5f7; }
+.public-site .top-links .nav-btn { justify-content: flex-start; padding: 9px 12px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: #526d90; font-size: 12px; font-weight: 500; box-shadow: none; }
+.public-site .top-links .nav-btn:hover { color: #315daa; background: #eaf1fc; }
+.public-site .top-links .nav-btn.active { color: #315daa; border-color: #d9e5f7; background: #e8effd; font-weight: 650; }
+.public-site .site-outward { justify-content: flex-start !important; }
+.public-site .site-outward > span { margin-left: auto; }
+.public-site .top-stage { width:100%; padding:0; border:0; border-radius:0 16px 0 0; background:none; }
+.public-site .top-stage::before { content:""; position:absolute; inset:0 0 auto; height:min(620px,100%); border-radius:inherit; pointer-events:none; background-image:linear-gradient(90deg,#f7faff 0%,#f7fafff5 40%,#f7faff9c 65%,#f7faff00 90%),url('elora-engineering.png'); background-position:right top; background-size:100% 100%,auto 620px; background-repeat:no-repeat; mask-image:linear-gradient(#000 0%,#000 55%,#0000 100%); -webkit-mask-image:linear-gradient(#000 0%,#000 55%,#0000 100%); }
+.public-site .top-stage > .shell { position:relative; }
+.public-site .top-stage::after, .public-site .section + .section::before { display: none; }
+.public-site .shell { box-sizing: border-box; width: 100%; max-width: 1440px; padding: 36px 40px 28px; }
+.public-site .hero { margin: 0; padding: 8px 0 24px; gap: 30px; grid-template-columns: minmax(0, 1.4fr) minmax(0, .75fr); }
+.public-site .hero.about-hero { grid-template-columns: 1fr; }
+.public-site .hero h1 { font-size: clamp(27px, 2.7vw, 40px); font-weight: 650; letter-spacing: -.035em; line-height: 1.18; color: #168879; text-shadow: none; }
+.public-site .hero-title-silver { background: none; -webkit-text-fill-color: currentColor; }
+@supports (background-clip: text) {
+  .public-site .hero h1 { background: linear-gradient(110deg, #168879, #3985dc); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+}
+.public-site .hero p { font-size: 14px; line-height: 1.85; font-weight: 400; }
+.public-site .hero.hero-guide-curve .hero-guide-image { width: 100%; height: auto; max-height: 470px; object-fit: contain; margin: 0; }
+.public-site .hero.hero-guide-curve .hero-guide-standalone { align-self: start; }
+.public-site .hero-guide-standalone:not(.hero-demo-panel) { display:none; }
+.public-site .hero-slider { min-height: 285px; }
+.public-site .hero-slider-btn { border: 1px solid #d9e5f7; border-radius: 8px; background: #fff; color: #315daa; box-shadow: none; }
+.public-site .gallery-controls { flex-wrap: wrap; }
+.public-site .hero-capabilities { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 3px 12px #395c9506; }
+.public-site .hero-capabilities-head { font-size: 10px; color: #526d90; letter-spacing: .06em; }
+.public-site .chip { font-size: 10px; border-color: var(--line); background: #f7faff; color: #435d80; box-shadow: none; }
+.public-site .chip-dot { background: #6e91ed; }
+.public-site .cta-row { gap: 9px; }
+.public-site .btn, .public-site .btn.alt, .public-site .btn.mission, .public-site .btn.prior-art-cta { padding: 9px 13px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: #315daa; box-shadow: none; font-size: 12px; font-weight: 500; }
+.public-site .btn:hover { background: #eaf1fc; border-color: #a8bfe3; }
+.public-site .section, .public-site .trust-strip, .public-site .site-footer { box-sizing: border-box; width: 100%; margin-left: 0; background: transparent; }
+.public-site .section { padding: 30px 0; border-top: 1px solid #e5edf8; }
+.public-site .section-inner, .public-site .footer-inner { width: calc(100% - 80px); max-width: 1360px; }
+.public-site .section-inner > h2, .public-site .section-inner > h3 { text-align: left; color: #203958; font-size: 24px; font-weight: 650; letter-spacing: -.025em; }
+.public-site .section-inner > p { font-size: 14px; line-height: 1.85; color: #526d90; }
+.public-site .section-intro { max-width: none; }
+.public-site .card, .public-site .feature-card { border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 3px 12px #395c9506; }
+.public-site .card h3, .public-site .feature-card h3 { color: #203958; font-weight: 650; }
+.public-site .card p, .public-site .card li, .public-site .feature-card p { color: #526d90; font-size: 13px; line-height: 1.8; }
+.public-site .site-footer { border-top-color: var(--line); color: #526d90; font-size: 11px; }
+.public-site #home.top-stage { min-height:calc(100dvh - 38px); background:none; }
+.public-site #home .hero { min-height: 0; }
+.public-site #home .shell { min-height: calc(100dvh - 38px); }
+@media (min-width:1101px) {
+  .public-site .top-stage { min-height:620px; }
+  .public-site .top-stage:not(#home) > .shell { min-height:620px; display:flex; flex-direction:column; justify-content:center; }
+  .public-site .top-stage:not(#home) > .shell > .hero { width:100%; }
+  .public-site #home .hero { min-height:556px; align-content:center; }
+}
+.public-site a:focus-visible, .public-site button:focus-visible { outline: 3px solid #315daa; outline-offset: 3px; }
+@media (max-width: 1100px) {
+  .public-site .top-stage::before { opacity:.4; }
+  body.public-site { padding-left: 210px; }
+  .public-site .topbar, .public-site .topbar.is-scrolled { width: 210px; }
+  .public-site .shell { padding: 28px 24px; }
+  .public-site .section-inner, .public-site .footer-inner { width: calc(100% - 48px); }
+  .public-site .hero { grid-template-columns: minmax(0, 1fr); }
+  .public-site .hero-guide-standalone { display: none; }
+}
+@media (max-width: 760px) {
+  .public-site .top-stage::before { opacity:.22; background-size:100% 100%,auto 450px; }
+  body.public-site { width: 100%; min-height: 100dvh; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+  .public-site .topbar, .public-site .topbar.is-scrolled { position: relative; inset: auto; width: 100%; padding: 16px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; overflow: visible; }
+  .public-site .topbar-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; }
+  .public-site .nav-toggle { display: inline-flex; align-items: center; border-radius: 8px; padding: 8px 10px; }
+  .public-site .top-links { display: none; grid-column: 1 / -1; }
+  .public-site .top-links.open { display: flex; }
+  .public-site .shell { padding: 24px 18px; }
+  .public-site .section-inner, .public-site .footer-inner { width: calc(100% - 36px); }
+  .public-site .hero h1 { font-size: 29px; }
+  .public-site .hero-slider { min-height: 0; }
+  .public-site .hero-slider-controls { margin-top: 20px; }
+  .public-site .hero-capabilities { margin-top: 22px; }
+  .public-site .section { padding: 24px 0; }
+  .public-site #home.top-stage, .public-site #home .shell { min-height: 0; }
+  .public-site .top-stage { border-radius: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .public-site *, .public-site *::before, .public-site *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+@media (forced-colors: active) {
+  .public-site .top-stage::before { display:none; }
+  .public-site .hero h1 { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
+}
+
 @media (max-width: 760px) {
   .gallery-stage {
     min-height: 340px;
@@ -2149,3 +2288,38 @@ button:hover {
     justify-content: space-between;
   }
 }
+
+/* Decorative local SVG menu icons; link names remain ordinary text. */
+.site-directory-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin:20px 0; }
+.site-directory-grid > .card { min-width:0; padding:20px; }
+.site-directory-grid h3 { margin-top:0; font-size:16px; line-height:1.5; }
+.site-directory-grid h3 a { color:#315daa; }
+.site-directory-grid .btn { margin-top:8px; }
+.site-kicker { font-size:10px !important; text-transform:uppercase; letter-spacing:.07em; color:#61799b !important; }
+.home-discover { margin:24px 0; }
+.home-discover > h2 { font-size:24px; font-weight:650; letter-spacing:-.025em; }
+.site-directory-controls { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr) auto; align-items:end; gap:14px; margin-top:20px; padding:20px; border:1px solid #d9e5f7; border-radius:14px; background:#fff; }
+.site-directory-controls label { display:grid; gap:7px; font-size:12px; color:#526d90; min-width:0; }
+.site-directory-controls input,.site-directory-controls select { box-sizing:border-box; width:100%; min-width:0; padding:10px 12px; font:inherit; color:#203958; border:1px solid #d9e5f7; border-radius:8px; background:#f7faff; }
+.site-directory-controls[hidden], [data-directory-page][hidden], [data-directory-group][hidden] { display:none; }
+@media(max-width:1100px) { .site-directory-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:760px) { .site-directory-grid,.site-directory-controls { grid-template-columns:minmax(0,1fr); } }
+.public-site .top-links .nav-btn::before { content: ""; flex: 0 0 16px; width: 16px; height: 16px; background: currentColor; -webkit-mask: var(--site-nav-icon) center / contain no-repeat; mask: var(--site-nav-icon) center / contain no-repeat; }
+.public-site .top-links .nav-btn[href$="overview/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%223%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="architecture/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%228%22%20y%3D%223%22%20width%3D%228%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Cpath%20d%3D%22M12%208v5M5%2016v-3h14v3%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2216%22%20width%3D%226%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%226%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="demo/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22m10%208%206%204-6%204Z%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="gallery/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%222%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%221.5%22%2F%3E%3Cpath%20d%3D%22m3%2017%205-5%204%204%204-6%205%207%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="docs/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%205v16M12%205C8%202%204%203%202%204v15c3-1%207-1%2010%202%203-3%207-3%2010-2V4c-2-1-6-2-10%201Z%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="research/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%203h6M10%203v7L4%2020q-1%201%201%201h14q2%200%201-1l-6-10V3M7%2015h10%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="prior-art/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202%203%206v6c0%205%209%2010%209%2010s9-5%209-10V6Z%22%2F%3E%3Cpath%20d%3D%22m8%2012%203%203%205-6%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="changelog/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%2011a9%209%200%201%201%202%207M3%204v7h7M12%207v5l3%202%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href="https://ai.elorataurus.com/engineering"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m8%208-5%204%205%204m8-8%205%204-5%204m-3-11-2%2014%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href="https://ai.elorataurus.com/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%2016a9%209%200%201%201%2018%200M12%2012l5-5M5%2016h14M6%208l1%201M12%204v2%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href="https://ai.elorataurus.com/public-reports/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M14%202H5v20h14V7Z%20M14%202v6h5M8%2012h8M8%2016h8%22%2F%3E%3C%2Fsvg%3E"); }
+/* Matching icons for the expanded public directory navigation. */
+.public-site .top-links .nav-btn:is([href="../"],[href="./"]) { --site-nav-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 10 9-7 9 7v11h-7v-7h-4v7H3Z'/%3E%3C/svg%3E"); }
+.public-site .top-links .nav-btn[href$="explore/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%223%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="capabilities/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%228%22%20y%3D%223%22%20width%3D%228%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Cpath%20d%3D%22M12%208v5M5%2016v-3h14v3%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2216%22%20width%3D%226%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%226%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="projects/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m8%208-5%204%205%204m8-8%205%204-5%204m-3-11-2%2014%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href$="publications/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%205v16M12%205C8%202%204%203%202%204v15c3-1%207-1%2010%202%203-3%207-3%2010-2V4c-2-1-6-2-10%201Z%22%2F%3E%3C%2Fsvg%3E"); }
+.public-site .top-links .nav-btn[href="https://ai.elorataurus.com/agentic"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m8%208-5%204%205%204m8-8%205%204-5%204m-3-11-2%2014%22%2F%3E%3C%2Fsvg%3E"); }

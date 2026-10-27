@@ -1,5 +1,24 @@
 # Site / Demo Changelog
 
+## 2026-10-27 — Final public-site presentation and technical archive refresh
+
+- Rename All Pages to Explore, add Home and use matching line icons across the main site, Public Dashboard, Public Reports and Engineering.
+- Copy Engineering's Elora portrait into the static website. Add horizontal/bottom fades, reduced opacity on narrow screens and a 620px minimum hero height above the tablet breakpoint. Retain content-sized mobile heroes and the demo screenshot preview.
+- Vertically centre shorter desktop hero content within that space; longer content expands naturally and mobile keeps its normal flow.
+- Bring the public technical summaries up to date and add an October implementation supplement to the prior-art archive. Preserve earlier dates, recorded results and unresolved historical verification gaps. This source update is prepared locally for deployment.
+
+## 2026-10-27 — Public work directory and contribution guides
+
+- Add All Pages with a static grouped directory and optional search/category filters. Link it, Projects & Contributions, Publications and Capabilities consistently from the public navigation and footers.
+- Add Projects & Contributions, External Agent Integration and Memory Delivery Research guides. Preserve synthetic/experimental scope, project attribution and the distinction between implementation and retained results.
+- Connect the guides to Architecture and Documentation manifests, research/capability entry points and the homepage. Correct dashboard/report destinations, refresh the sitemap and static-host page aliases, and repair missing gallery image references using existing public assets.
+
+## 2026-10-27 — Shared public website design
+
+- Align the main website's public information pages with Engineering, Public Dashboard and Public Reports: framed layout, left navigation, teal-to-blue headings, restrained cards and compact controls.
+- Add shared public-evidence links and current-page navigation semantics. Retain the mobile Menu disclosure and check narrow layouts, documentation loading and memory-example keyboard controls locally.
+- Refresh cookie-policy colours to match. This is a static website update prepared locally; publication uses the existing website deployment process.
+
 ## 2026-10-16 — Memory, Recall & Evidence and technical refresh
 
 - Final source review clarifies actor-model delivery coverage, the uninstrumented

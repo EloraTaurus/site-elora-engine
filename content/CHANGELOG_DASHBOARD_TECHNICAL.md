@@ -22,6 +22,13 @@ Exclude:
 - sensitive environment/configuration names
 - copy-reproducible security implementation sequences
 
+## 2026-10-27 — Agent, memory and public-evidence refresh
+
+- Extend the synthetic read-only Agent connection trial with renewable OAuth authority, per-operation permission checks, bounded timing evidence, scoped task/job investigation and hash-linked ledger checks. Human observation review and explicit escalation remain separately controlled workflow development.
+- Retain Memory Delivery treatment revisions, context-admission outcomes and request-integrity evidence. A separate frozen-versus-role-aware selection experiment records heuristic role/correction decisions; new live model effectiveness is not established by this update.
+- Align public menu icons and improve Engineering's initial HTML for non-JavaScript readers. Add Home/Explore, the page directory and contribution/research guides to the static site, with the shared portrait and responsive hero sizing.
+- Extend technical chronology with a dated October supplement. Earlier disclosure dates, results and unverified historical references keep their own scope.
+
 ## 2026-10-16 — Memory and Observer evidence
 
 - Add public-safe Memory Atlas coverage for saved fragments, recall paths, source
