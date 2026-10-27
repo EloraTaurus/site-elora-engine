@@ -1,5 +1,19 @@
 # Engine Changelog
 
+### 2026-10-27 — Public page navigation and integrated technical chronology
+
+- Add a floating Elora section navigator to the public website and align short desktop heroes to a 500px portrait baseline. Retain keyboard navigation and content-sized mobile layouts.
+- Integrate new milestone rows into the existing technical chronology and keep the archive topic-based, preserving implementation/disclosure dates and evidence limits.
+
+### 2026-10-27 — Public demo refresh status and topic-based disclosure
+
+- Pause old public tour launchers while an updated Engine walkthrough is planned. The Demo Hub now points to current guides and deliberately published evidence.
+- Organise MCP/Agent, memory, authority and publication work into the relevant technical disclosure records. Preserve old supplement links, historical dates and examined results.
+
+### 2026-10-27 — Consistent public stylesheet caching
+
+- Version public stylesheet URLs from their exact CSS content so updated pages request the matching design. Add a refresh/check helper for future static-site deployments. Existing cached, unversioned pages may need one hard refresh; no Engine runtime change is required.
+
 ### 2026-10-27 — Public navigation, portrait heroes and October disclosure supplement
 
 - Use Home and Explore consistently across the public website, with a 35-destination directory and guides for projects, contributions, Agent integration and Memory Delivery. Correct evidence destinations and missing gallery references.

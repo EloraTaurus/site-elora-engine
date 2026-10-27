@@ -1,5 +1,28 @@
 # Evidence Method (Public and Private)
 
+## Public catalogue and preview evidence
+
+Record reviewed: 2026-10-27.
+
+Publication indexes only deliberately exported public-safe artefacts. Hydration
+extracts catalogue metadata and hashes without rewriting the evidence. A SHA-256
+identifies exact published file bytes; it does not establish truth, authorship,
+independent attestation or completeness of the underlying execution.
+
+Matching HTML and JSON can be presented as one record. Run start/completion,
+report export and publication dates are separate; missing retained values remain
+unestablished and are not reconstructed from filesystem timestamps.
+
+Supported compressed HTML can receive a bounded, integrity-checked derived
+preview. The original download remains unchanged. Script-enabled report viewing
+uses browser isolation and restricted network access; a usable preview is not
+an additional examination result or a general safety certification.
+
+Engineering's initial HTML and structured inventory are public projections of
+the same documented scope. A report, catalogue entry and current serving build
+remain distinct evidence identities. Existing Standing propositions, results
+and claim ceilings are not changed by catalogue or website updates.
+
 This page describes how Elora Taurus maintains a verifiable implementation chronology while operating with a private engine repository.
 
 ## Public-Surface Evidence

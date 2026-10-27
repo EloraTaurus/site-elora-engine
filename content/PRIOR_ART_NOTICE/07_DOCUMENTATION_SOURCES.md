@@ -1,15 +1,16 @@
 # Documentation Source Index (Engine, Fabric, WorkerHost)
 
-## October supplement sources
+## Topic-record sources
 
-The October Implementation Supplement was prepared on 2026-10-27 from the
-public-safe Engine chronology, Engineering entries E110/E111 and checked Git
-commit dates/messages for the listed milestones. The source review does not
-establish a first public publication date for those additions.
+The topic records were reviewed on 2026-10-27 from the public-safe Engine
+chronology, Engineering entries E110/E111 and checked Git milestone dates.
+Protocol and Agent material is in MCP Protocol & Agent Integration. Memory and
+publication work is in the Engine Capability Register, with the Evidence Method
+and Chronology Matrix retaining their own distinctions.
 
-Use the public Engineering catalogue, Public Reports and the public changelog
-links in the supplement for current published context. The archive's earlier
-unresolved fingerprint references remain unresolved by this targeted refresh.
+The source review does not establish a first public publication date. Earlier
+unresolved fingerprints remain unresolved. Old October Supplement reader links
+resolve to the MCP topic; the compatibility document points to the other records.
 
 This index points to source documentation used to map public-safe technical disclosure entries.
 

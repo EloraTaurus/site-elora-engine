@@ -1,14 +1,64 @@
 # Engine Capability Register (Beyond Governance)
 
-October update prepared 2026-10-27: the
-[October Implementation Supplement](../prior-art/?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md)
-adds Memory Delivery, external Agent integration and public evidence navigation
-to this dated archive. Earlier capability descriptions keep their original
-review scope; new publication and runtime validation are not inferred.
+Topic update prepared 2026-10-27: memory and public-evidence additions appear
+in the relevant sections below. Protocol integration is documented separately in
+[MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md).
+Earlier capability descriptions keep their own review scope.
 
 This register documents non-governance capabilities implemented in Elora so the technical disclosure reflects the wider platform, not only governance-specific work.
 
-## Early Milestones and External Evidence
+## Memory, publication and contribution capabilities
+
+Record reviewed: 2026-10-27.
+
+### Memory Delivery representation and conversation comparisons
+
+Checked repository milestones: fixed-evidence preview on 2026-10-25,
+`1ce6f1a7`; controlled format-comparison preview, `ee57311e` the same day.
+These identify particular source appearances. A first public disclosure date
+for these additions was not established in the targeted review.
+
+Natural-language, mixed, JSON-only and positional-with-legend renderers use the
+same selected evidence. Later revisioned conversation treatments retain isolated
+arms, context admission and request bindings. Protected fitting records budget
+denials and integrity failures instead of silently discarding the treatment.
+
+Selection, representation, submission and response quality remain different
+measurements. Historical captures keep their own protocol revisions. Neither a
+renderer nor a locally exercised comparison establishes general memory quality,
+efficiency gains or internal model reliance.
+
+### Separate role-aware selection experiment
+
+The locally prepared frozen-versus-role-aware comparison records heuristic
+source roles, correction links and uncovered fields separately from the renderer.
+Its integrated histories can diverge. It is not a fixed-history causal ablation,
+a general semantic truth detector or an established winning selector. A newer
+candidate requires its own live outcome evidence; production learning and
+mandatory authority checks are separate.
+
+### Public artefact catalogues and readable publication
+
+Public Reports discovers deliberately exported public-safe artefacts, associates
+available formats and retains original file hashes. Run, export and publication
+times are separate metadata. Derived previews preserve the original download
+bytes; browser isolation and bounded decompression are presentation controls.
+
+Engineering includes public catalogue entries in initial HTML for readers that
+do not run JavaScript. The main website connects guides, project contributions
+and evidence surfaces. Catalogue generation and publication do not create new
+execution evidence or redate historical records. See Evidence Method for the
+scope of these checks.
+
+### Project and contribution attribution
+
+Elora, eFed and WordPress retain separate implementation and validation scope.
+Testing/data contributions to external research and architectural dialogue with
+AEGIS are described as those relationships. Listing them does not transfer
+ownership, authorship or validation between projects. The Projects & Contributions
+and Publications pages retain their specific references.
+
+## Historical capability milestones
 
 ### WordPress Plugin Integration Milestone
 

@@ -7,6 +7,11 @@ Format:
 
 ## Major Milestones
 
+### 2026-10-27 — Demo refresh and topic-based technical records
+
+- Replace the older tour-launch hub with a clear refresh status and current guide/evidence links.
+- Give MCP Protocol & Agent Integration its own record, with memory, publication and other work placed in the relevant technical registers. Preserve old supplement bookmarks and historical evidence dates.
+
 ### 2026-10-27 — Shared portrait, clearer navigation and technical archive refresh
 
 - Use Home and Explore throughout the public website. Match line icons across public surfaces and reuse the Engineering portrait with soft fades and responsive hero sizing.

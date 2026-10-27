@@ -17,7 +17,7 @@
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
   <title>The Elora Taurus Project - Prior Art and Technical Disclosure</title>
   <link rel="icon" href="../elora.png" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../style.css?v=f1eb9bc8e3f4" />
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
 <body class="public-site">
@@ -60,7 +60,7 @@
         <div class="about-lead">
           <h1 id="pack-page-title">Technical Disclosure and Prior Art</h1>
           <p id="pack-page-description">Public-safe technical chronology separating implementation evidence, public disclosure, later formal examination, and current governance capability.</p>
-          <p class="note" id="pack-edition">Edition: Technical Disclosure v1 · October supplement</p>
+          <p class="note" id="pack-edition">Edition: Technical Disclosure v1</p>
           <p class="section-intro" id="pack-last-updated">Last updated: 2026-10-27</p>
           <p class="note" id="pack-disclosure-meta">First public disclosure date: 2026-03-09 | Jurisdiction: Global public internet publication | Purpose: Defensive publication and technical chronology</p>
           <div class="cta-row">
@@ -79,10 +79,10 @@
       <p id="pack-section-intro" class="section-intro">Inspect dated capability milestones, evidence classes, Standing lineage, source references, and explicit claim boundaries.</p>
       <div class="card card-highlight" style="margin-bottom:14px;">
         <h3>How to Read This Record</h3>
-        <p>The October supplement was prepared on 27 October 2026. That revision date does not assign an earlier public disclosure date to later work or establish live publication of this revision.</p>
+        <p>Records are organised by capability and protocol. Each milestone retains its implementation, review and disclosure dates. New entries join the relevant register; revision dates do not assign earlier disclosure dates to later work.</p>
         <p>The archive keeps four questions separate: when a mechanism was first implemented, when it was first located in public disclosure, when it was later examined, and what exists in the current repository. A later examination does not become the origin date of the mechanism it tests.</p>
         <div class="cta-row">
-          <a class="btn" href="?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md#pack-reader-content">October Supplement</a>
+          <a class="btn" href="?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md#pack-reader-content">MCP Protocol &amp; Agents</a>
           <a class="btn" href="?article=08_CHRONOLOGY_EVIDENCE_MATRIX.md#pack-reader-content">Evidence Matrix</a>
           <a class="btn alt" href="?article=09_STANDING_CURRENT_AUTHORITY.md#pack-reader-content">Standing Lineage</a>
           <a class="btn alt" href="?article=03_EVIDENCE_METHOD.md#pack-reader-content">Evidence Method</a>
@@ -184,7 +184,7 @@
           <a href="../cookie-policy/">Cookie Policy</a></nav>
       </div>
       <div class="footer-note">Guides retain their own review dates. Explore the <a href="https://ai.elorataurus.com/engineering">Engineering catalogue</a> for documented implementation scope and <a href="https://ai.elorataurus.com/public-reports/">Public Reports</a> for deliberately published evidence.</div>
-      <div class="footer-note">Edition: Technical Disclosure v1 · October supplement | Original archive disclosure: 2026-03-09 | Local revision prepared: 2026-10-27</div>
+      <div class="footer-note">Edition: Technical Disclosure v1 | Original archive disclosure: 2026-03-09 | Local revision prepared: 2026-10-27</div>
       <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
     </div>
   </footer>
@@ -203,7 +203,9 @@
       const defaultPackKey = 'PRIOR_ART_NOTICE';
       const query = new URLSearchParams(window.location.search);
       const requestedPack = (query.get('pack') || defaultPackKey).toUpperCase().replace(/[^A-Z0-9_-]/g, '');
-      const requestedArticle = (query.get('article') || '').replace(/[^A-Za-z0-9_.-]/g, '');
+      const articleName = (query.get('article') || '').replace(/[^A-Za-z0-9_.-]/g, '');
+      const requestedArticle = articleName === '10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md'
+        ? '10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md' : articleName;
       let activePack = {
         title: 'Technical Disclosure and Prior Art',
         description: 'Public-safe technical chronology separating implementation evidence, public disclosure, later formal examination, and current governance capability.',
@@ -212,7 +214,7 @@
         folder: defaultPackKey,
         articles: [
           { file: '01_PRIOR_ART_NOTICE.md', title: 'Notice and Scope' },
-          { file: '10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md', title: 'October Implementation Supplement' },
+          { file: '10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md', title: 'MCP Protocol & Agent Integration' },
           { file: '02_TECHNICAL_REGISTER.md', title: 'Governance Technical Register' },
           { file: '08_CHRONOLOGY_EVIDENCE_MATRIX.md', title: 'Chronology & Evidence Matrix' },
           { file: '09_STANDING_CURRENT_AUTHORITY.md', title: 'Standing & Current Authority' },
@@ -511,6 +513,7 @@
       init();
     })();
   </script>
-  <script defer src="../analytics-consent.js"></script>
+  <script defer src="../analytics-consent.js?v=2c63f3639970"></script>
+  <script src="../page-explorer.js?v=6352d5923504" defer></script>
 </body>
 </html>

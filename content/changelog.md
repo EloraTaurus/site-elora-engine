@@ -1,5 +1,23 @@
 # Site / Demo Changelog
 
+## 2026-10-27 — Floating page navigation and consistent hero sizing
+
+- Add an Elora Explore launcher with searchable section links, keyboard/Escape support and headings from asynchronously loaded documents. It provides local page navigation without a chat or Engine connection.
+- Use a 500px desktop baseline and matching portrait scale, with centred short content and natural mobile/long-content flow.
+- Merge newer milestone rows into the existing chronology table. Keep technical records organised by capability and protocol, with individual dates retained rather than month-specific section headings.
+
+## 2026-10-27 — Pause the old Demo Hub and organise technical records by topic
+
+- Replace the old tour-launch hub with a refresh-status page and links to current guides and evidence. Remove legacy tour launches from public information pages; retain the archived static files.
+- Rename the current protocol section to MCP Protocol & Agent Integration. Move memory, publication and contribution material into the capability register, authority refinements into the technical register, and milestone/evidence distinctions into their respective records.
+- Preserve the old supplement URL as a compatibility alias. Historical dates and examination results are unchanged.
+- Keep technical tables and long source labels within the mobile reader, with versioned stylesheet links refreshed for deployment.
+
+## 2026-10-27 — Keep public styles consistent after deployment
+
+- Add content-derived versions to public stylesheet links so updated HTML requests matching CSS rather than an older browser-cached design.
+- Add a refresh/check helper for subsequent stylesheet changes. Deploy HTML and CSS together; existing unversioned cached pages may need one hard refresh.
+
 ## 2026-10-27 — Final public-site presentation and technical archive refresh
 
 - Rename All Pages to Explore, add Home and use matching line icons across the main site, Public Dashboard, Public Reports and Engineering.

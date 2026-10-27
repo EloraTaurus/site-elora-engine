@@ -5,6 +5,10 @@ Contributions, External Agent Integration and Memory Delivery Research. Read
 Public Work, Agents and Memory Delivery for the current guide scope; the dated
 capability and research statements below retain their original review dates.
 
+Demo status update: the earlier tour launchers are paused from the public site.
+The Demo Hub now links current guides and evidence while a replacement is planned.
+Tour descriptions in the dated snapshot below are historical context.
+
 Capability snapshot: 2026-09-06
 
 Memory/Observer addendum reviewed: 2026-10-16. Session recall, read-only Memory

@@ -19,10 +19,12 @@ These markdown files are the editable copy source for the static demo pages.
 
 ## Update workflow
 
-The prior-art archive includes an additive October implementation supplement
-prepared on 27 October 2026. Its compilation date does not establish a first
-public disclosure date. Keep the manifest, reader fallback list and visible
-revision date aligned; retain earlier archive and examination dates unchanged.
+The prior-art archive separates MCP Protocol & Agent Integration from memory,
+capability, evidence-method and chronology records. The topic records
+were reviewed on 27 October 2026; its compilation date does not establish a first
+public disclosure date. Keep the manifest, reader fallback and visible date
+aligned. Earlier archive and examination dates remain unchanged. The old October
+Supplement query is retained as an alias for the MCP topic.
 
 1. Edit copy in the relevant markdown file.
 2. Keep section IDs unchanged so mapping stays clear.

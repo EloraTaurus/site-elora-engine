@@ -1,9 +1,9 @@
 # Chronology and Evidence Matrix
 
-October update prepared 2026-10-27: checked later repository milestones and
-their disclosure/validation limits are listed in the
-[October Implementation Supplement](../prior-art/?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md).
-The earlier implementation/disclosure dates and evidence gaps below are retained.
+Record reviewed 2026-10-27: the table below separates protocol,
+memory and workflow milestones. The
+[MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md)
+record provides the protocol-specific scope. Earlier evidence gaps remain.
 
 This matrix separates implementation evidence, public disclosure, later formal demonstration, and current implementation. A later examination date is not the origin date of the mechanism it examines.
 
@@ -23,6 +23,15 @@ This matrix separates implementation evidence, public disclosure, later formal d
 | Standing Examination v1 definition | 2026-09-23; verified fingerprint `664d743ea` | 2026-09-23 engine/research changelogs | Examination definition, not an implementation origin or result | Frozen on 2026-09-24 with a paired preserving/defeating proposition, falsifier, invariants and evidence contract |
 | Standing Examination v1 retained results | 2026-09-24 onward; verified publication and evidence-admission commits `7f2dd68c8`, `195c750f5` | Public Reports Standing Exams collection | Later formal demonstration | Retained records include insufficient-evidence and bounded passed results. Every result keeps `stop_required` and its own claim ceiling; satisfaction applies only to the examined build and paired scope |
 | Examination timing and generation-budget evidence | 2026-09-25; verified fingerprints `2e3f97637`, `f9b0ce68c` | 2026-09-25 engine/live changelogs | Later evidence-quality refinement | Newer records distinguish run time from report generation and expose bounded generation-budget evidence; neither is an operating-envelope claim |
+| Fixed-evidence Memory Delivery preview and format comparison | 2026-10-25; checked fingerprints `1ce6f1a7`, `ee57311e` | Not established in the targeted review | Checked repository milestones and scoped source review | Renderer/comparison implementation; general effectiveness and model quality gains are not established |
+| External Agent OAuth/MCP demonstration and renewable connections | 2026-10-26; checked fingerprints `3a8e61d8`, `d818b826` | Not established in the targeted review | Checked repository milestones and scoped source review | Synthetic reads and connection/permission lifecycle; wider Research access and universal client acceptance are separate |
+| Agent-first task investigation | 2026-10-27; checked fingerprint `3f032f90` | Not established in the targeted review | Checked repository milestone and scoped source review | Owner-scoped navigation and retained task evidence; not general autonomous execution |
+| Human review and explicit observation escalation | 2026-10-27; checked fingerprint `18d0b6d9` | Not established in the targeted review | Checked repository milestone and scoped source review | Human-directed workflow; observation and review do not expand authority |
+
+These checked repository appearances are not an exhaustive origin search.
+Memory candidates, publication refinements and project contributions keep their
+recorded scope. Compilation and deployment dates do not substitute for first
+public disclosure.
 
 ## Reading Rules
 

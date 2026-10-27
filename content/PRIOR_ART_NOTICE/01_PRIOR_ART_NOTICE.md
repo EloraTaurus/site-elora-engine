@@ -1,10 +1,11 @@
 # Technical Disclosure and Prior Art
 
-Archive update prepared 2026-10-27: the
-[October Implementation Supplement](../prior-art/?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md)
-covers later Agent, memory and publication work. Its repository milestone dates
-are separate from verified public disclosure dates. The original notice and
-historical evidence below retain their own scope.
+Topic update prepared 2026-10-27: read
+[MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md)
+for the protocol integration, the
+[Engine Capability Register](../prior-art/?article=06_ENGINE_CAPABILITY_REGISTER.md)
+for memory and publication work, and the chronology matrix for checked milestone
+dates. These dates remain separate from verified public disclosure dates.
 
 The Elora Taurus Project is an independent personal research and experimentation initiative focused on practical AI governance, execution boundaries, and accountable operator control.
 

@@ -14,12 +14,15 @@ the private operational Engine.
   recall, read-only Memory Atlas and a fictional source-inspection example
 - Public documentation (`demo/docs/`) loaded from curated Markdown manifests
 - Client-side demo chat (scripted responses only)
-- Guided walkthroughs (`?tour=...&step=...`) for:
+- The Demo Hub is a refresh-status page with current guide/evidence links. Older
+  tour launchers are removed from public information pages while a replacement
+  is planned. Legacy static files remain retained; they are not a current Engine demo.
+- Archived guided walkthroughs (`?tour=...&step=...`) covered:
   - Engine snapshot
   - Incident response flow
   - Worker fabric flow
   - Build direction roadmap
-- Admin demo with current section groups:
+- Archived admin-demo section groups:
   - Operations: Dashboard, Monitoring, Fabric, Nodes, Security
   - AI Runtime: Models, Pipeline, Knowledge, Memory, Behavior, Plugin, Benchmarks
   - Administration: Operators, Settings, Documentation
@@ -40,12 +43,26 @@ collapsible mobile menu. Public evidence links connect Engineering, Public
 Dashboard and Public Reports. The shell is scoped separately from synthetic
 admin demos, the Lab and canary experiments. Public page heroes use
 `elora-engineering.png`, copied unchanged from Engineering's portrait, with
-horizontal and vertical fades and lower opacity on narrow screens. The older
+horizontal and vertical fades and lower opacity on narrow screens. Short desktop
+heroes use one 500px baseline, with the artwork scaled to match. The older
 `background.png` remains available to existing references. The cookie
 policy uses matching
 light colours in its standalone layout. Deploy the updated HTML pages together
 with the shared stylesheet; this static-site presentation does not require an
 Engine build or restart.
+
+The floating Elora Explore launcher provides local section links and a section
+filter. It also follows headings loaded by the document readers. It is page
+navigation, with no model conversation or Engine connection, and is included
+only on the main public information pages.
+
+After changing public CSS or JavaScript, run `python3 scripts/version_demo_styles.py`
+from the repository root and deploy the updated HTML together with the CSS.
+The HTML links use a content hash so browsers request the matching asset
+instead of retaining an older cached design. Run the same command with `--check`
+to detect stale versions without editing files. GitHub Pages can retain cached
+responses for ten minutes; a hard refresh may be needed once when deploying
+this fix to browsers that already hold the older, unversioned HTML.
 
 Update static HTML together with its related content sources; a Markdown edit
 does not automatically regenerate a capability page. See `content/README.md`

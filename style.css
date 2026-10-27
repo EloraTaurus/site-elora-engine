@@ -1450,6 +1450,8 @@ a:hover { color: var(--brand-link-hover); }
   gap: 14px;
   align-items: start;
 }
+.public-site .pack-layout > * { min-width:0; }
+.public-site .pack-reader, .public-site .pack-nav-btn { overflow-wrap:anywhere; }
 
 .pack-nav {
   position: sticky;
@@ -2144,6 +2146,7 @@ button:hover {
 /* Public website shell: shared with Engineering, Dashboard and Public Reports.
    Scoped explicitly so synthetic demos and canary experiments keep their layout. */
 body.public-site {
+  --public-hero-height:500px;
   --text: #203958;
   --muted: #526d90;
   --line: #d9e5f7;
@@ -2200,7 +2203,7 @@ body.public-site {
 .public-site .site-outward { justify-content: flex-start !important; }
 .public-site .site-outward > span { margin-left: auto; }
 .public-site .top-stage { width:100%; padding:0; border:0; border-radius:0 16px 0 0; background:none; }
-.public-site .top-stage::before { content:""; position:absolute; inset:0 0 auto; height:min(620px,100%); border-radius:inherit; pointer-events:none; background-image:linear-gradient(90deg,#f7faff 0%,#f7fafff5 40%,#f7faff9c 65%,#f7faff00 90%),url('elora-engineering.png'); background-position:right top; background-size:100% 100%,auto 620px; background-repeat:no-repeat; mask-image:linear-gradient(#000 0%,#000 55%,#0000 100%); -webkit-mask-image:linear-gradient(#000 0%,#000 55%,#0000 100%); }
+.public-site .top-stage::before { content:""; position:absolute; inset:0 0 auto; height:min(var(--public-hero-height),100%); border-radius:inherit; pointer-events:none; background-image:linear-gradient(90deg,#f7faff 0%,#f7fafff5 40%,#f7faff9c 65%,#f7faff00 90%),url('elora-engineering.png'); background-position:right top; background-size:100% 100%,auto var(--public-hero-height); background-repeat:no-repeat; mask-image:linear-gradient(#000 0%,#000 55%,#0000 100%); -webkit-mask-image:linear-gradient(#000 0%,#000 55%,#0000 100%); }
 .public-site .top-stage > .shell { position:relative; }
 .public-site .top-stage::after, .public-site .section + .section::before { display: none; }
 .public-site .shell { box-sizing: border-box; width: 100%; max-width: 1440px; padding: 36px 40px 28px; }
@@ -2239,10 +2242,10 @@ body.public-site {
 .public-site #home .hero { min-height: 0; }
 .public-site #home .shell { min-height: calc(100dvh - 38px); }
 @media (min-width:1101px) {
-  .public-site .top-stage { min-height:620px; }
-  .public-site .top-stage:not(#home) > .shell { min-height:620px; display:flex; flex-direction:column; justify-content:center; }
+  .public-site .top-stage { min-height:var(--public-hero-height); }
+  .public-site .top-stage:not(#home) > .shell { min-height:var(--public-hero-height); display:flex; flex-direction:column; justify-content:center; }
   .public-site .top-stage:not(#home) > .shell > .hero { width:100%; }
-  .public-site #home .hero { min-height:556px; align-content:center; }
+  .public-site #home .hero { min-height:calc(var(--public-hero-height) - 64px); align-content:center; }
 }
 .public-site a:focus-visible, .public-site button:focus-visible { outline: 3px solid #315daa; outline-offset: 3px; }
 @media (max-width: 1100px) {
@@ -2317,6 +2320,25 @@ body.public-site {
 .public-site .top-links .nav-btn[href="https://ai.elorataurus.com/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%2016a9%209%200%201%201%2018%200M12%2012l5-5M5%2016h14M6%208l1%201M12%204v2%22%2F%3E%3C%2Fsvg%3E"); }
 .public-site .top-links .nav-btn[href="https://ai.elorataurus.com/public-reports/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M14%202H5v20h14V7Z%20M14%202v6h5M8%2012h8M8%2016h8%22%2F%3E%3C%2Fsvg%3E"); }
 /* Matching icons for the expanded public directory navigation. */
+/* Floating, non-modal section navigation. */
+.page-explorer { position:fixed; right:max(20px,calc((100vw - 1920px)/2 + 16px)); bottom:22px; z-index:180; font-family:inherit; }
+.page-explorer-toggle { display:flex; align-items:center; gap:10px; padding:6px 15px 6px 6px; border:1px solid #c7d8f1; border-radius:999px; background:#fff; color:#203958; font:inherit; font-size:12px; font-weight:600; cursor:pointer; box-shadow:0 5px 22px #294f7e24; }
+.page-explorer-toggle img { width:38px; height:38px; object-fit:cover; border-radius:50%; background:#edf3fb; }
+.page-explorer-toggle:hover { background:#f1f6ff; border-color:#9bb9e3; }
+.page-explorer-panel { position:absolute; bottom:calc(100% + 12px); right:0; box-sizing:border-box; width:min(360px,calc(100vw - 32px)); max-height:min(62dvh,560px); display:flex; flex-direction:column; padding:18px; border:1px solid #d9e5f7; border-radius:16px; background:#fff; box-shadow:0 12px 40px #20395826; }
+.page-explorer-panel[hidden] { display:none; }
+.page-explorer-panel header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.page-explorer-panel h2 { margin:0; color:#203958; font-size:15px; font-weight:650; letter-spacing:-.02em; }
+.page-explorer-panel > p { margin:6px 0 14px; color:#61799b; font-size:11px; line-height:1.6; }
+.page-explorer-panel input { box-sizing:border-box; width:100%; min-width:0; flex:0 0 auto; padding:10px 12px; margin:0 0 10px; border:1px solid #d9e5f7; border-radius:8px; background:#f7faff; color:#203958; font:inherit; font-size:12px; }
+.page-explorer-close { flex:0 0 30px; width:30px; height:30px; padding:0; border:1px solid #d9e5f7; border-radius:8px; background:#f7faff; color:#315daa; font:inherit; font-size:21px; cursor:pointer; }
+.page-explorer-panel nav { min-height:0; overflow:auto; overscroll-behavior:contain; }
+.page-explorer-panel ol { list-style:none; margin:0; padding:0; }
+.page-explorer-panel li + li { margin-top:4px; }
+.page-explorer-panel a { display:block; padding:10px 12px; border-radius:8px; color:#435d80; font-size:12px; line-height:1.5; overflow-wrap:anywhere; }
+.page-explorer-panel a:hover { background:#eaf1fc; color:#315daa; }
+.public-site .section-inner > h2, .public-site .section-inner > h3, .public-site #pack-reader-content :is(h2,h3) { scroll-margin-top:24px; }
+@media(max-width:760px) { .page-explorer { right:16px; bottom:16px; } .page-explorer-panel { position:fixed; left:16px; right:16px; bottom:78px; width:auto; max-height:60dvh; } }
 .public-site .top-links .nav-btn:is([href="../"],[href="./"]) { --site-nav-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 10 9-7 9 7v11h-7v-7h-4v7H3Z'/%3E%3C/svg%3E"); }
 .public-site .top-links .nav-btn[href$="explore/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%223%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3C%2Fsvg%3E"); }
 .public-site .top-links .nav-btn[href$="capabilities/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%228%22%20y%3D%223%22%20width%3D%228%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Cpath%20d%3D%22M12%208v5M5%2016v-3h14v3%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2216%22%20width%3D%226%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%226%22%20height%3D%225%22%20rx%3D%221%22%2F%3E%3C%2Fsvg%3E"); }

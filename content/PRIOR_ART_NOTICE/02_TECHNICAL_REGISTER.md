@@ -1,14 +1,35 @@
 # Technical Register (Capability-First Milestone Archive)
 
-October update prepared 2026-10-27: see the
-[October Implementation Supplement](../prior-art/?article=10_OCTOBER_IMPLEMENTATION_SUPPLEMENT.md)
-for delegated Agent connections, bounded task evidence and memory/publication
-mechanisms. Historical register dates and unresolved fingerprints below are
-preserved; this supplement does not retrospectively verify them.
+Topic update prepared 2026-10-27: the
+[MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md)
+record covers delegated connections and scoped Agent workflows. Authority and
+publication-evidence refinements are recorded below. Historical register dates
+and unresolved fingerprints retain their original status.
 
 This register is organized by functional capability so reviewers can map implementation evidence to governance concepts directly.
 
-## Technical Disclosure Summary
+## Delegated operation authority and evidence
+
+Record reviewed: 2026-10-27.
+
+External Agent connection identity is separate from current operation authority.
+Consent and renewable credentials retain a bounded connection, while protected
+operations recheck the delegated scope. Scoped synthetic task plans retain
+trusted originals, adjustment history and decision evidence. Integrity failures
+can hold work for owner review; observation delivery or escalation does not
+itself grant execution permission.
+
+The checked protocol milestones and their limits are recorded in
+[MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md).
+These additions do not establish general production Research access or replace
+the existing proposal-to-commit boundary.
+
+Public disclosure is also separate from execution authority: publishing an
+artefact records an operator's choice to share it. File hashes identify the exact
+published bytes; they do not authenticate the whole execution or certify the
+Engine. See Evidence Method for catalogue, preview and timing distinctions.
+
+## Governance architecture summary
 
 This disclosure describes a governance architecture in which AI outputs are treated as proposals until they pass a commit authorization boundary that evaluates admissibility against policy state, authority context, and justification evidence.
 

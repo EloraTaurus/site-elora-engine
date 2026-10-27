@@ -2,8 +2,8 @@
 
 This plugin chronology retains its recorded release dates; the latest listed
 release is 1.09 dated 26 August 2026. Later Engine, Agent and memory research
-changes are tracked in the Engine changelog and the October technical disclosure
-supplement. This documentation refresh does not invent a new plugin release.
+changes are tracked in the Engine changelog and the relevant technical disclosure
+registers. This documentation refresh does not invent a new plugin release.
 
 Disclosure level: Public (capability chronology). Implementation-level route names, internal thresholds, and reproducibility-critical details are intentionally omitted.
 
