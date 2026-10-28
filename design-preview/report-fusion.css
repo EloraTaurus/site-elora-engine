@@ -1,0 +1,44 @@
+/* Separate presentation study: report navigation and hierarchy, Observatory light content.
+   No report metrics, state colours or runtime controls are introduced. */
+body.public-site.elora-workspace-theme.report-fusion {
+  --study-navy:#080f31;
+  --study-cyan:#31c8f3;
+  --study-violet:#9639df;
+  --study-spectrum:linear-gradient(100deg,#2969ef,#5c4ee5 55%,#31c8f3);
+  background:radial-gradient(circle at 82% 1%,#9749df12,transparent 27rem),radial-gradient(circle at 34% 0%,#31c8f310,transparent 31rem),var(--elora-canvas);
+}
+.report-fusion.public-site :is(.topbar,.topbar.is-scrolled) { background:radial-gradient(ellipse at 90% 0%,#5c4ee530,transparent 50%),linear-gradient(180deg,#080f31,#101b4a); border-right-color:#263463; }
+.report-fusion.public-site .brand { color:#f4f8ff; }
+.report-fusion.public-site :is(.brand small,.site-nav-label,.top-links .nav-btn,.site-nav-group summary) { color:#bac8e9; }
+.report-fusion.public-site .site-nav-public { border-top-color:#344269; }
+.report-fusion.public-site .top-links .nav-btn:hover,
+.report-fusion.public-site .site-nav-group summary:hover { color:white; background:#ffffff0d; }
+.report-fusion.public-site .top-links .nav-btn[aria-current=page] { color:#fff; background:linear-gradient(110deg,#2969ef40,#5c4ee537); border-color:#5b72b0; box-shadow:inset 3px 0 var(--study-cyan); }
+.report-fusion.public-site .topbar :focus-visible { outline-color:var(--study-cyan); }
+.report-fusion .brand-icon { box-shadow:0 0 22px #31c8f326; }
+.report-fusion .design-study-bar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; padding:17px 0; border-bottom:1px solid var(--elora-line); color:var(--elora-muted); font-size:10px; }
+.report-fusion .design-study-bar strong { color:var(--elora-heading); margin-left:10px; font-weight:600; }
+.report-fusion .design-study-bar a { color:var(--elora-link); text-decoration:none; text-underline-offset:4px; }
+.report-fusion .design-study-bar a:hover { text-decoration:underline; }
+.report-fusion .study-mark { display:inline-block; width:7px; height:7px; margin-right:6px; border-radius:2px; background:var(--study-spectrum); }
+.report-fusion.public-site #home .home-hero { min-height:485px; }
+.report-fusion .home-portrait img { border:1px solid #e1e5f8; box-shadow:inset 0 1px white; }
+.report-fusion .home-research-focus { position:relative; overflow:hidden; background:linear-gradient(120deg,#fafdff,#f4f3ff 70%,#edeafa); border-color:#d0d9f4; }
+.report-fusion .home-research-focus::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background:var(--study-spectrum); }
+.report-fusion .study-section-number { display:inline-grid; place-items:center; width:26px; height:26px; margin-right:8px; border:1px solid #c8d6ee; border-radius:8px; color:var(--elora-link); background:var(--elora-surface); letter-spacing:0; }
+.report-fusion .home-card-grid>.card { position:relative; border-radius:14px; box-shadow:inset 0 1px white,0 8px 24px #26387c0a; background:linear-gradient(135deg,#fff,#f8f9ff); }
+.report-fusion .home-capabilities .card::before { content:""; position:absolute; top:22px; bottom:22px; left:0; width:3px; border-radius:0 3px 3px 0; background:var(--study-spectrum); }
+.report-fusion .home-capabilities .card:nth-child(2)::before { background:linear-gradient(#5c4ee5,#9639df); }
+.report-fusion .home-capabilities .card:nth-child(3)::before { background:linear-gradient(#238dcc,#31c8f3); }
+.report-fusion .home-card-number { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:10px; }
+.report-fusion .home-evidence-note { padding:22px; border:1px solid var(--elora-line); border-left:3px solid #5c4ee5; border-radius:12px; background:#ffffffb8; }
+@media(max-width:760px) {
+  .report-fusion.public-site .nav-toggle { background:#ffffff0d; border-color:#687bad; color:#f4f8ff; }
+  .report-fusion.public-site #home .home-hero { min-height:0; }
+  .report-fusion .design-study-bar { align-items:start; flex-direction:column; padding:14px 0; gap:7px; }
+}
+@media(forced-colors:active) {
+  .report-fusion.public-site :is(.topbar,.topbar.is-scrolled) { background:Canvas; color:CanvasText; }
+  .report-fusion.public-site :is(.brand,.brand small,.site-nav-label,.top-links .nav-btn,.site-nav-group summary) { color:LinkText; }
+  .report-fusion.public-site .top-links .nav-btn[aria-current=page] { color:LinkText; outline:1px solid Highlight; }
+}

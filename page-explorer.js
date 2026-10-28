@@ -12,7 +12,7 @@
   toggle.setAttribute('aria-controls', 'page-explorer-panel');
   const image = document.createElement('img');
   image.src = new URL('elora.png', script.src).href;
-  image.alt = ''; image.width = 38; image.height = 38;
+  image.alt = ''; image.width = 28; image.height = 28;
   const label = document.createElement('span'); label.textContent = 'Explore';
   toggle.append(image, label);
   const panel = document.createElement('section');

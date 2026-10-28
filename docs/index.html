@@ -17,10 +17,12 @@
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
   <title>The Elora Taurus Project - Public Documentation</title>
   <link rel="icon" href="../elora.png" />
-  <link rel="stylesheet" href="../style.css?v=f1eb9bc8e3f4" />
+  <link rel="stylesheet" href="../workspace_theme.css?v=6016ccbddfab" />
+<link rel="stylesheet" href="../style.css?v=ed6d9e7847f1" />
+  <link rel="stylesheet" href="../public-hybrid.css?v=658580517299" />
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
-<body class="public-site">
+<body class="public-site elora-workspace-theme">
   <section class="top-stage" id="docs">
     <header class="topbar">
       <div class="topbar-inner">
@@ -32,33 +34,42 @@
           </div>
         </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-docs"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
-        <nav id="top-links-docs" data-top-links="1" class="top-links">
+        <nav id="top-links-docs" data-top-links="1" class="top-links" aria-label="Main navigation">
           <span class="site-nav-label">Explore Elora</span>
           <a class="nav-btn" href="../">Home</a>
-          <a class="nav-btn" href="../explore/">Explore</a>
-          <a class="nav-btn" href="../overview/">Overview</a>
-          <a class="nav-btn" href="../capabilities/">Capabilities</a>
-          <a class="nav-btn" href="../projects/">Projects &amp; Contributions</a>
-          <a class="nav-btn" href="../architecture/">Architecture</a>
-          <a class="nav-btn" href="../demo/">Demo</a>
-          <a class="nav-btn" href="../gallery/">Gallery</a>
-          <a class="nav-btn active" aria-current="page" href="../docs/">Documentation</a>
+          <a class="nav-btn" href="../overview/">The Engine</a>
           <a class="nav-btn" href="../research/">Research</a>
-          <a class="nav-btn" href="../publications/">Publications</a>
+          <a class="nav-btn" href="../projects/">Projects &amp; Contributions</a>
+          <a class="nav-btn" href="../explore/">All guides</a>
           <a class="nav-btn" href="../prior-art/">Prior Art</a>
-          <a class="nav-btn" href="../changelog/">Changelog</a>
+          <details class="site-nav-group" open>
+            <summary>Engine guides</summary>
+            <a class="nav-btn" href="../capabilities/">Capabilities</a>
+            <a class="nav-btn" href="../architecture/">Architecture</a>
+            <a class="nav-btn active" aria-current="page" href="../docs/">Documentation</a>
+            <a class="nav-btn" href="../demo/">Demo status</a>
+            <a class="nav-btn" href="../gallery/">Gallery</a>
+          </details>
+          <details class="site-nav-group">
+            <summary>Publications &amp; history</summary>
+            <a class="nav-btn" href="../publications/">Publications</a>
+            <a class="nav-btn" href="../changelog/">Changelog</a>
+          </details>
           <span class="site-nav-label site-nav-public">Public evidence</span>
           <a class="nav-btn site-outward" href="https://ai.elorataurus.com/engineering" target="_blank" rel="noopener">Engineering <span aria-hidden="true">↗</span></a>
-          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
           <a class="nav-btn site-outward" href="https://ai.elorataurus.com/public-reports/" target="_blank" rel="noopener">Public Reports <span aria-hidden="true">↗</span></a>
-          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
+          <details class="site-nav-group">
+            <summary>More public surfaces</summary>
+            <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
+            <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
+          </details>
         </nav>
       </div>
     </header>
     <div class="shell">
       <section class="hero about-hero">
         <div class="about-lead">
-          <h1 id="pack-page-title">Public Documentation Pack</h1>
+          <h1 id="pack-page-title">Public Documentation <span class="elora-heading-gradient">Pack</span></h1>
           <p id="pack-page-description">Public-safe Elora documentation covering research-engine architecture, governance controls, behaviour-learning direction, and operator evidence workflows.</p>
           <p class="section-intro" id="pack-last-updated">Memory and recall review: 2026-10-16</p>
           <div class="cta-row">
@@ -378,6 +389,6 @@
     })();
   </script>
   <script defer src="../analytics-consent.js?v=2c63f3639970"></script>
-  <script src="../page-explorer.js?v=6352d5923504" defer></script>
+  <script src="../page-explorer.js?v=350d6e3dae19" defer></script>
 </body>
 </html>

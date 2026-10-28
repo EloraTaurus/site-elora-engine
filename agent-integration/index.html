@@ -17,10 +17,12 @@
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
   <title>External Agent Integration | The Elora Taurus Project</title>
   <link rel="icon" href="../elora.png" />
-  <link rel="stylesheet" href="../style.css?v=f1eb9bc8e3f4" />
+  <link rel="stylesheet" href="../workspace_theme.css?v=6016ccbddfab" />
+<link rel="stylesheet" href="../style.css?v=ed6d9e7847f1" />
+  <link rel="stylesheet" href="../public-hybrid.css?v=658580517299" />
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
-<body class="public-site">
+<body class="public-site elora-workspace-theme">
 <section class="top-stage" id="agent-integration">
     <header class="topbar">
       <div class="topbar-inner">
@@ -32,30 +34,39 @@
           </div>
         </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-overview"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
-        <nav id="top-links-overview" data-top-links="1" class="top-links">
+        <nav id="top-links-overview" data-top-links="1" class="top-links" aria-label="Main navigation">
           <span class="site-nav-label">Explore Elora</span>
           <a class="nav-btn" href="../">Home</a>
-          <a class="nav-btn" href="../explore/">Explore</a>
-          <a class="nav-btn" href="../overview/">Overview</a>
-          <a class="nav-btn" href="../capabilities/">Capabilities</a>
-          <a class="nav-btn" href="../projects/">Projects &amp; Contributions</a>
-          <a class="nav-btn" href="../architecture/">Architecture</a>
-          <a class="nav-btn" href="../demo/">Demo</a>
-          <a class="nav-btn" href="../gallery/">Gallery</a>
-          <a class="nav-btn" href="../docs/">Documentation</a>
+          <a class="nav-btn" href="../overview/">The Engine</a>
           <a class="nav-btn" href="../research/">Research</a>
-          <a class="nav-btn" href="../publications/">Publications</a>
+          <a class="nav-btn" href="../projects/">Projects &amp; Contributions</a>
+          <a class="nav-btn" href="../explore/">All guides</a>
           <a class="nav-btn" href="../prior-art/">Prior Art</a>
-          <a class="nav-btn" href="../changelog/">Changelog</a>
+          <details class="site-nav-group">
+            <summary>Engine guides</summary>
+            <a class="nav-btn" href="../capabilities/">Capabilities</a>
+            <a class="nav-btn" href="../architecture/">Architecture</a>
+            <a class="nav-btn" href="../docs/">Documentation</a>
+            <a class="nav-btn" href="../demo/">Demo status</a>
+            <a class="nav-btn" href="../gallery/">Gallery</a>
+          </details>
+          <details class="site-nav-group">
+            <summary>Publications &amp; history</summary>
+            <a class="nav-btn" href="../publications/">Publications</a>
+            <a class="nav-btn" href="../changelog/">Changelog</a>
+          </details>
           <span class="site-nav-label site-nav-public">Public evidence</span>
           <a class="nav-btn site-outward" href="https://ai.elorataurus.com/engineering" target="_blank" rel="noopener">Engineering <span aria-hidden="true">↗</span></a>
-          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
           <a class="nav-btn site-outward" href="https://ai.elorataurus.com/public-reports/" target="_blank" rel="noopener">Public Reports <span aria-hidden="true">↗</span></a>
-          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
+          <details class="site-nav-group">
+            <summary>More public surfaces</summary>
+            <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
+            <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
+          </details>
         </nav>
       </div>
     </header>
-<div class="shell"><section class="hero about-hero"><div class="about-lead"><p class="site-kicker">The Elora Taurus Project · Explore our work</p><h1>External Agent Integration</h1><p>How external AI assistants can connect to Elora through delegated identities, OAuth and MCP, with a bounded synthetic demonstration and explicit permission checks.</p><div class="cta-row"><a class="btn" href="../explore/">Explore</a><a class="btn alt" href="https://ai.elorataurus.com/engineering">Engineering evidence ↗</a></div></div></section></div></section>
+<div class="shell"><section class="hero about-hero"><div class="about-lead"><p class="site-kicker">The Elora Taurus Project · Explore our work</p><h1>External Agent <span class="elora-heading-gradient">Integration</span></h1><p>How external AI assistants can connect to Elora through delegated identities, OAuth and MCP, with a bounded synthetic demonstration and explicit permission checks.</p><div class="cta-row"><a class="btn" href="../explore/">Explore</a><a class="btn alt" href="https://ai.elorataurus.com/engineering">Engineering evidence ↗</a></div></div></section></div></section>
 <section class="section surface-light"><div class="section-inner"><h2>A connection with explicit authority</h2><div class="site-directory-grid"><article class="card"><p class="site-kicker">Implemented demo scope</p><h3>Separate Agent identity</h3><p>External assistants retain their own inference provider. Owner consent binds a distinct Agent and registered OAuth client to an explicitly delegated scope.</p><a class="btn alt" href="https://ai.elorataurus.com/agentic">Read the integration overview ↗</a></article><article class="card"><p class="site-kicker">Governed connection</p><h3>Renewal and revocation</h3><p>Short-lived access credentials, rotating refresh credentials and per-operation permission checks keep connection identity separate from permission to retrieve evidence. Suspension, expiry and relevant owner changes invalidate authority.</p><a class="btn alt" href="https://ai.elorataurus.com/engineering">Inspect E110 in Engineering ↗</a></article><article class="card"><p class="site-kicker">Read-only foundation</p><h3>Bounded evidence views</h3><p>Agent Provenance and Security previews show retained audit receipts with missing historical fields preserved. The previews do not establish a shared threat detector or automatic security investigation.</p><a class="btn alt" href="../governance-provenance/">Explore provenance</a></article></div></div></section><section class="section surface-light"><div class="section-inner"><h2>What is available, and what is still experimental</h2><p>The public integration demonstration is scoped to synthetic, read-only evidence. Local tests cover the connection and permission boundaries; this guide does not establish acceptance by every MCP client or access to the wider Research collection.</p><p>Separate local prototypes explore staged task plans, retained task-ledger evidence and review holds. They remain synthetic development work. Bespoke analysis, report drafting, rendering and publication require their own governed integration and approval boundaries before availability can be claimed.</p><div class="cta-row"><a class="btn" href="https://ai.elorataurus.com/agentic">Elora Agents ↗</a><a class="btn alt" href="../workspace/">Governed Workspace</a><a class="btn alt" href="../execution-evidence/">Execution evidence</a></div></div></section>
   <footer class="site-footer">
     <div class="footer-inner">
@@ -109,6 +120,6 @@
     })();
   </script>
   <script defer src="../analytics-consent.js?v=2c63f3639970"></script>
-  <script src="../page-explorer.js?v=6352d5923504" defer></script>
+  <script src="../page-explorer.js?v=350d6e3dae19" defer></script>
 </body>
 </html>

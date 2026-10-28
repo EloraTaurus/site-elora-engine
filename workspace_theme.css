@@ -1,0 +1,44 @@
+/* Elora Sense / WorkSpace — Observatory light theme v1.
+   Public use: class="elora-workspace-theme" on a containing element.
+   Engine use: shell_style scopes this stylesheet to the calling shell. */
+.elora-workspace-theme{
+  --elora-canvas:#f7faff;--elora-surface:#ffffff;--elora-surface-alt:#f0f4fd;
+  --elora-ink:#11295c;--elora-heading:#0d2254;--elora-text:#4c638b;
+  --elora-muted:#56698d;--elora-line:#dce5f6;--elora-accent:#496cda;--elora-link:#3157c2;
+  --elora-card:linear-gradient(130deg,#fdfefe,#f7f8ff 65%,#f2effb);
+  --elora-feature:linear-gradient(130deg,#f9fdff,#f4f4ff 58%,#edeafa);
+  --elora-teal:linear-gradient(130deg,#edfbfa,#e3f3f8 48%,#e7e7fb);
+  --elora-selected:linear-gradient(135deg,#ffffff,#e0e8ff);
+  --elora-rail:linear-gradient(180deg,#ffffff,#f1f5fe);
+  --elora-shadow:inset 0 1px 0 #ffffff,0 8px 24px #5276c309;
+  --admin-bg:var(--elora-canvas);--admin-surface:var(--elora-surface);
+  --admin-surface-alt:var(--elora-surface-alt);--admin-text:var(--elora-ink);
+  --admin-text-soft:var(--elora-text);--admin-muted:var(--elora-muted);
+  --admin-line:var(--elora-line);--admin-accent:var(--elora-accent);
+  color:var(--elora-ink);background:var(--elora-canvas);
+}
+.elora-workspace-theme :is(.sense-content,.te-stream,.gov-content,.rw-content,.agents-content,.administration-content,.elora-content){
+  background:radial-gradient(ellipse at 48% 8%,#e9eaff8a,transparent 55%),var(--elora-canvas);
+}
+.elora-workspace-theme :is(.sense-rail,.te-rail,.gov-rail,.rw-rail,.agents-rail,.administration-rail,.elora-rail){background:var(--elora-rail)}
+.elora-workspace-theme :is(.sense-toolbar,.te-toolbar,.gov-toolbar,.rw-toolbar,.agents-toolbar,.administration-toolbar,.elora-toolbar){background:#fbfdff;border-color:var(--elora-line)}
+/* Only neutral surfaces: do not recolour findings, warnings or decision states. */
+.elora-workspace-theme :is(.sense-content,.te-main,.gov-content,.rw-content,.agents-content,.administration-content,.elora-content) .card:not(.warning,.warn,.danger,.error,.success,.ok,.blocked,.held,[data-state],[data-tone],[data-risk]),
+.elora-workspace-theme .elora-surface{
+  background:var(--elora-card)!important;border:1px solid var(--elora-line)!important;
+  border-radius:16px!important;box-shadow:var(--elora-shadow)!important;
+}
+.elora-workspace-theme .sense-panel .card{padding:18px!important;margin-bottom:14px}
+.elora-workspace-theme .gov-summary>.card{border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important}
+.elora-workspace-theme .elora-feature{background:var(--elora-feature)!important}
+.elora-workspace-theme .elora-feature-teal{background:var(--elora-teal)!important}
+.elora-workspace-theme :is(.sense-nav,.te-nav,.gov-nav,.rw-nav,.agents-nav,.administration-nav,.elora-nav)[aria-current=page],
+.elora-workspace-theme .elora-segments button[aria-selected=true]{background:var(--elora-selected);color:#3157c2;border-radius:10px}
+.elora-workspace-theme :is(.sense-content,.te-main,.gov-content,.rw-content,.agents-content,.administration-content,.elora-content) :is(input:not([type=checkbox]):not([type=radio]),select,textarea){
+  background:var(--elora-surface);border-color:var(--elora-line);color:var(--elora-text);border-radius:10px;
+}
+.elora-workspace-theme :focus-visible{outline:3px solid var(--elora-accent);outline-offset:3px}
+.elora-workspace-theme .elora-title{font-size:clamp(26px,3vw,32px);font-weight:650;letter-spacing:-1px;color:var(--elora-heading);line-height:1.2}
+.elora-workspace-theme .elora-caption{color:var(--elora-muted);font-size:12px;line-height:1.6}
+.elora-workspace-theme .elora-link{color:var(--elora-link)}
+@media(prefers-reduced-motion:reduce){.elora-workspace-theme .elora-segments button{transition:none;animation:none}}

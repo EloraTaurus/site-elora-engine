@@ -1,5 +1,10 @@
 # Site / Demo Changelog
 
+## 2026-10-28 — Observatory Light public website preview
+
+- Adopt the shared Sense / WorkSpace light-theme asset on public information pages, with deep blue reading text, lavender surfaces, selected navigation and restrained teal accents.
+- Keep portrait artwork, section navigation, mobile document flow and existing publication destinations. This local website preview does not change the separate Dashboard, Reports or Engineering surfaces.
+
 ## 2026-10-27 — Floating page navigation and consistent hero sizing
 
 - Add an Elora Explore launcher with searchable section links, keyboard/Escape support and headings from asynchronously loaded documents. It provides local page navigation without a chat or Engine connection.

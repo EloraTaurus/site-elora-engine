@@ -17,10 +17,13 @@
   <meta name="twitter:image" content="https://elorataurus.com/social.png" />
   <title>Elora Engine - Research Engine with Governance Capability</title>
   <link rel="icon" href="elora.png" />
-  <link rel="stylesheet" href="style.css?v=f1eb9bc8e3f4" />
+  <link rel="stylesheet" href="workspace_theme.css?v=6016ccbddfab" />
+  <link rel="stylesheet" href="style.css?v=ed6d9e7847f1" />
+  <link rel="stylesheet" href="home.css?v=82fb6506e05b" />
+  <link rel="stylesheet" href="public-hybrid.css?v=658580517299" />
   <meta name="elora-ga-id" content="G-33RBH775TR" />
 </head>
-<body class="home-page public-site">
+<body class="home-page public-site elora-workspace-theme">
   <div id="welcome-overlay" class="welcome-overlay" aria-live="polite">
     <div class="welcome-card welcome-card-split">
       <div class="welcome-copy">
@@ -45,99 +48,115 @@
           </div>
         </a>
         <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-home"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
-        <nav id="top-links-home" data-top-links="1" class="top-links">
+        <nav id="top-links-home" data-top-links="1" class="top-links" aria-label="Main navigation">
           <span class="site-nav-label">Explore Elora</span>
           <a class="nav-btn active" aria-current="page" href="./">Home</a>
-          <a class="nav-btn" href="explore/">Explore</a>
-          <a class="nav-btn" href="overview/">Overview</a>
-          <a class="nav-btn" href="capabilities/">Capabilities</a>
-          <a class="nav-btn" href="projects/">Projects &amp; Contributions</a>
-          <a class="nav-btn" href="architecture/">Architecture</a>
-          <a class="nav-btn" href="demo/">Demo</a>
-          <a class="nav-btn" href="gallery/">Gallery</a>
-          <a class="nav-btn" href="docs/">Documentation</a>
+          <a class="nav-btn" href="overview/">The Engine</a>
           <a class="nav-btn" href="research/">Research</a>
-          <a class="nav-btn" href="publications/">Publications</a>
+          <a class="nav-btn" href="projects/">Projects &amp; Contributions</a>
+          <a class="nav-btn" href="explore/">All guides</a>
           <a class="nav-btn" href="prior-art/">Prior Art</a>
-          <a class="nav-btn" href="changelog/">Changelog</a>
+          <details class="site-nav-group">
+            <summary>Engine guides</summary>
+            <a class="nav-btn" href="capabilities/">Capabilities</a>
+            <a class="nav-btn" href="architecture/">Architecture</a>
+            <a class="nav-btn" href="docs/">Documentation</a>
+            <a class="nav-btn" href="demo/">Demo status</a>
+            <a class="nav-btn" href="gallery/">Gallery</a>
+          </details>
+          <details class="site-nav-group">
+            <summary>Publications &amp; history</summary>
+            <a class="nav-btn" href="publications/">Publications</a>
+            <a class="nav-btn" href="changelog/">Changelog</a>
+          </details>
           <span class="site-nav-label site-nav-public">Public evidence</span>
           <a class="nav-btn site-outward" href="https://ai.elorataurus.com/engineering" target="_blank" rel="noopener">Engineering <span aria-hidden="true">↗</span></a>
-          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
           <a class="nav-btn site-outward" href="https://ai.elorataurus.com/public-reports/" target="_blank" rel="noopener">Public Reports <span aria-hidden="true">↗</span></a>
-          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
+          <details class="site-nav-group">
+            <summary>More public surfaces</summary>
+            <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
+            <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
+          </details>
         </nav>
       </div>
     </header>
     <div class="shell">
-      <section class="hero hero-guide-curve hero-slider-shell">
-        <div class="hero-copy">
-          <div class="hero-slider" data-hero-slider>
-            <article class="hero-slide is-active" data-slide>
-              <h1 class="hero-title-silver">A research engine with governance capability built on non-neural machine learning.</h1>
-              <p>Elora is a custom Python research engine that uses non-neural machine learning to detect AI behaviour patterns while governing execution through a deterministic proposal-to-commit boundary and surfacing structured operational decisions.</p>
-            </article>
-            <article class="hero-slide" data-slide>
-              <h1 class="hero-title-silver">Behaviour detection feeds evidence-first governance decisions.</h1>
-              <p>Detected behaviour signals are scored, linked to policy controls, and captured as structured evidence so allow or block outcomes can be replayed deterministically without regenerating model output.</p>
-            </article>
-            <article class="hero-slide" data-slide>
-              <h1 class="hero-title-silver">Threat Cases connect detections to explainable Governance outcomes.</h1>
-              <p>Evidence-backed findings and Case Reports connect attack evidence, recommendations, authorization context, final actions, and Governance decisions without giving Threat Intelligence execution authority.</p>
-            </article>
-            <article class="hero-slide" data-slide>
-              <h1 class="hero-title-silver">Elora Decisions turns runtime events into reviewable decision history.</h1>
-              <p>Operational outcomes are grouped into bounded decision stories so preparation, intervention, completion, cancellation, and cleanup can be reviewed as one structured record instead of scattered notifications.</p>
-            </article>
+      <main id="main-content">
+        <section class="hero home-hero" aria-labelledby="home-title">
+          <div class="home-introduction">
+            <p class="home-eyebrow">Independent research &amp; engineering</p>
+            <h1 id="home-title">Elora Taurus.<br> A research engine for<br> <span class="elora-heading-gradient">governed AI.</span></h1>
+            <p class="home-description">Elora studies AI behaviour and runtime systems, connecting non-neural machine learning, deterministic execution control and reviewable evidence.</p>
+            <div class="cta-row home-actions">
+              <a class="btn home-primary" href="overview/">Meet the Engine <span aria-hidden="true">→</span></a>
+              <a class="btn" href="research/">Explore the research</a>
+              <a class="home-text-link" href="https://ai.elorataurus.com/public-reports/" target="_blank" rel="noopener">Read public evidence <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="home-scope">A personal research project. Implementation, controlled observations and published evidence remain separately scoped.</p>
+          </div>
+          <figure class="home-portrait">
+            <img src="elora-engineering.png" alt="Elora, the project's illustrated research guide" width="1545" height="1018" fetchpriority="high" />
+            <figcaption>Elora Taurus <span>Research, with a human perspective.</span></figcaption>
+          </figure>
+        </section>
+
+        <section class="home-research-focus" aria-labelledby="research-focus-title">
+          <div class="home-focus-label home-discover"><p class="home-eyebrow">Inside the research</p><h2 id="research-focus-title">Questions we <span class="elora-heading-gradient">explore.</span></h2></div>
+          <div class="hero-slider" data-hero-slider role="region" aria-roledescription="carousel" aria-label="Research focus">
+            <div class="home-slide-window">
+              <article class="hero-slide is-active" data-slide>
+                <h3>A research engine built on <span class="elora-heading-gradient">non-neural machine learning.</span></h3>
+                <p>Elora is a custom Python research engine that uses non-neural machine learning to detect AI behaviour patterns while governing execution through a deterministic proposal-to-commit boundary and surfacing structured operational decisions.</p>
+              </article>
+              <article class="hero-slide" data-slide>
+                <h3>Behaviour detection feeds <span class="elora-heading-gradient">evidence-first governance decisions.</span></h3>
+                <p>Detected behaviour signals are scored, linked to policy controls, and captured as structured evidence so allow or block outcomes can be replayed deterministically without regenerating model output.</p>
+              </article>
+              <article class="hero-slide" data-slide>
+                <h3>Threat Cases connect detections to <span class="elora-heading-gradient">explainable Governance outcomes.</span></h3>
+                <p>Evidence-backed findings and Case Reports connect attack evidence, recommendations, authorization context, final actions, and Governance decisions without giving Threat Intelligence execution authority.</p>
+              </article>
+              <article class="hero-slide" data-slide>
+                <h3>Elora Decisions turns runtime events into <span class="elora-heading-gradient">reviewable decision history.</span></h3>
+                <p>Operational outcomes are grouped into bounded decision stories so preparation, intervention, completion, cancellation, and cleanup can be reviewed as one structured record instead of scattered notifications.</p>
+              </article>
+            </div>
             <div class="hero-slider-controls">
-              <button type="button" class="hero-slider-btn" data-slide-prev aria-label="Previous slide">Prev</button>
-              <div class="hero-slider-dots" data-slide-dots aria-label="Hero slide navigation"></div>
-              <button type="button" class="hero-slider-btn" data-slide-next aria-label="Next slide">Next</button>
+              <button type="button" class="hero-slider-btn" data-slide-prev aria-label="Previous research statement">←</button>
+              <div class="hero-slider-dots" data-slide-dots aria-label="Research statement navigation"></div>
+              <button type="button" class="hero-slider-btn" data-slide-next aria-label="Next research statement">→</button>
+              <button type="button" class="hero-slider-btn home-slide-pause" data-slide-pause>Pause rotation</button>
             </div>
           </div>
-          <div class="hero-capabilities" aria-label="Core engine capabilities">
-            <div class="hero-capabilities-head">Research Capabilities</div>
-            <div class="chips">
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Non-Neural AI Behaviour Detection</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Proposal-to-Commit Governance Control</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Deterministic Replay Evidence</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Policy and Admissibility Evaluation</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Constrained-Compute Behaviour Research</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Structured Elora Decisions</span>
-              <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Threat Cases and Case Reports</span>
-            </div>
+        </section>
+
+        <section class="home-discover home-capabilities" aria-labelledby="capabilities-title">
+          <p class="home-eyebrow">Connected capabilities</p>
+          <h2 id="capabilities-title">Observe. Govern. <span class="elora-heading-gradient">Understand.</span></h2>
+          <div class="home-card-grid">
+            <article class="card"><span class="home-card-number" aria-hidden="true">01 / Observe</span><h3>Runtime Intelligence</h3><p>Study runtime pressure, behaviour patterns and constrained-compute performance using bounded non-neural and statistical methods.</p><a class="home-text-link" href="elora-learning/">Explore runtime learning <span aria-hidden="true">→</span></a></article>
+            <article class="card"><span class="home-card-number" aria-hidden="true">02 / Govern</span><h3>Governance &amp; Control</h3><p>Evaluate policy and admissibility at the proposal-to-commit boundary. Threat Intelligence informs decisions without acquiring execution authority.</p><a class="home-text-link" href="runtime-governance/">Understand the controls <span aria-hidden="true">→</span></a></article>
+            <article class="card"><span class="home-card-number" aria-hidden="true">03 / Understand</span><h3>Research &amp; Evidence</h3><p>Connect behaviour observations, deterministic replay, Threat Cases and Elora Decisions to bounded, reviewable records.</p><a class="home-text-link" href="execution-evidence/">Follow the evidence <span aria-hidden="true">→</span></a></article>
           </div>
-          <div class="cta-row">
-            <a class="btn" href="capabilities/">Explore Capabilities</a>
-            <a class="btn" href="overview/">Platform Overview</a>
-            <a class="btn alt" href="architecture/">Governance Architecture</a>
-            <a class="btn mission" href="docs/">Technical Documentation</a>
-            <a class="btn prior-art-cta" href="prior-art/">Technical Disclosure / Prior Art</a>
-            <a class="btn alt" href="demo/">Demo refresh status</a>
-            <a class="btn alt" href="research/">Research Program</a>
-            <a class="btn alt" href="memory-recall/">Memory, Recall &amp; Evidence</a>
-            <a class="btn alt" href="threat-intelligence/">Threat Intelligence</a>
+        </section>
+
+        <section class="home-discover home-work" aria-labelledby="work-title">
+          <p class="home-eyebrow">Explore the work</p>
+          <h2 id="work-title">One project. <span class="elora-heading-gradient">Three ways in.</span></h2>
+          <div class="home-card-grid">
+            <article class="card"><p class="home-eyebrow">The Engine</p><h3>How Elora fits together</h3><p>Start with the research engine, its architecture and the boundaries between inference, observation and authority.</p><a class="home-text-link" href="overview/">Engine overview <span aria-hidden="true">→</span></a></article>
+            <article class="card"><p class="home-eyebrow">Research</p><h3>Questions, methods &amp; results</h3><p>Explore behaviour research, memory and context experiments, publications and the limits of retained evidence.</p><a class="home-text-link" href="research/">Research programme <span aria-hidden="true">→</span></a></article>
+            <article class="card"><p class="home-eyebrow">Engineering portfolio</p><h3>Implementation &amp; contribution</h3><p>Browse the engineering catalogue, then follow project attribution across Elora, eFed, WordPress and research collaborations.</p><a class="home-text-link" href="https://ai.elorataurus.com/engineering" target="_blank" rel="noopener">Engineering catalogue <span aria-hidden="true">↗</span></a><a class="home-secondary-link" href="projects/">Projects &amp; contributions →</a></article>
           </div>
-        </div>
-        <aside class="hero-guide-standalone" aria-label="Elora guide">
-          <img class="hero-guide-image" src="elora-guide.png" alt="Elora guide" onerror="this.onerror=null;this.src='elora.png';" />
-        </aside>
-      </section>
-<section class="home-discover"><h2>Explore the work</h2><div class="site-directory-grid"><article class="card"><h3>Find a guide</h3><p>Browse every public guide, demo and research area in one directory.</p><a class="btn alt" href="explore/">Explore</a></article><article class="card"><h3>Projects &amp; Contributions</h3><p>See the work across Elora, eFed, WordPress and research collaborations.</p><a class="btn alt" href="projects/">Explore our contributions</a></article><article class="card"><h3>Research &amp; evidence</h3><p>Follow research themes, preprints and deliberately published records.</p><a class="btn alt" href="research/">Explore research</a></article></div></section>
+        </section>
+        <aside class="home-evidence-note"><strong>Evidence before claims.</strong><p>Public records are deliberately exported artefacts. Publication does not mean certification or endorsement. Read each record’s protocol, scope and limitations; missing evidence remains unknown.</p></aside>
+      </main>
       <footer class="site-footer">
         <div class="footer-inner">
           <div class="footer-row">
             <strong>The Elora Taurus Project</strong>
-            <nav class="footer-links">
-          <a href="explore/">Explore</a>
-          <a href="projects/">Projects &amp; Contributions</a>
-          <a href="publications/">Publications</a>
-              <a href="overview/">Overview</a>
-              <a href="architecture/">Architecture</a>
-              <a href="demo/">Demo</a>
-              <a href="gallery/">Gallery</a>
-              <a href="docs/">Documentation</a>
-              <a href="research/">Research</a>
-              <a href="prior-art/">Prior Art</a>
+            <nav class="footer-links" aria-label="Footer">
+              <a href="explore/">All guides</a>
               <a href="changelog/">Changelog</a>
               <a href="cookie-policy/">Cookie Policy</a>
             </nav>
@@ -213,7 +232,12 @@
         const nextBtn = slider.querySelector('[data-slide-next]');
         let idx = 0;
         let timer = null;
-        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const pauseBtn = slider.querySelector('[data-slide-pause]');
+        let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        motion.addEventListener('change', event => {
+          if (event.matches) { paused = true; stopAuto(); if (pauseBtn) pauseBtn.textContent = 'Resume rotation'; }
+        });
 
         const draw = function () {
           slides.forEach(function (el, i) {
@@ -255,7 +279,8 @@
           timer = null;
         };
         const startAuto = function () {
-          if (prefersReduced) return;
+          stopAuto();
+          if (paused || slider.matches(':hover') || slider.contains(document.activeElement)) return;
           timer = window.setInterval(function () { go(idx + 1); }, 6200);
         };
         const restartAuto = function () {
@@ -265,6 +290,13 @@
 
         if (prevBtn) prevBtn.addEventListener('click', function () { go(idx - 1); restartAuto(); });
         if (nextBtn) nextBtn.addEventListener('click', function () { go(idx + 1); restartAuto(); });
+        if (pauseBtn) {
+          const labelPause = () => { pauseBtn.textContent = paused ? 'Resume rotation' : 'Pause rotation'; };
+          labelPause();
+          pauseBtn.addEventListener('click', () => { paused = !paused; labelPause(); restartAuto(); });
+        }
+        slider.addEventListener('focusin', stopAuto);
+        slider.addEventListener('focusout', () => window.setTimeout(startAuto, 0));
         slider.addEventListener('mouseenter', stopAuto);
         slider.addEventListener('mouseleave', startAuto);
         draw();
@@ -273,6 +305,6 @@
     })();
   </script>
   <script defer src="analytics-consent.js?v=2c63f3639970"></script>
-  <script src="page-explorer.js?v=6352d5923504" defer></script>
+  <script src="page-explorer.js?v=350d6e3dae19" defer></script>
 </body>
 </html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Elora is a research engine with governance capability, using non-neural machine learning, evidence-backed Threat Intelligence, deterministic commit control, and structured operational decisions." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="canonical" href="https://elorataurus.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Elora Engine - Research Engine with Governance Capability" />
+  <meta property="og:description" content="Research engine with governance capability: non-neural behaviour detection, Threat Intelligence findings, deterministic commit authorization, and structured Elora Decisions." />
+  <meta property="og:url" content="https://elorataurus.com/" />
+  <meta property="og:image" content="https://elorataurus.com/social.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elora Engine - Research Engine with Governance Capability" />
+  <meta name="twitter:description" content="Research engine with governance capability using non-neural machine learning, Threat Intelligence, public evidence, and structured Elora Decisions." />
+  <meta name="twitter:image" content="https://elorataurus.com/social.png" />
+  <title>Elora — Report / WorkSpace design study</title>
+  <link rel="icon" href="../elora.png" />
+  <link rel="stylesheet" href="../workspace_theme.css?v=6016ccbddfab" />
+  <link rel="stylesheet" href="../style.css?v=ed6d9e7847f1" />
+  <link rel="stylesheet" href="../home.css?v=82fb6506e05b" />
+  <link rel="stylesheet" href="report-fusion.css?v=ea8b15bcfee3" />
+</head>
+<body class="home-page public-site elora-workspace-theme report-fusion">
+  <section class="top-stage" id="home">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand brand-link" href="../" aria-label="The Elora Taurus Project home">
+          <div class="brand-icon"><img src="../elora.png" alt="Elora avatar" onerror="this.onerror=null;this.src='../admin/elora-avatar.svg';"></div>
+          <div>
+            <strong>The Elora Taurus Project</strong>
+            <small>Research Engine with Governance Capability</small>
+          </div>
+        </a>
+        <button data-nav-toggle="1" class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-links-home"><span class="hamburger" aria-hidden="true">&#9776;</span> Menu</button>
+        <nav id="top-links-home" data-top-links="1" class="top-links" aria-label="Main navigation">
+          <span class="site-nav-label">Explore Elora</span>
+          <a class="nav-btn active" aria-current="page" href="../">Home</a>
+          <a class="nav-btn" href="../overview/">The Engine</a>
+          <a class="nav-btn" href="../research/">Research</a>
+          <a class="nav-btn" href="../projects/">Projects &amp; Contributions</a>
+          <a class="nav-btn" href="../explore/">All guides</a>
+          <a class="nav-btn" href="../prior-art/">Prior Art</a>
+          <details class="site-nav-group">
+            <summary>Engine guides</summary>
+            <a class="nav-btn" href="../capabilities/">Capabilities</a>
+            <a class="nav-btn" href="../architecture/">Architecture</a>
+            <a class="nav-btn" href="../docs/">Documentation</a>
+            <a class="nav-btn" href="../demo/">Demo status</a>
+            <a class="nav-btn" href="../gallery/">Gallery</a>
+          </details>
+          <details class="site-nav-group">
+            <summary>Publications &amp; history</summary>
+            <a class="nav-btn" href="../publications/">Publications</a>
+            <a class="nav-btn" href="../changelog/">Changelog</a>
+          </details>
+          <span class="site-nav-label site-nav-public">Public evidence</span>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/engineering" target="_blank" rel="noopener">Engineering <span aria-hidden="true">↗</span></a>
+          <a class="nav-btn site-outward" href="https://ai.elorataurus.com/public-reports/" target="_blank" rel="noopener">Public Reports <span aria-hidden="true">↗</span></a>
+          <details class="site-nav-group">
+            <summary>More public surfaces</summary>
+            <a class="nav-btn site-outward" href="https://ai.elorataurus.com/" target="_blank" rel="noopener">Public Dashboard <span aria-hidden="true">↗</span></a>
+            <a class="nav-btn site-outward" href="https://ai.elorataurus.com/agentic" target="_blank" rel="noopener">Elora Agents <span aria-hidden="true">↗</span></a>
+          </details>
+        </nav>
+      </div>
+    </header>
+    <div class="shell">
+      <div class="design-study-bar"><span>Design study <strong>Report × WorkSpace</strong></span><a href="../">Compare current homepage <span aria-hidden="true">↗</span></a></div>
+      <main id="main-content">
+        <section class="hero home-hero" aria-labelledby="home-title">
+          <div class="home-introduction">
+            <p class="home-eyebrow"><span class="study-mark" aria-hidden="true"></span> Independent research &amp; engineering</p>
+            <h1 id="home-title">Elora Taurus.<br> A research engine for<br> <span class="elora-heading-gradient">governed AI.</span></h1>
+            <p class="home-description">Elora studies AI behaviour and runtime systems, connecting non-neural machine learning, deterministic execution control and reviewable evidence.</p>
+            <div class="cta-row home-actions">
+              <a class="btn home-primary" href="../overview/">Meet the Engine <span aria-hidden="true">→</span></a>
+              <a class="btn" href="../research/">Explore the research</a>
+              <a class="home-text-link" href="https://ai.elorataurus.com/public-reports/" target="_blank" rel="noopener">Read public evidence <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="home-scope">A personal research project. Implementation, controlled observations and published evidence remain separately scoped.</p>
+          </div>
+          <figure class="home-portrait">
+            <img src="../elora-engineering.png" alt="Elora, the project's illustrated research guide" width="1545" height="1018" fetchpriority="high" />
+            <figcaption>Elora Taurus <span>Research, with a human perspective.</span></figcaption>
+          </figure>
+        </section>
+
+        <section class="home-research-focus" aria-labelledby="research-focus-title">
+          <div class="home-focus-label home-discover"><p class="home-eyebrow">Inside the research</p><h2 id="research-focus-title">Questions we <span class="elora-heading-gradient">explore.</span></h2></div>
+          <div class="hero-slider" data-hero-slider role="region" aria-roledescription="carousel" aria-label="Research focus">
+            <div class="home-slide-window">
+              <article class="hero-slide is-active" data-slide>
+                <h3>A research engine built on <span class="elora-heading-gradient">non-neural machine learning.</span></h3>
+                <p>Elora is a custom Python research engine that uses non-neural machine learning to detect AI behaviour patterns while governing execution through a deterministic proposal-to-commit boundary and surfacing structured operational decisions.</p>
+              </article>
+              <article class="hero-slide" data-slide>
+                <h3>Behaviour detection feeds <span class="elora-heading-gradient">evidence-first governance decisions.</span></h3>
+                <p>Detected behaviour signals are scored, linked to policy controls, and captured as structured evidence so allow or block outcomes can be replayed deterministically without regenerating model output.</p>
+              </article>
+              <article class="hero-slide" data-slide>
+                <h3>Threat Cases connect detections to <span class="elora-heading-gradient">explainable Governance outcomes.</span></h3>
+                <p>Evidence-backed findings and Case Reports connect attack evidence, recommendations, authorization context, final actions, and Governance decisions without giving Threat Intelligence execution authority.</p>
+              </article>
+              <article class="hero-slide" data-slide>
+                <h3>Elora Decisions turns runtime events into <span class="elora-heading-gradient">reviewable decision history.</span></h3>
+                <p>Operational outcomes are grouped into bounded decision stories so preparation, intervention, completion, cancellation, and cleanup can be reviewed as one structured record instead of scattered notifications.</p>
+              </article>
+            </div>
+            <div class="hero-slider-controls">
+              <button type="button" class="hero-slider-btn" data-slide-prev aria-label="Previous research statement">←</button>
+              <div class="hero-slider-dots" data-slide-dots aria-label="Research statement navigation"></div>
+              <button type="button" class="hero-slider-btn" data-slide-next aria-label="Next research statement">→</button>
+              <button type="button" class="hero-slider-btn home-slide-pause" data-slide-pause>Pause rotation</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-discover home-capabilities" aria-labelledby="capabilities-title">
+          <p class="home-eyebrow"><span class="study-section-number">01</span> Connected capabilities</p>
+          <h2 id="capabilities-title">Observe. Govern. <span class="elora-heading-gradient">Understand.</span></h2>
+          <div class="home-card-grid">
+            <article class="card"><span class="home-card-number" aria-hidden="true">01 / Observe</span><h3>Runtime Intelligence</h3><p>Study runtime pressure, behaviour patterns and constrained-compute performance using bounded non-neural and statistical methods.</p><a class="home-text-link" href="../elora-learning/">Explore runtime learning <span aria-hidden="true">→</span></a></article>
+            <article class="card"><span class="home-card-number" aria-hidden="true">02 / Govern</span><h3>Governance &amp; Control</h3><p>Evaluate policy and admissibility at the proposal-to-commit boundary. Threat Intelligence informs decisions without acquiring execution authority.</p><a class="home-text-link" href="../runtime-governance/">Understand the controls <span aria-hidden="true">→</span></a></article>
+            <article class="card"><span class="home-card-number" aria-hidden="true">03 / Understand</span><h3>Research &amp; Evidence</h3><p>Connect behaviour observations, deterministic replay, Threat Cases and Elora Decisions to bounded, reviewable records.</p><a class="home-text-link" href="../execution-evidence/">Follow the evidence <span aria-hidden="true">→</span></a></article>
+          </div>
+        </section>
+
+        <section class="home-discover home-work" aria-labelledby="work-title">
+          <p class="home-eyebrow"><span class="study-section-number">02</span> Explore the work</p>
+          <h2 id="work-title">One project. <span class="elora-heading-gradient">Three ways in.</span></h2>
+          <div class="home-card-grid">
+            <article class="card"><p class="home-eyebrow">The Engine</p><h3>How Elora fits together</h3><p>Start with the research engine, its architecture and the boundaries between inference, observation and authority.</p><a class="home-text-link" href="../overview/">Engine overview <span aria-hidden="true">→</span></a></article>
+            <article class="card"><p class="home-eyebrow">Research</p><h3>Questions, methods &amp; results</h3><p>Explore behaviour research, memory and context experiments, publications and the limits of retained evidence.</p><a class="home-text-link" href="../research/">Research programme <span aria-hidden="true">→</span></a></article>
+            <article class="card"><p class="home-eyebrow">Engineering portfolio</p><h3>Implementation &amp; contribution</h3><p>Browse the engineering catalogue, then follow project attribution across Elora, eFed, WordPress and research collaborations.</p><a class="home-text-link" href="https://ai.elorataurus.com/engineering" target="_blank" rel="noopener">Engineering catalogue <span aria-hidden="true">↗</span></a><a class="home-secondary-link" href="../projects/">Projects &amp; contributions →</a></article>
+          </div>
+        </section>
+        <aside class="home-evidence-note"><strong>Evidence before claims.</strong><p>Public records are deliberately exported artefacts. Publication does not mean certification or endorsement. Read each record’s protocol, scope and limitations; missing evidence remains unknown.</p></aside>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-row">
+            <strong>The Elora Taurus Project</strong>
+            <nav class="footer-links" aria-label="Footer">
+              <a href="../explore/">All guides</a>
+              <a href="../changelog/">Changelog</a>
+              <a href="../cookie-policy/">Cookie Policy</a>
+            </nav>
+          </div>
+          <div class="footer-note">This page is a front-door architectural preface. Detailed system explanation is in Overview, Architecture, and Documentation.</div>
+          <div class="footer-note">Elora System Architecture — © 2026 Nathan Eric John Freestone (The Elora Taurus Project). Demo content is synthetic and non-operational.</div>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const overlay = document.getElementById('welcome-overlay');
+      const skipBtn = document.getElementById('welcome-skip');
+      const key = 'elora_site_welcome_seen_v1';
+      let done = false;
+      const hideOverlay = function () {
+        if (!overlay || done) return;
+        done = true;
+        overlay.classList.add('hidden');
+        window.setTimeout(function () {
+          if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+        }, 420);
+      };
+      if (skipBtn) skipBtn.addEventListener('click', hideOverlay);
+
+      try {
+        const seen = localStorage.getItem(key);
+        if (seen === '1') {
+          hideOverlay();
+        } else {
+          window.setTimeout(function () {
+            try { localStorage.setItem(key, '1'); } catch (e) {}
+            hideOverlay();
+          }, 1200);
+        }
+      } catch (e) {
+        window.setTimeout(hideOverlay, 1200);
+      }
+
+      const navToggles = document.querySelectorAll('[data-nav-toggle="1"]');
+      const topLinksGroups = document.querySelectorAll('[data-top-links="1"]');
+
+      navToggles.forEach(function (toggle) {
+        const controls = toggle.getAttribute('aria-controls');
+        const links = controls ? document.getElementById(controls) : null;
+        if (!links) return;
+        toggle.addEventListener('click', function () {
+          const open = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        links.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 760) {
+          topLinksGroups.forEach(function (links) { links.classList.remove('open'); });
+          navToggles.forEach(function (toggle) { toggle.setAttribute('aria-expanded', 'false'); });
+        }
+      });
+
+      const slider = document.querySelector('[data-hero-slider]');
+      if (slider) {
+        const slides = Array.from(slider.querySelectorAll('[data-slide]'));
+        const dotsWrap = slider.querySelector('[data-slide-dots]');
+        const prevBtn = slider.querySelector('[data-slide-prev]');
+        const nextBtn = slider.querySelector('[data-slide-next]');
+        let idx = 0;
+        let timer = null;
+        const pauseBtn = slider.querySelector('[data-slide-pause]');
+        let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        motion.addEventListener('change', event => {
+          if (event.matches) { paused = true; stopAuto(); if (pauseBtn) pauseBtn.textContent = 'Resume rotation'; }
+        });
+
+        const draw = function () {
+          slides.forEach(function (el, i) {
+            const active = i === idx;
+            el.classList.toggle('is-active', active);
+            el.setAttribute('aria-hidden', active ? 'false' : 'true');
+          });
+          if (dotsWrap) {
+            Array.from(dotsWrap.querySelectorAll('button')).forEach(function (dot, i) {
+              dot.classList.toggle('is-active', i === idx);
+              dot.setAttribute('aria-pressed', i === idx ? 'true' : 'false');
+            });
+          }
+        };
+
+        const go = function (next) {
+          idx = (next + slides.length) % slides.length;
+          draw();
+        };
+
+        if (dotsWrap) {
+          dotsWrap.innerHTML = '';
+          slides.forEach(function (_, i) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'hero-slider-dot' + (i === 0 ? ' is-active' : '');
+            dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            dot.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+            dot.addEventListener('click', function () {
+              go(i);
+              restartAuto();
+            });
+            dotsWrap.appendChild(dot);
+          });
+        }
+
+        const stopAuto = function () {
+          if (timer) window.clearInterval(timer);
+          timer = null;
+        };
+        const startAuto = function () {
+          stopAuto();
+          if (paused || slider.matches(':hover') || slider.contains(document.activeElement)) return;
+          timer = window.setInterval(function () { go(idx + 1); }, 6200);
+        };
+        const restartAuto = function () {
+          stopAuto();
+          startAuto();
+        };
+
+        if (prevBtn) prevBtn.addEventListener('click', function () { go(idx - 1); restartAuto(); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { go(idx + 1); restartAuto(); });
+        if (pauseBtn) {
+          const labelPause = () => { pauseBtn.textContent = paused ? 'Resume rotation' : 'Pause rotation'; };
+          labelPause();
+          pauseBtn.addEventListener('click', () => { paused = !paused; labelPause(); restartAuto(); });
+        }
+        slider.addEventListener('focusin', stopAuto);
+        slider.addEventListener('focusout', () => window.setTimeout(startAuto, 0));
+        slider.addEventListener('mouseenter', stopAuto);
+        slider.addEventListener('mouseleave', startAuto);
+        draw();
+        startAuto();
+      }
+    })();
+  </script>
+  <script src="../page-explorer.js?v=350d6e3dae19" defer></script>
+</body>
+</html>

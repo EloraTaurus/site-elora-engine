@@ -37,6 +37,25 @@ Purpose: represent current engine UX and structure with demo-safe content.
 
 ## Updating and reviewing
 
+`public-hybrid.css` adds Observer-inspired midnight navigation and open portrait
+heroes across the public information pages. Informational heroes expand with
+their content; the homepage retains a larger introduction and a separate research
+carousel. The earlier framed-artwork study remains at `design-preview/` for
+comparison. The live site is unchanged until these static assets are deployed.
+
+Hero and navigation colours use semantic custom properties. This remains a light
+theme: a future dark theme must provide a suitable dark character asset (including
+the homepage image source, ideally via `picture`) and matching canvas/fade tokens.
+Do not invert the light artwork. No dark-mode toggle or asset is introduced here.
+
+The public information pages adopt Observatory Light v1 from
+`docs/design/SENSE_WORKSPACE_VISUAL_STANDARD.md`. `workspace_theme.css` is an
+unchanged static copy of `engine/interface/workspace_theme.css`; recopy it when
+the approved theme changes. The scoped adapter in `style.css` maps existing
+public components to those tokens without introducing internal Engine controls.
+Deploy both stylesheets with the HTML. Dashboard, Reports and Engineering have
+separate assets and are not restyled by this first public-site preview.
+
 The public information pages use the `public-site` body class and shared
 `style.css` shell: a framed pale-blue surface, desktop navigation rail and
 collapsible mobile menu. Public evidence links connect Engineering, Public

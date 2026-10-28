@@ -1,0 +1,70 @@
+/* Observer / WorkSpace public presentation. Light artwork is never inverted.
+   A future dark theme must supply its own --public-hero-art and fade colour. */
+body.public-site.elora-workspace-theme {
+  --public-nav-bg:linear-gradient(180deg,#080f31,#101b4a);
+  --public-nav-text:#bac8e9;
+  --public-nav-ink:#f4f8ff;
+  --public-nav-line:#344269;
+  --public-nav-selected:linear-gradient(110deg,#ffffff12,#8a82e51c);
+  --public-spectrum:linear-gradient(100deg,#2969ef,#5c4ee5 55%,#31c8f3);
+  --public-hero-art:url('elora-engineering.png');
+  --public-compact-art-size:390px;
+  --public-hero-fade:var(--elora-canvas);
+  --elora-heading-solid:var(--elora-link);
+  --elora-heading-spectrum:linear-gradient(105deg,#14766f,#16758b 30%,#3157b7 64%,#7354a5);
+  background:radial-gradient(circle at 82% 1%,#9749df0a,transparent 27rem),var(--elora-canvas);
+}
+.public-site.elora-workspace-theme :is(.topbar,.topbar.is-scrolled) { background:var(--public-nav-bg); border-right-color:var(--public-nav-line); }
+.public-site.elora-workspace-theme .brand { color:var(--public-nav-ink); }
+.public-site.elora-workspace-theme :is(.brand small,.site-nav-label,.top-links .nav-btn,.site-nav-group summary) { color:var(--public-nav-text); }
+.public-site.elora-workspace-theme .site-nav-public { border-color:var(--public-nav-line); }
+.public-site.elora-workspace-theme .top-links .nav-btn:hover,
+.public-site.elora-workspace-theme .site-nav-group summary:hover { color:var(--public-nav-ink); background:#ffffff0d; }
+.public-site.elora-workspace-theme .top-links .nav-btn[aria-current=page] { color:var(--public-nav-ink); background:var(--public-nav-selected); border-color:transparent; box-shadow:none; }
+.public-site.elora-workspace-theme .topbar :focus-visible { outline-color:#63cce9; }
+.public-site .elora-heading-gradient { color:var(--elora-heading-solid); }
+@supports ((background-clip:text) or (-webkit-background-clip:text)) {
+  .public-site .elora-heading-gradient { background-image:var(--elora-heading-spectrum); background-clip:text; -webkit-background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+}
+/* Compact information heroes expand with their text rather than fixing a height. */
+.public-site.elora-workspace-theme .top-stage:not(#home) { min-height:0; }
+.public-site.elora-workspace-theme .top-stage:not(#home)>.shell { min-height:0; padding-top:40px; padding-bottom:32px; }
+.public-site.elora-workspace-theme .top-stage:not(#home) .hero { min-height:330px; align-content:center; display:grid; grid-template-columns:minmax(0,1fr); padding:16px 0; }
+.public-site.elora-workspace-theme .top-stage:not(#home) .hero>div:first-child { max-width:61%; }
+.public-site.elora-workspace-theme .top-stage::before { background-image:linear-gradient(90deg,var(--public-hero-fade) 0%,var(--public-hero-fade) 35%,transparent 83%),var(--public-hero-art); background-size:100% 100%,auto var(--public-compact-art-size); height:100%; max-height:520px; opacity:1; border-radius:0; }
+/* Homepage: open artwork occupies the right, fades through the shared canvas. */
+.home-page.public-site #home .home-hero { position:relative; isolation:isolate; min-height:480px; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); column-gap:48px; }
+.home-page.public-site .home-introduction { grid-column:1; }
+.home-page.public-site .home-portrait { position:absolute; z-index:-1; top:0; right:-40px; bottom:0; width:72%; margin:0; display:block; pointer-events:none; }
+.home-page.public-site .home-portrait img { width:100%; height:100%; object-fit:cover; object-position:right top; border:0; border-radius:0; box-shadow:none; mask:none; -webkit-mask:none; }
+.home-page.public-site .home-portrait::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,var(--public-hero-fade) 0%,transparent 45%),linear-gradient(0deg,var(--public-hero-fade),transparent 40%); }
+.home-page.public-site .home-portrait figcaption { display:none; }
+.home-page.public-site .home-research-focus { position:relative; overflow:hidden; background:var(--elora-feature); }
+.home-page.public-site .home-research-focus::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; background:var(--public-spectrum); }
+.home-page.public-site .home-capabilities .card { border-top:2px solid #c8c8ef; }
+.home-page.public-site .home-evidence-note { padding:20px; border:1px solid var(--elora-line); border-left:3px solid #8176bb; border-radius:12px; background:var(--elora-surface); }
+@media(min-width:761px) and (max-width:1100px) {
+  .home-page.public-site #home .home-hero { min-height:430px; grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr); gap:20px; }
+  .home-page.public-site .home-portrait { right:-24px; width:65%; }
+  .home-page.public-site .home-portrait::after { background:linear-gradient(90deg,var(--public-hero-fade) 0%,var(--public-hero-fade) 30%,transparent 78%),linear-gradient(0deg,var(--public-hero-fade),transparent 40%); }
+  .public-site.elora-workspace-theme .top-stage:not(#home) .hero>div:first-child { max-width:68%; }
+  .public-site.elora-workspace-theme .top-stage::before { opacity:.55; }
+}
+@media(max-width:760px) {
+  .public-site.elora-workspace-theme .topbar .nav-toggle { color:var(--public-nav-ink); background:#ffffff0d; border-color:#687bad; }
+  .public-site.elora-workspace-theme .top-stage:not(#home)>.shell { padding-top:24px; padding-bottom:24px; }
+  .public-site.elora-workspace-theme .top-stage:not(#home) .hero { min-height:0; }
+  .public-site.elora-workspace-theme .top-stage:not(#home) .hero>div:first-child { max-width:100%; }
+  .public-site.elora-workspace-theme .top-stage::before { opacity:.12; background-size:100% 100%,auto 340px; }
+  .home-page.public-site #home .home-hero { min-height:0; grid-template-columns:1fr; gap:4px; }
+  .home-page.public-site .home-portrait { position:relative; z-index:0; top:auto; right:auto; bottom:auto; width:100%; max-width:440px; height:220px; }
+  .home-page.public-site .home-portrait img { height:220px; object-fit:cover; object-position:right 15%; }
+  .home-page.public-site .home-portrait::after { background:linear-gradient(90deg,var(--public-hero-fade),transparent 25%),linear-gradient(0deg,var(--public-hero-fade),transparent 35%); }
+}
+@media(forced-colors:active) {
+  .public-site.elora-workspace-theme :is(.topbar,.topbar.is-scrolled) { background:Canvas; }
+  .public-site.elora-workspace-theme :is(.brand,.brand small,.site-nav-label,.top-links .nav-btn,.site-nav-group summary) { color:LinkText; }
+  .public-site.elora-workspace-theme .top-links .nav-btn[aria-current=page] { outline:1px solid Highlight; }
+  .public-site .elora-heading-gradient { background:none; color:CanvasText; -webkit-text-fill-color:CanvasText; }
+  .public-site.elora-workspace-theme .top-stage::before { display:none; }
+}

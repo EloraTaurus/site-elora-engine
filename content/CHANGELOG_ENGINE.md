@@ -1,5 +1,9 @@
 # Engine Changelog
 
+### 2026-10-27 — Routine Agent Pause
+
+- Separate routine operation pause from security lockdown. Routine pauses retain authenticated connectivity; security containment retains grant revocation and review boundaries. Protected calls remain server-governed.
+
 ### 2026-10-27 — Public page navigation and integrated technical chronology
 
 - Add a floating Elora section navigator to the public website and align short desktop heroes to a 500px portrait baseline. Retain keyboard navigation and content-sized mobile layouts.

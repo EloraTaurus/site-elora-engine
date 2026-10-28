@@ -2147,13 +2147,13 @@ button:hover {
    Scoped explicitly so synthetic demos and canary experiments keep their layout. */
 body.public-site {
   --public-hero-height:500px;
-  --text: #203958;
-  --muted: #526d90;
-  --line: #d9e5f7;
-  --panel: #fff;
-  --panel-2: #f7faff;
-  --brand-link: #315daa;
-  --hero-body: #526d90;
+  --text: var(--elora-ink);
+  --muted: var(--elora-muted);
+  --line: var(--elora-line);
+  --panel: var(--elora-surface);
+  --panel-2: var(--elora-surface-alt);
+  --brand-link: var(--elora-link);
+  --hero-body: var(--elora-text);
   box-sizing: border-box;
   width: calc(100% - 36px);
   max-width: 1920px;
@@ -2319,11 +2319,48 @@ body.public-site {
 .public-site .top-links .nav-btn[href="https://ai.elorataurus.com/engineering"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m8%208-5%204%205%204m8-8%205%204-5%204m-3-11-2%2014%22%2F%3E%3C%2Fsvg%3E"); }
 .public-site .top-links .nav-btn[href="https://ai.elorataurus.com/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%2016a9%209%200%201%201%2018%200M12%2012l5-5M5%2016h14M6%208l1%201M12%204v2%22%2F%3E%3C%2Fsvg%3E"); }
 .public-site .top-links .nav-btn[href="https://ai.elorataurus.com/public-reports/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M14%202H5v20h14V7Z%20M14%202v6h5M8%2012h8M8%2016h8%22%2F%3E%3C%2Fsvg%3E"); }
+/* Observatory Light v1: public layout adapter. Tokens live in workspace_theme.css.
+   Scope to public information pages; retain semantic states and archived demos. */
+body.public-site.elora-workspace-theme {
+  color:var(--elora-ink);
+  background:radial-gradient(ellipse at 48% 8%,#e9eaff8a,transparent 55%),var(--elora-canvas);
+  box-shadow:var(--elora-shadow);
+}
+.public-site.elora-workspace-theme :is(.topbar,.topbar.is-scrolled) { background:var(--elora-rail); }
+.public-site.elora-workspace-theme :is(.brand small,.site-nav-label,.top-links .nav-btn,.site-kicker) { color:var(--elora-muted); }
+.public-site.elora-workspace-theme .top-links .nav-btn { border-radius:10px; }
+.public-site.elora-workspace-theme .top-links .nav-btn:hover { color:var(--elora-link); background:var(--elora-surface-alt); }
+.public-site.elora-workspace-theme .top-links .nav-btn[aria-current=page] { color:var(--elora-link); background:var(--elora-selected); border-color:var(--elora-line); box-shadow:var(--elora-shadow); }
+.public-site.elora-workspace-theme .hero h1 { color:var(--elora-heading); background:none; -webkit-text-fill-color:currentColor; font-size:clamp(26px,2.7vw,32px); letter-spacing:-.03em; line-height:1.2; }
+.public-site.elora-workspace-theme :is(h2,h3,h4,.card h3,.feature-card h3) { color:var(--elora-heading); }
+.public-site.elora-workspace-theme :is(.hero p,.section-inner>p,.card p,.card li,.feature-card p,.gallery-info p) { color:var(--elora-text); }
+.public-site.elora-workspace-theme :is(.card,.feature-card,.hero-capabilities,.gallery-carousel,.site-directory-controls) { background:var(--elora-card); border:1px solid var(--elora-line); border-radius:16px; box-shadow:var(--elora-shadow); }
+.public-site.elora-workspace-theme .hero-capabilities { background:var(--elora-teal); }
+.public-site.elora-workspace-theme :is(.section,.site-footer,.site-nav-public) { border-color:var(--elora-line); }
+.public-site.elora-workspace-theme :is(.btn,.btn.alt,.btn.mission,.btn.prior-art-cta,.hero-slider-btn,.nav-toggle) { background:var(--elora-surface); color:var(--elora-link); border-color:var(--elora-line); border-radius:10px; }
+.public-site.elora-workspace-theme :is(.btn,.hero-slider-btn):hover { background:var(--elora-selected); border-color:var(--elora-accent); }
+.public-site.elora-workspace-theme :is(.site-directory-grid h3 a,.footer-links a,.pack-reader a) { color:var(--elora-link); }
+.public-site.elora-workspace-theme :is(.chip,.walk-links a) { color:var(--elora-link); background:var(--elora-surface-alt); border-color:var(--elora-line); }
+.public-site.elora-workspace-theme .site-directory-controls :is(input,select) { color:var(--elora-ink); background:var(--elora-surface); border-color:var(--elora-line); border-radius:10px; }
+.public-site.elora-workspace-theme :is(.site-directory-controls label,.hero-capabilities-head,.site-footer) { color:var(--elora-muted); }
+.public-site.elora-workspace-theme .pack-nav-btn { color:var(--elora-text); border-color:var(--elora-line); background:var(--elora-surface); }
+.public-site.elora-workspace-theme .pack-nav-btn.active { color:var(--elora-link); background:var(--elora-selected); box-shadow:none; }
+.public-site.elora-workspace-theme .pack-markdown-table :is(th,td) { border-color:var(--elora-line); }
+.public-site.elora-workspace-theme .pack-markdown-table th { color:var(--elora-heading); background:var(--elora-surface-alt); }
+.public-site.elora-workspace-theme .pack-markdown-table td { color:var(--elora-text); background:var(--elora-surface); }
+.public-site.elora-workspace-theme :focus-visible { outline:3px solid var(--elora-accent); outline-offset:3px; }
+.public-site.elora-workspace-theme :is(.page-explorer-panel,.page-explorer-toggle) { color:var(--elora-ink); background:var(--elora-card); border-color:var(--elora-line); box-shadow:var(--elora-shadow); }
+.public-site.elora-workspace-theme :is(.page-explorer-panel a,.page-explorer-close) { color:var(--elora-link); }
+.public-site.elora-workspace-theme .page-explorer-panel input { color:var(--elora-ink); background:var(--elora-surface); border-color:var(--elora-line); }
+@media(forced-colors:active) {
+  .public-site.elora-workspace-theme .hero h1 { color:CanvasText; }
+}
+
 /* Matching icons for the expanded public directory navigation. */
 /* Floating, non-modal section navigation. */
 .page-explorer { position:fixed; right:max(20px,calc((100vw - 1920px)/2 + 16px)); bottom:22px; z-index:180; font-family:inherit; }
 .page-explorer-toggle { display:flex; align-items:center; gap:10px; padding:6px 15px 6px 6px; border:1px solid #c7d8f1; border-radius:999px; background:#fff; color:#203958; font:inherit; font-size:12px; font-weight:600; cursor:pointer; box-shadow:0 5px 22px #294f7e24; }
-.page-explorer-toggle img { width:38px; height:38px; object-fit:cover; border-radius:50%; background:#edf3fb; }
+.page-explorer-toggle img { width:28px; height:28px; object-fit:cover; border-radius:50%; background:#edf3fb; }
 .page-explorer-toggle:hover { background:#f1f6ff; border-color:#9bb9e3; }
 .page-explorer-panel { position:absolute; bottom:calc(100% + 12px); right:0; box-sizing:border-box; width:min(360px,calc(100vw - 32px)); max-height:min(62dvh,560px); display:flex; flex-direction:column; padding:18px; border:1px solid #d9e5f7; border-radius:16px; background:#fff; box-shadow:0 12px 40px #20395826; }
 .page-explorer-panel[hidden] { display:none; }
@@ -2345,3 +2382,49 @@ body.public-site {
 .public-site .top-links .nav-btn[href$="projects/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m8%208-5%204%205%204m8-8%205%204-5%204m-3-11-2%2014%22%2F%3E%3C%2Fsvg%3E"); }
 .public-site .top-links .nav-btn[href$="publications/"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%205v16M12%205C8%202%204%203%202%204v15c3-1%207-1%2010%202%203-3%207-3%2010-2V4c-2-1-6-2-10%201Z%22%2F%3E%3C%2Fsvg%3E"); }
 .public-site .top-links .nav-btn[href="https://ai.elorataurus.com/agentic"] { --site-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m8%208-5%204%205%204m8-8%205%204-5%204m-3-11-2%2014%22%2F%3E%3C%2Fsvg%3E"); }
+
+/* Shared public navigation groups; active child sections expand on arrival. */
+.public-site .site-nav-group { margin:4px 0; }
+.public-site .site-nav-group summary { cursor:pointer; border-radius:10px; padding:10px 12px; color:var(--elora-muted); font-size:12px; }
+.public-site .site-nav-group summary:hover { background:var(--elora-surface-alt); color:var(--elora-link); }
+.public-site .site-nav-group .nav-btn { margin-left:8px; font-size:11px; }
+.public-site .site-nav-group[open] { padding-bottom:6px; }
+
+/* Purple scrollbars: native controls retain their normal width and behaviour. */
+:root:has(> body:is(.public-site,.public-skin)) {
+  scrollbar-color:#655779 #eef0fa;
+}
+body:is(.public-site,.public-skin) {
+  --public-scroll-thumb:#655779;
+  --public-scroll-hover:#514360;
+  --public-scroll-track:#eef0fa;
+}
+body:is(.public-site,.public-skin),
+body:is(.public-site,.public-skin) * {
+  scrollbar-color:var(--public-scroll-thumb) var(--public-scroll-track);
+  scrollbar-width:auto;
+}
+body:is(.public-site,.public-skin) :is(.topbar,.rail,.public-front-rail) {
+  --public-scroll-thumb:#6e638c;
+  --public-scroll-hover:#897aa8;
+  --public-scroll-track:#111a3e;
+}
+body:is(.public-site,.public-skin)::-webkit-scrollbar,
+body:is(.public-site,.public-skin) *::-webkit-scrollbar { width:12px; height:12px; }
+body:is(.public-site,.public-skin)::-webkit-scrollbar-track,
+body:is(.public-site,.public-skin) *::-webkit-scrollbar-track { background:var(--public-scroll-track); }
+body:is(.public-site,.public-skin)::-webkit-scrollbar-thumb,
+body:is(.public-site,.public-skin) *::-webkit-scrollbar-thumb {
+  background:var(--public-scroll-thumb); border:3px solid var(--public-scroll-track); border-radius:999px;
+}
+body:is(.public-site,.public-skin)::-webkit-scrollbar-thumb:hover,
+body:is(.public-site,.public-skin) *::-webkit-scrollbar-thumb:hover { background:var(--public-scroll-hover); }
+body:is(.public-site,.public-skin)::-webkit-scrollbar-corner,
+body:is(.public-site,.public-skin) *::-webkit-scrollbar-corner { background:var(--public-scroll-track); }
+@media(forced-colors:active) {
+  :root:has(> body:is(.public-site,.public-skin)),
+  body:is(.public-site,.public-skin),
+  body:is(.public-site,.public-skin) * { scrollbar-color:auto; }
+  body:is(.public-site,.public-skin) { --public-scroll-thumb:ButtonText; --public-scroll-hover:Highlight; --public-scroll-track:Canvas; }
+  body:is(.public-site,.public-skin) :is(.topbar,.rail,.public-front-rail) { --public-scroll-thumb:ButtonText; --public-scroll-hover:Highlight; --public-scroll-track:Canvas; }
+}
