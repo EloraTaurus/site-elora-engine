@@ -37,6 +37,14 @@ Purpose: represent current engine UX and structure with demo-safe content.
 
 ## Updating and reviewing
 
+Explore remains at `/explore/` and is labelled **Explore** in the shared menu.
+It searches guide titles, descriptions and indexed public headings/prose, including
+the named classical/statistical and non-neural methods on Elora Learning.
+After changing guide headings or directory entries, run
+`python3 scripts/index_demo_directory.py` before updating asset versions.
+Use `--check` to verify the index without modifying it. Search covers this
+curated public directory; it does not search private Engine stores or report files.
+
 `public-hybrid.css` adds Observer-inspired midnight navigation and open portrait
 heroes across the public information pages. Informational heroes expand with
 their content; the homepage retains a larger introduction and a separate research

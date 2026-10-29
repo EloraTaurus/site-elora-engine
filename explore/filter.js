@@ -11,7 +11,7 @@
     for (const group of groups) {
       let matches = 0;
       for (const card of group.querySelectorAll('[data-directory-page]')) {
-        const text = card.textContent.toLocaleLowerCase();
+        const text = (card.textContent + ' ' + (card.dataset.directorySearch || '')).toLocaleLowerCase();
         const shown = (!category.value || category.value === group.dataset.directoryGroup)
           && terms.every(term => text.includes(term));
         card.hidden = !shown;
@@ -20,7 +20,7 @@
       group.hidden = matches === 0;
       visible += matches;
     }
-    document.getElementById('directory-count').textContent = `${visible} of ${total} pages`;
+    document.getElementById('directory-count').textContent = `${visible} of ${total} guides and methods`;
     document.getElementById('directory-empty').hidden = visible !== 0;
   }
   search.addEventListener('input', filter);

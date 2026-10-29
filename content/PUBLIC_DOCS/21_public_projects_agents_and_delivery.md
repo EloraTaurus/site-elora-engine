@@ -1,6 +1,6 @@
 # Public projects, Agent integration and Memory Delivery
 
-Updated 27 October 2026. This guide describes public implementation scope and
+Updated 29 October 2026. This guide describes public implementation scope and
 navigation; it does not establish current server deployment or new run results.
 
 ## Find the work
@@ -23,7 +23,7 @@ per-operation permission are separate. Rotating credentials, expiry and
 revocation support bounded connection lifecycles. External assistants retain
 their own inference provider.
 
-Task plans and task-ledger integrity are separately scoped local prototypes.
+Task plans, hash-linked task-ledger integrity, routine Pause/Resume distinct from security suspension/revocation, bounded admission and synthetic containment are scoped implementations. Selected-Agent history adds stable audit IDs, bounded search and exact incident/control groups. Agent Decisions and Threat Intelligence project existing receipts and reached gateway stages; missing terminal/transport evidence stays unknown.
 Read-only Agent evidence previews do not establish shared Threat Intelligence
 integration. Real Research adapters, broader client acceptance, report writing
 and governed publication require their own implementation and validation.
@@ -39,6 +39,8 @@ Memory selection, representation, provider submission and answer correctness
 are different measurements. Historical captures retain their original protocol.
 This comparison harness does not establish general quality gains or production
 learning changes. Read a published result's own methods and limitations.
+
+A separate frozen-versus-role-aware selection comparison retains selector revision/hash, source roles, narrow correction links and uncovered fields. English lexical cues are heuristics, not verified truth; diverging histories are not a fixed-history causal ablation. Integrated reports distinguish verified selected-memory submissions, selected/delivered stages, strict JSON format and typed content checks. Unscored probes stay unscored; historical baselines remain unchanged. No new live effectiveness or production learning is established.
 
 ## Contributions
 

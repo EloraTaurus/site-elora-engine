@@ -1,5 +1,20 @@
 # Site / Demo Changelog
 
+## 2026-10-29 — Agent and memory public-guide consistency
+
+- Refresh Agent and Memory Delivery guides, related discovery cards and the public architecture catalogue with bounded controls, retained-history/stage evidence, role-aware selection and reporting improvements. Preserve experimental, deployment and evidence limits.
+
+## 2026-10-29 — Engine release-band alignment
+
+- Group Engine work from 26 October under the 0.2.11 Agent Integration and Investigation Foundations development band; retain all original entry dates and execution/report versions.
+- Keep 0.3.0 as the planned Governed Agents milestone, reached after the agreed Agent workflows are complete and deployed acceptance is recorded. Select Engine 0.2.11 in release configuration on 29 October, with the development band starting 26 October. Deployment remains separate and historical execution versions stay unchanged.
+
+## 2026-10-29 — Explore architecture and learning methods
+
+- Restore the Explore menu label and search public guide headings and prose alongside titles and descriptions.
+- Add 12 named classical/statistical and non-neural method entries from the Engineering method catalogue, linked to their descriptions in Elora Learning. Keep statistical learning, deterministic scoring and symbolic methods distinct; catalogue inclusion does not establish live enablement or effectiveness.
+- Add a public-only index refresh/check helper. This static website update is prepared locally for deployment.
+
 ## 2026-10-28 — Observatory Light public website preview
 
 - Adopt the shared Sense / WorkSpace light-theme asset on public information pages, with deep blue reading text, lavender surfaces, selected navigation and restrained teal accents.

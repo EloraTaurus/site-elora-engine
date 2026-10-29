@@ -1,5 +1,33 @@
 # Engine Changelog
 
+## 0.2.11 — Agent Integration and Investigation Foundations
+
+### Release Focus
+
+- Registered external Agents, delegated OAuth/MCP access and bounded resource admission.
+- Distinct routine Pause/Resume, suspension, revocation and synthetic containment controls.
+- Agent job/task evidence, retained-history investigation and scoped Decisions/Threat Intelligence views.
+- Supporting memory research, shared interface and public-evidence improvements retain their own evidence limits.
+
+Development scope: `2026-10-26` onward. Release band assigned on `2026-10-29`; this is a retrospective development boundary, not a claim that earlier workloads executed on 0.2.11. Deployment and configured Engine version remain separately recorded.
+
+**Path to 0.3.0 — Governed Agents:** planned, not released. Promote the Engine to 0.3.0 only after the agreed Agent workflows are complete, their authority/evidence boundaries are reviewed, and deployed end-to-end acceptance is recorded. Synthetic tools and local tests do not establish general external execution or complete external-agent visibility. Historical reports and build IDs retain their original versions.
+
+### 2026-10-29 — Agent investigation and memory reporting refresh
+
+- Extend bounded Agent controls with routine Pause/Resume distinct from security revocation, synthetic containment, task-ledger evidence and selected-Agent history search/reference groups. Decisions and Threat Intelligence project existing receipts and reached gateway stages; missing terminal/transport evidence remains unknown.
+- Document the separate heuristic role-aware memory selection comparison and integrated-study reporting repairs. Keep selected/delivered observations, strict format checks and content-field scoring distinct; preserve historical baselines. No new live effectiveness, general Research integration or completed 0.3.0 acceptance is established.
+
+### 2026-10-29 — Select Engine 0.2.11 for deployment
+
+- Select 0.2.11 in Engine release defaults, local configuration and the prepared deployment manifest, following the development band beginning 26 October. The configuration change is made on 29 October; it does not backdate historical execution versions.
+- Deployment remains a separate action using normal startup build tracking. Preserve retained build ledgers and original evidence. 0.3.0 remains the planned, acceptance-dependent Governed Agents milestone.
+
+### 2026-10-29 — Release bands and the Agent milestone
+
+- Group the Agent foundation work beginning 26 October under 0.2.11 and close the preceding 0.2.10 development band on 25 October.
+- Keep 0.3.0 as the future milestone for an accepted, fully working Agent area within its agreed scope. This chronology update does not change runtime version configuration, create a release deployment or rewrite retained evidence.
+
 ### 2026-10-27 — Routine Agent Pause
 
 - Separate routine operation pause from security lockdown. Routine pauses retain authenticated connectivity; security containment retains grant revocation and review boundaries. Protected calls remain server-governed.
@@ -172,6 +200,17 @@
 - Limit the MCP trial to synthetic evidence reads. Drafting, rendering, real Research access and publication remain disabled; permission changes invalidate existing sessions.
 - Add a public Agent connection overview explaining the research-analysis direction and the wider collection of over 200 reports without implying those reports are available through the demo. Remove public sign-in links.
 - Review MCP security guidance and strengthen consent/callback presentation and browser protections. Local tests and deployment configuration checks pass; live deployment, external-client behavior and newer protocol compatibility remain unverified. The implementation is not a security certification.
+
+## 0.2.10 — Execution Evidence, Standing and Public Records
+
+### Release Focus
+
+- Traceable execution builds and inspectable build history.
+- Scoped Standing and local release evidence, with examination limitations preserved.
+- Public Reports collections and content-withheld research records.
+- Bounded memory/context studies, local Engine identity and an evidence-based engineering portfolio.
+
+Development scope: `2026-09-23` to `2026-10-25` (band end assigned retrospectively on `2026-10-29`). Release band assigned on `2026-10-06`; historical execution versions remain unchanged. The 6 October release selection remains historical; actual execution/deployment versions are established separately by retained build records.
 
 ### 2026-10-25 — Sense memory_formats 1.2.0 presentation
 
@@ -558,17 +597,6 @@
 ### 2026-10-08 — Webpage response format
 
 - Corrected webpage reviews inheriting Document Review's output format.
-
-## 0.2.10 — Execution Evidence, Standing and Public Records
-
-### Release Focus
-
-- Traceable execution builds and inspectable build history.
-- Scoped Standing and local release evidence, with examination limitations preserved.
-- Public Reports collections and content-withheld research records.
-- Bounded memory/context studies, local Engine identity and an evidence-based engineering portfolio.
-
-Development scope: `2026-09-23` onward. Release band assigned on `2026-10-06`; historical execution versions remain unchanged. Selected for the next deployment; live deployment is not established by this changelog.
 
 ### 2026-10-08 — Clearer engineering evidence
 

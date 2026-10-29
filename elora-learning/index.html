@@ -36,7 +36,7 @@
           <a class="nav-btn" href="../overview/">The Engine</a>
           <a class="nav-btn" href="../research/">Research</a>
           <a class="nav-btn" href="../projects/">Projects &amp; Contributions</a>
-          <a class="nav-btn" href="../explore/">All guides</a>
+          <a class="nav-btn" href="../explore/">Explore</a>
           <a class="nav-btn" href="../prior-art/">Prior Art</a>
           <details class="site-nav-group">
             <summary>Engine guides</summary>
@@ -214,6 +214,35 @@
         <div id="wiki-list" class="wiki-list"></div>
       </div>
       <p class="note" style="margin-top:10px;">Sample report format is available now as a public-safe EBLS output preview only.</p>
+    </div>
+  </section>
+
+  <section class="section surface-light" id="classical-methods">
+    <div class="section-inner">
+      <h2>Classical statistical and non-neural methods</h2>
+      <p class="section-intro">The Engineering catalogue documents the following methods. Statistical learning, deterministic scoring and symbolic reasoning are different techniques; this list does not describe every method as trained machine learning or establish current runtime enablement, deployment or general effectiveness. Learned recommendations remain separate from commit authority.</p>
+      <h3>NNLSL Deterministic Methods</h3>
+      <div class="grid-2">
+        <article class="card"><h4 id="method-semantic-translation">Semantic Translation</h4><p>Translates bounded semantic frames into replay-stable response candidates.</p></article>
+        <article class="card"><h4 id="method-markov-n-gram-synthesis">Markov / N-Gram Synthesis</h4><p>Builds local transition candidates from message and slot-memory evidence.</p></article>
+        <article class="card"><h4 id="method-bounded-evolutionary-optimizer">Bounded Evolutionary Optimizer</h4><p>Mutates and scores phrase candidates within deterministic generation limits.</p></article>
+        <article class="card"><h4 id="method-deterministic-method-router">Deterministic Method Router</h4><p>Arbitrates semantic, Markov, evolutionary, and fallback candidates.</p></article>
+        <article class="card"><h4 id="method-classical-reasoning">Classical Reasoning</h4><p>Combines confidence, ambiguity, risk, claims, and policy evidence.</p></article>
+      </div>
+      <h3>Model Routing &amp; Statistical Learning</h3>
+      <div class="grid-2">
+        <article class="card"><h4 id="method-bayesian-outcome-estimation">Bayesian Outcome Estimation</h4><p>Uses beta-posterior success and instability estimates for model suitability.</p></article>
+        <article class="card"><h4 id="method-case-based-retrieval">Case-Based Retrieval</h4><p>Selects nearest historical task cases using bounded feature distance.</p></article>
+        <article class="card"><h4 id="method-weighted-candidate-scoring">Weighted Candidate Scoring</h4><p>Balances success, instability, latency, confidence, and bucket maturity.</p></article>
+        <article class="card"><h4 id="method-task-vector-feature-matching">Task-Vector Feature Matching</h4><p>Compares prompt, context, sampling, task-family, and governance features.</p></article>
+        <article class="card"><h4 id="method-bucket-band-learning">Bucket &amp; Band Learning</h4><p>Learns bounded model/task outcome profiles with confidence and maturity states.</p></article>
+      </div>
+      <h3>Adaptive Evidence Methods</h3>
+      <div class="grid-2">
+        <article class="card"><h4 id="method-evidence-weighted-signal-fusion">Evidence-Weighted Signal Fusion</h4><p>Combines exam, ECHO, and PhyOS evidence into confidence-weighted runtime posture.</p></article>
+        <article class="card"><h4 id="method-research-pattern-learning">Research Pattern Learning</h4><p>Retains reviewed research-pattern outcomes as bounded reusable learning events.</p></article>
+      </div>
+      <p>These are catalogue descriptions. Review maturity, configuration and retained evidence in the <a href="https://ai.elorataurus.com/engineering/#architecture">Engineering architecture catalogue</a>.</p>
     </div>
   </section>
 
