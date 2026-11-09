@@ -1,11 +1,67 @@
 # Public Changelog
 
+### 2026-11-09 — MCP Apps, ticket approval and public demo
+
+- Add a ticket workspace for connected Agents through MCP Apps. Humans can select tasks in chat, consent in Elora and verify the saved decision in chat. Local checks passed and live ChatGPT acceptance remains pending.
+- Add Helpdesk updates and parent/sub-ticket editing with independent ticket approvals. The public Agent demo adds a responsive welcome screen and synthetic tickets with state-specific conversations.
+
+### 2026-11-06 — Engineering inventory and external peer review refresh
+
+- Expand E112 with structured planning and reviewed handoff. Add E118–E122 for the external task ledger, quarantined images, Projects, scoped Agent Skills and read-only task assessment. Record 37 passing focused tests and the HTTP dependency limitation.
+- Add the credited A.I.G.F. static review to the separate contributions catalogue. Refresh the Architecture snapshot and prepare the 154-entry publication locally.
+
+### 2026-11-04 to 2026-11-06 — Projects and external task review
+
+- Add Project assignments and structured plans, then record external task approvals, work reports and evidence for human acceptance. Show recorded task stages and read-only assessment in the Helpdesk and Projects.
+
+### 2026-11-03 — Agent Helpdesk engineering inventory refresh
+
+- Expand E112 with admission interpretation, conversation and clarification. Add E113–E117 for durable ticket notifications, gateway observation delivery, Case Report export, resource visibility and disabled MCP Events helpers. Record 109 passing local regressions and preserve deployment and experimental boundaries.
+- Refresh the Architecture snapshot and regenerate the 149-entry publication. eFed and WordPress retain their previous evidence scope. Local preparation only.
+
+### 2026-11-02 — Secondary configuration/dataset line total — verified locally
+
+- Retain Engine source lines as the primary metric and show a smaller current Engine-source-plus-configuration/text-dataset total on both Dashboard and portfolio. Keep documentation, tests, exports, generated/publication directories, runtime state, vendor assets and binary databases excluded; do not reuse the historical whole-checkout number under this narrower scope.
+- Share the secondary policy and retain separate counts, scope and fingerprint in the Architecture snapshot. Focused fixtures distinguish source-only changes from configuration/data changes. Regenerate the independent publication; live deployment remains separate.
+
+### 2026-11-02 — Dashboard Engine-source count alignment — verified locally
+
+- Share one dependency-free implementation-source counting policy between the Dashboard and Engineering Portfolio. Count only Engine implementation files; exclude configuration/datasets, tests, documentation, exports/publications, generated files and vendor/minified assets. Skip symlinks and retain streamed line counting.
+- Label the Dashboard cards Engine source files / Engine source lines, explain comments/blanks and installed-snapshot scope, and invalidate cached counts from the old policy. Configuration and data are not folded into the implementation headline. Refresh the independent portfolio snapshot and publication; no live deployment.
+
+### 2026-11-02 — Engine-only portfolio source count — prepared locally
+
+- Replace the broad checkout/configuration metric with versioned Engine implementation-source counting. Exclude JSON/data/configuration, tests, fixtures, docs, generated reports/publications, vendored/minified libraries and separate projects. Keep comments and blanks explicit in the new Engine source lines label.
+- Refresh the independent Architecture snapshot to 445,649 physical lines in 1,344 files. Preserve module/datastore catalogue semantics; the old whole-checkout total is not comparable. Regenerate the publication without changing inventory evidence, review scores or runtime build tracking. No live deployment.
+
+### 2026-11-02 — Portfolio evidence refresh and timeline repair — prepared locally
+
+- Document the synthetic Agent Task Manager plan/step review mechanism and eFed's read-only development projection; expand existing connector and account-ownership entries. The mechanism catalogue is 144 records: 112 Engine, 28 eFed and four WordPress. Four external contributions remain separate.
+- Retain source bindings and scoped local verification: 62 Engine tests plus copied-database eFed account/development fixtures. Preserve missing-dependency diagnostics, experimental limits, existing dates and the unchanged claim-review sprint/profile scores. No live deployment or independent-verification claim.
+- Make the timeline focused and newest-first, enable earliest/latest sorting, separate date/project/title layout, add month counts and expandable history, keep unknown dates last and support a direct link. Regenerate the independent publication.
+
+### 2026-11-02 — Open Source / Research Contributions — prepared locally
+
+- Add a dedicated portfolio sidebar page with three credited AEGIS design discussions and the credited Sovereign Memory Layer code-reading review. Link public evidence and the checked results commit; distinguish discussion input and observations from later specification work, implementation, fixes and measurements.
+- Record dates and explicit attribution limits in shared structured data. Keep contribution records separate from mechanism counts, profile scores and the frozen review sprint. Regenerate the publication; no live deployment or new independent-verification claim.
+
+### 2026-10-30 — Clearer Agent identity across workspaces
+
+- Separate the selected Agent from its recorded human Owner and improve consistency across task, activity and human review pages.
+- Human approval and execution safeguards remain unchanged. Further page refinement is planned; deployed visual acceptance remains pending.
+
 This file is the primary public changelog surface for the website.  
 Format:
 - `Major Milestones`: high-signal cross-project changes.
 - `Everything Else`: detailed engine and site streams.
 
 ## Major Milestones
+
+### 2026-10-30 — Agent workspace and human-review refinements
+
+- Make Agent identity, requested work, recorded state and investigation links easier to assess, with clearer separation between unverified Agent claims and human authorisation.
+- Trial optional desktop review alerts, pending-request recovery and delivery diagnostics. Keep human decisions inside the authenticated review workflow; browser/OS presentation is not guaranteed.
+- Improve shared read-only organisation/account context and resource-aware Admin navigation. Demo identities remain separate and existing permission and execution boundaries remain authoritative. Local checks and selected browser observations do not establish complete deployed acceptance or unrestricted Agent access.
 
 ## 0.2.11 — Agent Integration and Investigation Foundations
 
@@ -19,6 +75,11 @@ Format:
 Development scope: `2026-10-26` onward. Release band assigned on `2026-10-29`; this is a retrospective development boundary, not a claim that earlier workloads executed on 0.2.11. Deployment and configured Engine version remain separately recorded.
 
 **Path to 0.3.0 — Governed Agents:** planned, not released. Promote the Engine to 0.3.0 only after the agreed Agent workflows are complete, their authority/evidence boundaries are reviewed, and deployed end-to-end acceptance is recorded. Synthetic tools and local tests do not establish general external execution or complete external-agent visibility. Historical reports and build IDs retain their original versions.
+
+### 2026-10-29 — Human Agent job Close/Reopen
+
+- Add owner/admin-authorised, revision-bound job Close/Reopen with append-only hash-linked lifecycle evidence, All/Open/Closed browsing and completed/cancelled dispositions. Closing blocks protected synthetic job work while preserving OAuth grants, sessions, task rows and history.
+- Reopening requires a fresh job-revision-bound task lease and retains ledger review, permission, Governance and containment checks. Recorded completion requires verified completed tasks; unfinished work requires explicit cancellation. Source implementation and local tests remain separate from deployed lifecycle acceptance.
 
 ### 2026-10-29 — Agent investigation and memory reporting refresh
 

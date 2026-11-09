@@ -28,6 +28,8 @@ Read-only Agent evidence previews do not establish shared Threat Intelligence
 integration. Real Research adapters, broader client acceptance, report writing
 and governed publication require their own implementation and validation.
 
+Owner/admin-authorised human Close/Reopen controls retain append-only, hash-linked lifecycle events, revision checks and explicit completed/cancelled dispositions. Job lists distinguish All, Open and Closed. Closing gates protected synthetic job work without changing OAuth grants, sessions, task rows or execution history. Reopening requires a fresh job-revision-bound task lease and does not bypass pending ledger review, permissions, Governance or containment. These are implementation boundaries; deployed lifecycle acceptance remains separate.
+
 ## Memory Delivery
 
 Four deterministic representations—natural language, mixed, JSON-only and

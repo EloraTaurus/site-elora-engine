@@ -1,5 +1,111 @@
 # Engine Changelog
 
+### 2026-11-09 — MCP ticket workspace and human task approval
+
+- Add an embedded ticket workspace for connected Agents through MCP Apps. Agents can submit proposals, draft structured plans and reply in ticket conversations. A human approves specific tasks against the current plan revision.
+- Let the human select tasks in chat, authenticate and consent in Elora, then complete the decision in chat and verify that it was saved. Plan revisions require fresh approval. Task execution, human-step confirmation and acceptance remain separate decisions.
+- Local protocol, regression and browser checks are recorded. Live ChatGPT host acceptance remains pending.
+
+### 2026-11-09 — Helpdesk review and ticket hierarchy
+
+- Add live Helpdesk updates, clearer task validation feedback, review alerts and bulk Project reassignment. Give managers a ticket overview and paired evidence report formats.
+- Link parent tickets and sub-tickets, show their Project assignments and let managers review and save grouped hierarchy moves. Each ticket retains its own Project, status and approvals.
+- Add a welcome screen and responsive, scenario-based ticket views to the public Agent demo, with conversations and next actions that match each sample ticket’s state. The demo uses synthetic records.
+
+### 2026-11-06 — Engineering inventory and external peer review refresh
+
+- Expand E112 with structured planning and reviewed handoff. Add E118–E122 for the external task ledger, quarantined images, Projects, scoped Agent Skills and read-only task assessment. Record 37 passing focused tests and the HTTP dependency limitation.
+- Add the credited A.I.G.F. static review to the separate contributions catalogue. Refresh the Architecture snapshot and prepare the 154-entry publication locally.
+
+### 2026-11-06 — Task assessment and Project review
+
+- Add a shared read-only assessment view, show recorded task stages and bring task evidence into Projects. Refine ticket navigation, checklists and next-action review. Human acceptance remains a separate recorded decision.
+
+### 2026-11-05 — External task ledger and reviewed handoff
+
+- Let Agents propose a structured handoff for human review, track approved tasks and submit evidence for acceptance. Add quarantined design-image attachments for ticket review. Retire the experimental ChatGPT URL image import.
+
+### 2026-11-04 — Projects, structured plans and Agent Skills
+
+- Add a read-only Project Board and optional ticket-to-Project assignments. Introduce structured Sprint Plans and mixed Project Plan drafts for review, with scoped capability discovery and ticket-scoped Agent Skills.
+
+### 2026-11-03 — Helpdesk conversations, notifications and case reports
+
+- Add two-way ticket conversations, clarification before admission, planning-only proposals, durable decision notifications and manager Case Report previews and PDF export. Add read-only Agent resource visibility. The MCP Events foundation remains disabled.
+
+### 2026-11-03 — Agent Helpdesk engineering inventory refresh
+
+- Expand E112 with admission interpretation, conversation and clarification. Add E113–E117 for durable ticket notifications, gateway observation delivery, Case Report export, resource visibility and disabled MCP Events helpers. Record 109 passing local regressions and preserve deployment and experimental boundaries.
+- Refresh the Architecture snapshot and regenerate the 149-entry publication. eFed and WordPress retain their previous evidence scope. Local preparation only.
+
+### 2026-11-02 — Reviewed plans and individual step decisions
+
+- Require human review of the current Agent plan and explicit decisions for individual runnable steps. Match Helpdesk activity to the current task revision and connect ticket summaries, filters and navigation to the Agent workspace.
+
+### 2026-11-02 — Secondary configuration/dataset line total — verified locally
+
+- Retain Engine source lines as the primary metric and show a smaller current Engine-source-plus-configuration/text-dataset total on both Dashboard and portfolio. Keep documentation, tests, exports, generated/publication directories, runtime state, vendor assets and binary databases excluded; do not reuse the historical whole-checkout number under this narrower scope.
+- Share the secondary policy and retain separate counts, scope and fingerprint in the Architecture snapshot. Focused fixtures distinguish source-only changes from configuration/data changes. Regenerate the independent publication; live deployment remains separate.
+
+### 2026-11-02 — Dashboard Engine-source count alignment — verified locally
+
+- Share one dependency-free implementation-source counting policy between the Dashboard and Engineering Portfolio. Count only Engine implementation files; exclude configuration/datasets, tests, documentation, exports/publications, generated files and vendor/minified assets. Skip symlinks and retain streamed line counting.
+- Label the Dashboard cards Engine source files / Engine source lines, explain comments/blanks and installed-snapshot scope, and invalidate cached counts from the old policy. Configuration and data are not folded into the implementation headline. Refresh the independent portfolio snapshot and publication; no live deployment.
+
+### 2026-11-02 — Engine-only portfolio source count — prepared locally
+
+- Replace the broad checkout/configuration metric with versioned Engine implementation-source counting. Exclude JSON/data/configuration, tests, fixtures, docs, generated reports/publications, vendored/minified libraries and separate projects. Keep comments and blanks explicit in the new Engine source lines label.
+- Refresh the independent Architecture snapshot to 445,649 physical lines in 1,344 files. Preserve module/datastore catalogue semantics; the old whole-checkout total is not comparable. Regenerate the publication without changing inventory evidence, review scores or runtime build tracking. No live deployment.
+
+### 2026-11-02 — Portfolio evidence refresh and timeline repair — prepared locally
+
+- Document the synthetic Agent Task Manager plan/step review mechanism and eFed's read-only development projection; expand existing connector and account-ownership entries. The mechanism catalogue is 144 records: 112 Engine, 28 eFed and four WordPress. Four external contributions remain separate.
+- Retain source bindings and scoped local verification: 62 Engine tests plus copied-database eFed account/development fixtures. Preserve missing-dependency diagnostics, experimental limits, existing dates and the unchanged claim-review sprint/profile scores. No live deployment or independent-verification claim.
+- Make the timeline focused and newest-first, enable earliest/latest sorting, separate date/project/title layout, add month counts and expandable history, keep unknown dates last and support a direct link. Regenerate the independent publication.
+
+### 2026-11-02 — Compact All Tickets — prepared locally
+
+- Make the ticket list and preview more compact, with clearer icons and direct ticket-opening links.
+
+### 2026-11-02 — Clearer ticket details — prepared locally
+
+- Add a simpler Agent WorkSpace link and Engine build label, searchable ticket queue, compact status summary, expandable plan steps and a clearer activity timeline.
+
+### 2026-11-02 — Helpdesk ticket workspace — prepared locally
+
+- Fix opening Helpdesk from Agents so it loads its own workspace instead of displaying a navigation failure.
+
+- Connect Jobs and tasks to Agent Task Manager, with Task lease requests as a subpage for authorised reviewers.
+
+- Add your profile and organisation to the top-right corner of Agent Task Manager.
+
+- Improve All tickets with summary cards, search and Agent filters for the loaded page, and a side-by-side ticket preview.
+
+- Introduce the Agent Task Manager name and a direct entry from Agents, with optional compact icon navigation.
+
+- Open Helpdesk on All tickets, with independently scrolling activity and plan panels when viewing a ticket on desktop.
+
+- Introduce Elora's purple Helpdesk presentation with a ticket queue, clearer request summaries, activity and task plans.
+- Make plans reviewable before admission and require individual human decisions for execution steps. Revoked permission prevents further work even when a task is unfinished.
+- Local testing and synthetic previews completed; this entry does not announce deployment or a new release.
+
+### 2026-11-02 — Open Source / Research Contributions — prepared locally
+
+- Add a dedicated portfolio sidebar page with three credited AEGIS design discussions and the credited Sovereign Memory Layer code-reading review. Link public evidence and the checked results commit; distinguish discussion input and observations from later specification work, implementation, fixes and measurements.
+- Record dates and explicit attribution limits in shared structured data. Keep contribution records separate from mechanism counts, profile scores and the frozen review sprint. Regenerate the publication; no live deployment or new independent-verification claim.
+
+### 2026-10-30 — Agent workspace consistency
+
+- Improve selected Agent and Owner presentation across workspace sections, with clearer navigation, compact context disclosures and consistent filter spacing.
+- Preserve human review, recorded evidence and execution safeguards. Further detail-page design work is planned; deployed visual checks remain pending.
+
+### 2026-10-30 — Clearer Agent workspaces and human review
+
+- Refine Agent Overview, review cards and scoped navigation around human-readable Agent/owner identity, recorded state, requested work and evidence. Keep organisation and technical references accessible without treating them as execution permission.
+- Add an opt-in synthetic review-notification trial with manual testing, delivery diagnostics and a way to recover pending requests after a desktop alert disappears. Separate Messages, Decision updates and Notifications, and keep chat accessible in Agents Focus mode.
+- Reuse existing live organisation and account references across Agents and Workspace while keeping demo profiles separate. Improve bounded Admin rendering and lightweight status reads without widening Agent access or changing human approval and governed execution.
+- Source tests and selected browser observations support these bounded changes. Latest visual acceptance remains pending; notification persistence/foreground focus are platform dependent. General remote execution, a browser extension and closed-tab push delivery are not established by this update.
+
 ## 0.2.11 — Agent Integration and Investigation Foundations
 
 ### Release Focus
@@ -12,6 +118,11 @@
 Development scope: `2026-10-26` onward. Release band assigned on `2026-10-29`; this is a retrospective development boundary, not a claim that earlier workloads executed on 0.2.11. Deployment and configured Engine version remain separately recorded.
 
 **Path to 0.3.0 — Governed Agents:** planned, not released. Promote the Engine to 0.3.0 only after the agreed Agent workflows are complete, their authority/evidence boundaries are reviewed, and deployed end-to-end acceptance is recorded. Synthetic tools and local tests do not establish general external execution or complete external-agent visibility. Historical reports and build IDs retain their original versions.
+
+### 2026-10-29 — Human Agent job Close/Reopen
+
+- Add owner/admin-authorised, revision-bound job Close/Reopen with append-only hash-linked lifecycle evidence, All/Open/Closed browsing and completed/cancelled dispositions. Closing blocks protected synthetic job work while preserving OAuth grants, sessions, task rows and history.
+- Reopening requires a fresh job-revision-bound task lease and retains ledger review, permission, Governance and containment checks. Recorded completion requires verified completed tasks; unfinished work requires explicit cancellation. Source implementation and local tests remain separate from deployed lifecycle acceptance.
 
 ### 2026-10-29 — Agent investigation and memory reporting refresh
 

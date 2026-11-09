@@ -1,5 +1,21 @@
 # Site / Demo Changelog
 
+## 2026-11-09 — Agent demo welcome and ticket scenarios
+
+- Add a responsive welcome screen before the public Agent demo workspace. Sample tickets show state-specific conversations, approvals and next actions using synthetic records.
+
+## 2026-11-09 — Contributions catalogue
+
+- Group research contributions, add preprint records and provide accessible tabs for open source and research contributions.
+
+## 2026-11-02 — Engineering portfolio and Agent workflow coverage
+
+- Document the narrower Engine source count, with a separate configuration and dataset total. Refresh public coverage of Helpdesk tickets, reviewed plans and individual step decisions.
+
+## 2026-10-29 — Agent job lifecycle public coverage
+
+- Document human Close/Reopen controls across the Agent guide, dashboard and Engineering catalogue, including append-only history, fresh task leases, unchanged OAuth grants and separate deployed acceptance.
+
 ## 2026-10-29 — Agent and memory public-guide consistency
 
 - Refresh Agent and Memory Delivery guides, related discovery cards and the public architecture catalogue with bounded controls, retained-history/stage evidence, role-aware selection and reporting improvements. Preserve experimental, deployment and evidence limits.

@@ -1,5 +1,23 @@
 # Dashboard Technical Changelog
 
+### 2026-11-09 — MCP Apps ticket bridge and revision-bound approval
+
+- Add the standard MCP Apps bridge for the embedded ticket workspace. Bind human consent to selected tasks and the displayed plan revision, verify the saved decision and prevent replay from recording another approval. Keep proposal, approval, execution and acceptance distinct.
+- Add authenticated Helpdesk updates and bounded task validation feedback. Save reviewed hierarchy changes together after checking ownership, revisions and relationship validity. Local protocol and browser validation is recorded, with live ChatGPT acceptance pending.
+
+### 2026-11-05 to 2026-11-06 — External task evidence and assessment
+
+- Track approved external tasks, Agent-reported progress and human acceptance evidence. Show recorded task stages and shared read-only assessment in Projects and Helpdesk.
+
+### 2026-11-02 to 2026-11-04 — Helpdesk review and Projects
+
+- Require review of the current plan and individual runnable steps. Add clarification, retained notifications, case report export, optional Project assignments and scoped Agent Skills. Keep the MCP Events foundation disabled.
+
+### 2026-10-30 — Shared Agent workspace detail presentation
+
+- Refine shared Agent/Owner identity presentation, history-page identity continuity, filter spacing and expandable read-only context. Existing navigation and specialised review controls remain intact.
+- Local rendering and route/resource regression checks passed (61 tests). Further detail-page refinement is prepared; deployed visual checks remain pending. No changes to permission, approval or production execution semantics.
+
 This changelog is intended for a dashboard-facing technical audience.
 
 It is more detailed than the high-level public changelog, but it remains sanitized for safe external display.
@@ -21,6 +39,13 @@ Exclude:
 - full route inventories
 - sensitive environment/configuration names
 - copy-reproducible security implementation sequences
+
+## 2026-10-30 — Agent operations, human review and notification evidence
+
+- Refine Agent Overview and exact human review using readable subjects, authenticated owner presentation, compact organisation references and Agent-scoped operational navigation. Preserve bounded evidence windows, unknown states and the distinction between recorded session evidence and live connectivity.
+- Add opt-in synthetic review-notification testing, pending-request recovery and separate attempted/display/error observations. Keep server processing, discovery wait, transport and browser callbacks distinct; a browser acknowledgement does not prove a visible desktop banner or human review.
+- Share live local organisation/person/Agent references between Agents and Workspace without merging demo profiles or granting permissions. Improve resource admission, lightweight configuration reads, navigation continuity and refresh lifecycle cleanup.
+- Local regression checks and selected browser trials passed within their recorded scope. Newest visual acceptance, reliable OS foreground behaviour and broader delivery guarantees remain unestablished. Existing approval, commit and production MCP authority are unchanged; Web Push and extension delivery remain proposals.
 
 ## 2026-10-27 — Agent, memory and public-evidence refresh
 
