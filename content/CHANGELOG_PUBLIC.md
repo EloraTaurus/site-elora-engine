@@ -1,5 +1,27 @@
 # Public Changelog
 
+### 2026-11-18 — Shared Project Board and human-reviewed Agent work
+
+- Refresh the public website through 18 November within Engine 0.2.11. The planned 0.3.0 milestone still requires the agreed Agent workflows and deployed acceptance.
+- Cover shared Grid/List ticket views, plan revisions, review actions and sample reports. Public demonstrations use fictional records and simulated decisions.
+- Separate Agent-reported progress, human acceptance, closure authorisation and actual closure. Latest sign-off and widget recovery changes are locally prepared; the reported live review interruption still requires deployed human validation.
+- Add audited ticket metadata editing and advisory priority proposals. Human-assigned priority does not grant task or execution authority. Recent refinements remain subject to deployment and acceptance.
+- Extend prior-art records with checked November repository milestones. These are not verified first-public-disclosure dates or claims of novelty or independent validation.
+
+### 2026-11-15 to 2026-11-16 — One interface with module-owned permissions
+
+- Share pages, navigation, ticket components and evidence views between authorised accounts and access Preview. Current roles are Super Admin, Admin and User; historical Observer terminology remains in dated records.
+- Module assignment enables eligibility for saved feature and resource grants. Suspending a module preserves grants while preventing access.
+- Scope lists, counts, filters, links, details and evidence before presentation. Mutation controls require write authority and direct requests remain checked. Preview is read only and does not test password or OTP sign-in.
+- Add module Users directories and shared operational navigation. Scoped local checks do not establish deployment-wide security assurance.
+
+### 2026-11-10 to 2026-11-13 — Review, acceptance and bounded evidence
+
+- Extend externally performed task reporting, exact-plan human review, work assessment and explicit closure authorisation. Follow-up tasks retain earlier evidence but require their own approvals.
+- Separate short-lived human review in chat from connection consent and Agent execution authority. Reconnection does not itself approve work.
+- Add read-only ticket threat investigations, keeping Agent claims, gateway observations and human decisions distinct.
+- Record startup diagnostics and constrained resource trials without claiming a universal operating minimum or performance gain. Integrity checks remain in place; uncontrolled host/cache conditions limit comparisons.
+
 ### 2026-11-09 — MCP Apps, ticket approval and public demo
 
 - Add a ticket workspace for connected Agents through MCP Apps. Humans can select tasks in chat, consent in Elora and verify the saved decision in chat. Local checks passed and live ChatGPT acceptance remains pending.

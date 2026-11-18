@@ -1,5 +1,21 @@
 # Chronology and Evidence Matrix
 
+## November checked milestones
+
+Extension prepared 2026-11-18. These are targeted repository appearances, not an exhaustive origin search. First public disclosure for these additions is **not established by this review**. The [MCP/Agent topic](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md) provides detailed boundaries.
+
+| Capability | Checked repository date and fingerprint | Evidence and limits |
+| --- | --- | --- |
+| External task ledger and approval/acceptance | 2026-11-05, `95592331c`, `deb044e43` | Structured external proposals and reviewed work; reports remain Agent claims, not server-observed execution |
+| MCP Apps task review | 2026-11-09, `e17b47b55`, `1f8196d19` | Exact-task human consent; selection and connection consent are not task approval |
+| Human-authorised closure | 2026-11-10, `6b76e8a06`; 2026-11-12, `7726335fd` | Acceptance, explicit delegation and actual closure remain distinct; current checks and final Agent comment remain required |
+| Shared read-only board and Preview | 2026-11-13, `104c9e45f`, `9fcb649fd` | Shared presentation with scoped reads; Preview is not a login test |
+| Module-owned grants and suspension | 2026-11-15, `05a0365da`, `e5349337a`; 2026-11-16, `1bfd07106` | Saved feature/resource grants survive suspension without allowing access |
+| Sign-off and shared ticket editing | 2026-11-18, `7b3402725`, `3c0f7fb10`, `da82c6327` | Shared Grid/List details and on-demand editing; deployment and human acceptance remain separate |
+| Advisory priority and human assignment | 2026-11-18, `93b6f8a59` | Agent advice is separate from audited human decisions and cannot grant execution authority |
+
+The reported 18 November widget interruption remains a live-validation limitation. Local recovery changes do not retrospectively establish successful closure. March/September dates, frozen Standing results and earlier unresolved fingerprints remain unchanged.
+
 Record reviewed 2026-10-27: the table below separates protocol,
 memory and workflow milestones. The
 [MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md)

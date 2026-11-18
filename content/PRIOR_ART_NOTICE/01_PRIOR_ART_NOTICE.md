@@ -1,5 +1,7 @@
 # Technical Disclosure and Prior Art
 
+November extension prepared 2026-11-18: the [MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md) record now covers external task ledgers, exact-task human review, separate acceptance and closure, shared access Preview and module-owned permissions. Checked repository dates identify source appearances, not verified first public disclosure. Earlier topic updates and historical claim boundaries remain intact.
+
 Topic update prepared 2026-10-27: read
 [MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md)
 for the protocol integration, the

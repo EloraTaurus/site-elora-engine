@@ -1,5 +1,16 @@
 # Engine Capability Register (Beyond Governance)
 
+## November collaboration and operational capability update
+
+Prepared 2026-11-18. The [MCP/Agent topic](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md) records checked milestones for external task ledgers, embedded review, closure delegation and shared module permissions.
+
+- Project Board and ticket views share Grid/List presentation, scoped counts and evidence, plan revisions and review states. Fictional public demos and sample reports remain separate from live administration.
+- External task plans, reports and assessment retain the distinction between Agent claims and human acceptance. Local work adds sign-off, metadata editing and advisory priorities without granting execution authority.
+- Shared module navigation and read-only access Preview reuse authorised screens. Module assignment enables saved grants; suspension preserves them while blocking access.
+- Startup integrity diagnostics separate elapsed, CPU and available read-path evidence. The 13 November resource trials are constrained observations, not a universal minimum specification or established performance improvement. Integrity checks remain intact.
+
+Earlier catalogue counts and examination results retain their dated scope. The Engineering inventory is maintained separately; this refresh does not regenerate it or imply new independently validated findings. Recent local refinements still require deployment and human acceptance.
+
 Topic update prepared 2026-10-27: memory and public-evidence additions appear
 in the relevant sections below. Protocol integration is documented separately in
 [MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md).

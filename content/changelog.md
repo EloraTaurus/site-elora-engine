@@ -1,5 +1,13 @@
 # Site / Demo Changelog
 
+## 2026-11-18 — Public website evidence refresh
+
+- Update the main changelog summary, Agent guide, public documentation and discovery cards from the 10–18 November records.
+- Explain external work reports, exact-task approvals, separate acceptance and closure, shared module permissions, read-only Preview and the fictional Project Board demo.
+- Extend the MCP/Agent topic, capability and governance registers, evidence method and chronology with checked repository milestones. Preserve historical dates, frozen examination results and unestablished publication dates.
+- Keep Engine 0.2.11 as the development line. Distinguish local preparation from deployment and human acceptance; do not describe the reported live widget interruption as resolved.
+- Refresh Explore's public search index. This entry records local website preparation, not deployment.
+
 ## 2026-11-09 — Agent demo welcome and ticket scenarios
 
 - Add a responsive welcome screen before the public Agent demo workspace. Sample tickets show state-specific conversations, approvals and next actions using synthetic records.

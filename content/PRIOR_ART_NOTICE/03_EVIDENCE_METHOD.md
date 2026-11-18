@@ -1,5 +1,13 @@
 # Evidence Method (Public and Private)
 
+## External work, human review and publication dates
+
+Extension prepared 2026-11-18. Agent-reported progress and results describe externally performed work. They do not become server-observed execution merely because Elora retains them. Gateway observations, reported work, human acceptance, closure delegation and ticket closure are separate evidence classes.
+
+A checked commit fingerprint identifies an inspected repository appearance. A dated changelog describes the recorded change; neither alone proves first public availability. Local preparation, deployment, actual-host verification and independent review retain distinct status. A successful local test does not establish resolution of a live failure.
+
+Shared-view checks compare permitted fields and records in Preview and sign-in and verify direct mutation denial. They remain scoped project tests, not proof of universal confidentiality or authentication coverage. Fictional public demos illustrate workflow, not real grants or accepted execution.
+
 ## Public catalogue and preview evidence
 
 Record reviewed: 2026-10-27.

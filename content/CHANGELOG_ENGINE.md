@@ -1,5 +1,130 @@
 # Engine Changelog
 
+### 2026-11-18 — Public Project Board demonstration
+
+- The fictional demonstration supports shared Grid/List ticket presentation and sample report downloads. Filters, pagination and review scenarios remain synthetic; no live tasks, permissions or priorities are changed.
+
+### 2026-11-18 — Cleaner ticket actions
+
+- Prepared icon-labelled actions on the left, Ticket Report in the toolbar and a top-right X for returning to tickets.
+- Ticket editing opens only when requested, using the existing permissions and save workflow. Deployment remains pending.
+
+### 2026-11-18 — Ticket priority recommendations
+
+- Prepared Agent priority suggestions with short explanations and relevant ticket dependencies, kept separate from human-assigned priority.
+- Added audited human review and shared Grid/List priority badges, sorting and filtering using existing permissions. Task approval, work acceptance and closure remain separate.
+- Locally tested; Engine deployment, connector refresh and human acceptance remain pending. The public demo is not a live priority-management interface.
+
+### 2026-11-18 — Ticket title, description and Project editing
+
+- Prepared title, description and Project editing using existing owner/admin permissions, with audited revisions and protection against stale saves. Original requests, approved task scope and acceptance remain intact.
+- Placed “← Back to tickets” on the action-toolbar row; secondary actions move into More on small screens.
+- Locally tested; deployment and live human acceptance remain pending.
+
+### 2026-11-18 — Clearer ticket cards and shared ticket details
+
+- Prepared an optional responsive Grid View with Project-coloured borders, concise ticket summaries and a popup that returns to the same queue position and filters.
+- Refined the shared Grid/List detail screen with clearer headings, scrollable tabs, separate reported and accepted progress, and shortcuts to existing editing, review and status controls.
+- Permissions and approval, acceptance, evidence and closure requirements are unchanged. Locally tested; deployment and live human acceptance remain pending.
+
+### 2026-11-18 — Clearer review feedback and reconnection
+
+- Prepared a widget update that places progress, errors and reconnection beside review actions, preserves acceptance notes and checks saved outcomes before reconnecting. Reconnection does not automatically repeat a decision.
+- Locally tested; deployment and human validation in the live host remain pending.
+
+### 2026-11-18 — Completion review and automatic board updates
+
+- Prepared a Review & sign-off tab for checking completed work, reviewing evidence and recording acceptance or status changes.
+- Acceptance updates board status without a manual refresh. Confirmed closure shows a brief confirmation before returning to the active queue, with reduced-motion support and protection for unsent notes.
+- These changes are locally tested and await deployment. Human acceptance and actual ticket closure remain separate; the reported widget connection issue remains open.
+
+### 2026-11-18 — Clearer task approvals and review status
+
+- Ticket approvals now show linked tasks, labelled ticks, assignee icons and next steps. Pending approvals are easier to find, while approval, reported completion and human acceptance remain separate.
+- Added widget reconnection improvements and desktop/mobile checks. Deployment was reported, but live closure review still encountered a connection interruption with feedback outside the visible action area. The issue remains open; nearby feedback/reconnect controls and a dedicated sign-off tab are planned follow-ups.
+
+### 2026-11-16 — Module-owned permissions and shared operational screens
+
+- Supported modules own their feature and resource grants. Assignment enables those saved grants; suspension preserves them without allowing access.
+- Project Board, account Preview and signed-in readers share ticket layouts and permission-scoped records, counts and evidence. Mutation controls and direct writes require separate authority.
+- Current account roles are Super Admin, Admin and User. Earlier Observer terminology records development history rather than an additional current role.
+
+### 2026-11-15 — One interface for shared workspaces
+
+- Shared project and ticket links open the same pages an administrator uses. Readers can switch ticket tabs and filter the tickets their board access covers.
+- Observers now use the same menus and workspaces as administrators. Their dashboard opens the areas and boards shared with them, with read-only access throughout.
+
+### 2026-11-15 — Explore shared Engine screens with read-only access
+
+- Observers can browse the Engine areas their administrator shares, including the Agent Workspace, Sense and Threat cases. Admins can preview those screens with the Observer’s permissions.
+- Admins can separately share Testing Edge so an Observer can read saved research prompts and approved replies across runs. The grant gives access to conversation history only.
+
+### 2026-11-15 — Observer permissions in Administration
+
+- Admins can manage an Observer’s read-only modules and preview eligible accounts from Users. User Roles shows Observer defaults alongside individual choices and effective access. Existing module selections keep their previous scope.
+
+### 2026-11-15 — Shared ticket screens and task review tabs
+
+- All tickets and Project Board use existing board grants for read-only sessions and Preview. Ticket lists, counts and links include only permitted work.
+- Ticket reviewers can find pending tasks under Awaiting Approval. Task Plan groups additions by revision and shows completion counts and ticks.
+
+### 2026-11-13 — Bounded startup evidence
+
+- Added finer startup integrity-check timing and CPU/read-path diagnostics. Retained resource trials do not establish a universal minimum specification or an improvement from adding CPU capacity.
+- Integrity checks remain enforced. Host/cache differences and missing measurements limit conclusions; these results do not certify production performance.
+
+### 2026-11-13 — Add follow-up tasks without replacing previous work
+
+- Ticket task additions can preserve earlier approvals, progress and acceptance evidence. New work remains subject to approval. Deployment verification pending.
+
+### 2026-11-13 — Choose read-only Engine areas in Admin
+
+- User account management now stays in Administration. Super Admins can choose supported Engine read views for existing users while keeping board access separately scoped.
+- Access Preview and normal reader access follow the same current selections. Existing boards need no reconfiguration, and changes/execution stay blocked. Local desktop/mobile checks passed; deployed verification is pending.
+
+### 2026-11-13 — Manage Engine accounts and preview their access
+
+- Reach account editing and login reset from Users without requiring organisation membership. Password resets preserve existing board permissions and require a new password at sign-in.
+- Super Admins can preview supported Engine views using the selected account's permissions while staying signed in. Preview remains read only, shows recovery restrictions and blocks unsupported operations. Local checks passed; deployed verification remains pending.
+
+### 2026-11-13 — Familiar boards for read-only access
+
+- Shared boards now use the same Project Board and ticket layout, including Board/List views, search, filters and ticket tabs. Editing and approval controls are hidden for readers.
+- Access Preview uses the same interface. Existing board permissions continue to work without new labels or account setup. Local desktop/mobile checks passed; deployment verification remains pending.
+
+### 2026-11-13 — Test read-only access without signing out
+
+- Preview an eligible user's access from Project Board Users while keeping your administrator login. See which of your boards and tickets they can read, with a clear preview banner and Exit control.
+- Previews expire after 15 minutes and follow current access settings. No password reset is needed; preview does not test password or OTP sign-in or allow changes as the user.
+- Local regression and desktop/mobile browser checks passed; live verification remains pending.
+
+### 2026-11-13 — Simpler read-only board sharing
+
+- Manage access for existing Engine users from Project Board's integrated Users area, without organisation setup.
+- Granting a board now lets a reader see its existing tickets and details automatically. No separate labels or summaries are needed, and existing active grants continue to work.
+- Readers cannot edit, reply, approve or run work. Expiry and revocation remain available; private notes and attachments are excluded. Payment testing remains deferred.
+- Local regression and desktop/mobile browser checks passed; live verification remains pending.
+
+### 2026-11-13 — Clearer ticket threat investigations
+
+- Add a read-only ticket investigation view with ordered evidence, source references and clear explanations of what was recorded or remains unknown. Existing access and approval controls remain in place.
+- Keep automatic intake screening separate. Local validation is documented; deployment and human review are pending.
+
+### 2026-11-12 — Completion error correction
+
+- Fix a blank closing reply incorrectly producing an account-settings error when reusing acceptance evidence. Existing completion safeguards remain; deployed verification is pending.
+
+### 2026-11-12 — Close accepted work without repeating the note
+
+- Reuse current human acceptance evidence when explicitly completing a ticket, with optional additional context and traceable original review records. Existing completion and approval safeguards remain in place.
+- Align nested sub-ticket rows consistently while retaining parent links and relationships. Local tests pass; deployed verification remains pending.
+
+### 2026-11-12 — Simpler review of completed ticket work
+
+- Add a completion review in the ticket Conversation area: enter one shared acceptance note for eligible completed work, with optional notes for individual task exceptions.
+- Keep per-task acceptance evidence and explain unfinished-work blockers. Human acceptance authorises closure, with the Agent closing comment still required before the ticket is completed. Existing approval and verification requirements remain in place.
+- Improve error feedback and preserve review drafts when ticket records change. Local regression and desktop/mobile browser checks pass; deployment and live human acceptance testing remain pending.
+
 ### 2026-11-09 — MCP ticket workspace and human task approval
 
 - Add an embedded ticket workspace for connected Agents through MCP Apps. Agents can submit proposals, draft structured plans and reply in ticket conversations. A human approves specific tasks against the current plan revision.
@@ -510,6 +635,9 @@ Development scope: `2026-09-23` to `2026-10-25` (band end assigned retrospective
 
 - Add reviewed manifest discovery, generic optional dispatch, physical-removal regressions and standalone source packaging. Independent governance and history remain intact. Contribution map v0.18.0 identifies remaining extraction; full source separation and live deployment are not claimed.
 
+### 2026-11-15 — Read-only service directory and case summaries
+
+- Sense readers can open Services and explore responsibilities and ownership without starting live sampling. Admins can grant Case summaries under Threat cases to show recorded grouping, containment and resolution on the shared case screen.
 
 ## 2026-10-15 — Mandatory-control regression
 

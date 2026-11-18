@@ -1,5 +1,17 @@
 # Technical Register (Capability-First Milestone Archive)
 
+## November refinement: reviewed work and scoped interfaces
+
+Prepared 2026-11-18 from dated repository records. The [MCP/Agent topic](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md) retains checked fingerprints and limits.
+
+- Separate connection consent, operation permission, exact-task approval, external progress claims, human acceptance, closure authorisation and actual closure.
+- Preserve earlier task evidence when work is appended; new scope needs its own approval. Project membership and parent relationships confer no task authority.
+- Use shared routes and components with module-owned grants. Scope records and fields before rendering or serialisation, including counts, filters, links, evidence and Preview. Direct writes require authority independently of visible controls.
+- Preserve saved permissions during module suspension without permitting access. Read-only Preview shares current grant checks but is not an authentication test.
+- Keep Agent priority advice separate from human assignment and task/execution authority.
+
+These are implementation boundaries with scoped local regression evidence. Deployment, actual-host human acceptance and system-wide assurance remain separate. No original disclosure date or frozen Standing result is changed.
+
 Topic update prepared 2026-10-27: the
 [MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md)
 record covers delegated connections and scoped Agent workflows. Authority and

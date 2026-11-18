@@ -1,5 +1,16 @@
 # Documentation Source Index (Engine, Fabric, WorkerHost)
 
+## November 2026 refresh sources
+
+Reviewed 2026-11-18 against the internal Engine changelog, its public counterpart and the repository commits listed in the MCP/Agent topic and chronology matrix. Public reading paths:
+
+- [Public Engine changelog](../changelog/)
+- [External Agent integration guide](../agent-integration/)
+- [MCP Protocol & Agent Integration](../prior-art/?article=10_MCP_PROTOCOL_AND_AGENT_INTEGRATION.md)
+- [Chronology & Evidence Matrix](../prior-art/?article=08_CHRONOLOGY_EVIDENCE_MATRIX.md)
+
+This refresh does not use private ticket conversations, credentials or real task evidence as public examples. Existing Engineering inventory edits and its generated publication are outside this update. Source dates, publication and deployed acceptance remain separate.
+
 ## Topic-record sources
 
 The topic records were reviewed on 2026-10-27 from the public-safe Engine

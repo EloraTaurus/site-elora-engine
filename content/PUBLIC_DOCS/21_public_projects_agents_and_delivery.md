@@ -1,6 +1,6 @@
 # Public projects, Agent integration and Memory Delivery
 
-Updated 29 October 2026. This guide describes public implementation scope and
+Updated 18 November 2026. This guide describes public implementation scope and
 navigation; it does not establish current server deployment or new run results.
 
 ## Find the work
@@ -15,20 +15,23 @@ Public Reports contains deliberately exported evidence; publication is separate
 from an examination result or endorsement. The static demo website explains the
 work and includes synthetic demonstrations rather than operational controls.
 
-## External Agents
+## External Agents and human-reviewed work
 
-The current public demonstration covers synthetic read-only evidence through
-delegated Agent identities, OAuth consent and MCP. Connection identity and
-per-operation permission are separate. Rotating credentials, expiry and
-revocation support bounded connection lifecycles. External assistants retain
-their own inference provider.
+Delegated identities, OAuth consent and MCP connect external assistants that retain their own inference provider. Connection consent, current operation permission and human task approval remain separate.
 
-Task plans, hash-linked task-ledger integrity, routine Pause/Resume distinct from security suspension/revocation, bounded admission and synthetic containment are scoped implementations. Selected-Agent history adds stable audit IDs, bounded search and exact incident/control groups. Agent Decisions and Threat Intelligence project existing receipts and reached gateway stages; missing terminal/transport evidence stays unknown.
-Read-only Agent evidence previews do not establish shared Threat Intelligence
-integration. Real Research adapters, broader client acceptance, report writing
-and governed publication require their own implementation and validation.
+The external task ledger accepts structured proposals, exact-task approvals against the reviewed plan, progress reports and evidence for human acceptance. Follow-up tasks need their own approval without replacing earlier evidence. Agent reports remain claims about work outside Elora, not server-observed execution. Synthetic research retains its own governed execution boundaries and is not a substitute for external work tracking.
 
-Owner/admin-authorised human Close/Reopen controls retain append-only, hash-linked lifecycle events, revision checks and explicit completed/cancelled dispositions. Job lists distinguish All, Open and Closed. Closing gates protected synthetic job work without changing OAuth grants, sessions, task rows or execution history. Reopening requires a fresh job-revision-bound task lease and does not bypass pending ledger review, permissions, Governance or containment. These are implementation boundaries; deployed lifecycle acceptance remains separate.
+Human acceptance, closure authorisation and actual closure are distinct. Delegated Agent closure requires current human authorisation, accepted tasks, a final report and a closing comment. Project membership and parent/sub-ticket links do not inherit approval or closure authority. Reconnection after uncertain decisions checks retained state and does not automatically repeat the decision.
+
+The shared Project Board provides responsive Grid/List views, ticket details and recorded stages. Latest local refinements include Review & sign-off, on-demand editing and advisory priorities separate from human decisions. Public demonstrations use fictional records and sample reports.
+
+## Shared access and Preview
+
+Current roles are Super Admin, Admin and User. Each supported module owns its saved feature/resource grants; assignment enables eligibility, while suspension preserves grants without allowing access. Shared routes, components and navigation serve authorised accounts and read-only access Preview.
+
+Backend checks scope records, fields, counts, filters, links and evidence before presentation. Mutation controls require write authority and direct requests remain checked. Preview uses current grants but does not test password or OTP sign-in. Historical Observer terminology remains in earlier dated changelogs.
+
+Recent editing, priority, sign-off and recovery changes still require deployment and human acceptance. A reported live widget interruption remains unresolved pending deployed validation. Engine 0.2.11 is the development line; 0.3.0 remains planned.
 
 ## Memory Delivery
 
